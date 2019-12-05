@@ -15,9 +15,8 @@ pipeline {
             steps {
                 echo "Building..."
                 sh """
-                . /home/yeqing/.nvm/nvm.sh
-                npm install -g gitbook-cli --registry=https://registry.npm.taobao.org
-                gitbook build . /opt/crawlab/docs
+                /home/yeqing/.nvm/versions/node/v8.12.0/bin/node /home/yeqing/.nvm/versions/node/v8.12.0/bin/npm install -g gitbook-cli --registry=https://registry.npm.taobao.org
+                /home/yeqing/.nvm/versions/node/v8.12.0/bin/node /home/yeqing/.nvm/versions/node/v8.12.0/bin/gitbook build . /opt/crawlab/docs
                 """
             }
         }
