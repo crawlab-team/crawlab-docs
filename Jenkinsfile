@@ -29,7 +29,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh """
-                docker rm -f crawlab-docs
+                docker rm -f crawlab-docs | true
                 docker run --name crawlab-docs -p 8100:80 -v /opt/crawlab/docs:/usr/share/nginx/html:ro -d nginx:alpine
                 """
             }
