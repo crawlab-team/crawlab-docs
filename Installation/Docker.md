@@ -30,7 +30,7 @@ docker pull tikazyq/crawlab:latest
 
 ```bash
 docker run -d --restart always --name crawlab \
-        -e CRAWLAB_REDIS_ADDRESS=192.168.99.1 \
+        -e CRAWLAB_REDIS_ADDRESS=http://192.168.99.1 \
         -e CRAWLAB_MONGO_HOST=192.168.99.1 \
         -e CRAWLAB_SERVER_MASTER=Y \
         -e CRAWLAB_API_ADDRESS=192.168.99.100:8000 \
@@ -50,7 +50,7 @@ docker run -d --restart always --name crawlab \
 
 ```bash
 docker run --restart always --name crawlab \
-        -e CRAWLAB_REDIS_ADDRESS=192.168.99.1 \
+        -e CRAWLAB_REDIS_ADDRESS=http://192.168.99.1 \
         -e CRAWLAB_MONGO_HOST=192.168.99.1 \
         -e CRAWLAB_SERVER_MASTER=N \
         -v /var/logs/crawlab:/var/logs/crawlab \
@@ -74,7 +74,7 @@ services:
     image: tikazyq/crawlab:latest
     container_name: crawlab-master
     environment:
-      CRAWLAB_API_ADDRESS: "192.168.99.100:8000"
+      CRAWLAB_API_ADDRESS: "http://192.168.99.100:8000"
       CRAWLAB_SERVER_MASTER: "Y"
       CRAWLAB_MONGO_HOST: "mongo"
       CRAWLAB_REDIS_ADDRESS: "redis"
