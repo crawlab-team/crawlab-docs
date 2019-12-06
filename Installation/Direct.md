@@ -7,7 +7,7 @@
 首先是将github上的代码拉取到本地。
 
 ```bash
-git clone https://github.com/tikazyq/crawlab
+git clone https://github.com/crawlab-team/crawlab
 ```
 
 ### 安装

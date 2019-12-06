@@ -1,6 +1,6 @@
 ## Docker安装部署
 
-这应该是部署应用的最方便也是最节省时间的方式了。在最近的一次版本更新[v0.3.0](https://github.com/tikazyq/crawlab/releases/tag/v0.3.0)中，我们发布了Golang版本，并且支持Docker部署。下面将一步一步介绍如何使用Docker来部署Crawlab。
+这应该是部署应用的最方便也是最节省时间的方式了。在最近的一次版本更新[v0.4.0](https://github.com/tikazyq/crawlab/releases/tag/v0.4.0)中，我们发布了Golang版本，并且支持Docker部署。下面将一步一步介绍如何使用Docker来部署Crawlab。
 
 对Docker不了解的开发者，可以参考一下这篇文章（[9102 年了，学点 Docker 知识](https://juejin.im/post/5c2c69cee51d450d9707236e)）做进一步了解。简单来说，Docker可以利用已存在的镜像帮助构建一些常用的服务和应用，例如Nginx、MongoDB、Redis等等。用Docker运行一个MongoDB服务仅需`docker run -d --name mongo -p 27017:27017 mongo`一行命令。如何安装Docker跟操作系统有关，这里就不展开讲了，需要的同学自行百度一下相关教程。
 
