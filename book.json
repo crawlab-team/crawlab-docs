@@ -1,0 +1,9 @@
+{
+	"title": "Crawlab文档",
+	"plugins": [
+		"chapter-fold"
+	],
+	"styles": {
+		"website": "styles/website.css"
+	}
+}
