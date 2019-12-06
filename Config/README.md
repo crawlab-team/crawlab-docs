@@ -4,7 +4,7 @@
 
 ```yaml
 api:
-  address: "localhost:8000"
+  address: "http://localhost:8000"
 mongo:
   host: localhost
   port: 27017
@@ -43,7 +43,7 @@ other:
 
 环境变量 | yaml变量路径 | 描述 | 默认 | 可能值
 --- | --- | --- | --- | ---
-CRAWLAB_API_PATH | api.path | 前端API地址 | localhost:8000 | 任意
+CRAWLAB_API_ADDRESS | api.path | 前端API地址 | http://localhost:8000 | 任意
 CRAWLAB_MONGO_HOST | mongo.host | MongoDB Host地址 | localhost | 任意
 CRAWLAB_MONGO_PORT | mongo.port | MongoDB端口号 | 27017 | 任意
 CRAWLAB_MONGO_DB | mongo.db | MongoDB数据库名 | crawlab_test | 任意
