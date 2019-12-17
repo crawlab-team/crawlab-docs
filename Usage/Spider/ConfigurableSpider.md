@@ -74,23 +74,23 @@ start_url: http://example.com # 起始URL，跟scrapy里的start_urls一样，�
 start_stage: stage1 # 开始阶段
 engine: scrapy # 爬虫引擎（暂时只有scrapy爬虫引擎，其他扩展引擎待后续开发）
 stages: # 阶段列表
-	stage1: # 阶段名称
-		is_list: true # 是否为列表
-		list_xpath: //ul[@id="list"]/li
-		fields: # 字段列表
-			- name: title # 字段名称
-				xpath: //h3/a # 字段选择器
-			- name: url
-				xpath: //h3/a
-				attr: href # 属性
-				next_stage: stage2 # 下一阶段
-	stage2:
-		is_list: false
-		fields:
-			- name: description
-				xpath: //*[@id="desc"]
-			- name: content
-				xpath: //*[@id="content"]
+- name: stage1 # 阶段名称
+  is_list: true # 是否为列表
+  list_xpath: //ul[@id="list"]/li
+  fields: # 字段列表
+  - name: title # 字段名称
+    xpath: //h3/a # 字段选择器
+  - name: url
+    xpath: //h3/a
+    attr: href # 属性
+    next_stage: stage2 # 下一阶段
+- name: stage2
+  is_list: false
+  fields:
+  - name: description
+    xpath: //*[@id="desc"]
+  - name: content
+    xpath: //*[@id="content"]
 settings: # 设置列表，参考 https://docs.scrapy.org/en/latest/topics/settings.html
 	ROBOTSTXT_OBEY: true # 是否遵守robots.txt
 	AUTOTHROTTLE_ENABLED: true # 是否自动节流
