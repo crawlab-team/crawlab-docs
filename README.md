@@ -10,7 +10,7 @@ Crawlab主要解决的是大量爬虫管理困难的问题，例如需要监控�
 
 本使用手册是一个安装使用开发指南，帮助您安装、使用、开发 Crawlab。
 
-如果您想尽快上手 Crawlab，请查看 [快速开始](./QuickStart/)。
+如果您想尽快上手 Crawlab，请查看 [快速开始](./QuickStart/index.html)。
 
 首先，我们来看如何安装Crawlab，请查看 [安装章节](./Installation/)。关于如何使用，请查看 [使用章节](./Usage/)。
 
