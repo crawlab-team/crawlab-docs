@@ -1,6 +1,6 @@
 ## Docker安装部署
 
-这应该是部署应用的最方便也是最节省时间的方式了。在最近的一次版本更新[v0.4.0](https://github.com/tikazyq/crawlab/releases/tag/v0.4.0)中，我们发布了Golang版本，并且支持Docker部署。下面将一步一步介绍如何使用Docker来部署Crawlab。
+这应该是部署应用的最方便也是最节省时间的方式了。在最近的一次版本更新 [v0.4.0](https://github.com/tikazyq/crawlab/releases/tag/v0.4.0) 中，我们发布了Golang版本，并且支持Docker部署。下面将一步一步介绍如何使用Docker来部署Crawlab。
 
 对Docker不了解的开发者，可以参考一下这篇文章（[9102 年了，学点 Docker 知识](https://juejin.im/post/5c2c69cee51d450d9707236e)）做进一步了解。如果已经了解 Docker 的开发者，可以跳过第 1 节，如果对 Docker 和 Docker-Compose 了解的开发者，可以跳过 1、2 两节，直接阅读 “安装并启动 Crawlab“ 小节。
 
@@ -133,7 +133,7 @@ services:
 
 这里先定义了 `master` 节点和 `worker` 节点，也就是Crawlab的主节点和工作节点。`master` 和 `worker` 依赖于 `mongo` 和 `redis` 容器，因此在启动之前会同时启动 `mongo` 和 `redis` 容器。这样就不需要单独配置 `mongo` 和`redis` 服务了，大大节省了环境配置的时间。
 
-其中，我们设置了Redis和MongoDB的地址，分别通过 `CRAWLAB_REDIS_ADDRESS` 和 `CRAWLAB_MONGO_HOST` 参数。`CRAWLAB_SERVER_MASTER` 设置为`Y`表示启动的是主节点（该参数默认是为`N`，表示为工作节点）。`CRAWLAB_API_ADDRESS` 是前端的API地址，请将这个设置为公网能访问到主节点的地址，`8000`是API端口。环境变量配置详情请见[配置Crawlab](../Config/README.md)，您可以根据自己的要求来进行配置。
+其中，我们设置了Redis和MongoDB的地址，分别通过 `CRAWLAB_REDIS_ADDRESS` 和 `CRAWLAB_MONGO_HOST` 参数。`CRAWLAB_SERVER_MASTER` 设置为`Y`表示启动的是主节点（该参数默认是为`N`，表示为工作节点）。`CRAWLAB_API_ADDRESS` 是前端的API地址，请将这个设置为公网能访问到主节点的地址，`8000`是API端口。环境变量配置详情请见 [配置章节](../Config/)，您可以根据自己的要求来进行配置。
 
 ⚠️**注意**: 在生产环境中，强烈建议您将数据库持久化，因为否则的话，一旦您的 Docker 容器发生意外导致关闭重启，您的数据将丢失。
 
@@ -164,7 +164,7 @@ docker-compose up -d
 
 ### 5. 下一步
 
-请参考 [使用章节](../Usage/README.md) 来详细了解如何使用 Crawlab。
+请参考 [使用章节](../Usage/) 来详细了解如何使用 Crawlab。
 
 ### 6. 参考部署文档
 

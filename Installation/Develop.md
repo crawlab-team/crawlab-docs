@@ -67,6 +67,6 @@ go run main.go
 
 欢迎任何对爬虫管理平台感兴趣的开发者来贡献或开发 Crawlab。
 
-完成上述步骤之后，相信您已经可以顺利将 Crawlab 运行起来了，而且能看到页面。为了让开发 Crawlab 更加轻松，您需要了解更多相关知识，强烈建议您先阅读 [原理章节](../Architecture/README.md) 和 [贡献章节](../Contribution/README.md)。
+完成上述步骤之后，相信您已经可以顺利将 Crawlab 运行起来了，而且能看到页面。为了让开发 Crawlab 更加轻松，您需要了解更多相关知识，强烈建议您先阅读 [原理章节](../Architecture/) 和 [贡献章节](../Contribution/)。
 
 ### 
