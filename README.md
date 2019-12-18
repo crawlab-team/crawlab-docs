@@ -8,8 +8,10 @@
 
 Crawlab主要解决的是大量爬虫管理困难的问题，例如需要监控上百个网站的参杂`scrapy`和`selenium`的项目不容易做到同时管理，而且命令行管理的成本非常高，还容易出错。Crawlab支持任何语言和任何框架，配合任务调度、任务监控，很容易做到对成规模的爬虫项目进行有效监控管理。
 
-本使用手册会帮助您解决在安装使用Crawlab遇到的任何问题。
+本使用手册是一个安装使用开发指南，帮助您安装、使用、开发 Crawlab。
 
-首先，我们来看如何安装Crawlab，请查看[安装](./Installation/README.md)。关于如何使用，请查看[使用](./Usage/README.md)
+如果您想尽快上手 Crawlab，请查看 [快速开始](./QuickStart/README.md)。
 
-⚠️**注意**: 如果您在安装过程中遇到任何问题，请查看[Q&A](./QA/README.md)来一一排查。如果仍然不能解决问题，请尝试到 [Github Issues](https://github.com/crawlab-team/crawlab/issues) 寻找解决办法。如果还是无法解决问题，请加作者微信 tikazyq1 并注明 "Crawlab"，作者将拉您入群，在群里您可以寻求大佬们的帮助。
+首先，我们来看如何安装Crawlab，请查看 [安装章节](./Installation/README.md)。关于如何使用，请查看 [使用章节](./Usage/README.md)。
+
+⚠️**注意**: 如果您在安装过程中遇到任何问题，请查看 [Q&A](./QA/README.md) 来一一排查。如果仍然不能解决问题，请尝试到 [Github Issues](https://github.com/crawlab-team/crawlab/issues) 寻找解决办法。如果还是无法解决问题，请加作者微信 tikazyq1 并注明 "Crawlab"，作者将拉您入群，在群里您可以寻求大佬们的帮助。
