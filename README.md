@@ -10,4 +10,6 @@ Crawlab主要解决的是大量爬虫管理困难的问题，例如需要监控�
 
 本使用手册会帮助您解决在安装使用Crawlab遇到的任何问题。
 
-首先，我们来看如何安装Crawlab吧，请查看[安装](./Installation/README.md)。
+首先，我们来看如何安装Crawlab，请查看[安装](./Installation/README.md)。关于如何使用，请查看[使用](./Usage/README.md)
+
+⚠️**注意**: 如果您在安装过程中遇到任何问题，请查看[Q&A](./QA/README.md)来一一排查。如果仍然不能解决问题，请尝试到 [Github Issues](https://github.com/crawlab-team/crawlab/issues) 寻找解决办法。如果还是无法解决问题，请加作者微信 tikazyq1 并注明 "Crawlab"，作者将拉您入群，在群里您可以寻求大佬们的帮助。
