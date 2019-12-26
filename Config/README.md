@@ -4,39 +4,42 @@
 
 ```yaml
 api:
-  address: "http://localhost:8000"
+  address: "http://localhost:8000"  # API 地址
 mongo:
-  host: localhost
-  port: 27017
-  db: crawlab_test
-  username: ""
-  password: ""
-  authSource: "admin"
+  host: localhost  # MongoDB host
+  port: 27017  # MongoDB port
+  db: crawlab_test  # MongoDB database
+  username: ""  # MongoDB username
+  password: ""  # MongoDB password
+  authSource: "admin"  # MongoDB auth source database
 redis:
-  address: localhost
-  password: ""
-  database: 1
-  port: 6379
+  address: localhost  # Redis host
+  password: ""  # Redis password
+  database: 1  # Redis database
+  port: 6379  # Redis port
 log:
-  level: info
-  path: "/var/logs/crawlab"
-  isDeletePeriodically: "Y"
-  deleteFrequency: "@hourly"
+  level: info  # Log Level
+  path: "/var/logs/crawlab"  # Log Path
+  isDeletePeriodically: "N"  # 是否定期删除日志（默认为否）
+  deleteFrequency: "@hourly"  # 删除日志频率
 server:
-  host: 0.0.0.0
-  port: 8000
-  master: "N"
-  secret: "crawlab"
+  host: 0.0.0.0  # 后端监听地址
+  port: 8000  # 后端监听端口
+  master: "Y"  # 是否为主节点
+  secret: "crawlab"  # JWT secret
   register:
     # mac地址 或者 ip地址，如果是ip，则需要手动指定IP
     type: "mac"
     ip: ""
 spider:
-  path: "/app/spiders"
+  path: "/app/spiders"  # 爬虫路径
 task:
-  workers: 4
+  workers: 4  # 同时运行任务的执行器数量
 other:
-  tmppath: "/tmp"
+  tmppath: "/tmp"  # 临时文件目录
+version: 0.4.1  # 版本号
+setting:
+  allowRegister: "N"  # 是否允许注册
 ```
 
 环境变量列表如下。
@@ -67,3 +70,5 @@ CRAWLAB_SERVER_REGISTER_IP | server.register.ip | 节点注册IP | 空 | 任意
 CRAWLAB_SPIDER_PATH | spider.path | 爬虫所在目录 | /app/spiders | 任意
 CRAWLAB_TASK_WORKERS | task.workers | 任务并行执行个数 | 4 | 任意数字
 CRAWLAB_OTHER_TMPPATH | other.tmppath | 临时文件目录 | /tmp | 任意
+CRAWLAB_VERSION | version |版本号 | 对应版本号 | 任意
+CRAWLAB_SETTING_ALLOWREGISTER |setting.allowRegister | 是否允许注册 | N | Y, N
