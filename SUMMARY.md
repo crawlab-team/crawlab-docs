@@ -19,7 +19,6 @@
         * [运行爬虫](Usage/Spider/Run.md)
         * [统计数据](Usage/Spider/Analytics.md)
         * [在线编辑文件](Usage/Spider/FileEdit.md)
-        * [CLI 命令行工具（实验）](Usage/Spider/CLI.md)
     * [任务](Usage/Task/README.md)
         * [查看任务](Usage/Task/View.md)
         * [操作任务](Usage/Task/Action.md)
