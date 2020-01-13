@@ -51,11 +51,11 @@ crawlab upload
 ```bash
 # 上传指定目录并附带爬虫名称、显示名称、结果集等信息
 crawlab \
-	-d /path/to/spider \ # 爬虫目录
-	-n <spider_name> \ # 爬虫名称
-	-N <display_name> \ # 显示名称
-	-m <execute_command> \ # 执行命令
-	-c <result_collection> # 结果集
+    -d /path/to/spider \ # 爬虫目录
+    -n <spider_name> \ # 爬虫名称
+    -N <display_name> \ # 显示名称
+    -m <execute_command> \ # 执行命令
+    -c <result_collection> # 结果集
 ```
 
 如果您想针对某一个爬虫 ID 上传爬虫，只需要指定 `-i` 这个命令，将爬虫 ID 传入就可以了，CLI 将上传爬虫并覆盖其爬虫文件。
