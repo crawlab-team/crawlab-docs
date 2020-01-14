@@ -1,6 +1,7 @@
 {
 	"title": "Crawlab文档",
 	"plugins": [
+		"expandable-chapters",
 		"chapter-fold",
 		"-search",
 		"search-pro",
