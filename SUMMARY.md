@@ -27,6 +27,7 @@
     * [SDK](Usage/SDK/README.md)
         * [CLI](Usage/SDK/CLI.md)
         * [Python](Usage/SDK/Python.md)
+    * [消息通知](Usage/Notification/README.md)
 * [爬虫集成](Integration/README.md)
     * [简介](Integration/README.md)
     * [集成 Scrapy](Integration/Scrapy.md)
