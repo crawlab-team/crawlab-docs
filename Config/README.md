@@ -40,6 +40,15 @@ other:
 version: 0.4.1  # 版本号
 setting:
   allowRegister: "N"  # 是否允许注册
+notification: # 消息通知
+  mail: # 邮箱通知
+    server: '' # SMPT 服务器地址
+    port: ''  # SMTP 服务器端口
+    senderEmail: ''  # 发送者邮箱
+    senderIdentity: ''  # 发送者身份
+    smtp:  # SMTP
+      user: ''  # SMTP 用户名
+      password: ''  # SMTP 密码
 ```
 
 环境变量列表如下。
@@ -72,3 +81,9 @@ CRAWLAB_TASK_WORKERS | task.workers | 任务并行执行个数 | 4 | 任意数�
 CRAWLAB_OTHER_TMPPATH | other.tmppath | 临时文件目录 | /tmp | 任意
 CRAWLAB_VERSION | version |版本号 | 对应版本号 | 任意
 CRAWLAB_SETTING_ALLOWREGISTER |setting.allowRegister | 是否允许注册 | N | Y, N
+CRAWLAB_NOTIFICATION_MAIL_SERVER |notification.mail.server | SMPT 服务器地址 |空|任意
+CRAWLAB_NOTIFICATION_MAIL_PORT |notification.mail.port | SMPT 服务器端口 |空|任意
+CRAWLAB_NOTIFICATION_MAIL_SENDEREMAIL |notification.mail.senderEmail | 发送者邮箱 |空|任意
+CRAWLAB_NOTIFICATION_MAIL_SENDEREIDENTITY |notification.mail.senderIdentity | 发送者身份 |空|任意
+CRAWLAB_NOTIFICATION_MAIL_SMTP_USER |notification.mail.smtp | SMTP 用户名 |空|任意
+CRAWLAB_NOTIFICATION_MAIL_SMTP_PASSWORD |notification.mail.password | SMTP 密码 |空|任意
