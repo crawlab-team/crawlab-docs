@@ -1,8 +1,42 @@
 {
 	"title": "Crawlab文档",
 	"plugins": [
-		"chapter-fold"
+		"expandable-chapters",
+		"chapter-fold",
+		"-search",
+		"search-pro",
+		"back-to-top-button",
+		"splitter",
+		"page-treeview",
+		"github",
+		"edit-link",
+		"favicon",
+		"lightbox",
+		"prism", 
+		"-highlight",
+		"hide-element",
+		"tbfed-pagefooter"
 	],
+	"pluginsConfig": {
+		"github": {
+			"url": "https://github.com/crawlab-team/crawlab"
+		},
+		"edit-link": {
+			"base": "//github.com/crawlab-team/crawlab-docs/edit/master",
+			"label": "编辑此页面"
+		},
+		"favicon": {
+			"shortcut": "http://crawlab.cn/favicon.ico"
+		},
+		"hide-element": {
+			"elements": [".gitbook-link"]
+		},
+		"tbfed-pagefooter": {
+			"copyright":"© 2019 Crawlab, Made by Crawlab-Team",
+			"modify_label": "该文件最后修改时间：",
+			"modify_format": "YYYY-MM-DD HH:mm:ss"
+		}
+	},
 	"styles": {
 		"website": "styles/website.css"
 	}
