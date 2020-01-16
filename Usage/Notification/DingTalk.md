@@ -4,7 +4,7 @@
 
 配置 API Webhook 相对比较简单：在 **设置** 页面中将获取的 API Webhook 复制粘贴到 **钉钉机器人 Webhook** 字段，并点击保存。请确保您选择 ”钉钉机器人“ 作为消息通知渠道。
 
-![](http://static-docs.crawlab.cn/setting.png)
+![](http://static-docs.crawlab.cn/mysetting.png)
 
 钉钉机器人通知效果如下。
 
