@@ -24,7 +24,7 @@
 			"label": "编辑此页面"
 		},
 		"favicon": {
-			"shortcut": "http://crawlab.cn/favicon.ico"
+			"shortcut": "/images/favicon.ico"
 		},
 		"hide-element": {
 			"elements": [".gitbook-link"]
