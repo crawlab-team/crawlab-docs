@@ -99,7 +99,7 @@ services:
       CRAWLAB_MONGO_HOST: "mongo"  # MongoDB host address MongoDB 的地址，在 docker compose 网络中，直接引用服务名称
       CRAWLAB_REDIS_ADDRESS: "redis"  # Redis host address Redis 的地址，在 docker compose 网络中，直接引用服务名称
     ports:    
-      - "8000:8000" # backend port mapping 后端端口映射 
+      - "8080:8080"
     depends_on:
       - mongo
       - redis
