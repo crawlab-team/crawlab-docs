@@ -95,12 +95,10 @@ services:
     image: tikazyq/crawlab:latest
     container_name: master
     environment:
-      CRAWLAB_API_ADDRESS: "http://localhost:8000"  # backend API address 后端 API 地址，设置为 http://<宿主机IP>:<端口>，端口为映射出来的端口
       CRAWLAB_SERVER_MASTER: "Y"  # whether to be master node 是否为主节点，主节点为 Y，工作节点为 N
       CRAWLAB_MONGO_HOST: "mongo"  # MongoDB host address MongoDB 的地址，在 docker compose 网络中，直接引用服务名称
       CRAWLAB_REDIS_ADDRESS: "redis"  # Redis host address Redis 的地址，在 docker compose 网络中，直接引用服务名称
     ports:    
-      - "8080:8080" # frontend port mapping 前端端口映射
       - "8000:8000" # backend port mapping 后端端口映射 
     depends_on:
       - mongo
