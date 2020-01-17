@@ -14,7 +14,7 @@
 
 如果还是有问题，请查看后端是否出现了问题。如果是 Docker，请用 `docker logs <container_name>` 来查看日志，然后看看是否是其他问题。
 
-如果是直接部署或源码部署，请在 `./frontend/.env.production` 这个文件中，将 `VUE_APP_BASE_URL` 设置为您的 API 地址。
+如果是直接部署或源码部署，请在 `./frontend/.env.production` 这个文件中，将 `VUE_APP_BASE_URL` 设置为您的 API 地址。请不要修改 `./backend/conf/config.yml` 中的 `api.address` 这个变量，不会起作用。
 
 #### 我执行了爬虫，但是在Crawlab上看不到结果
 
