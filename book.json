@@ -13,7 +13,9 @@
 		"prism", 
 		"-highlight",
 		"hide-element",
-		"tbfed-pagefooter"
+		"tbfed-pagefooter",
+		"addcssjs",
+		"sitemap"
 	],
 	"pluginsConfig": {
 		"github": {
@@ -24,16 +26,25 @@
 			"label": "编辑此页面"
 		},
 		"favicon": {
-			"shortcut": "/images/favicon.ico"
+			"shortcut": "assets/images/favicon.ico"
 		},
 		"hide-element": {
 			"elements": [".gitbook-link"]
 		},
 		"tbfed-pagefooter": {
-			"copyright":"© 2019 Crawlab, Made by Crawlab-Team",
-			"modify_label": "该文件最后修改时间：",
+			"copyright":"© 2020 Crawlab, Made by Crawlab-Team",
+			"modify_label": "该文件最后修改时间: ",
 			"modify_format": "YYYY-MM-DD HH:mm:ss"
-		}
+		},
+		"addcssjs": {
+			"js": [
+				"assets/js/track.js"
+			],
+			"css": []
+		},
+		"sitemap": {
+            "hostname": "http://docs.crawlab.cn/"
+        }
 	},
 	"styles": {
 		"website": "styles/website.css"
