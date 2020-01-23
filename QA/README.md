@@ -75,3 +75,30 @@
 1. 进入 MongoDB 数据库；
 2. 执行命令 `db.schedules.update({user_id:{$exists:false}}, {$set:{user_id:ObjectId('000000000000000000000000')}}, {multi: true})`，此时启动 Crawlab，应该能进入；
 3. 导航到“定时任务“，重新创建定时任务（当然也可以不重新创建，只是这样就收不到消息通知）。
+
+#### 我在一个 Scrapy 爬虫下有多个爬虫，我需要在 Crawlab 创建多个爬虫项目么？
+
+不需要。
+
+Crawlab 支持用参数的方式来支持多爬虫的项目。操作方法如下：
+1. 将爬虫的 **执行命令** 设置为 `scrapy crawl`；
+2. 每次执行的时候，将 **参数** 设置为 `spider_name`，也就是您爬虫的参数。
+
+例如，您有一个爬虫项目，结构如下。
+
+```bash
+.
+├── example
+│   ├── __init__.py
+│   ├── items.py
+│   ├── middlewares.py
+│   ├── pipelines.py
+│   ├── settings.py
+│   └── spiders
+│       ├── __init__.py
+│       ├── spider1.py  # name = 'spider1'
+│       └── spider2.py  # name = 'spider2'
+└── scrapy.cfg
+```
+
+如果您想运行 spider1，您应该在命令行中执行 `scrapy crawl spider1`，spider2 为 `scrapy crawl spider2`。这样您其实可以抽象出一个参数为 spider_name，也就是爬虫名称。Crawlab 每次运行爬虫的时候会将 **执行命令** 与 **参数** 组合成一个命令。因此，在这个例子中，您只需要将 **执行命令** 设置为 `scrapy crawl`，**参数** 设置为 `spider1` 或 `spider2` 就可以了。

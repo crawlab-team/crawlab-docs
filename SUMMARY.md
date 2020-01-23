@@ -33,8 +33,10 @@
         * [企业微信机器人](Usage/Notification/Wechat.md)
 * [爬虫集成](Integration/README.md)
     * [简介](Integration/README.md)
-    * [集成 Scrapy](Integration/Scrapy.md)
+    * [Scrapy](Integration/Scrapy.md)
+    * [通用 Python 爬虫](Integration/Python.md)
     * 集成 Puppeteer
+    * [其他爬虫](Integration/OtherFramework.md)
 * [原理](Architecture/README.md)
     * [整体架构](Architecture/Architecture.md)
     * [节点通信](Architecture/NodeCommunication.md)
