@@ -97,3 +97,5 @@ Crawlab 支持用参数的方式来支持多爬虫的项目。操作方法如下
 ```
 
 如果您想运行 spider1，您应该在命令行中执行 `scrapy crawl spider1`，spider2 为 `scrapy crawl spider2`。这样您其实可以抽象出一个参数为 spider_name，也就是爬虫名称。Crawlab 每次运行爬虫的时候会将 **执行命令** 与 **参数** 组合成一个命令。因此，在这个例子中，您只需要将 **执行命令** 设置为 `scrapy crawl`，**参数** 设置为 `spider1` 或 `spider2` 就可以了。
+
+更多信息，请阅读 [自定义爬虫](../Usage/Spider/CustomizedSpider.md) 这个章节。
