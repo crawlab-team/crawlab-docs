@@ -16,3 +16,52 @@ Crawlab主要解决的是大量爬虫管理困难的问题，例如需要监控�
 
 ⚠️**注意**: 如果您在安装过程中遇到任何问题，请查看 [Q&A](./QA/README.md) 来一一排查。如果仍然不能解决问题，请尝试到 [Github Issues](https://github.com/crawlab-team/crawlab/issues) 寻找解决办法。如果还是无法解决问题，请加作者微信 tikazyq1 并注明 "Crawlab"，作者将拉您入群，在群里您可以寻求大佬们的帮助。
 
+### 截图
+
+#### 登录
+
+![](https://raw.githubusercontent.com/tikazyq/crawlab-docs/master/images/login.png)
+
+#### 首页
+
+![](https://raw.githubusercontent.com/tikazyq/crawlab-docs/master/images/home.png)
+
+#### 节点列表
+
+![](https://raw.githubusercontent.com/tikazyq/crawlab-docs/master/images/node-list.png)
+
+#### 节点拓扑图
+
+![](https://raw.githubusercontent.com/tikazyq/crawlab-docs/master/images/node-network.png)
+
+#### 爬虫列表
+
+![](https://raw.githubusercontent.com/tikazyq/crawlab-docs/master/images/spider-list.png)
+
+#### 爬虫概览
+
+![](https://raw.githubusercontent.com/tikazyq/crawlab-docs/master/images/spider-overview.png)
+
+#### 爬虫分析
+
+![](https://raw.githubusercontent.com/tikazyq/crawlab-docs/master/images/spider-analytics.png)
+
+#### 爬虫文件编辑
+
+![](http://static-docs.crawlab.cn/file-edit.png)
+
+#### 任务详情 - 抓取结果
+
+![](https://raw.githubusercontent.com/tikazyq/crawlab-docs/master/images/task-results.png)
+
+#### 定时任务
+
+![](http://static-docs.crawlab.cn/schedule-v0.4.4.png)
+
+#### 依赖安装
+
+![](http://static-docs.crawlab.cn/node-install-dependencies.png)
+
+#### 消息通知
+
+<img src="http://static-docs.crawlab.cn/notification-mobile.jpeg" height="480px">
