@@ -27,7 +27,7 @@
 	const ea = window.location.pathname
 	const el = ''
 
-	const url = 'http://api.crawlab.cn/track' + 
+	const url = 'https://api.crawlab.cn/track' + 
 	`?uid=${uid}` +
 	`&sid=${sid}` +
 	`&ec=${ec}` +
