@@ -10,6 +10,8 @@
 
 下面我们看几个爬虫集成的例子:
 
-1. [集成 Scrapy](/Examples/Scrapy.md)
-2. 集成 Puppeteer
+1. [集成 Scrapy](./Scrapy.md)
+2. [集成 Puppeteer](./Puppeteer.md)
+3. [通用 Python 爬虫](./Python.md)
+3. [通用 Node.js 爬虫](./Nodejs.md)
 

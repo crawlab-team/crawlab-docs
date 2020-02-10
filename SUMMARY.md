@@ -35,7 +35,8 @@
     * [简介](Integration/README.md)
     * [Scrapy](Integration/Scrapy.md)
     * [通用 Python 爬虫](Integration/Python.md)
-    * 集成 Puppeteer
+    * [通用 Node.js 爬虫](Integration/Puppeteer.md)
+    * [Puppeteer](Integration/Puppeteer.md)
     * [其他爬虫](Integration/OtherFramework.md)
 * [原理](Architecture/README.md)
     * [整体架构](Architecture/Architecture.md)
