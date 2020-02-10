@@ -35,7 +35,7 @@
     * [简介](Integration/README.md)
     * [Scrapy](Integration/Scrapy.md)
     * [通用 Python 爬虫](Integration/Python.md)
-    * [通用 Node.js 爬虫](Integration/Puppeteer.md)
+    * [通用 Node.js 爬虫](Integration/Nodejs.md)
     * [Puppeteer](Integration/Puppeteer.md)
     * [其他爬虫](Integration/OtherFramework.md)
 * [原理](Architecture/README.md)
