@@ -47,6 +47,6 @@
         }
 	},
 	"styles": {
-		"website": "styles/website.css"
+		"website": "assets/css/website.css"
 	}
 }

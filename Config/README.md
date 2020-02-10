@@ -87,3 +87,4 @@ CRAWLAB_NOTIFICATION_MAIL_SENDEREMAIL |notification.mail.senderEmail | 发送者
 CRAWLAB_NOTIFICATION_MAIL_SENDEREIDENTITY |notification.mail.senderIdentity | 发送者身份 |空|任意
 CRAWLAB_NOTIFICATION_MAIL_SMTP_USER |notification.mail.smtp | SMTP 用户名 |空|任意
 CRAWLAB_NOTIFICATION_MAIL_SMTP_PASSWORD |notification.mail.password | SMTP 密码 |空|任意
+CRAWLAB_SERVER_LANG_NODE | server.lang.node | 预安装 Node.js 语言环境 | 空 | Y, N
