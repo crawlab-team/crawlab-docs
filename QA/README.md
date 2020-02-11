@@ -18,7 +18,7 @@
 
 #### 我执行了爬虫，但是在Crawlab上看不到结果
 
-强烈建议您先阅读了[与Scrapy集成](https://tikazyq.github.io/crawlab-docs/Examples/ScrapyIntegration.html)。
+强烈建议您先阅读了 [爬虫集成章节](../Integration/README.md)。
 
 简单来说，Crawlab目前只支持MongoDB，而且您需要保证存放的数据与Crawlab的数据库一致，另外您需要在传给MongoDB时加上`task_id`，并设置为Crawlab传过来的环境变量`CRAWLAB_TASK_ID`，您需要存放的collection名字为同样是传过来的`CRAWLAB_COLLECTION`。
 
