@@ -20,15 +20,17 @@ pip install crawlab-sdk
 
 ```bash
 # 登录并输入参数
-crawlab login -u <username> -a http://<your_api_ip>:<your_api_port>
+crawlab login -u <username> -a <api_address>
 
 # 例子
-crawlab login -u admin -a http://localhost:8000
+crawlab login -u admin -a http://localhost:8080/api
 ```
 
 然后输入登录密码。
 
 如果登录成功，CLI 会将用户名、密码、API 地址和获取到的 Token 保存在本地，供后面使用。
+
+⚠️注意：这里的 `<api_address>` 是后端 API 的地址。如果您是用的 Docker 镜像，只需要在 Web 界面 URL 后加一个 `/api` 后缀就可以了。例如，如果您访问 Web 的地址是 `http://localhost:8080`，您的 `<api_url>` 就是 `http://localhost:8080/api`。
 
 ### 上传爬虫
 
