@@ -10,7 +10,7 @@ docker-compose up -d
 
 这就可以了。然后在浏览器中输入 `http://localhost:8080` 就可以看到界面了。
 
-关于如何使用 Crawlab 请参考 [使用章节](../Usage/README.md)。
+关于如何使用 Crawlab 请参考 [爬虫章节](../Spider/README.md)、[任务章节](../Task/README.md) 等等。
 
 关于其他安装方式，请参考 [安装章节](../Installation/README.md)。
 

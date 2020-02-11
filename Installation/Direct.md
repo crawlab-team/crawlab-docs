@@ -148,7 +148,7 @@ $GOPATH/bin/crawlab
 
 ### 10. 下一步
 
-请参考 [使用章节](../Usage/README.md) 来详细了解如何使用 Crawlab。
+请参考 [爬虫章节](../Spider/README.md) 来详细了解如何使用 Crawlab。
 
 ### 11. 参考
 

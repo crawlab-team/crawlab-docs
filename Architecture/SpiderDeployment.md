@@ -1,6 +1,6 @@
 ## 爬虫部署
 
-之前已经在[部署爬虫](../Usage/Spider/Deploy.md)中介绍了，爬虫是自动部署在工作节点上的。下面的示意图展示了Crawlab爬虫部署的架构。
+之前已经在[部署爬虫](../Spider/Deploy.md)中介绍了，爬虫是自动部署在工作节点上的。下面的示意图展示了Crawlab爬虫部署的架构。
 
 ![](https://crawlab.oss-cn-hangzhou.aliyuncs.com/v0.3.0/node-deployment.png)
 

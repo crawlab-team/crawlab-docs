@@ -36,7 +36,7 @@
 
 解决办法有 3 个：
 
-1. **界面安装（推荐）**：在界面上安装相关依赖，请参考 [节点依赖安装](../Usage/Node/Installation.md)；
+1. **界面安装（推荐）**：在界面上安装相关依赖，请参考 [节点依赖安装](../Node/Installation.md)；
 2. **爬虫方式**：上传一个特殊爬虫，将 `pip`、`npm` 等安装命令写在一个脚本中，然后执行这个脚本，或者直接将安装命令写在“执行命令”中；
 3. **构建新镜像**：基于 `tikazyq/crawlab` 镜像（`FROM tikazyq/crawlab`），将需要安装第三方依赖的命令写在构建文件 `Dockerfile` 中，例如 `RUN pip install bs4 pymysql`，然后打包成新镜像，再用新镜像生成容器运行。
 
