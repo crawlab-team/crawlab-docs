@@ -118,7 +118,7 @@ services:
       # CRAWLAB_NOTIFICATION_MAIL_SERVER: smtp.exmaple.com  # STMP server address STMP 服务器地址
       # CRAWLAB_NOTIFICATION_MAIL_PORT: 465  # STMP server port STMP 服务器端口
       # CRAWLAB_NOTIFICATION_MAIL_SENDEREMAIL: admin@exmaple.com  # sender email 发送者邮箱
-      # CRAWLAB_NOTIFICATION_MAIL_SENDEREIDENTITY: admin@exmaple.com  # sender ID 发送者 ID
+      # CRAWLAB_NOTIFICATION_MAIL_SENDERIDENTITY: admin@exmaple.com  # sender ID 发送者 ID
       # CRAWLAB_NOTIFICATION_MAIL_SMTP_USER: username  # SMTP username SMTP 用户名
       # CRAWLAB_NOTIFICATION_MAIL_SMTP_PASSWORD: password  # SMTP password SMTP 密码
     ports:    
@@ -126,6 +126,8 @@ services:
     depends_on:
       - mongo
       - redis
+    # volumes:
+    #   - "/var/crawlab/log:/var/logs/crawlab" # log persistent 日志持久化
   worker:
     image: tikazyq/crawlab:latest
     container_name: worker
@@ -136,6 +138,8 @@ services:
     depends_on:
       - mongo
       - redis
+    # volumes:
+    #   - "/var/crawlab/log:/var/logs/crawlab" # log persistent 日志持久化
   mongo:
     image: mongo:latest
     restart: always
@@ -151,14 +155,18 @@ services:
     #   - "/opt/crawlab/redis/data:/data"  # make data persistent 持久化
     # ports:
     #   - "6379:6379"  # expose port to host machine 暴露接口到宿主机
-
+  # splash:  # use Splash to run spiders on dynamic pages
+  #   image: scrapinghub/splash
+  #   container_name: splash
+  #   ports:
+  #     - "8050:8050"
 ```
 
 这里先定义了 `master` 节点和 `worker` 节点，也就是Crawlab的主节点和工作节点。`master` 和 `worker` 依赖于 `mongo` 和 `redis` 容器，因此在启动之前会同时启动 `mongo` 和 `redis` 容器。这样就不需要单独配置 `mongo` 和`redis` 服务了，大大节省了环境配置的时间。
 
 其中，我们设置了Redis和MongoDB的地址，分别通过 `CRAWLAB_REDIS_ADDRESS` 和 `CRAWLAB_MONGO_HOST` 参数。`CRAWLAB_SERVER_MASTER` 设置为`Y`表示启动的是主节点（该参数默认是为`N`，表示为工作节点）。`CRAWLAB_API_ADDRESS` 是前端的API地址，请将这个设置为公网能访问到主节点的地址，`8000`是API端口。环境变量配置详情请见 [配置章节](../Config/)，您可以根据自己的要求来进行配置。
 
-⚠️**注意**: 在生产环境中，强烈建议您将数据库持久化，因为否则的话，一旦您的 Docker 容器发生意外导致关闭重启，您的数据将丢失。
+⚠️**注意**: 在生产环境中，强烈建议您将数据库持久化，因为否则的话，一旦您的 Docker 容器发生意外导致关闭重启，您的数据将丢失。持久化的方法就是将上述 `docker-compose.yml` 模版中的关于持久化的代码取消注释就可以了。
 
 安装完 `docker-compose` 和定义好 `docker-compose.yml` 后，只需要运行以下命令就可以启动Crawlab。
 
