@@ -22,6 +22,8 @@
 
 简单来说，Crawlab目前只支持MongoDB，而且您需要保证存放的数据与Crawlab的数据库一致，另外您需要在传给MongoDB时加上`task_id`，并设置为Crawlab传过来的环境变量`CRAWLAB_TASK_ID`，您需要存放的collection名字为同样是传过来的`CRAWLAB_COLLECTION`。
 
+考虑到这样做的复杂性，我们开发了 `Crawlab SDK`，可以帮助您简化这个流程。请参考 [SDK章节](../SDK/README.md) 和 [集成章节](../Integration/README.md) 来使用 SDK。
+
 #### 为何启动Crawlab时，后台日志显示`no reachable servers`？
 
 这是因为您没有连上MongoDB，请确保您的`CRAWLAB_MONGO_HOST`是否设置对。如果为Docker Compose，可以将其设置为`mongo`。
