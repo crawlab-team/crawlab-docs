@@ -14,6 +14,7 @@
     * [长任务爬虫](Spider/LongTaskSpider.md)
     * [部署爬虫](Spider/Deploy.md)
     * [运行爬虫](Spider/Run.md)
+    * [复制爬虫](Spider/Copy.md)
     * [统计数据](Spider/Analytics.md)
     * [在线编辑文件](Spider/FileEdit.md)
 * [任务](Task/README.md)
