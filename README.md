@@ -4,7 +4,7 @@
 
 [查看演示 Demo](http://crawlab.cn/demo)
 
-项目自 2019 年 3 月份上线以来受到爬虫爱好者们和开发者们的好评，超过一半的使用者表示已经在用 Crawlab 作为公司的爬虫管理平台。经过近数月的迭代，我们陆续上线了 [定时任务](./Usage/Schedule/README.md)、[数据分析](./Usage/Spider/Analytics)、[可配置爬虫](./Usage/Spider/ConfigurableSpider.md)、[SDK](./Usage/SDK/README.md)、[消息通知](./Usage/Notification/README.md) 等功能，将Crawlab打造得更加实用，更加全面，能够真正帮助用户解决爬虫管理困难的问题。
+项目自 2019 年 3 月份上线以来受到爬虫爱好者们和开发者们的好评，超过一半的使用者表示已经在用 Crawlab 作为公司的爬虫管理平台。经过近数月的迭代，我们陆续上线了 [定时任务](./Usage/Schedule/README.md)、[数据分析](./Usage/Spider/Analytics)、[可配置爬虫](./Usage/Spider/ConfigurableSpider.md)、[SDK](./Usage/SDK/README.md)、[消息通知](./Usage/Notification/README.md)、[Scrapy 支持](./Spider/ScrapySpider.md)、[Git 同步](./CI/README.md) 等功能，将Crawlab打造得更加实用，更加全面，能够真正帮助用户解决爬虫管理困难的问题。
 
 Crawlab主要解决的是大量爬虫管理困难的问题，例如需要监控上百个网站的参杂`scrapy`和`selenium`的项目不容易做到同时管理，而且命令行管理的成本非常高，还容易出错。Crawlab支持任何语言和任何框架，配合任务调度、任务监控，很容易做到对成规模的爬虫项目进行有效监控管理。
 
