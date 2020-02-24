@@ -4,7 +4,11 @@
 
 1. [自定义爬虫](./CustomizedSpider.md)
 2. [可配置爬虫](./ConfigurableSpider.md)
-3. [部署爬虫](./Deploy.md)
-4. [运行爬虫](./Run.md)
-5. [统计数据](./Analytics.md)
+3. [Scrapy 爬虫](./ScrapySpider.md)
+4. [长任务爬虫](./LongTaskSpider.md)
+5. [部署爬虫](./Deploy.md)
+6. [运行爬虫](./Run.md)
+7. [复制爬虫](./Copy.md)
+8. [统计数据](./Analytics.md)
+9. [在线编辑文件](./FileEdit.md)
 
