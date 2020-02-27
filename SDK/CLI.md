@@ -52,7 +52,7 @@ crawlab upload
 
 ```bash
 # 上传指定目录并附带爬虫名称、显示名称、结果集等信息
-crawlab \
+crawlab upload \
     -d /path/to/spider \ # 爬虫目录
     -n <spider_name> \ # 爬虫名称
     -N <display_name> \ # 显示名称
