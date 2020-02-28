@@ -4,6 +4,7 @@
 * [快速开始](QuickStart/README.md)
 * [安装](Installation/README.md)
     * [Docker](Installation/Docker.md)
+    * [Kubernetes](Installation/Kubernetes.md)
     * [直接部署](Installation/Direct.md)
     * [开发模式](Installation/Develop.md)
 * [配置](Config/README.md)
