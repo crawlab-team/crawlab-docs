@@ -105,3 +105,14 @@ Crawlab 支持用参数的方式来支持多爬虫的项目。操作方法如下
 #### 为何我拉取最新镜像后添加爬虫出现错误？
 
 很大概率是因为您的静态文件没有更新，您需要清除一下浏览器缓存，然后刷新页面，这样就可以解决。
+
+#### 我是直接部署的，为何我安装了 Python 3.6 界面上还是显示没有安装呢？
+
+Crawlab 是根据 `/usr/local/bin/python` 和 `/usr/local/bin/pip` 来确定环境的，因此您需要将对应的 `python` 和 `pip` 执行文件添加软链到 `/usr/local/bin` 上。
+
+具体操作命令如下：
+
+```bash
+ln -s <python_path> /usr/local/bin/python
+ln -s <pip_path> /usr/local/bin/pip
+```
