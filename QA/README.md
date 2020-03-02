@@ -116,3 +116,14 @@ Crawlab 是根据 `/usr/local/bin/python` 和 `/usr/local/bin/pip` 来确定环�
 ln -s <python_path> /usr/local/bin/python
 ln -s <pip_path> /usr/local/bin/pip
 ```
+
+#### 我拉取镜像等待了很长时间也拉不下来，怎么办？
+
+Crawlab 默认是用 Dockerhub 上的镜像，由于是在国外，您可能拉取会存在一些网络问题。您可以使用国内的阿里云镜像源。具体操作如下。
+
+```bash
+docker pull registry.cn-hangzhou.aliyuncs.com/crawlab-team/crawlab:latest
+docker tag registry.cn-hangzhou.aliyuncs.com/crawlab-team/crawlab:latest tikazyq/crawlab:latest
+docker rmi registry.cn-hangzhou.aliyuncs.com/crawlab-team/crawlab:latest
+```
+
