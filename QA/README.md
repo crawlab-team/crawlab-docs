@@ -44,7 +44,7 @@
 
 #### 我有多台服务器，打算将 Crawlab 部署在上面可以吗？
 
-建议您用 `Kubernetes`（简称 K8S）来管理 Crawlab 多个节点。详情可以阅读 [这篇文章](https://mp.weixin.qq.com/s?__biz=MzA4NTI3MDczMQ==&mid=2648421495&idx=1&sn=8856af6e7ea1e9947d1c27a76aefe509&chksm=87f59dd3b08214c538f4d48f20df2923aec0ff05d053a68bec2e73fbf9886096f741197aa39a&mpshare=1&scene=1&srcid=1206PH2f5pPMib1nlf253oP2&sharer_sharetime=1575632058514&sharer_shareid=94a92f1041e202e68ae357b6530fc68c&exportkey=AjblMAl05lrn18vSvHIJ4fM%3D&pass_ticket=bGg98lGunZfkTqL19G6rj3F4jyGo%2BPyr9K7KQAflR8fYhw9LNyOThOUYNxbspGyV#rd)
+建议您用 `Kubernetes`（简称 K8S）来管理 Crawlab 多个节点。详情可以阅读 [Kubernetes 安装章节](../Installation/Kubernetes.md)。
 
 由于 Crawlab 默认是用 `MAC` 地址来作为节点的唯一标识，因此如果您用 `docker-compose` 在多台服务器上管理容器，可能会出现 `MAC` 地址相同而导致无法显示所有节点的情况。因此，您需要设置 `CRAWLAB_SERVER_REGISTER_TYPE` 为 `ip`，然后 `CRAWLAB_SERVER_REGISTER_IP` 为各节点的唯一标识就可以了。
 
