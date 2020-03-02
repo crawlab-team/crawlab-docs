@@ -117,6 +117,27 @@ ln -s <python_path> /usr/local/bin/python
 ln -s <pip_path> /usr/local/bin/pip
 ```
 
+#### 我的是 Java 爬虫，如何用 Crawlab 运行呢？
+
+Crawlab 支持任何语言的爬虫，只要您安装了相应的环境。
+
+对于 Java 爬虫来说，首先您需要安装 Java 环境。如果您是 Docker 安装的话，您需要进入到容器里安装。
+
+```bash
+docker exec -it <container_name>
+```
+
+然后在容器中运行下面的命令。
+
+```bash
+apt-get install -y default-jdk
+ln -s /usr/bin/java /usr/local/bin/java
+```
+
+这个会安装 Java 10，如果您需要其他的 Java 版本，请用相应的命令。
+
+接下来，您可以选择将 jar 包上传到爬虫，执行命令输入 `/usr/local/bin/java -jar <jar_path>`，然后就可以运行爬虫了。
+
 #### 我拉取镜像等待了很长时间也拉不下来，怎么办？
 
 Crawlab 默认是用 Dockerhub 上的镜像，由于是在国外，您可能拉取会存在一些网络问题。您可以使用国内的阿里云镜像源。具体操作如下。
