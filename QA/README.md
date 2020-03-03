@@ -148,3 +148,13 @@ docker tag registry.cn-hangzhou.aliyuncs.com/crawlab-team/crawlab:latest tikazyq
 docker rmi registry.cn-hangzhou.aliyuncs.com/crawlab-team/crawlab:latest
 ```
 
+#### 我打算用 Crawlab 做爬虫集群管理，有什么安全问题？
+
+如果您希望在公网里访问 Crawlab 界面，您需要注意几个问题：
+
+1. 主节点的前端页面和 API 尽量用 HTTPS；
+2. 工作节点不要暴露在公网；
+3. MongoDB 和 Redis 数据库尽量在内网，必须开启授权验证
+4. MongoDB 和 Redis 需要让所有节点能访问到。
+
+在部署集群之前，建议您先阅读 [原理-整体架构章节](../Architecture/Architecture.md)。
