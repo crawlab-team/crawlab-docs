@@ -164,3 +164,9 @@ docker rmi registry.cn-hangzhou.aliyuncs.com/crawlab-team/crawlab:latest
 Crawlab 默认是将要求将结果数据存到 MongoDB 里，不过也支持将结果数据存到其他数据库，例如 MySQL、Postgres、MS SQL 等等。我们推荐的做法是双写，也就是同时将数据写入 MongoDB 和其他数据库，这样能保证您既能再 Crawlab 界面上看到结果数据，又能保证您将数据存到您理想的数据库中。保存到 MongoDB 非常简单，可以参照 [爬虫集成章节](../Integration/README.md)。
 
 当然，我们目前正在开发对其他数据库类型的支持，以帮助到更多需要储存到其他数据库类型的用户。这样就不需要双写了。请关注后续开发。
+
+#### 导入 Scrapy 项目，点击爬虫 Scrapy 标签，看不到设置、爬虫、Items、Pipelines 等信息，这个怎么解决？
+
+Crawlab 对 Scrapy 的支持，是通过 Scrapy CLI 和 Crawlab CLI 工具来完成的，而且会在 runtime 读取 py 文件数据，因此必须保证文件中的所有依赖是已经安装好了的。例如，您的爬虫项目依赖了 pymysql，您必须在主节点上安装 pymysql 依赖，才可以看到 Scrapy 的信息。
+
+如何安装第三方依赖，请参考 [节点-依赖安装章节](../Node/Installation.md)。
