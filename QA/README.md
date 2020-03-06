@@ -158,3 +158,9 @@ docker rmi registry.cn-hangzhou.aliyuncs.com/crawlab-team/crawlab:latest
 4. MongoDB 和 Redis 需要让所有节点能访问到。
 
 在部署集群之前，建议您先阅读 [原理-整体架构章节](../Architecture/Architecture.md)。
+
+#### 我想把爬虫抓取到的数据存到 MySQL 或 MongoDB 以外的数据库上，有什么办法？
+
+Crawlab 默认是将要求将结果数据存到 MongoDB 里，不过也支持将结果数据存到其他数据库，例如 MySQL、Postgres、MS SQL 等等。我们推荐的做法是双写，也就是同时将数据写入 MongoDB 和其他数据库，这样能保证您既能再 Crawlab 界面上看到结果数据，又能保证您将数据存到您理想的数据库中。保存到 MongoDB 非常简单，可以参照 [爬虫集成章节](../Integration/README.md)。
+
+当然，我们目前正在开发对其他数据库类型的支持，以帮助到更多需要储存到其他数据库类型的用户。这样就不需要双写了。请关注后续开发。
