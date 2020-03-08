@@ -76,7 +76,7 @@ CRAWLAB_SERVER_HOST | server.host | 服务器绑定IP | 0.0.0.0 | 任意
 CRAWLAB_SERVER_PORT | server.port | 服务器绑定端口 | 8000 | 任意
 CRAWLAB_SERVER_MASTER | server.master | 该节点是否为主节点 | N | Y, N
 CRAWLAB_SERVER_SECRET | server.secret | 服务器密钥 | crawlab | 任意
-CRAWLAB_SERVER_REGISTER_TYPE | server.register.type | 节点注册类别 | mac | mac, ip
+CRAWLAB_SERVER_REGISTER_TYPE | server.register.type | 节点注册类别 | mac | mac, ip, hostname
 CRAWLAB_SERVER_REGISTER_IP | server.register.ip | 节点注册IP | 空 | 任意
 CRAWLAB_SPIDER_PATH | spider.path | 爬虫所在目录 | /app/spiders | 任意
 CRAWLAB_TASK_WORKERS | task.workers | 任务并行执行个数 | 4 | 任意数字
