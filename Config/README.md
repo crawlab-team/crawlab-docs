@@ -35,9 +35,11 @@ spider:
   path: "/app/spiders"  # 爬虫路径
 task:
   workers: 4  # 同时运行任务的执行器数量
+rpc:
+  workers: 16 # RPC 协程个数
 other:
   tmppath: "/tmp"  # 临时文件目录
-version: 0.4.1  # 版本号
+version: 0.4.7  # 版本号
 setting:
   allowRegister: "N"  # 是否允许注册
 notification: # 消息通知
@@ -78,6 +80,7 @@ CRAWLAB_SERVER_REGISTER_TYPE | server.register.type | 节点注册类别 | mac |
 CRAWLAB_SERVER_REGISTER_IP | server.register.ip | 节点注册IP | 空 | 任意
 CRAWLAB_SPIDER_PATH | spider.path | 爬虫所在目录 | /app/spiders | 任意
 CRAWLAB_TASK_WORKERS | task.workers | 任务并行执行个数 | 4 | 任意数字
+CRAWLAB_RPC_WORKERS | rpc.workers | RPC 协程个数 | 16 | 任意数字
 CRAWLAB_OTHER_TMPPATH | other.tmppath | 临时文件目录 | /tmp | 任意
 CRAWLAB_VERSION | version |版本号 | 对应版本号 | 任意
 CRAWLAB_SETTING_ALLOWREGISTER |setting.allowRegister | 是否允许注册 | N | Y, N

@@ -178,7 +178,7 @@ docker-compose up -d
 
 ### 4. 更新/重启 Crawlab
 
-当 Crawlab 有更新时，我们会将新的变更构建更新到新的镜像中。最新的镜像名称都是 `tikazyq/crawlab:latest`。而一个指定版本号的镜像名称为 `tikazyq/crawlab:<version>`，例如 `tikazyq/crawlab:0.4.1` 为 v0.4.1 版本对应的镜像。
+当 Crawlab 有更新时，我们会将新的变更构建更新到新的镜像中。最新的镜像名称都是 `tikazyq/crawlab:latest`。而一个指定版本号的镜像名称为 `tikazyq/crawlab:<version>`，例如 `tikazyq/crawlab:0.4.7` 为 v0.4.7 版本对应的镜像。
 
 如果您需要更新最新的版本的镜像，只需要执行以下代码。
 
@@ -196,12 +196,4 @@ docker-compose up -d
 ### 5. 下一步
 
 请参考 [爬虫章节](../Spider/README.md) 来详细了解如何使用 Crawlab。
-
-### 6. 参考部署文档
-
-网上已经有很多文章在讲解如何部署 Crawlab 了，这里将它们汇总了一下，读者可以进行参考。
-
-- [Crawlab 单节点服务集群搭建部署简明教程](https://juejin.im/post/5d65e8aaf265da03970bca13)
-- [centos7+docker18.3.1-ce 安装和部署crawlab分布式爬虫平台,并使用docker-compose管理docker](https://blog.csdn.net/kai402458953/article/details/100035672)
-- [Crawlab的docker部署流程](https://blog.csdn.net/apologize_i/article/details/101211219)
 
