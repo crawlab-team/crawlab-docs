@@ -31,17 +31,22 @@ server:
     # mac地址 或者 ip地址，如果是ip，则需要手动指定IP
     type: "mac"
     ip: ""
+  lang: # 安装语言环境, Y 为安装，N 为不安装
+    python: "Y"
+    node: "N"
+    java: "N"
+    dotnet: "N"
 spider:
   path: "/app/spiders"  # 爬虫路径
 task:
   workers: 4  # 同时运行任务的执行器数量
-rpc:
-  workers: 16 # RPC 协程个数
 other:
   tmppath: "/tmp"  # 临时文件目录
 version: 0.4.7  # 版本号
 setting:
   allowRegister: "N"  # 是否允许注册
+  enableTutorial: "N"  # 是否弃用教程
+  runOnMaster: "Y"  # 是否在主节点上运行任务
 notification: # 消息通知
   mail: # 邮箱通知
     server: '' # SMPT 服务器地址
@@ -91,3 +96,6 @@ CRAWLAB_NOTIFICATION_MAIL_SENDEREIDENTITY |notification.mail.senderIdentity | �
 CRAWLAB_NOTIFICATION_MAIL_SMTP_USER |notification.mail.smtp | SMTP 用户名 |空|任意
 CRAWLAB_NOTIFICATION_MAIL_SMTP_PASSWORD |notification.mail.password | SMTP 密码 |空|任意
 CRAWLAB_SERVER_LANG_NODE | server.lang.node | 预安装 Node.js 语言环境 | 空 | Y, N
+CRAWLAB_SERVER_LANG_JAVA | server.lang.java | 预安装 Java 语言环境 | 空 | Y, N
+CRAWLAB_SERVER_LANG_DOTNET | server.lang.dotnet | 预安装 .Net Core 语言环境 | 空 | Y, N
+CRAWLAB_SERVER_LANG_PHP | server.lang.php | 预安装 PHP 语言环境 | 空 | Y, N
