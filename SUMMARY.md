@@ -53,5 +53,6 @@
     * [节点监控](Architecture/NodeMonitoring.md)
     * [爬虫部署](Architecture/SpiderDeployment.md)
     * [任务执行](Architecture/TaskExecution.md)
+    * [RPC](Architecture/RPC.md)
 * [贡献](Contribution/README.md)
 * [Q&A](QA/README.md)

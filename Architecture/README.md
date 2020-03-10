@@ -7,4 +7,5 @@
 3. [节点监控](./NodeMonitoring.md)
 4. [爬虫部署](./SpiderDeployment.md)
 5. [任务执行](./TaskExecution.md)
+6. [RPC](./RPC.md)
 
