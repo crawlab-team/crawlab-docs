@@ -146,6 +146,8 @@ $GOPATH/bin/crawlab
 
 然后在浏览器中输入 `http://localhost:8080` 就可以看到界面了。
 
+⚠️注意：启动的时候需要保证您的工作路径在从 Github 拉取下来的 Crawlab 项目的 `./backend` 路径里。
+
 ### 10. 下一步
 
 请参考 [爬虫章节](../Spider/README.md) 来详细了解如何使用 Crawlab。

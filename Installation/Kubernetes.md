@@ -264,7 +264,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: crawlab
-  namespace: crawlab
+  namespace: crawlab-develop
 spec:
   ports:
   - port: 8080
@@ -275,13 +275,12 @@ spec:
   type: NodePort
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: crawlab-master
-  namespace: crawlab
+  namespace: crawlab-develop
 spec:
-  strategy:
-    type: Recreate
+  serviceName: crawlab-master
   selector:
     matchLabels:
       app: crawlab-master
@@ -291,15 +290,18 @@ spec:
         app: crawlab-master
     spec:
       containers:
-      - image: tikazyq/crawlab:latest
+      - image: tikazyq/crawlab:develop
+        imagePullPolicy: Always
         name: crawlab
-        env: # 这里是 Crawlab 的环境变量配置
+        env:
         - name: CRAWLAB_SERVER_MASTER
           value: "Y"
-        - name: CRAWLAB_MONGO_HOST # MongoDB 地址，请改变为实际 MongoDB 地址
+        - name: CRAWLAB_MONGO_HOST
           value: "mongo"
-        - name: CRAWLAB_REDIS_ADDRESS # Redis 地址，请改变为实际 Redis 地址
+        - name: CRAWLAB_REDIS_ADDRESS
           value: "redis"
+        - name: CRAWLAB_SERVER_REGISTER_TYPE
+          value: "hostname"
         ports:
         - containerPort: 8080
           name: crawlab
@@ -325,14 +327,13 @@ wget https://raw.githubusercontent.com/crawlab-team/crawlab/master/k8s/crawlab-w
 
 ```yaml
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: crawlab-worker
-  namespace: crawlab
+  namespace: crawlab-develop
 spec:
-  replicas: 4 # 多少个工作节点
-  strategy:
-    type: Recreate
+  serviceName: crawlab-worker
+  replicas: 2
   selector:
     matchLabels:
       app: crawlab-worker
@@ -342,15 +343,18 @@ spec:
         app: crawlab-worker
     spec:
       containers:
-      - image: tikazyq/crawlab:latest
+      - image: tikazyq/crawlab:develop
+        imagePullPolicy: Always
         name: crawlab
-        env: # 这里是 Crawlab 的环境变量配置
+        env:
         - name: CRAWLAB_SERVER_MASTER
           value: "N"
-        - name: CRAWLAB_MONGO_HOST # MongoDB 地址，请改变为实际 MongoDB 地址
+        - name: CRAWLAB_MONGO_HOST
           value: "mongo"
-        - name: CRAWLAB_REDIS_ADDRESS # Redis 地址，请改变为实际 Redis 地址
+        - name: CRAWLAB_REDIS_ADDRESS
           value: "redis"
+        - name: CRAWLAB_SERVER_REGISTER_TYPE
+          value: "hostname"
 ```
 
 需要做的就是设置 `spec.replicas` 来确定启动多少个工作节点。然后就是配置 Crawlab，详细配置请参考 [配置章节](../Config/README.md)。

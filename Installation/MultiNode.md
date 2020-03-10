@@ -6,25 +6,60 @@
 
 ![](http://static-docs.crawlab.cn/multi-node-deployment.png)
 
-每一个 Crawlab 服务（天蓝色大 C 图标）都在一台服务器上，而处于中心位置的 MongoDB 和 Redis 数据库作为它们的通信媒介，连接着主节点（Master）和各个工作节点（Worker）。目前来说主节点只能有一个。这样的一个 Crawlab 分布式节点网络，形成一个多节点的集群，可以让爬虫在任意个节点上运行；运行的数据（例如日志）可以通过 Redis 传输回主节点，再呈现给前端界面；主节点也可以通过 Redis 对工作节点 “发号施令”；而 MongoDB 也储存着各个节点的相关信息，供前端界面使用。本小节着重讲 Crawlab 的多节点部署，而不会讲 Crawlab 分布式原理，如果需要了解更多，请参考 [原理章节](../Architecture/README.md)。
+每一个 Crawlab 服务（天蓝色大 C 图标）都在一台服务器上，而处于中心位置的 MongoDB 和 Redis 数据库作为它们的通信媒介，连接着主节点（Master）和各个工作节点（Worker）。目前来说主节点只能有一个。这样的一个 Crawlab 分布式节点网络，形成一个多节点的集群，可以让爬虫在任意个节点上运行；运行的数据（例如系统信息）可以通过 Redis 传输回主节点，再呈现给前端界面；主节点也可以通过 Redis 对工作节点 “发号施令”；而 MongoDB 也储存着各个节点的相关信息，供前端界面使用。本小节着重讲 Crawlab 的多节点部署，而不会讲 Crawlab 分布式原理，如果需要了解更多，请参考 [原理章节](../Architecture/README.md)。
 
 ### 1. 准备工作：部署 MongoDB 和 Redis
 
-TODO：待补充
+在生产环境中多节点部署，我们推荐将 MongoDB 和 Redis 分开部署，也就是说数据库将单独成为一个服务，而不与 Crawlab 服务耦合在一起。
+
+在 [快速开始](../QuickStart/README.md) 和 [Docker 部署](./Docker.md) 中，我们都用了 Docker Compose 来启动 Crawlab 和数据库服务。这样其实是将 MongoDB、Redis 跟 Crawlab 服务耦合在了一起。当然这样做也没有太大问题，但生产环境中我们并不推荐。
+
+在启动 MongoDB 和 Redis 过程中，**需要将其端口暴露给其他 Crawlab 节点**。在生产环境中我们强烈推荐设置密码。
+
+本小节不会具体介绍部署 MongoDB 和 Redis 的步骤，不过我们推荐用 Docker 部署，这样更简单。部署教程请参考下列文档。
+
+- [MongoDB 官方安装文档](https://docs.mongodb.com/manual/installation)
+- [MongoDB Dockerhub 主页](https://hub.docker.com/_/mongo)
+- [Redis 官方安装文档](https://redis.io/download)
+- [Redis Dockerhub 主页](https://hub.docker.com/_/redis)
 
 ### 2. 部署主节点
 
 不管您是用 [Docker 部署](./Docker.md)、[直接部署](./Direct.md) 还是 [Kubernetes](./Kubernetes.md)，您都需要首先部署一个主节点。
 
-对于 Docker 和 Kubernetes 来说，主节点的启动只需要注明一个环境变量，`CRAWLAB_SERVER_MASTER` 为 `Y`，表示这个节点是主节点；对于直接部署来说，需要在 `./backend/conf/config.yml` 里将 `server.master` 对应的值设置为 `Y`。
+**Docker**
 
-启动之前，您还需要设置 MongoDB 和 Redis 的连接信息。同样的，Docker 和 Kubernetes 部署需要通过环境变量的方式数据库连接信息；直接部署需要在 `./backend/conf/config.yml` 中做相应配置。您可以参考 [配置章节](../Config/README.md) 了解更多信息。
+如何通过直接部署来启动一个 Crawlab 节点请参考 [Docker 部署章节](./Docker.md)。主节点的启动只需要注明一个环境变量，`CRAWLAB_SERVER_MASTER` 为 `Y`。同时，需要在 `environment` 中配置 MongoDB 和 Redis 的连接信息。具体配置请参考 [配置章节](../Config/README.md)。
 
-然后启动节点，打开浏览器输入相应的 URL，登录，导航到节点页面，您就可以看到主节点已经启动了。
+**直接部署**
+
+如何通过直接部署来启动一个 Crawlab 节点请参考 [直接部署章节](./Direct.md)。要注意的是，在 `./backend/conf/config.yml` 里需要将 `server.master` 对应的值设置为 `Y`。同时，需要在 `mongo.*` 和 `redis.*` 下配置 MongoDB 和 Redis 的连接信息。具体配置请参考 [配置章节](../Config/README.md)。
+
+**Kubernetes**
+
+Kubernetes 的主节点部署请参考 [Kubernetes 部署章节](./Kubernetes.md)。主节点的启动只需要注明一个环境变量，`CRAWLAB_SERVER_MASTER` 为 `Y`。
 
 ### 3. 部署工作节点
 
-TODO：待补充
+您需要在另一台或多台服务器上部署工作节点。总的来说不难，但需要注意的是您能在这些服务器上顺利连接到之前部署的 MongoDB 和 Redis（请确保 MongoDB 和 Redis 端口暴露出来）。
+
+**Docker**
+
+如何通过直接部署来启动一个 Crawlab 节点请参考 [Docker 部署章节](./Docker.md)。工作节点的启动只需要注明一个环境变量，`CRAWLAB_SERVER_MASTER` 为 `N`。同时，需要在 `environment` 中配置 MongoDB 和 Redis 的连接信息，请保证您连接的数据库和主节点连接的是同一个数据库。具体配置请参考 [配置章节](../Config/README.md)。
+
+**直接部署**
+
+如何通过直接部署来启动一个 Crawlab 节点请参考 [直接部署章节](./Direct.md)。要注意的是，在 `./backend/conf/config.yml` 里需要将 `server.master` 对应的值设置为 `N`。同时，需要在 `mongo.*` 和 `redis.*` 下配置 MongoDB 和 Redis 的连接信息，请保证您连接的数据库和主节点连接的是同一个数据库。具体配置请参考 [配置章节](../Config/README.md)。
+
+**Kubernetes**
+
+对于 Kubernetes 来说，部署工作节点非常简单，只需要在 K8S 主节点上运行以下代码。
+
+```bash
+kubectl apply -f https://raw.githubusercontent.com/crawlab-team/crawlab/master/k8s/crawlab-worker.yaml
+```
+
+如果您想定制化一部分部署信息，例如设置工作节点的个数（Replicas），您可以将 `yaml` 文件下载下来，存为 `crawlab-worker.yaml`，并加以修改，然后运行 `kubectl apply -f crawlab-worker.yaml`。具体内容请参考 [Kubernetes 部署章节](./Kubernetes.md)。
 
 ### 4. 节点心跳信息
 
@@ -50,6 +85,13 @@ TODO：待补充
 
 我们可以注意一下 `update_ts` 和 `update_ts_unix` 这两个字段，它们表示心跳信息更新的时间。如果这个时间与当前时间差距 60 秒以上，则表示该节点已经处于离线状态；反之，如果差距 60 秒以内，则是在线状态。
 
-### 5. 时区问题
+### 5. 其他问题
 
-TODO：待补充
+**5.1 时区/时间问题**
+
+有时候您可能会发现工作节点启动一段时间之后就异常退出了。而您检查了数据库配置以及主节点是否已启动，均未发现异常。这时，有很大可能是因为工作节点与主节点的时间不同步导致的。这时您需要根据节点心跳信息的 `update_ts` 或 `update_ts_unix` 来查看工作节点的时间戳与主节点的时间戳是否一致（相差 60 秒以内）。
+
+如果主节点与工作节点相差大概 8 个小时，这应该属于**时区问题**。请在启动主节点和工作节点之前添加一个环境变量：`TZ=Asia/Shanghai`。这样能保证您的各个节点都在中国时区。如果您在国外，可以设置 `TZ` 为其他时区。
+
+如果主节点与工作节点相差不是 8 个小时，例如只有 10 分钟，这应该属于**时间漂移问题**。这时您需要对每一台服务器做时间同步。可以利用 `ntp` 这个模块来解决时间同步的问题。请到 [ntp 官网](http://www.ntp.org.cn/) 或其他网上资料来安装、配置 `ntp`。
+
