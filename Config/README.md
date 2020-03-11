@@ -89,6 +89,8 @@ CRAWLAB_RPC_WORKERS | rpc.workers | RPC 协程个数 | 16 | 任意数字
 CRAWLAB_OTHER_TMPPATH | other.tmppath | 临时文件目录 | /tmp | 任意
 CRAWLAB_VERSION | version |版本号 | 对应版本号 | 任意
 CRAWLAB_SETTING_ALLOWREGISTER |setting.allowRegister | 是否允许注册 | N | Y, N
+CRAWLAB_SETTING_RUNONMASTER |setting.runOnMaster | 是否在主节点运行任务 | Y | Y, N
+CRAWLAB_SETTING_DEMOSPIDERS |setting.demoSpiders | 是否实用Demo爬虫 | N | Y, N
 CRAWLAB_NOTIFICATION_MAIL_SERVER |notification.mail.server | SMPT 服务器地址 |空|任意
 CRAWLAB_NOTIFICATION_MAIL_PORT |notification.mail.port | SMPT 服务器端口 |空|任意
 CRAWLAB_NOTIFICATION_MAIL_SENDEREMAIL |notification.mail.senderEmail | 发送者邮箱 |空|任意
