@@ -21,7 +21,7 @@
 	}
 	const sid = sessionStorage.getItem('sid')
 
-	const v = 'v0.4.7'
+	const v = 'v0.4.8'
 
 	const ec = '访问文档'
 	const ea = window.location.pathname
