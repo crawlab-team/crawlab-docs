@@ -6,7 +6,7 @@
 
 通信主要由Redis来完成。以下为节点通信原理示意图。
 
-![](https://crawlab.oss-cn-hangzhou.aliyuncs.com/v0.3.0/node-communication.png)
+![](http://static-docs.crawlab.cn/node-communication.png)
 
 各个节点会通过Redis的`PubSub`功能来做相互通信。
 
