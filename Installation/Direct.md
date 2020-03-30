@@ -67,7 +67,15 @@ cd frontend
 yarn install
 ```
 
-安装后端所需库。
+接下来是安装后端所需库。
+
+在运行这一步之前，如果咱们在国内，需要设置一下 Go Module 的代理，将环境变量 `GOPROXY` 设置为 `https://goproxy.cn`。如果是 Linux 或 Mac，可以执行如下命令。
+
+```bash
+export GOPROXY=https://goproxy.cn
+```
+
+然后，执行如下命令安装后端。
 
 ```bash
 cd ../backend

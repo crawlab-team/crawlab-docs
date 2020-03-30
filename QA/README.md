@@ -165,7 +165,7 @@ Crawlab 默认是将要求将结果数据存到 MongoDB 里，不过也支持将
 
 当然，我们目前正在开发对其他数据库类型的支持，以帮助到更多需要储存到其他数据库类型的用户。这样就不需要双写了。请关注后续开发。
 
-#### 导入 Scrapy 项目，点击爬虫 Scrapy 标签，看不到设置、爬虫、Items、Pipelines 等信息，这个怎么解决？
+#### 导入 Scrapy 项目，点击爬虫 Scrapy 标签，返回错误信息，并且看不到设置、爬虫、Items、Pipelines 等信息，这个怎么解决？
 
 Crawlab 对 Scrapy 的支持，是通过 Scrapy CLI 和 Crawlab CLI 工具来完成的，而且会在 runtime 读取 py 文件数据，因此必须保证文件中的所有依赖是已经安装好了的。例如，您的爬虫项目依赖了 pymysql，您必须在主节点上安装 pymysql 依赖，才可以看到 Scrapy 的信息。
 
