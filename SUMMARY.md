@@ -47,6 +47,7 @@
     * [其他爬虫](Integration/OtherFramework.md)
 * [CI/CD](CI/README.md)
     * [Git 同步](CI/Git.md)
+* [权限管理](Auth/README.md)
 * [原理](Architecture/README.md)
     * [整体架构](Architecture/Architecture.md)
     * [节点通信](Architecture/NodeCommunication.md)
