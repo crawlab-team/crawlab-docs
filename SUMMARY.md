@@ -19,6 +19,7 @@
     * [复制爬虫](Spider/Copy.md)
     * [统计数据](Spider/Analytics.md)
     * [在线编辑文件](Spider/FileEdit.md)
+    * [结果去重](Spider/Deduplication.md)
 * [任务](Task/README.md)
     * [运行任务](Task/Run.md)
     * [任务日志](Task/Log.md)
