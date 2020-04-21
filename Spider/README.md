@@ -11,4 +11,7 @@
 7. [复制爬虫](./Copy.md)
 8. [统计数据](./Analytics.md)
 9. [在线编辑文件](./FileEdit.md)
+10. [结果去重](./Deduplication.md)
+11. [自动安装依赖](./AutoInstallDeps.md)
+12. [Web Hook](./Webhook.md)
 
