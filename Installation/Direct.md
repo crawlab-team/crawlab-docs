@@ -84,7 +84,25 @@ go install ./...
 
 ### 4. 构建前端
 
-这里的构建是指前端构建，需要执行以下命令。
+这里的构建是指前端构建。在构建之前，我们需要配置一下前端的部署环境变量。
+
+打开 `./frontend/.env.production`，内容如下。
+
+```
+NODE_ENV='production'
+VUE_APP_BASE_URL=/api
+VUE_APP_CRAWLAB_BASE_URL=https://api.crawlab.cn
+VUE_APP_DOC_URL=http://docs.crawlab.cn
+```
+
+这里解释一下各个环境变量的作用:
+
+- **NODE_ENV**: 当前的环境（development / test / production），这里默认用 `production`，**不用改**；
+- **VUE_APP_BASE_URL**: 后端 API 的地址，**需要改成您 API 的外网地址**，例如 http://8.8.8.8:8000；
+- **VUE_APP_CRAWLAB_BASE_URL**: Crawlab 远端服务的 API 地址，目前主要发送统计信息用，**不用改**；
+- **VUE_APP_DOC_URL**: 文档地址，**不用改**。
+
+配置完成后，执行以下命令。
 
 ```bash
 cd ../frontend
