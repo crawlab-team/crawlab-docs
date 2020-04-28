@@ -1,5 +1,6 @@
 {
 	"title": "Crawlab文档",
+	"language": "zh-hans",
 	"plugins": [
 		"expandable-chapters",
 		"chapter-fold",
@@ -26,7 +27,7 @@
 			"label": "编辑此页面"
 		},
 		"favicon": {
-			"shortcut": "assets/images/favicon.ico"
+			"shortcut": "/assets/images/favicon.ico"
 		},
 		"hide-element": {
 			"elements": [".gitbook-link"]
@@ -38,7 +39,8 @@
 		},
 		"addcssjs": {
 			"js": [
-				"assets/js/track.js"
+				"../assets/js/track.js",
+				"../assets/js/main.js"
 			],
 			"css": []
 		},
@@ -47,6 +49,6 @@
         }
 	},
 	"styles": {
-		"website": "assets/css/website.css"
+		"website": "/assets/css/website.css"
 	}
 }
