@@ -36,10 +36,10 @@
 	`&v=${v}`
 
 	await fetch(url)
-})()
+})();
 
 // 百度统计
-(() => {
+(function () {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?c35e3a563a06caee2524902c81975add";
   var s = document.getElementsByTagName("script")[0]; 
