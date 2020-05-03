@@ -1,16 +1,17 @@
-## 贡献指南
+## Contribution Guide
 
-欢迎任何对爬虫管理平台感兴趣的开发者来贡献 Crawlab！在贡献 Crawlab 之前请认真阅读以下内容。
+Welcome any interested developers to contribute Crawlab! Please read the following content carefully before contributing to Crawlab.
 
-### 贡献流程
+### Contribution Process
 
-贡献 Crawlab 的流程如下:
+The process of contributing Crawlab is as follows:
 
-1. 从 `develop` 分支 `fork` 一份代码到你自己的 `repo` 里；
-2. 在你自己的 `repo` 里开发；
-3. 开发好后提交一个 `pull request` 合并请求到 Crawlab 的 `develop` 分支；
-4. 等待合并请求被批准。
+1. From 'develop' branch 'fork' the code to your own 'repo';
+2. Develop in your own 'repo';
+3. After development, submit a 'pull request' merge request to the 'develop' branch of crawlab;
+4. Wait for the merge request to be approved.
 
-### 开发组
+### Development Team
 
 Crawlab 需要开源社区的支持，长期贡献 Crawlab 或有重大贡献 Crawlab 的开发者可以申请加入核心开发组，申请核心开发组成员请加作者微信 tikazyq1，注明 “申请加入 Crawlab 开发组”，并告知您的 Github 账号。申请通过后，我们会邀请您加入核心开发组。
+Crawlab needs the support of the open source community, developers who have contributed to Crawlab for a long time or have made significant contributions to Crawlab can apply to join the core development team. First, please add the author's wechat 'tikazyq1' and indicate 'apply to join the development team of Crawlab', and inform your GitHub account to the author, after the application is approved, we will invite you to join the core development team.

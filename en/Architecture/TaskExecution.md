@@ -1,13 +1,13 @@
-## 任务执行
+## Task Execution
 
-Crawlab的任务执行依赖于shell。执行一个爬虫任务相当于在shell中执行相应的命令，因此在执行爬虫任务之前，要求使用者将执行命令存入数据库。执行命令存在`spiders`表中的`cmd`字段。
+Crawlab's task execution depends on the shell. Executing a crawler task is equivalent to executing the corresponding command in the shell, so the user needs to store the execution command in the database before executing the crawler task. The execute command line is the 'cmd' field saved in the 'spiders' table.
 
-任务执行的架构示意图如下。
+The architecture of task execution is as follows.
 
 ![](https://crawlab.oss-cn-hangzhou.aliyuncs.com/v0.3.0/task-execution.png)
 
-当爬虫任务被派发时，主节点会在Redis中的`tasks:<node_id>`（指定工作节点）和`tasks:public`（任意工作节点）派发任务，也就是`RPUSH`命令。
+When a crawler task is dispatched, the master node will dispatch tasks in 'tasks:<node_id>' (specify work node) and 'tasks: public' (any work node) in Redis, that is the 'RPUSH' command.
 
-工作节点在启动时会起N个执行器（通过环境变量`CRAWLAB_TASK_WORKERS`配置，默认为4），每个执行器会轮训Redis的消息队列，优先获取指定节点消息队列`tasks:<node_id>`，如果指定队列中没有任务，才会获取任意节点消息队列中的任务`tasks:public`。
+When the work node is started, it will start n executors (configured by the environment variable 'CRAWLAB_TASK_WORKERS', which is 4 by default). Each executor will rotate the message queue of Redis, and get the message queue of the specified node 'tasks:<node_id>', if there is no task in the specified queue, it will get the task 'tasks: public' in the message queue of any node.
 
-执行过程的具体情况就不细述了，详情请见[源码](https://github.com/tikazyq/crawlab/blob/master/backend/services/task.go)。
+The details of the execution process will not be described in detail. Please refer to [source code](https://github.com/tikazyq/crawlab/blob/master/backend/services/task.go)。

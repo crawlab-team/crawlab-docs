@@ -1,14 +1,14 @@
-## 直接部署
+## Direct deployment
 
-直接部署是之前没有 Docker 时的部署方式，相对于 Docker 部署来说有些繁琐。但了解如何直接部署可以帮助更深入地理解 Docker 是如何构建 Crawlab 镜像的。
+Direct deployment is the deployment method when there is no docker before, which is a little cumbersome compared with docker deployment. Knowing how to deploy directly can help you understand more about how docker builds Crawlab images.
 
-**推荐人群**: 
+**Recommended Users**: 
 
-- 了解 `Node`、`Golang`、`MongoDB`、`Redis`、`Nginx` 的安装和使用方式的开发者
-- 希望了解 Crawlab 源代码和运行原理的开发者
-- 需要二次开发 Crawlab 的开发者
+- Developers who know how to install and use 'Node', 'Golang', 'MongoDB', 'Redis'
+- Developers who want to do secondary development in Crawlab
+- Developers who want to contribute code to Crawlab
 
-**推荐配置**:
+**Recommended Configuration**:
 
 - Go: 1.12+
 - Node: 8.x+
@@ -16,50 +16,50 @@
 - Redis: 5.x+
 - Nginx: 1.10+
 
-### 1. 拉取代码
+### 1. Pull the code
 
-首先是将 Github 上的代码拉取到本地。
+The first is to pull the code on GitHub to local.
 
 ```bash
 git clone https://github.com/crawlab-team/crawlab
 ```
 
-### 2. 安装 Node 环境 
+### 2. Install node environment
 
-我们使用 `nvm`（Node Version Manager）来管理 Node 环境。当然如果您对 Node 比较熟悉，可以跳过这一节。
+We use 'nvm' (Node Version Manager) to manage the node environment. You can skip this section if you are familiar with Node.
 
-请参照 [nvm Github 地址](https://github.com/nvm-sh/nvm) 来安装 nvm。或者也可以运行下面的命令来安装。
+Please refer to [NVM GitHub address](https://github.com/nvm-sh/nvm) to install nvm, or run the following command to install it.
 
-⚠️**注意**: Windows 用户请用 [nvm-windows](https://github.com/coreybutler/nvm-windows) 来安装。
+⚠️**Note**: For Windows users, please use [nvm-windows](https://github.com/coreybutler/nvm-windows) to install nvm.
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 ```
 
-安装好后，执行下面的命令来初始化 nvm。Mac 或 Linux 用户可以将下面的代码添加到 `.profile` 或者 `.bashrc` 文件中。
+After installation, execute the following command to initialize nvm. Mac or Linux users can add the following code to the '.profile' or '.bashrc' files.
 
 ```bash
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 ```
 
-然后，您就可以安装使用特定的 Node 版本了。我们执行以下命令来启用 8.12 版本的 Node。
+Then, you can install and use a specific version of Node. We execute the following command to enable Node version 8.12.
 
 ```bash
 nvm use 8.12
 ```
 
-这里可能会下载安装相应的 Node 版本，请耐心等待。安装好后，运行下面命令查看知否安装成功。
+The corresponding Node version may be downloaded and installed here. Please wait patiently. After installation, run the following command to check whether the installation is successful.
 
 ```bash
 node -v
 ```
 
-如果有提示版本号，就说明安装成功了。
+If the version number is prompted, means the installation is successful.
 
-### 3. 安装前后端
+### 3. Install front and back ends
 
-安装前端所需库。
+Install the required libraries for the front end.
 
 ```bash
 npm install -g yarn
@@ -67,26 +67,26 @@ cd frontend
 yarn install
 ```
 
-接下来是安装后端所需库。
+Install the required libraries for the back end.
 
-在运行这一步之前，如果咱们在国内，需要设置一下 Go Module 的代理，将环境变量 `GOPROXY` 设置为 `https://goproxy.cn`。如果是 Linux 或 Mac，可以执行如下命令。
+Before running this step, if it is in China, we need to set the proxy of the go module and set the environment variable 'GOPROXY' to 'https://goproxy.cn'. If it's Linux or Mac, you can execute the following command.
 
 ```bash
 export GOPROXY=https://goproxy.cn
 ```
 
-然后，执行如下命令安装后端。
+Then, execute the following command to install the back end.
 
 ```bash
 cd ../backend
 go install ./...
 ```
 
-### 4. 构建前端
+### 4. Build the front end
 
-这里的构建是指前端构建。在构建之前，我们需要配置一下前端的部署环境变量。
+The construction here refers to the front end construction. Before building, we need to configure the deployment environment variables of the front end.
 
-打开 `./frontend/.env.production`，内容如下。
+Open './frontend/.env.production', the content is as follows.
 
 ```
 NODE_ENV='production'
@@ -95,31 +95,31 @@ VUE_APP_CRAWLAB_BASE_URL=https://api.crawlab.cn
 VUE_APP_DOC_URL=http://docs.crawlab.cn
 ```
 
-这里解释一下各个环境变量的作用:
+The role of each environmental variable:
 
-- **NODE_ENV**: 当前的环境（development / test / production），这里默认用 `production`，**不用改**；
-- **VUE_APP_BASE_URL**: 后端 API 的地址，**需要改成您 API 的外网地址**，例如 http://8.8.8.8:8000；
-- **VUE_APP_CRAWLAB_BASE_URL**: Crawlab 远端服务的 API 地址，目前主要发送统计信息用，**不用改**；
-- **VUE_APP_DOC_URL**: 文档地址，**不用改**。
+- **NODE_ENV**: The current environment (development / test / production) uses 'production' by default,**no need to change**；
+- **VUE_APP_BASE_URL**: Address of back end API, **need to change to your API's Internet address**，such as http://8.8.8.8:8000；
+- **VUE_APP_CRAWLAB_BASE_URL**: The API address of crawlab remote service is mainly used to send statistical information,**no need to change**；
+- **VUE_APP_DOC_URL**: Document address, **no need to change**。
 
-配置完成后，执行以下命令。
+When the configuration is complete, execute the following command.
 
 ```bash
 cd ../frontend
 npm run build:prod
 ```
 
-构建完成后，会在 `./frontend` 目录下创建一个 `dist` 文件夹，里面是打包好后的静态文件。
+After the construction is completed, a 'dist' folder will be created in the directory of './frontend', which contains the packed static files.
 
 ### 5. Nginx
 
-安装 `nginx`，在 `ubuntu 16.04` 是以下命令。
+Install 'nginx' in 'Ubuntu 16.04', please execute the following command.
 
 ```bash
 sudo apt-get install nginx
 ```
 
-添加 `/etc/nginx/conf.d/crawlab.conf` 文件，输入以下内容。
+Add the file '/etc/nginx/conf.d/crawlab.conf', enter the following content.
 
 ```
 server {
@@ -129,9 +129,9 @@ server {
 }
 ```
 
-其中，`root` 是静态文件的根目录，这里是 `npm` 打包好后的静态文件。
+'root' is the root directory of the static file. Here is the static file packaged by 'npm'.
 
-现在，只需要启动 `nginx` 服务就完成了启动前端服务。
+Now, you only need to start the 'nginx' service to start the front end service.
 
 ```bash
 nginx reload
@@ -139,45 +139,45 @@ nginx reload
 
 ### 6. MongoDB & Redis
 
-#### 6.1 安装 MongoDB
+#### 6.1 Install MongoDB
 
-请参照 [MongoDB 教程](https://www.runoob.com/mongodb/mongodb-tutorial.html) 来完成 MongoDB 的安装。
+Please refer to [mongodb tutorial](https://www.runoob.com/mongodb/mongodb-tutorial.html) to complete MongoDB installation.
 
-#### 6.2 安装 Redis
+#### 6.2 Install Redis
 
-请参照 [Redis 安装](https://www.runoob.com/redis/redis-install.html) 来完成 Redis 的安装。
+Please refer to [Redis installation](https://www.runoob.com/redis/redis-install.html) to complete Redis installation.
 
-### 7. 配置
+### 7. Configuration
 
-修改配置文件 `./backend/config.yaml`。配置文件是以 `yaml` 的格式。配置详情请见[配置Crawlab](../Config/README.md)。
+Modify the configuration file './backend/config.yaml'. The format of the configuration file is 'yaml'. Please refer to [configure crawleb](../Config/README.md) for configuration details.
 
-### 8. 构建后端
+### 8. Build the back end
 
-执行以下命令。
+Execute the following command.
 
 ```bash
 cd ../backend
 go build
 ```
 
-`go build` 命令会将Golang代码打包为一个执行文件，默认在 `$GOPATH/bin` 里。
+The 'go build' command packages the golang code into an execution file, which is in '$GOPATH/bin' by default.
 
-### 9. 启动服务
+### 9. Start the service
 
-这里是指启动后端服务。执行以下命令。
+This refers to starting back end services. Execute the following command.
 
 ```bash
 $GOPATH/bin/crawlab
 ```
 
-然后在浏览器中输入 `http://localhost:8080` 就可以看到界面了。
+Then enter "http://localhost:8080" in the browser to see the interface.
 
-⚠️注意：启动的时候需要保证您的工作路径在从 Github 拉取下来的 Crawlab 项目的 `./backend` 路径里。
+⚠️Note: when starting, you need to ensure that your work path is in the './backend' path of the Crawlab project pulled from GitHub.
 
-### 10. 下一步
+### 10. Next step
 
-请参考 [爬虫章节](../Spider/README.md) 来详细了解如何使用 Crawlab。
+Please refer to the [crawler section](../Spider/README.md) for details on how to use Crawlab.
 
-### 11. 参考
+### 11. Reference resources
 
-- [Crawlab 爬虫框架单机直接部署教程](http://sunsunsir.cn/detail/9)
+- [Crawlab the tutorial for the direct deployment of a single crawler](http://sunsunsir.cn/detail/9)

@@ -1,14 +1,15 @@
-## 权限管理
+## Permission Management
 
-Crawlab 从 v0.4.9 版本开始，加强了对权限管理的支持，让权限管理变得更加复杂和实用，为企业用户提供了权限管理的支持。
+Crawlab strengthens the support of permission management from version v0.4.9, which makes the permission management more complex and practical and provides the support of permission management for enterprise users.
 
-### 用户角色
+### User Role
 
 Crawlab 的权限管理是简易版的 RBAC。简单来说，Crawlab 分为两个角色：`管理用户` 和 `普通用户`。
+Crawlab's permission management is a simple version of RBAC. In short, Crawlab has two roles: 'manage users' and 'ordinary users'.
 
-- **管理用户**：可以查看并操作所有用户的数据，包括爬虫、项目、任务等，可以看到用户管理页面；
-- **普通用户**：只能查看并操作自己的数据，不能看到用户管理页面。
+- **manage users**：You can view and operate the data of all users, including crawlers, projects, tasks, etc., and see the user management page;
+- **ordinary users**：You can only view and operate your own data, not see the user management page.
 
-### 公共爬虫
+### Public Crawler
 
-您可以在爬虫详情-概览页面看到 `是否公共` 对选项。如果勾选并保存，表示该爬虫为公共爬虫，也就是说所有用户都可以查看到，但除了管理员以外，其他用户无法对该爬虫进行修改，只能复制该爬虫当自己的工作空间。
+You can see the "public or not" options on the crawler details-overview page. If it is checked and saved, it means that the crawler is a public crawler, that is, all users can view it, but other users can't modify the crawler except the administrator, they can only copy the crawler as their own workspace.
