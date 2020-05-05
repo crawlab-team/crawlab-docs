@@ -1,30 +1,30 @@
-## 依赖安装
+## Dependent installation
 
-依赖安装是经常使用 [Crawlab](https://github.com/crawlab-team/crawlab) 经常需要的需求，目前的临时解决方案都是通过 hacking 的方式。而现在，我们的最新版本已经有比较成熟的解决方案，也就是在界面上操作安装依赖。
+Dependent installation is a frequently needed requirement for using [Crawlab](https://github.com/crawlab-team/crawlab). The current temporary solution is by hacking. Now, our latest version has a more mature solution, which is to operate the installation dependency on the interface.
 
-### 如何使用依赖安装
+### How to use dependent installation
 
-下面我们将介绍如何在 [Crawlab](https://github.com/crawlab-team/crawlab) 界面上使用依赖安装。
+Next, we will show you how to use dependency installation on the [Crawlab](https://github.com/crawlab-team/crawlab) interface.
 
-首先我们需要导航到节点列表页，点击一个节点的蓝色查看按钮（如下图），进入节点详情页。
+First, we need to navigate to the node list page and click the blue view button of a node (as shown in the figure below) to enter the node details page.
 
 ![](http://static-docs.crawlab.cn/node-list.png)
 
-进入节点详情页之后，点击“安装”标签，进入依赖安装页面。如果在搜索栏中搜索相关的依赖库，将得到相近的依赖列表。例如，Python 中可以得到 pip 的相关依赖。点击“安装”开始 `pip install <package_name>`，并稍等片刻，就会收到安装成功（或失败）的提示信息；如果该依赖已经在该节点上存在，则会显示“卸载”按钮，点击则可以开始卸载该依赖，相当于 `pip uninstall <package_name>`。当然，其他语言对应其所对应的包管理操作，例如 Node.js 对应 npm。
+After entering the node details page, click the "Install" tab to enter the dependent installation page. If you search the related dependency Library in the search bar, you will get a similar dependency list. For example, you can get the dependency of PIP in Python. Click 'Install' to start 'pip install <package_name>', and wait for a moment, you will receive the prompt message of successful (or failed) installation; if the dependency already exists on this node, the "uninstall" button will be displayed, and click to start uninstalling the dependency, which is equivalent to 'pip uninstall <package_name>'. Of course, other languages correspond to their corresponding package management operations, for example, Node.js corresponds to npm.
 
 ![](http://static-docs.crawlab.cn/node-detail-installation.png)
 
-点击“查看已安装”，可以看到该节点上已安装的依赖以及其对应的版本，如下图。同样，点击“卸载”可以卸载该依赖。
+Click 'View installed' to see the installed dependencies and their corresponding versions on this node, as shown in the following figure. Similarly, click 'uninstall' to uninstall the dependency.
 
 ![](http://static-docs.crawlab.cn/node-detail-installation-existing.png)
 
-由于 Python 是 Docker 镜像上预装的（待会儿会介绍如何在 Docker 上预装 Node.js）。点击 “Node.js” 标签，会看到提示说“Node.js 还没有安装，您是否打算安装它？”。点击“安装”按钮，后台会开始安装 nvm 和 Node.js 8.12 版本。然后就会看到跟 Python 一样的界面了。
+Python is pre installed on the Docker image (I'll show you how to pre install Node.js on the Docker later). Click the 'Node.js' tab, and you will see a prompt saying 'Node.js has not been installed, do you plan to install it?'. Click the 'Install' button, and nvm and node.js version 8.12 will be installed in the background. Then you'll see the same interface as Python.
 
 ![](http://static-docs.crawlab.cn/node-detail-installation-lang.png)
 
-### Docker 中预装编程语言
+### Pre installed programming language in Docker
 
-为了方便爬虫开发者在 Docker 中的 Node.js 爬虫应用，我们开发了在 Docker 中配置预装 Node.js 的功能。只需要在启动的时候设置环境变量 `CRAWLAB_SERVER_LANG_NODE` 为 `Y`，然后启动镜像就可以了。例如如下 `docker-compose.yml`。
+In order to facilitate crawler developers to use Node.js in Docker, we have developed the function of pre installing node.js in Docker. You only need to set the environment variable 'CRAWLAB_SERVER_LANG_NODE' to 'Y' at start it, and then start the image. For example, 'docker-compose.yml'.
 
 ```yaml
 version: '3.3'

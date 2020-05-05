@@ -1,17 +1,17 @@
-## 爬虫集成
+## Crawler integration
 
-如果您想在 Crawlab 的界面上看到您的抓取结果，您需要将您的爬虫与 Crawlab 进行集成。
+If you want to see your crawler results on the Crawlab interface, you need to integrate your crawler with Crawlab.
 
-以下是爬虫集成的前提条件:
+The following are prerequisites for crawler integration:
 
-- 需要设置**结果集**；
-- 需要将数据写在与 Crawlab 一个数据库中，例如 `crawlab_test`；
-- 需要在爬虫中将结果写回指定的数据集中（`CRAWLAB_COLLECTION`），并且在 `task_id` （`CRAWLAB_TASK_ID`）字段上赋值。
+- You need to set ** result set **;
+- You need to write the data in a database with Crawlab, for example, 'crawlab_test';
+- You need to write the result back to the specified dataset in the crawler ('CRAWLAB_COLLECTION'), and assign a value in the 'task_id'('CRAWLAB_TASK_ID') field.
 
-下面我们看几个爬虫集成的例子:
+Here are some examples of crawler integration:
 
-1. [集成 Scrapy](./Scrapy.md)
-2. [集成 Puppeteer](./Puppeteer.md)
-3. [通用 Python 爬虫](./Python.md)
-3. [通用 Node.js 爬虫](./Nodejs.md)
+1. [Integrate Scrapy](./Scrapy.md)
+2. [Integrate Puppeteer](./Puppeteer.md)
+3. [General Python crawler](./Python.md)
+3. [General Node.js crawler](./Nodejs.md)
 

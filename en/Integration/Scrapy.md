@@ -1,12 +1,12 @@
-### 与Scrapy集成
+### Integrate with Scrapy
 
-Scrapy 是一个非常强大的爬虫框架。如果您对 Scrapy 不了解，请查看 [官网介绍](https://scrapy.org/)。跟 Crawlab 集成之后，可以在界面上看到您的爬虫任务抓取到的数据。
+Scrapy is a very powerful crawler framework. If you don't know about Scrapy, please refer to [official website introduction](https://scrapy.org/). After integration with Crawlab, you can see the data captured by your crawler task on the interface.
 
-[Crawlab SDK](https://github.com/crawlab-team/crawlab-sdk) 提供了一些 `helper` 方法来让您的爬虫更好的集成到 Crawlab 中，例如保存结果数据到 Crawlab 中等等。
+[Crawlab SDK](https://github.com/crawlab-team/crawlab-sdk) provides some 'helper' methods to better integrate your crawler into Crawlab, such as saving the result data into Crawlab and so on.
 
-#### 集成 Scrapy
+#### Integrate with Scrapy
 
-在 `settings.py` 中找到 `ITEM_PIPELINES`（`dict` 类型的变量），在其中添加如下内容。
+Find 'ITEM_PIPELINES'(variable of type 'dict') in 'settings.py', and add the following content.
 
 ```python
 ITEM_PIPELINES = {
@@ -14,5 +14,5 @@ ITEM_PIPELINES = {
 }
 ```
 
-然后，启动 Scrapy 爬虫，运行完成之后，您就应该能看到抓取结果出现在 **任务详情-结果** 里。
+Then, start the Scrapy crawler. After running, you should be able to see the result in ** task details - result **.
 

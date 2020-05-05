@@ -12,7 +12,7 @@ This section will detail how to build Crawlab multi node application on a Kubern
 
 - Developers who need to implement multi node deployment of Crawlab in production environment
 - Developers who need to deploy large scale crawler applications, such as distributed Crawlers
-- Docker、Kubernetes 或希望学习相关知识的开发者Developers who know Docker, Kubernetes or want to learn relevant knowledge
+- Developers who know Docker, Kubernetes or want to learn relevant knowledge
 
 **Recommended Configuration**:
 

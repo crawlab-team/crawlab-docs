@@ -1,8 +1,8 @@
-本小节将介绍 3 种安装Crawlab的方式:
+This section describes three ways to install Crawlab:
 
-1. [Docker（入门简单，推荐）](./Docker.md)
-2. [Kubernetes（多机器部署，推荐）](./Kubernetes.md)
-3. [直接部署（理解原理）](./Direct.md)
-4. [开发模式（开发调试）](./Develop.md)
-5. [多节点部署](./MultiNode.md)
+1. [Docker（Easy to get started, recommended）](./Docker.md)
+2. [Kubernetes（Multi server deployment, recommended）](./Kubernetes.md)
+3. [Direct deployment (Understanding principle)](./Direct.md)
+4. [Development mode (development debugging)](./Develop.md)
+5. [Multi node deployment](./MultiNode.md)
 

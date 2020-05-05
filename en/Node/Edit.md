@@ -1,9 +1,8 @@
-## 修改节点信息
+## Modify node information
 
-后面我们需要让爬虫运行在各个节点上，需要让主机与节点进行通信，因此需要知道节点的IP地址和端口。我们需要手动配置一下节点的IP和端口。在`节点列表`中点击`操作`列里的蓝色查看按钮进入到节点详情。节点详情样子如下。
-
+We need to let the crawler run on each node and let the host communicate with the node, so we need to know the IP address and port of the node. We need to manually configure the IP and port of the node. Click the blue view button in the 'operation column' in the 'node list' to enter the node details. The node details are as follows.
 ![](https://crawlab.oss-cn-hangzhou.aliyuncs.com/gitbook/node-detail.png)
 
-在右侧分别输入该节点对应的`节点IP`和`节点端口`，然后点击`保存`按钮，保存该节点信息。
+On the right side, input the "node IP" and "node port" corresponding to the node, and then click the "save" button to save the node information.
 
-这样，我们就完成了节点的配置工作。
+In this way, we have completed the node configuration.
