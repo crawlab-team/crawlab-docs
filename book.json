@@ -16,8 +16,8 @@
 		"hide-element",
 		"tbfed-pagefooter",
 		"addcssjs",
-		"sitemap",
-		"multilingual-index"
+		"multilingual-index",
+		"sitemap"
 	],
 	"pluginsConfig": {
 		"github": {
