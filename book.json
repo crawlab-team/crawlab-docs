@@ -16,6 +16,7 @@
 		"hide-element",
 		"tbfed-pagefooter",
 		"addcssjs",
+		"multilingual-index",
 		"sitemap"
 	],
 	"pluginsConfig": {
@@ -45,7 +46,12 @@
 			"css": []
 		},
 		"sitemap": {
-            "hostname": "http://docs.crawlab.cn/"
+            "hostname": "https://docs.crawlab.cn",
+            "pathPrefix": "/zh/"
+        },
+        "multilingual-index": {
+            "enableSuper": true,
+            "index":"index.html"
         }
 	},
 	"styles": {
