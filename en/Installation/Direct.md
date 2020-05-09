@@ -149,7 +149,7 @@ nginx reload
 
 ### 7. 配置
 
-修改配置文件 `./backend/config.yaml`。配置文件是以 `yaml` 的格式。配置详情请见[配置Crawlab](../Config/README.md)。
+修改配置文件 `crawlab/backend/conf/config.yaml`。配置文件是以 `yaml` 的格式。配置详情请见[配置Crawlab](../Config/README.md)。
 
 ### 8. 构建后端
 
