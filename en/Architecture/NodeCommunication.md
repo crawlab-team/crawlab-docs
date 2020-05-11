@@ -20,7 +20,7 @@ The simple process of a network request is as follows:
 3. After receiving the message, the work node performs some operations and publishes the corresponding message to the master node through the channel '<nodes:master>';
 4. The master node receives the message and returns it to the client.
 
-Not all node communication is bidirectional, that is to say, the master node will only communicate with the work node unilaterally, and the work node will not return a response to the master node, which is called one-way communication. The following are the communication types of Crawlab.
+Not all node communications are bidirectional, that is to say, the master node will only communicate with the work node unilaterally, and the work node will not return a response to the master node, which is called one-way communication. The following are the communication types of Crawlab.
 
 Operation name | Communication category
 --- | ---
