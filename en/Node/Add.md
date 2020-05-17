@@ -1,5 +1,5 @@
-## Add node
+## 添加节点
 
-The add node here actually refers to the add work node. Crawlab does not support adding nodes on the interface at present. You need to add a work node by doing corresponding operations on the server where the work node is located.
+这里的添加节点其实是指添加工作节点。Crawlab 暂时不支持在界面上完成节点的添加，您需要通过在工作节点所在的服务器上做相应的操作来添加工作节点。
 
-For specific operations, please refer to ** work node deployment ** in the [multi node deployment chapter](../Installation/MultiNode.md).
+具体的操作请查看 [多节点部署章节](../Installation/MultiNode.md) 的**工作节点部署**。

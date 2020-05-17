@@ -1,93 +1,93 @@
 ## Q&A
 
-#### 为何我访问 http://localhost:8080 提示访问不了？
+#### Why can't I visit http://localhost:8080: 8080?
 
-假如您是Docker部署的，请检查一下您是否用了Docker Machine，这样的话您需要输入地址 http://192.168.99.100:8080 才行。
+If you deploy Crawlab with docker, please check whether you use Docker Machine, in this case, you need to enter the address http://192.168.99.100:8080.
 
-另外，请确保您用了`-p 8080:8080`来映射端口，并检查宿主机是否开放了8080端口。
+In addition, please make sure that you use '-p 8080:8080' to map ports, and check whether the host computer has opened port 8080.
 
-#### 我可以看到登录页面了，但为何我点击登陆的时候按钮一直转圈圈，或者提示检查用户名密码？
+#### I can see the login page, but why is the button always loading when I click login, or prompt to check the user name and password?
 
-如果您是用的 `v0.4.4+` 且为 Docker 部署，您应该有很小的概率出现这个问题，因为在这个版本中，我们去除了 `CRAWLAB_API_ADDRESS` 这个麻烦的环境变量，默认改为用 8080 端口来获取 API 数据，只是需要在 URL Path 前面加一个 `/api` 前缀。这意味着，所有请求，不管是前端还是后端，都是走 8080 端口（当然，您可以自己设置为其他端口）。
+If you are using the environment of 'v0.4.4+' and using docker to deploy, you should have a very small probability of meeting this issue, because in this version, we have removed the troublesome environment variable 'CRAWLAB_API_ADDRESS'. By default, we use port 8080 to get API data, but we need to add '/api' prefix to the URL path. This means that all requests, both front end and back end, go through port 8080 (of course, you can set it to other ports by yourself).
 
-如果您遇到了转圈圈或提示错误的问题，请保证您已经升级到了最新版本。
+If you have problems with continuous loading or prompting errors, make sure you have upgraded to the latest version.
 
-如果还是有问题，请查看后端是否出现了问题。如果是 Docker，请用 `docker logs <container_name>` 来查看日志，然后看看是否是其他问题。
+If there is still a problem, check to see if there is a problem with the back end. If Docker is used, please use 'docker logs <container_name>' to view the logs, then check if there are other problems.
 
-如果是直接部署或源码部署，请在 `./frontend/.env.production` 这个文件中，将 `VUE_APP_BASE_URL` 设置为您的 API 地址。请不要修改 `./backend/conf/config.yml` 中的 `api.address` 这个变量，不会起作用。
+If it is a direct deployment or a source code deployment, please set the 'VUE_APP_BASE_URL' to your API address in the file './frontend/.env.production'. Please do not modify the variable 'api.address' in './backend/conf/config.yml', it will not work.
 
-#### 我执行了爬虫，但是在Crawlab上看不到结果
+#### I executed the crawler, but I couldn't see the result on Crawlab
 
-强烈建议您先阅读了 [爬虫集成章节](../Integration/README.md)。
+It is highly recommended that you read the [reptile integration chapter](../Integration/README.md) first.
 
-简单来说，Crawlab目前只支持MongoDB，而且您需要保证存放的数据与Crawlab的数据库一致，另外您需要在传给MongoDB时加上`task_id`，并设置为Crawlab传过来的环境变量`CRAWLAB_TASK_ID`，您需要存放的collection名字为同样是传过来的`CRAWLAB_COLLECTION`。
+In short, Crawlab only supports MongoDB at present, and you need to ensure that the stored data is consistent with the database of Crawlab. In addition, you need to add 'task_id' when transferring the data to MongoDB, and set it to the environment variable 'CRAWLAB_TASK_ID' passed by Crawlab, and the name of the collection you need to store is also the 'CRAWLAB_COLLECTION' passed.
 
-考虑到这样做的复杂性，我们开发了 `Crawlab SDK`，可以帮助您简化这个流程。请参考 [SDK章节](../SDK/README.md) 和 [集成章节](../Integration/README.md) 来使用 SDK。
+Considering the complexity of this, we have developed the 'Crawlab SDK', which can help you simplify this process. Please refer to the [SDK chapter](../SDK/README.md) and [integration chapter](../Integration/README.md) to use the SDK.
 
-#### 为何启动Crawlab时，后台日志显示`no reachable servers`？
+#### Why does the background log display 'no reachable servers' when Crawlab is started?
 
-这是因为您没有连上MongoDB，请确保您的`CRAWLAB_MONGO_HOST`是否设置对。如果为Docker Compose，可以将其设置为`mongo`。
+This is because you are not connected to MongoDB, please make sure that your 'CRAWLAB_MONGO_HOST' is set correctly. If it is docker compose, you can set it to 'mongo'.
 
-#### 在爬虫程序中打印中文会报错
+#### Error will be reported when printing Chinese in crawler
 
-有不少朋友反映这个问题了，可能是跟Docker镜像有关。建议您暂时不打印中文，等待我们fix这个问题。
+Many friends have reported this problem, which may be related to Docker image. It is recommended that you do not print Chinese temporarily, and wait for us to fix this problem.
 
-#### 我的爬虫有一些第三方的依赖，怎么办？
+#### My crawler has some third-party dependence. What should I do?
 
-其实很多人遇到这个问题，例如需要安装 `BeautifulSoup`、`pymysql` 等等。
+In fact, many people encounter this problem, such as when they need to install 'BeautifulSoup', 'pymysql', etc
 
-解决办法有 3 个：
+There are 3 solutions:
 
-1. **界面安装（推荐）**：在界面上安装相关依赖，请参考 [节点依赖安装](../Node/Installation.md)；
-2. **爬虫方式**：上传一个特殊爬虫，将 `pip`、`npm` 等安装命令写在一个脚本中，然后执行这个脚本，或者直接将安装命令写在“执行命令”中；
-3. **构建新镜像**：基于 `tikazyq/crawlab` 镜像（`FROM tikazyq/crawlab`），将需要安装第三方依赖的命令写在构建文件 `Dockerfile` 中，例如 `RUN pip install bs4 pymysql`，然后打包成新镜像，再用新镜像生成容器运行。
+1. **Interface installation (recommended)**：Please refer to [node dependency installation](../Node/Installation.md) for relevant dependencies on the interface;
+2. **Crawler mode**：Upload a special crawler, write 'pip', 'npm' and other installation commands in a script, and then execute the script, or directly write the installation command in 'execute command';
+3. **Build a new image**：Based on 'tikazyq/crawlab' Image('FROM tikazyq/crawlab'), write the command that needs to install the third-party dependency in the build file 'Dockerfile', for example 'RUN pip install bs4 pymysql', and package it into a new image, then use the new image to generate a container to run.
 
-#### 我有多台服务器，打算将 Crawlab 部署在上面可以吗？
+#### I have multiple servers, is it OK to deploy Crawlab on them?
 
-建议您用 `Kubernetes`（简称 K8S）来管理 Crawlab 多个节点。详情可以阅读 [Kubernetes 安装章节](../Installation/Kubernetes.md)。
+It is recommended that you use 'Kubernetes' (K8S for short) to manage multiple Crawlab nodes. For details, Please refer to [kubernetes installation chapter](../Installation/Kubernetes.md).
 
-由于 Crawlab 默认是用 `MAC` 地址来作为节点的唯一标识，因此如果您用 `docker-compose` 在多台服务器上管理容器，可能会出现 `MAC` 地址相同而导致无法显示所有节点的情况。因此，您需要设置 `CRAWLAB_SERVER_REGISTER_TYPE` 为 `ip`，然后 `CRAWLAB_SERVER_REGISTER_IP` 为各节点的唯一标识就可以了。
+Because Crawlab uses 'MAC' address as the unique identification of nodes by default, if you use 'docker-compose' to manage containers on multiple servers, there may be situations where 'MAC' addresses are the same, resulting in the failure to display all nodes. Therefore, you need to set 'CRAWLAB_SERVER_REGISTER_TYPE' as 'IP', and 'CRAWLAB_SERVER_REGISTER_IP' as the unique identification of each node.
 
-⚠️注意：这里的 `ip` 并不是真正的 IP 地址，而是唯一标识符，只是开发的时候图方便就采用 IP 了。真正的名字应该叫 `id`，后面我们会做调整，避免混淆。
+⚠️Note: the "ip" here is not the real IP address, but the unique identifier. It is only convenient to use IP when developing. The real name should be 'ip'. We will adjust it later to avoid confusion.
 
-#### 为何我同时运行几个任务之后，接下来的任务一直显示为待定状态？
+#### Why do I run several tasks at the same time, and the next tasks are always in the pending state?
 
-任务一直出现“待定”状态是因为 Crawlab 单节点的执行器 `Executor` 被占满了，其数量由 `CRAWLAB_TASK_WORKERS` 决定，默认是 4 个。如果您的机器性能足够，例如 32 核，而您需要跑很多任务，例如 100 个任务，您可以将 `CRAWLAB_TASK_WORKERS` 设置为大于等于 100。
+The task has been in the "pending" state because the "Executor" of a single node of Crawlab is full. The number of executors is determined by 'CRAWLAB_TASK_WORKERS'. The default number is 4. If your machine has good performance, such as 32-core, and you need to run many tasks, such as 100 tasks, you can set 'CRAWLAB_TASK_WORKERS' to be greater than or equal to 100.
 
-如果是用 Docker 部署的方法，请执行以下命令。
+If the environment is deployed with docker, execute the following command.
 
 ```bash
 docker-compose down && docker-compose up -d
 ```
 
-#### 我更新了爬虫文件，但为何隔一段时间就变回去了？
+#### I updated the crawler file, but why did it change back after some time?
 
-这是因为，我们暂时只支持以上传 zip 文件的方式更改爬虫，所有上传的文件都会被同步到 `MongoDB GridFS`，保证爬虫代码一致性。
+This is because we only support uploading zip files to change the crawler temporarily. All uploaded files will be synchronized to 'MongoDB GridFS' to ensure the consistency of the crawler code.
 
-我们已经加入文件管理系统，包括文件添加、文件修改、文件删除、文件重命名，同时又保证代码一致性。
+We have joined the file management system, including file addition, file modification, file deletion, file rename, while ensuring code consistency.
 
-#### 我发现定时任务执行了两次，怎么办？
+#### I found that the scheduled task was executed twice. What should I do?
 
-很大的原因，您是用了旧版本的定时任务 Cron 格式（6 个元素）放在新版本里运行。这样可能会触发两次运行两次定时任务。如果出现了这样的情况，请将旧版的 Cron 格式更新为新版（5 个元素）。
+The big reason is that you use the old version of Cron format (6 elements) to run in the new version. This may trigger twice so run the scheduled task twice. If this happens, update the old version of Cron format to the new version (5 elements).
 
-#### 我从老版本升级到了 v0.4.4，出现无法启动的情况，怎么办？
+#### I have upgraded from the old version to v0.4.4, and can't start it. What should I do?
 
-这是因为 Crawlab 在升级到 v0.4.4 中没有对老版本做兼容，导致定时任务缺少字段，启动报错。
+This is because Crawlab is not compatible with the old version in the upgrade to v0.4.4, which leads to the lack of fields in the timing task and the startup error.
 
-临时解决方案如下：
-1. 进入 MongoDB 数据库；
-2. 执行命令 `db.schedules.update({user_id:{$exists:false}}, {$set:{user_id:ObjectId('000000000000000000000000')}}, {multi: true})`，此时启动 Crawlab，应该能进入；
-3. 导航到“定时任务“，重新创建定时任务（当然也可以不重新创建，只是这样就收不到消息通知）。
+The interim solution is as follows:
+1. Enter MongoDB database;
+2. Execute the command 'db.schedules.update({user_id:{$exists:false}}, {$set:{user_id:ObjectId('000000000000000000000000')}}, {multi: true})', and start Crawlab at this time, which should be accessible;
+3. Navigate to "scheduled tasks" and recreate the scheduled tasks (you may not recreate them, but you will not receive message notifications).
 
-#### 我在一个 Scrapy 爬虫下有多个爬虫，我需要在 Crawlab 创建多个爬虫项目么？
+#### I have multiple crawlers under a Scrapy crawler. Do I need to create multiple crawler projects in Crawlab?
 
-不需要。
+No need to create multiple Crawlers.
 
-Crawlab 支持用参数的方式来支持多爬虫的项目。操作方法如下：
-1. 将爬虫的 **执行命令** 设置为 `scrapy crawl`；
-2. 每次执行的时候，将 **参数** 设置为 `spider_name`，也就是您爬虫的参数。
+Crawlab supports multi crawler projects with parameters. The operation method is as follows:
+1. Set the **execution command** of the crawler to 'scrapy crawl';
+2. Set the **parameter** of your crawler to 'spider_name' every time you execute it.
 
-例如，您有一个爬虫项目，结构如下。
+For example, you have a crawler project with the following structure.
 
 ```bash
 .
@@ -104,49 +104,49 @@ Crawlab 支持用参数的方式来支持多爬虫的项目。操作方法如下
 └── scrapy.cfg
 ```
 
-如果您想运行 spider1，您应该在命令行中执行 `scrapy crawl spider1`，spider2 为 `scrapy crawl spider2`。这样您其实可以抽象出一个参数为 spider_name，也就是爬虫名称。Crawlab 每次运行爬虫的时候会将 **执行命令** 与 **参数** 组合成一个命令。因此，在这个例子中，您只需要将 **执行命令** 设置为 `scrapy crawl`，**参数** 设置为 `spider1` 或 `spider2` 就可以了。
+If you want to run spider1, you should execute 'scrapy crawl spider1' on the command line. If you want to run spider2, execute the command 'scrapy crawl spider2' on the command line. In this way, you can abstract a parameter as spider_name actually, which is the spider name. Crawlab will combine **execute command** and **parameter** into a command every time it runs the crawler. Therefore, in this example, you only need to set **execute command** to 'scrapy crawl' and **parameter** to 'spider1' or 'spider2'.
 
-更多信息，请阅读 [自定义爬虫](../Spider/CustomizedSpider.md) 这个章节。
+For more information, read the chapter of [custom crawler](../Spider/CustomizedSpider.md).
 
-#### 为何我拉取最新镜像后添加爬虫出现错误？
+#### Why do I have an error adding crawlers after pulling the latest image?
 
-很大概率是因为您的静态文件没有更新，您需要清除一下浏览器缓存，然后刷新页面，这样就可以解决。
+Most likely, because your static files are not updated, you need to clear the browser cache, and then refresh the page, which can be solved.
 
-#### 我是直接部署的，为何我安装了 Python 3.6 界面上还是显示没有安装呢？
+#### I deploy it directly. Why do I install Python 3.6 and the interface still shows that it is not installed?
 
-Crawlab 是根据 `/usr/local/bin/python` 和 `/usr/local/bin/pip` 来确定环境的，因此您需要将对应的 `python` 和 `pip` 执行文件添加软链到 `/usr/local/bin` 上。
+Crawlab determines the environment according to '/usr/local/bin/python' and '/usr/local/bin/pip'. Therefore, you need to add the corresponding 'python' and 'pip' execution files to '/usr/local/bin'.
 
-具体操作命令如下：
+The specific operation commands are as follows:
 
 ```bash
 ln -s <python_path> /usr/local/bin/python
 ln -s <pip_path> /usr/local/bin/pip
 ```
 
-#### 我的是 Java 爬虫，如何用 Crawlab 运行呢？
+#### I use Java crawler environment, how to run it with Crawlab?
 
-Crawlab 支持任何语言的爬虫，只要您安装了相应的环境。
+Crawlab supports crawlers in any language, as long as you have the appropriate environment installed.
 
-对于 Java 爬虫来说，首先您需要安装 Java 环境。如果您是 Docker 安装的话，您需要进入到容器里安装。
+For a Java crawler, first you need to install the Java environment. If you are using the docker installation environment, you need to enter the container to install it.
 
 ```bash
 docker exec -it <container_name>
 ```
 
-然后在容器中运行下面的命令。
+Then run the following command in the container.
 
 ```bash
 apt-get install -y default-jdk
 ln -s /usr/bin/java /usr/local/bin/java
 ```
 
-这个会安装 Java 10，如果您需要其他的 Java 版本，请用相应的命令。
+This will install Java 10. If you need another java version, please use the corresponding command.
 
-接下来，您可以选择将 jar 包上传到爬虫，执行命令输入 `/usr/local/bin/java -jar <jar_path>`，然后就可以运行爬虫了。
+Next, you can choose to upload the jar package to the crawler and execute the command '/usr/local/bin/java -jar <jar_path>', then you can run the crawler.
 
-#### 我拉取镜像等待了很长时间也拉不下来，怎么办？
+#### I've been pulling the image for a long time and I can't pull it down. What should I do?
 
-Crawlab 默认是用 Dockerhub 上的镜像，由于是在国外，您可能拉取会存在一些网络问题。您可以使用国内的阿里云镜像源。具体操作如下。
+Crawlab uses the image on Dockerhub by default. Because it is abroad, you may have some network problems when pulling. You can use the domestic alicloud image source. The specific operation is as follows.
 
 ```bash
 docker pull registry.cn-hangzhou.aliyuncs.com/crawlab-team/crawlab:latest
@@ -154,25 +154,25 @@ docker tag registry.cn-hangzhou.aliyuncs.com/crawlab-team/crawlab:latest tikazyq
 docker rmi registry.cn-hangzhou.aliyuncs.com/crawlab-team/crawlab:latest
 ```
 
-#### 我打算用 Crawlab 做爬虫集群管理，有什么安全问题？
+#### I'm going to use Crawlab for crawler cluster management. What's the security problem?
 
-如果您希望在公网里访问 Crawlab 界面，您需要注意几个问题：
+If you want to access the crawlab interface on the public network, you need to pay attention to several issues:
 
-1. 主节点的前端页面和 API 尽量用 HTTPS；
-2. 工作节点不要暴露在公网；
-3. MongoDB 和 Redis 数据库尽量在内网，必须开启授权验证
-4. MongoDB 和 Redis 需要让所有节点能访问到。
+1. Try to use HTTPS as the front page API of the master node;
+2. Do not expose the work node to the public network;
+3. MongoDB and Redis databases are deployed on the intranet, and authorization verification must be enabled;
+4. Mongodb and Redis need to be accessible to all nodes.
 
-在部署集群之前，建议您先阅读 [原理-整体架构章节](../Architecture/Architecture.md)。
+Before deploying a cluster, it is recommended that you read the chapter [principles - overall architecture](../Architecture/Architecture.md).
 
-#### 我想把爬虫抓取到的数据存到 MySQL 或 MongoDB 以外的数据库上，有什么办法？
+#### I want to save the crawler data to a database other than MySQL or MongoDB. What's the way?
 
-Crawlab 默认是将要求将结果数据存到 MongoDB 里，不过也支持将结果数据存到其他数据库，例如 MySQL、Postgres、MS SQL 等等。我们推荐的做法是双写，也就是同时将数据写入 MongoDB 和其他数据库，这样能保证您既能再 Crawlab 界面上看到结果数据，又能保证您将数据存到您理想的数据库中。保存到 MongoDB 非常简单，可以参照 [爬虫集成章节](../Integration/README.md)。
+Crawlab requires to store the result data in MongoDB by default, but it also supports to store the result data in other databases, such as MySQL、Postgres、MS SQL, etc. The recommended practice is double write, that is, write data to MongoDB and other databases at the same time, so that you can not only see the result data on the Crawlab interface, but also save the data to your ideal database. Saving data to MongoDB is very simple. You can refer to [reptile integration chapter](../Integration/README.md).
 
-当然，我们目前正在开发对其他数据库类型的支持，以帮助到更多需要储存到其他数据库类型的用户。这样就不需要双写了。请关注后续开发。
+Of course, we are currently developing support for other database types to help more users who need to store to other database types. So there's no need for double writing. Please pay attention to the development of Crawlab.
 
-#### 导入 Scrapy 项目，点击爬虫 Scrapy 标签，返回错误信息，并且看不到设置、爬虫、Items、Pipelines 等信息，这个怎么解决？
+#### Import the Scrapy project, click the crawler scrapy tab to return the error message, and you can't see the settings, crawlers, items, pipelines and other information. How to solve it?
 
-Crawlab 对 Scrapy 的支持，是通过 Scrapy CLI 和 Crawlab CLI 工具来完成的，而且会在 runtime 读取 py 文件数据，因此必须保证文件中的所有依赖是已经安装好了的。例如，您的爬虫项目依赖了 pymysql，您必须在主节点上安装 pymysql 依赖，才可以看到 Scrapy 的信息。
+Crawlab supports Scrapy through the tools of Scrapy CLI and Crawlab CLI, and it will read py file data at runtime, so it must be ensured that all dependencies in the file have been installed. For example, your crawler project depends on pymysql, you must install pymysql dependency on the master node to see the information of scrapy.
 
-如何安装第三方依赖，请参考 [节点-依赖安装章节](../Node/Installation.md)。
+To install third-party dependencies, refer to the [node dependency installation chapter](../Node/Installation.md) chapter.

@@ -1,47 +1,47 @@
-## Scrapy 爬虫
+## Scrapy crawler
 
-Scrapy 是一个非常受欢迎的支持异步抓取的高性能爬虫框架。在用户调研中，超过一半的爬虫开发工程师选择了 Python，而 Scrapy 正是一个 Python 爬虫框架，非常受爬虫工程师的欢迎。
+Scrapy is a very popular high-performance crawler framework that supports asynchronous crawling. In user research, more than half of the crawler development engineers choose python, and Scrapy is a python crawler framework, which is very popular with crawler engineers.
 
-Crawlab 开发了一套针对 Scrapy 爬虫的配置界面，可以让用户非常容易的在 Crawlab 界面上创建、配置、修改 Scrapy 爬虫。
+Crawlab has developed a set of configuration interface for Scrapy crawler, which makes it very easy for users to create, configure and modify Scrapy crawler on the interface of Crawlab.
 
-#### 开启 Scrapy
+#### Start Scrapy
 
-要打开 Scrapy 的配置界面，您需要保证您创建的是[自定义爬虫](./CustomizedSpider.md)，而且您需要在**创建爬虫**或**修改爬虫**时开启**是否为 Scrapy**，如下图。这个按钮在**创建爬虫**或**爬虫详情**里都可以开启。
+To open the configuration interface of Scrapy, you need to make sure that you are creating a [custom crawler](./CustomizedSpider.md), and that you need to enable **whether it is Scrapy** when **create a crawler** or **modify a crawler**, as shown below. This button can be enabled in **create crawler** or **crawler details**.
 
 ![](http://static-docs.crawlab.cn/is-scrapy.png)
 
-⚠️注意：在开启这个选项前，请保证您的爬虫项目为一个 Scrapy 爬虫，最好的检测方式，就是检查您爬虫项目的根目录下是否有 `scrapy.cfg` 文件。如果您的爬虫项目根目录没有 `scrapy.cfg` 文件，请尝试用 [CLI 工具](../SDK/CLI.md) 上传您的 Scrapy 爬虫。
+⚠️Note: before turning on this option, please make sure that your crawler project is a Scrapy crawler. The best way to detect it is to check whether there is a 'scrapy.cfg' file in the root directory of your crawler project. If the root directory of your crawler project does not have a 'scrapy.cfg' file, try to upload your crawler with [CLI tool](../SDK/CLI.md).
 
-#### 设置
+#### Setting
 
-如果操作成功，您将看到爬虫详情里有 `Scrapy 设置` 标签，点开标签您能看到如下界面。
+If the operation is successful, you will see that there is a 'Scrapy setting' tag in the crawler details. Click the tag to see the following interface.
 
 ![](http://static-docs.crawlab.cn/scrapy-settings-setting.jpg)
 
-第一个默认标签是 “设置”，这是 Scrapy 爬虫的设置界面，也就是配置 `settings.py` 的地方。Crawlab 会将您 Scrapy 爬虫项目中的 `settings.py` 中的变量读取并显示出来。在这里，您可以添加、删除修改任何 `settings.py` 中的变量。在修改变量时，别忘记确定 `变量类型`。
+The first default label is 'setting'. This is the setting interface of the Scrapy crawler, which is where 'settings.py' is configured. Crawlab will read and display the variables in 'settings.py' in your crawler project. Here, you can add, delete and modify any variable in 'settings.py'. When modifying variables, don't forget to determine the variable type.
 
-点击 “保存” 按钮后，您的设置就保存在 `settings.py` 里去了，您可以到 “文件” 标签中检查 `settings.py` 是否生效。
+After clicking the 'save' button, your settings will be saved in 'settings.py', you can check whether 'settings.py' takes effect in the 'file' tab.
 
-#### 爬虫
+#### Crawler
 
-第二个标签是 “爬虫”，这是在 `spiders` 文件夹里定义的爬虫，是继承了 `scrapy.Spider` 的类。
+The second label is 'crawler', which is defined in the 'spiders' folder. It is a class that inherits the 'scrapy.Spider'.
 
-您可以点击 “添加爬虫” 来创建一个新的 Scrapy 爬虫，这相当于是执行了 `scrapy genspider` 的操作。
+You can click 'add crawler' to create a new Scrapy crawler, which is equivalent to executing the operation of 'scrapy genspider'.
 
-同时，如果您点击 Scrapy 爬虫列表中的一个爬虫，可以自动跳转到对应的爬虫文件。
+At the same time, if you click a crawler in the Scrapy crawler list, you can jump to the corresponding crawler file automatically.
 
 ![](http://static-docs.crawlab.cn/scrapy-settings-spiders.png)
 
 #### Items
 
-第三个标签是 “Items”，这里是定义爬虫抓取项的地方，会将 `items.py` 中的继承了 `scrapy.Item` 的类以及其字段列表读取并展现出来，如下图。
+The third label is 'items', this is where the crawler grabs the items, It will read and display the class that its field list inherited from 'scrapy.Item' in 'items.py', as shown below.
 
 ![](http://static-docs.crawlab.cn/scrapy-settings-items.png)
 
-在这里，您可以添加、删除 `Item` 以及 `Item` 的字段；您还可以通过点击到 `Item` 或 字段 来修改名称。
+Here, you can add and delete fields of 'Item' and 'Item'. You can also modify the name by clicking on 'Item' or field.
 
-点击 “保存” 按钮操作成功后，您将看到所修改的 `Item` 和字段已经在 `items.py` 中生效了。
+After clicking the 'save' button, you will see that the modified 'Item' and 'field' have taken effect in 'items.py'.
 
 #### Pipelines
 
-第四个标签是 “Pipelines”，在这里您可以看到 Pipeline 的列表，点击之后跳转到 `pipelines.py` 文件。
+The fourth label is 'Pipelines'. Here you can see the list of Pipeline. Click and jump to the file 'pipelines.py'.

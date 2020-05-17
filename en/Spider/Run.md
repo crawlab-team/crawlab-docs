@@ -1,39 +1,39 @@
-## 运行爬虫
+## Run crawler
 
-Crawlab有两种运行爬虫的方式：
-1. 手动触发
-2. [定时任务触发](../Schedule/README.md)
+Crawlab has two ways to run a crawler:
+1. Manual trigger
+2. [Periodical task trigger](../Schedule/README.md)
 
-### 手动触发
+### Manual trigger
 
-1. 在 `爬虫列表` 中 `操作` 列点击 `运行` 按钮并确认，或者
-2. 在 `爬虫详情` 中 `概览` 标签下点击 `运行` 按钮并确认，或者
-3. 如果是 `可配置爬虫`，还可以在 `配置` 标签下点击 `运行` 按钮并确认
+1. Click the 'run' button in the 'action' column of the 'crawler list' and confirm it, or
+2. Click the 'run' button under the 'overview' tab in the 'crawler' details and confirm it, or
+3. If it is a 'configurable crawler', you can also click the 'run' button under the 'configuration' tab and confirm it
 
-然后，Crawlab会提示任务已经派发到队列中去了，然后你可以在 `爬虫详情`左侧看到新创建的任务。点击任务可以导航至 `任务详情`。
+Then, Crawlab will prompt that the task has been dispatched to the queue, and you can see the newly created task on the left side of 'crawler details'. Click task to navigate to 'task details'.
 
-### 运行类型
+### Run type
 
-当点击 `运行` 按钮时，会弹出一个对话框，其中有一个 `运行类型` 的必填选项，指代您希望这个爬虫任务运行的模式，也就是运行节点的分配策略。如下图，有 3 种运行类型：所有节点、指定节点、随机。
+When you click the 'run' button, a dialog box will pop up, in which there is a required option of 'run type', which refers to the mode you want this crawler task to run, that is, the allocation policy of the running node. As shown in the figure below, there are 3 run types: all nodes, specified nodes and random.
 
 ![](http://static-docs.crawlab.cn/task-run-popup.png)
 
-- **所有节点**：该任务在所有在线节点上同时运行，该策略比较适合大型的分布式爬虫；
-- **指定节点**：指定一个在线节点上运行，该策略适合有不同拓扑结构节点分布的爬虫，例如一些节点分布在国内，另一些分布在国外；
-- **随机**：系统任意分配一个节点运行该任务，该策略是最简单的运行策略，能够平均分配所有有效资源。
+- **All nodes**: this task runs on all online nodes at the same time. This strategy is more suitable for large distributed crawlers;
+- **Specify node**: specify to run on an online node. This strategy is suitable for crawlers with different topology node distribution, for example, some nodes are distributed in China, others are distributed abroad；
+- **Random**: the system assigns any node to run the task, which is the simplest running strategy, and can allocate all effective resources equally.
 
-### 参数
+### Parameter
 
-在任务运行的确认对话框中，另一个可选输入项是 `参数`，这相当于 `执行命令` 的附加命令。
+In the task running confirmation dialog box, another optional input item is 'parameter', which is equivalent to the additional command of 'execute command'.
 
-对于 `自定义爬虫` 来说，运行任务相当于执行一行操作命令，例如 `python spider.py`。而 `参数` 是在 `执行命令` 中附加的指令，接在 `执行命令` 后面。最后任务执行的操作命令会是 爬虫的 `执行命令` + 任务的 `参数`。
+For 'custom crawlers', running a task is equivalent to executing a line of operation commands, such as 'python spider.py'. The 'parameter' is an additional instruction in the 'execute command', followed by the 'execute command'. The operation command executed by the last task will be the 'execute command' of the crawler add the 'parameter' of the task.
 
-例如，执行命令为 `python spider.py`，参数为 `keyword`。最后被运行的操作命令为 `python spider.py keyword`。
+For example, execute the command as 'python spider.py', the parameter is 'keyword'. The last operation command to be run is 'python spider.py keyword'。
 
-`参数` 让爬虫变得更灵活，其中一个比较有用的地方是提升爬虫的复用性。例如，一个搜索引擎爬虫，需要参数化搜索的关键词，可以将关键词作为 `参数` 传入爬虫。
+'Parameter' makes the crawler more flexible, one of the more useful parts is to improve the reusability of the crawler. For example, a search engine crawler needs to parameterize search keywords, which can be passed into the crawler as a 'parameter'.
 
-另一个比较有用的地方是一个爬虫项目中（这里的“爬虫项目”不是指 Crawlab 中的“项目”）有多个爬虫，例如包含多个爬虫的 `Scrapy` 爬虫项目，可以将 `scrapy crawl <spider_name>` 中的 `<spider_name>` 作为参数传入爬虫中，然后就可以通过参数来选择运行不同的爬虫了。
+Another useful place is that there are multiple crawlers in a crawler project (the 'crawler project' here does not refer to the 'project' in Crawlab). For example, if there are multiple crawlers in a 'Scrapy' crawler project, you can set the '<spider_name>' in 'scrapy crawl <spider_name>' as a parameter and pass it into the crawler , and then you can choose to run different crawlers through the parameter.
 
-### 定时任务触发
+### Periodical task trigger
 
-`定时任务触发` 是比较常用的功能，对于`增量抓取`或对实时性有要求的任务很重要。这在 [定时任务](../Schedule/README.md) 中会详细介绍。
+'Periodical task trigger' is a relatively common function, which is very important for tasks with 'incremental fetching' or real-time requirements. This is described in detail in the [scheduled tasks](../Schedule/README.md) section.

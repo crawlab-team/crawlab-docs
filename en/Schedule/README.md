@@ -1,23 +1,24 @@
-## 定时任务
+## Periodical Tasks
 
 定时任务是指定某个时刻，重复性地执行的任务，英文叫做`Periodical Tasks`，在`Linux`中也被称为`Crontab`。定时任务可以让任务可以被执行多次，而用户则不用手动的操作来执行任务。在生产环境中，这非常常见。定时任务对于对增量抓取或对数据实时性有要求的用户来说非常有用。
+A scheduled task is a task that is executed repeatedly at a specified time. It is called 'Periodical Tasks' in English and 'Crontab' in Linux. A periodical task can be executed multiple times, while the user does not need to perform the task manually. This is very common in production environments. Periodical tasks are very useful for users who need incremental fetching or real-time data.
 
-定时任务列表会进行更新。每一次爬虫更新、删除、创建，以及定时任务的更新、删除、创建，都会触发定时任务列表的更新。
+The periodical tasks list is updated frequently. Every time a crawler is updated, deleted, created, and a periodical task is updated, deleted, and created, the periodical tasks list will be updated.
 
-### 创建定时任务
+### Create Periodical Tasks
 
-导航至`定时任务`页面，可以看到定时任务的列表。
+Navigate to the 'periodical tasks' page to see the list of periodical tasks.
 
-点击`添加定时任务`，弹出创建定时任务的弹框。填写相应的内容，点击`提交`按钮创建定时任务。
+Click 'Add Periodical Tasks' to pop up the create periodical task pop-up box. Fill in the corresponding content and click the submit button to create a periodical task.
 
 ![](https://crawlab.oss-cn-hangzhou.aliyuncs.com/gitbook/schedule-list-add.png)
 
-这里的`Cron`跟`Linux`中的`crontab`是一致的。如果对`crontab`不了解，可以参考[这篇文章](https://www.cnblogs.com/longjshz/p/5779215.html)。
+'Cron' here is the same as 'crontab' in Linux. If you don't know about 'crontab', please refer to [this article](https://www.cnblogs.com/longjshz/p/5779215.html).
 
-### 修改定时任务
+### Modify Periodical Tasks
 
-导航至`定时任务`页面，点击`操作`列的`修改`按钮，弹出修改定时任务的弹框。填写相应的内容，点击`提交`按钮修改定时任务。
+Navigate to the 'periodical tasks' page, click the 'modify' button in the 'operation' column, and a pop-up box for modifying the periodical task will pop up. Fill in the corresponding content and click the submit button to modify the periodical task.
 
-### 删除定时任务
+### Delete Periodical Tasks
 
-导航至`定时任务`页面，点击`操作`列的`删除`按钮，确认删除该任务。
+Navigate to the 'periodical tasks' page, click the 'delete' button in the 'operation' column, confirm to delete the task.

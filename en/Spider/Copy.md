@@ -1,11 +1,11 @@
-## 复制爬虫
+## Copy crawler
 
-很多用户在开发完一个爬虫之后需要将已知功能应用到其他爬虫程序上。而这时复制爬虫就变得非常有用了。
+Many users need to apply known functions to other crawlers after developing a crawler. And then copying crawlers becomes very useful.
 
-复制爬虫的操作很简单，如下：
+The operation of copying a crawler is simple, as follows:
 
-1. 导航到 **爬虫列表**；
-2. 选择一个待复制爬虫，点击 **复制** 按钮，会弹出一个确认框；
-3. 在 **新爬虫名称** 中输入新爬虫的名字，并点击 **确认**。
+1. Navigate to **crawler list**;
+2. Select a crawler to be copied and click **copy** to open a confirmation box;
+3. Enter the name of the new crawler in **new crawler name** and click **confirm**.
 
-然后，爬虫就复制完成了。
+Then, the crawler copy is done.

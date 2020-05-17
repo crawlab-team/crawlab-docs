@@ -1,84 +1,84 @@
-### 统计数据汇总
+### Statistics summary
 
-#### 事件列表
+#### Event list
 
-| 事件类别 | 事件名称      | 事件标签       | 事件价值 | 启用 |
+| Event category | Event name      | Event tag       | Event value | Enable |
 | -------- | ------------- | -------------- | -------- | ---- |
-| 全局     | 允许/禁止统计 | 允许           |          | Y    |
-| 全局     | 允许/禁止统计 | 允许           |          | Y    |
-| 全局     | 点击标签 | <page_name>           |          | Y    |
-| 爬虫确认 | 确认运行      |{all-nodes\|selected-nodes\|random}|| Y    |
-| 爬虫详情 | 配置          | 预览           |          | N    |
-| 爬虫详情 | 配置          | 提取字段       |          | Y    |
-| 爬虫详情 | 配置          | 点击运行       |          | Y    |
-| 爬虫详情 | 配置          | 添加阶段 |          | Y    |
-| 爬虫详情 | 配置          | 点击阶段选择器类别-{css\|xpath} |     | Y |
-| 爬虫详情 | 配置          | 复制阶段               |          | Y    |
-| 爬虫详情 | 配置          | 点击运行        |          | Y    |
-| 爬虫详情 | 配置          | 更改阶段名称        |          | Y    |
-| 爬虫详情 | 配置          | 删除阶段              |          | Y    |
-| 爬虫详情 | 配置          | 保存           |          | Y    |
-| 爬虫详情 | 配置          | 勾选列表页        |          | Y    |
-| 爬虫详情 | 配置          | 取消勾选列表页      |          | Y    |
-| 爬虫详情 | 配置          |  勾选分页     |          | Y    |
-| 爬虫详情 | 配置          |  取消勾选分页     |          | Y    |
-| 爬虫详情 | 配置          |  添加字段     |          | Y    |
-| 爬虫详情 | 配置          |  设置字段属性     |          | Y    |
-| 爬虫详情 | 配置          |  点击字段选择器类别-{css\|xpath}|| Y    |
-| 爬虫详情 | 配置          |  更改字段|| Y    |
-| 爬虫详情 | 配置          |  删除字段|| Y    |
-| 爬虫详情 | 配置          |  添加设置|| Y    |
-| 爬虫详情 | 配置          |  删除设置|| Y    |
-| 爬虫详情  |环境             | 添加        |          | Y    |
-| 爬虫详情  |环境             | 删除            |          | Y    |
-| 爬虫详情  |环境             | 保存            |          | Y    |
-| 爬虫详情   |概览           |点击运行           |          | Y    |
-| 爬虫详情   |概览           |保存           |          | Y    |
-| 爬虫详情   |概览           |查看任务           |          | Y    |
-| 爬虫详情   |概览           |查看节点           |          | Y    |
-| 爬虫详情   |文件           |添加           |          | Y    |
-| 爬虫详情   |文件           |点击           |          | Y    |
-| 爬虫详情   |文件           |保存           |          | Y    |
-| 爬虫详情   |文件           |删除           |          | Y    |
-| 爬虫详情   |文件           |重命名           |          | Y    |
-| 爬虫详情   |文件           |回退           |          | N    |
-| 爬虫详情   |文件           |右键点击导航栏|          | Y    |
-| 爬虫详情   |切换标签           |{概览\|文件\|环境\|结果}|          | Y    |
-| 爬虫详情   |切换爬虫           |保存           |          | Y    |
-| 爬虫列表   |添加爬虫           |可配置爬虫           |          | Y    |
-| 爬虫列表   |添加爬虫           |自定义爬虫           |          | Y    |
-| 爬虫列表   |删除爬虫           |           |          | Y    |
-| 爬虫列表   |点击运行           |           |          | Y    |
-| 爬虫列表   |导入爬虫           |           |          | N    |
-| 爬虫列表   |刷新           |           |          | Y    |
-| 爬虫列表   |查看爬虫           |           |          | Y    |
-|任务详情 |概览           |点击节点详情            |          | Y    |
-|任务详情 |概览           |点击爬虫详情            |          | Y    |
-|任务详情 |结果           |下载CSV            |          | Y    |
-|任务详情 |切换标签           |{概览\|日志\|结果}|          | Y    |
-| 节点列表  |  删除节点   |                |          | Y    |
-| 节点列表   |刷新       |                |          | Y    |
-| 节点列表   |查看节点       |                |          | Y    |
-|  节点详情  |切换节点|                |          | Y    |
-|  节点详情  |切换标签|{overview\|installation}|          | Y    |
-|  节点详情   | 概览|保存          |          | Y    |
-|  节点详情  |安装|搜索依赖|          | Y    |
-|  节点详情  |安装|安装依赖|          | Y    |
-|  节点详情  |安装|卸载依赖|          | Y    |
-|  节点详情  |安装|安装语言|          | Y    |
-|  任务列表  |删除任务|                |          | Y    |
-|  任务列表  |点击节点详情|                |          | Y    |
-|  任务列表  |点击爬虫详情|                |          | Y    |
-|  任务列表  |搜索|                |          | Y    |
-|  任务列表  |查看任务|                |          | Y    |
-|  任务列表  |筛选任务|                |          | Y    |
-|  定时任务  |添加定时任务|                |          | Y    |
-|  定时任务  |提交定时任务|                |          | Y    |
-|  定时任务  |修改定时任务|                |          | Y    |
-|  定时任务  |删除定时任务|                |          | Y    |
-|  定时任务  |配置Cron|                |          | Y    |
-|  定时任务  |启用/禁用|                |          | Y    |
-|  用户列表  |删除用户|                |          | Y    |
-|  用户列表  |添加用户|                |          | Y    |
-|  用户列表  |编辑用户|                |          | Y    |
+| global     | allow/disable statistics | allow           |          | Y    |
+| global     | allow/disable statistics | allow           |          | Y    |
+| global     | Click on the tab | <page_name>           |          | Y    |
+| crawler confirmation | confirm operation      |{all-nodes\|selected-nodes\|random}|| Y    |
+| crawler details | configuration          | preview           |          | N    |
+| crawler details | configuration          | extract fields       |          | Y    |
+| crawler details | configuration          | click to Run       |          | Y    |
+| crawler details | configuration          | add stage |          | Y    |
+| crawler details | configuration          | click on stage selector category-{css\|xpath} |     | Y |
+| crawler details | configuration          | copy stage               |          | Y    |
+| crawler details | configuration          | click to Run        |          | Y    |
+| crawler details | configuration          | change stage name        |          | Y    |
+| crawler details | configuration          | delete stage              |          | Y    |
+| crawler details | configuration          | save           |          | Y    |
+| crawler details | configuration          | check list page        |          | Y    |
+| crawler details | configuration          | uncheck list page      |          | Y    |
+| crawler details | configuration          | check page     |          | Y    |
+| crawler details | configuration          | uncheck page     |          | Y    |
+| crawler details | configuration          | add field     |          | Y    |
+| crawler details | configuration          | set field properties     |          | Y    |
+| crawler details | configuration          | click field selector category-{css\|xpath}|| Y    |
+| crawler details | configuration          | change field|| Y    |
+| crawler details | configuration          | delete field|| Y    |
+| crawler details | configuration          | add settings|| Y    |
+| crawler details | configuration          | delete settings|| Y    |
+| crawler details  |environment             | add        |          | Y    |
+| crawler details  |environment             | delete            |          | Y    |
+| crawler details  |environment             | save            |          | Y    |
+| crawler details   |overview           |click to run           |          | Y    |
+| crawler details   |overview           |save           |          | Y    |
+| crawler details   |overview           |view tasks           |          | Y    |
+| crawler details   |overview           |view nodes           |          | Y    |
+| crawler details   |file           |add           |          | Y    |
+| crawler details   |file           |click           |          | Y    |
+| crawler details   |file           |save           |          | Y    |
+| crawler details   |file           |delete           |          | Y    |
+| crawler details   |file           |rename           |          | Y    |
+| crawler details   |file           |fallback           |          | N    |
+| crawler details   |file           |right click on the navigation bar|          | Y    |
+| crawler details   |toggle label           |{overview\|file\|environment\|result}|          | Y    |
+| crawler details   |switch crawler           |save           |          | Y    |
+| crawler list   |add crawler           |configurable crawler           |          | Y    |
+| crawler list   |add crawler           |custom crawler           |          | Y    |
+| crawler list   |delete crawler           |           |          | Y    |
+| crawler list   |click to run           |           |          | Y    |
+| crawler list   |import crawler           |           |          | N    |
+| crawler list   |refresh           |           |          | Y    |
+| crawler list   |view crawler           |           |          | Y    |
+|task details |overview           |click node details            |          | Y    |
+|task details |overview           |click crawler details            |          | Y    |
+|task details |result           |download CSV            |          | Y    |
+|task details |toggle label           |{overview\|log\|result}|          | Y    |
+| node list  |  delete node   |                |          | Y    |
+| node list   |refresh       |                |          | Y    |
+| node list   |view nodes       |                |          | Y    |
+|  node details  |switch nodes|                |          | Y    |
+|  node details  |toggle label|{overview\|installation}|          | Y    |
+|  node details   | overview|save          |          | Y    |
+|  node details  |install|search dependency|          | Y    |
+|  node details  |install|install dependency|          | Y    |
+|  node details  |install|uninstall dependency|          | Y    |
+|  node details  |install|install language|          | Y    |
+|  task list  |delete task|                |          | Y    |
+|  task list  |click node details|                |          | Y    |
+|  task list  |click crawler details|                |          | Y    |
+|  task list  |search|                |          | Y    |
+|  task list  |view tasks|                |          | Y    |
+|  task list  |filter tasks|                |          | Y    |
+|  periodical tasks  |add periodical tasks|                |          | Y    |
+|  periodical tasks  |submit periodical tasks|                |          | Y    |
+|  periodical tasks  |modify periodical tasks|                |          | Y    |
+|  periodical tasks  |delete periodical tasks|                |          | Y    |
+|  periodical tasks  |configurationCron|                |          | Y    |
+|  periodical tasks  |enable/disable|                |          | Y    |
+|  user list  |delete user|                |          | Y    |
+|  user list  |add user|                |          | Y    |
+|  user list  |edit user|                |          | Y    |
 

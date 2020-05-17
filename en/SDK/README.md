@@ -1,10 +1,10 @@
 ## SDK
 
-Crawlab SDK 包括不同编程语言的 SDK，例如 [Python](./Python.md), [Node.js](./Nodejs.md) and Java。同时 Crawlab SDK 还包括一个用 Python 编写的 [CLI 命令行工具](./CLI.md).
+Crawlab SDK includes SDKs of different programming languages, such as [Python](./Python.md), [Node.js](./Nodejs.md) and Java. At the same time, Crawlab SDK also includes a [cli command line tool](./CLI.md) written in Python.
 
-SDK 目前支持的编程语言包括:
+The programming languages currently supported by the SDK include:
 1. [Python](./Python.md)
 2. [Node.js](./Nodejs.md)
 
-其他语言（例如 Golang、Java、C#）暂时还不支持，请等待开发组发布。
+Other languages (such as Golang、Java、C#) are not supported yet. Please wait for the development team to publish them.
 

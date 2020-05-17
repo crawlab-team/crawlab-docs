@@ -1,80 +1,79 @@
-## 自定义爬虫
+## Custom crawler
 
-自定义爬虫是指用户可以添加的任何语言任何框架的爬虫，高度自定义化。当用户添加好自定义爬虫之后，Crawlab 就可以将其集成到爬虫管理的系统中来。
+Custom crawler is a kind of crawler that can be added in any language and any framework, which is highly customized. When the user adds a custom crawler, Crawlab can integrate it into the crawler management system.
 
-我们有两种方式来上传爬虫项目：
+There are two ways to upload crawler projects:
 
-1. 通过 Web 界面（灵活）
-2. 通过 CLI 命令行工具（简单，推荐）
+1. By web interface(flexible)
+2. By CLI command line tools (simple, recommended)
 
-下面我们详细介绍一下。
+Here is a detailed introduction.
 
-### 通过 Web 界面
+### By web interface
 
-通过 Web 界面上传爬虫项目的详细步骤如下。
+The detailed steps of uploading crawler items by the web interface are as follows.
 
-##### 1. 打包为 Zip 文件
+##### 1. Package as zip file
 
-在通过Web界面上传之前，需要将爬虫项目文件打包成`zip`格式。
+Before uploading by the web interface, you need to package the crawler project file into 'zip' format.
 
-⚠️注意：您需要在爬虫项目根目录下打包，意思是您需要进入到项目的第一层，将所有文件和文件夹打包成 zip 文件。
+⚠️Note: you need to package in the root directory of the crawler project, which means you need to go to the first level of the project and package all files and folders into zip files.
 
-##### 2. 输入爬虫数据
+##### 2. Enter crawler data
 
-首先，您需要导航到爬虫列表页。
+First, you need to navigate to the crawler list page.
 
-然后，点击“添加爬虫”，选择“自定义爬虫”（默认是自定义爬虫），将出现以下界面。
+Then, click 'add crawler' and select 'custom crawler' (default is custom crawler). The following interface will appear.
 
 ![](http://static-docs.crawlab.cn/spider-create-customized.png)
 
-输入相应的参数：“爬虫名称”、“显示名称”、“执行命令”和“结果”。
+Enter the appropriate parameters: 'crawler name', 'display name', 'execute command' and 'result'.
 
-它们的定义如下：
+They are defined as follows:
 
-- **爬虫名称**：爬虫的唯一识别名称，将会在爬虫根目录中创建一个该名称的文件目录，因此建议为没有空格和特殊符号的小写英文，可以带下划线；
-- **显示名称**：爬虫显示在前端的名称，可以为任何字符串；
-- **执行命令**：爬虫将在 `shell` 中执行的命令，最终被执行的命令将为 `执行命令` 和 `参数` 的组合；
-- **结果**：”结果集“的意思，爬虫抓取结果储存在 MongoDB 数据库里的集合（Collection），类似于 SQL 数据库中的表（Table）。
+- **Crawler name**: unique identification name of a crawler. A file directory of this name will be created in the root directory of the crawler. Therefore, it is recommended to use lowercase English without spaces and special symbols, which can contain underscores;
+- **Display name**: the name of the crawler displayed in the front end, which can be any string;
+- **Execute command**: the command that the crawler will execute in the 'shell', and the final executed command will be the combination of 'execute command' and 'parameter';
+- **Results** 'result set' means that the crawler grabs the collection of the results stored in the MongoDB database, similar to the table in the SQL database.
 
-##### 3. 创建爬虫
+##### 3. Create a crawler
 
-接下来，您有两个选择来创建爬虫：
+Next, you have two choices to create a crawler:
 
-1. **创建空项目**：创建一个空爬虫，也就是直接点击”添加“按钮，这将不会上传任何爬虫文件，您可以在创建好之后再上传 Zip 文件（后面会介绍），或者在线创建编辑文件（请参考 [在线编辑文件](./FileEdit.md) 章节）。
-2. **直接上传 Zip 文件**：点击”上传“按钮，选择刚才打包好的 zip 文件。如果爬虫名称已经存在，将覆盖之前的项目文件；如果爬虫名称不存在，则视作新爬虫，并会创建并上传所有爬虫文件。上传好爬虫文件之后，您同样可以通过 [文件管理](./FileEdit.md) 功能来创建、编辑、删除、重命名爬虫文件。
+1. **Create empty project**: create an empty crawler, that is, directly click the 'add' button, which will not upload any crawler files. You can upload the zip file after the creation (described later), or create the editing file online (please refer to the section of [online editing file](./FileEdit.md)).
+2. **Upload zip file directly**: click the 'upload' button to select the zip file just packed. If the crawler name already exists, the previous project file will be overwritten; If the crawler name does not exist, it will be regarded as a new crawler, and all crawler files will be created and uploaded. After uploading the crawler file, you can also create, edit, delete and rename the crawler file through the [file management](./FileEdit.md).
+The crawler is then created/updated.
 
-这样爬虫就创建/更新好了。
+### By CLI command line tool
 
-### 通过 CLI 命令行工具
+For developers who are more accustomed to operating on the command line, perhaps CLI tool is a better choice. Moreover, this method does not require the user to package the project into a zip file, which is much more convenient for uploading the crawler.
 
-对于比较习惯在命令行中操作的开发者，也许 CLI 工具是一个比较好的选择。而且，这种方式不要求用户将项目打包成 Zip 文件，对于上传爬虫来说要方便很多。
+[CLI command line tool](./CLI.md) is an experimental function that allows developers to easily upload files. For details, please refer to the [cli command line tool](./CLI.md) chapter.
 
-[CLI 命令行工具](./CLI.md) 是一个实验功能，可以让开发者能够轻松上传文件，详情请参考 [CLI 命令行工具](./CLI.md) 章节。
+Next, we will show you how to upload a custom crawler through the CLI command line tool.
 
-下面，我们将介绍如何通过 CLI 命令行工具上传自定义爬虫。
+⚠️Note: please make sure that you have installed CLI command line tool and can obtain 'token' before using. If not, please refer to the [cli command-line tools](./CLI.md) section.
 
-⚠️注意：使用之前，请保证您已经安装了 CLI 命令行工具，并且已经能够顺利获取 `token`，如果没有安装或没有获取 `token`，请参考 [CLI 命令行工具](./CLI.md) 章节。
+##### Execute command to upload crawler
 
-##### 执行命令上传爬虫
-
-执行以下命令会将爬虫目录中的文件自动打包成 Zip 文件并上传到 Crawlab 服务器上，这样就省去了手动打包的步骤。
+Executing the following command will package the files automatically in the crawler directory into Zip files and upload them to the Crawlab server, thus eliminating the manual packaging step.
 
 ```bash
-# 定位到爬虫项目目录
+# Navigate to the crawler project directory
 cd /path/to/spider
 
-# 上传该爬虫目录
+# Upload the crawler directory
 crawlab upload
 ```
 
-##### 查看帮助信息
+##### View help information
 
-下面这个命令可以查看上传操作的帮助文档，这里有一些高级配置项。
+The following command can view the help document of the upload operation. Here are some advanced configuration items.
 
 ```bash
 crawlab upload --help
 ```
 
-### 关于多爬虫项目
+### About multi crawler projects
 
-您可能会有疑问，如果一个爬虫项目中有多个爬虫该怎么办。请参考 [Q&A](../../QA/README.md) 中的 **"我在一个 Scrapy 爬虫下有多个爬虫，我需要在 Crawlab 创建多个爬虫项目么？"** 问题。如果是非 Scrapy 爬虫也类似，需要做的是编写一个入口文件，例如 `main.py`，然后通过传参的方式在入口文件中调用不同的爬虫。
+You may have questions about what to do if there are more than one crawler in a crawler project. Please refer to ** [Q&A](../../QA/README.md) "I have multiple crawlers under one crawler. Do I need to create multiple crawler projests in Crawlab?"**. If it's a non Scrapy crawler, it's similar, what is needed is to write an entry file, such as 'main.py', and then call different crawlers in the entrance file by passing the different entrance parameters.

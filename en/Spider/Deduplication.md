@@ -1,26 +1,26 @@
-## 结果去重
+## Result deduplication
 
-Crawlab 内置了对单个爬虫的去重处理功能。如果您希望使用 Crawlab 内置的去重功能，您需要在爬虫中打开 “是否去重“ 开关。具体操作为：导航到 "爬虫-概览" 页，打开 "是否去重" 开关，并选择 "覆盖" 或者 "忽略" 的去重策略，并输入 "去重字段"。操作完成后重复执行任务，Crawlab 就会进行去重操作。
+Crawlab has built-in deduplication function for a single crawler. If you want to use the built-in deduplication function of Crawlab, you need to turn on the "deduplication" switch in the crawler. The specific operation is to navigate to the "crawler overview" page, turn on the "deduplication" switch, select the "overwrite" or "ignore" deduplication strategy, and enter the "deduplication field". After the operation is completed, repeat the task, and crawlab will perform the deduplication operation.
 
-⚠️注意：由于 Crawlab 是需要储存在对应的 MongoDB 中的，因此在去重之前，需要在爬虫中注明 "结果集"，也就是对应的表名。
+⚠️Note: since Crawlab needs to be stored in the corresponding MongoDB, you need to indicate "result set", that is, the corresponding table name, in the crawler before deduplication.
 
-### 覆盖去重
+### Coverage to deduplication
 
-覆盖去重顾名思义，就是将老的数据覆盖掉，保证数据的唯一性，从而达到去重的目的。
+Coverage to deduplication is to cover the old data and ensure the uniqueness of the data, so as to achieve the purpose of deduplication.
 
-其具体原理和步骤如下：
+The specific principle and steps are as follows:
 
-1. 根据 "去重" 字段找到新数据对应的老数据，并将老数据删除；
-2. 将新数据插入到 "结果集" 中。
+1. Find the old data corresponding to the new data according to the "deduplication" field, and delete the old data;
+2. Insert new data into the result set.
 
-### 忽略去重
+### Ignore deduplication
 
-忽略去重比覆盖去重简单，其具体原理如下：
+It is easier to ignore deduplication than to cover the deduplication. The specific principle is as follows:
 
-1. 根据 "去重" 字段找到新数据对应的老数据；
-2. 如果存在老数据，则忽略，不插入；
-3. 如果不存在老数据，则插入。
+1. Find the old data corresponding to the new data according to the "deduplication" field;
+2. If there is old data, it is ignored and not inserted;
+3. If there is no old data, insert the new data.
 
-### 去重字段
+### Deduplicate field
 
-"去重字段" 其实相当于结果集的主键（虽然 MongoDB 中的主键永远是 `_id`），多条同一个主键的数据是不允许的。如果 Crawlab 的去重逻辑打开，则会在该结果集中的 "去重字段" 上创建一个唯一索引，保证数据的唯一性，同时保证查找数据的效率。
+The "deduplicated field" is actually the primary key of the result set (although the primary key in MongoDB is always '_id'), multiple data with the same primary key are not allowed. If the deduplication logic of Crawlab is turned on, a unique index will be created on the de duplication field in the result set to ensure the uniqueness of data and the efficiency of data searching.
