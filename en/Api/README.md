@@ -1,6 +1,6 @@
 ## API
 
-Crawlab adopts the architecture mode(B/S) of separating the front end and the back end, the front end interacts with the back end by API, therefore, the external system can access and operate Crawlab through the API directly in theory. Many enterprises have their own management systems and want to integrate Crawlab as a crawler management system in some way, so the developers have opened the API of Crawlab, so that external systems can access and operate Crawlab by API. This enhances the integration of Crawlab. Crawlab accesses other systems in the form of [Web Hook](../Spider/Webhook.md).
+Crawlab adopts the architecture mode(B/S) of separating the front end and the back end, the front end interacts with the back end by API, therefore, the external system can access and operate Crawlab through the API directly in theory. Many enterprises have their own management systems and want to integrate Crawlab as a spider management system in some way, so the developers have opened the API of Crawlab, so that external systems can access and operate Crawlab by API. This enhances the integration of Crawlab. Crawlab accesses other systems in the form of [Web Hook](../Spider/Webhook.md).
 
 To use the API is very simple, just create a [API token](./ApiToken.md) in Crawlab. You can see the [API token chapter](./ApiToken.md) to create a token.
 

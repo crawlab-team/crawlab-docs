@@ -1,6 +1,6 @@
 ## CLI command line tool
 
-CLI command line tool is a very practical CLI program, which is part of the [crawlab SDK](https://github.com/crawlab-team/crawlab-sdk) project. CLI command line tool is designed to help Crawlab users more easily upload crawlers, run tasks, view data, etc.
+CLI command line tool is a very practical CLI program, which is part of the [crawlab SDK](https://github.com/crawlab-team/crawlab-sdk) project. CLI command line tool is designed to help Crawlab users more easily upload spiders, run tasks, view data, etc.
 
 ⚠️Note: CLI command line tool is still in rapid iteration, please keep an eye on [GitHub repository](https://github.com/crawlab-team/crawlab-sdk) or the document to update the information.
 
@@ -32,9 +32,9 @@ If the login is successful, the CLI will save the user name, password, API addre
 
 ⚠️Note: the '<api_address>' here is the address of the back end API. If you are using the docker image, you only need to add a suffix '/api' after the web interface URL. For example, if your web access address is 'http://localhost:8080', your '<api_url>' is 'http://localhost:8080/api'.
 
-### Upload crawler
+### Upload spider
 
-It is a troublesome thing to upload a crawler through the web interface in Crawlab. You need to package the crawler file into a zip file and then upload it to Crawlab. With the CLI command line tool, you can upload the crawler file with one line of command.
+It is a troublesome thing to upload a spider through the web interface in Crawlab. You need to package the spider file into a zip file and then upload it to Crawlab. With the CLI command line tool, you can upload the spider file with one line of command.
 
 The operation command is as follows.
 
@@ -44,25 +44,25 @@ cd /path/to/spider
 crawlab upload
 ```
 
-For the above operation, first navigate to the crawler directory, and then upload the current folder to Crawlab by the command 'crawlab upload'. The crawler name defaults to the directory name.
+For the above operation, first navigate to the spider directory, and then upload the current folder to Crawlab by the command 'crawlab upload'. The spider name defaults to the directory name.
 
 ⚠️Note: if you do not pass parameters, CLI will package the current entire directory into a zip file and upload it, which is not very secure, so it is not recommended.
 
-Of course, if you want to do more complex upload crawler operations, you can use the following command.
+Of course, if you want to do more complex upload spider operations, you can use the following command.
 
 ```bash
-# Upload the specified directory with crawler name, display name, result set and other information
+# Upload the specified directory with spider name, display name, result set and other information
 crawlab upload \
-    -d /path/to/spider \ # crawler name
-    -n <spider_name> \ # crawler name
+    -d /path/to/spider \ # spider name
+    -n <spider_name> \ # spider name
     -N <display_name> \ # display name
     -m <execute_command> \ # execute command
     -c <result_collection> # result set
 ```
 
-If you want to upload a crawler for a certain crawler ID, you only need to specify the '-i' command to pass in the crawler ID. CLI will upload the crawler and overwrite its crawler file.
+If you want to upload a spider for a certain spider ID, you only need to specify the '-i' command to pass in the spider ID. CLI will upload the spider and overwrite its spider file.
 
-For specific help on crawler upload CLI, please check 'crawlab upload --help'.
+For specific help on spider upload CLI, please check 'crawlab upload --help'.
 
 ### View node list
 
@@ -70,7 +70,7 @@ For specific help on crawler upload CLI, please check 'crawlab upload --help'.
 crawlab nodes
 ```
 
-### View crawler list
+### View spider list
 
 ```bash
 crawlab spiders

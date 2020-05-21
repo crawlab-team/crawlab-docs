@@ -2,7 +2,7 @@
 
 ⚠️Note: PubSub based node communication will be changed to RPC communication which is more convenient for development and maintenance.
 
-The communication here mainly refers to the instant communication between nodes, means there is no significant delay ([crawler deployment](./SpiderDeployment.md) and [task execution](./TaskExecution.md) are completed through rotation training, so they are not in this column).
+The communication here mainly refers to the instant communication between nodes, means there is no significant delay ([spider deployment](./SpiderDeployment.md) and [task execution](./TaskExecution.md) are completed through rotation training, so they are not in this column).
 
 Communication is mainly completed by Redis. The following is the schematic diagram of node communication.
 
@@ -27,7 +27,7 @@ Operation name | Communication category
 Get log | Bidirectional communication
 Get system information | Bidirectional communication
 Cancel task | Unidirectional communication
-Notify the work node to get the crawler file from GridFS | Unidirectional communication
+Notify the work node to get the spider file from GridFS | Unidirectional communication
 
 ### 'chan' and 'goroutine'
 

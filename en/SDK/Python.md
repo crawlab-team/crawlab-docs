@@ -25,9 +25,9 @@ crawlab --help
 
 ### Utility tool
 
-Utility tool mainly provides some 'helper' methods to integrate your crawler into Crawlab better, such as saving the result data to Crawlab and so on.
+Utility tool mainly provides some 'helper' methods to integrate your spider into Crawlab better, such as saving the result data to Crawlab and so on.
 
-Here's how Scrapy and general Python crawlers integrate with Crawlab.
+Here's how Scrapy and general Python spiders integrate with Crawlab.
 
 ⚠️Note: make sure you have installed 'crawlab-sdk' by pip.
 
@@ -41,11 +41,11 @@ ITEM_PIPELINES = {
 }
 ```
 
-Then, start the scratch crawler. After it running, you should be able to see the result in [task details - result](../Task/Results.md).
+Then, start the scratch spider. After it running, you should be able to see the result in [task details - result](../Task/Results.md).
 
-##### General Python crawler integration
+##### General Python spider integration
 
-Add the following code to the results save section of your crawler.
+Add the following code to the results save section of your spider.
 
 ```python
 # import the method of saving results
@@ -58,4 +58,4 @@ result = {'name': 'crawlab'}
 save_item(result)
 ```
 
-Then, start the crawler. After it running, you should be able to see the result in [task details - result](../Task/Results.md).
+Then, start the spider. After it running, you should be able to see the result in [task details - result](../Task/Results.md).

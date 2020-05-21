@@ -1,8 +1,8 @@
 ### Integrate with Scrapy
 
-Scrapy is a very powerful crawler framework. If you don't know about Scrapy, please refer to [official website introduction](https://scrapy.org/). After integration with Crawlab, you can see the data captured by your crawler task on the interface.
+Scrapy is a very powerful spider framework. If you don't know about Scrapy, please refer to [official website introduction](https://scrapy.org/). After integration with Crawlab, you can see the data captured by your spider task on the interface.
 
-[Crawlab SDK](https://github.com/crawlab-team/crawlab-sdk) provides some 'helper' methods to better integrate your crawler into Crawlab, such as saving the result data into Crawlab and so on.
+[Crawlab SDK](https://github.com/crawlab-team/crawlab-sdk) provides some 'helper' methods to better integrate your spider into Crawlab, such as saving the result data into Crawlab and so on.
 
 #### Integrate with Scrapy
 
@@ -14,5 +14,5 @@ ITEM_PIPELINES = {
 }
 ```
 
-Then, start the Scrapy crawler. After running, you should be able to see the result in ** task details - result **.
+Then, start the Scrapy spider. After running, you should be able to see the result in ** task details - result **.
 

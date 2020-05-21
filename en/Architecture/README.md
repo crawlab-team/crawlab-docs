@@ -5,7 +5,7 @@ We will introduce some basic principles of Crawlab in this section, mainly inclu
 1. [Overall structure](./Architecture.md)
 2. [Node communication](./NodeCommunication.md)
 3. [Node monitoring](./NodeMonitoring.md)
-4. [Crawler deployment](./SpiderDeployment.md)
+4. [Spider deployment](./SpiderDeployment.md)
 5. [Task execution](./TaskExecution.md)
 6. [RPC](./RPC.md)
 

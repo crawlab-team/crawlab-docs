@@ -1,6 +1,6 @@
 ## Message notification
 
-Message notification can help users get the running status of the crawler task in time, such as how many pieces of data are fetched when the crawler is running, whether an error occurs, and the running time. With the message notification, you can ensure that your crawler task will synchronize information with you at any time, so that you cna know how the grab is going.
+Message notification can help users get the running status of the spider task in time, such as how many pieces of data are fetched when the spider is running, whether an error occurs, and the running time. With the message notification, you can ensure that your spider task will synchronize information with you at any time, so that you cna know how the grab is going.
 
 Crawlab supports three message notification channels:
 

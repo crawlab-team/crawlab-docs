@@ -176,8 +176,8 @@ Then enter "http://localhost:8080" in the browser to see the interface.
 
 ### 10. Next step
 
-Please refer to the [crawler section](../Spider/README.md) for details on how to use Crawlab.
+Please refer to the [spider section](../Spider/README.md) for details on how to use Crawlab.
 
 ### 11. Reference resources
 
-- [Crawlab the tutorial for the direct deployment of a single crawler](http://sunsunsir.cn/detail/9)
+- [Crawlab the tutorial for the direct deployment of a single spider](http://sunsunsir.cn/detail/9)

@@ -1,6 +1,6 @@
-## Integration with general Python crawler
+## Integration with general Python spider
 
-Add the following code to the results save section of your crawler.
+Add the following code to the results save section of your spider.
 
 ```python
 # Reference save result method
@@ -13,4 +13,4 @@ result = {'name': 'crawlab'}
 save_item(result)
 ```
 
-Then start the crawler. After running, you should be able to see the result in **task details - result**.
+Then start the spider. After running, you should be able to see the result in **task details - result**.

@@ -1,5 +1,5 @@
-## 节点拓扑图
+## Node topology
 
-点击"拓扑图"，查看节点之间的联系。
+Click 'topology map' to view the connection between nodes.
 
 ![](https://crawlab.oss-cn-hangzhou.aliyuncs.com/v0.3.0/node-network.png)

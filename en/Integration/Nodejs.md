@@ -1,6 +1,6 @@
-## Integration with general Node.js crawler
+## Integration with general Node.js spider
 
-Add the following code to the results save section of your crawler.
+Add the following code to the results save section of your spider.
 
 ```javascript
 // Import SDK
@@ -18,4 +18,4 @@ const result = {name: 'crawlab'};
 })();
 ```
 
-Then start the crawler. After running, you should be able to see the result in **task details - result**.
+Then start the spider. After running, you should be able to see the result in **task details - result**.

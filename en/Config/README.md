@@ -37,7 +37,7 @@ server:
     java: "N"
     dotnet: "N"
 spider:
-  path: "/app/spiders"  # Crawler path
+  path: "/app/spiders"  # spider path
 task:
   workers: 4  # Number of actuators running tasks at the same time
 other:
@@ -47,7 +47,7 @@ setting:
   allowRegister: "N"  # Allow registration or not
   enableTutorial: "N"  # Discard tutorial or not
   runOnMaster: "Y"  # Whether to run the task on the master node
-  demoSpiders: "N"  # Whether to load demo crawler
+  demoSpiders: "N"  # Whether to load demo spider
   checkScrapy: "Y"  # Whether to check Scrapy automatically
 notification: # Message notification 
   mail: # Email notification
@@ -85,7 +85,7 @@ CRAWLAB_SERVER_MASTER | server.master | whether this node is the master node | N
 CRAWLAB_SERVER_SECRET | server.secret | server key | crawlab | any value
 CRAWLAB_SERVER_REGISTER_TYPE | server.register.type | node registration category | mac | mac, ip, hostname
 CRAWLAB_SERVER_REGISTER_IP | server.register.ip | node registration IP | null | any value
-CRAWLAB_SPIDER_PATH | spider.path | crawler directory | /app/spiders | any value
+CRAWLAB_SPIDER_PATH | spider.path | spider directory | /app/spiders | any value
 CRAWLAB_TASK_WORKERS | task.workers | number of tasks executed in parallel | 4 | any numerical value
 CRAWLAB_RPC_WORKERS | rpc.workers | RPC number of processes | 16 | any numerical value
 CRAWLAB_OTHER_TMPPATH | other.tmppath | temporary file directory | /tmp | any value
@@ -93,7 +93,7 @@ CRAWLAB_VERSION | version |version No | corresponding version No | any value
 CRAWLAB_SETTING_ALLOWREGISTER |setting.allowRegister | allow registration or not | N | Y, N
 CRAWLAB_SETTING_ENABLETUTORIAL |setting.enableTutorial | enable tutorial or not | N | Y, N
 CRAWLAB_SETTING_RUNONMASTER |setting.runOnMaster | whether to run the task in the master node | Y | Y, N
-CRAWLAB_SETTING_DEMOSPIDERS |setting.demoSpiders | use demo crawler or not | N | Y, N
+CRAWLAB_SETTING_DEMOSPIDERS |setting.demoSpiders | use demo spider or not | N | Y, N
 CRAWLAB_SETTING_CHECKSCRAPY |setting.checkScrapy | whether to check Scrapy automatically | Y | Y, N
 CRAWLAB_NOTIFICATION_MAIL_SERVER |notification.mail.server | SMPT server address |null|any value
 CRAWLAB_NOTIFICATION_MAIL_PORT |notification.mail.port | SMPT server port |null|any value

@@ -65,7 +65,7 @@ go run main.go
 
 ### 8. Develop Crawlab
 
-Any developer who interested in crawler management platform is welcome to contribute or develop Crawlab.
+Any developer who interested in spider management platform is welcome to contribute or develop Crawlab.
 
 After completing the above steps, I believe you can run Crawlab and see the page successfully. In order to make it easier to develop Crawlab, you need to know more about it, it is strongly recommended that you read the [architecture chapter](../Architecture/README.md) and [contribution chapter](../Contribution/README.md) first.
 

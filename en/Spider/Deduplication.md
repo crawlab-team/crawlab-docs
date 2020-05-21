@@ -1,8 +1,8 @@
 ## Result deduplication
 
-Crawlab has built-in deduplication function for a single crawler. If you want to use the built-in deduplication function of Crawlab, you need to turn on the "deduplication" switch in the crawler. The specific operation is to navigate to the "crawler overview" page, turn on the "deduplication" switch, select the "overwrite" or "ignore" deduplication strategy, and enter the "deduplication field". After the operation is completed, repeat the task, and crawlab will perform the deduplication operation.
+Crawlab has built-in deduplication function for a single spider. If you want to use the built-in deduplication function of Crawlab, you need to turn on the "deduplication" switch in the spider. The specific operation is to navigate to the "spider overview" page, turn on the "deduplication" switch, select the "overwrite" or "ignore" deduplication strategy, and enter the "deduplication field". After the operation is completed, repeat the task, and crawlab will perform the deduplication operation.
 
-⚠️Note: since Crawlab needs to be stored in the corresponding MongoDB, you need to indicate "result set", that is, the corresponding table name, in the crawler before deduplication.
+⚠️Note: since Crawlab needs to be stored in the corresponding MongoDB, you need to indicate "result set", that is, the corresponding table name, in the spider before deduplication.
 
 ### Coverage to deduplication
 

@@ -2,7 +2,7 @@
 
 [Kubernetes（K8S）](https://www.kubernetes.org.cn/) It is a very powerful container orchestration tool, which can manage large clusters, micro services, distributed applications and so on. It is a very suitable choice in multi node deployment of production environment.
 
-Crawlab also supports kubernetes deployment as a distributed crawler management platform. Kubernetes deployment is suitable for large-scale distributed applications, it can also be practiced if you have several machines, kubernetes will reduce the cost of managing distributed applications.
+Crawlab also supports kubernetes deployment as a distributed spider management platform. Kubernetes deployment is suitable for large-scale distributed applications, it can also be practiced if you have several machines, kubernetes will reduce the cost of managing distributed applications.
 
 If you don't know Kubernetes, you can learn relevant knowledge in the [kubernetes Chinese community introduction course](https://www.kubernetes.org.cn/course); if you already know Docker, you can refer to another good free resource, [advanced from docker to kubernetes](https://www.qikqiak.com/k8s-book/); and also recommend the gold digger's [kubernetes From start to practice](https://juejin.im/book/5b9b2dc86fb9a05d0f16c8ac) learn the knowledge of quick start K8S cluster from the gold digger (paid); if you want to understand the principle of K8S in depth, it is suggested to learn Zhang Lei's [in depth analysis of kubernetes] (https://time.geekbang.org/column/intro/116) in Geek time. Note that due to the rapid development of kubernetes, the K8S version of many tutorials may be old, and some commands will not take effect in the new version. Therefore, to ensure that the commands and configurations you use are the latest version, please refer to the official kubernetes document (https://kubernetes.io/zh/docs/home/).
 
@@ -11,7 +11,7 @@ This section will detail how to build Crawlab multi node application on a Kubern
 **Recommended Users**: 
 
 - Developers who need to implement multi node deployment of Crawlab in production environment
-- Developers who need to deploy large scale crawler applications, such as distributed Crawlers
+- Developers who need to deploy large scale spider applications, such as distributed spiders
 - Developers who know Docker, Kubernetes or want to learn relevant knowledge
 
 **Recommended Configuration**:
@@ -388,4 +388,4 @@ At this time, open the browser and enter 'http://<master_node_ip>:30088' to see 
 
 ### 3. Next step
 
-Please refer to the [crawler section](../Spider/README.md) for details on how to use Crawlab.
+Please refer to the [spider section](../Spider/README.md) for details on how to use Crawlab.

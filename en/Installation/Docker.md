@@ -201,5 +201,5 @@ docker-compose up -d
 
 ### 5. Next step
 
-Please refer to the [crawler section](../Spider/README.md) for details of how to use Crawlab.
+Please refer to the [spider section](../Spider/README.md) for details of how to use Crawlab.
 

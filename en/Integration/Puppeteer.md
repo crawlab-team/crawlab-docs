@@ -2,11 +2,11 @@
 
 ### Call SDK
 
-For integration with Puppeteer, please refer to [integration with node.js crawler](./Nodejs.md). Only the 'crawlab.saveItem' method needs to be called.
+For integration with Puppeteer, please refer to [integration with node.js spider](./Nodejs.md). Only the 'crawlab.saveItem' method needs to be called.
 
 ### Avoid memory leaks
 
-Since Puppeteer uses Chromium to run the crawler, it is likely that the browser will not be closed when the crawler is closed. To solve this problem, we need to use the 'dumb-init' tool to run the crawler. When creating a Puppeteer crawler, enter the following in 'execute command'.
+Since Puppeteer uses Chromium to run the spider, it is likely that the browser will not be closed when the spider is closed. To solve this problem, we need to use the 'dumb-init' tool to run the spider. When creating a Puppeteer spider, enter the following in 'execute command'.
 
 ```bash
 dumb-init -- <command>
@@ -46,4 +46,4 @@ Here is an example of starting the Puppeteer.
 ...
 ```
 
-For specific examples, please refer to [JD mask commodity grabbing Crawler](https://github.com/crawlab-team/crawlab/blob/master/backend/template/spiders/jd_mask/jd_mask_spider.js) on GitHub.
+For specific examples, please refer to [JD mask commodity grabbing spider](https://github.com/crawlab-team/crawlab/blob/master/backend/template/spiders/jd_mask/jd_mask_spider.js) on GitHub.
