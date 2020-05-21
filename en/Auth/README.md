@@ -4,7 +4,6 @@ Crawlab strengthens the support of permission management from version v0.4.9, wh
 
 ### User Role
 
-Crawlab 的权限管理是简易版的 RBAC。简单来说，Crawlab 分为两个角色：`管理用户` 和 `普通用户`。
 Crawlab's permission management is a simple version of RBAC. In short, Crawlab has two roles: 'manage users' and 'ordinary users'.
 
 - **manage users**：You can view and operate the data of all users, including spiders, projects, tasks, etc., and see the user management page;
