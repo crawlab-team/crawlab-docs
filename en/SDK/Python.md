@@ -1,39 +1,39 @@
 # Python SDK
 
-Crawlab 的 Python SDK 主要由 2 部分构成:
+Crawlab's Python SDK is mainly composed of two parts:
 
-1. [CLI 命令行工具](./CLI.md)
-2. [Utility 工具](./Python.md)
+1. [CLI command line tool](./CLI.md)
+2. [Utility tool](./Python.md)
 
-### CLI 命令行工具
+### CLI command line tool
 
-CLI 命令行工具主要是为比较习惯用命令行的开发者设计的，他们可以利用这个命令行工具与 Crawlab 进行交互。
+CLI command line tool is mainly designed for developers who are more accustomed to using command line. They can use this command line tool to interact with Crawlab.
 
-CLI 命令行工具的安装很简单：
+CLI command line tool is simple to install:
 
 ```bash
 pip install crawlab-sdk
 ```
 
-然后，您就可以用 crawlab 这个命令在命令行中与 Crawlab 交互了。
+Then, you can use the command 'crawlab' to interact with Crawlab on the command line.
 
-可以利用下方命令来查找帮助，或者您可以参考 [CLI 章节](./CLI.md)。
+You can use the following command for help, or you can refer to the [cli chapter](./CLI.md).
 
 ```bash
 crawlab --help
 ```
 
-### Utility 工具
+### Utility tool
 
-Utility 工具主要提供一些 `Helper` 方法来让您的爬虫更好的集成到 Crawlab 中，例如保存结果数据到 Crawlab 中等等。
+Utility tool mainly provides some 'helper' methods to integrate your spider into Crawlab better, such as saving the result data to Crawlab and so on.
 
-下面介绍 Scrapy 和一般 Python 爬虫与 Crawlab 集成的方式。
+Here's how Scrapy and general Python spiders integrate with Crawlab.
 
-⚠️注意：请确保您已经通过 pip 安装了 `crawlab-sdk`。
+⚠️Note: make sure you have installed 'crawlab-sdk' by pip.
 
-##### Scrapy 集成
+##### Scrapy integration
 
-在 `settings.py` 中找到 `ITEM_PIPELINES`（`dict` 类型的变量），在其中添加如下内容。
+Find 'ITEM_PIPELINES'(variable of type 'dict') in 'settings.py', and add the following content.
 
 ```python
 ITEM_PIPELINES = {
@@ -41,21 +41,21 @@ ITEM_PIPELINES = {
 }
 ```
 
-然后，启动 Scrapy 爬虫，运行完成之后，您就应该能看到抓取结果出现在 [任务详情-结果](../Task/Results.md) 里。
+Then, start the scratch spider. After it running, you should be able to see the result in [task details - result](../Task/Results.md).
 
-##### 通用 Python 爬虫集成
+##### General Python spider integration
 
-将下列代码加入到您爬虫中的结果保存部分。
+Add the following code to the results save section of your spider.
 
 ```python
-# 引入保存结果方法
+# import the method of saving results
 from crawlab import save_item
 
-# 这是一个结果，需要为 dict 类型
+# This is a result that needs to be of type dict
 result = {'name': 'crawlab'}
 
-# 调用保存结果方法
+# call save result method
 save_item(result)
 ```
 
-然后，启动爬虫，运行完成之后，您就应该能看到抓取结果出现在 [任务详情-结果](../Task/Results.md) 里。
+Then, start the spider. After it running, you should be able to see the result in [task details - result](../Task/Results.md).

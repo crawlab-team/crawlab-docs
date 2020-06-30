@@ -1,9 +1,9 @@
-## 自动安装依赖
+## Auto install dependency
 
-对于 Docker 安装 Crawlab 的开发者来说，每次更新容器（例如 down & up）时候会比较繁琐，因为需要重新安装爬虫的依赖，这对于长期使用 Crawlab 的用户来说，是一个痛点。
+For the developers who install Crawlab in Docker, it's complicated to update the container (such as down down & up) every time, because they need to reinstall the dependency of spiders, which is a pain point for users who use Crawlab for a long time.
 
-为了解决开发者的痛点，Crawlab 开发组开发了自动安装依赖的功能。
+In order to solve the pain point of developers, Crawlab development team developed the function of automatic installation dependency.
 
-为了使用自动安装依赖的功能，用户需要将在爬虫项目中，将 `requirements.txt`（Python）或 `package.json` （Node.js）放在爬虫根目录，并上传到 Crawlab。Crawlab 会自动扫描代码目录，如果存在 `requirements.txt` 或 `package.json`，就会自动执行对应的安装程序，将指定的依赖安装到 Crawlab 节点上。
+In order to use the auto install dependent functions, users need to put 'requirements.txt'(Python) or 'package.json'(Node.js) in the spider project in the spider root directory and upload it to Crawlab. Crawlab will scan the code directory automatically. If 'requirements.txt' or 'package.json' exists, it will automatically execute the corresponding installation program and install the specified dependency on the Crawlab node.
 
-对于经常需要重启 Crawlab 的用户来说，可以将需要的依赖存在依赖配置文件（`requirements.txt` 或 `package.json`）里，每次重启 Crawlab 后，它会自动将对应的依赖安装上。
+For users who often need to restart Crawlab, you can store the required dependencies in the dependency configuration file (‘requirements.txt' or ’package.json'). After restarting Crawlab, it will install the corresponding dependencies automatically.

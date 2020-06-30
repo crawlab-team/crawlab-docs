@@ -1,36 +1,36 @@
-## 整体架构
+## Overall Structure
 
-Crawlab的架构包括了一个主节点（Master Node）和多个工作节点（Worker Node），以及负责通信和数据储存的Redis和MongoDB数据库。
+The architecture of Crawlab includes a master node(Master Node) and multiple worker nodes(Worker Node), as well as Redis and MongoDB databases responsible for communication and data storage.
 
 ![](https://crawlab.oss-cn-hangzhou.aliyuncs.com/v0.3.0/architecture.png)
 
-前端应用向主节点请求数据，主节点通过MongoDB和Redis来执行任务派发调度以及部署，工作节点收到任务之后，开始执行爬虫任务，并将任务结果储存到MongoDB。架构相对于`v0.3.0`之前的Celery版本有所精简，去除了不必要的节点监控模块Flower，节点监控主要由Redis完成。
+The front end application requests data from the master node, which performs task dispatch and deployment through MongoDB and Redis, after receiving the task, the worker node starts to execute the spider task and stores the task results in MongoDB. Compared with the previous version of Celery before 'v0.3.0', the architecture is simplified. Unnecessary node monitoring module Flower is removed, and node monitoring is mainly completed by Redis.
 
-### 主节点
+### Master Node
 
-主节点是整个Crawlab架构的核心，属于Crawlab的中控系统。
+The master node is the core of the whole Crawlab architecture and belongs to the central control system of Crawlab.
 
-主节点主要负责以下功能:
-1. 爬虫任务调度
-2. 工作节点管理和通信
-3. 爬虫部署
-4. 前端以及API服务
-5. 执行任务（可以将主节点当成工作节点）
+The master node is mainly responsible for the following functions:
+1. Spider task scheduling
+2. Work node management and communication
+3. Spider deployment
+4. Front end and API services
+5. Perform tasks (you can treat the master node as a work node)
 
-主节点负责与前端应用进行通信，并通过Redis将爬虫任务派发给工作节点。同时，主节点会同步（部署）爬虫给工作节点，通过Redis和MongoDB的GridFS。
+The master node is responsible for communicating with the front end application and sending the spider task to the work node by Redis. At the same time, the master node synchronizes (deploys) the spider to the work node by Redis and MongoDB's GridFS.
 
-### 工作节点
+### Worker Node
 
-工作节点的主要功能是执行爬虫任务和储存抓取数据与日志，并且通过Redis的`PubSub`跟主节点通信。通过增加工作节点数量，Crawlab可以做到横向扩展，不同的爬虫任务可以分配到不同的节点上执行。
+The main function of the work node is to perform the spider task, store and retrieve data and logs, and communicate with the master node by Redis's 'PubSub'. By increasing the number of work nodes, Crawlab can achieve horizontal expansion and different spider tasks can be assigned to different nodes.
 
 ### MongoDB
 
-MongoDB是Crawlab的运行数据库，储存有节点、爬虫、任务、定时任务等数据，另外GridFS文件储存方式是主节点储存爬虫文件并同步到工作节点的中间媒介。
+MongoDB is the operation database of Crawlab, which stores the data of nodes, spiders, tasks, timing tasks, etc. in addition, the GridFS file storage method is the intermediate medium for the master node to store spider files and synchronize them to the work node.
 
 ### Redis
 
-Redis是非常受欢迎的Key-Value数据库，在Crawlab中主要实现节点间数据通信的功能。例如，节点会将自己信息通过`HSET`储存在Redis的`nodes`哈希列表中，主节点根据哈希列表来判断在线节点。
+Redis is a very popular Key-Value database, which mainly realizes the function of data communication between nodes in Crawlab. For example, a node will store its information in the 'nodes' Hash list of Redis by 'HSET'. The master node will judge the online node according to the Hash list.
 
-### 前端
+### Front End
 
-前端是一个基于[Vue-Element-Admin](https://github.com/PanJiaChen/vue-element-admin)的单页应用。其中重用了很多Element-UI的控件来支持相应的展示。
+The front end is a single page application based on [Vue-Element-Admin](https://github.com/PanJiaChen/vue-element-admin) . Many Element-UI controls are reused to support the corresponding presentation.

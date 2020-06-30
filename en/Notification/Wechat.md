@@ -1,11 +1,11 @@
-## 企业微信机器人
+## Enterprise wechat robot
 
-如果您想启用企业微信机器人消息通知，请确保您已经获取了机器人的 **API Webhook** 以及在 Crawlab 中配置好了 API Webhook。如何获取 API Webhook 请查看 [官方文档](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq/26eaddd5)。官方文档可能有些过于技术，也可以参照这个 [文档](https://zhidao.baidu.com/question/1581170032113203380.html) 来获取。如果还有问题请加微信 tikazyq1 拉群寻求帮助。
+If you want to enable enterprise wechat robot message notification, please ensure that you have obtained the **API Webhook** of the robot and configured the API Webhook in Crawlab. To get API Webhook, please refer to [official document](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq/26eaddd5). The official document may be too technical. You can also refer to this [document](https://zhidao.baidu.com/question/1581170032113203380.html) to learn it. If you have any questions, please add wechat 'tikazyq1' for help.
 
-配置 API Webhook 相对比较简单：在 **设置** 页面中将获取的 API Webhook 复制粘贴到 **微信机器人 Webhook** 字段，并点击保存。请确保您选择 ”钉钉机器人“ 作为消息通知渠道。
+The configuration of API Webhook is relatively easy: copy and paste the obtained API Webhook on the **settings** page to the **wechat robot Webhook** field, and click save button. Please make sure that you select "wechat robot" as the message notification channel.
 
 ![](http://static-docs.crawlab.cn/mysetting.png)
 
-企业微信机器人通知效果如下。
+The notification effect of enterprise wechat robot is as follows.
 
 ![](http://static-docs.crawlab.cn/notification-wechat.jpg)

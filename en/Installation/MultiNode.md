@@ -1,71 +1,71 @@
-## 多节点部署
+## Multi node deployment
 
-很多企业或个人爬虫管理用户都有在多个节点上跑爬虫任务的需求，也就是在分布式节点上管理爬虫。例如一个企业有多台服务器，需要在这些服务器集群上运行、监控、操作他们的爬虫，并集中统一查看和管理，这种应用场景就非常适合天生支持分布式管理的爬虫管理平台 Crawlab。要让各个节点运行的 Crawlab 服务协同工作在同一个网络，**只需要让这些服务连接到 MongoDB 和 Redis 数据库，而不需要暴露自己的 IP 和 端口**。
+Many enterprise or personal spider management users need to run spider tasks on multiple nodes, means manage spiders on distributed nodes. For example, an enterprise has multiple servers, which need to run, monitor and operate their spiders on these server clusters, view and manage them centrally and uniformly. This kind of application scenario is very suitable to use Crawlab, a spider management platform that naturally supports distributed management. In order for the Crawlab services running by each node to work together in the same network, **these services only need to connect to MongoDB and Redis databases, without exposing their own IP and ports **.
 
-下图是一个多节点部署的示意图，展示了 Crawlab 分布式集群是如何工作的。
+The figure below is a schematic diagram of a multi node deployment, showing how the Crawlab distributed cluster works.
 
 ![](http://static-docs.crawlab.cn/multi-node-deployment.png)
 
-每一个 Crawlab 服务（天蓝色大 C 图标）都在一台服务器上，而处于中心位置的 MongoDB 和 Redis 数据库作为它们的通信媒介，连接着主节点（Master）和各个工作节点（Worker）。目前来说主节点只能有一个。这样的一个 Crawlab 分布式节点网络，形成一个多节点的集群，可以让爬虫在任意个节点上运行；运行的数据（例如系统信息）可以通过 Redis 传输回主节点，再呈现给前端界面；主节点也可以通过 Redis 对工作节点 “发号施令”；而 MongoDB 也储存着各个节点的相关信息，供前端界面使用。本小节着重讲 Crawlab 的多节点部署，而不会讲 Crawlab 分布式原理，如果需要了解更多，请参考 [原理章节](../Architecture/README.md)。
+Each Crawlab service (sky blue large C icon) is on a server, and the MongoDB and Redis databases in the center are used as their communication media, connecting the master node and each worker node. Currently, there can only be one master node. Such a Crawlab distributed node network forms a multi node cluster, which enables the spider to run on any node; the running data (such as system information) can be transmitted back to the master node by Redis, then presented to the front end interface; the master node can also "give orders" to the work node by Redis, and MongoDB also stores the relevant information of each node for the front end interface. This section focuses on the multi node deployment of Crawlab, rather than the distributed principle of Crawlab. If you need to know more, please refer to the [principle chapter](../Architecture/README.md).
 
-### 1. 准备工作：部署 MongoDB 和 Redis
+### 1. Preparation: deploy MongoDB and Redis
 
-在生产环境中多节点部署，我们推荐将 MongoDB 和 Redis 分开部署，也就是说数据库将单独成为一个服务，而不与 Crawlab 服务耦合在一起。
+For multi node deployment in the production environment, we recommend that MongoDB and Redis be deployed separately, that is to say, the database will be a single service instead of being coupled with Crawlab service.
 
-在 [快速开始](../QuickStart/README.md) 和 [Docker 部署](./Docker.md) 中，我们都用了 Docker Compose 来启动 Crawlab 和数据库服务。这样其实是将 MongoDB、Redis 跟 Crawlab 服务耦合在了一起。当然这样做也没有太大问题，但生产环境中我们并不推荐。
+In [quick start](../QuickStart/README.md) and [docker deployment](./Docker.md), we use Docker Compose to start Crawlab and database services. In fact, MongoDB, Redis and Crawlab services are coupled together. Of course, this is not a big problem, but we do not recommend it in the production environment.
 
-在启动 MongoDB 和 Redis 过程中，**需要将其端口暴露给其他 Crawlab 节点**。在生产环境中我们强烈推荐设置密码。
+In the process of starting MongoDB and Redis, **you need to expose its ports to other crawlab nodes**. We strongly recommend setting passwords in production environments.
 
-本小节不会具体介绍部署 MongoDB 和 Redis 的步骤，不过我们推荐用 Docker 部署，这样更简单。部署教程请参考下列文档。
+This section will not specifically describe the steps of deploying MongoDB and Redis, but we recommend using Docker for deployment, which is simpler. Please refer to the following documents for the deployment tutorial.
 
-- [MongoDB 官方安装文档](https://docs.mongodb.com/manual/installation)
-- [MongoDB Dockerhub 主页](https://hub.docker.com/_/mongo)
-- [Redis 官方安装文档](https://redis.io/download)
-- [Redis Dockerhub 主页](https://hub.docker.com/_/redis)
+- [MongoDB official installation documents](https://docs.mongodb.com/manual/installation)
+- [MongoDB Dockerhub homepage](https://hub.docker.com/_/mongo)
+- [Redis official installation documents](https://redis.io/download)
+- [Redis Dockerhub homepage](https://hub.docker.com/_/redis)
 
-### 2. 部署主节点
+### 2. Deploy master node
 
-不管您是用 [Docker 部署](./Docker.md)、[直接部署](./Direct.md) 还是 [Kubernetes](./Kubernetes.md)，您都需要首先部署一个主节点。
-
-**Docker**
-
-如何通过直接部署来启动一个 Crawlab 节点请参考 [Docker 部署章节](./Docker.md)。主节点的启动只需要注明一个环境变量，`CRAWLAB_SERVER_MASTER` 为 `Y`。同时，需要在 `environment` 中配置 MongoDB 和 Redis 的连接信息。具体配置请参考 [配置章节](../Config/README.md)。
-
-**直接部署**
-
-如何通过直接部署来启动一个 Crawlab 节点请参考 [直接部署章节](./Direct.md)。要注意的是，在 `./backend/conf/config.yml` 里需要将 `server.master` 对应的值设置为 `Y`。同时，需要在 `mongo.*` 和 `redis.*` 下配置 MongoDB 和 Redis 的连接信息。具体配置请参考 [配置章节](../Config/README.md)。
-
-**Kubernetes**
-
-Kubernetes 的主节点部署请参考 [Kubernetes 部署章节](./Kubernetes.md)。主节点的启动只需要注明一个环境变量，`CRAWLAB_SERVER_MASTER` 为 `Y`。
-
-### 3. 部署工作节点
-
-您需要在另一台或多台服务器上部署工作节点。总的来说不难，但需要注意的是您能在这些服务器上顺利连接到之前部署的 MongoDB 和 Redis（请确保 MongoDB 和 Redis 端口暴露出来）。
+Whether you use [Docker deployment](./Docker.md), [direct deployment](./Direct.md) or [Kubernetes](./Kubernetes.md), you need to deploy a master node first.
 
 **Docker**
 
-如何通过直接部署来启动一个 Crawlab 节点请参考 [Docker 部署章节](./Docker.md)。工作节点的启动只需要注明一个环境变量，`CRAWLAB_SERVER_MASTER` 为 `N`。同时，需要在 `environment` 中配置 MongoDB 和 Redis 的连接信息，请保证您连接的数据库和主节点连接的是同一个数据库。具体配置请参考 [配置章节](../Config/README.md)。
+Please refer to [docker deployment chapter](./Docker.md) for how to start a Crawlab node by direct deployment. Only one environment variable needs to be specified for the starting of the master node, and the 'CRAWLAB_SERVER_MASTER' is 'Y'. At the same time, you need to configure the connection information of MongoDB and Redis in the 'environment'. Please refer to [configuration section](../Config/README.md) for specific configuration.
 
-**直接部署**
+**Direct deployment**
 
-如何通过直接部署来启动一个 Crawlab 节点请参考 [直接部署章节](./Direct.md)。要注意的是，在 `./backend/conf/config.yml` 里需要将 `server.master` 对应的值设置为 `N`。同时，需要在 `mongo.*` 和 `redis.*` 下配置 MongoDB 和 Redis 的连接信息，请保证您连接的数据库和主节点连接的是同一个数据库。具体配置请参考 [配置章节](../Config/README.md)。
+Please refer to the [direct deployment section](./Direct.md) to learn how to start a Crawlab node by direct deployment. Note that 'server.master' should be set to 'Y' in './backend/conf/config.yml'. At the same time, you need to configure the connection information between MongoDB and Redis under 'mongo.*' and 'redis.*'. Please refer to [configuration section](../Config/README.md) for specific configuration.
 
 **Kubernetes**
 
-对于 Kubernetes 来说，部署工作节点非常简单，只需要在 K8S 主节点上运行以下代码。
+For master node deployment of Kubernetes, please refer to [kubernetes deployment chapter](./Kubernetes.md). Only one environment variable needs to be specified for the starting of the master node, and the 'CRAWLAB_SERVER_MASTER' is 'Y'.
+
+### 3. Deploy work node
+
+You need to deploy a work node on another server or servers. In general, it is not difficult, but it should be noted that you can connect to MongoDB and Redis deployed before on these servers (please ensure that MongoDB and Redis ports are exposed).
+
+**Docker**
+
+Please refer to [docker deployment chapter](./Docker.md) for how to start a Crawlab node by direct deployment. Only one environment variable needs to be specified for the starting of the work node, and the 'CRAWLAB_SERVER_MASTER' is 'N'. At the same time, you need to configure the connection information of MongoDB and Redis in the 'environment'. Please ensure that the database you are connected to and the master node are connected to the same database. Please refer to [configuration section](../Config/README.md) for specific configuration.
+
+**Direct deployment**
+
+Please refer to the [direct deployment section](./Direct.md) to learn how to start a Crawlab node by direct deployment. Note that 'server.master' should be set to 'N' in './backend/conf/config.yml'. At the same time, you need to configure the connection information between MongoDB and Redis under 'mongo.*' and 'redis.*'. Please ensure that the database you are connected to and the master node are connected to the same database. Please refer to [configuration section](../Config/README.md) for specific configuration.
+
+**Kubernetes**
+
+For Kubernetes, deploying the worker node is very simple, and you only need to run the following code on the K8S master node.
 
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/crawlab-team/crawlab/master/k8s/crawlab-worker.yaml
 ```
 
-如果您想定制化一部分部署信息，例如设置工作节点的个数（Replicas），您可以将 `yaml` 文件下载下来，存为 `crawlab-worker.yaml`，并加以修改，然后运行 `kubectl apply -f crawlab-worker.yaml`。具体内容请参考 [Kubernetes 部署章节](./Kubernetes.md)。
+If you want to customize some deployment information, such as setting the number of work nodes (replicas), you can download the 'yaml' file, save it as 'crawlab-worker.yaml' and modify it, and then run 'kubectl apply -f crawlab-worker.yaml'. Please refer to [kubernetes deployment chapter](./Kubernetes.md) for details.
 
-### 4. 节点心跳信息
+### 4. Node heartbeat information
 
-每个节点都会在 Redis 中储存心跳信息来保持在线状态。
+Each node stores heartbeat information in Redis to keep online.
 
-如何知道节点已经启动了呢？一个办法是在 Crawlab 界面的节点页面上查看，另一个更为准确的办法是在 Redis 中查看。方法是执行 `HKEYS nodes` 命令。然后根据列出来的 `key`，执行 `HGET nodes <key>` 来查看心跳信息。心跳信息类似如下内容：
+How to know that the node has started? One way is to view it on the node page of Crawlab interface, and the other is to view it in Redis. The method is to execute the 'HKEYS nodes' command. Then according to the listed 'key', execute 'HGET nodes <key>' to view the heartbeat information. The heartbeat information is similar to the following:
 
 ```json
 {
@@ -79,17 +79,16 @@ kubectl apply -f https://raw.githubusercontent.com/crawlab-team/crawlab/master/k
 }
 ```
 
-这里是用了 `hostname` 作为节点 `key`，也就是唯一识别符，当然也可以指定 `mac` 或 `ip` 来作为唯一识别符。
+Here we use 'hostname' as the node 'key', that is the only identifier. Of course, we can also specify 'mac' or 'ip' as the only identifier.
 
-⚠️注意：在 Docker 多节点部署中，我们不推荐使用 `mac`，因为这可能不是唯一的；相反我们更推荐使用 `ip` 或 `hostname`。在 Kubernetes 部署中，推荐使用 `hostname` 来作为唯一识别符。
+⚠️Note: in Docker multi node deployment, we do not recommend using 'mac', because this may not be the only one; instead, we recommend using 'ip' or 'hostname'. In the Kubernetes deployment, it is recommended to use 'hostname' as the unique flag.
 
-我们可以注意一下 `update_ts` 和 `update_ts_unix` 这两个字段，它们表示心跳信息更新的时间。如果这个时间与当前时间差距 60 秒以上，则表示该节点已经处于离线状态；反之，如果差距 60 秒以内，则是在线状态。
+We can pay attention to the two fields 'update_ts' and 'update_ts_unix'. They represent the time when the heartbeat information is updated. If the time difference is more than 60 seconds from the current time, it means that the node is offline; otherwise, if the time difference is less than 60 seconds, it is online.
 
-### 5. 其他问题
+### 5. Other questions
 
-**5.1 时间漂移问题**
+**5.1 Time drift problem**
 
-有时候您可能会发现工作节点启动一段时间之后就异常退出了。而您检查了数据库配置以及主节点是否已启动，均未发现异常。这时，有很大可能是因为工作节点与主节点的时间不同步导致的。这时您需要根据节点心跳信息的 `update_ts_unix` 来查看工作节点的时间戳与主节点的时间戳是否一致（相差 60 秒以内）。
+Sometimes you may find that the work node exits abnormally after a period of time. However, you have checked the database configuration and whether the master node has been started, and no exception has been found. At this time, it is likely that the time between the work node and the master node is not synchronized. At this time, you need to check whether the timestamp of the work node is consistent with that of the master node according to the 'update_ts_unix' of the node's heartbeat information (within 60 seconds).
 
-如果有较大差异，这属于**时间漂移问题**。这时您需要对每一台服务器做时间同步。可以利用 `ntp` 这个模块来解决时间同步的问题。请到 [ntp 官网](http://www.ntp.org.cn/) 或其他网上资料来安装、配置 `ntp`。
-
+If there is a big difference, it belongs to ** time drift problem **. At this time, you need to do time synchronization for each server. You can use the 'ntp' module to solve the problem of time synchronization. Please go to [NTP official website](http://www.ntp.org.cn/) or other online materials to install and configure 'ntp'.

@@ -1,53 +1,54 @@
-## 任务日志
+## Task log
 
-Crawlab 会收集爬虫任务的运行日志，方便用户调试和监控爬虫程序。查看日志所在位置为 `任务详情` > `日志` 标签。
+Crawlab collects the running log of the spider task, which is convenient for users to debug and monitor the spider program. View the location of the log as task 'details' > 'log' label.
 
 ![](http://static-docs.crawlab.cn/task-log2.png)
 
-Crawlab 是通过 `Stdout` 标准输出流来捕获日志的，因此如果希望在 Crawlab 的界面中看到日志，就需要让日志内容输出到 `Stdout` 中。最简单的做法就是打印出来，例如 Python 的 `print` 和 Node.js 的 `console.log`。
+Crawlab captures logs through the 'Stdout' standard output stream. Therefore, if you want to see logs in the Crawlab interface, you need to output the log content to 'Stdout'. The simplest way is to print it out, such as Python's 'print' and 'console.log' of Node.js.
 
-### 日志搜索
+### Log search
 
-在 “搜索日志” 输入框中可以搜索任何相关的日志行。这里可以是正则表达式。
+You can search for any related log lines in the 'search log' input box. This can be a regular expression.
 
-⚠️注意：日志搜索用的是正则匹配，因此在性能上会有所降低，如果日志量较大，需要耐心等待。
+⚠️Note: log search uses regular matching, so the performance will be reduced. If the log volume is large, you need to wait patiently.
 
-### 异常检测
+### Anomaly detection
 
-Crawlab 内置了日志异常检测，原理是通过正则表达式来完成的。默认会用 `error`、`exception`、`traceback` 来匹配日志内容判断该日志文本是否为错误日志。
+Crawlab has built-in log exception detection, which is based on regular expression. By default, 'error', 'exception', 'traceback' will be used to match the log content to determine whether the log text is an error log.
 
-如果 Crawlab 发现有错误日志，会在任务列表和任务详情中展示出来，如下图。
+If Crawlab finds an error log, it will be displayed in the task list and task details, as shown below.
+
 
 ![](http://static-docs.crawlab.cn/task-log-list.png)
 
 ![](http://static-docs.crawlab.cn/task-log-detail.png)
 
-在 “日志” 标签中，如果有日志日常，Crawlab 将展示一个 “错误数” 的按钮，点击它可以看到全部或一部分标红的错误日志，点击这些错误日志将会导航到该错误日志所在位置。
+In the 'log' tab, if there is a log exception, crawlab will display a 'error number' button, click it to see all or part of the red error logs, and click these error logs to navigate to the location of the error logs.
 
-### 自动滚动
+### Auto scroll
 
-启用 “自动滚动” 按钮可以让日志翻到最底部，并在日志更新时自动翻到最底部。
+Turn on the 'auto scroll' button to turn the log to the bottom, and it will turn to the bottom automatically when the log is updated.
 
-### 日志设置
+### Log setting
 
-我们可以对日志的设置进行更改，包括异常的正则表达式、最大异常日志展示、日志过期时间。设置界面在 ”设置“ -> “日志“ 中，如下图。每一个用户可以有不同的日志设置。
+We can change the log settings, including exception regular expression, maximum exception log display, and log expiration time. The setting interface is in 'settings' - > 'log', as shown below. Each user can have different log settings.
 
 ![](http://static-docs.crawlab.cn/log-setting.png)
 
-下面解释一下日志设置各配置项的意义：
+The following explains the meaning of log settings:
 
-- **异常正则表达式**：这是判断异常日志文本的方式，如果该正则表达式能匹配上日志文本行，则该行为错误或异常日志；
-- **最大异常日志展示**：在日志详情中，“错误数” 的最大展示行数，默认为 1000；
-- **日志过期时间**：日志在多少时间之后被自动删除，默认不删除，**但强烈建议设置一个过期时间以防止日志撑满数据库**。
+- **Exception regular expression**：This is the way to judge the exception log text. If the regular expression can match the log text line, the behavior is wrong or the log exception;
+- **Maximum exception log display**：In the log details, the maximum number of display lines of 'error number' is 1000 by default;
+- **Log expiration time**：After how long is the log deleted automatically, it will not be deleted by default, **but it is strongly recommended to set an expiration time to prevent the log from exceeding the database memory**.
 
-### 原理
+### Principle
 
-Crawlab 的日志和异常日志是分别储存在 MongoDB 数据库的 `logs` 和 `error_logs` collection 中的。对于大数据量的日志来说，数据库很容易撑满，因此我们**强烈推荐设置一个过期时间**。
+Crawlab logs and exception logs are stored in the 'logs' and 'error_logs' collection of 'MongoDB' database. For logs with large amount of data, the database is easy to be full, so we **strongly recommend setting an expiration time**.
 
-`logs` 的索引有三个：
+There are 3 'indexes' for logs:
 
-- `task_id` 和 `seq` 组合索引，方便分页查询（未带搜索条件），查询开销小；
-- `task_id` 和 `msg` 组合索引，方便搜索查询，查询开销较大；
-- `expire_ts` TTL 索引，方便自动删除日志。
+- 'task_id' combination of 'seq' is convenient for paging query (without search criteria), and the query cost is small;
+- 'task_id' combination of 'msg' is convenient for search and query, and the cost of query is large;
+- 'expire_ts' TTL index, easy to delete logs automatically.
 
-其中， `task_id` 为任务 ID，`seq` 为日志的序号，`msg` 为日志内容，`expire_ts` 为过期时间。
+Among them, 'task_id' is the task ID, 'seq' is the log sequence number, 'msg' is the log content, 'expire_ts' is the expiration date.

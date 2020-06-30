@@ -1,22 +1,22 @@
-## 爬虫部署
+## Spider Deployment
 
-之前已经在[部署爬虫](../Spider/Deploy.md)中介绍了，爬虫是自动部署在工作节点上的。下面的示意图展示了Crawlab爬虫部署的架构。
+As previously described in chapter [deploy spider](../Spider/Deploy.md)(../Spider/Deploy.md), the spider is deployed on the work node automatically. The following diagram shows the architecture of crawlab spider deployment.
 
 ![](https://crawlab.oss-cn-hangzhou.aliyuncs.com/v0.3.0/node-deployment.png)
 
-如上图所示，整个爬虫自动部署的生命周期如下(源码在`services/spider.go#InitSpiderService`)：
+As shown in the figure above, the life cycle of the whole automatic deployment of spiders is as follows (the source code is in 'services/spider.go#InitSpiderService'):
 
-1. 主节点每5秒，会从爬虫的目录获取爬虫信息，然后更新到数据库（这个过程不涉及文件上传）；
-2. 主节点每60秒,从数据库获取所有的爬虫信息，然后将爬虫打包成zip文件，并上传到MongoDB GridFS，并且在MongoDB的`spiders`表里写入`file_id`文件ID；
-3. 主节点通过Redis `PubSub`发布消息（`file.upload`事件，包含文件ID）给工作节点，通知工作节点获取爬虫文件；
-4. 工作节点接收到获取爬虫文件的消息，从MongoDB GridFS获取zip文件，并解压储存在本地。
+1. The master node will get the spider information from the spider directory every 5 seconds, and then update it to the database (this process does not involve file upload);
+2. The master node obtains all the spider information from the database every 60 seconds, then packages the spider into a zip file and uploads it to MongoDB GridFS, and writes the file ID to the 'file_id' field in the 'spiders' table of MongoDB;
+3. The master node publishes a message ('file.upload' event, including file ID) to the work node by Redis's 'PubSub', and informs the work node to obtain the spider file;
+4. The work node receives the message to get the spider file, obtains the zip file from MongoDB GridFS, decompresses it and stores it locally.
 
-这样，所有爬虫将被周期性的部署在工作节点上。
+All spiders will be deployed on the work node periodically in this way.
 
 ### MongoDB GridFS
 
-GridFS是MongoDB储存大文件（大于16Mb）的文件系统。Crawlab利用GridFS作为了爬虫文件储存的中间媒介，可以让工作节点主动去获取并部署在本地。这样绕开了其他传统传输方式，例如RPC、消息队列、HTTP，因为这几种都要求更复杂也更麻烦的配置和处理。
+GridFS is the file system where MongoDB stores large files (more than 16MB). Crawlab uses GridFS as an intermediate medium for spider file storage, which enables the work node to acquire actively and deploy locally. This bypasses other traditional transport methods, such as RPC, message queue, HTTP, which require more complex and cumbersome configuration and processing.
 
-Crawlab在GridFS上储存文件，会生成两个collection，`files.files`和`files.fs`。前者储存文件的元信息，后者储存文件内容。`spiders`里的`file_id`是指向`files.files`的`_id`。
+Crawlab saves files on GridFS and generates two collections, they are 'files.files' and 'files.fs', the former stores the meta information of documents and the latter stores the contents of documents, the 'file_id' in spiders refers to the '_id' of 'files.files'.
 
-参考: https://docs.mongodb.com/manual/core/gridfs/
+Reference resources: https://docs.mongodb.com/manual/core/gridfs/

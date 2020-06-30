@@ -1,42 +1,42 @@
-## CLI 命令行工具
+## CLI command line tool
 
-CLI 命令行工具是一个非常实用的 CLI 程序，是 [Crawlab SDK](https://github.com/crawlab-team/crawlab-sdk) 项目的一部分。CLI 命令行工具旨在帮助 Crawlab 用户更方便的上传爬虫、运行任务、查看数据等。
+CLI command line tool is a very practical CLI program, which is part of the [crawlab SDK](https://github.com/crawlab-team/crawlab-sdk) project. CLI command line tool is designed to help Crawlab users more easily upload spiders, run tasks, view data, etc.
 
-⚠️注意：CLI 命令行工具还在快速的迭代当中，请持续关注 [Github 仓库](https://github.com/crawlab-team/crawlab-sdk) 或该文档来更新相关信息。
+⚠️Note: CLI command line tool is still in rapid iteration, please keep an eye on [GitHub repository](https://github.com/crawlab-team/crawlab-sdk) or the document to update the information.
 
-### 安装 CLI 命令行工具
+### Installing CLI command line tool
 
-安装 CLI 命令行工具非常简单，执行以下命令就可以了。
+Installing the CLI command line tool is very simple, just execute the following command.
 
-⚠️注意：您需要确保您用的 Python 版本是 3.6 以上，否则将可能会在使用中出现错误。
+⚠️Note: you need to make sure that you are using Python version 3.6 or above, otherwise you may get errors in use.
 
 ```bash
 pip install crawlab-sdk
 ```
 
-### 登录获取 Token
+### Log in to get Token
 
-在使用 CLI 命令行工具之前，我们必须配置登录信息，已确保本地保存从服务端请求回来的 `token`，作为后续请求的验证令牌。
+Before using the CLI command line tool, we must configure the login information to ensure that the 'token' requested from the server is saved locally as the verification token for subsequent requests.
 
 ```bash
-# 登录并输入参数
+# Log in and enter parameters
 crawlab login -u <username> -a <api_address>
 
-# 例子
+# example
 crawlab login -u admin -a http://localhost:8080/api
 ```
 
-然后输入登录密码。
+Then enter the login password.
 
-如果登录成功，CLI 会将用户名、密码、API 地址和获取到的 Token 保存在本地，供后面使用。
+If the login is successful, the CLI will save the user name, password, API address and the acquired token locally for later use.
 
-⚠️注意：这里的 `<api_address>` 是后端 API 的地址。如果您是用的 Docker 镜像，只需要在 Web 界面 URL 后加一个 `/api` 后缀就可以了。例如，如果您访问 Web 的地址是 `http://localhost:8080`，您的 `<api_url>` 就是 `http://localhost:8080/api`。
+⚠️Note: the '<api_address>' here is the address of the back end API. If you are using the docker image, you only need to add a suffix '/api' after the web interface URL. For example, if your web access address is 'http://localhost:8080', your '<api_url>' is 'http://localhost:8080/api'.
 
-### 上传爬虫
+### Upload spider
 
-在 Crawlab 中通过 Web 界面上传爬虫是一件比较麻烦的事情，需要将爬虫文件打包成 zip 文件，然后上传到 Crawlab。而通过 CLI 命令行工具，则可以一行命令将爬虫文件上传上去。
+It is a troublesome thing to upload a spider through the web interface in Crawlab. You need to package the spider file into a zip file and then upload it to Crawlab. With the CLI command line tool, you can upload the spider file with one line of command.
 
-操作命令如下。
+The operation command is as follows.
 
 ```bash
 # 简单操作
@@ -44,50 +44,50 @@ cd /path/to/spider
 crawlab upload
 ```
 
-上面这个操作，先定位到爬虫目录，然后通过 `crawlab upload` 命令将当前文件夹上传到 Crawlab，爬虫名称默认为目录名称。
+For the above operation, first navigate to the spider directory, and then upload the current folder to Crawlab by the command 'crawlab upload'. The spider name defaults to the directory name.
 
-⚠️注意：如果不传参数，CLI 会将当前整个目录打包成 zip 文件并上传的，不是很安全，因此并不推荐此做法。
+⚠️Note: if you do not pass parameters, CLI will package the current entire directory into a zip file and upload it, which is not very secure, so it is not recommended.
 
-当然，如果您想进行更复杂的上传爬虫操作，可以采用下面的命令。
+Of course, if you want to do more complex upload spider operations, you can use the following command.
 
 ```bash
-# 上传指定目录并附带爬虫名称、显示名称、结果集等信息
+# Upload the specified directory with spider name, display name, result set and other information
 crawlab upload \
-    -d /path/to/spider \ # 爬虫目录
-    -n <spider_name> \ # 爬虫名称
-    -N <display_name> \ # 显示名称
-    -m <execute_command> \ # 执行命令
-    -c <result_collection> # 结果集
+    -d /path/to/spider \ # spider name
+    -n <spider_name> \ # spider name
+    -N <display_name> \ # display name
+    -m <execute_command> \ # execute command
+    -c <result_collection> # result set
 ```
 
-如果您想针对某一个爬虫 ID 上传爬虫，只需要指定 `-i` 这个命令，将爬虫 ID 传入就可以了，CLI 将上传爬虫并覆盖其爬虫文件。
+If you want to upload a spider for a certain spider ID, you only need to specify the '-i' command to pass in the spider ID. CLI will upload the spider and overwrite its spider file.
 
-具体的爬虫上传 CLI 帮助，请查看 `crawlab upload --help`。
+For specific help on spider upload CLI, please check 'crawlab upload --help'.
 
-### 查看节点列表
+### View node list
 
 ```bash
 crawlab nodes
 ```
 
-### 查看爬虫列表
+### View spider list
 
 ```bash
 crawlab spiders
 ```
 
-### 查看任务列表
+### View task list
 
 ```bash
 crawlab tasks
 ```
 
-### 查看定时任务列表
+### View periodical task list
 
 ```bash
 crawlab schedules
 ```
 
-### 其他功能
+### Other functions
 
-其他功能例如“运行任务”、“添加定时任务“、”查看任务日志“等，都还没有来得及实现。如需要这些功能，请加作者微信 tikazyq1 拉交流群关注后续开发。
+Other functions such as 'run task', 'add periodical task' and 'view task log' have not been implemented yet. If you need these functions, please add the author's wechat 'tikazyq1' and then add the communication group to follow up the development.

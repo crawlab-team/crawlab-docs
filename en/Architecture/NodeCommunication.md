@@ -1,48 +1,48 @@
-## 节点通信
+## Node Communication
 
-⚠️注意：基于 PubSub 的节点通信即将被改为更利于开发和维护的 RPC 通信。
+⚠️Note: PubSub based node communication will be changed to RPC communication which is more convenient for development and maintenance.
 
-这里的通信主要是指节点间的即时通信，即没有显著的延迟（[爬虫部署](./SpiderDeployment.md)和[任务执行](./TaskExecution.md)是通过轮训来完成的，不在此列）。
+The communication here mainly refers to the instant communication between nodes, means there is no significant delay ([spider deployment](./SpiderDeployment.md) and [task execution](./TaskExecution.md) are completed through rotation training, so they are not in this column).
 
-通信主要由Redis来完成。以下为节点通信原理示意图。
+Communication is mainly completed by Redis. The following is the schematic diagram of node communication.
 
 ![](http://static-docs.crawlab.cn/node-communication.png)
 
-各个节点会通过Redis的`PubSub`功能来做相互通信。
+Each node will communicate through Redis's 'PubSub' function.
 
-所谓`PubSub`，简单来说是一个发布订阅模式。订阅者（Subscriber）会在Redis上订阅（Subscribe）一个通道，其他任何一个节点都可以作为发布者（Publisher）在该通道上发布（Publish）消息。
+'PubSub' is a publish/subscribe mode simply. The Subscriber will subscribe to a channel on Redis, and any other node can publish messages on the channel as Publisher.
 
-在Crawlab中，主节点会订阅`nodes:master`通道，其他节点如果需要向主节点发送消息，只需要向`nodes:master`发布消息就可以了。同理，各工作节点会各自订阅一个属于自己的通道`nodes:<node_id>`（`node_id`是MongoDB里的节点ID，是MongoDB ObjectId），如果需要给工作节点发送消息，只需要发布消息到该通道就可以了。
+In Crawlab, the master node subscribes to the 'nodes:master' channel, if other nodes need to send messages to the master node, they only need to publish messages to the 'nodes:master'. In the same way, each work node will subscribe to its own channel, 'nodes:<node_id>' ('node_id' is the node ID in MongoDB, which is MongoDB ObjectId). If you need to send messages to the work node, you only need to publish messages to this channel.
 
-一个网络请求的简单过程如下:
-1. 客户端（前端应用）发送请求给主节点（API）；
-2. 主节点通过Redis `PubSub`的`<nodes:<node_id>`通道发布消息给相应的工作节点；
-3. 工作节点收到消息之后，执行一些操作，并将相应的消息通过`<nodes:master>`通道发布给主节点；
-4. 主节点收到消息之后，将消息返回给客户端。
+The simple process of a network request is as follows:
+1. The client(front end application) sends the request to the master node(API);
+2. The master node publishes messages to the corresponding work nodes through the 'PubSub' '<nodes:<node_id>' channel of Redis;
+3. After receiving the message, the work node performs some operations and publishes the corresponding message to the master node through the channel '<nodes:master>';
+4. The master node receives the message and returns it to the client.
 
-不是所有节点通信都是双向的，也就是说，主节点只会单方面对工作节点通信，工作节点并不会返回响应给主节点，所谓的单向通信。以下是Crawlab的通信类型。
+Not all node communications are bidirectional, that is to say, the master node will only communicate with the work node unilaterally, and the work node will not return a response to the master node, which is called one-way communication. The following are the communication types of Crawlab.
 
-操作名称 | 通信类别
+Operation name | Communication category
 --- | ---
-获取日志 | 双向通信
-获取系统信息 | 双向通信
-取消任务 | 单向通信
-通知工作节点向GridFS获取爬虫文件 | 单向通信
+Get log | Bidirectional communication
+Get system information | Bidirectional communication
+Cancel task | Unidirectional communication
+Notify the work node to get the spider file from GridFS | Unidirectional communication
 
-### `chan`和`goroutine`
+### 'chan' and 'goroutine'
 
-如果您在阅读Crawlab源码，会发现节点通信中有大量的`chan`语法，这是Golang的一个并发特性。
+If you are reading the Crawlab source code, you will find that there are a lot of 'chan' syntax in node communication, which is a concurrent feature of Golang.
 
-`chan`表示为一个通道，在Golang中分为无缓冲和有缓冲的通道，我们用了无缓冲通道来阻塞协程，只有当`chan`接收到信号（`chan <- "some signal"`），该阻塞才会释放，协程进行下一步操作）。在请求响应模式中，如果为双向通信，主节点收到请求后会起生成一个无缓冲通道来阻塞该请求，当收到来自工作节点的消息后，向该无缓冲通道赋值，阻塞释放，返回响应给客户端。
+'chan' is a channel, which is divided into unbuffered and buffered channels in Golang. We use unbuffered channels to block the cooperation process. Only when 'chan' receives a signal ('chan <- "some signal"'), the block will be released, and the cooperation will proceed to the next step. If it is bidirectional communication in the request response mode , the master node will generate an unbuffered channel to block the request after receiving the request. After receiving the message from the work node, assign a value to the unbuffered channel and release the block, then return the response to the client.
 
-`go`命令会起一个`goroutine`（协程）来完成并发，配合`chan`，该协程可以利用无缓冲通道挂起，等待信号执行接下来的操作。任务取消就是`go`+`chan`来实现的。有兴趣的读者可以参考一下[源码](https://github.com/tikazyq/crawlab/blob/master/backend/services/task.go#L136)。
+The 'go' command will open a 'goroutine'(association) to complete the concurrency. With 'chan', the association can suspend using the unbuffered channel and wait for the signal to perform the next operation. Task cancellation is realized by 'go' + 'chan'. Interested readers can refer to [source code](https://github.com/tikazyq/crawlab/blob/master/backend/services/task.go#L136).
 
-### Redis PubSub
+### Redis's PubSub
 
-这是Redis版发布／订阅消息模式的一种实现。其用法非常简单：
-1. 订阅者利用`SUBSCRIBE channel1 channel2 ...`来订阅一个或多个频道；
-2. 发布者利用`PUBLISH channelx message`来发布消息给该频道的订阅者。
+This is an implementation of the publish/subscribe message mode of Redis. Its usage is very simple:
+1. Subscribers use 'SUBSCRIBE channel1 channel2 ...' to subscribe to one or more channels;
+2. Publishers use 'PUBLISH channelx message' to publish messages to subscribers of the channel.
 
-Redis的`PubSub`可以用作广播模式，即一个发布者对应多个订阅者。而在Crawlab中，我们只有一个订阅者对应一个发布者的情况（主节点->工作节点：`nodes:<node_id>`）或一个订阅者对应多个发布者的情况（工作节点->主节点：`nodes:master>`）。这是为了方便双向通信。
+Redis's 'PubSub' can be used as a broadcast mode, that is one publisher corresponds to multiple subscribers. In Crawlab, we only have one subscriber corresponding to one publisher (master node - > work node: 'nodes:<node_id>') or one subscriber corresponding to multiple publishers (work node - > master node: 'nodes:<master>'). This is to facilitate bidirectional communication.
 
-参考：https://redis.io/topics/pubsub
+Reference resources：https://redis.io/topics/pubsub

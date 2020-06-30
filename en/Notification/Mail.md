@@ -1,8 +1,8 @@
-## 邮件通知
+## Email notification
 
-如果您想启用邮件通知，您需要做如下环境变量配置（假设您是 Docker 部署）。具体配置请参考 [配置章节](../Config/README.md)。
+If you want to enable mail notification, you need to do the following environment variable configuration (assuming you use Docker to deploy the environment), please refer to [configuration section](../Config/README.md) for specific configuration.
 
-环境变量名 | 环境变量值 | 例子
+environment variable name | environment variable value | example
 --- | --- | ---
 CRAWLAB_NOTIFICATION_MAIL_SERVER | <smtp_server> | smtp.exmail.qq.com
 CRAWLAB_NOTIFICATION_MAIL_PORT | <smtp_port> | 465
@@ -11,8 +11,8 @@ CRAWLAB_NOTIFICATION_MAIL_SENDERIDENTITY | <sender_identity> | admin@example.com
 CRAWLAB_NOTIFICATION_MAIL_SMTP_USER | <smtp_username> | iamawesome
 CRAWLAB_NOTIFICATION_MAIL_SMTP_PASSWORD | <smtp_password> | onlyyouknonw
 
-接下来，请确保您在 **设置** 页面中选择了 “邮件” 作为通知渠道，并且在 **邮件** 字段填写好您的目标邮件地址，然后点击“保存”按钮。
+Next, make sure you select "mail" as the notification channel in the **settings** page, fill in your target email address in the **email** field, and then click the "save" button.
 
-邮件消息通知的效果如下。
+The effect of mail message notification is as follows.
 
 ![](http://static-docs.crawlab.cn/notification-mail.jpeg)

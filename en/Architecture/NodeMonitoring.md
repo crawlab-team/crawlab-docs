@@ -1,9 +1,9 @@
-## 节点监控
+## Node Monitoring
 
-Crawlab的节点监控是通过Redis来完成的。原理如下图。
+The node monitoring of Crawlab is completed by Redis. The schematic diagram is shown below.
 
 ![](https://crawlab.oss-cn-hangzhou.aliyuncs.com/v0.3.0/node-monitoring.png)
 
-工作节点会不断更新心跳信息在Redis上，利用`HSET nodes <node_id> <msg>`，心跳信息`<msg>`包含节点MAC地址，IP地址，当前时间戳，
+The work node will update the heartbeat information in Redis continuously. Using 'HSET nodes <node_id> <msg>', the heartbeat information '<msg>' includes the MAC address, IP address and current timestamp of the node.
 
-主节点会周期性获取Redis上的工作节点心跳信息。如果有工作节点的时间戳在60秒之前，则考虑该节点为离线状态，会在Redis中删除该节点的信息，并在MongoDB中设置为"离线"；如果时间戳在过去60秒之内，则保留该节点信息，在MongoDB中设置为"在线"。
+The master node periodically obtains the heartbeat information of the work node in redis. If there is a work node whose time stamp is 60 seconds ago, the node is considered to be offline, the information of the node will be deleted in redis, and it will be set to "offline" in mongodb; if the time stamp is within the past 60 seconds, the information of the node will be retained, and it will be set to "online" in mongodb.

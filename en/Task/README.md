@@ -1,9 +1,9 @@
-## 任务
+## Task
 
-任务其实就是指某一次抓取任务或采集任务。任务与爬虫关联，其执行的也是爬虫指定的执行命令或采集规则。抓取或采集的结果与任务关联，因此可以查看到每一次任务的结果集。Crawlab的任务是整个采集流程的核心，抓取的过程都是跟任务关联起来的，因此任务对于Crawlab来说非常重要。任务被`主节点`触发，`工作节点`通过任务队列接收任务，然后在其所在节点上执行任务。
+A task is actually a grab task or a collection task. A task is associated with a spider, which also performs the execution command or collection rule specified by the spider. The captured or collected results are associated with the task, so you can view the result set of each task. The task of Crawlab is the core of the whole collection process, and the process of grabbing is related to the task, so the task is very important for Crawlab. The task is triggered by the "master node", and the "work node" receives the task through the task queue, and then executes the task on the node where it is located.
 
-本小节将介绍以下内容：
-1. [运行任务](./Run.md)
-2. [任务日志](./Log.md)
-3. [任务结果](./Results.md)
-4. [操作任务](./Action.md)
+This section describes the following:
+1. [Run task](./Run.md)
+2. [Task log](./Log.md)
+3. [Task results](./Results.md)
+4. [Task operation](./Action.md)

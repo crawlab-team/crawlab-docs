@@ -1,14 +1,14 @@
-## 在线文件编辑
+## Online file editing
 
-Crawlab 在线文件编辑能够让用户在 Web 界面上对爬虫文件进行创建、编辑、重命名、删除等操作，并且支持语法高亮和树状文件目录导航的功能。
+Crawlab online file editing enables users to create, edit, rename, delete spider files on the web interface, and supports syntax highlighting and tree file directory navigation.
 
 ![](http://static-docs.crawlab.cn/file-edit.png)
 
-常用操作如下：
+Common operations are as follows:
 
-1. **新建文件或目录**：在左侧导航栏的某一个文件或目录上点击右键，选择“文件”或“目录”，输入新文件或目录的名称，点击确认；
-2. **保存文件**：点击绿色的保存按钮。
-3. **重命名**：点击橘色的“重命名”按钮，输入新名称，点击确认；
-4. **删除**：点击红色的“删除”按钮，点击“确认”。
+1. **Create file or directory**: right click a file or directory in the left navigation bar, select 'file' or 'directory', enter the name of the new file or directory, and click 'confirm' button;
+2. **Save file**: click the green save button.
+3. **Rename**: click the orange 'rename' button, enter a new name, and click 'confirm' button;
+4. **Delete**: click the red 'delete' button and then click 'confirm' button.
 
-⚠️注意：操作文件（例如保存、新建）之后，请等一段时间，这样您的更改才能生效，这是因为需要让节点同步爬虫（1 分钟以内）。
+⚠️Note: after operating on files (such as saving and creating), please wait a while for your changes to take effect, because nodes need to synchronize spiders (within 1 minute).

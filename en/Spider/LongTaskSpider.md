@@ -1,7 +1,7 @@
-## 长任务爬虫
+## Long task spider
 
-长任务爬虫（Long-Task Spiders）是一种特殊的 [自定义爬虫](./CustomizedSpider.md)，这种爬虫跑任务不会停止，一般会一直获取消息队列中的 URL 并抓取，只有当用户主动停止或遇到错误时才会停止运行。长任务爬虫通常是分布式运行的，为的是有效的利用网络带宽资源和其他计算资源，将分布式节点的效率利用到极致。典型的例子就是基于 Scrapy 的分布式爬虫 [scrapy-redis](https://github.com/rmax/scrapy-redis)。
+Long task Spiders are a special kind of [custom spiders](./CustomizedSpider.md), this kind of spider run task will not stop. Generally, it will always get the URL in the message queue and grab it. It will stop running only when the user actively stops or encounters an error. Long task spiders are usually distributed, in order to effectively use network bandwidth resources and other computing resources, and make the most of the efficiency of distributed nodes. A typical example is a distributed spider based on Scrapy[scrapy-redis](https://github.com/rmax/scrapy-redis)。
 
-要启用长任务爬虫，只需要在 **创建爬虫** 或 **爬虫详情** 中打开 “是否为长任务开关” 就可以了。
+To enable long task spiders, just turn on the "long task switch" in **create spider** or **spider details**.
 
-您可以在 **爬虫列表** 中选择 “长任务” 来过滤所有长任务爬虫。
+You can select "long task" in **spider list** to filter all long task spiders.

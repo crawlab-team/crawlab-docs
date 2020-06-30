@@ -1,21 +1,21 @@
-## 查看任务
+## View tasks
 
-### 任务列表
+### task list
 
-点击`侧边栏`的`任务`导航至`任务列表`。可以看到最近的10个生成的任务。可以根据`节点`、`爬虫`来过滤任务。
+Click 'task' in the 'sidebar' to navigate to 'task list'. You can see the last 10 generated tasks. Tasks can be filtered according to 'nodes' and 'spiders'.
 
 ![](https://crawlab.oss-cn-hangzhou.aliyuncs.com/gitbook/task-list.png)
 
-点击`操作`列的`查看`按钮，进入到该任务的`任务详情`。
+Click the 'view' button in the 'operation' column to enter the 'task details' of the task.
 
-### 任务日志
+### Task log
 
-点击`日志`标签，可以查看任务日志。
+Click the 'log' tab to view the task log.
 
 ![](https://crawlab.oss-cn-hangzhou.aliyuncs.com/gitbook/task-detail-log.png)
 
-### 任务结果
+### Task results
 
-点击`结果`标签，可以查看任务结果。
+Click the 'results' tab to view the task results.
 
 ![](https://crawlab.oss-cn-hangzhou.aliyuncs.com/gitbook/task-detail-results.png)

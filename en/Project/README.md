@@ -1,11 +1,11 @@
-## 项目
+## project
 
-项目是能够将[爬虫](../Spider/README.md)归类在不同单元的组织形式。例如“百度”、“必应”、“谷歌”的爬虫应该归类为“搜索引擎”爬虫，因此我们可以创建一个名叫“搜索引擎”的项目，然后将相关的爬虫都归类在它里面。项目本质上是一种归类形式，可以更好的帮助我们管理不同类别的爬虫。
+The project is an organizational form that can classify [spider](../Spider/README.md) into different units. For example, the spiders of "Baidu", "Bing" and "Google" should be classified as "search engine" spiders, so we can create a project called "search engine", and then classify all related spiders in it. The project is essentially a kind of classification form, which can better help us manage different categories of spiders.
 
-### 添加/修改/删除项目
+### Add / modify / delete projects
 
-在项目页面，您可以完成对项目的添加、修改和删除操作。
+On the project page, you can add, modify and delete the project.
 
-### 如何关联爬虫到项目
+### How to associate a spider to a project
 
-在**爬虫详情**的**概览**标签中，可以在**项目**字段选择其所属的项目，并保存完成关联。
+In the **overview** tab of **spider details**, you can select the project in the **project** field and save the association.

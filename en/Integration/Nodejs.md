@@ -1,21 +1,21 @@
-## 与通用 Node.js 爬虫集成
+## Integration with general Node.js spider
 
-将下列代码加入到您爬虫中的结果保存部分。
+Add the following code to the results save section of your spider.
 
 ```javascript
-// 引入 SDK
+// Import SDK
 const crawlab = require('crawlab-sdk');
 
-// 这是一个结果，需要为 object 类型
+// This is a result. It needs to be object type
 const result = {name: 'crawlab'};
 
 (async () => {
-    // 调用保存结果方法
+    // Call save result method
     await crawlab.saveItem(result);
 
-    // 关闭数据库连接，否则程序不会结束
+    // Close the database connection, otherwise the program will not end
     await crawlab.close();
 })();
 ```
 
-然后，启动爬虫，运行完成之后，您就应该能看到抓取结果出现在 **任务详情-结果** 里。
+Then start the spider. After running, you should be able to see the result in **task details - result**.

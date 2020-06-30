@@ -1,72 +1,72 @@
-## 开发模式
+## Development model
 
-开发模式可以让开发者很快的预览源码的输出效果，即时更改代码就可以看到修改后的程序运行情况。开发模式是针对希望在 Crawlab 的源码基础上进行二次开发或者希望贡献 Crawlab 的开发者。相较于 [直接部署](./Direct.md)，开发模式更多体现在其可调试性和灵活性，不像直接部署那么稳定。
+The development mode allows developers to preview the output of the source code quickly, and the modified program can be seen by changing the code immediately. The development mode is for developers who want to make secondary development based on the source code of Crawlab or want to contribute to Crawlab. Compared with [direct deployment](./Direct.md), the development mode is more reflected in its debuggability and flexibility, but it is not as stable as direct deployment.
 
-⚠️**注意**: 强烈建议不要用开发模式在生产环境中，因为开发模式运行的程序非常不稳定，不利于在生产环境中运行。
+⚠️**Note**: It is strongly recommended not to use development mode in production environment, because the program running in development mode is very unstable and not suitable for running in production environment.
 
-**推荐人群**: 
+**Recommended Users**: 
 
-- 了解 `Node`、`Golang`、`MongoDB`、`Redis` 的安装和使用方式的开发者
-- 需要二次开发 Crawlab 的开发者
-- 希望贡献 Crawlab 的开发者
-
-**推荐配置**:
+- Developers who know how to install and use 'Node', 'Golang', 'MongoDB', 'Redis'
+- Developers who want to do secondary development in Crawlab
+- Developers who want to contribute code to Crawlab
+ 
+**Recommended Configuration**:
 
 - Go: 1.12+
 - Node: 8.x+
 - MongoDB: 3.6+
 - Redis: 5.x+
 
-### 1. 拉取代码
+### 1. Pull the code
 
-首先是将 Github 上的代码拉取到本地。
+The first is to pull the code on GitHub to local.
 
 ```bash
 git clone https://github.com/crawlab-team/crawlab
 ```
 
-### 2. 安装 Node 环境
+### 2. Install node environment
 
-请参照 [直接部署](./Direct.md) 第 2 节。
+Please refer to section 2 of [direct deployment](./Direct.md).
 
-### 3. 安装前后端
+### 3. Installing the front and back ends
 
-请参照 [直接部署](./Direct.md) 第 3 节。
+Please refer to section 3 of [direct deployment](./Direct.md).
 
 ### 4. MongoDB & Redis
 
-请参照 [直接部署](./Direct.md) 第 6 节。
+Please refer to section 6 of [direct deployment](./Direct.md).
 
-### 5. 配置
+### 5. Configuration
 
-请参照 [直接部署](./Direct.md) 第 7 节。
+Please refer to section 7 of [direct deployment](./Direct.md).
 
-### 6. 启动前端
+### 6. Start the front end
 
-在 `./frontend` 目录里，运行以下命令启动前端。
+In the directory './frontend', run the following command to start the front end.
 
 ```bash
 npm run dev
 ```
 
-这时，您可以在浏览器中输入 `http://localhost:8080` 看到界面了，只是暂时还无法连上后端。
+At this time, you can enter "http://localhost:8080" in the browser to see the interface, but you can't connect to the back end yet.
 
-在开发模式下，任何您修改的前端代码将会直接反应到界面上，意味着您不需要重新编译启动前端。
+In development mode, any front end code you modify will be reflected on the interface directly, which means you do not need to recompile and start the front end.
 
-### 7. 启动后端
+### 7. Start the back end
 
-在 `./backend` 目录里，运行以下命令启动后端。
+In the directory './backend', run the following command to start the front end.
 
 ```bash
 go run main.go
 ```
 
-⚠️**注意**: 任何后端的修改，您都需要重新启动上述命令来看到变化。
+⚠️**Note**: For any back end changes, you need to restart the above command to see the changes.
 
-### 8. 开发 Crawlab
+### 8. Develop Crawlab
 
-欢迎任何对爬虫管理平台感兴趣的开发者来贡献或开发 Crawlab。
+Any developer who interested in spider management platform is welcome to contribute or develop Crawlab.
 
-完成上述步骤之后，相信您已经可以顺利将 Crawlab 运行起来了，而且能看到页面。为了让开发 Crawlab 更加轻松，您需要了解更多相关知识，强烈建议您先阅读 [原理章节](../Architecture/README.md) 和 [贡献章节](../Contribution/README.md)。
+After completing the above steps, I believe you can run Crawlab and see the page successfully. In order to make it easier to develop Crawlab, you need to know more about it, it is strongly recommended that you read the [architecture chapter](../Architecture/README.md) and [contribution chapter](../Contribution/README.md) first.
 
 ### 

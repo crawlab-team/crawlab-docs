@@ -1,30 +1,30 @@
-## 与 Puppeteer 集成
+## Integration with puppeter
 
-### 调用 SDK
+### Call SDK
 
-与 Puppeteer 集成请参考 [与 Node.js 爬虫集成](./Nodejs.md)，只需要调用 `crawlab.saveItem` 方法。
+For integration with Puppeteer, please refer to [integration with node.js spider](./Nodejs.md). Only the 'crawlab.saveItem' method needs to be called.
 
-### 避免内存泄漏
+### Avoid memory leaks
 
-由于 Puppeteer 是利用 Chromium 来运行爬虫，因此在爬虫关闭的时候很可能会造成浏览器未关闭的情况。为了解决这个问题，我们需要用 `dumb-init` 这个工具来运行爬虫。在创建 Puppeteer 爬虫时，请在 `执行命令` 里输入以下内容。
+Since Puppeteer uses Chromium to run the spider, it is likely that the browser will not be closed when the spider is closed. To solve this problem, we need to use the 'dumb-init' tool to run the spider. When creating a Puppeteer spider, enter the following in 'execute command'.
 
 ```bash
 dumb-init -- <command>
 ```
 
-`<command>` 为实际执行命令，例如 `node spider.js`。因此，总的 `执行命令` 为如下内容。
+'<command>' is the actual execution command, for example, 'node spider.js'. Therefore, the general 'executive command' is as follows.
 
 ```bash
 dumb-init -- node spider.js
 ```
 
-对于 Docker 用户，因为内置了 `dumb-init`，可以直接使用该工具。对于直接部署用户，需要自行下载。
+For Docker users, because 'dumb-init' is built in, you can use the tool directly. For direct deployment users, you need to download it by yourself.
 
-### 启动 Puppeteer 的正确方式
+### The right way to start Puppeteer
 
-Puppeteer 是依赖 Chromium 来作为引擎的，因此需要知道 Chromium 的正确执行路径，我们推荐使用 `puppeteer-chromium-resolver` 来启动 Puppeteer。如果您是预装 Node.js 或者在界面上安装 Node.js 的话，`puppeteer-chromium-resolver` 是内置的。
+Puppeteer relies on Chromium as the engine, so you need to know the correct execution path of Chromium. We recommend using 'puppeteer-chromium-resolver' to start Puppeteer. If you pre install Node.js or install Node.js on the interface, 'puppeteer-chromium-resolver' is built-in.
 
-以下是启动 Puppeteer 的例子。
+Here is an example of starting the Puppeteer.
 
 ```javascript
 ...
@@ -46,4 +46,4 @@ Puppeteer 是依赖 Chromium 来作为引擎的，因此需要知道 Chromium �
 ...
 ```
 
-具体例子请参考 Github 上 [京东口罩商品抓取爬虫](https://github.com/crawlab-team/crawlab/blob/master/backend/template/spiders/jd_mask/jd_mask_spider.js)。
+For specific examples, please refer to [JD mask commodity grabbing spider](https://github.com/crawlab-team/crawlab/blob/master/backend/template/spiders/jd_mask/jd_mask_spider.js) on GitHub.

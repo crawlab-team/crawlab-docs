@@ -1,11 +1,11 @@
-## 操作任务
+## Operation task
 
-### 停止任务
+### Stop task
 
-当任务运行起来之后，我们因为某个原因可能需要终止任务，这时我们需要在Crawlab中停止该任务。
+When the task is running, we may need to terminate the task for some reason, then we need to stop the task in Crawlab.
 
-导航至需要停止的任务的`任务详情`，点击`停止`按钮来终止任务。
+Navigate to the 'task details' of the task to be stopped, and click the 'stop' button to terminate the task.
 
-### 删除任务
+### Delete task
 
-在`任务列表`中，点击`操作`列中的`删除`按钮，确认删除该任务。
+In the 'task list', click the 'delete' button in the 'operation' column to confirm the deletion of the task.

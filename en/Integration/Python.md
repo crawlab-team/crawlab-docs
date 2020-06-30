@@ -1,16 +1,16 @@
-## 与通用 Python 爬虫集成
+## Integration with general Python spider
 
-将下列代码加入到您爬虫中的结果保存部分。
+Add the following code to the results save section of your spider.
 
 ```python
-# 引入保存结果方法
+# Reference save result method
 from crawlab import save_item
 
-# 这是一个结果，需要为 dict 类型
+# This is a result. It needs to be dict type
 result = {'name': 'crawlab'}
 
-# 调用保存结果方法
+# Call save result method
 save_item(result)
 ```
 
-然后，启动爬虫，运行完成之后，您就应该能看到抓取结果出现在 **任务详情-结果** 里。
+Then start the spider. After running, you should be able to see the result in **task details - result**.

@@ -1,22 +1,22 @@
-## 消息通知
+## Message notification
 
-消息通知可以帮助用户及时得到爬虫任务的运行状况，例如当爬虫运行结束时抓取了多少条数据、是否发生错误、运行时长等等。有了消息通知，可以保证您的爬虫任务时刻与您同步信息，让您了解抓取情况如何。
+Message notification can help users get the running status of the spider task in time, such as how many pieces of data are fetched when the spider is running, whether an error occurs, and the running time. With the message notification, you can ensure that your spider task will synchronize information with you at any time, so that you cna know how the grab is going.
 
-Crawlab 支持 3 种消息通知渠道：
+Crawlab supports three message notification channels:
 
-1. **[邮件通知](./Mail.md)**
-2. **[钉钉机器人](./DingTalk.md)**
-3. **[企业微信机器人](./Wechat.md)**
+1. **[Email notification](./Mail.md)**
+2. **[DingTalk robot](./DingTalk.md)**
+3. **[Enterprise wechat robot](./Wechat.md)**
 
-Crawlab 支持 3 种消息通知触发模式：
+Crawlab supports three message notification trigger modes:
 
-1. **当任务运行结束时触发**
-2. **当任务发生错误时触发**
-3. **从不触发**
+1. **Triggered at the end of a task running**
+2. **Triggered when a task has an error**
+3. **Never trigger**
 
-您可以在 **设置** 页面中配置您的通知渠道和触发模式。
+You can configure your notification channel and trigger mode on the **settings** page.
 
-手机上的消息通知效果如下。
+The message notification effect on the mobile phone is as follows.
 
 ![](http://static-docs.crawlab.cn/notification-mobile.jpeg)
 

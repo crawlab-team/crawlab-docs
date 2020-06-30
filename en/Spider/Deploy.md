@@ -1,5 +1,5 @@
-## 部署爬虫
+## Deploy spider
 
-Crawlab是自动部署爬虫的，每60秒主节点会将该节点上的爬虫文件同步给所有在线节点。因此，用户上传了爬虫之后，只需要等待最多60秒，就可以在所有节点上运行爬虫任务了。
+Crawlab deploys spiders automatically. The master node synchronizes the spider files on this node to all online nodes every 60 seconds. Therefore, after the user uploads the spider, it only needs to wait up to 60 seconds to run the spider task on all nodes.
 
-爬虫部署和同步原理请参考 [原理-爬虫部署章节](../Architecture/SpiderDeployment.md)。
+Please refer to [principles - Chapter of spider deployment](../Architecture/SpiderDeployment.md) for the principles of spider deployment and synchronization.

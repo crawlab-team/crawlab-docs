@@ -1,5 +1,5 @@
-## 下载结果
+## Download Results
 
-结果储存在数据库中之后，我们有时候需要将其导出，这时可以在界面中进行导出操作。
+After the results are stored in the database, we need to export them sometimes. At this time, we can export them in the interface.
 
-导航至`任务详情`，点击`结果`标签，点击`下载CSV`按钮，等待一会儿，结果就会以`CSV`的形式下载到本地。
+Navigate to 'task details', click the 'results' tab, click the 'download CSV' button, wait for a while, and the results will be downloaded to the local in the form of 'CSV'.
