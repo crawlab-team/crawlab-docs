@@ -58,6 +58,8 @@
     * [MongoDB](DataSource/MongoDB.md)
     * [MySQL](DataSource/MySQL.md)
     * [Postgres](DataSource/Postgres.md)
+    * [Kafka](DataSource/Kafka.md)
+    * [ElasticSearch](DataSource/ElasticSearch.md)
 * [API](./Api/README.md)
     * [API Token](./Api/ApiToken.md)
 * [原理](Architecture/README.md)
