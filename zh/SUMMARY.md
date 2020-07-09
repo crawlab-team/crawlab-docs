@@ -9,6 +9,7 @@
     * [直接部署](Installation/Direct.md)
     * [开发模式](Installation/Develop.md)
     * [多节点部署](Installation/MultiNode.md)
+    * [专业版部署](./Installation/Pro.md)
 * [配置](Config/README.md)
 * [爬虫](Spider/README.md)
     * [自定义爬虫](Spider/CustomizedSpider.md)
