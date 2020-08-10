@@ -67,13 +67,13 @@ services:
     container_name: crawlab_pro_master
     environment:
       CRAWLAB_SERVER_MASTER: "Y"  # whether to be master node 是否为主节点，主节点为 Y，工作节点为 N
-      CRAWLAB_MONGO_HOST: "192.168.0.1"  # MongoDB host address MongoDB 的地址，在 docker compose 网络中，直接引用服务名称
+      CRAWLAB_MONGO_HOST: "mongo"  # MongoDB host address MongoDB 的地址，在 docker compose 网络中，直接引用服务名称
       CRAWLAB_MONGO_PORT: "27017"  # MongoDB port MongoDB 的端口
       CRAWLAB_MONGO_DB: "crawlab_pro"  # MongoDB database MongoDB 的数据库
       CRAWLAB_MONGO_USERNAME: "mongousername"  # MongoDB username MongoDB 的用户名
       CRAWLAB_MONGO_PASSWORD: "mongopassword"  # MongoDB password MongoDB 的密码
       CRAWLAB_MONGO_AUTHSOURCE: "admin"  # MongoDB auth source MongoDB 的验证源
-      CRAWLAB_REDIS_ADDRESS: "192.168.0.1"  # Redis host address Redis 的地址，在 docker compose 网络中，直接引用服务名称
+      CRAWLAB_REDIS_ADDRESS: "redis"  # Redis host address Redis 的地址，在 docker compose 网络中，直接引用服务名称
       CRAWLAB_REDIS_PORT: "6379"  # Redis port Redis 的端口
       CRAWLAB_REDIS_DATABASE: "1"  # Redis database Redis 的数据库
       CRAWLAB_REDIS_PASSWORD: "redispassword"  # Redis password Redis 的密码
