@@ -50,6 +50,8 @@
     * [Scrapy](Integration/Scrapy.md)
     * [通用 Python 爬虫](Integration/Python.md)
     * [通用 Node.js 爬虫](Integration/Nodejs.md)
+    * [通用 Golang 爬虫](./Integration/Golang.md)
+    * [Colly](./Integration/Colly.md)
     * [Puppeteer](Integration/Puppeteer.md)
     * [其他爬虫](Integration/OtherFramework.md)
 * [CI/CD](CI/README.md)
