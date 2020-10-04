@@ -26,7 +26,7 @@ public class CrawlabUtil {
         String mongoDatabase = System.getenv("CRAWLAB_MONGO_DB");
         String mongoUsername = System.getenv("CRAWLAB_MONGO_USERNAME");
         String mongoPassword = System.getenv("CRAWLAB_MONGO_PASSWORD");
-        String mongoAuthSource = System.getenv("CRAWLAB_MONGO_AUTH_SOURCE");
+        String mongoAuthSource = System.getenv("CRAWLAB_MONGO_AUTHSOURCE");
         String url;
         if (Strings.isEmpty(mongoUsername)) {
             url = "mongodb://" + mongoHost + ":" + mongoPort + "/" + mongoDatabase;
