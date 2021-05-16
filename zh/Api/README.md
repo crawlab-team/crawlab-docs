@@ -26,13 +26,13 @@ res = requests.get(url, headers=headers)
 
 **API 文档**
 
-支持 swagger API 文档，访问 `http://crawlab.cn/swagger/index.html` 查看更多 API。
+支持 swagger API 文档，访问 `https://demo-pro.crawlab.cn/api/swagger/index.html` 查看更多 API。
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geg3t15cjsj31ee0u0113.jpg)
 
-同时，如果你已经部署了自己的 crawlab 集群，可以到 `http://your-ip:port/swagger/index.html` 中使用 `API Token` 调用API进行在线调试。
+同时，如果你已经部署了自己的 crawlab 集群，可以到 `http://your-ip:port/api/swagger/index.html` 中使用 `API Token` 调用API进行在线调试。
 
 举个🌰：
-1. 以获取当前的 nodes 信息为例，访问 `http://your-ip:port/swagger/index.html` 后点击红色框内的 `Try it out`
+1. 以获取当前的 nodes 信息为例，访问 `http://your-ip:port/api/swagger/index.html` 后点击红色框内的 `Try it out`
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1geg3zvq9jsj31fw0u0797.jpg)
 
 2. 在 crawlab 页面随便点击一个 tab ，打开 chrome 调试，找到 request header 中的  `Authorization` ,下图所示：
