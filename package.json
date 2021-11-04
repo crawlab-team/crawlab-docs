@@ -1,27 +1,23 @@
 {
   "name": "crawlab-docs",
-  "version": "1.0.0",
-  "description": "基于Golang的分布式爬虫管理平台，支持多种编程语言以及多种爬虫框架.",
+  "version": "0.6.0",
+  "description": "Documentation for Crawlab",
   "main": "index.js",
-  "dependencies": {
-    "gitbook-cli": "^2.3.2"
-  },
-  "devDependencies": {},
   "scripts": {
-    "install": "gitbook install",
-    "build": "gitbook build"
-  },
-  "engines": {
-    "node": "^10.22"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/crawlab-team/crawlab-docs.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/crawlab-team/crawlab-docs/issues"
   },
-  "homepage": "https://github.com/crawlab-team/crawlab-docs#readme"
+  "homepage": "https://github.com/crawlab-team/crawlab-docs#readme",
+  "devDependencies": {
+    "vuepress": "^1.8.2"
+  }
 }
