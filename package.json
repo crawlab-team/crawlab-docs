@@ -4,25 +4,15 @@
   "description": "基于Golang的分布式爬虫管理平台，支持多种编程语言以及多种爬虫框架.",
   "main": "index.js",
   "dependencies": {
-    "gitbook-plugin-addcssjs": "^1.0.2",
-    "gitbook-plugin-expandable-chapters": "^0.2.0",
-    "gitbook-plugin-chapter-fold": "^0.0.4",
-    "gitbook-plugin-edit-link": "^2.0.2",
-    "gitbook-plugin-back-to-top-button": "^0.1.4",
-    "gitbook-plugin-favicon": "^0.0.2",
-    "gitbook-plugin-hide-element": "^0.0.4",
-    "gitbook-plugin-github": "^2.0.0",
-    "gitbook-plugin-multilingual-index": "^0.1.1",
-    "gitbook-plugin-sitemap": "^1.2.0",
-    "gitbook-plugin-lightbox": "^1.2.0",
-    "gitbook-plugin-prism": "^2.4.0",
-    "gitbook-plugin-search-pro": "^2.0.2",
-    "gitbook-plugin-splitter": "^0.0.8",
-    "gitbook-plugin-tbfed-pagefooter": "^0.0.1"
+    "gitbook-cli": "^2.3.2"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "gitbook install",
+    "build": "gitbook build"
+  },
+  "engines": {
+    "node": "^10.22"
   },
   "repository": {
     "type": "git",

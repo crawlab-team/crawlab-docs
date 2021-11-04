@@ -11,13 +11,12 @@
 		"edit-link",
 		"favicon",
 		"lightbox",
-		"prism", 
+		"prism",
 		"-highlight",
 		"hide-element",
 		"tbfed-pagefooter",
 		"addcssjs",
-		"multilingual-index",
-		"sitemap"
+		"multilingual-index"
 	],
 	"pluginsConfig": {
 		"github": {
@@ -34,7 +33,7 @@
 			"elements": [".gitbook-link"]
 		},
 		"tbfed-pagefooter": {
-			"copyright":"© 2020 Crawlab, Made by Crawlab-Team",
+			"copyright":"© 2021 Crawlab, Made by Crawlab-Team",
 			"modify_label": "该文件最后修改时间: ",
 			"modify_format": "YYYY-MM-DD HH:mm:ss"
 		},
