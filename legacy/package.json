@@ -8,11 +8,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "install": "../node_modules/.bin/gitbook install",
-    "build": "../node_modules/.bin/gitbook build"
-  },
-  "engines": {
-    "node": "^10.22"
+    "install": "./node_modules/.bin/gitbook install",
+    "build": "./node_modules/.bin/gitbook build"
   },
   "repository": {
     "type": "git",

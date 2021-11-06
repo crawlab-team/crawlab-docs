@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/crawlab-team/crawlab-docs#readme",
   "devDependencies": {
+    "@vuepress/plugin-active-header-links": "^1.8.2",
     "vuepress": "^1.8.2"
   }
 }

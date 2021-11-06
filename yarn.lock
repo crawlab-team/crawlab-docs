@@ -1168,7 +1168,7 @@
     markdown-it-table-of-contents "^0.4.0"
     prismjs "^1.13.0"
 
-"@vuepress/plugin-active-header-links@1.8.2":
+"@vuepress/plugin-active-header-links@1.8.2", "@vuepress/plugin-active-header-links@^1.8.2":
   version "1.8.2"
   resolved "https://registry.npmmirror.com/@vuepress/plugin-active-header-links/download/@vuepress/plugin-active-header-links-1.8.2.tgz#0cb9b29c826dd97d35357a9b09c962ef782cb793"
   integrity sha1-DLmynIJt2X01NXqbCcli73gst5M=
