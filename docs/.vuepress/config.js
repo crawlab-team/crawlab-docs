@@ -15,7 +15,21 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
-  plugins: ['@vuepress/active-header-links'],
+  plugins: [
+    '@vuepress/active-header-links',
+    [
+      'md-enhance',
+      {
+        // Enable flowchart
+        flowchart: true,
+      },
+    ]
+  ],
+  markdown: {
+    extendMarkdown: md => {
+      md.use(require('markdown-it-plantuml'))
+    },
+  },
   extraWatchFiles: [
     '.vuepress/locales/en.js',
     '.vuepress/locales/zh.js',

@@ -25,6 +25,10 @@ module.exports = {
         path: '/zh/',
       },
       {
+        title: '快速开始',
+        path: '/zh/quick-start',
+      },
+      {
         title: '安装',
         path: '/zh/installation',
       },

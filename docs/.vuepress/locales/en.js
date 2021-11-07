@@ -21,12 +21,39 @@ module.exports = {
     ],
     sidebar: [
       {
-        title: 'Introduction',
-        path: '/',
-      },
-      {
-        title: 'Installation',
-        path: '/installation',
+        title: 'Guide',
+        path: '/guide',
+        collapsable: false,
+        initialOpenGroupIndex: 1,
+        children: [
+          {
+            title: 'Introduction',
+            path: '/guide/introduction',
+          },
+          {
+            title: 'Quick Start',
+            path: '/guide/quick-start',
+          },
+          {
+            title: 'Installation',
+            path: '/guide/installation/',
+            collapsable: false,
+            children: [
+              {
+                title: 'Docker',
+                path: '/guide/installation/docker',
+              },
+              {
+                title: 'Kubernetes',
+                path: '/guide/installation/kubernetes',
+              },
+              {
+                title: 'Direct Deploy',
+                path: '/guide/installation/direct-deploy',
+              },
+            ]
+          },
+        ]
       },
     ]
   }
