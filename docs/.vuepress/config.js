@@ -6,6 +6,7 @@ module.exports = {
     '/': en.locale,
     '/zh/': zh.locale,
   },
+  sidebarDepth: 2,
   themeConfig: {
     locales: {
       '/': en.themeConfig,

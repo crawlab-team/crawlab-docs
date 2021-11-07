@@ -1,5 +1,3 @@
-# Installation
+# Kubernetes
 
-There two ways of installing Crawlab.
-
-## Docker
+:construction: Under construction...

@@ -1,5 +1,3 @@
-# Installation
+# Direct Deploy
 
-There two ways of installing Crawlab.
-
-## Docker
+:construction: Under construction...
