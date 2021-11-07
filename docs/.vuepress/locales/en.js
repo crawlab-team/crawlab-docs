@@ -53,6 +53,17 @@ module.exports = {
               },
             ]
           },
+          {
+            title: 'Use Crawlab',
+            path: '/guide/use-crawlab/',
+            collapsable: false,
+            children: [
+              {
+                title: 'Quick Tutorial',
+                path: '/guide/use-crawlab/quick-tutorial',
+              }
+            ]
+          }
         ]
       },
     ]

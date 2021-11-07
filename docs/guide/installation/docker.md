@@ -11,7 +11,9 @@ There are several deployment modes for Docker installation, but the main process
 3. Create `docker-compose.yml` and make configurations
 4. Start Docker containers
 
+::: warning
 For following guidance, we will assume you have installed Docker and Docker-Compose, and already pulled Docker images.
+:::
 
 ## Standalone-Node Deployment
 
@@ -154,9 +156,11 @@ Please note that you should replace `<master_node_ip>` with the IP address of Ma
 
 After Master Node and Worker Nodes are all started, you can now navigate to `http://<master_node_ip>:8080` to start using Crawlab.
 
+::: warning
 ### Expose ports of Master Node
 
 As Worker Nodes connect to Master Node through ports **8080** (API) and **9666** (gRPC), you should make sure they are both opened and NOT blocked by firewall on Master Node.
+:::
 
 ## External MongoDB
 
