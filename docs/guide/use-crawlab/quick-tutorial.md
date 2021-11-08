@@ -1,6 +1,6 @@
 # Quick Tutorial
 
-You have now installed Crawlab and perhaps can't wait to start using it. Before you go deep into it, I would suggest you go through this quick tutorial to walk you through some basics and get you familiar with some main features in Crawlab.
+You have now installed Crawlab and perhaps can't wait to start using it. Before you go deep into the details, I would suggest you go through this quick tutorial which would walk you through some basics and get you familiar with some main features in Crawlab.
 
 ## Introduction
 
@@ -30,14 +30,14 @@ scrapy startproject scrapy_quotes
 
 Now you should be able to see the folder structure of the newly created spider.
 
-Let's generate a new spider by executing the command below.
+Then generate a new spider by executing the command below.
 
 ```bash
 cd scrapy_quotes
 scrapy genspider quotes quotes.toscrape.com
 ```
 
-The folder structure of the spider is as below.
+The folder structure of the spider should look similar as below.
 
 ```
 scrapy_quotes
@@ -90,11 +90,73 @@ We have now created a Scrapy spider that is available for integration into Crawl
 
 ## Upload Spider
 
-Now open browser and navigate to `http://localhost:8080`, and login with default username/password `admin/admin`. 
+Now open the browser and navigate to `http://localhost:8080`, and login with default username/password `admin/admin`. 
 
 Then go to `Spiders` page, and click `New Spider` on the top left to open the create dialog. 
 
 In the dialog, enter the info as below, and click `Confirm` to create a spider on Crawlab.
 1. Name: `scrapy_quotes`
 2. Command: `scrapy crawl quotes`
-3. Default Mode: `Random Mode`
+
+![create-spider](./img/quick-tutorial-1.png)
+
+Now we have created a spider in Crawlab, and we need to upload spider files to it.
+
+Click the spider name link or the blue button with search icon on the right named `View` to navigate to its detail page. 
+
+![](./img/quick-tutorial-2.png)
+
+In the detail page, click `Files` tab to navigate to the file editor tab, and click `Upload Files` button on the nav bar.
+
+![](./img/quick-tutorial-3.png)
+
+Click the button `Click to Select Folder to Upload` and choose the folder of the Scrapy spider we created earlier, and click `Confirm` to upload the spiders.
+
+![](./img/quick-tutorial-4.png)
+
+Now you should be able to see the uploaded files and folders on the left file navigator. You can play around it by expanding folder or double-clicking files to open it.
+
+![](./img/quick-tutorial-5.png)
+
+## Run Spider
+
+Running spider is quite simple. 
+
+Let's run it by clicking the button with play icon `Run`, and click `Confirm` with default settings.
+
+![](./img/quick-tutorial-6.png)
+
+## View Task
+
+Great! We have just triggered a spider task, and we should be able to view it in `Tasks` tab. Let's click on `Tasks` tab to take a look.
+
+![](./img/quick-tutorial-7.png)
+
+The task is running, and we can view the task detail by clicking the `View` button on the right.
+
+We can then view realtime logs by clicking `Logs` tab.
+
+![](./img/quick-tutorial-8.png)
+
+As the spider is crawling, we can also view crawled data by clicking `Data` tab;
+
+![](./img/quick-tutorial-9.png)
+
+## Spider Stats
+
+If we go back to `Spiders` page, we should be able to see the stats of the spider.
+
+![](./img/quick-tutorial-10.png)
+
+## Summary
+
+Let's do some recap here. We have followed a simple process to run a Scrapy spider on Crawlab.
+1. Created a Scrapy project on local.
+2. Created a spider on Crawlab
+3. Uploaded spider files to the spider
+4. Triggered a task
+5. View realtime logs and crawled data along with spider stats on Crawlab.
+
+## What Next
+
+This quick tutorial provides you with a basic understanding about Crawlab and how to use it to crawl data, including monitoring task logs and view crawled data, etc. But you should be aware that Crawlab is not only limited to that, there are many other powerful features such as Node Management, Git Integration and Dependency Installation which you might be interested in. You can check out other sections of this guide to learn how to use those features.

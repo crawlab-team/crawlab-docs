@@ -2,7 +2,7 @@
 
 The quickest way to install Crawlab is [Docker](https://www.docker.com/). If you are not familiar with Docker, you can refer to [Docker Official Site](https://www.docker.com/) and install it on your local machine.
 
-## Pull images
+## Pull Images
 Make sure you have installed Docker, and then pull the image of Crawlab and MongoDB.
 
 ```bash
@@ -47,7 +47,7 @@ docker-compose up -d
 
 Now you can open the browser and navigate to `http://localhost:8080` to start using Crawlab.
 
-## What next
+## What Next
 
 ::: warning
 This is a minimal setup of Crawlab and you can experience most of the features in this demo environment. You should **NOT** use this demo setup in production environment!
