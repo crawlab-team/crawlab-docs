@@ -67,7 +67,7 @@ Here is the explanation of settings for running a spider is as below.
 - `Mode`: Task running mode. Default to `Random Node`.
 - `Priority`: Task priority. Default to 5.
 
-## Relationship with Other Concepts
+## Entity Relationships
 
 @startuml
 !theme amiga
