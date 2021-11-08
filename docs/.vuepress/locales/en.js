@@ -61,7 +61,45 @@ module.exports = {
               {
                 title: 'Quick Tutorial',
                 path: '/guide/use-crawlab/quick-tutorial',
-              }
+              },
+              {
+                title: 'Basic Concepts',
+                path: '/guide/use-crawlab/basic-concepts/',
+                children: [
+                  {
+                    title: 'Node',
+                    path: '/guide/use-crawlab/basic-concepts/node',
+                  },
+                  {
+                    title: 'Project',
+                    path: '/guide/use-crawlab/basic-concepts/project',
+                  },
+                  {
+                    title: 'Spider',
+                    path: '/guide/use-crawlab/basic-concepts/spider',
+                  },
+                  {
+                    title: 'Task',
+                    path: '/guide/use-crawlab/basic-concepts/task',
+                  },
+                  {
+                    title: 'Schedule',
+                    path: '/guide/use-crawlab/basic-concepts/schedule',
+                  },
+                  {
+                    title: 'User',
+                    path: '/guide/use-crawlab/basic-concepts/user',
+                  },
+                  {
+                    title: 'Plugin',
+                    path: '/guide/use-crawlab/basic-concepts/plugin',
+                  },
+                  {
+                    title: 'Others',
+                    path: '/guide/use-crawlab/basic-concepts/others',
+                  },
+                ]
+              },
             ]
           }
         ]
