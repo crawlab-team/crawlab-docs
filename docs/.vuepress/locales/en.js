@@ -101,9 +101,23 @@ module.exports = {
                 ]
               },
             ]
-          }
+          },
         ]
       },
+      {
+        title: 'Develop',
+        path: '/develop/',
+        children: [
+          {
+            title: 'Introduction',
+            path: '/develop/introduction',
+          },
+          {
+            title: 'Plugins',
+            path: '/develop/plugins/',
+          }
+        ]
+      }
     ]
   }
 }

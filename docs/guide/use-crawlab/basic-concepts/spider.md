@@ -46,7 +46,7 @@ There are several ways to upload spider files.
 3. Click `Upload` button in the nav bar.
 4. Choose `Files`.
 5. Drag and drop spider files into the drop zone.
-7. Click `Confirm`.
+6. Click `Confirm`.
 
 ### Upload Files (Drag & Drop)
 1. Navigate to spider detail page.
