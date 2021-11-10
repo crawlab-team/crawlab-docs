@@ -1,7 +1,6 @@
 # Installation
 
-There are multiple methods of installing Crawlab. You can refer to the summary table below to choose the one that is
-most suitable.
+There are multiple methods of installing Crawlab. You can refer to the summary table below to choose the one that is most suitable.
 
 <table>
 <tr>
@@ -30,7 +29,7 @@ most suitable.
 <li>Medium or large cluster needed</li>
 <li>Scalability is major concern</li>
 <li>Familiar with Kubernetes or orchestration</li>
-<li>DevOps/Operation resources available</li>
+<li>Professional operation resources available</li>
 </ol>
 </td>
 </tr>

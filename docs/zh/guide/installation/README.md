@@ -1,48 +1,47 @@
-# Installation
+# 安装
 
-There are multiple methods of installing Crawlab. You can refer to the summary table below to choose the one that is
-most suitable.
+安装 Crawlab 的方式有多种，您可以参考下面的汇总表，选择最适合您的方式。
 
 <table>
 <tr>
-<th>Method</th>
-<th>Recommended Environment</th>
-<th>Recommended Users</th>
+<th>方式</th>
+<th>推荐环境</th>
+<th>推荐用户</th>
 </tr>
 
 <tr>
-<td><a href="/guide/installation/docker">Docker</a></td>
-<td>Demo / Production (nodes<=10)</td>
+<td><a href="/zh/guide/installation/docker">Docker</a></td>
+<td>演示 / 生产 (节点数不大于 10)</td>
 <td>
 <ol>
-<li>Small cluster needed</li>
-<li>Familiar with Docker</li>
-<li>Minimal maintenance required</li>
+<li>小型集群需求</li>
+<li>熟悉 Docker</li>
+<li>要求最少量的维护</li>
 </ol>
 </td>
 </tr>
 
 <tr>
-<td><a href="/guide/installation/kubernetes">Kubernetes (K8S)</a></td>
-<td>Production (nodes>10)</td>
+<td><a href="/zh/guide/installation/kubernetes">Kubernetes (K8S)</a></td>
+<td>生产 (节点数大于 10)</td>
 <td>
 <ol>
-<li>Medium or large cluster needed</li>
-<li>Scalability is major concern</li>
-<li>Familiar with Kubernetes or orchestration</li>
-<li>DevOps/Operation resources available</li>
+<li>中大型集群需求</li>
+<li>可扩展性是重要因素</li>
+<li>熟悉 Kubernetes 或编排技术</li>
+<li>拥有专业的运维资源</li>
 </ol>
 </td>
 </tr>
 
 <tr>
-<td><a href="/guide/installation/direct-deploy">Direct Deploy</a></td>
-<td>Demo / Experimental</td>
+<td><a href="/zh/guide/installation/direct-deploy">直接部署</a></td>
+<td>演示 / 实验</td>
 <td>
 <ol>
-<li>Additional customization needed</li>
-<li>Familiar with Vue.js or Go</li>
-<li>Willing to work with source code</li>
+<li>自定义开发需求</li>
+<li>熟悉 Vue.js 和 Go</li>
+<li>愿意操作源码</li>
 </ol>
 </td>
 </tr>
