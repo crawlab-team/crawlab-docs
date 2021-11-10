@@ -1085,7 +1085,7 @@
   resolved "https://registry.nlark.com/@types/mime/download/@types/mime-1.3.2.tgz?cache=0&sync_timestamp=1629708336928&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fmime%2Fdownload%2F%40types%2Fmime-1.3.2.tgz#93e25bf9ee75fe0fd80b594bc4feb0e862111b5a"
   integrity sha1-k+Jb+e51/g/YC1lLxP6w6GIRG1o=
 
-"@types/minimatch@*":
+"@types/minimatch@*", "@types/minimatch@^3.0.3", "@types/minimatch@^3.0.4":
   version "3.0.5"
   resolved "https://registry.nlark.com/@types/minimatch/download/@types/minimatch-3.0.5.tgz?cache=0&sync_timestamp=1629708301760&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fminimatch%2Fdownload%2F%40types%2Fminimatch-3.0.5.tgz#1001cc5e6a3704b83c236027e77f2f58ea010f40"
   integrity sha1-EAHMXmo3BLg8I2An538vWOoBD0A=
@@ -1878,6 +1878,13 @@ aws4@^1.8.0:
   resolved "https://registry.nlark.com/aws4/download/aws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
   integrity sha1-1h9G2DslGSUOJ4Ta9bCUeai0HFk=
 
+axios@^0.24.0:
+  version "0.24.0"
+  resolved "https://registry.npmmirror.com/axios/download/axios-0.24.0.tgz?cache=0&sync_timestamp=1635213996737&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Faxios%2Fdownload%2Faxios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
+  integrity sha1-gE5voeS5xSiFAd2d/1anoJQNINY=
+  dependencies:
+    follow-redirects "^1.14.4"
+
 babel-loader@^8.0.4:
   version "8.2.3"
   resolved "https://registry.npmmirror.com/babel-loader/download/babel-loader-8.2.3.tgz#8986b40f1a64cacfcb4b8429320085ef68b1342d"
@@ -2359,6 +2366,11 @@ chalk@^3.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
+charenc@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.npm.taobao.org/charenc/download/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
+  integrity sha1-wKHS86cJLgN3S/qD8UwPxXkKhmc=
+
 chokidar@^2.0.3, chokidar@^2.1.8:
   version "2.1.8"
   resolved "https://registry.nlark.com/chokidar/download/chokidar-2.1.8.tgz?cache=0&sync_timestamp=1623763535523&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fchokidar%2Fdownload%2Fchokidar-2.1.8.tgz#804b3a7b6a99358c3c5c61e71d8728f041cff917"
@@ -2770,6 +2782,11 @@ cross-spawn@^6.0.0, cross-spawn@^6.0.5:
     semver "^5.5.0"
     shebang-command "^1.2.0"
     which "^1.2.9"
+
+crypt@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.nlark.com/crypt/download/crypt-0.0.2.tgz#88d7ff7ec0dfb86f713dc87bbb42d044d3e6c41b"
+  integrity sha1-iNf/fsDfuG9xPch7u0LQRNPmxBs=
 
 crypto-browserify@^3.11.0:
   version "3.12.0"
@@ -3785,6 +3802,11 @@ dot-prop@^5.2.0:
   dependencies:
     is-obj "^2.0.0"
 
+dotenv@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.nlark.com/dotenv/download/dotenv-10.0.0.tgz?cache=0&sync_timestamp=1621629308355&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fdotenv%2Fdownload%2Fdotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
+  integrity sha1-PUInuPuV+BCWzdK2ZlP7LHCFuoE=
+
 duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://registry.nlark.com/duplexer3/download/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
@@ -3871,6 +3893,11 @@ enhanced-resolve@^4.5.0:
     graceful-fs "^4.1.2"
     memory-fs "^0.5.0"
     tapable "^1.0.0"
+
+ensure-posix-path@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.nlark.com/ensure-posix-path/download/ensure-posix-path-1.1.1.tgz#3c62bdb19fa4681544289edb2b382adc029179ce"
+  integrity sha1-PGK9sZ+kaBVEKJ7bKzgq3AKRec4=
 
 entities@^2.0.0:
   version "2.2.0"
@@ -4287,7 +4314,7 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-follow-redirects@^1.0.0:
+follow-redirects@^1.0.0, follow-redirects@^1.14.4:
   version "1.14.5"
   resolved "https://registry.npmmirror.com/follow-redirects/download/follow-redirects-1.14.5.tgz?cache=0&sync_timestamp=1635857764332&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Ffollow-redirects%2Fdownload%2Ffollow-redirects-1.14.5.tgz#f09a5848981d3c772b5392309778523f8d85c381"
   integrity sha1-8JpYSJgdPHcrU5Iwl3hSP42Fw4E=
@@ -5104,7 +5131,7 @@ is-boolean-object@^1.1.0:
     call-bind "^1.0.2"
     has-tostringtag "^1.0.0"
 
-is-buffer@^1.1.5:
+is-buffer@^1.1.5, is-buffer@~1.1.6:
   version "1.1.6"
   resolved "https://registry.nlark.com/is-buffer/download/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha1-76ouqdqg16suoTqXsritUf776L4=
@@ -5782,6 +5809,14 @@ markdown-it@^8.4.1:
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
+matcher-collection@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.nlark.com/matcher-collection/download/matcher-collection-2.0.1.tgz#90be1a4cf58d6f2949864f65bb3b0f3e41303b29"
+  integrity sha1-kL4aTPWNbylJhk9luzsPPkEwOyk=
+  dependencies:
+    "@types/minimatch" "^3.0.3"
+    minimatch "^3.0.2"
+
 md5.js@^1.3.4:
   version "1.3.5"
   resolved "https://registry.npm.taobao.org/md5.js/download/md5.js-1.3.5.tgz#b5d07b8e3216e3e27cd728d72f70d1e6a342005f"
@@ -5790,6 +5825,15 @@ md5.js@^1.3.4:
     hash-base "^3.0.0"
     inherits "^2.0.1"
     safe-buffer "^5.1.2"
+
+md5@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.nlark.com/md5/download/md5-2.3.0.tgz#c3da9a6aae3a30b46b7b0c349b87b110dc3bda4f"
+  integrity sha1-w9qaaq46MLRreww0m4exENw72k8=
+  dependencies:
+    charenc "0.0.2"
+    crypt "0.0.2"
+    is-buffer "~1.1.6"
 
 mdn-data@2.0.14:
   version "2.0.14"
@@ -5953,7 +5997,7 @@ minimalistic-crypto-utils@^1.0.1:
   resolved "https://registry.nlark.com/minimalistic-crypto-utils/download/minimalistic-crypto-utils-1.0.1.tgz#f6c00c1c0b082246e5c4d99dfb8c7c083b2b582a"
   integrity sha1-9sAMHAsIIkblxNmd+4x8CDsrWCo=
 
-minimatch@^3.0.4:
+minimatch@^3.0.2, minimatch@^3.0.4:
   version "3.0.4"
   resolved "https://registry.nlark.com/minimatch/download/minimatch-3.0.4.tgz?cache=0&sync_timestamp=1618846754554&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fminimatch%2Fdownload%2Fminimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   integrity sha1-UWbihkV/AzBgZL5Ul+jbsMPTIIM=
@@ -7066,6 +7110,13 @@ qs@6.7.0:
   version "6.7.0"
   resolved "https://registry.nlark.com/qs/download/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha1-QdwaAV49WB8WIXdr4xr7KHapsbw=
+
+qs@^6.10.1:
+  version "6.10.1"
+  resolved "https://registry.npm.taobao.org/qs/download/qs-6.10.1.tgz?cache=0&sync_timestamp=1616385248556&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fqs%2Fdownload%2Fqs-6.10.1.tgz#4931482fa8d647a5aab799c5271d2133b981fb6a"
+  integrity sha1-STFIL6jWR6Wqt5nFJx0hM7mB+2o=
+  dependencies:
+    side-channel "^1.0.4"
 
 qs@~6.5.2:
   version "6.5.2"
@@ -8635,6 +8686,16 @@ vuepress@^1.8.2:
     envinfo "^7.2.0"
     opencollective-postinstall "^2.0.2"
     update-notifier "^4.0.0"
+
+walk-sync@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.nlark.com/walk-sync/download/walk-sync-3.0.0.tgz#67f882925021e20569a1edd560b8da31da8d171c"
+  integrity sha1-Z/iCklAh4gVpoe3VYLjaMdqNFxw=
+  dependencies:
+    "@types/minimatch" "^3.0.4"
+    ensure-posix-path "^1.1.0"
+    matcher-collection "^2.0.1"
+    minimatch "^3.0.4"
 
 watchpack-chokidar2@^2.0.1:
   version "2.0.1"

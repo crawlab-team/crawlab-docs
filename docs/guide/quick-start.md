@@ -39,7 +39,7 @@ services:
 
 ## Start Crawlab
 
-Start Crawlab (along with MongoDB) by executing the command below.
+Start Crawlab along with MongoDB by executing the command below.
 
 ```bash
 docker-compose up -d

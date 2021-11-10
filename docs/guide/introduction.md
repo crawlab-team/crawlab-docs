@@ -1,6 +1,6 @@
 # Introduction
 
-If you already know what Crawlab is and what it is used for, you can head straight to [Quick Start](/docs/guide/quick-start.md) or [Installation](/docs/guide/installation/kubernetes.md) to install and start to use Crawlab.
+If you already know what Crawlab is and what it is used for, you can head straight to [Quick Start](./quick-start) or [Installation](./installation) to install and start to use Crawlab.
 
 If you are not familiar with Crawlab, you can read sections below in order to understand more about Crawlab.
 
@@ -15,7 +15,7 @@ Crawlab project has been under continuous development since it was published in 
 ## Who can use Crawlab?
 
 - **Web Crawler Engineers**. By integrating web crawler programs into Crawlab, you can now focus only on the crawling and parsing logics, instead of wasting too much time on writing common modules such as task queue, storage, logging, notification, etc.
-- **Operation/DevOps Engineers**. The main benefits from Crawlab for Operation/DevOps Engineers are the convenience in deployment (for both crawler programs and Crawlab itself). Crawlab supports easy installation with Docker and Kubernetes.
+- **Operation Engineers**. The main benefits from Crawlab for Operation Engineers are the convenience in deployment (for both crawler programs and Crawlab itself). Crawlab supports easy installation with Docker and Kubernetes.
 - **Data Analysts**. Data analysts who can code (e.g. Python) are able to develop web crawler programs (e.g. Scrapy) and upload them into Crawlab. Then leave all the rest dirty work to Crawlab, and it will automatically collect data for you.
 - **Others**. Technically everyone can enjoy the convenience and easiness of automation provided by Crawlab. Though Crawlab is good at running web crawler tasks, it can also be used for other types of tasks such as data processing and automation.
 
