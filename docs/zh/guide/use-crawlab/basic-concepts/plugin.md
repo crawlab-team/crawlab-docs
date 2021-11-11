@@ -1,68 +1,72 @@
-# Plugin
+# 插件
 
-*Plugin* is an extension which can extend beyond existing functionalities and features. In Crawlab, the plugin framework is in place for users to customize their web crawler management platforms.
+*插件* 是可以延伸既定功能的扩展。在 Crawlab 中，用户可以使用 *插件框架* 来自定义爬虫管理平台。
 
-## Why Plugin
-Why don't we just hack around the source code in Crawlab when customization is needed? The reason is the concern for **maintainability**. When you change some code of core modules in Crawlab, you might risk your project's maintainability because there will be upgrades in the future, which would very likely break your current customization. 
+## 为什么用插件
+为什么我们不直接捣鼓一下 Crawlab 源代码来满足自定义需求？其原因是需要考虑 **可维护性**。当您修改 Crawlab 的核心模块时，可能会产生项目维护方面的风险，因为一旦将来有版本升级，您的自定义功能很可能会遭到破坏。
 
-A well-designed plugin is less likely to be tightly coupled with Crawlab, so that updates in Crawlab will not significantly affect the plugin. Plugins are pluggable and easy to be installed or uninstalled.
+一个良好设计的插件很少会跟 Crawlab 紧耦合，因此 Crawlab 的版本升级更新将不容易对插件造成严重影响。插件是可插拔的，并且能很容易被安装或卸载。
 
-## Plugin Framework
+## 插件框架
 
-*Plugin Framework* is embedded in Crawlab which manages official and third-party plugins. Crawlab users can develop plugins based on Crawlab Plugin Framework (CPF). If you would like to add additional features by developing a plugin, you are free to check out [Develop Plugins](/develop/plugins/) for more information.
+*插件框架* 是内置在 Crawlab 里的，它用于管理官方和第三方插件。Crawlab 用户能够基于 *Crawlab 插件框架 (CPF)* 来开发插件。如果您希望通过开发插件来添加新功能，您可以参考 [开发插件](../../../develop/plugins/) 里更多信息.
 
-## Official Plugins
+## 官方插件
 
-There are some official plugins maintained by [Crawlab Team](https://github.com/crawlab-team). The Github repos of official Crawlab plugins are normally located in [Crawlab Team's repositories](https://github.com/orgs/crawlab-team/repositories), each of which has a prefix `plugin-`.
+[Crawlab 开发团队](https://github.com/crawlab-team) 开发了一些官方插件，并在提供长期维护。官方 Crawlab 插件在 [Crawlab 开发团队 Github 仓库](https://github.com/orgs/crawlab-team/repositories)，每一个仓库都带有前缀 `plugin-`。
 
-Name | Description
+名称 | 描述
 ---|---
-[notification](https://github.com/crawlab-team/plugin-notification)|Sending alerts and notifications such as emails and mobile push notifications
-[dependency](https://github.com/crawlab-team/plugin-dependency)|Installing and managing dependencies and running environment
-[spider-assistant](https://github.com/crawlab-team/plugin-spider-assistant)|Providing advanced web crawler features such as framework support (e.g. Scrapy, etc.)
+[notification](https://github.com/crawlab-team/plugin-notification)|发送消息提醒，例如邮件通知、手机推送
+[dependency](https://github.com/crawlab-team/plugin-dependency)|安装依赖并管理依赖和运行环境
+[spider-assistant](https://github.com/crawlab-team/plugin-spider-assistant)|提供高级网络爬虫功能，包括框架支持，例如 Scrapy 等
 
-## Install Plugin
+## 安装插件
 
 ::: info
-After a plugin is installed, you should refresh page in your web browser in order for plugin UI components to display.
+插件安装完成之后，您需要在浏览器中刷新页面来显示插件的 UI 组件。
 :::
 
-There are several ways of installing plugins in Crawlab.
+在 Crawlab 中有多种安装插件的方式。
 
-### Install by Name
+### 通过名称安装
 
-You can install [official plugins](#official-plugins) by only input the plugin name in `New Plugin` dialog.
-1. Navigate to `Plugins`.
-2. Choose `Type` as `Name`.
-3. Enter the name of plugin name in the field `Name`.
-4. Click `Confirm`.
+您可以通过在 `New Plugin` 对话框中输入插件名称来安装 [官方插件](#official-plugins)。
+1. 导航至 `Plugins` 页面
+2. 在 `Type` 字段中选择 `Name`
+3. 在 `Name` 字段中输入插件名称
+4. 点击 `Confirm`.
 
-### Install by Git
+### 通过 Git 安装
 
-If you know the git url of a Crawlab plugin, you can install it through git url.
-1. Navigate to `Plugins`.
-2. Choose `Type` as `Git`.
-3. Enter the url of the plugin in the field `Install URL`.
-4. Click `Confirm`.
+如果您知道 Crawlab 插件的 Git URL，您可以通过它来安装插件。
+1. 导航至 `Plugins` 页面
+2. 在 `Type` 字段中选择 `Git`
+3. 在 `Install URL` 字段中输入插件 URL
+4. 点击 `Confirm`.
 
-### Install by Local
+### 通过本地安装
 
 ::: warning
-This method is recommended only when you are developing Crawlab with source code. 
+这个方式仅适合用源码开发 Crawlab 时使用。
 :::
-1. Navigate to `Plugins`.
-2. Choose `Type` as `Local`.
-3. Enter local path of the plugin in the field `Install Path`.
-4. Click `Confirm`.
+1. 导航至 `Plugins` 页面
+2. 在 `Type` 字段中选择 `Local`
+3. 在 `Install Path` 字段中输入插件 URL
+4. 点击 `Confirm`.
 
-### Installation Source
+### 安装源
 
-The default installation source of official plugins is `Github`. But Github is not always the best `Source` to access. For example, if you are in Mainland China, accessing Github can sometimes be slow; then you can choose `Gitee` as `Source` of official plugins, which will largely speed up plugin installation.
+::: warning
+*安装源* 仅对官方插件生效。
+:::
 
-## Uninstall Plugin
+默认的官方插件安装源是 `Github`。但是 Github 不总是最佳安装源。例如，如果您所在地是中国大陆，连接到 Github 可能会有些慢。这时您可以选择 `Source` 为 `Gitee` 来大幅加速官方插件的安装。
 
-You can uninstall a plugin by clicking `Delete` button on the left in `Plugins` page.
+## 卸载插件
 
-## Start/Stop Plugin
+您可以在 `Plugins` 页面里点击右侧的 `Delete` 按钮来卸载插件。
 
-You can start or stop a plugin by clicking `Start` or `Stop` button on the left in `Plugins` page.
+## 启动/停止
+
+您可以在 `Plugins` 页面里点击右侧的 `Start` 或 `Stop` 按钮来启动或停止插件。

@@ -1,9 +1,9 @@
 # Plugin
 
-*Plugin* is an extension which can extend beyond existing functionalities and features. In Crawlab, the plugin framework is in place for users to customize their web crawler management platforms.
+*Plugin* is an extension which can extend beyond existing functionalities and features. In Crawlab, the *Plugin Framework* is in place for users to customize their web crawler management platforms.
 
 ## Why Plugin
-Why don't we just hack around the source code in Crawlab when customization is needed? The reason is the concern for **maintainability**. When you change some code of core modules in Crawlab, you might risk your project's maintainability because there will be upgrades in the future, which would very likely break your current customization. 
+Why don't we just hack around the source code in Crawlab when customization is needed? The reason is the concern for **Maintainability**. When you change some code of core modules in Crawlab, you might risk your project's maintainability because there will be upgrades in the future, which would very likely break your current customization. 
 
 A well-designed plugin is less likely to be tightly coupled with Crawlab, so that updates in Crawlab will not significantly affect the plugin. Plugins are pluggable and easy to be installed or uninstalled.
 
@@ -57,12 +57,16 @@ This method is recommended only when you are developing Crawlab with source code
 
 ### Installation Source
 
+::: warning
+*Installation Source* is only for official plugins.
+:::
+
 The default installation source of official plugins is `Github`. But Github is not always the best `Source` to access. For example, if you are in Mainland China, accessing Github can sometimes be slow; then you can choose `Gitee` as `Source` of official plugins, which will largely speed up plugin installation.
 
 ## Uninstall Plugin
 
-You can uninstall a plugin by clicking `Delete` button on the left in `Plugins` page.
+You can uninstall a plugin by clicking `Delete` button on the right in `Plugins` page.
 
-## Start/Stop Plugin
+## Start/Stop
 
-You can start or stop a plugin by clicking `Start` or `Stop` button on the left in `Plugins` page.
+You can start or stop a plugin by clicking `Start` or `Stop` button on the right in `Plugins` page.
