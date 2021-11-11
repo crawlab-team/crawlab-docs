@@ -1,3 +1,3 @@
 <script>
-window.location.href = '/develop/introduction';
+window.location.href = '/zh/develop/introduction';
 </script>

@@ -107,6 +107,8 @@ module.exports = {
       {
         title: '开发',
         path: '/zh/develop/',
+        collapsable: false,
+        initialOpenGroupIndex: 1,
         children: [
           {
             title: '介绍',
