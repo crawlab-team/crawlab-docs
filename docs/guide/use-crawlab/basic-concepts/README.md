@@ -1,14 +1,14 @@
-# Basic Concepts
+# 基础概念
 
-In Crawlab, you can do awesome things like creating and running distributed web crawlers, monitoring realtime logs and viewing crawled data, or scheduling periodic tasks in a cron-style fashion, or configuring concurrency for each node. What have made those features available in Crawlab, and how do they work?
+在 Crawlab 中，您可以做一些很棒的事情，例如创建并运行分布式网络爬虫、监控实时任务日志、查看已抓取数据、设置 cron 风格的定时任务、设置节点并发数，等等。我们已经将这些功能集成到了 Crawlab，但它们是如何工作的呢？
 
-In this section, we are going to introduce some basic concepts for better understanding how to use Crawlab comprehensively and efficiently.
+在本小节，我们将介绍一些基础概念，帮助您进一步理解如何全面和有效的使用 Crawlab。
 
-- [Node](./node)
-- [Project](./project)
-- [Spider](./spider)
-- [Task](./task)
-- [Schedule](./schedule)
-- [User](./user)
-- [Plugin](./plugin)
-- [Others](./others)
+- [节点](./node)
+- [项目](./project)
+- [爬虫](./spider)
+- [任务](./task)
+- [定时任务](./schedule)
+- [用户](./user)
+- [插件](./plugin)
+- [其他](./others)
