@@ -1,3 +1,3 @@
-# Others
+# 其他
 
 :construction: Under construction...
