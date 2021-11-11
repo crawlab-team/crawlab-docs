@@ -1,15 +1,15 @@
-# Project
+# 项目
 
-A project is a group of [spiders](./spider) that are normally closely related and mostly crawl sites or data in the same category or industry. Therefore, you can regard projects as a method of grouping spiders together so that they could be better managed.
+项目是通常是一组紧密相关或抓取同类网站数据的 [爬虫](./spider)。因此，您可以将项目作为给爬虫分组的方式。通过这种方式，爬虫能够被更好的管理。
 
-It is in one-to-many relationship with [spiders](./spider).
+项目跟 [爬虫](./spider) 是一对多的关系。
 
-## Link Spiders to Project
+## 关联爬虫
 
-You can link a spider to a project by either,
-1. selecting `Project` in the spider detail page, or
-2. selecting `Project` in the create new spider dialog.
+您可以将一个爬虫与一个项目进行关联，通过
+1. 在爬虫详情页 `Project` 字段中选择项目，或
+2. 在创建新爬虫对话框中的 `Project` 字段中选择项目
 
-## View Spiders of Project
+## 查看爬虫
 
-Navigate to `Spiders` tab in the project detail page.
+在项目详情页中导航到 `Spiders` 标签。
