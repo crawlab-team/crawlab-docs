@@ -14,13 +14,15 @@ Of course you can set up multiple Crawlab instances (nodes) on a server, but tha
 
 Master Node is the control center of the whole distributed system in Crawlab. It acts like the brain of a human body. Master Node assigns [tasks](./task) to [Worker Nodes](#worker-node) or itself, and manages them. It also deploys and distributes [spider](./spider) files to other nodes. Furthermore, it provides APIs to the frontend application and handles communication between each node.
 
+::: warning
 There is only **ONE** Master Node in Crawlab. 
+:::
 
 ## Worker Node
 
 Worker Node is a Crawlab instance dedicated for running crawling [tasks](./task). Normally, a single node or server can be limited to its computing power and resources including CPUs, memory and network IO. Therefore, the number of Worker Nodes can be increased in order to scale up the throughput of data collection and improve the overall crawling performance of the distributed system.
 
-There can be none or multiple Worker Nodes in Crawlab.
+There can be none (SND) or multiple Worker Nodes (MND) in Crawlab.
 
 ## Topology
 
@@ -41,7 +43,7 @@ mn -down->wn3
 
 In `Nodes` page, you can view the status of a node whether it is online of offline. 
 
-## Enable/Disable Run Task
+## Enable/Disable
 
 You can enable or disable nodes to run tasks by toggling the switch button of `Enabled` attribute in `Nodes` page and node detail page.
 

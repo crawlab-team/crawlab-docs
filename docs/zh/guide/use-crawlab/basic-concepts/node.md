@@ -1,58 +1,62 @@
-# Node
+# 节点
 
-A node is a Crawlab instance that runs crawling [tasks](./task) or provides other functionalities. You can basically regard a node as a server.
+节点其实就是一个 Crawlab 实例，用于运行 [任务](./task) 以及提供其他功能。基本上您可以将一个节点当作一台服务器。
 
-There are two types of nodes, each of which serves different functionalities.
-1. [Master Node](#master-node)
-2. [Worker Node](#worker-node)
+有两类节点，它们分别提供不同的功能。
+1. [主节点](#master-node)
+2. [工作节点](#worker-node)
 
 ::: warning
-Of course you can set up multiple Crawlab instances (nodes) on a server, but that is **NOT** recommended as a single instance (node) on a server normally suffices.
+您当然可以在一台服务器上搭建多个 Crawlab 实例（节点）。但那样做是 **不推荐的**，因为服务器上运行单实例（节点）通常已经足够了。
 :::
 
-## Master Node
+## 主节点
 
-Master Node is the control center of the whole distributed system in Crawlab. It acts like the brain of a human body. Master Node assigns [tasks](./task) to [Worker Nodes](#worker-node) or itself, and manages them. It also deploys and distributes [spider](./spider) files to other nodes. Furthermore, it provides APIs to the frontend application and handles communication between each node.
+主节点是 Crawlab 中分布式系统的中控模块，相当于人体中的大脑。主节点分配 [任务](./task) 给 [工作节点](#worker-node) 或它自己，并且管理它们。同时，主节点部署和分发 [爬虫](./spider) 文件至其他节点。另外，它还为前端应用提供 API，并处理节点间的通信。
 
-There is only **ONE** Master Node in Crawlab. 
+::: warning
+在 Crawlab 中只有 **一个** 主节点。
+:::
 
-## Worker Node
+## 工作节点
 
-Worker Node is a Crawlab instance dedicated for running crawling [tasks](./task). Normally, a single node or server can be limited to its computing power and resources including CPUs, memory and network IO. Therefore, the number of Worker Nodes can be increased in order to scale up the throughput of data collection and improve the overall crawling performance of the distributed system.
+工作节点是一个 Crawlab 实例，专门用于运行抓取 [任务](./task)。通常，一个节点或服务器受限于计算能力和资源（包括 CPU、内存、网络 IO）。因此，我们可以通过调整工作节点的数量来对数据采集吞吐量进行扩容，以提高分布式系统的整体数据抓取能力。
 
-There can be none or multiple Worker Nodes in Crawlab.
+::: info
+在 Crawlab 中可以不用工作节点（单节点部署 SND），或有多个工作节点（多节点部署 MND）。
+:::
 
-## Topology
+## 网络拓扑
 
 @startuml
 !theme amiga
 
-node #409eff "Master Node" as mn
-node #e6a23c "Worker Node 1" as wn1
-node #e6a23c "Worker Node 2" as wn2
-node #e6a23c "Worker Node 3" as wn3
+node #409eff "主节点" as mn
+node #e6a23c "工作节点 1" as wn1
+node #e6a23c "工作节点 2" as wn2
+node #e6a23c "工作节点 3" as wn3
 
 mn -down->wn1
 mn -down->wn2
 mn -down->wn3
 @enduml
 
-## Check Node Status
+## 查看节点状态
 
-In `Nodes` page, you can view the status of a node whether it is online of offline. 
+在 `Nodes` 页面，您可以查看节点状态，看看在线与否。
 
-## Enable/Disable Run Task
+## 启用/禁用
 
-You can enable or disable nodes to run tasks by toggling the switch button of `Enabled` attribute in `Nodes` page and node detail page.
+您启用或禁用节点来控制它是否能运行爬虫任务。您可以在 `Nodes` 页面或详情页中点击 `Enabled` 属性中的切换按钮来控制。
 
-## Set Max Runners
+## 设置最大执行器数量
 
-A node can run multiple tasks at the same time. The number of concurrent tasks is controlled by `Max Runners` of a node. It can be configured in the node detail page.
+一个节点能够在同一个时间运行多个任务。并发任务数量由节点的 `Max Runners` 控制，它能够在节点详情页里配置。
 
-## Set Basic Info
+## 设置基础信息
 
-Basic info such as node name, IP, MAC address can be set in the node detail page.
+诸如节点名称、IP 地址、MAC 地址等基础信息都可以在节点详情页中设置。
 
-## Add Node
+## 添加节点
 
-You can refer to [Set up Worker Nodes](/guide/installation/docker.html#set-up-worker-nodes) in Multi-Node Deployment (MND) of Docker Installation to add new nodes.
+您可以参考 Docker 安装中多节点部署章节的 [搭建工作节点](/guide/installation/docker.html#set-up-worker-nodes) 来添加新节点。
