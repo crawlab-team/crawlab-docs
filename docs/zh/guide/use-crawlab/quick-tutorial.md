@@ -16,7 +16,6 @@
 
 ## 创建爬虫
 
-First thing first, we are going to generate a Scrapy project. Let's start by installing Scrapy.
 首先，我们将创建一个 Scrapy 项目，咱们从安装 Scrapy 开始。
 
 ```bash
