@@ -45,7 +45,7 @@ There are several ways to upload spider files.
 2. Click `Files` tab.
 3. Click `Upload` button in the nav bar.
 4. Choose `Files`.
-5. Drag and drop spider files into the drop zone.
+5. Drag and drop spider files into the drop zone, or click the drop zone and select files.
 6. Click `Confirm`.
 
 ### Upload Files (Drag & Drop)
@@ -57,11 +57,11 @@ There are several ways to upload spider files.
 
 You can follow the steps below to run a spider.
 1. If in spider detail page, click `Run` button with play icon in the nav bar.
-2. If in `Spiders` page, click `Run` button with play icon in the nav bar on the right.
+2. If in `Spiders` page, click `Run` button with play icon on the right.
 3. Select appropriate settings for running spider.
 4. Click `Confirm`.
 
-Here is the explanation of settings for running a spider is as below.
+Here is the explanation of settings for running a spider.
 - `Command`: Actual cmd/bash/shell base command that will be executed.
 - `Param`: Actual parameters/arguments passed to `Command`.
 - `Mode`: Task running mode. Default to `Random Node`.
@@ -72,13 +72,13 @@ Here is the explanation of settings for running a spider is as below.
 @startuml
 !theme amiga
 
-rectangle Spider
-rectangle Project
-rectangle Task
-rectangle Schedule
+rectangle "Spider" as s
+rectangle "Project" as p
+rectangle "Task" as t
+rectangle "Schedule" as sch
 
-Spider "n" *-left- "1" Project
-Spider "1" *-right- "n" Task
-Spider "1" *-down- "n" Schedule
+s "n" *-left- "1" p
+s "1" *-right- "n" t
+s "1" *-down- "n" sch
 
 @enduml
