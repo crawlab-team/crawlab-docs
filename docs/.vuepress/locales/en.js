@@ -22,81 +22,81 @@ module.exports = {
     sidebar: [
       {
         title: 'Guide',
-        path: '/guide',
+        path: '/en/guide',
         collapsable: false,
         initialOpenGroupIndex: 1,
         children: [
           {
             title: 'Introduction',
-            path: '/guide/introduction',
+            path: '/en/guide/introduction',
           },
           {
             title: 'Quick Start',
-            path: '/guide/quick-start',
+            path: '/en/guide/quick-start',
           },
           {
             title: 'Installation',
-            path: '/guide/installation/',
+            path: '/en/guide/installation/',
             collapsable: false,
             children: [
               {
                 title: 'Docker',
-                path: '/guide/installation/docker',
+                path: '/en/guide/installation/docker',
               },
               {
                 title: 'Kubernetes',
-                path: '/guide/installation/kubernetes',
+                path: '/en/guide/installation/kubernetes',
               },
               {
                 title: 'Direct Deploy',
-                path: '/guide/installation/direct-deploy',
+                path: '/en/guide/installation/direct-deploy',
               },
             ]
           },
           {
             title: 'Use Crawlab',
-            path: '/guide/use-crawlab/',
+            path: '/en/guide/use-crawlab/',
             collapsable: false,
             children: [
               {
                 title: 'Quick Tutorial',
-                path: '/guide/use-crawlab/quick-tutorial',
+                path: '/en/guide/use-crawlab/quick-tutorial',
               },
               {
                 title: 'Basic Concepts',
-                path: '/guide/use-crawlab/basic-concepts/',
+                path: '/en/guide/use-crawlab/basic-concepts/',
                 children: [
                   {
                     title: 'Node',
-                    path: '/guide/use-crawlab/basic-concepts/node',
+                    path: '/en/guide/use-crawlab/basic-concepts/node',
                   },
                   {
                     title: 'Project',
-                    path: '/guide/use-crawlab/basic-concepts/project',
+                    path: '/en/guide/use-crawlab/basic-concepts/project',
                   },
                   {
                     title: 'Spider',
-                    path: '/guide/use-crawlab/basic-concepts/spider',
+                    path: '/en/guide/use-crawlab/basic-concepts/spider',
                   },
                   {
                     title: 'Task',
-                    path: '/guide/use-crawlab/basic-concepts/task',
+                    path: '/en/guide/use-crawlab/basic-concepts/task',
                   },
                   {
                     title: 'Schedule',
-                    path: '/guide/use-crawlab/basic-concepts/schedule',
+                    path: '/en/guide/use-crawlab/basic-concepts/schedule',
                   },
                   {
                     title: 'User',
-                    path: '/guide/use-crawlab/basic-concepts/user',
+                    path: '/en/guide/use-crawlab/basic-concepts/user',
                   },
                   {
                     title: 'Plugin',
-                    path: '/guide/use-crawlab/basic-concepts/plugin',
+                    path: '/en/guide/use-crawlab/basic-concepts/plugin',
                   },
                   {
                     title: 'Others',
-                    path: '/guide/use-crawlab/basic-concepts/others',
+                    path: '/en/guide/use-crawlab/basic-concepts/others',
                   },
                 ]
               },
@@ -106,15 +106,15 @@ module.exports = {
       },
       {
         title: 'Develop',
-        path: '/develop/',
+        path: '/en/develop/',
         children: [
           {
             title: 'Introduction',
-            path: '/develop/introduction',
+            path: '/en/develop/introduction',
           },
           {
             title: 'Plugins',
-            path: '/develop/plugins/',
+            path: '/en/develop/plugins/',
           }
         ]
       }

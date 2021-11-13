@@ -3,7 +3,7 @@ const zh = require('./locales/zh')
 
 module.exports = {
   locales: {
-    '/': en.locale,
+    '/en/': en.locale,
     '/zh/': zh.locale,
   },
   sidebarDepth: 2,
@@ -11,12 +11,13 @@ module.exports = {
     logo: '/assets/img/logo.svg',
     smoothScroll: true,
     locales: {
-      '/': en.themeConfig,
+      '/en/': en.themeConfig,
       '/zh/': zh.themeConfig,
     },
   },
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['meta', { name: 'default-lang', content: process.env.CRAWLAB_LANG || 'zh' }]
   ],
   plugins: [
     '@vuepress/active-header-links',

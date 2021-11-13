@@ -1,6 +1,6 @@
 # Introduction
 
-If you already know what Crawlab is and what it is used for, you can head straight to [Quick Start](./quick-start) or [Installation](./installation) to install and start to use Crawlab.
+If you already know what Crawlab is and what it is used for, you can head straight to [Quick Start](./quick-start) or [Installation](installation) to install and start to use Crawlab.
 
 If you are not familiar with Crawlab, you can read sections below in order to understand more about Crawlab.
 

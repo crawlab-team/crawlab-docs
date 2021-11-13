@@ -6,7 +6,7 @@ In Crawlab, you can not only run tasks through only a single click, but also be 
 
 ## Run Task
 
-You can either [run a task from spider](/guide/use-crawlab/basic-concepts/spider.html#run-spider), or follow the steps below.
+You can either [run a task from spider](/en/guide/use-crawlab/basic-concepts/spider.html#run-spider), or follow the steps below.
 1. Navigate to `Tasks` page.
 2. Click `New Tasks` button on the top left.
 3. Select `Spider` and choose other settings.

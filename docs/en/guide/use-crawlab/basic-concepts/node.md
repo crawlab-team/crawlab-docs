@@ -57,4 +57,4 @@ Basic info such as node name, IP, MAC address can be set in the node detail page
 
 ## Add Node
 
-You can refer to [Set up Worker Nodes](/guide/installation/docker.html#set-up-worker-nodes) in Multi-Node Deployment (MND) of Docker Installation to add new nodes.
+You can refer to [Set up Worker Nodes](/en/guide/installation/docker.html#set-up-worker-nodes) in Multi-Node Deployment (MND) of Docker Installation to add new nodes.

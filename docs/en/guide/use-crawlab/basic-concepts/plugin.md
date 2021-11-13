@@ -9,7 +9,7 @@ A well-designed plugin is less likely to be tightly coupled with Crawlab, so tha
 
 ## Plugin Framework
 
-*Plugin Framework* is embedded in Crawlab which manages official and third-party plugins. Crawlab users can develop plugins based on Crawlab Plugin Framework (CPF). If you would like to add additional features by developing a plugin, you are free to check out [Develop Plugins](/develop/plugins/) for more information.
+*Plugin Framework* is embedded in Crawlab which manages official and third-party plugins. Crawlab users can develop plugins based on Crawlab Plugin Framework (CPF). If you would like to add additional features by developing a plugin, you are free to check out [Develop Plugins](../../../develop/plugins/) for more information.
 
 ## Official Plugins
 
