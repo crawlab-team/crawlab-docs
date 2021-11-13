@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /assets/img/logo-150x150.png
+heroImage: /assets/img/logo.svg
 heroText: Crawlab
 tagline: 分布式爬虫管理平台
 actionText: 快速开始 →

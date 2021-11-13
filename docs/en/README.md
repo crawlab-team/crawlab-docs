@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /assets/img/logo-150x150.png
+heroImage: /assets/img/logo.svg
 heroText: Crawlab
 tagline: Distributed web crawler management platform
 actionText: Get Started →
