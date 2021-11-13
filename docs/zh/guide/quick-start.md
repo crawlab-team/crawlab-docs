@@ -53,6 +53,6 @@ docker-compose up -d
 这是最小化配置的 Crawlab，您可以通过该演示环境来体验大多数功能。您 **不能** 在生产环节中使用该配置。
 :::
 
-如果您希望在生产环境中部署 Crawlab，您应该参考 [安装](/docs/guide/installation).
+如果您希望在生产环境中部署 Crawlab，您应该参考 [安装](./installation).
 
 我们也推荐您完成 [快速教程](./use-crawlab/quick-tutorial) 以学习如何使用 Crawlab.

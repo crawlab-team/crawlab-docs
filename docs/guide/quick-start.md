@@ -53,6 +53,6 @@ Now you can open the browser and navigate to `http://localhost:8080` to start us
 This is a minimal setup of Crawlab and you can experience most of the features in this demo environment. You should **NOT** use this demo setup in production environment!
 :::
 
-If you would like to deploy Crawlab in production environment, you should refer to [Installation](/docs/guide/installation) for more information.
+If you would like to deploy Crawlab in production environment, you should refer to [Installation](./installation) for more information.
 
 We also recommend that you follow [Quick Tutorial](./use-crawlab/quick-tutorial) for how to use Crawlab.
