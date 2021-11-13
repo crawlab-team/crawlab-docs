@@ -8,6 +8,8 @@ module.exports = {
   },
   sidebarDepth: 2,
   themeConfig: {
+    logo: '/assets/img/logo.svg',
+    smoothScroll: true,
     locales: {
       '/': en.themeConfig,
       '/zh/': zh.themeConfig,

@@ -1,7 +1,7 @@
 module.exports = {
   locale: {
     lang: 'zh-CN',
-    title: 'Crawlab 文档',
+    title: 'Crawlab',
     description: 'Documentation for distributed web crawler management platform',
   },
   themeConfig: {
