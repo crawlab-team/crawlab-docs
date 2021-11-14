@@ -1,13 +1,13 @@
 module.exports = {
   locale: {
     lang: 'zh-CN',
-    title: 'Crawlab',
+    title: 'Crawlab 中文文档',
     description: 'Documentation for distributed web crawler management platform',
   },
   themeConfig: {
-    selectText: '选择语言',
+    selectText: 'EN / 中文',
     label: '简体中文',
-    ariaLabel: '选择语言',
+    ariaLabel: 'EN / 中文',
     editLinkText: '在 GitHub 上编辑此页',
     serviceWorker: {
       updatePopup: {
@@ -18,14 +18,18 @@ module.exports = {
     algolia: {},
     nav: [
       {
-        text: '其他版本',
+        text: 'GitHub',
+        link: 'https://github.com/crawlab-team/crawlab'
+      },
+      {
+        text: 'v0.6.x',
         items: [
           {
-            text: '0.5.1',
+            text: 'v0.5.1',
             link: 'https://docs.crawlab.cn/zh/',
           },
         ]
-      }
+      },
     ],
     sidebar: [
       {
@@ -111,6 +115,17 @@ module.exports = {
             ]
           },
         ]
+      },
+      {
+        title: '原理',
+        path: '/zh/principle',
+        collapsable: false,
+        children: [
+          {
+            title: '介绍',
+            path: '/zh/principle/introduction',
+          },
+        ],
       },
       {
         title: '开发',

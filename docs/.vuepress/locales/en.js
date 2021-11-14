@@ -1,13 +1,13 @@
 module.exports = {
   locale: {
     lang: 'en-US',
-    title: 'Crawlab',
+    title: 'Crawlab Documentation',
     description: 'Documentation for distributed web crawler management platform Crawlab',
   },
   themeConfig: {
-    selectText: 'Languages',
+    selectText: 'EN / 中文',
     label: 'English',
-    ariaLabel: 'Languages',
+    ariaLabel: 'EN / 中文',
     editLinkText: 'Edit this page on GitHub',
     serviceWorker: {
       updatePopup: {
@@ -18,21 +18,24 @@ module.exports = {
     algolia: {},
     nav: [
       {
-        text: 'Other Versions',
+        text: 'GitHub',
+        link: 'https://github.com/crawlab-team/crawlab'
+      },
+      {
+        text: 'v0.6.x',
         items: [
           {
             text: '0.5.1',
             link: 'https://docs.crawlab.cn/en/',
           },
         ]
-      }
+      },
     ],
     sidebar: [
       {
         title: 'Guide',
         path: '/en/guide',
         collapsable: false,
-        initialOpenGroupIndex: 1,
         children: [
           {
             title: 'Introduction',
@@ -111,6 +114,17 @@ module.exports = {
             ]
           },
         ]
+      },
+      {
+        title: 'Principle',
+        path: '/en/principle',
+        collapsable: false,
+        children: [
+          {
+            title: 'Introduction',
+            path: '/en/principle/introduction',
+          },
+        ],
       },
       {
         title: 'Develop',
