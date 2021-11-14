@@ -17,7 +17,15 @@ module.exports = {
     },
     algolia: {},
     nav: [
-      // { text: 'Nested', link: '/nested/', ariaLabel: 'Nested' }
+      {
+        text: 'Other Versions',
+        items: [
+          {
+            text: '0.5.1',
+            link: 'https://docs.crawlab.cn/en/',
+          },
+        ]
+      }
     ],
     sidebar: [
       {

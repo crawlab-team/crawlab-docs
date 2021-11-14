@@ -1,3 +1,1 @@
-<script>
-window.location.href = '/develop/introduction';
-</script>
+<Redirect path="/en/develop/introduction"></Redirect>

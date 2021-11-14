@@ -17,7 +17,15 @@ module.exports = {
     },
     algolia: {},
     nav: [
-      // { text: '嵌套', link: '/zh/nested/' }
+      {
+        text: '其他版本',
+        items: [
+          {
+            text: '0.5.1',
+            link: 'https://docs.crawlab.cn/zh/',
+          },
+        ]
+      }
     ],
     sidebar: [
       {

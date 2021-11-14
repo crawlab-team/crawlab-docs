@@ -4,8 +4,11 @@
   "description": "Documentation for Crawlab",
   "main": "index.js",
   "scripts": {
+    "build": "npm run docs:build",
+    "publish": "npm run docs:publish",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "docs:publish": "node ./scripts/publish.js",
     "translate:zh": "node ./scripts/translate.js",
     "convert:image:logo:150x150": "node ./scripts/convertImage.js -i ./docs/.vuepress/public/assets/img/logo.svg -o ./docs/.vuepress/public/assets/img/logo-150x150.png -W 150 -H 150",
     "move:images": "node ./scripts/moveImages.js"
@@ -27,6 +30,7 @@
     "dotenv": "^10.0.0",
     "markdown-it-plantuml": "^1.4.1",
     "md5": "^2.3.0",
+    "qiniu": "^7.4.0",
     "qs": "^6.10.1",
     "sharp": "^0.29.2",
     "vueperslides": "^2.15.2",
