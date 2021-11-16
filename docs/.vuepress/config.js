@@ -17,7 +17,8 @@ module.exports = {
   },
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'default-lang', content: process.env.CRAWLAB_LANG || 'zh' }]
+    ['meta', { name: 'default-lang', content: process.env.CRAWLAB_LANG || 'zh' }],
+    ['script', { src: '/assets/js/umeng.js' }]
   ],
   plugins: [
     '@vuepress/active-header-links',
