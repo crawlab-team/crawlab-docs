@@ -46,7 +46,7 @@ git clone https://github.com/crawlab-team/crawlab
 在 `./frontend` 目录里，运行以下命令启动前端。
 
 ```bash
-npm run dev
+npm run build:dev
 ```
 
 这时，您可以在浏览器中输入 `http://localhost:8080` 看到界面了，只是暂时还无法连上后端。

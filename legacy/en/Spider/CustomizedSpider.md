@@ -48,11 +48,11 @@ The spider is then created/updated.
 
 For developers who are more accustomed to operating on the command line, perhaps CLI tool is a better choice. Moreover, this method does not require the user to package the project into a zip file, which is much more convenient for uploading the spider.
 
-[CLI command line tool](./CLI.md) is an experimental function that allows developers to easily upload files. For details, please refer to the [cli command line tool](./CLI.md) chapter.
+[CLI command line tool](../SDK/CLI.md) is an experimental function that allows developers to easily upload files. For details, please refer to the [cli command line tool](../SDK/CLI.md) chapter.
 
 Next, we will show you how to upload a custom spider through the CLI command line tool.
 
-⚠️Note: please make sure that you have installed CLI command line tool and can obtain 'token' before using. If not, please refer to the [cli command-line tools](./CLI.md) section.
+⚠️Note: please make sure that you have installed CLI command line tool and can obtain 'token' before using. If not, please refer to the [cli command-line tools](../SDK/CLI.md) section.
 
 ##### Execute command to upload spider
 
