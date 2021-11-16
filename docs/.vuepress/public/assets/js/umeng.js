@@ -15,7 +15,6 @@
     })
 
     //发送pv
-    const { aplus_queue } = window
     window.aplus_queue.push({
       action: 'aplus.sendPV',
       arguments: [{ is_auto: true }, {}]
