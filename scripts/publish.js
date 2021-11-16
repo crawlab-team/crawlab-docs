@@ -1,6 +1,7 @@
 const path = require('path')
 const qiniu = require('qiniu')
 const walkSync = require('walk-sync')
+const chalk = require('chalk')
 
 // target directory
 const targetDir = './docs/.vuepress/dist'
@@ -20,22 +21,21 @@ const config = new qiniu.conf.Config()
 // zone
 config.zone = qiniu.zone[process.env.QINIU_ZONE]
 
-// mac
-const mac = new qiniu.auth.digest.Mac(accessKey, secretKey)
-
-// options
-const options = {
-  scope: bucket,
-  force: true,
-}
-
-// put policy
-const putPolicy = new qiniu.rs.PutPolicy(options)
-
-// upload token
-const uploadToken = putPolicy.uploadToken(mac)
-
 function uploadFile(localFile, key) {
+  // options
+  const options = {
+    scope: `${bucket}:${key}`,
+  }
+
+  // mac
+  const mac = new qiniu.auth.digest.Mac(accessKey, secretKey)
+
+  // put policy
+  const putPolicy = new qiniu.rs.PutPolicy(options)
+
+  // upload token
+  const uploadToken = putPolicy.uploadToken(mac)
+
   return new Promise((resolve, reject) => {
     const formUploader = new qiniu.form_up.FormUploader(config)
     const putExtra = new qiniu.form_up.PutExtra()
@@ -45,11 +45,14 @@ function uploadFile(localFile, key) {
         throw respErr
       }
       if (respInfo.statusCode === 200) {
-        console.log(`uploaded ${localFile} => ${key}`)
+        console.log(`${chalk.green('uploaded')} ${localFile} => ${key}`)
+        resolve()
+      } else if (respInfo.statusCode === 614) {
+        console.log(`${chalk.yellow('exists')} ${localFile} => ${key}`)
         resolve()
       } else {
-        console.error(respInfo.statusCode)
-        console.error(respBody)
+        const errMsg = `${chalk.red('error[' + respInfo.statusCode + ']')} ${localFile} => ${key}`
+        console.error(errMsg)
         reject(new Error(respBody))
       }
     })
@@ -69,8 +72,8 @@ async function main() {
     const key = filePath.replace(targetDir + '/', '')
     try {
       await uploadFile(localFile, key)
-    } catch (e) {
-      console.error(e)
+    } finally {
+      // do nothing
     }
   }
 }
