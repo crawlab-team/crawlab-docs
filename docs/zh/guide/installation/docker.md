@@ -43,7 +43,7 @@ services:
     container_name: crawlab_master
     restart: always
     environment:
-      CRAWLAB_SERVER_MASTER: Y  # Y: 主节点
+      CRAWLAB_NODE_MASTER: Y  # Y: 主节点
       CRAWLAB_MONGO_HOST: mongo  # mongo host address. 在 Docker-Compose 网络中，直接引用 service 名称
       CRAWLAB_MONGO_PORT: 27017  # mongo port 
       CRAWLAB_MONGO_DB: crawlab  # mongo database 
@@ -105,7 +105,7 @@ services:
     container_name: crawlab_master
     restart: always
     environment:
-      CRAWLAB_SERVER_MASTER: Y  # Y: 主节点
+      CRAWLAB_NODE_MASTER: Y  # Y: 主节点
       CRAWLAB_MONGO_HOST: mongo  # mongo host address. 在 Docker-Compose 网络中，直接引用 service 名称
       CRAWLAB_MONGO_PORT: 27017  # mongo port 
       CRAWLAB_MONGO_DB: crawlab  # mongo database 
@@ -145,7 +145,7 @@ services:
     container_name: crawlab_worker
     restart: always
     environment:
-      CRAWLAB_SERVER_MASTER: N  # N: 工作节点
+      CRAWLAB_NODE_MASTER: N  # N: 工作节点
       CRAWLAB_GRPC_ADDRESS: <master_node_ip>:9666  # grpc address
       CRAWLAB_FS_FILER_URL: http://<master_node_ip>:8080/api/filer  # seaweedfs api
     volumes:
@@ -196,7 +196,7 @@ services:
     container_name: crawlab_master
     restart: always
     environment:
-      CRAWLAB_SERVER_MASTER: Y  # Y: 主节点
+      CRAWLAB_NODE_MASTER: Y  # Y: 主节点
       CRAWLAB_MONGO_URI: <mongo_uri>  # mongo uri (单独设置)
       CRAWLAB_MONGO_HOST: <mongo_host>  # mongo host address
       CRAWLAB_MONGO_PORT: <mongo_port  # mongo port 
