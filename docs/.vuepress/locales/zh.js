@@ -114,6 +114,24 @@ module.exports = {
               },
             ]
           },
+          {
+            title: '官方插件',
+            path: '/zh/guide/use-crawlab/public-plugins/',
+            children: [
+              {
+                title: '依赖管理插件',
+                path: '/zh/guide/use-crawlab/public-plugins/plugin-dependency',
+              },
+              {
+                title: '爬虫助手插件',
+                path: '/zh/guide/use-crawlab/public-plugins/plugin-spider-assistant',
+              },
+              {
+                title: '消息通知插件',
+                path: '/zh/guide/use-crawlab/public-plugins/plugin-notification',
+              },
+            ]
+          }
         ]
       },
       {

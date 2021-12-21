@@ -111,6 +111,24 @@ module.exports = {
                   },
                 ]
               },
+              {
+                title: 'Official Plugins',
+                path: '/en/guide/use-crawlab/public-plugins/',
+                children: [
+                  {
+                    title: 'plugin-dependency',
+                    path: '/en/guide/use-crawlab/public-plugins/plugin-dependency',
+                  },
+                  {
+                    title: 'plugin-spider-assistant',
+                    path: '/en/guide/use-crawlab/public-plugins/plugin-spider-assistant',
+                  },
+                  {
+                    title: 'plugin-notification',
+                    path: '/en/guide/use-crawlab/public-plugins/plugin-notification',
+                  },
+                ]
+              }
             ]
           },
         ]

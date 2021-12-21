@@ -13,13 +13,13 @@
 
 ## 官方插件
 
-[Crawlab 开发团队](https://github.com/crawlab-team) 开发了一些官方插件，并在提供长期维护。官方 Crawlab 插件在 [Crawlab 开发团队 Github 仓库](https://github.com/orgs/crawlab-team/repositories)，每一个仓库都带有前缀 `plugin-`。
+[Crawlab 开发团队](https://github.com/crawlab-team) 开发了一些公开的官方插件，并在提供长期维护。官方 Crawlab 插件在 [Crawlab 开发团队 Github 仓库](https://github.com/orgs/crawlab-team/repositories)，每一个仓库都带有前缀 `plugin-`。
 
-名称 | 描述
----|---
-[notification](https://github.com/crawlab-team/plugin-notification)|发送消息提醒，例如邮件通知、手机推送
-[dependency](https://github.com/crawlab-team/plugin-dependency)|安装依赖并管理依赖和运行环境
-[spider-assistant](https://github.com/crawlab-team/plugin-spider-assistant)|提供高级网络爬虫功能，包括框架支持，例如 Scrapy 等
+名称 | 描述 | 仓库链接
+---|---|---
+[public-notification](../public-plugins/plugin-notification)|发送消息提醒，例如邮件通知、手机推送|[链接](https://github.com/crawlab-team/plugin-notification)
+[public-dependency](../public-plugins/plugin-dependency)|安装依赖并管理依赖和运行环境|[链接](https://github.com/crawlab-team/plugin-dependency)
+[public-spider-assistant](../public-plugins/plugin-spider-assistant)|提供高级网络爬虫功能，包括框架支持，例如 Scrapy 等|[链接](https://github.com/crawlab-team/plugin-spider-assistant)
 
 ## 安装插件
 
@@ -31,29 +31,28 @@
 
 ### 通过名称安装
 
-您可以通过在 `New Plugin` 对话框中输入插件名称来安装 [官方插件](#official-plugins)。
-1. 导航至 `Plugins` 页面
-2. 在 `Type` 字段中选择 `Name`
-3. 在 `Name` 字段中输入插件名称
-4. 点击 `Confirm`.
+您可以通过在 `安装插件` 对话框中输入插件名称来安装 [官方插件](#官方插件)。
+1. 导航至 `插件` 页面
+2. 选择 `公共`
+3. 在您想要安装的插件上点击 `安装` 按钮
 
 ### 通过 Git 安装
 
 如果您知道 Crawlab 插件的 Git URL，您可以通过它来安装插件。
-1. 导航至 `Plugins` 页面
-2. 在 `Type` 字段中选择 `Git`
-3. 在 `Install URL` 字段中输入插件 URL
-4. 点击 `Confirm`.
+1. 导航至 `插件` 页面
+2. 选择 `Git`
+3. 在 `安装 URL` 字段中输入插件 URL
+4. 点击 `确定`.
 
 ### 通过本地安装
 
 ::: warning
 这个方式仅适合用源码开发 Crawlab 时使用。
 :::
-1. 导航至 `Plugins` 页面
-2. 在 `Type` 字段中选择 `Local`
-3. 在 `Install Path` 字段中输入插件 URL
-4. 点击 `Confirm`.
+1. 导航至 `插件` 页面
+2. 选择 `本地`
+3. 在 `安装路径` 字段中输入插件 URL
+4. 点击 `确定`.
 
 ### 安装源
 
@@ -61,12 +60,12 @@
 *安装源* 仅对官方插件生效。
 :::
 
-默认的官方插件安装源是 `Github`。但是 Github 不总是最佳安装源。例如，如果您所在地是中国大陆，连接到 Github 可能会有些慢。这时您可以选择 `Source` 为 `Gitee` 来大幅加速官方插件的安装。
+默认的官方插件安装源是 `Github`。但是 Github 不总是最佳安装源。例如，如果您所在地是中国大陆，连接到 Github 可能会有些慢。这时您可以选择 `安装源` 为 `Gitee` 来大幅加速官方插件的安装。
 
 ## 卸载插件
 
-您可以在 `Plugins` 页面里点击右侧的 `Delete` 按钮来卸载插件。
+您可以在 `插件` 页面里点击右侧的 `删除` 按钮来卸载插件。
 
 ## 启动/停止
 
-您可以在 `Plugins` 页面里点击右侧的 `Start` 或 `Stop` 按钮来启动或停止插件。
+您可以在 `插件` 页面里点击右侧的 `启动` 或 `停止` 按钮来启动或停止插件。

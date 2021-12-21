@@ -13,13 +13,13 @@ A well-designed plugin is less likely to be tightly coupled with Crawlab, so tha
 
 ## Official Plugins
 
-There are some official plugins maintained by [Crawlab Team](https://github.com/crawlab-team). The Github repos of official Crawlab plugins are normally located in [Crawlab Team's repositories](https://github.com/orgs/crawlab-team/repositories), each of which has a prefix `plugin-`.
+There are some public official plugins maintained by [Crawlab Team](https://github.com/crawlab-team). The Github repos of official Crawlab plugins are normally located in [Crawlab Team's repositories](https://github.com/orgs/crawlab-team/repositories), each of which has a prefix `plugin-`.
 
-Name | Description
----|---
-[notification](https://github.com/crawlab-team/plugin-notification)|Sending alerts and notifications such as emails and mobile push notifications
-[dependency](https://github.com/crawlab-team/plugin-dependency)|Installing and managing dependencies and running environment
-[spider-assistant](https://github.com/crawlab-team/plugin-spider-assistant)|Providing advanced web crawler features such as framework support (e.g. Scrapy, etc.)
+Name | Description | 仓库链接
+---|---|---
+[plugin-notification](../public-plugins/plugin-notification)|Sending alerts and notifications such as emails and mobile push notifications|[Link](https://github.com/crawlab-team/plugin-notification)
+[plugin-dependency](../public-plugins/plugin-dependency)|Installing and managing dependencies and running environment|[Link](https://github.com/crawlab-team/plugin-dependency)
+[plugin-spider-assistant](../public-plugins/plugin-spider-assistant)|Providing advanced web crawler features such as framework support (e.g. Scrapy, etc.)|[Link](https://github.com/crawlab-team/plugin-spider-assistant)
 
 ## Install Plugin
 
@@ -29,13 +29,12 @@ After a plugin is installed, you should refresh page in your web browser in orde
 
 There are several ways of installing plugins in Crawlab.
 
-### Install by Name
+### Install Official Plugins
 
-You can install [official plugins](#official-plugins) by only input the plugin name in `New Plugin` dialog.
+You can install [official plugins](#official-plugins) by only input the plugin name in `Install Plugin` dialog.
 1. Navigate to `Plugins`.
-2. Choose `Type` as `Name`.
-3. Enter the name of plugin name in the field `Name`.
-4. Click `Confirm`.
+2. Choose `Public`.
+3. Click `Install` button on plugins you would like to install.
 
 ### Install by Git
 
