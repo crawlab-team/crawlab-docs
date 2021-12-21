@@ -7,7 +7,7 @@
 - Python
 - Node.js
 
-## 搜索安装插件
+## 搜索安装依赖
 
 您可以在 Crawlab 界面中利用 plugin-dependency 搜索并安装依赖，跟在受欢迎的 IDEs 中一样，例如 JetBrains IDEA 和 VS Code。
 
