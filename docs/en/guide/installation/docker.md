@@ -58,7 +58,7 @@ services:
       - mongo
 
   mongo:
-    image: mongo
+    image: mongo:4.2
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: username  # mongo username
@@ -121,7 +121,7 @@ services:
       - mongo
 
   mongo:
-    image: mongo
+    image: mongo:4.2
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: username  # mongo username

@@ -34,7 +34,7 @@ services:
     depends_on:
       - mongo
   mongo:
-    image: mongo
+    image: mongo:4.2
 ```
 
 ## 启动 Crawlab
