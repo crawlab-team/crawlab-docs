@@ -131,6 +131,10 @@ module.exports = {
                 path: '/zh/guide/use-crawlab/public-plugins/plugin-notification',
               },
             ]
+          },
+          {
+            title: 'CLI',
+            path: '/zh/guide/cli/',
           }
         ]
       },

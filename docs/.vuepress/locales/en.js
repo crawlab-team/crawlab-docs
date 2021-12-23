@@ -131,6 +131,10 @@ module.exports = {
               }
             ]
           },
+          {
+            title: 'CLI',
+            path: '/en/guide/cli/',
+          }
         ]
       },
       {
