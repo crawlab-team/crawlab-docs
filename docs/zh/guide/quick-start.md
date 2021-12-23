@@ -23,18 +23,21 @@ pip install docker-compose
 ```yaml
 version: '3.3'
 services:
-  master:
-    image: crawlabteam/crawlab
-    container_name: crawlab_master
+  master: 
+    image: crawlabteam/crawlab:latest
+    container_name: crawlab_example_master
     environment:
-      CRAWLAB_SERVER_MASTER: Y
-      CRAWLAB_MONGO_HOST: mongo
-    ports:
+      CRAWLAB_NODE_MASTER: "Y"
+      CRAWLAB_MONGO_HOST: "mongo"
+    ports:    
       - "8080:8080"
     depends_on:
       - mongo
+
   mongo:
-    image: mongo:4.2
+    image: mongo:latest
+    container_name: crawlab_example_mongo
+    restart: always
 ```
 
 ## 启动 Crawlab
