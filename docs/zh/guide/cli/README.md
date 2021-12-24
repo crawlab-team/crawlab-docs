@@ -44,10 +44,11 @@ crawlab-cli login --api_address <api_address> --username <username> --password <
 crawlab-cli upload --dir <target_spider_dir> [--name <spider_name>] [--col_name <results_collection_name>] --create
 ```
 
+- `--create` 或 `-c` 即是否需要创建新爬虫. 如果没有注明, 必须注明 `--id` 或 `-i`.
 - `--dir` 或 `-d` 是需要上传的爬虫目录. 默认: 当前工作目录.
 - `--name` 或 `-n` 是需要创建爬虫的名称. 默认: 目录名称.
 - `--col_name` 或 `-C` 是需要创建爬虫的结果储存集合名称. 默认: `results_<爬虫名称>`.
-- `--create` 或 `-c` 即是否需要创建新爬虫. 如果没有注明, 必须注明 `--id` 或 `-i`.
+- `--cmd` or `-m` 是需要创建爬虫的执行命令. 默认: `echo "hello crawlab"`.
 
 #### 上传到已存在爬虫
 

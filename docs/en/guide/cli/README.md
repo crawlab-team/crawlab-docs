@@ -44,10 +44,11 @@ If you would like to upload a new spider, you can execute the command below.
 crawlab-cli upload --dir <target_spider_dir> [--name <spider_name>] [--col_name <results_collection_name>] --create
 ```
 
+- `--create` or `-c` is whether to create a new spider. If unspecified, `--id` or `-i` must be specified.
 - `--dir` or `-d` is the parameter of the spider directory to upload. Default: current working directory.
 - `--name` or `-n` is the name of the spider to create. Default: directory name.
 - `--col_name` or `-C` is the result collection name of the spider to create. Default: `results_<spider_name>`.
-- `--create` or `-c` is whether to create a new spider. If unspecified, `--id` or `-i` must be specified.
+- `--cmd` or `-m` is the execute command of the spider to create. Default: `echo "hello crawlab"`.
 
 #### Upload to an existing spider
 
