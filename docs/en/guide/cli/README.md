@@ -7,7 +7,7 @@ The CLI tools allow users to easily manage Crawlab and perform common actions in
 Crawlab CLI tools is integrated with [Crawlab SDK](https://pypi.org/project/crawlab-sdk). You can install Crawlab CLI tools by executing the command below.
 
 ```bash
-pip install crawlab-sdk==0.6.b20211213-2123
+pip install crawlab-sdk==0.6.b20211224-1500
 ```
 
 ::: warning

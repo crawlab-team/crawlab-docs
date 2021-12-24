@@ -7,7 +7,7 @@
 Crawlab 命令行工具集成于 [Crawlab SDK](https://pypi.org/project/crawlab-sdk) 。 您可以执行以下命令来安装 Crawlab 命令行工具。
 
 ```bash
-pip install crawlab-sdk==0.6.b20211213-2123
+pip install crawlab-sdk==0.6.b20211224-1500
 ```
 
 ::: warning
