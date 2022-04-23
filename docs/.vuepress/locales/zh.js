@@ -140,12 +140,58 @@ module.exports = {
       },
       {
         title: '原理',
-        path: '/zh/principle',
+        path: '/zh/principle/',
         collapsable: false,
         children: [
           {
             title: '介绍',
             path: '/zh/principle/introduction',
+          },
+          {
+            title: '架构',
+            path: '/zh/principle/architecture/',
+          },
+          {
+            title: '节点',
+            path: '/zh/principle/node/',
+          },
+          {
+            title: '数据库',
+            path: '/zh/principle/database/',
+            children: [
+              {
+                title: 'MongoDB',
+                path: '/zh/principle/database/mongodb',
+              },
+            ],
+          },
+          {
+            title: '文件系统',
+            path: '/zh/principle/filesystem/',
+            children: [
+              {
+                title: 'SeaweedFS',
+                path: '/zh/principle/filesystem/seaweedfs',
+              },
+            ]
+          },
+          {
+            title: '核心模块',
+            path: '/zh/principle/core-modules/',
+            children: [
+              {
+                title: '爬虫',
+                path: '/zh/principle/core-modules/spider/',
+              },
+              {
+                title: 'Task',
+                path: '/zh/principle/core-modules/task/',
+              },
+              {
+                title: 'Schedule',
+                path: '/zh/principle/core-modules/schedule/',
+              },
+            ]
           },
         ],
       },

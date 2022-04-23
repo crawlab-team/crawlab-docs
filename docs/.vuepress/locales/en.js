@@ -75,39 +75,39 @@ module.exports = {
               },
               {
                 title: 'Basic Concepts',
-                path: '/en/guide/use-crawlab/basic-concepts/',
+                path: '/en/guide/use-crawlab/basic-core-modules/',
                 children: [
                   {
                     title: 'Node',
-                    path: '/en/guide/use-crawlab/basic-concepts/node',
+                    path: '/en/guide/use-crawlab/basic-core-modules/node',
                   },
                   {
                     title: 'Project',
-                    path: '/en/guide/use-crawlab/basic-concepts/project',
+                    path: '/en/guide/use-crawlab/basic-core-modules/project',
                   },
                   {
                     title: 'Spider',
-                    path: '/en/guide/use-crawlab/basic-concepts/spider',
+                    path: '/en/guide/use-crawlab/basic-core-modules/spider',
                   },
                   {
                     title: 'Task',
-                    path: '/en/guide/use-crawlab/basic-concepts/task',
+                    path: '/en/guide/use-crawlab/basic-core-modules/task',
                   },
                   {
                     title: 'Schedule',
-                    path: '/en/guide/use-crawlab/basic-concepts/schedule',
+                    path: '/en/guide/use-crawlab/basic-core-modules/schedule',
                   },
                   {
                     title: 'User',
-                    path: '/en/guide/use-crawlab/basic-concepts/user',
+                    path: '/en/guide/use-crawlab/basic-core-modules/user',
                   },
                   {
                     title: 'Plugin',
-                    path: '/en/guide/use-crawlab/basic-concepts/plugin',
+                    path: '/en/guide/use-crawlab/basic-core-modules/plugin',
                   },
                   {
                     title: 'Others',
-                    path: '/en/guide/use-crawlab/basic-concepts/others',
+                    path: '/en/guide/use-crawlab/basic-core-modules/others',
                   },
                 ]
               },
@@ -139,12 +139,58 @@ module.exports = {
       },
       {
         title: 'Principle',
-        path: '/en/principle',
+        path: '/en/principle/',
         collapsable: false,
         children: [
           {
             title: 'Introduction',
             path: '/en/principle/introduction',
+          },
+          {
+            title: 'Architecture',
+            path: '/en/principle/architecture/',
+          },
+          {
+            title: 'Node',
+            path: '/en/principle/node/',
+          },
+          {
+            title: 'Database',
+            path: '/en/principle/database/',
+            children: [
+              {
+                title: 'MongoDB',
+                path: '/en/principle/database/mongodb',
+              },
+            ],
+          },
+          {
+            title: 'File System',
+            path: '/en/principle/filesystem/',
+            children: [
+              {
+                title: 'SeaweedFS',
+                path: '/en/principle/filesystem/seaweedfs',
+              },
+            ]
+          },
+          {
+            title: 'Core Modules',
+            path: '/en/principle/core-modules/',
+            children: [
+              {
+                title: 'Spider',
+                path: '/en/principle/core-modules/spider/',
+              },
+              {
+                title: 'Task',
+                path: '/en/principle/core-modules/task/',
+              },
+              {
+                title: 'Schedule',
+                path: '/en/principle/core-modules/schedule/',
+              },
+            ]
           },
         ],
       },

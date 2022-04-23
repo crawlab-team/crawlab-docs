@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run docs:build",
     "publish": "npm run docs:publish",
-    "docs:dev": "vuepress dev docs",
+    "docs:dev": "vuepress dev docs -p 8082",
     "docs:build": "vuepress build docs",
     "docs:publish": "node ./scripts/publish.js",
     "build:serve": "serve ./docs/.vuepress/dist",
