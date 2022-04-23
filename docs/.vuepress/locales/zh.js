@@ -184,11 +184,11 @@ module.exports = {
                 path: '/zh/principle/core-modules/spider/',
               },
               {
-                title: 'Task',
+                title: '任务',
                 path: '/zh/principle/core-modules/task/',
               },
               {
-                title: 'Schedule',
+                title: '定时任务',
                 path: '/zh/principle/core-modules/schedule/',
               },
             ]

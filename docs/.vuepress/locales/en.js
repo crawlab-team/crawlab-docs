@@ -75,39 +75,39 @@ module.exports = {
               },
               {
                 title: 'Basic Concepts',
-                path: '/en/guide/use-crawlab/basic-core-modules/',
+                path: '/en/guide/use-crawlab/basic-concepts/',
                 children: [
                   {
                     title: 'Node',
-                    path: '/en/guide/use-crawlab/basic-core-modules/node',
+                    path: '/en/guide/use-crawlab/basic-concepts/node',
                   },
                   {
                     title: 'Project',
-                    path: '/en/guide/use-crawlab/basic-core-modules/project',
+                    path: '/en/guide/use-crawlab/basic-concepts/project',
                   },
                   {
                     title: 'Spider',
-                    path: '/en/guide/use-crawlab/basic-core-modules/spider',
+                    path: '/en/guide/use-crawlab/basic-concepts/spider',
                   },
                   {
                     title: 'Task',
-                    path: '/en/guide/use-crawlab/basic-core-modules/task',
+                    path: '/en/guide/use-crawlab/basic-concepts/task',
                   },
                   {
                     title: 'Schedule',
-                    path: '/en/guide/use-crawlab/basic-core-modules/schedule',
+                    path: '/en/guide/use-crawlab/basic-concepts/schedule',
                   },
                   {
                     title: 'User',
-                    path: '/en/guide/use-crawlab/basic-core-modules/user',
+                    path: '/en/guide/use-crawlab/basic-concepts/user',
                   },
                   {
                     title: 'Plugin',
-                    path: '/en/guide/use-crawlab/basic-core-modules/plugin',
+                    path: '/en/guide/use-crawlab/basic-concepts/plugin',
                   },
                   {
                     title: 'Others',
-                    path: '/en/guide/use-crawlab/basic-core-modules/others',
+                    path: '/en/guide/use-crawlab/basic-concepts/others',
                   },
                 ]
               },
