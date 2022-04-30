@@ -18,6 +18,23 @@ module.exports = {
     algolia: {},
     nav: [
       {
+        text: '文档',
+        items: [
+          {
+            text: '指南',
+            link: '/zh/guide/',
+          },
+          {
+            text: '原理',
+            link: '/zh/principle/',
+          },
+          {
+            text: '开发',
+            link: '/zh/develop/',
+          },
+        ]
+      },
+      {
         text: 'GitHub',
         link: 'https://github.com/crawlab-team/crawlab'
       },

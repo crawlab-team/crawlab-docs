@@ -18,6 +18,23 @@ module.exports = {
     algolia: {},
     nav: [
       {
+        text: 'Documentation',
+        items: [
+          {
+            text: 'Guide',
+            link: '/en/guide/',
+          },
+          {
+            text: 'Principle',
+            link: '/en/principle/',
+          },
+          {
+            text: 'Develop',
+            link: '/en/develop/',
+          },
+        ]
+      },
+      {
         text: 'GitHub',
         link: 'https://github.com/crawlab-team/crawlab'
       },

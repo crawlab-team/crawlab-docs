@@ -40,11 +40,32 @@ slides:
 - title: 依赖管理
   content: 无障碍管理项目依赖及第三方库
   image: /assets/img/screenshots/screenshot-plugin-dependency.png
+cards:
+- title: Crawlab 中文文档
+  subtitle: Crawlab 中文文档
+  link: /zh/guide/
+  tags:
+  - 官方
+- title: Crawlab 英文文档
+  subtitle: Crawlab 英文文档
+  link: /en/guide/
+  tags:
+  - 官方
+- title: Crawlab 官网
+  subtitle: Crawlab 官网
+  link: https://www.crawlab.cn
+  noMargin: true
+  tags:
+  - 官方
 footer: "ICP 证: 渝ICP备2021011872号-1 | Copyright © 2019-present Crawlab Team"
 ---
 
-## 平台截图
+---
 
-强大的功能特性让管理爬虫跟玩即时战略游戏一样容易 (例如我的最爱 *星际争霸*)。
+<CardList :cards="$page.frontmatter.cards"></CardList>
+
+---
+
+## 平台截图
 
 <SlideList :slides="$page.frontmatter.slides"></SlideList>

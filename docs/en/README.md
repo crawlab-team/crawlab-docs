@@ -40,11 +40,32 @@ slides:
 - title: Dependency Management
   content: Manage dependencies and third-party libraries without hassles
   image: /assets/img/screenshots/screenshot-plugin-dependency.png
+cards:
+- title: Crawlab Chinese Documentation
+  subtitle: Crawlab Chinese Documentation
+  link: /zh/guide/
+  tags:
+  - Official
+- title: Crawlab English Documentation
+  subtitle: Crawlab English Documentation
+  link: /en/guide/
+  tags:
+  - Official
+- title: Crawlab Official Site
+  subtitle: Crawlab Official Site
+  link: https://www.crawlab.cn
+  noMargin: true
+  tags:
+  - Official
 footer: "ICP 证: 渝ICP备2021011872号-1 | Copyright © 2019-present Crawlab Team"
 ---
 
-## Platform Screenshots
+---
 
-There are numerous powerful features making managing spiders as easy as playing RTS games (*StarCraft* is one of my favourite).
+<CardList :cards="$page.frontmatter.cards"></CardList>
+
+---
+
+## Platform Screenshots
 
 <SlideList :slides="$page.frontmatter.slides"></SlideList>
