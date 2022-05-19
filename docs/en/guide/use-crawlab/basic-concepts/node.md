@@ -22,7 +22,9 @@ There is only **ONE** Master Node in Crawlab.
 
 Worker Node is a Crawlab instance dedicated for running crawling [tasks](./task). Normally, a single node or server can be limited to its computing power and resources including CPUs, memory and network IO. Therefore, the number of Worker Nodes can be increased in order to scale up the throughput of data collection and improve the overall crawling performance of the distributed system.
 
+::: tip
 There can be none (SND) or multiple Worker Nodes (MND) in Crawlab.
+:::
 
 ## Topology
 

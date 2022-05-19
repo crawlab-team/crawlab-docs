@@ -171,6 +171,20 @@ module.exports = {
           {
             title: '节点',
             path: '/zh/principle/node/',
+            children: [
+              {
+                title: '主节点',
+                path: '/zh/principle/node/master-node',
+              },
+              {
+                title: '工作节点',
+                path: '/zh/principle/node/worker-node',
+              },
+              {
+                title: '节点通信',
+                path: '/zh/principle/node/node-communication',
+              },
+            ]
           },
           {
             title: '数据库',

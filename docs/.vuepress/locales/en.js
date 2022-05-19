@@ -170,6 +170,20 @@ module.exports = {
           {
             title: 'Node',
             path: '/en/principle/node/',
+            children: [
+              {
+                title: 'Master Node',
+                path: '/en/principle/node/master-node',
+              },
+              {
+                title: 'Worker Node',
+                path: '/en/principle/node/worker-node',
+              },
+              {
+                title: 'Node Communication',
+                path: '/en/principle/node/node-communication',
+              },
+            ]
           },
           {
             title: 'Database',
