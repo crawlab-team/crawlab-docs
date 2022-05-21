@@ -22,7 +22,8 @@
 </tr>
 
 <tr>
-<td><a href="/zh/guide/installation/kubernetes">Kubernetes (K8S)</a></td>
+<td>Kubernetes (K8S) (暂不可用)</td>
+<!--<td><a href="/zh/guide/installation/kubernetes">Kubernetes (K8S)</a></td>-->
 <td>生产 (节点数大于 10)</td>
 <td>
 <ol>
@@ -35,7 +36,8 @@
 </tr>
 
 <tr>
-<td><a href="/zh/guide/installation/direct-deploy">直接部署</a></td>
+<td>直接部署 (暂不可用)</td>
+<!--<td><a href="/zh/guide/installation/direct-deploy">直接部署</a></td>-->
 <td>演示 / 实验</td>
 <td>
 <ol>

@@ -14,7 +14,7 @@ Crawlab主要解决的是大量爬虫管理困难的问题，例如需要监控�
 
 首先，我们来看如何安装Crawlab，请查看 [安装章节](./Installation/README.md)。关于如何使用，请查看 [使用章节](./Usage/README.md)。对于比较简单的爬虫，您可以使用 [可配置爬虫](./Usage/Spider/ConfigurableSpider.md)，比较节省时间；对于比较复杂的（例如需要登录）的爬虫，您可以使用 [自定义爬虫](./Usage/Spider/CustomizedSpider.md)，更加灵活。
 
-⚠️**注意**: 如果您在安装过程中遇到任何问题，请查看 [Q&A](./QA/README.md) 来一一排查。如果仍然不能解决问题，请尝试到 [Github Issues](https://github.com/crawlab-team/crawlab/issues) 寻找解决办法。如果还是无法解决问题，请加作者微信 tikazyq1 并注明 "Crawlab"，作者将拉您入群，在群里您可以寻求大佬们的帮助。
+⚠️**注意**: 如果您在安装过程中遇到任何问题，请查看 [Q&A](./QA/README.md) 来一一排查。如果仍然不能解决问题，请尝试到 [GitHub Issues](https://github.com/crawlab-team/crawlab/issues) 寻找解决办法。如果还是无法解决问题，请加作者微信 tikazyq1 并注明 "Crawlab"，作者将拉您入群，在群里您可以寻求大佬们的帮助。
 
 ### 截图
 

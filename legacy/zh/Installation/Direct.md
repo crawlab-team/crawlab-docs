@@ -18,7 +18,7 @@
 
 ### 1. 拉取代码
 
-首先是将 Github 上的代码拉取到本地。
+首先是将 GitHub 上的代码拉取到本地。
 
 ```bash
 git clone https://github.com/crawlab-team/crawlab
@@ -28,7 +28,7 @@ git clone https://github.com/crawlab-team/crawlab
 
 我们使用 `nvm`（Node Version Manager）来管理 Node 环境。当然如果您对 Node 比较熟悉，可以跳过这一节。
 
-请参照 [nvm Github 地址](https://github.com/nvm-sh/nvm) 来安装 nvm。或者也可以运行下面的命令来安装。
+请参照 [nvm GitHub 地址](https://github.com/nvm-sh/nvm) 来安装 nvm。或者也可以运行下面的命令来安装。
 
 ⚠️**注意**: Windows 用户请用 [nvm-windows](https://github.com/coreybutler/nvm-windows) 来安装。
 
@@ -172,7 +172,7 @@ $GOPATH/bin/crawlab
 
 然后在浏览器中输入 `http://localhost:8080` 就可以看到界面了。
 
-⚠️注意：启动的时候需要保证您的工作路径在从 Github 拉取下来的 Crawlab 项目的 `./backend` 路径里。
+⚠️注意：启动的时候需要保证您的工作路径在从 GitHub 拉取下来的 Crawlab 项目的 `./backend` 路径里。
 
 ### 10. 下一步
 

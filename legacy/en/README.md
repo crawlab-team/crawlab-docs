@@ -14,7 +14,7 @@ If you want to start crawlab as soon as possible, please check [quick start](Qui
 
 First, let's see how to install crawlab. Please refer to the [installation chapter](Installation/README.md), for how to use, please refer to the [use Chapter](./Usage/README.md),For simpler spiders, you can use [configurable spider](./Usage/Spider/ConfigurableSpider.md) to save time, you can use [custom spider](./Usage/Spider/CustomizedSpider.md) for more complex spiders, such as those require to login, and more flexible to use.
 
-⚠️**Note**: If you encounter any problems during installation, please refer to [Q&A](QA/README.md)to check the problems one by one. If you still can't solve the problem, try [Github Issues](https://github.com/crawlab-team/crawlab/issues) to find a solution. If you still can't solve the problem, please add the author's wechat 'tikazyq1' and indicate 'Crawlab'. The author will pull you into the group, where you can ask for help from the developers.
+⚠️**Note**: If you encounter any problems during installation, please refer to [Q&A](QA/README.md)to check the problems one by one. If you still can't solve the problem, try [GitHub Issues](https://github.com/crawlab-team/crawlab/issues) to find a solution. If you still can't solve the problem, please add the author's wechat 'tikazyq1' and indicate 'Crawlab'. The author will pull you into the group, where you can ask for help from the developers.
 
 ### Screenshot
 

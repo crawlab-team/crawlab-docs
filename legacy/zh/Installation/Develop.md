@@ -19,7 +19,7 @@
 
 ### 1. 拉取代码
 
-首先是将 Github 上的代码拉取到本地。
+首先是将 GitHub 上的代码拉取到本地。
 
 ```bash
 git clone https://github.com/crawlab-team/crawlab

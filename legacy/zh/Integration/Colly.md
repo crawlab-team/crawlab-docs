@@ -1,6 +1,6 @@
 ## 与 Colly 集成
 
-[Colly](https://github.com/gocolly/colly) 是基于 Golang 的非常优秀的爬虫框架，与 Python 的 Scrapy 相比，其具有更简单的 API，而且天然支持并发，带有静态语言的类型系统，理论上更稳定，也更高效，比较适合大型爬虫项目。如果您对 Colly 不了解，请参考 [Github 官网](https://github.com/gocolly/colly)。
+[Colly](https://github.com/gocolly/colly) 是基于 Golang 的非常优秀的爬虫框架，与 Python 的 Scrapy 相比，其具有更简单的 API，而且天然支持并发，带有静态语言的类型系统，理论上更稳定，也更高效，比较适合大型爬虫项目。如果您对 Colly 不了解，请参考 [GitHub 官网](https://github.com/gocolly/colly)。
 
 集成 Colly 之前，建议您先阅读 [与通用 Golang 爬虫集成章节](Golang.md)，它利用了 [Crawlab Go SDK](https://github.com/crawlab-team/crawlab-go-sdk) 中两个最基本的 API: `crawlab.SaveItem`（保存结果方法）和 `entity.Item`（结果 Item 类），只需要调用这两个 API，集成非常简单。
 

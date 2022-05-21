@@ -1,6 +1,7 @@
 # Installation
 
-There are multiple methods of installing Crawlab. You can refer to the summary table below to choose the one that is most suitable.
+There are multiple methods of installing Crawlab. You can refer to the summary table below to choose the one that is
+most suitable.
 
 <table>
 <tr>
@@ -22,7 +23,8 @@ There are multiple methods of installing Crawlab. You can refer to the summary t
 </tr>
 
 <tr>
-<td><a href="/guide/installation/kubernetes">Kubernetes (K8S)</a></td>
+<td>Kubernetes (K8S) (Unavailable)</td>
+<!--<td><a href="/guide/installation/kubernetes">Kubernetes (K8S) (TBC)</a></td>-->
 <td>Production (nodes>10)</td>
 <td>
 <ol>
@@ -35,7 +37,8 @@ There are multiple methods of installing Crawlab. You can refer to the summary t
 </tr>
 
 <tr>
-<td><a href="/guide/installation/direct-deploy">Direct Deploy</a></td>
+<td>Direct Deploy (Unavailable)</td>
+<!--<td><a href="/guide/installation/direct-deploy">Direct Deploy (TBC)</a></td>-->
 <td>Demo / Experimental</td>
 <td>
 <ol>

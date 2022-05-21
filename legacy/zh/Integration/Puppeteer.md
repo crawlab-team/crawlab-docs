@@ -46,4 +46,4 @@ Puppeteer 是依赖 Chromium 来作为引擎的，因此需要知道 Chromium �
 ...
 ```
 
-具体例子请参考 Github 上 [京东口罩商品抓取爬虫](https://github.com/crawlab-team/crawlab/blob/master/backend/template/spiders/jd_mask/jd_mask_spider.js)。
+具体例子请参考 GitHub 上 [京东口罩商品抓取爬虫](https://github.com/crawlab-team/crawlab/blob/master/backend/template/spiders/jd_mask/jd_mask_spider.js)。

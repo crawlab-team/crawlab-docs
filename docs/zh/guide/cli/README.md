@@ -19,13 +19,15 @@ pip install crawlab-sdk==0.6.b20211224-1500
 ## 登陆
 
 ::: warning
-您在进行其他任何操作前，**必须** 使用命令行工具登陆 Crawlab。 
+您在进行其他任何操作前，**必须** 使用命令行工具登陆 Crawlab。
 :::
 
 您可以通过执行如下命令来使用命令行工具登陆 Crawlab。
 
 ```bash
-crawlab-cli login --api_address <api_address> --username <username> --password <password>
+crawlab-cli login --api_address <api_address> \
+  --username <username> \
+  --password <password>
 ```
 
 - `--api_address` 或 `-a` 是 Crawlab API 地址. 默认: http://localhost:8080/api.
@@ -41,7 +43,11 @@ crawlab-cli login --api_address <api_address> --username <username> --password <
 如果您希望上传一个新爬虫，您可以执行以下命令。
 
 ```bash
-crawlab-cli upload --dir <target_spider_dir> [--name <spider_name>] [--col_name <results_collection_name>] --create
+crawlab-cli upload \
+  --dir <target_spider_dir> \
+  [--name <spider_name>] \
+  [--col_name <results_collection_name>] \
+  --create
 ```
 
 - `--create` 或 `-c` 即是否需要创建新爬虫. 如果没有注明, 必须注明 `--id` 或 `-i`.
@@ -55,7 +61,9 @@ crawlab-cli upload --dir <target_spider_dir> [--name <spider_name>] [--col_name 
 如果您希望上传到已存在爬虫，您可以执行以下命令。
 
 ```bash
-crawlab-cli upload --dir <target_spider_dir> --id <spider_id>
+crawlab-cli upload \
+  --dir <target_spider_dir> \
+  --id <spider_id>
 ```
 
 - `--dir` 或 `-d` 是需要上传的爬虫目录. 默认: 当前工作目录.

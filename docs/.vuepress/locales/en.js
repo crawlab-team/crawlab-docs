@@ -65,87 +65,66 @@ module.exports = {
           {
             title: 'Installation',
             path: '/en/guide/installation/',
-            collapsable: false,
             children: [
               {
                 title: 'Docker',
                 path: '/en/guide/installation/docker',
               },
-              {
-                title: 'Kubernetes',
-                path: '/en/guide/installation/kubernetes',
-              },
-              {
-                title: 'Direct Deploy',
-                path: '/en/guide/installation/direct-deploy',
-              },
+              // TODO: implement
+              // {
+              //   title: 'Kubernetes',
+              //   path: '/en/guide/installation/kubernetes',
+              // },
+              // {
+              //   title: 'Direct Deploy',
+              //   path: '/en/guide/installation/direct-deploy',
+              // },
             ]
           },
           {
-            title: 'Use Crawlab',
-            path: '/en/guide/use-crawlab/',
-            collapsable: false,
+            title: 'Basic Tutorial',
+            path: '/en/guide/basic-tutorial/',
+          },
+          {
+            title: 'Node',
+            path: '/en/guide/node/',
+          },
+          {
+            title: 'Project',
+            path: '/en/guide/project/',
+          },
+          {
+            title: 'Spider',
+            path: '/en/guide/spider/',
+          },
+          {
+            title: 'Task',
+            path: '/en/guide/task/',
+          },
+          {
+            title: 'Schedule',
+            path: '/en/guide/schedule/',
+          },
+          {
+            title: 'User',
+            path: '/en/guide/user/',
+          },
+          {
+            title: 'Plugin',
+            path: '/en/guide/plugin/',
             children: [
               {
-                title: 'Quick Tutorial',
-                path: '/en/guide/use-crawlab/quick-tutorial',
+                title: 'Dependency Plugin',
+                path: '/en/guide/plugin/plugin-dependency',
               },
               {
-                title: 'Basic Concepts',
-                path: '/en/guide/use-crawlab/basic-concepts/',
-                children: [
-                  {
-                    title: 'Node',
-                    path: '/en/guide/use-crawlab/basic-concepts/node',
-                  },
-                  {
-                    title: 'Project',
-                    path: '/en/guide/use-crawlab/basic-concepts/project',
-                  },
-                  {
-                    title: 'Spider',
-                    path: '/en/guide/use-crawlab/basic-concepts/spider',
-                  },
-                  {
-                    title: 'Task',
-                    path: '/en/guide/use-crawlab/basic-concepts/task',
-                  },
-                  {
-                    title: 'Schedule',
-                    path: '/en/guide/use-crawlab/basic-concepts/schedule',
-                  },
-                  {
-                    title: 'User',
-                    path: '/en/guide/use-crawlab/basic-concepts/user',
-                  },
-                  {
-                    title: 'Plugin',
-                    path: '/en/guide/use-crawlab/basic-concepts/plugin',
-                  },
-                  {
-                    title: 'Others',
-                    path: '/en/guide/use-crawlab/basic-concepts/others',
-                  },
-                ]
+                title: 'Spider Assistant Plugin',
+                path: '/en/guide/plugin/plugin-spider-assistant',
               },
               {
-                title: 'Official Plugins',
-                path: '/en/guide/use-crawlab/public-plugins/',
-                children: [
-                  {
-                    title: 'plugin-dependency',
-                    path: '/en/guide/use-crawlab/public-plugins/plugin-dependency',
-                  },
-                  {
-                    title: 'plugin-spider-assistant',
-                    path: '/en/guide/use-crawlab/public-plugins/plugin-spider-assistant',
-                  },
-                  {
-                    title: 'plugin-notification',
-                    path: '/en/guide/use-crawlab/public-plugins/plugin-notification',
-                  },
-                ]
-              }
+                title: 'Notification Plugin',
+                path: '/en/guide/plugin/plugin-notification',
+              },
             ]
           },
           {
@@ -205,40 +184,42 @@ module.exports = {
               },
             ]
           },
-          {
-            title: 'Core Modules',
-            path: '/en/principle/core-modules/',
-            children: [
-              {
-                title: 'Spider',
-                path: '/en/principle/core-modules/spider/',
-              },
-              {
-                title: 'Task',
-                path: '/en/principle/core-modules/task/',
-              },
-              {
-                title: 'Schedule',
-                path: '/en/principle/core-modules/schedule/',
-              },
-            ]
-          },
+          // TODO: implement
+          // {
+          //   title: 'Core Modules',
+          //   path: '/en/principle/core-modules/',
+          //   children: [
+          //     {
+          //       title: 'Spider',
+          //       path: '/en/principle/core-modules/spider/',
+          //     },
+          //     {
+          //       title: 'Task',
+          //       path: '/en/principle/core-modules/task/',
+          //     },
+          //     {
+          //       title: 'Schedule',
+          //       path: '/en/principle/core-modules/schedule/',
+          //     },
+          //   ]
+          // },
         ],
       },
-      {
-        title: 'Develop',
-        path: '/en/develop/',
-        children: [
-          {
-            title: 'Introduction',
-            path: '/en/develop/introduction',
-          },
-          {
-            title: 'Plugins',
-            path: '/en/develop/plugins/',
-          }
-        ]
-      }
+      // TODO: implement
+      // {
+      //   title: 'Develop',
+      //   path: '/en/develop/',
+      //   children: [
+      //     {
+      //       title: 'Introduction',
+      //       path: '/en/develop/introduction',
+      //     },
+      //     {
+      //       title: 'Plugins',
+      //       path: '/en/develop/plugins/',
+      //     }
+      //   ]
+      // }
     ]
   }
 }

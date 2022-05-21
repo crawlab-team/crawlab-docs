@@ -1,10 +1,12 @@
 # CLI
 
-The CLI tools allow users to easily manage Crawlab and perform common actions including uploading spiders. It is written in Python and very easy to install.
+The CLI tools allow users to easily manage Crawlab and perform common actions including uploading spiders. It is written
+in Python and very easy to install.
 
 ## Install
 
-Crawlab CLI tools is integrated with [Crawlab SDK](https://pypi.org/project/crawlab-sdk). You can install Crawlab CLI tools by executing the command below.
+Crawlab CLI tools is integrated with [Crawlab SDK](https://pypi.org/project/crawlab-sdk). You can install Crawlab CLI
+tools by executing the command below.
 
 ```bash
 pip install crawlab-sdk==0.6.b20211224-1500
@@ -25,7 +27,10 @@ You **MUST** login to Crawlab with CLI tools before performing any other actions
 You can login to Crawlab with CLI tools by executing the command below.
 
 ```bash
-crawlab-cli login --api_address <api_address> --username <username> --password <password>
+crawlab-cli login \
+  --api_address <api_address> \
+  --username <username> \
+  --password <password>
 ```
 
 - `--api_address` or `-a` is the API address of Crawlab. Default: http://localhost:8080/api.
@@ -41,7 +46,11 @@ You can upload spiders using CLI tools.
 If you would like to upload a new spider, you can execute the command below.
 
 ```bash
-crawlab-cli upload --dir <target_spider_dir> [--name <spider_name>] [--col_name <results_collection_name>] --create
+crawlab-cli upload \
+  --dir <target_spider_dir> \
+  [--name <spider_name>] \
+  [--col_name <results_collection_name>] \
+  --create
 ```
 
 - `--create` or `-c` is whether to create a new spider. If unspecified, `--id` or `-i` must be specified.
@@ -55,7 +64,9 @@ crawlab-cli upload --dir <target_spider_dir> [--name <spider_name>] [--col_name 
 If you would like to upload to an exiting spider, you can execute the command below.
 
 ```bash
-crawlab-cli upload --dir <target_spider_dir> --id <spider_id>
+crawlab-cli upload \
+  --dir <target_spider_dir> \
+  --id <spider_id>
 ```
 
 - `--dir` or `-d` is the parameter of the spider directory to upload. Default: current working directory.

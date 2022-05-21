@@ -1,13 +1,14 @@
 # 安装: Docker
 
-Docker 是安装部署 Crawlab 最便捷的方式。如果您不熟悉 Docker，您可以参考 [Docker 官网](https://www.docker.com/) 并将其安装在本地。在进行任何操作前，请先保证您已安装好了 Docker。
+Docker 是安装部署 Crawlab 最便捷的方式。如果您不熟悉 Docker，您可以参考 [Docker 官网](https://www.docker.com/) 并将其安装在本地。在进行任何操作前，请先保证您已安装好了
+Docker。
 
 ## 主流程
 
 Docker 部署有多种模式，不过其主流程是相似的。
 
 1. 安装 [Docker](https://www.docker.com/) 和 [Docker-Compose](https://docs.docker.com/compose/)
-2. 拉取 Crawlab Docker 镜像（如果没有 MongoDB，也需要拉取） 
+2. 拉取 Crawlab Docker 镜像（如果没有 MongoDB，也需要拉取）
 3. 创建 `docker-compose.yml` 并进行配置
 4. 启动 Docker 容器
 
@@ -25,13 +26,14 @@ Docker 部署有多种模式，不过其主流程是相似的。
 title 单节点部署（SND）: 示意图
 
 node "主节点" #409eff {
-    TOOL_DOCKER(c, Crawlab) #409eff
-    TOOL_DOCKER(m, MongoDB) #67c23a
+TOOL_DOCKER(c, Crawlab) #409eff
+TOOL_DOCKER(m, MongoDB) #67c23a
 }
 c <-right->m
 @enduml
 
-**单节点部署（SND）** 与 [快速开始](../quick-start) 中的配置类似，它通常用作演示或少量爬虫管理。在 SND 中，所有 Docker 容器（包括 Crawlab 和 MongoDB）都在单独一台机器上，即主节点（如上图）。
+**单节点部署（SND）** 与 [快速开始](../quick-start) 中的配置类似，它通常用作演示或少量爬虫管理。在 SND 中，所有 Docker 容器 (包括 Crawlab 和
+MongoDB) 都在单独一台机器上，即主节点（如上图）。
 
 创建 `docker-compose.yml` 并输入如下内容。
 
@@ -157,6 +159,7 @@ services:
 主节点和工作节点都启动之后，您可以导航至 `http://<master_node_ip>:8080` 并开始使用 Crawlab.
 
 ::: warning
+
 ### 开放主节点端口
 
 由于工作节点是通过端口 **8080** (API) 以及 **9666** (gRPC) 来连接主节点的，您需要保证它们都是处于开放状态，**没有** 被主节点防火墙所禁用。
@@ -213,4 +216,5 @@ services:
       - "9666:9666"  # 开放 grpc 端口
 ```
 
-可以看到，服务 `mongo` 被移除了，MongoDB 连接相关的环境变量 (例如 `CRAWLAB_MONGO_HOST`, `CRAWLAB_MONGO_PORT`) 指向了外部 MongoDB。您可以将其中一些不需要设置的环境变量留空。
+可以看到，服务 `mongo` 被移除了，MongoDB 连接相关的环境变量 (例如 `CRAWLAB_MONGO_HOST`, `CRAWLAB_MONGO_PORT`) 指向了外部
+MongoDB。您可以将其中一些不需要设置的环境变量留空。

@@ -1,6 +1,8 @@
 # Installation: Docker
 
-Docker is the most convenient and easiest way to install and deploy Crawlab. If you are not familiar with Docker, you can refer to [Docker Official Site](https://www.docker.com/) and install it on your local machine. Make sure you have installed Docker before proceeding any further steps.
+Docker is the most convenient and easiest way to install and deploy Crawlab. If you are not familiar with Docker, you
+can refer to [Docker Official Site](https://www.docker.com/) and install it on your local machine. Make sure you have
+installed Docker before proceeding any further steps.
 
 ## Main Process
 
@@ -25,13 +27,15 @@ For following guidance, we will assume you have installed Docker and Docker-Comp
 title SND: Simplified Diagram
 
 node "Master Node" #409eff {
-    TOOL_DOCKER(c, Crawlab) #409eff
-    TOOL_DOCKER(m, MongoDB) #67c23a
+TOOL_DOCKER(c, Crawlab) #409eff
+TOOL_DOCKER(m, MongoDB) #67c23a
 }
 c <-right->m
 @enduml
 
-**Standalone-Node Deployment (SND)** is similar to the configuration in [Quick Start](../quick-start), and it is normally for demo purpose or managing a small number of crawlers. In SND, all Docker containers including Crawlab and MongoDB are in only a single machine, i.e. Master Node (see diagram above).
+**Standalone-Node Deployment (SND)** is similar to the configuration in [Quick Start](../quick-start.md), and it is
+normally for demo purpose or managing a small number of crawlers. In SND, all Docker containers including Crawlab and
+MongoDB are in only a single machine, i.e. Master Node (see diagram above).
 
 Create `docker-compose.yml` and enter the content below.
 
@@ -88,13 +92,17 @@ mn -down->wn2
 mn -down->wn3
 @enduml
 
-**Multi-Node Deployment (MND)** is normally used in production environment, where a cluster consisted of a Master Node and multiple Worker Nodes is deployed. Master Node is connected by Worker Nodes, and it serves as the central control system in the cluster. 
+**Multi-Node Deployment (MND)** is normally used in production environment, where a cluster consisted of a Master Node
+and multiple Worker Nodes is deployed. Master Node is connected by Worker Nodes, and it serves as the central control
+system in the cluster.
 
-The configuration for MND is more complex than SND, but you can follow the guidelines below to set up a small cluster, which would be quite straightforward.
+The configuration for MND is more complex than SND, but you can follow the guidelines below to set up a small cluster,
+which would be quite straightforward.
 
 ### Set up Master Node
 
-Create `docker-compose.yml` in **Master Node** and enter the content below. Then start by executing `docker-compose up -d`.
+Create `docker-compose.yml` in **Master Node** and enter the content below. Then start by
+executing `docker-compose up -d`.
 
 ```yaml
 # master node
@@ -134,7 +142,8 @@ services:
 
 ### Set up Worker Nodes
 
-Create `docker-compose.yml` in each **Worker Node** and enter the content below. Then start by executing `docker-compose up -d`.
+Create `docker-compose.yml` in each **Worker Node** and enter the content below. Then start by
+executing `docker-compose up -d`.
 
 ```yaml
 # worker node
@@ -152,21 +161,29 @@ services:
       - "/opt/crawlab/worker:/data"  # persistent crawlab data
 ```
 
-Please note that you should replace `<master_node_ip>` with the IP address of Master Node and make sure it is accessible by Worker Nodes.
+Please note that you should replace `<master_node_ip>` with the IP address of Master Node and make sure it is accessible
+by Worker Nodes.
 
-After Master Node and Worker Nodes are all started, you can now navigate to `http://<master_node_ip>:8080` to start using Crawlab.
+After Master Node and Worker Nodes are all started, you can now navigate to `http://<master_node_ip>:8080` to start
+using Crawlab.
 
 ::: warning
+
 ### Expose ports of Master Node
 
-As Worker Nodes connect to Master Node through ports **8080** (API) and **9666** (gRPC), you should make sure they are both opened and NOT blocked by firewall on Master Node.
+As Worker Nodes connect to Master Node through ports **8080** (API) and **9666** (gRPC), you should make sure they are
+both opened and NOT blocked by firewall on Master Node.
 :::
 
 ## External MongoDB
 
-In MND introduced above, you may notice that MongoDB is by default deployed on Master Node. But performance wise, this handy deployment configuration can result in problems, because MongoDB itself can be a bottleneck particularly in a large-scale distributed system. 
+In MND introduced above, you may notice that MongoDB is by default deployed on Master Node. But performance wise, this
+handy deployment configuration can result in problems, because MongoDB itself can be a bottleneck particularly in a
+large-scale distributed system.
 
-Fortunately, this issue can be resolved by using external MongoDB deployed in other nodes, or from cloud database service providers, e.g. AWS, Azure, Aliyun etc. By doing so, MongoDB can be easily scaled so that the database robustness would be ensured. Please refer to the diagram below. 
+Fortunately, this issue can be resolved by using external MongoDB deployed in other nodes, or from cloud database
+service providers, e.g. AWS, Azure, Aliyun etc. By doing so, MongoDB can be easily scaled so that the database
+robustness would be ensured. Please refer to the diagram below.
 
 @startuml
 !theme amiga
@@ -185,7 +202,8 @@ mn -down->wn3
 mn <-right->dbm
 @enduml
 
-The configuration file `docker-compose.yml` for Master Node is slightly different from that of [default MND](#multi-node-deployment). Please find the content as below.
+The configuration file `docker-compose.yml` for Master Node is slightly different from that
+of [default MND](#multi-node-deployment). Please find the content as below.
 
 ```yaml
 # master node with external mongo
@@ -213,4 +231,6 @@ services:
       - "9666:9666"  # exposed grpc port
 ```
 
-As you can see, the service `mongo` is removed and MongoDB-related connection environment variables (e.g. `CRAWLAB_MONGO_HOST`, `CRAWLAB_MONGO_PORT`) are changed to those of external MongoDB. You can leave some environment variables empty if you don't need them. 
+As you can see, the service `mongo` is removed and MongoDB-related connection environment variables (
+e.g. `CRAWLAB_MONGO_HOST`, `CRAWLAB_MONGO_PORT`) are changed to those of external MongoDB. You can leave some
+environment variables empty if you don't need them. 

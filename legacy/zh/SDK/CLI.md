@@ -2,7 +2,7 @@
 
 CLI 命令行工具是一个非常实用的 CLI 程序，是 [Crawlab SDK](https://github.com/crawlab-team/crawlab-sdk) 项目的一部分。CLI 命令行工具旨在帮助 Crawlab 用户更方便的上传爬虫、运行任务、查看数据等。
 
-⚠️注意：CLI 命令行工具还在快速的迭代当中，请持续关注 [Github 仓库](https://github.com/crawlab-team/crawlab-sdk) 或该文档来更新相关信息。
+⚠️注意：CLI 命令行工具还在快速的迭代当中，请持续关注 [GitHub 仓库](https://github.com/crawlab-team/crawlab-sdk) 或该文档来更新相关信息。
 
 ### 安装 CLI 命令行工具
 

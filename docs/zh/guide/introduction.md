@@ -1,13 +1,16 @@
 # 介绍
 
-如果您已经了解 Crawlab 是什么，也知道它是做什么的，您可以直接到 [快速开始](./quick-start) 或 [安装](./installation) 来安装和使用 Crawlab。
+如果您已经了解 Crawlab 是什么，也知道它是做什么的，您可以直接到 [快速开始](quick-start.md) 或 [安装](installation/README.md) 来安装和使用 Crawlab。
 
 如果您对 Crawlab 不熟悉，请阅读以下章节以进一步了解 Crawlab。
 
 ## 什么是 Crawlab?
-Crawlab 是强大的 **网络爬虫管理平台（WCMP）**，它能够运行多种编程语言（包括 Python、Go、Node.js、Java、C#）或爬虫框架（包括 Scrapy、Colly、Selenium、Puppeteer）开发的网路爬虫。它能够用来运行、管理和监控网络爬虫，特别是对可溯性、可扩展性以及稳定性要求较高的生产环境。
+
+Crawlab 是强大的 **网络爬虫管理平台（WCMP）**，它能够运行多种编程语言（包括 Python、Go、Node.js、Java、C#）或爬虫框架（包括
+Scrapy、Colly、Selenium、Puppeteer）开发的网路爬虫。它能够用来运行、管理和监控网络爬虫，特别是对可溯性、可扩展性以及稳定性要求较高的生产环境。
 
 ## 背景和发展历史
+
 Crawlab 项目自 2019 年 3 月开始一直在不断迭代，并且经历了多次大的更新。它最初是用来解决调度和运行大量爬虫时出现的管理问题。随着大量的优化和新功能加入，Crawlab 越来越受到开发者社区的欢迎，尤其是网路爬虫工程师。
 
 [更新日志](https://github.com/crawlab-team/crawlab/blob/master/CHANGELOG.md)
