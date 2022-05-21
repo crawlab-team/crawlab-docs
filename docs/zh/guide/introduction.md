@@ -33,58 +33,58 @@ Crawlab 项目自 2019 年 3 月开始一直在不断迭代，并且经历了多
 <tr>
 <td>节点</td>
 <td>节点管理</td>
-<td></td>
+<td>注册、管理、监控分布式系统中多个节点</td>
 </tr>
 <tr>
 <td rowspan="6">爬虫</td>
 <td>爬虫部署</td>
-<td></td>
+<td>自动部署爬虫到多节点，自动同步脚本或程序等爬虫文件</td>
 </tr>
 <tr>
 <td>爬虫代码修改</td>
-<td></td>
+<td>实时在线更新和编辑脚本代码</td>
 </tr>
 <tr>
 <td>爬虫统计数据</td>
-<td></td>
+<td>爬虫运行统计数据，例如平均运行时长以及结果数量</td>
 </tr>
 <tr>
 <td>框架集成</td>
-<td></td>
+<td>基础爬虫框架，例如 Scrapy</td>
 </tr>
 <tr>
 <td>数据存储集成</td>
-<td></td>
+<td>自动保存结果数据到数据库，不需要额外配置</td>
 </tr>
 <tr>
 <td>Git 集成</td>
-<td></td>
+<td>通过内置或外部远程 Git 仓库进行版本管理</td>
 </tr>
 <tr>
 <td rowspan="3">任务</td>
 <td>任务调度</td>
-<td></td>
+<td>派发调度爬虫任务到分布式系统中多个节点</td>
 </tr>
 <tr>
 <td>任务日志</td>
-<td></td>
+<td>自动保存任务日志，可以在前端 UI 界面被查看</td>
 </tr>
 <tr>
 <td>任务数据统计</td>
-<td></td>
+<td>可视化展示任务数据，例如任务结果数量和运行时长</td>
 </tr>
 <tr>
 <td rowspan="1">用户</td>
 <td>用户管理</td>
-<td></td>
+<td>创建、更新、删除用户账号</td>
 </tr>
 <tr>
 <td rowspan="2">其他</td>
 <td>依赖管理</td>
-<td></td>
+<td>搜索和安装依赖，例如 Python、Node.js 的依赖包</td>
 </tr>
 <tr>
 <td>消息通知</td>
-<td></td>
+<td>当任务触发或结束时，自动发送邮件或移动端消息通知</td>
 </tr>
 </table>

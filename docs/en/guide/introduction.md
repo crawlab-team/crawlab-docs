@@ -46,58 +46,58 @@ in developer communities, particularly amongst web crawler engineers.
 <tr>
 <td>Node</td>
 <td>Node Management</td>
-<td></td>
+<td>Register, manage and control multiple nodes in the distributed system</td>
 </tr>
 <tr>
 <td rowspan="6">Spider</td>
 <td>Spider Deployment</td>
-<td></td>
+<td>Auto-deploy spiders to multiple nodes and auto-sync spider files including scripts and programs</td>
 </tr>
 <tr>
 <td>Spider Code Editing</td>
-<td></td>
+<td>Update and edit script code with the online editor on the go</td>
 </tr>
 <tr>
 <td>Spider Stats</td>
-<td></td>
+<td>Spider crawling statistical data such as average running time and results count</td>
 </tr>
 <tr>
 <td>Framework Integration</td>
-<td></td>
+<td>Integrate spider frameworks such as Scrapy</td>
 </tr>
 <tr>
 <td>Data Storage Integration</td>
-<td></td>
+<td>Automatic saving results data in the database without additional configurations</td>
 </tr>
 <tr>
 <td>Git Integration</td>
-<td></td>
+<td>Version control through embedded or external remote Git repos</td>
 </tr>
 <tr>
 <td rowspan="3">Task</td>
 <td>Task Scheduling</td>
-<td></td>
+<td>Assign and schedule crawling tasks to multiple nodes in the distributed system</td>
 </tr>
 <tr>
 <td>Task Logging</td>
-<td></td>
+<td>Automatic saving task logs which can be viewed in the frontend UI</td>
 </tr>
 <tr>
 <td>Task Stats</td>
-<td></td>
+<td>Visually display task stats including task results count and running time</td>
 </tr>
 <tr>
 <td rowspan="1">User</td>
 <td>User Management</td>
-<td></td>
+<td>Create, update and delete user accounts</td>
 </tr>
 <tr>
 <td rowspan="2">Other</td>
 <td>Dependency Management</td>
-<td></td>
+<td>Search and install dependencies Python and Node.js packages</td>
 </tr>
 <tr>
 <td>Notification</td>
-<td></td>
+<td>Automatic email or mobile notifications when tasks are triggered or complete</td>
 </tr>
 </table>
