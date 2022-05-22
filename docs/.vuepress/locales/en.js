@@ -42,8 +42,8 @@ module.exports = {
         text: 'v0.6.x',
         items: [
           {
-            text: '0.5.1',
-            link: 'https://docs.crawlab.cn/en/',
+            text: '0.5.x',
+            link: 'https://docs-v05.crawlab.cn/en/',
           },
         ]
       },

@@ -2,7 +2,6 @@
   "name": "crawlab-docs",
   "version": "0.6.0",
   "description": "Documentation for Crawlab",
-  "main": "index.js",
   "scripts": {
     "build": "npm run docs:build",
     "publish": "npm run docs:publish",
@@ -18,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/crawlab-team/crawlab-docs.git"
   },
-  "author": "",
+  "author": "Marvin Zhang",
   "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/crawlab-team/crawlab-docs/issues"
