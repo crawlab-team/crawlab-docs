@@ -1,3 +1,0 @@
-# Kubernetes
-
-:construction: Under construction...

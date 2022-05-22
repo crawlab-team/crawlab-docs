@@ -1,29 +1,19 @@
 {
   "name": "crawlab-docs",
-  "version": "0.6.0",
-  "description": "Documentation for Crawlab",
-  "main": "index.js",
+  "version": "0.5.1",
+  "description": "基于Golang的分布式爬虫管理平台，支持多种编程语言以及多种爬虫框架.",
   "scripts": {
     "build": "npm run docs:build",
     "publish": "npm run docs:publish",
+    "install": "gitbook install",
     "docs:dev": "vuepress dev docs -p 8082",
-    "docs:build": "vuepress build docs",
+    "docs:build": "gitbook build",
     "docs:publish": "node ./scripts/publish.js",
     "build:serve": "serve ./docs/.vuepress/dist",
     "translate:zh": "node ./scripts/translate.js",
     "convert:image:logo:150x150": "node ./scripts/convertImage.js -i ./docs/.vuepress/public/assets/img/logo.svg -o ./docs/.vuepress/public/assets/img/logo-150x150.png -W 150 -H 150",
     "move:images": "node ./scripts/moveImages.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/crawlab-team/crawlab-docs.git"
-  },
-  "author": "",
-  "license": "BSD-3-Clause",
-  "bugs": {
-    "url": "https://github.com/crawlab-team/crawlab-docs/issues"
-  },
-  "homepage": "https://github.com/crawlab-team/crawlab-docs#readme",
   "devDependencies": {
     "@vuepress/plugin-active-header-links": "^1.8.2",
     "argparse": "^2.0.1",
@@ -40,5 +30,15 @@
     "vuepress": "^1.8.2",
     "vuepress-plugin-md-enhance": "^1.20.3",
     "walk-sync": "^3.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crawlab-team/crawlab-docs.git"
+  },
+  "author": "Marvin Zhang",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/crawlab-team/crawlab-docs/issues"
+  },
+  "homepage": "https://github.com/crawlab-team/crawlab-docs#readme"
 }

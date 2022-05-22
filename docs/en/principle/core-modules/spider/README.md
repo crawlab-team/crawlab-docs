@@ -1,3 +1,0 @@
-# Spider
-
-:construction: Under construction...

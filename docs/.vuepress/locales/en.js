@@ -22,15 +22,19 @@ module.exports = {
         items: [
           {
             text: 'Guide',
-            link: '/en/guide/',
+            link: '/en/introduction',
           },
           {
-            text: 'Principle',
-            link: '/en/principle/',
+            text: 'Architecture',
+            link: '/en/Architecture/',
           },
           {
-            text: 'Develop',
-            link: '/en/develop/',
+            text: 'Contribution',
+            link: '/en/Contribution/',
+          },
+          {
+            text: 'Q&A',
+            link: '/en/QA/',
           },
         ]
       },
@@ -39,10 +43,10 @@ module.exports = {
         link: 'https://github.com/crawlab-team/crawlab'
       },
       {
-        text: 'v0.6.x',
+        text: 'v0.5.1',
         items: [
           {
-            text: '0.5.1',
+            text: 'v0.6.x',
             link: 'https://docs.crawlab.cn/en/',
           },
         ]
@@ -51,175 +55,328 @@ module.exports = {
     sidebar: [
       {
         title: 'Guide',
-        path: '/en/guide',
+        path: '/en/',
         collapsable: false,
+        initialOpenGroupIndex: 1,
         children: [
           {
-            title: 'Introduction',
-            path: '/en/guide/introduction',
+            title: 'Crawlab Introdution',
+            path: '/en/introduction',
+          },
+          {
+            title: 'Crawlab Official Site',
+            path: 'https://crawlab.cn',
           },
           {
             title: 'Quick Start',
-            path: '/en/guide/quick-start',
+            path: '/en/QuickStart/',
           },
           {
             title: 'Installation',
-            path: '/en/guide/installation/',
+            path: '/en/Installation/',
             children: [
               {
                 title: 'Docker',
-                path: '/en/guide/installation/docker',
+                path: '/en/Installation/Docker',
               },
-              // TODO: implement
-              // {
-              //   title: 'Kubernetes',
-              //   path: '/en/guide/installation/kubernetes',
-              // },
-              // {
-              //   title: 'Direct Deploy',
-              //   path: '/en/guide/installation/direct-deploy',
-              // },
+              {
+                title: 'Kubernetes',
+                path: '/en/Installation/Kubernetes',
+              },
+              {
+                title: 'Direct Deploy',
+                path: '/en/Installation/Direct',
+              },
+              {
+                title: 'Develop Mode',
+                path: '/en/Installation/Develop',
+              },
+              {
+                title: 'Multi-Node Deploy',
+                path: '/en/Installation/MultiNode',
+              },
+              {
+                title: 'Pro-Edition Deploy',
+                path: '/en/Installation/Pro',
+              },
             ]
           },
           {
-            title: 'Basic Tutorial',
-            path: '/en/guide/basic-tutorial/',
-          },
-          {
-            title: 'Node',
-            path: '/en/guide/node/',
-          },
-          {
-            title: 'Project',
-            path: '/en/guide/project/',
+            title: 'Configuration',
+            path: '/en/Config/',
           },
           {
             title: 'Spider',
-            path: '/en/guide/spider/',
-          },
-          {
-            title: 'Task',
-            path: '/en/guide/task/',
-          },
-          {
-            title: 'Schedule',
-            path: '/en/guide/schedule/',
-          },
-          {
-            title: 'User',
-            path: '/en/guide/user/',
-          },
-          {
-            title: 'Plugin',
-            path: '/en/guide/plugin/',
+            path: '/en/Spider/',
             children: [
               {
-                title: 'Dependency Plugin',
-                path: '/en/guide/plugin/plugin-dependency',
+                title: 'Customized Spider',
+                path: '/en/Spider/CustomizedSpider',
               },
               {
-                title: 'Spider Assistant Plugin',
-                path: '/en/guide/plugin/plugin-spider-assistant',
+                title: 'Configurable Spider',
+                path: '/en/Spider/ConfigurableSpider',
               },
               {
-                title: 'Notification Plugin',
-                path: '/en/guide/plugin/plugin-notification',
+                title: 'Scrapy Spider',
+                path: '/en/Spider/ScrapySpider',
+              },
+              {
+                title: 'Long-Task Spider',
+                path: '/en/Spider/LongTaskSpider',
+              },
+              {
+                title: 'Deploy Spider',
+                path: '/en/Spider/Deploy',
+              },
+              {
+                title: 'Run Spider',
+                path: '/en/Spider/Run',
+              },
+              {
+                title: 'Copy Spider',
+                path: '/en/Spider/Copy',
+              },
+              {
+                title: 'Analytics',
+                path: '/en/Spider/Analytics',
+              },
+              {
+                title: 'File Edit',
+                path: '/en/Spider/FileEdit',
+              },
+              {
+                title: 'Deduplication',
+                path: '/en/Spider/Deduplication',
+              },
+              {
+                title: 'Auto Install Dependencies',
+                path: '/en/Spider/AutoInstallDeps',
+              },
+              {
+                title: 'Webhook',
+                path: '/en/Spider/Webhook',
               },
             ]
           },
           {
-            title: 'CLI',
-            path: '/en/guide/cli/',
-          }
+            title: 'Task',
+            path: '/en/Task/',
+            children: [
+              {
+                title: 'Run Task',
+                path: '/en/Task/Run',
+              },
+              {
+                title: 'Task Logs',
+                path: '/en/Task/Log',
+              },
+              {
+                title: 'Task Results',
+                path: '/en/Task/Results',
+              },
+              {
+                title: 'Task Actions',
+                path: '/en/Task/Action',
+              },
+            ]
+          },
+          {
+            title: 'Schedule',
+            path: '/en/Schedule/',
+          },
+          {
+            title: 'Project',
+            path: '/en/Project/',
+          },
+          {
+            title: 'SDK',
+            path: '/en/SDK/',
+            children: [
+              {
+                title: 'CLI',
+                path: '/en/SDK/CLI'
+              },
+              {
+                title: 'Python',
+                path: '/en/SDK/Python'
+              },
+              {
+                title: 'Node.js',
+                path: '/en/SDK/Nodejs'
+              },
+            ]
+          },
+          {
+            title: 'Notification',
+            path: '/en/Notification/',
+            children: [
+              {
+                title: 'Mail',
+                path: '/en/Notification/Mail',
+              },
+              {
+                title: 'DingTalk',
+                path: '/en/Notification/DingTalk',
+              },
+              {
+                title: 'Wechat',
+                path: '/en/Notification/Wechat',
+              },
+            ]
+          },
+          {
+            title: 'Node',
+            path: '/en/Node/',
+            children: [
+              {
+                title: 'View Nodes',
+                path: '/en/Node/View',
+              },
+              {
+                title: 'Install Node Dependencies',
+                path: '/en/Node/Installation',
+              },
+              {
+                title: 'View Node Network',
+                path: '/en/Node/Network',
+              },
+              {
+                title: 'Add Node',
+                path: '/en/Node/Add',
+              },
+            ]
+          },
+          {
+            title: 'Monitor',
+            path: '/en/Monitor/',
+          },
+          {
+            title: 'Spider Integration',
+            path: '/en/Integration/',
+            children: [
+              {
+                title: 'Scrapy',
+                path: '/en/Integration/Scrapy',
+              },
+              {
+                title: 'General Python Spider',
+                path: '/en/Integration/Python',
+              },
+              {
+                title: 'General Node.js Spider',
+                path: '/en/Integration/Nodejs',
+              },
+              {
+                title: 'General Golang Spider',
+                path: '/en/Integration/Golang',
+              },
+              {
+                title: 'Colly',
+                path: '/en/Integration/Colly',
+              },
+              {
+                title: 'Puppeteer',
+                path: '/en/Integration/Puppeteer',
+              },
+              {
+                title: 'Other Frameworks',
+                path: '/en/Integration/OtherFramework',
+              },
+            ]
+          },
+          {
+            title: 'CI/CD',
+            path: '/en/CI/',
+            children: [
+              {
+                title: 'Git Sync',
+                path: '/en/CI/Git',
+              },
+            ]
+          },
+          {
+            title: 'Permission Management',
+            path: '/en/Auth/',
+          },
+          {
+            title: 'Data Source',
+            path: '/en/DataSource/',
+            children: [
+              {
+                title: 'MongoDB',
+                path: '/en/DataSource/MongoDB',
+              },
+              {
+                title: 'MySQL',
+                path: '/en/DataSource/MySQL',
+              },
+              {
+                title: 'Postgres',
+                path: '/en/DataSource/Postgres',
+              },
+              {
+                title: 'Kafka',
+                path: '/en/DataSource/Kafka',
+              },
+              {
+                title: 'ElasticSearch',
+                path: '/en/DataSource/ElasticSearch',
+              },
+            ]
+          },
+          {
+            title: 'API',
+            path: '/en/Api/',
+            children: [
+              {
+                title: 'API Token',
+                path: '/en/Api/ApiToken'
+              }
+            ]
+          },
         ]
       },
       {
         title: 'Principle',
-        path: '/en/principle/',
+        path: '/en/Architecture/',
         collapsable: false,
+        initialOpenGroupIndex: 1,
         children: [
           {
-            title: 'Introduction',
-            path: '/en/principle/introduction',
-          },
-          {
             title: 'Architecture',
-            path: '/en/principle/architecture/',
+            path: '/en/Architecture/Architecture'
           },
           {
-            title: 'Node',
-            path: '/en/principle/node/',
-            children: [
-              {
-                title: 'Master Node',
-                path: '/en/principle/node/master-node',
-              },
-              {
-                title: 'Worker Node',
-                path: '/en/principle/node/worker-node',
-              },
-              {
-                title: 'Node Communication',
-                path: '/en/principle/node/node-communication',
-              },
-            ]
+            title: 'Node Communication',
+            path: '/en/Architecture/NodeCommunication'
           },
           {
-            title: 'Database',
-            path: '/en/principle/database/',
-            children: [
-              {
-                title: 'MongoDB',
-                path: '/en/principle/database/mongodb',
-              },
-            ],
+            title: 'Node Monitoring',
+            path: '/en/Architecture/NodeMonitoring'
           },
           {
-            title: 'File System',
-            path: '/en/principle/filesystem/',
-            children: [
-              {
-                title: 'SeaweedFS',
-                path: '/en/principle/filesystem/seaweedfs',
-              },
-            ]
+            title: 'Spider Deployment',
+            path: '/en/Architecture/SpiderDeployment'
           },
-          // TODO: implement
-          // {
-          //   title: 'Core Modules',
-          //   path: '/en/principle/core-modules/',
-          //   children: [
-          //     {
-          //       title: 'Spider',
-          //       path: '/en/principle/core-modules/spider/',
-          //     },
-          //     {
-          //       title: 'Task',
-          //       path: '/en/principle/core-modules/task/',
-          //     },
-          //     {
-          //       title: 'Schedule',
-          //       path: '/en/principle/core-modules/schedule/',
-          //     },
-          //   ]
-          // },
-        ],
+          {
+            title: 'Task Execution',
+            path: '/en/Architecture/TaskExecution'
+          },
+          {
+            title: 'RPC',
+            path: '/en/Architecture/RPC'
+          },
+        ]
       },
-      // TODO: implement
-      // {
-      //   title: 'Develop',
-      //   path: '/en/develop/',
-      //   children: [
-      //     {
-      //       title: 'Introduction',
-      //       path: '/en/develop/introduction',
-      //     },
-      //     {
-      //       title: 'Plugins',
-      //       path: '/en/develop/plugins/',
-      //     }
-      //   ]
-      // }
+      {
+        title: 'Contribution',
+        path: '/en/Contribution/'
+      },
+      {
+        title: 'Q&A',
+        path: '/en/QA/'
+      },
     ]
   }
 }

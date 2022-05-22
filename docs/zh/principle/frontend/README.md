@@ -1,3 +1,0 @@
-# Frontend
-
-:construction: Under construction...

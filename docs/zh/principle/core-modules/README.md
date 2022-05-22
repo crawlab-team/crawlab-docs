@@ -1,3 +1,0 @@
-# 核心模块
-
-:construction: Under construction...

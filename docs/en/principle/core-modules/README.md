@@ -1,3 +1,0 @@
-# Core Modules
-
-:construction: Under construction...

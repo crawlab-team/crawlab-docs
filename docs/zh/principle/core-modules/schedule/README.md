@@ -1,3 +1,0 @@
-# Schedule
-
-:construction: Under construction...
