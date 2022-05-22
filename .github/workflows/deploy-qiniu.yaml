@@ -21,7 +21,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm install -g yarn
       - run: |
-          rm .npmrc
+          rm -rf .npmrc
           yarn install
       - run: yarn run build
       - run: yarn run publish
