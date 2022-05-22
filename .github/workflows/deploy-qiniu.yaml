@@ -19,12 +19,15 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm install -g yarn
-      - run: |
+      - name: Install
+        run: |
+          npm install -g yarn
           rm -rf .npmrc
           yarn install
-      - run: yarn run build
-      - run: yarn run publish
+      - name: Build
+        run: yarn run build
+      - name: Publish
+        run: yarn run publish
         env:
           QINIU_ACCESS_KEY: ${{secrets.QINIU_ACCESS_KEY}}
           QINIU_SECRET_KEY: ${{secrets.QINIU_SECRET_KEY}}
