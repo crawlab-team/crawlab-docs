@@ -5,9 +5,8 @@
   "scripts": {
     "build": "npm run docs:build",
     "publish": "npm run docs:publish",
-    "install": "gitbook install",
     "docs:dev": "vuepress dev docs -p 8082",
-    "docs:build": "gitbook build",
+    "docs:build": "vuepress build docs",
     "docs:publish": "node ./scripts/publish.js",
     "build:serve": "serve ./docs/.vuepress/dist",
     "translate:zh": "node ./scripts/translate.js",
