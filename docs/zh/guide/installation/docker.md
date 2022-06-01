@@ -45,13 +45,13 @@ services:
     container_name: crawlab_master
     restart: always
     environment:
-      CRAWLAB_NODE_MASTER: Y  # Y: 主节点
-      CRAWLAB_MONGO_HOST: mongo  # mongo host address. 在 Docker-Compose 网络中，直接引用 service 名称
-      CRAWLAB_MONGO_PORT: 27017  # mongo port 
-      CRAWLAB_MONGO_DB: crawlab  # mongo database 
-      CRAWLAB_MONGO_USERNAME: username  # mongo username
-      CRAWLAB_MONGO_PASSWORD: password  # mongo password 
-      CRAWLAB_MONGO_AUTHSOURCE: admin  # mongo auth source 
+      CRAWLAB_NODE_MASTER: "Y"  # Y: 主节点
+      CRAWLAB_MONGO_HOST: "mongo"  # mongo host address. 在 Docker-Compose 网络中，直接引用 service 名称
+      CRAWLAB_MONGO_PORT: "27017"  # mongo port 
+      CRAWLAB_MONGO_DB: "crawlab"  # mongo database 
+      CRAWLAB_MONGO_USERNAME: "username"  # mongo username
+      CRAWLAB_MONGO_PASSWORD: "password"  # mongo password 
+      CRAWLAB_MONGO_AUTHSOURCE: "admin"  # mongo auth source 
     volumes:
       - "/opt/crawlab/master:/data"  # 持久化 crawlab 数据
     ports:
@@ -63,8 +63,8 @@ services:
     image: mongo:4.2
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: username  # mongo username
-      MONGO_INITDB_ROOT_PASSWORD: password  # mongo password
+      MONGO_INITDB_ROOT_USERNAME: "username"  # mongo username
+      MONGO_INITDB_ROOT_PASSWORD: "password"  # mongo password
     volumes:
       - "/opt/crawlab/mongo/data/db:/data/db"  # 持久化 mongo 数据
     ports:
@@ -107,13 +107,13 @@ services:
     container_name: crawlab_master
     restart: always
     environment:
-      CRAWLAB_NODE_MASTER: Y  # Y: 主节点
-      CRAWLAB_MONGO_HOST: mongo  # mongo host address. 在 Docker-Compose 网络中，直接引用 service 名称
-      CRAWLAB_MONGO_PORT: 27017  # mongo port 
-      CRAWLAB_MONGO_DB: crawlab  # mongo database 
-      CRAWLAB_MONGO_USERNAME: username  # mongo username
-      CRAWLAB_MONGO_PASSWORD: password  # mongo password 
-      CRAWLAB_MONGO_AUTHSOURCE: admin  # mongo auth source 
+      CRAWLAB_NODE_MASTER: "Y"  # Y: 主节点
+      CRAWLAB_MONGO_HOST: "mongo"  # mongo host address. 在 Docker-Compose 网络中，直接引用 service 名称
+      CRAWLAB_MONGO_PORT: "27017"  # mongo port 
+      CRAWLAB_MONGO_DB: "crawlab"  # mongo database 
+      CRAWLAB_MONGO_USERNAME: "username"  # mongo username
+      CRAWLAB_MONGO_PASSWORD: "password"  # mongo password 
+      CRAWLAB_MONGO_AUTHSOURCE: "admin"  # mongo auth source 
     volumes:
       - "/opt/crawlab/master:/data"  # 持久化 crawlab 数据
     ports:
@@ -126,8 +126,8 @@ services:
     image: mongo:4.2
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: username  # mongo username
-      MONGO_INITDB_ROOT_PASSWORD: password  # mongo password
+      MONGO_INITDB_ROOT_USERNAME: "username"  # mongo username
+      MONGO_INITDB_ROOT_PASSWORD: "password"  # mongo password
     volumes:
       - "/opt/crawlab/mongo/data/db:/data/db"  # 持久化 mongo 数据
     ports:
@@ -147,9 +147,9 @@ services:
     container_name: crawlab_worker
     restart: always
     environment:
-      CRAWLAB_NODE_MASTER: N  # N: 工作节点
-      CRAWLAB_GRPC_ADDRESS: <master_node_ip>:9666  # grpc address
-      CRAWLAB_FS_FILER_URL: http://<master_node_ip>:8080/api/filer  # seaweedfs api
+      CRAWLAB_NODE_MASTER: "N"  # N: 工作节点
+      CRAWLAB_GRPC_ADDRESS: "<master_node_ip>:9666"  # grpc address
+      CRAWLAB_FS_FILER_URL: "http://<master_node_ip>:8080/api/filer"  # seaweedfs api
     volumes:
       - "/opt/crawlab/master:/data"  # 持久化 crawlab 数据
 ```
@@ -199,16 +199,16 @@ services:
     container_name: crawlab_master
     restart: always
     environment:
-      CRAWLAB_NODE_MASTER: Y  # Y: 主节点
-      CRAWLAB_MONGO_URI: <mongo_uri>  # mongo uri (单独设置)
-      CRAWLAB_MONGO_HOST: <mongo_host>  # mongo host address
-      CRAWLAB_MONGO_PORT: <mongo_port  # mongo port 
-      CRAWLAB_MONGO_DB: <mongo_db>  # mongo database 
-      CRAWLAB_MONGO_USERNAME: <mongo_username>  # mongo username
-      CRAWLAB_MONGO_PASSWORD: <mongo_password>  # mongo password 
-      CRAWLAB_MONGO_AUTHSOURCE: <mongo_auth_source>  # mongo auth source 
-      CRAWLAB_MONGO_AUTHMECHANISM: <mongo_auth_mechanism>  # mongo auth mechanism 
-      CRAWLAB_MONGO_AUTHMECHANISMPROPERTIES: <mongo_auth_mechanism_properties>  # mongo auth mechanism properties
+      CRAWLAB_NODE_MASTER: "Y"  # Y: 主节点
+      CRAWLAB_MONGO_URI: "<mongo_uri>"  # mongo uri (单独设置)
+      CRAWLAB_MONGO_HOST: "<mongo_host>"  # mongo host address
+      CRAWLAB_MONGO_PORT: "<mongo_port>"  # mongo port 
+      CRAWLAB_MONGO_DB: "<mongo_db>"  # mongo database 
+      CRAWLAB_MONGO_USERNAME: "<mongo_username>"  # mongo username
+      CRAWLAB_MONGO_PASSWORD: "<mongo_password>"  # mongo password 
+      CRAWLAB_MONGO_AUTHSOURCE: "<mongo_auth_source>"  # mongo auth source 
+      CRAWLAB_MONGO_AUTHMECHANISM: "<mongo_auth_mechanism>"  # mongo auth mechanism 
+      CRAWLAB_MONGO_AUTHMECHANISMPROPERTIES: "<mongo_auth_mechanism_properties>"  # mongo auth mechanism properties
     volumes:
       - "/opt/crawlab/master:/data"  # 持久化 crawlab 数据
     ports:

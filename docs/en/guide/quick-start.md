@@ -30,8 +30,8 @@ services:
     image: crawlabteam/crawlab
     container_name: crawlab_master
     environment:
-      CRAWLAB_NODE_MASTER: Y
-      CRAWLAB_MONGO_HOST: mongo
+      CRAWLAB_NODE_MASTER: "Y"
+      CRAWLAB_MONGO_HOST: "mongo"
     ports:
       - "8080:8080"
     depends_on:
