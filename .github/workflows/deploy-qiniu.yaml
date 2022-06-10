@@ -33,3 +33,4 @@ jobs:
           QINIU_SECRET_KEY: ${{secrets.QINIU_SECRET_KEY}}
           QINIU_BUCKET: ${{secrets.QINIU_BUCKET}}
           QINIU_ZONE: ${{secrets.QINIU_ZONE}}
+
