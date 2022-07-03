@@ -29,9 +29,13 @@ module.exports = {
             link: '/en/principle/',
           },
           {
-            text: 'Develop',
-            link: '/en/develop/',
+            text: 'API Doc',
+            link: '/en/api/',
           },
+          // {
+          //   text: 'Develop',
+          //   link: '/en/develop/',
+          // },
         ]
       },
       {
@@ -204,6 +208,20 @@ module.exports = {
           //   ]
           // },
         ],
+      },
+      {
+        title: 'API Doc',
+        path: '/en/api/',
+        children: [
+          {
+            title: 'Introduction',
+            path: '/en/api/introduction',
+          },
+          {
+            title: 'API Reference (WIP)',
+            path: '/en/api/api-reference',
+          }
+        ]
       },
       // TODO: implement
       // {

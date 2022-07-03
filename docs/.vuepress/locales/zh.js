@@ -28,6 +28,10 @@ module.exports = {
             text: '原理',
             link: '/zh/principle/',
           },
+          {
+            text: 'API 文档',
+            link: '/zh/api/',
+          }
           // {
           //   text: '开发',
           //   link: '/zh/develop/',
@@ -205,6 +209,20 @@ module.exports = {
           //   ]
           // },
         ],
+      },
+      {
+        title: 'API 文档',
+        path: '/zh/api/',
+        children: [
+          {
+            title: '介绍',
+            path: '/zh/api/introduction',
+          },
+          {
+            title: 'API 参考文档 (未完成)',
+            path: '/zh/api/api-reference',
+          }
+        ]
       },
       // TODO: implement
       // {
