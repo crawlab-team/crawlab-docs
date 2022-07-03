@@ -1,5 +1,6 @@
 <template>
   <rapi-doc
+    v-if="imported"
     :spec-url="specUrl"
     render-style="view"
     style="height:100%; width:100%"
@@ -11,8 +12,6 @@
 </template>
 
 <script>
-import 'rapidoc'
-
 export default {
   name: 'ApiDoc',
   props: {
@@ -21,7 +20,16 @@ export default {
       required: true,
     }
   },
+  data() {
+    return {
+      imported: false
+    }
+  },
   mounted() {
+    import('rapidoc').then(() => {
+      this.imported = true
+    })
+
     const el = document.querySelector('main.page > .content__default')
     el.style.padding = '0'
     el.style.margin = '0'
