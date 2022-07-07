@@ -4,4 +4,4 @@ Crawlab 用户和开发者可以通过提供开放的 API 来集成自己的数�
 
 请参考以下内容。
 
-- [API 参考文档](api-reference)
+- [API 参考文档](api-reference.md)

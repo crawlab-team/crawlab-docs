@@ -5,4 +5,4 @@ providing open APIs for data integration.
 
 Please refer to below for more information.
 
-- [API Reference](api-reference)
+- [API Reference](api-reference.md)
