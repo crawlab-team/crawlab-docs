@@ -218,7 +218,7 @@ module.exports = {
             path: '/en/api/introduction',
           },
           {
-            title: 'API Reference (WIP)',
+            title: 'API Reference',
             path: '/en/api/api-reference',
           }
         ]

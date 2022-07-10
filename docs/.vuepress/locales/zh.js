@@ -219,7 +219,7 @@ module.exports = {
             path: '/zh/api/introduction',
           },
           {
-            title: 'API 参考文档 (未完成)',
+            title: 'API 参考文档',
             path: '/zh/api/api-reference',
           }
         ]
