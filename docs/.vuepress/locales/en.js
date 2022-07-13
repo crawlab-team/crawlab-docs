@@ -223,6 +223,16 @@ module.exports = {
           }
         ]
       },
+      {
+        title: 'Migration',
+        path: '/en/migration/',
+        children: [
+          {
+            title: 'Migrate to v0.6',
+            path: '/en/migration/v0.6',
+          },
+        ],
+      },
       // TODO: implement
       // {
       //   title: 'Develop',

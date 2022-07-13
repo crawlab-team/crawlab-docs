@@ -224,6 +224,16 @@ module.exports = {
           }
         ]
       },
+      {
+        title: '旧版本迁移',
+        path: '/zh/migration/',
+        children: [
+          {
+            title: '迁移至 v0.6',
+            path: '/zh/migration/v0.6',
+          },
+        ],
+      },
       // TODO: implement
       // {
       //   title: '开发',
