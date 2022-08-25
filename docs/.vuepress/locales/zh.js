@@ -236,6 +236,11 @@ module.exports = {
       },
       // TODO: implement
       // {
+      //   title: 'FAQ',
+      //   path: '/zh/faq/',
+      // },
+      // TODO: implement
+      // {
       //   title: '开发',
       //   path: '/zh/develop/',
       //   collapsable: false,

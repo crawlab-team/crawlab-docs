@@ -235,6 +235,11 @@ module.exports = {
       },
       // TODO: implement
       // {
+      //   title: 'FAQ',
+      //   path: '/en/faq/',
+      // },
+      // TODO: implement
+      // {
       //   title: 'Develop',
       //   path: '/en/develop/',
       //   children: [
