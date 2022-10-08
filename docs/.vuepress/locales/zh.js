@@ -103,32 +103,36 @@ module.exports = {
             path: '/zh/guide/spider/',
           },
           {
-            title: '任务',
-            path: '/zh/guide/task/',
-          },
-          {
             title: '定时任务',
             path: '/zh/guide/schedule/',
+          },
+          {
+            title: '任务',
+            path: '/zh/guide/task/',
           },
           {
             title: '用户',
             path: '/zh/guide/user/',
           },
           {
+            title: '令牌',
+            path: '/zh/guide/token/',
+          },
+          {
+            title: '环境依赖',
+            path: '/zh/guide/deps/',
+          },
+          {
+            title: '消息通知',
+            path: '/zh/guide/notification/',
+          },
+          {
             title: '插件',
             path: '/zh/guide/plugin/',
             children: [
               {
-                title: '依赖管理插件',
-                path: '/zh/guide/plugin/plugin-dependency',
-              },
-              {
                 title: '爬虫助手插件',
                 path: '/zh/guide/plugin/plugin-spider-assistant',
-              },
-              {
-                title: '消息通知插件',
-                path: '/zh/guide/plugin/plugin-notification',
               },
             ]
           },
@@ -223,6 +227,10 @@ module.exports = {
             path: '/zh/api/api-reference',
           }
         ]
+      },
+      {
+        title: '专业版',
+        path: '/zh/pro/',
       },
       {
         title: '旧版本迁移',

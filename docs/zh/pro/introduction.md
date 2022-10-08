@@ -9,9 +9,5 @@ Crawlab 专业版是基于 Crawlab 核心功能开发的企业级产品，具有
 爬虫管理|:white_check_mark:|:white_check_mark:
 定时任务|:white_check_mark:|:white_check_mark:
 任务调度|:white_check_mark:|:white_check_mark:
-节点自动安装|:white_check_mark:|:x:
-节点运维管理|:white_check_mark:|:x:
 节点性能监控|:white_check_mark:|:x:
-数据统计分析|:white_check_mark:|:x:
 数据源集成|:white_check_mark:|:x:
-网页智能识别|:white_check_mark:|:x:

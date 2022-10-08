@@ -102,12 +102,24 @@ module.exports = {
             path: '/en/guide/spider/',
           },
           {
+            title: 'Schedule',
+            path: '/en/guide/schedule/',
+          },
+          {
             title: 'Task',
             path: '/en/guide/task/',
           },
           {
-            title: 'Schedule',
-            path: '/en/guide/schedule/',
+            title: 'Token',
+            path: '/en/guide/token/',
+          },
+          {
+            title: 'Dependencies',
+            path: '/en/guide/deps/',
+          },
+          {
+            title: 'Notification',
+            path: '/en/guide/notification/',
           },
           {
             title: 'User',
@@ -118,16 +130,8 @@ module.exports = {
             path: '/en/guide/plugin/',
             children: [
               {
-                title: 'Dependency Plugin',
-                path: '/en/guide/plugin/plugin-dependency',
-              },
-              {
                 title: 'Spider Assistant Plugin',
                 path: '/en/guide/plugin/plugin-spider-assistant',
-              },
-              {
-                title: 'Notification Plugin',
-                path: '/en/guide/plugin/plugin-notification',
               },
             ]
           },
@@ -222,6 +226,10 @@ module.exports = {
             path: '/en/api/api-reference',
           }
         ]
+      },
+      {
+        title: 'Pro Edition',
+        path: '/en/pro/',
       },
       {
         title: 'Migration',
