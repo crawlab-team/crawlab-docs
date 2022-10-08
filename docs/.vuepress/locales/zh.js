@@ -119,7 +119,7 @@ module.exports = {
             path: '/zh/guide/token/',
           },
           {
-            title: '环境依赖',
+            title: '依赖管理',
             path: '/zh/guide/deps/',
           },
           {
