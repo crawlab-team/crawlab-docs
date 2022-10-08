@@ -124,7 +124,7 @@ module.exports = {
           },
           {
             title: '消息通知',
-            path: '/zh/guide/notification/',
+            path: '/zh/guide/notifications/',
           },
           {
             title: '插件',

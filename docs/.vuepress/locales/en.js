@@ -118,8 +118,8 @@ module.exports = {
             path: '/en/guide/deps/',
           },
           {
-            title: 'Notification',
-            path: '/en/guide/notification/',
+            title: 'Notifications',
+            path: '/en/guide/notifications/',
           },
           {
             title: 'User',
