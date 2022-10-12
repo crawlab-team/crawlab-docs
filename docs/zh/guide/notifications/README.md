@@ -1,9 +1,18 @@
+---
+slides:
+- title: 邮件
+  content: 消息通知预览
+  image: /assets/img/screenshots/screenshot-email-notifications.png
+- title: 移动端
+  content: 消息通知预览
+  image: /assets/img/screenshots/screenshot-mobile-notifications.png
+---
+
 # 消息通知
 
 Crawlab 允许用户接收邮件或手机消息通知。
 
-- **邮件**: <br>![email.png](img/email.png)
-- **移动端**: <br>![mobile.png](img/mobile.png)
+<SlideList :slides="$page.frontmatter.slides"></SlideList>
 
 ## 邮件
 

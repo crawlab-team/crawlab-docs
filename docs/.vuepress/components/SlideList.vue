@@ -68,6 +68,12 @@ export default {
   box-shadow: none !important;
 }
 
+.vueperslides >>> .vueperslides__parallax-wrapper .vueperslide {
+  background-color: #ffffff;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .vueperslides >>> .vueperslide__content-wrapper {
   display: inline-block;
   float: right;

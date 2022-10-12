@@ -127,6 +127,14 @@ module.exports = {
             path: '/zh/guide/notifications/',
           },
           {
+            title: '数据源',
+            path: '/zh/guide/data-sources/',
+          },
+          {
+            title: '监控指标',
+            path: '/zh/guide/monitoring/',
+          },
+          {
             title: '插件',
             path: '/zh/guide/plugin/',
             children: [

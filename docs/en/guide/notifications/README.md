@@ -1,9 +1,18 @@
+---
+slides:
+- title: Email
+  content: Notification preview
+  image: /assets/img/screenshots/screenshot-email-notifications.png
+- title: Mobile
+  content: Notification preview
+  image: /assets/img/screenshots/screenshot-mobile-notifications.png
+---
+
 # Notifications
 
 Crawlab allows users to receive email or mobile notifications.
 
-- **Email**: <br>![email.png](img/email.png)
-- **Mobile**: <br>![mobile.png](img/mobile.png)
+<SlideList :slides="$page.frontmatter.slides"></SlideList>
 
 ## Email
 

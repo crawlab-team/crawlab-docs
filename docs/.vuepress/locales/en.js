@@ -122,6 +122,14 @@ module.exports = {
             path: '/en/guide/notifications/',
           },
           {
+            title: 'Data Sources',
+            path: '/en/guide/data-sources/',
+          },
+          {
+            title: 'Monitoring',
+            path: '/en/guide/monitoring/',
+          },
+          {
             title: 'User',
             path: '/en/guide/user/',
           },
@@ -230,6 +238,20 @@ module.exports = {
       {
         title: 'Pro Edition',
         path: '/en/pro/',
+        children: [
+          {
+            title: 'Introduction',
+            path: '/en/pro/introduction',
+          },
+          {
+            title: 'Installation',
+            path: '/en/pro/installation',
+          },
+          {
+            title: 'License',
+            path: '/en/pro/license',
+          },
+        ],
       },
       {
         title: 'Migration',

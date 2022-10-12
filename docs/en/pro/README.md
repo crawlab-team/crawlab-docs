@@ -1,1 +1,1 @@
-<Redirect path="/zh/pro/introduction"></Redirect>
+<Redirect path="/en/pro/introduction"></Redirect>
