@@ -1,16 +1,15 @@
-# License
+# 许可证
 
-Crawlab Pro is a commercial product. You need to have a valid license to use it.
+Crawlab 专业版是一个商业产品。您需要一个有效的许可证才能使用它。
 
-## Term of Validity
+## 有效期
 
-The term of validity of a license is **1 year**. You can renew the license after it expires.
+单个许可证的有效期为 **1 年**。许可证过期后，您可以续期。
 
-## Scope of Validity
+## 有效范围
 
-The scope of validity of a license is **1 node**. You can use the license on only 1 node.
+单个许可证的有效范围为 **1 个节点**。您只能在 1 个节点上使用同一个许可证。
 
-## How to Buy
+## 如何购买
 
-If you decide to use Crawlab Pro, please contact us for obtaining licenses via WeChat **tikazyq1**
-or [email](mailto:crawlab@core-digital.cn).
+如果您决定使用 Crawlab 专业版，请通过微信 **tikazyq1** 或 [邮件](mailto:crawlab@core-digital.cn) 联系我们获取许可证。

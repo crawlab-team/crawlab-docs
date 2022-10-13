@@ -19,8 +19,9 @@ the [Installation via Docker](../guide/installation/docker) section.
 If you don't know how to obtain licenses, please refer to [Crawlab Pro License](./license) for more information.
 :::
 
-The main process of installing Crawlab Pro is quite similar to that of Crawlab Community. You can refer
-to [Crawlab Community Installation via Docker](../guide/installation) for more information.
+The main process of installing Crawlab Pro is quite similar to that of Crawlab Community except that it requires
+a [license](./license). You can refer to [Crawlab Community Installation via Docker](../guide/installation/docker) for more
+information.
 
 1. Install [Docker](https://www.docker.com/) and [Docker-Compose](https://docs.docker.com/compose/)
 2. Pull Docker image of Crawlab Pro (and MongoDB if you have no external MongoDB instance)

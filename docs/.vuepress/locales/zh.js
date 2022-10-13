@@ -114,10 +114,10 @@ module.exports = {
             title: '用户',
             path: '/zh/guide/user/',
           },
-          {
-            title: '令牌',
-            path: '/zh/guide/token/',
-          },
+          // {
+          //   title: '令牌',
+          //   path: '/zh/guide/token/',
+          // },
           {
             title: '依赖管理',
             path: '/zh/guide/deps/',
@@ -133,6 +133,10 @@ module.exports = {
           {
             title: '监控指标',
             path: '/zh/guide/monitoring/',
+          },
+          {
+            title: '权限管理',
+            path: '/zh/guide/permissions/',
           },
           {
             title: '插件',
@@ -239,6 +243,20 @@ module.exports = {
       {
         title: '专业版',
         path: '/zh/pro/',
+        children: [
+          {
+            title: '介绍',
+            path: '/zh/pro/introduction',
+          },
+          {
+            title: '安装',
+            path: '/zh/pro/installation',
+          },
+          {
+            title: '许可证',
+            path: '/zh/pro/license',
+          },
+        ],
       },
       {
         title: '旧版本迁移',

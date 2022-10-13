@@ -1,6 +1,6 @@
 # Data Sources
 
-::: tip NOTE
+::: warning NOTE
 This functionality is for [Pro Edition](../../pro) only.
 :::
 

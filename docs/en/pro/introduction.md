@@ -16,6 +16,7 @@ Scheduled Tasks|:white_check_mark:|:white_check_mark:
 Task Management|:white_check_mark:|:white_check_mark:
 [Performance Monitoring](../guide/monitoring)|:white_check_mark:|:x:
 [Data Source Integration](../guide/data-sources)|:white_check_mark:|:x:
+[Permission Management](../guide/permissions)|:white_check_mark:|:x:
 
 ## How to install
 

@@ -110,9 +110,13 @@ module.exports = {
             path: '/en/guide/task/',
           },
           {
-            title: 'Token',
-            path: '/en/guide/token/',
+            title: 'User',
+            path: '/en/guide/user/',
           },
+          // {
+          //   title: 'Token',
+          //   path: '/en/guide/token/',
+          // },
           {
             title: 'Dependencies',
             path: '/en/guide/deps/',
@@ -130,8 +134,8 @@ module.exports = {
             path: '/en/guide/monitoring/',
           },
           {
-            title: 'User',
-            path: '/en/guide/user/',
+            title: 'Permission Management',
+            path: '/en/guide/permissions/',
           },
           {
             title: 'Plugin',
