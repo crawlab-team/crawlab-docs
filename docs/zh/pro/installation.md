@@ -57,7 +57,7 @@ MongoDB) 都在单独一台机器上，即主节点（如上图）。
 version: '3.3'
 services:
   master:
-    image: crawlabteam/crawlab
+    image: crawlabteam/crawlab-pro
     container_name: crawlab_master
     restart: always
     environment:
@@ -120,7 +120,7 @@ mn -down->wn3
 version: '3.3'
 services:
   master:
-    image: crawlabteam/crawlab
+    image: crawlabteam/crawlab-pro
     container_name: crawlab_master
     restart: always
     environment:
@@ -161,7 +161,7 @@ services:
 version: '3.3'
 services:
   worker:
-    image: crawlabteam/crawlab
+    image: crawlabteam/crawlab-pro
     container_name: crawlab_worker
     restart: always
     environment:
@@ -217,7 +217,7 @@ mn <-right->dbm
 version: '3.3'
 services:
   master:
-    image: crawlabteam/crawlab
+    image: crawlabteam/crawlab-pro
     container_name: crawlab_master
     restart: always
     environment:
