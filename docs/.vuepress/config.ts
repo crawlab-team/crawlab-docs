@@ -1,20 +1,24 @@
-const en = require('./locales/en')
-const zh = require('./locales/zh')
+import {defineUserConfig} from 'vuepress';
+import {} from 'vue';
+import MermaidJsPlugin from 'vuepress-plugin-mermaidjs';
+import theme from './theme';
 
-module.exports = {
+export default defineUserConfig({
+  base: '/',
+
   locales: {
-    '/en/': en.locale,
-    '/zh/': zh.locale,
-  },
-  sidebarDepth: 2,
-  themeConfig: {
-    logo: '/assets/img/logo.svg',
-    smoothScroll: true,
-    locales: {
-      '/en/': en.themeConfig,
-      '/zh/': zh.themeConfig,
+    '/en': {
+      lang: 'en-US',
+      title: 'Crawlab Documentation',
+      description: 'Documentation for distributed web crawler management platform Crawlab',
+    },
+    '/zh': {
+      lang: 'zh-CN',
+      title: 'Crawlab 中文文档',
+      description: 'Documentation for distributed web crawler management platform',
     },
   },
+  theme,
   head: [
     ['link', {rel: 'icon', href: '/favicon.ico'}],
     ['meta', {name: 'default-lang', content: process.env.CRAWLAB_LANG || 'zh'}],
@@ -31,24 +35,6 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 })(window, document, "clarity", "script", "e3a7lpontr");`],
   ],
   plugins: [
-    '@vuepress/active-header-links',
-    [
-      'md-enhance',
-      {
-        // Enable flowchart
-        flowchart: true,
-      },
-    ]
-  ],
-  markdown: {
-    extendMarkdown: md => {
-      md.use(require('markdown-it-plantuml'))
-    },
-  },
-  extraWatchFiles: [
-    '.vuepress/locales/en.js',
-    '.vuepress/locales/zh.js',
-    '.vuepress/styles/index.styl',
-    '.vuepress/styles/palette.styl',
+    MermaidJsPlugin(),
   ]
-}
+});

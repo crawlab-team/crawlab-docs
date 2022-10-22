@@ -1,3 +1,7 @@
+---
+title: Quick Start
+---
+
 # Quick Start
 
 The quickest way to install Crawlab is [Docker](installation/docker.md). If you are not familiar with Docker, you can

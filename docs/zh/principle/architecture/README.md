@@ -2,7 +2,7 @@
 
 以下是 Crawlab 的架构图。
 
-![Architecture](img/crawlab-architecture.png)
+![Architecture](./img/crawlab-architecture.png)
 
 作为分布式系统，Crawlab 由几个模块组成，其中包括 [主节点](../node/master-node)，[工作节点](../node/worker-node)，
 [数据库](../database)，[文件系统](../filesystem) 以及 [前端](../frontend)。每个模块（目前除了节点）都具有可扩展性，

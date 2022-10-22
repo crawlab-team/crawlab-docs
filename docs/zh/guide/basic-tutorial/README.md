@@ -101,25 +101,25 @@ ITEM_PIPELINES = {
 1. Name: `scrapy_quotes`
 2. Command: `scrapy crawl quotes`
 
-![create-spider](img/quick-tutorial-1.png)
+![create-spider](./img/quick-tutorial-1.png)
 
 现在我们已经在 Crawlab 中创建好爬虫了，然后我们需要上传爬虫文件。
 
 点击爬虫名称链接或者右侧名称为 `View` 的蓝色搜索图标，导航至详情页。
 
-![](img/quick-tutorial-2.png)
+![](./img/quick-tutorial-2.png)
 
 在详情页中，点击 `Files` 标签，导航到文件编辑器，然后点击导航条上 `Upload Files` 按钮。
 
-![](img/quick-tutorial-3.png)
+![](./img/quick-tutorial-3.png)
 
 点击 `Click to Select Folder to Upload` 按钮，选择先前创建的 Scrapy 爬虫所在目录，并点击 `Confirm` 上传爬虫。
 
-![](img/quick-tutorial-4.png)
+![](./img/quick-tutorial-4.png)
 
 现在您应该能在左侧导航栏看到已上传的文件和目录。您可以尝试操作它，例如点击展开目录、双击文件打开文件。
 
-![](img/quick-tutorial-5.png)
+![](./img/quick-tutorial-5.png)
 
 ## 运行爬虫
 
@@ -127,29 +127,29 @@ ITEM_PIPELINES = {
 
 我们点击名称为 `Run` 的播放图标按钮，保持默认设置点击 `Confirm`。
 
-![](img/quick-tutorial-6.png)
+![](./img/quick-tutorial-6.png)
 
 ## 查看任务
 
 很好！我们已经触发了一个爬虫任务，现在我们应该能够在 `Tasks` 标签中查看它。我们点击 `Tasks` 标签查看一下。
 
-![](img/quick-tutorial-7.png)
+![](./img/quick-tutorial-7.png)
 
 该任务正在运行，我们可以点击右侧的 `View` 按钮查看它的详情。
 
 我们能够点击 `Logs` 标签来查看实时任务日志。
 
-![](img/quick-tutorial-8.png)
+![](./img/quick-tutorial-8.png)
 
 随着爬虫抓取数据，我们能够点击 `Data` 标签查看已抓取到的数据。
 
-![](img/quick-tutorial-9.png)
+![](./img/quick-tutorial-9.png)
 
 ## 爬虫统计数据
 
 如果我们退回到 `Spiders` 页面，我们应该能看到爬虫的统计数据
 
-![](img/quick-tutorial-10.png)
+![](./img/quick-tutorial-10.png)
 
 ## 总结
 

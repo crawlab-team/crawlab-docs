@@ -26,7 +26,9 @@
   },
   "homepage": "https://github.com/crawlab-team/crawlab-docs#readme",
   "devDependencies": {
+    "@vuepress/client": "2.0.0-beta.51",
     "@vuepress/plugin-active-header-links": "^1.8.2",
+    "@vuepress/plugin-register-components": "2.0.0-beta.51",
     "argparse": "^2.0.1",
     "axios": "^0.24.0",
     "chalk": "^4.1.2",
@@ -37,9 +39,13 @@
     "qs": "^6.10.1",
     "rapidoc": "^9.3.2",
     "serve": "^13.0.2",
+    "vue": "^3.2.29",
     "vueperslides": "^2.15.2",
-    "vuepress": "^1.8.2",
-    "vuepress-plugin-md-enhance": "^1.20.3",
+    "vuepress": "2.0.0-beta.51",
+    "vuepress-plugin-mermaid-next": "^0.1.9",
+    "vuepress-plugin-mermaidjs": "2.0.0-beta.2",
+    "vuepress-plugin-mermaidjs2": "2.0.0-beta.4",
+    "vuepress-theme-hope": "2.0.0-beta.108",
     "walk-sync": "^3.0.0"
   }
 }

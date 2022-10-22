@@ -16,9 +16,9 @@ Crawlab allows users to receive email or mobile notifications.
 
 ## Email
 
-1. Navigate to `Notifications` page <br>![notifications-menu.png](img/notification-menu.png)
+1. Navigate to `Notifications` page <br>![notifications-menu.png](./img/notification-menu.png)
 2. Click a notification config of `Email` type
-3. Fill in the configuration form <br>![email-config.png](img/email-config.png)
+3. Fill in the configuration form <br>![email-config.png](./img/email-config.png)
 4. Click on `Save` button
 
 SMTP configurations:
@@ -34,9 +34,9 @@ SMTP configurations:
 
 ## Mobile
 
-1. Navigate to `Notifications` page <br>![notifications-menu.png](img/notification-menu.png)
+1. Navigate to `Notifications` page <br>![notifications-menu.png](./img/notification-menu.png)
 2. Click a notification config of `Mobile` type
-3. Fill in the configuration form <br>![mobile-config.png](img/mobile-config.png)
+3. Fill in the configuration form <br>![mobile-config.png](./img/mobile-config.png)
 4. Click on `Save` button
 
 ::: tip
@@ -49,9 +49,9 @@ Please refer to related documentation for how to get webhook tokens.
 
 ## Template
 
-1. Navigate to `Notifications` page <br>![notifications-menu.png](img/notification-menu.png)
+1. Navigate to `Notifications` page <br>![notifications-menu.png](./img/notification-menu.png)
 2. Click a notification config of any type
-3. Click on `Template` tab <br>![template.png](img/template.png)
+3. Click on `Template` tab <br>![template.png](./img/template.png)
 
 ::: tip
 To understand the syntax and variables of templates, please refer

@@ -8,3 +8,5 @@ tmp/
 .docs
 dist/
 venv/
+.temp/
+.cache/

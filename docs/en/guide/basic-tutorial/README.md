@@ -106,28 +106,28 @@ In the dialog, enter the info as below, and click `Confirm` to create a spider o
 1. Name: `scrapy_quotes`
 2. Command: `scrapy crawl quotes`
 
-![create-spider](img/quick-tutorial-1.png)
+![create-spider](./img/quick-tutorial-1.png)
 
 Now we have created a spider in Crawlab, and we need to upload spider files to it.
 
 Click the spider name link or the blue button with search icon on the right named `View` to navigate to its detail page.
 
-![](img/quick-tutorial-2.png)
+![](./img/quick-tutorial-2.png)
 
 In the detail page, click `Files` tab to navigate to the file editor tab, and click `Upload Files` button on the nav
 bar.
 
-![](img/quick-tutorial-3.png)
+![](./img/quick-tutorial-3.png)
 
 Click the button `Click to Select Folder to Upload` and choose the folder of the Scrapy spider we created earlier, and
 click `Confirm` to upload the spiders.
 
-![](img/quick-tutorial-4.png)
+![](./img/quick-tutorial-4.png)
 
 Now you should be able to see the uploaded files and folders on the left file navigator. You can play around it by
 expanding folder or double-clicking files to open it.
 
-![](img/quick-tutorial-5.png)
+![](./img/quick-tutorial-5.png)
 
 ## Run Spider
 
@@ -135,30 +135,30 @@ Running spider is quite simple.
 
 Let's run it by clicking the button with play icon `Run`, and click `Confirm` with default settings.
 
-![](img/quick-tutorial-6.png)
+![](./img/quick-tutorial-6.png)
 
 ## View Task
 
 Great! We have just triggered a spider task, and we should be able to view it in `Tasks` tab. Let's click on `Tasks` tab
 to take a look.
 
-![](img/quick-tutorial-7.png)
+![](./img/quick-tutorial-7.png)
 
 The task is running, and we can view the task detail by clicking the `View` button on the right.
 
 We can then view realtime logs by clicking `Logs` tab.
 
-![](img/quick-tutorial-8.png)
+![](./img/quick-tutorial-8.png)
 
 As the spider is crawling, we can also view crawled data by clicking `Data` tab;
 
-![](img/quick-tutorial-9.png)
+![](./img/quick-tutorial-9.png)
 
 ## Spider Stats
 
 If we go back to `Spiders` page, we should be able to see the stats of the spider.
 
-![](img/quick-tutorial-10.png)
+![](./img/quick-tutorial-10.png)
 
 ## Summary
 

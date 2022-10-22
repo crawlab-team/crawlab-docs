@@ -1,0 +1,51 @@
+// place your custom styles here
+@import "variables";
+
+.home.project {
+  .hero {
+    img {
+      //flex: 10rem 0 0;
+      max-height: 14rem;
+      filter: drop-shadow(5px 5px 10px #909399);
+      border-radius: 7rem;
+    }
+
+    .hero-info {
+      //flex: 1 0 auto;
+      //margin-left: 2rem;
+
+      .main-title {
+      }
+
+      .description {
+        //margin: 0;
+      }
+    }
+  }
+}
+
+#main-content {
+  min-height: calc(100vh - var(--navbar-height));
+
+  & > * {
+    max-width: var(--home-page-width);
+  }
+}
+
+footer.footer-wrapper {
+  display: flex;
+  align-items: center;
+  height: 36px;
+
+  a {
+    color: var(--text-color);
+  }
+}
+
+:root {
+  --theme-color-purple: #b37feb;
+  --theme-color-cyan: #00bcd4;
+  --theme-color-orange: #ff9800;
+  --theme-color-green: #4caf50;
+  --theme-color-darkblue: #3f51b5;
+}

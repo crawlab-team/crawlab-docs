@@ -110,6 +110,10 @@ module.exports = {
             path: '/en/guide/task/',
           },
           {
+            title: 'Spider Integration',
+            path: '/en/guide/spider-integration/',
+          },
+          {
             title: 'User',
             path: '/en/guide/user/',
           },

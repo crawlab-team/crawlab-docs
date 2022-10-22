@@ -4,4 +4,4 @@
 
 下图展示了 Crawlab 中节点通信的原理。
 
-![](img/node-communication.png)
+![](./img/node-communication.png)
