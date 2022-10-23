@@ -7,14 +7,13 @@ as executors. They do not handle API requests, task scheduling, cron and other f
 
 You can refer below the submodules of worker nodes.
 
-@startuml
-!theme amiga
-
-node "Worker Node" {
-rectangle "gRPC Client"
-rectangle "Sync Service"
-rectangle "Task Handler"
-rectangle "Task Runners"
-}
-
-@enduml
+```mermaid
+graph TB
+    subgraph Worker Node
+      api[REST API]
+      grpc[gRPC Client]
+      sync[Sync Service]
+      handler[Task Handler]
+      runners[Task Runners]
+    end
+```

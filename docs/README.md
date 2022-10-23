@@ -1,1 +1,4 @@
-<Redirect :site="$site"></Redirect>
+---
+home: true
+redirectTo: /zh/
+---

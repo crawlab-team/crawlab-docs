@@ -17,17 +17,3 @@ graph TB
       task[Task Service]
     end
 ```
-
-@startuml
-!theme amiga
-
-node "Master Node" {
-rectangle "REST API"
-rectangle "gRPC Server"
-rectangle "Sync Service"
-rectangle "Cron Service"
-rectangle "Task Scheduler"
-rectangle "Plugins"
-}
-
-@enduml

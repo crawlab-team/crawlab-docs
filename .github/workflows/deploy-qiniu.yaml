@@ -22,7 +22,6 @@ jobs:
       - name: Install
         run: |
           npm install -g pnpm
-          rm -rf .npmrc yarn.lock
           pnpm install
       - name: Build
         run: pnpm run build

@@ -1,6 +1,5 @@
 <template>
   <rapi-doc
-    v-if="imported"
     :spec-url="specUrl"
     render-style="view"
     style="height:100%; width:100%"
@@ -20,31 +19,24 @@ export default {
       required: true,
     }
   },
-  data() {
-    return {
-      imported: false
-    }
-  },
   mounted() {
-    import('rapidoc').then(() => {
-      this.imported = true
-    })
+    setTimeout(() => {
+      const el = document.querySelector('#main-content')
+      el.style.padding = '0'
+      el.style.margin = '0'
+      el.style.maxWidth = 'inherit'
 
-    const el = document.querySelector('main.page > .content__default')
-    el.style.padding = '0'
-    el.style.margin = '0'
-    el.style.maxWidth = 'inherit'
-
-    // remove
-    const selectorsDel = [
-      '.page-edit',
-      '.page-nav',
-    ]
-    selectorsDel.forEach(sel => {
-      const el = document.querySelector(sel)
-      if (!el) return
-      el.remove()
-    })
+      // remove
+      const selectorsDel = [
+        '.page-edit',
+        '.page-nav',
+      ]
+      selectorsDel.forEach(sel => {
+        const el = document.querySelector(sel)
+        if (!el) return
+        el.remove()
+      })
+    }, 100);
   }
 }
 </script>

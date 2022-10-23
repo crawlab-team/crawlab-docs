@@ -1,6 +1,7 @@
 import {defineUserConfig} from 'vuepress';
-import {} from 'vue';
-import MermaidJsPlugin from 'vuepress-plugin-mermaidjs';
+import {registerComponentsPlugin} from '@vuepress/plugin-register-components';
+import {redirectPlugin} from 'vuepress-plugin-redirect';
+import MermaidJsPlugin from '../../plugins/vuepress-plugin-mermaidjs/index';
 import theme from './theme';
 
 export default defineUserConfig({
@@ -22,6 +23,7 @@ export default defineUserConfig({
   head: [
     ['link', {rel: 'icon', href: '/favicon.ico'}],
     ['meta', {name: 'default-lang', content: process.env.CRAWLAB_LANG || 'zh'}],
+    ['script', {type: 'module', src: '/assets/js/rapidoc-min.js'}],
     ['script', {src: '/assets/js/umeng.js'}],
     ['script', {async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-G9445D9CW9'}],
     ['script', {}, `window.dataLayer = window.dataLayer || [];
@@ -35,6 +37,10 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 })(window, document, "clarity", "script", "e3a7lpontr");`],
   ],
   plugins: [
-    MermaidJsPlugin(),
+    registerComponentsPlugin({
+      componentsDir: 'docs/.vuepress/components',
+    }),
+    redirectPlugin(),
+    MermaidJsPlugin,
   ]
 });

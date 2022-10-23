@@ -1,6 +1,7 @@
 # 爬虫
 
-在 Crawlab 中，爬虫是网络爬虫程序的基本单位。您可以将其看作一个爬虫软件项目，它由代码文件组成，例如 Scrapy 项目。请注意，这里提到的 *项目* 与 Crawlab
+在 Crawlab 中，爬虫是网络爬虫程序的基本单位。您可以将其看作一个爬虫软件项目，它由代码文件组成，例如 Scrapy
+项目。请注意，这里提到的 *项目* 与 Crawlab
 中的基础概念 [项目](../project/README.md) 是不同的。
 
 ::: warning
@@ -11,16 +12,12 @@
 
 以下是用户在 Crawlab 操作爬虫的典型流程。
 
-@startuml
-!theme amiga
-
-(*) -right-> "创建爬虫"
--right-> "上传爬虫"
--right-> "运行爬虫"
--right-> "查看结果"
--right-> (*)
-
-@enduml
+```mermaid
+graph LR
+A[创建爬虫] --> B[上传爬虫]
+B --> C[运行爬虫]
+C --> D[查看结果]
+```
 
 ## 创建爬虫
 
@@ -75,16 +72,11 @@
 
 ## 实体关系
 
-@startuml
-!theme amiga
-
-rectangle "爬虫" as s
-rectangle "项目" as p
-rectangle "任务" as t
-rectangle "定时任务" as sch
-
-s "n" *-left- "1" p
-s "1" *-right- "n" t
-s "1" *-down- "n" sch
-
-@enduml
+```mermaid
+erDiagram
+  Spider ||--o{ Project : "belongs to"
+  Spider ||--o{ Task : "runs"
+  Spider ||--o{ Schedule : "has"
+  Task ||--o{ Node : "runs on"
+  Schedule ||--o{ Task : "triggers"
+```

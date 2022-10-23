@@ -9,7 +9,7 @@ Crawlab CLI tools is integrated with [Crawlab SDK](https://pypi.org/project/craw
 tools by executing the command below.
 
 ```bash
-pip install crawlab-sdk==0.6.b20211224-1500
+pip install crawlab-sdk
 ```
 
 ::: warning

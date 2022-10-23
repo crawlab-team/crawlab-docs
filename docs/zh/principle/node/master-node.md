@@ -4,16 +4,13 @@
 
 主节点由很多自模块组成，相比于工作节点更为复杂。您可以参考下图查看主节点的自模块。
 
-@startuml
-!theme amiga
-
-node "主节点" {
-rectangle "REST API"
-rectangle "gRPC Server"
-rectangle "Sync Service"
-rectangle "Cron Service"
-rectangle "Task Scheduler"
-rectangle "Plugins"
-}
-
-@enduml
+```mermaid
+graph TB
+    subgraph 主节点
+      api[REST API]
+      grpc[gRPC Server]
+      sync[Sync Service]
+      cron[Cron Service]
+      task[Task Service]
+    end
+```

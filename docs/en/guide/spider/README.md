@@ -12,16 +12,12 @@ The concept *Spider* is so important in Crawlab that we strongly recommend you r
 
 Below is a typical process for users to play with spiders in Crawlab.
 
-@startuml
-!theme amiga
-
-(*) -right-> "Create Spider"
--right-> "Upload Spider"
--right-> "Run Spider"
--right-> "View Results"
--right-> (*)
-
-@enduml
+```mermaid
+graph LR
+A[Create Spider] --> B[Upload Spider]
+B --> C[Run Spider]
+C --> D[View Results]
+```
 
 ## Create Spider
 
@@ -76,16 +72,11 @@ Here is the explanation of settings for running a spider.
 
 ## Entity Relationships
 
-@startuml
-!theme amiga
-
-rectangle "Spider" as s
-rectangle "Project" as p
-rectangle "Task" as t
-rectangle "Schedule" as sch
-
-s "n" *-left- "1" p
-s "1" *-right- "n" t
-s "1" *-down- "n" sch
-
-@enduml
+```mermaid
+erDiagram
+  Spider ||--o{ Project : "belongs to"
+  Spider ||--o{ Task : "runs"
+  Spider ||--o{ Schedule : "has"
+  Task ||--o{ Node : "runs on"
+  Schedule ||--o{ Task : "triggers"
+```
