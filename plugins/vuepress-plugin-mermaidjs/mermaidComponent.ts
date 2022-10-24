@@ -62,7 +62,6 @@ const MermaidComponent = defineComponent({
     },
     renderGraph() {
       const element = this.$el;
-      console.debug(this.id, JSON.parse(JSON.stringify(this.config)));
       mermaid.initialize(this.config);
       mermaid.mermaidAPI.setConfig(this.config);
       mermaid.render(this.id, decodeURIComponent(this.graph), (svgCode: any) => {

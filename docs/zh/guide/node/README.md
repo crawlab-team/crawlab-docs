@@ -31,18 +31,18 @@ IO）。因此，我们可以通过调整工作节点的数量来对数据采集
 
 ## 网络拓扑
 
-@startuml
-!theme amiga
-
-node #409eff "主节点" as mn
-node #e6a23c "工作节点 1" as wn1
-node #e6a23c "工作节点 2" as wn2
-node #e6a23c "工作节点 3" as wn3
-
-mn -down->wn1
-mn -down->wn2
-mn -down->wn3
-@enduml
+```mermaid
+flowchart LR
+  subgraph "多节点部署（MND）"
+    m[主节点] <--> w1[工作节点 1]
+    m <--> w2[工作节点 2]
+    m <--> w3[工作节点 3]
+  end
+  style m fill:#4b83b2,color:white
+  style w1 fill:#e6a23c,color:white
+  style w2 fill:#e6a23c,color:white
+  style w3 fill:#e6a23c,color:white
+```
 
 ## 查看节点状态
 

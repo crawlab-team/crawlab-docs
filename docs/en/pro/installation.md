@@ -34,19 +34,14 @@ For following guidance, we will assume you have installed Docker and Docker-Comp
 
 ## Standalone-Node Deployment
 
-@startuml
-!theme amiga
-!include <cloudogu/common>
-!include <cloudogu/tools/docker>
-
-title SND: Simplified Diagram
-
-node "Master Node" #409eff {
-TOOL_DOCKER(c, Crawlab) #409eff
-TOOL_DOCKER(m, MongoDB) #67c23a
-}
-c <-right->m
-@enduml
+```mermaid
+flowchart TB
+  subgraph Standalone-Node Deployment
+    m[Master Node] <--> mg[MongoDB]
+  end
+  style m fill:#4b83b2,color:white
+  style mg fill:#67c23a,color:white
+```
 
 **Standalone-Node Deployment (SND)** is similar to the configuration in [Quick Start](../guide/quick-start), and it is
 normally for demo purpose or managing a small number of crawlers. In SND, all Docker containers including Crawlab and
@@ -94,20 +89,18 @@ Then, execute `docker-compose up -d` and navigate to `http://<your_ip>:8080` in 
 
 ## Multi-Node Deployment
 
-@startuml
-!theme amiga
-
-title MND: Simplified Diagram
-
-node #409eff "Master Node" as mn
-node #e6a23c "Worker Node 1" as wn1
-node #e6a23c "Worker Node 2" as wn2
-node #e6a23c "Worker Node 3" as wn3
-
-mn -down->wn1
-mn -down->wn2
-mn -down->wn3
-@enduml
+```mermaid
+flowchart LR
+  subgraph Multi-Node Deployment
+    m[Master Node] <--> w1[Worker Node 1]
+    m <--> w2[Worker Node 2]
+    m <--> w3[Worker Node 3]
+  end
+  style m fill:#4b83b2,color:white
+  style w1 fill:#e6a23c,color:white
+  style w2 fill:#e6a23c,color:white
+  style w3 fill:#e6a23c,color:white
+```
 
 **Multi-Node Deployment (MND)** is normally used in production environment, where a cluster consisted of a Master Node
 and multiple Worker Nodes is deployed. Master Node is connected by Worker Nodes, and it serves as the central control
@@ -206,22 +199,21 @@ Fortunately, this issue can be resolved by using external MongoDB deployed in ot
 service providers, e.g. AWS, Azure, Aliyun etc. By doing so, MongoDB can be easily scaled so that the database
 robustness would be ensured. Please refer to the diagram below.
 
-@startuml
-!theme amiga
-
-title MND with external MongoDB
-
-node #409eff "Master Node" as mn
-node #e6a23c "Worker Node 1" as wn1
-node #e6a23c "Worker Node 2" as wn2
-node #e6a23c "Worker Node 3" as wn3
-database #67c23a "MongoDB" as dbm
-
-mn -down->wn1
-mn -down->wn2
-mn -down->wn3
-mn <-right->dbm
-@enduml
+```mermaid
+flowchart LR
+  subgraph Multi-Node Deployment
+    direction TB
+    m[Master Node] <--> w1[Worker Node 1]
+    m <--> w2[Worker Node 2]
+    m <--> w3[Worker Node 3]
+    mg[MongoDB] <--> m
+  end
+  style m fill:#4b83b2,color:white
+  style w1 fill:#e6a23c,color:white
+  style w2 fill:#e6a23c,color:white
+  style w3 fill:#e6a23c,color:white
+  style mg fill:#67c23a,color:white
+```
 
 The configuration file `docker-compose.yml` for Master Node is slightly different from that
 of [default MND](#multi-node-deployment). Please find the content as below.

@@ -37,18 +37,18 @@ There can be none (SND) or multiple Worker Nodes (MND) in Crawlab.
 
 ## Topology
 
-@startuml
-!theme amiga
-
-node #409eff "Master Node" as mn
-node #e6a23c "Worker Node 1" as wn1
-node #e6a23c "Worker Node 2" as wn2
-node #e6a23c "Worker Node 3" as wn3
-
-mn -down->wn1
-mn -down->wn2
-mn -down->wn3
-@enduml
+```mermaid
+flowchart LR
+  subgraph Multi-Node Deployment
+    m[Master Node] <--> w1[Worker Node 1]
+    m <--> w2[Worker Node 2]
+    m <--> w3[Worker Node 3]
+  end
+  style m fill:#4b83b2,color:white
+  style w1 fill:#e6a23c,color:white
+  style w2 fill:#e6a23c,color:white
+  style w3 fill:#e6a23c,color:white
+```
 
 ## Check Node Status
 

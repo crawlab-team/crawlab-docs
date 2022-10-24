@@ -33,19 +33,14 @@ Crawlab 专业版通过 Docker 镜像的方式提供，您可以在任何支持 
 
 ## 单节点部署
 
-@startuml
-!theme amiga
-!include <cloudogu/common>
-!include <cloudogu/tools/docker>
-
-title 单节点部署（SND）: 示意图
-
-node "主节点" #409eff {
-TOOL_DOCKER(c, Crawlab) #409eff
-TOOL_DOCKER(m, MongoDB) #67c23a
-}
-c <-right->m
-@enduml
+```mermaid
+flowchart TB
+  subgraph "单节点部署（SND）"
+    m[主节点] <--> mg[MongoDB]
+  end
+  style m fill:#4b83b2,color:white
+  style mg fill:#67c23a,color:white
+```
 
 **单节点部署（SND）** 与 [快速开始](../quick-start) 中的配置类似，它通常用作演示或少量爬虫管理。在 SND 中，所有 Docker 容器 (
 包括 Crawlab 和
@@ -92,20 +87,18 @@ services:
 
 ## 多节点部署
 
-@startuml
-!theme amiga
-
-title 多节点部署（MND）: 示意图
-
-node #409eff "主节点" as mn
-node #e6a23c "工作节点 1" as wn1
-node #e6a23c "工作节点 2" as wn2
-node #e6a23c "工作节点 3" as wn3
-
-mn -down->wn1
-mn -down->wn2
-mn -down->wn3
-@enduml
+```mermaid
+flowchart LR
+  subgraph "多节点部署（MND）"
+    m[主节点] <--> w1[工作节点 1]
+    m <--> w2[工作节点 2]
+    m <--> w3[工作节点 3]
+  end
+  style m fill:#4b83b2,color:white
+  style w1 fill:#e6a23c,color:white
+  style w2 fill:#e6a23c,color:white
+  style w3 fill:#e6a23c,color:white
+```
 
 **多节点部署（MND）** 通常用在由主节点和工作节点组成的生产环境。主节点于工作节点连接，并在集群中起中控的作用。
 
@@ -193,22 +186,21 @@ MongoDB 本身可能会成为瓶颈，尤其是在大规模分布式系统中。
 所幸的是，这个问题能够通过部署外部 MongoDB 到其他节点或云数据库服务供应商（例如 AWS、Azure、Aliyun）来解决。通过这个方式，MongoDB
 能够轻松的扩容，因此数据库的稳定性能够得到有效保证。请参考下图。
 
-@startuml
-!theme amiga
-
-title 外部 MongoDB 的多节点部署（MND）
-
-node #409eff "主节点" as mn
-node #e6a23c "工作节点 1" as wn1
-node #e6a23c "工作节点 2" as wn2
-node #e6a23c "工作节点 3" as wn3
-database #67c23a "MongoDB" as dbm
-
-mn -down->wn1
-mn -down->wn2
-mn -down->wn3
-mn <-right->dbm
-@enduml
+```mermaid
+flowchart LR
+  subgraph "外部 MongoDB 的多节点部署（MND）"
+    direction TB
+    m[主节点] <--> w1[工作节点 1]
+    m <--> w2[工作节点 2]
+    m <--> w3[工作节点 3]
+    mg[MongoDB] <--> m
+  end
+  style m fill:#4b83b2,color:white
+  style w1 fill:#e6a23c,color:white
+  style w2 fill:#e6a23c,color:white
+  style w3 fill:#e6a23c,color:white
+  style mg fill:#67c23a,color:white
+```
 
 主节点配置文件 `docker-compose.与 [默认多节点部署（MND）](#multi-node-deployment) 稍微有些不同。请参考下面内容。
 

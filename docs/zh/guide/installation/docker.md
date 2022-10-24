@@ -1,6 +1,7 @@
 # 安装: Docker
 
-Docker 是安装部署 Crawlab 最便捷的方式。如果您不熟悉 Docker，您可以参考 [Docker 官网](https://www.docker.com/) 并将其安装在本地。在进行任何操作前，请先保证您已安装好了
+Docker 是安装部署 Crawlab 最便捷的方式。如果您不熟悉 Docker，您可以参考 [Docker 官网](https://www.docker.com/)
+并将其安装在本地。在进行任何操作前，请先保证您已安装好了
 Docker。
 
 ## 主流程
@@ -18,21 +19,17 @@ Docker 部署有多种模式，不过其主流程是相似的。
 
 ## 单节点部署
 
-@startuml
-!theme amiga
-!include <cloudogu/common>
-!include <cloudogu/tools/docker>
+```mermaid
+flowchart TB
+  subgraph "单节点部署（SND）"
+    m[主节点] <--> mg[MongoDB]
+  end
+  style m fill:#4b83b2,color:white
+  style mg fill:#67c23a,color:white
+```
 
-title 单节点部署（SND）: 示意图
-
-node "主节点" #409eff {
-TOOL_DOCKER(c, Crawlab) #409eff
-TOOL_DOCKER(m, MongoDB) #67c23a
-}
-c <-right->m
-@enduml
-
-**单节点部署（SND）** 与 [快速开始](../quick-start) 中的配置类似，它通常用作演示或少量爬虫管理。在 SND 中，所有 Docker 容器 (包括 Crawlab 和
+**单节点部署（SND）** 与 [快速开始](../quick-start) 中的配置类似，它通常用作演示或少量爬虫管理。在 SND 中，所有 Docker 容器 (
+包括 Crawlab 和
 MongoDB) 都在单独一台机器上，即主节点（如上图）。
 
 创建 `docker-compose.yml` 并输入如下内容。
@@ -75,20 +72,18 @@ services:
 
 ## 多节点部署
 
-@startuml
-!theme amiga
-
-title 多节点部署（MND）: 示意图
-
-node #409eff "主节点" as mn
-node #e6a23c "工作节点 1" as wn1
-node #e6a23c "工作节点 2" as wn2
-node #e6a23c "工作节点 3" as wn3
-
-mn -down->wn1
-mn -down->wn2
-mn -down->wn3
-@enduml
+```mermaid
+flowchart LR
+  subgraph "多节点部署（MND）"
+    m[主节点] <--> w1[工作节点 1]
+    m <--> w2[工作节点 2]
+    m <--> w3[工作节点 3]
+  end
+  style m fill:#4b83b2,color:white
+  style w1 fill:#e6a23c,color:white
+  style w2 fill:#e6a23c,color:white
+  style w3 fill:#e6a23c,color:white
+```
 
 **多节点部署（MND）** 通常用在由主节点和工作节点组成的生产环境。主节点于工作节点连接，并在集群中起中控的作用。
 
@@ -162,31 +157,33 @@ services:
 
 ### 开放主节点端口
 
-由于工作节点是通过端口 **8080** (API) 以及 **9666** (gRPC) 来连接主节点的，您需要保证它们都是处于开放状态，**没有** 被主节点防火墙所禁用。
+由于工作节点是通过端口 **8080** (API) 以及 **9666** (gRPC) 来连接主节点的，您需要保证它们都是处于开放状态，**没有**
+被主节点防火墙所禁用。
 :::
 
 ## 外部 MongoDB
 
-在之前介绍的多节点部署（MND）中，您可能已经注意到 MongoDB 默认是部署在主节点上的。但出于性能考虑，这样的顺手部署配置将导致问题，因为 MongoDB 本身可能会成为瓶颈，尤其是在大规模分布式系统中。
+在之前介绍的多节点部署（MND）中，您可能已经注意到 MongoDB 默认是部署在主节点上的。但出于性能考虑，这样的顺手部署配置将导致问题，因为
+MongoDB 本身可能会成为瓶颈，尤其是在大规模分布式系统中。
 
-所幸的是，这个问题能够通过部署外部 MongoDB 到其他节点或云数据库服务供应商（例如 AWS、Azure、Aliyun）来解决。通过这个方式，MongoDB 能够轻松的扩容，因此数据库的稳定性能够得到有效保证。请参考下图。
+所幸的是，这个问题能够通过部署外部 MongoDB 到其他节点或云数据库服务供应商（例如 AWS、Azure、Aliyun）来解决。通过这个方式，MongoDB
+能够轻松的扩容，因此数据库的稳定性能够得到有效保证。请参考下图。
 
-@startuml
-!theme amiga
-
-title 外部 MongoDB 的多节点部署（MND）
-
-node #409eff "主节点" as mn
-node #e6a23c "工作节点 1" as wn1
-node #e6a23c "工作节点 2" as wn2
-node #e6a23c "工作节点 3" as wn3
-database #67c23a "MongoDB" as dbm
-
-mn -down->wn1
-mn -down->wn2
-mn -down->wn3
-mn <-right->dbm
-@enduml
+```mermaid
+flowchart LR
+  subgraph "外部 MongoDB 的多节点部署（MND）"
+    direction TB
+    m[主节点] <--> w1[工作节点 1]
+    m <--> w2[工作节点 2]
+    m <--> w3[工作节点 3]
+    mg[MongoDB] <--> m
+  end
+  style m fill:#4b83b2,color:white
+  style w1 fill:#e6a23c,color:white
+  style w2 fill:#e6a23c,color:white
+  style w3 fill:#e6a23c,color:white
+  style mg fill:#67c23a,color:white
+```
 
 主节点配置文件 `docker-compose.与 [默认多节点部署（MND）](#multi-node-deployment) 稍微有些不同。请参考下面内容。
 
