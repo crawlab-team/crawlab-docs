@@ -49,7 +49,7 @@ services:
 Start Crawlab along with MongoDB by executing the command below.
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 Now you can open the browser and navigate to `http://localhost:8080` to start using Crawlab.
