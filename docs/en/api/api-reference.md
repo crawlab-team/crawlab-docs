@@ -1,1 +1,1 @@
-<ApiDoc spec-url="https://docs.crawlab.cn/openapi.yaml"></ApiDoc>
+<ApiDoc spec-url="https://docs.crawlab.cn/assets/yaml/openapi.yaml"></ApiDoc>
