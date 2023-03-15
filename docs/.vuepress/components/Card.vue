@@ -1,15 +1,11 @@
 <template>
-  <a :class="['card', noMargin ? 'no-margin' : ''].join(' ')" :href="link" target="_blank">
+  <a :class="['card', { 'no-margin': noMargin }]" :href="link" target="_blank">
     <div class="card-box">
       <div class="card-title">
         {{ title }}
       </div>
       <div class="tag-list">
-        <div
-          v-for="(tag, i) in tags"
-          :key="i"
-          class="tag"
-        >
+        <div v-for="(tag, i) in tags" :key="i" class="tag">
           {{ tag }}
         </div>
       </div>
@@ -20,22 +16,16 @@
   </a>
 </template>
 
-<script>
-export default {
-  name: 'Card',
-  props: {
-    title: String,
-    subtitle: String,
-    link: String,
-    tags: {
-      type: Array,
-      default() {
-        return []
-      }
-    },
-    noMargin: Boolean,
-  }
+<script setup lang="ts">
+export interface CardOptions {
+  title: string;
+  link: string;
+  subtitle?: string;
+  tags?: string[];
+  noMargin?: boolean;
 }
+
+withDefaults(defineProps<CardOptions>(), { tags: (): string[] => [] });
 </script>
 
 <style scoped>
@@ -60,7 +50,7 @@ export default {
   border: 1px solid #f1f1f1;
   border-radius: 5px;
   background: #fbfbfb;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .card .card-box:hover {
@@ -75,7 +65,7 @@ export default {
 
 .card .card-box:hover .card-title {
   color: #4fa6ff;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .card .card-box .tag-list {
