@@ -1,7 +1,7 @@
 name: Deploy Qiniu
 
 on:
-  push:
+  pull_request:
     branches:
       - master
 
@@ -29,11 +29,3 @@ jobs:
 
       - name: Build
         run: pnpm docs:build
-
-      - name: Publish
-        run: pnpm run publish
-        env:
-          QINIU_ACCESS_KEY: ${{secrets.QINIU_ACCESS_KEY}}
-          QINIU_SECRET_KEY: ${{secrets.QINIU_SECRET_KEY}}
-          QINIU_BUCKET: ${{secrets.QINIU_BUCKET}}
-          QINIU_ZONE: ${{secrets.QINIU_ZONE}}

@@ -12,18 +12,15 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'CardList',
-  props: {
-    cards: {
-      type: Array,
-      default() {
-        return []
-      }
-    }
-  }
-}
+<script setup lang="ts">
+import { type CardOptions } from "./Card.vue";
+
+withDefaults(
+  defineProps<{
+    cards?: CardOptions[];
+  }>(),
+  { cards: (): CardOptions[] => [] }
+);
 </script>
 
 <style scoped>

@@ -1,62 +1,62 @@
 <template>
   <component
-      v-if="VueperSlides"
-      :is="VueperSlides"
-      fixed-height="540px"
-      3d
-      :touchable="false"
-      autoplay
+    v-if="slidesComponent"
+    :is="slidesComponent"
+    fixed-height="540px"
+    3d
+    :touchable="false"
+    autoplay
   >
     <component
-        v-if="VueperSlide"
-        :is="VueperSlide"
-        v-for="(slide, i) in computedSlides"
-        :key="i"
-        :title="slide.title"
-        :content="slide.content"
-        :image="slide.image"
-        :link="slide.link"
+      :is="slideComponent"
+      v-for="(slide, index) in slideItems"
+      :key="index"
+      v-bind="slide"
     />
   </component>
 </template>
 
-<script>
-import 'vueperslides/dist/vueperslides.css'
+<script setup lang="ts">
+import { type ComponentOptions, computed, onMounted, shallowRef } from "vue";
+import "vueperslides/dist/vueperslides.css";
 
-export default {
-  name: 'SlideList',
-  props: {
-    slides: {
-      type: Array,
-      default() {
-        return []
-      }
-    }
-  },
-  data() {
-    return {
-      VueperSlides: null,
-      VueperSlide: null,
-    }
-  },
-  computed: {
-    computedSlides() {
-      return this.slides.map(d => {
-        // relative path
-        if (d.image && typeof d.image === 'string' && d.image.match(/^\.\/|^@\//)) {
-          d.image = require(d.image)
-        }
-        return d
-      })
-    },
-  },
-  mounted() {
-    import('vueperslides').then(({ VueperSlides, VueperSlide }) => {
-      this.VueperSlides = VueperSlides
-      this.VueperSlide = VueperSlide
-    })
-  }
+export interface SlideItem {
+  title: string;
+  content: string;
+  image?: string;
+  link?: string;
 }
+
+const props = withDefaults(defineProps<{ slides: SlideItem[] }>(), {
+  slides: () => [],
+});
+
+const slidesComponent = shallowRef<ComponentOptions | null>(null);
+const slideComponent = shallowRef<ComponentOptions | null>(null);
+
+const slideItems = computed(() =>
+  props.slides.map((item) => {
+    // relative path
+    if (
+      item.image &&
+      typeof item.image === "string" &&
+      item.image.match(/^\.\/|^@\//)
+    ) {
+      // @ts-ignore
+      item.image = require(item.image);
+    }
+
+    return item;
+  })
+);
+
+onMounted(() => {
+  // @ts-ignore
+  import("vueperslides").then(({ VueperSlides, VueperSlide }) => {
+    slidesComponent.value = VueperSlides;
+    slideComponent.value = VueperSlide;
+  });
+});
 </script>
 
 <style scoped>
@@ -75,7 +75,6 @@ export default {
 }
 
 .vueperslides >>> .vueperslide__content-wrapper {
-  display: inline-block;
   float: right;
   padding: 15px;
   color: #ffffff;
