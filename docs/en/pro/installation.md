@@ -66,7 +66,7 @@ services:
       CRAWLAB_MONGO_PASSWORD: "password"  # mongo password 
       CRAWLAB_MONGO_AUTHSOURCE: "admin"  # mongo auth source 
     volumes:
-      - "/opt/crawlab/.crawlab/master:/root/.crawlab"  # persistent crawlab home directory
+      - "/opt/crawlab/.crawlab/master:/root/.crawlab"  # persistent crawlab metadata
       - "/opt/crawlab/master:/data"  # persistent crawlab data
     ports:
       - "8080:8080"  # exposed api port
@@ -132,7 +132,7 @@ services:
       CRAWLAB_MONGO_PASSWORD: "password"  # mongo password 
       CRAWLAB_MONGO_AUTHSOURCE: "admin"  # mongo auth source 
     volumes:
-      - "/opt/crawlab/.crawlab/master:/root/.crawlab"  # persistent crawlab home directory
+      - "/opt/crawlab/.crawlab/master:/root/.crawlab"  # persistent crawlab metadata
       - "/opt/crawlab/master:/data"  # persistent crawlab data
     ports:
       - "8080:8080"  # exposed api port
@@ -171,7 +171,7 @@ services:
       CRAWLAB_GRPC_ADDRESS: "<master_node_ip>:9666"  # grpc address
       CRAWLAB_FS_FILER_URL: "http://<master_node_ip>:8080/api/filer"  # seaweedfs api
     volumes:
-      - "/opt/crawlab/.crawlab/worker:/root/.crawlab"  # persistent crawlab home directory
+      - "/opt/crawlab/.crawlab/worker:/root/.crawlab"  # persistent crawlab metadata
       - "/opt/crawlab/worker:/data"  # persistent crawlab data
 ```
 
@@ -239,7 +239,7 @@ services:
       CRAWLAB_MONGO_AUTHMECHANISM: "<mongo_auth_mechanism>"  # mongo auth mechanism 
       CRAWLAB_MONGO_AUTHMECHANISMPROPERTIES: "<mongo_auth_mechanism_properties>"  # mongo auth mechanism properties
     volumes:
-      - "/opt/crawlab/.crawlab/master:/root/.crawlab"  # persistent crawlab home directory
+      - "/opt/crawlab/.crawlab/master:/root/.crawlab"  # persistent crawlab metadata
       - "/opt/crawlab/master:/data"  # persistent crawlab data
     ports:
       - "8080:8080"  # exposed api port

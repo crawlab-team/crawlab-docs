@@ -50,7 +50,7 @@ services:
       CRAWLAB_MONGO_PASSWORD: "password"  # mongo password 
       CRAWLAB_MONGO_AUTHSOURCE: "admin"  # mongo auth source 
     volumes:
-      - "/opt/.crawlab/master:/root/.crawlab"  # persistent crawlab metadata
+      - "/opt/.crawlab/master:/root/.crawlab"  # 持久化 crawlab 元数据
       - "/opt/crawlab/master:/data"  # 持久化 crawlab 数据
     ports:
       - "8080:8080"  # 开放 api 端口
@@ -111,7 +111,7 @@ services:
       CRAWLAB_MONGO_PASSWORD: "password"  # mongo password 
       CRAWLAB_MONGO_AUTHSOURCE: "admin"  # mongo auth source 
     volumes:
-      - "/opt/.crawlab/master:/root/.crawlab"  # persistent crawlab metadata
+      - "/opt/.crawlab/master:/root/.crawlab"  # 持久化 crawlab 元数据
       - "/opt/crawlab/master:/data"  # 持久化 crawlab 数据
     ports:
       - "8080:8080"  # 开放 api 端口
@@ -148,7 +148,7 @@ services:
       CRAWLAB_GRPC_ADDRESS: "<master_node_ip>:9666"  # grpc address
       CRAWLAB_FS_FILER_URL: "http://<master_node_ip>:8080/api/filer"  # seaweedfs api
     volumes:
-      - "/opt/.crawlab/worker:/root/.crawlab"  # persistent crawlab metadata
+      - "/opt/.crawlab/worker:/root/.crawlab"  # 持久化 crawlab 元数据
       - "/opt/crawlab/worker:/data"  # 持久化 crawlab 数据
 ```
 
@@ -210,7 +210,7 @@ services:
       CRAWLAB_MONGO_AUTHMECHANISM: "<mongo_auth_mechanism>"  # mongo auth mechanism 
       CRAWLAB_MONGO_AUTHMECHANISMPROPERTIES: "<mongo_auth_mechanism_properties>"  # mongo auth mechanism properties
     volumes:
-      - "/opt/.crawlab/master:/root/.crawlab"  # persistent crawlab metadata
+      - "/opt/.crawlab/master:/root/.crawlab"  # 持久化 crawlab 元数据
       - "/opt/crawlab/master:/data"  # 持久化 crawlab 数据
     ports:
       - "8080:8080"  # 开放 api 端口

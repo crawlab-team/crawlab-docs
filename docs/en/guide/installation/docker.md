@@ -63,6 +63,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: "username"  # mongo username
       MONGO_INITDB_ROOT_PASSWORD: "password"  # mongo password
     volumes:
+      - "/opt/.crawlab/master:/root/.crawlab"  # persistent crawlab metadata
       - "/opt/crawlab/mongo/data/db:/data/db"  # persistent mongo data
     ports:
       - "27017:27017"  # expose mongo port to host machine
