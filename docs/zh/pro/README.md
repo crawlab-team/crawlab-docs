@@ -14,7 +14,7 @@ Crawlab 专业版是 Crawlab 的企业级产品，基于 Crawlab 的核心功能
 定时任务|:white_check_mark:|:white_check_mark:
 任务管理|:white_check_mark:|:white_check_mark:
 [性能监控](../guide/monitoring)|:white_check_mark:|:x:
-[数据源集成](../guide/data-sources)|:white_check_mark:|:x:
+[数据源集成](../guide/data-sources)|:white_check_mark:|:white_check_mark:
 [权限管理](../guide/permissions)|:white_check_mark:|:x:
 
 ## 如何安装

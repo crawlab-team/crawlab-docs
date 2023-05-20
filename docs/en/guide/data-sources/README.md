@@ -1,9 +1,5 @@
 # Data Sources
 
-::: warning NOTE
-This functionality is for [Pro Edition](../../pro) only.
-:::
-
 [Crawlab Pro](../../pro) supports data sources integration, which means you can use Crawlab Pro to manage your data
 sources, such as MongoDB, MySQL, PostgreSQL, SQL Server, etc.
 

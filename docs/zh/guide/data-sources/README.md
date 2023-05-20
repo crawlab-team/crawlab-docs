@@ -1,9 +1,5 @@
 # 数据源
 
-::: warning 注意
-该功能仅适用于 [Crawlab 专业版](../../pro)。
-:::
-
 [Crawlab 专业版](../../pro) 支持数据源集成，这意味着您可以使用**Crawlab 专业版**管理您的数据源，例如
 MongoDB、MySQL、PostgreSQL、SQL Server 等。
 
