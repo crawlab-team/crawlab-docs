@@ -6,7 +6,7 @@ prev: false
 next: false
 ---
 
-<ApiDoc spec-url="https://docs.crawlab.cn/assets/yaml/openapi.yaml"></ApiDoc>
+<ApiDoc spec-url="https://raw.githubusercontent.com/crawlab-team/crawlab-core/main/docs/api/openapi.yaml"></ApiDoc>
 
 <script setup lang="ts">
 import { onMounted } from 'vue';

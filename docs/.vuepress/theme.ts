@@ -8,7 +8,7 @@ export default hopeTheme({
     name: "Marvin Zhang",
   },
   favicon: "/favicon.ico",
-  logo: "/logo.svg",
+  logo: "/logo-main.svg",
   repo: "crawlab-team/crawlab-docs",
   docsDir: "docs",
 

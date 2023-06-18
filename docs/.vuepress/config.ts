@@ -1,7 +1,7 @@
-import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
-import { defineUserConfig } from "vuepress";
-import { redirectPlugin } from "vuepress-plugin-redirect";
-import { addCustomElement } from "vuepress-shared";
+import {registerComponentsPlugin} from "@vuepress/plugin-register-components";
+import {defineUserConfig} from "vuepress";
+import {redirectPlugin} from "vuepress-plugin-redirect";
+import {addCustomElement} from "vuepress-shared";
 
 import theme from "./theme.js";
 
@@ -11,13 +11,13 @@ export default defineUserConfig({
   locales: {
     "/en/": {
       lang: "en-US",
-      title: "Crawlab Documentation",
+      title: "",
       description:
         "Documentation for distributed web crawler management platform Crawlab",
     },
     "/zh/": {
       lang: "zh-CN",
-      title: "Crawlab 中文文档",
+      title: "",
       description:
         "Documentation for distributed web crawler management platform",
     },
@@ -26,9 +26,9 @@ export default defineUserConfig({
   head: [
     [
       "meta",
-      { name: "default-lang", content: process.env.CRAWLAB_LANG || "zh" },
+      {name: "default-lang", content: process.env.CRAWLAB_LANG || "zh"},
     ],
-    ["script", { src: "/assets/js/umeng.js" }],
+    ["script", {src: "/assets/js/umeng.js"}],
     [
       "script",
       {
