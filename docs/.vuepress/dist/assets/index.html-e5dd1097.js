@@ -1,0 +1,1 @@
+import{_ as t,Z as a,$ as s,a0 as e,a3 as n}from"./framework-64cb0dab.js";const c={},o=e("h1",{id:"task",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#task","aria-hidden":"true"},"#"),n(" Task")],-1),r=e("p",null,"🚧 Under construction...",-1),_=[o,r];function d(i,l){return a(),s("div",null,_)}const f=t(c,[["render",d],["__file","index.html.vue"]]);export{f as default};

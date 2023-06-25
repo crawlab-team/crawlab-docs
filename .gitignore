@@ -6,7 +6,7 @@ tmp/
 *.log
 *.local
 .docs
-dist/
+#dist/
 venv/
 .temp/
 .cache/
