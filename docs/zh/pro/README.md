@@ -4,18 +4,18 @@ Crawlab 专业版是 Crawlab 的企业级产品，基于 Crawlab 的核心功能
 
 ## 演示
 
-您可以访问 [Demo](https://demo-pro.crawlab.cn) 查看 Crawlab 专业版的功能。
+您可以访问 [Demo](https://demo.crawlab.cn) 查看 Crawlab 专业版的功能。
 
 ## 功能对比
 
-功能 | 专业版 | 社区版
----|--|--
-爬虫管理|:white_check_mark:|:white_check_mark:
-定时任务|:white_check_mark:|:white_check_mark:
-任务管理|:white_check_mark:|:white_check_mark:
-[性能监控](../guide/monitoring)|:white_check_mark:|:x:
-[数据源集成](../guide/data-sources)|:white_check_mark:|:white_check_mark:
-[权限管理](../guide/permissions)|:white_check_mark:|:x:
+| 功能                             | 专业版                | 社区版                |
+|--------------------------------|--------------------|--------------------|
+| 爬虫管理                           | :white_check_mark: | :white_check_mark: |
+| 定时任务                           | :white_check_mark: | :white_check_mark: |
+| 任务管理                           | :white_check_mark: | :white_check_mark: |
+| [数据源集成](../guide/data-sources) | :white_check_mark: | :white_check_mark: |
+| [性能监控](../guide/monitoring)    | :white_check_mark: | :x:                |
+| [权限管理](../guide/permissions)   | :white_check_mark: | :x:                |
 
 ## 如何安装
 

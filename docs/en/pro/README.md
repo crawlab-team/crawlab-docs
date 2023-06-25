@@ -5,18 +5,18 @@ modules which would be suitable for production environment and has more scalabil
 
 ## Demo
 
-You can visit the [Demo](https://demo-pro.crawlab.cn) to see how Crawlab Pro works.
+You can visit the [Demo](https://demo.crawlab.cn) to see how Crawlab Pro works.
 
 ## Feature Comparison
 
-Feature | Pro | Community
----|--|--
-Spider Management|:white_check_mark:|:white_check_mark:
-Scheduled Tasks|:white_check_mark:|:white_check_mark:
-Task Management|:white_check_mark:|:white_check_mark:
-[Performance Monitoring](../guide/monitoring)|:white_check_mark:|:x:
-[Data Source Integration](../guide/data-sources)|:white_check_mark:|:white_check_mark:
-[Permission Management](../guide/permissions)|:white_check_mark:|:x:
+| Feature                                          | Pro                | Community          |
+|--------------------------------------------------|--------------------|--------------------|
+| Spider Management                                | :white_check_mark: | :white_check_mark: |
+| Scheduled Tasks                                  | :white_check_mark: | :white_check_mark: |
+| Task Management                                  | :white_check_mark: | :white_check_mark: |
+| [Data Source Integration](../guide/data-sources) | :white_check_mark: | :white_check_mark: |
+| [Performance Monitoring](../guide/monitoring)    | :white_check_mark: | :x:                |
+| [Permission Management](../guide/permissions)    | :white_check_mark: | :x:                |
 
 ## How to install
 
