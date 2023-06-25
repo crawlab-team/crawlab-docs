@@ -1,4 +1,4 @@
 ---
 home: true
-redirectTo: /zh/
+redirectTo: https://docs.crawlab.cn/zh/
 ---
