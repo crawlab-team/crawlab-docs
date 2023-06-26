@@ -1,10 +1,6 @@
 # 数据源
 
-[Crawlab 专业版](../../pro) 支持数据源集成，这意味着您可以使用**Crawlab 专业版**管理您的数据源，例如
-MongoDB、MySQL、PostgreSQL、SQL Server 等。
-
-[Crawlab 社区版](https://github.com/crawlab-team/crawlab)仅支持将结果数据存储到默认的 MongoDB 中，该 MongoDB 存储了
-Crawlab 的运行数据。
+Crawlab 支持数据源集成，这意味着您可以使用 Crawlab 管理您的数据源，例如 MongoDB、MySQL、PostgreSQL、SQL Server 等。
 
 ## 支持的数据源
 

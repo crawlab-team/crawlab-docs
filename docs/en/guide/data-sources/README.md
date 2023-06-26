@@ -1,10 +1,7 @@
 # Data Sources
 
-[Crawlab Pro](../../pro) supports data sources integration, which means you can use Crawlab Pro to manage your data
+Crawlab supports data sources integration, which means you can use Crawlab to manage your data
 sources, such as MongoDB, MySQL, PostgreSQL, SQL Server, etc.
-
-The [Community Edition](https://github.com/crawlab-team/crawlab) only supports storing results data to
-default MongoDB, which stores operational data of Crawlab.
 
 ## Supported Data Sources
 
