@@ -52,6 +52,7 @@ services:
     volumes:
       - "/opt/.crawlab/master:/root/.crawlab"  # 持久化 crawlab 元数据
       - "/opt/crawlab/master:/data"  # 持久化 crawlab 数据
+      - "/var/crawlab/log:/var/logs/crawlab" # log persistent 日志持久化
     ports:
       - "8080:8080"  # 开放 api 端口
     depends_on:
