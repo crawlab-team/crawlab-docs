@@ -37,16 +37,13 @@ export default hopeTheme({
     "/en/": {
       navbar: navbar([
         { text: "Guide", icon: "creative", link: "/en/guide/" },
-        { text: "Principle", icon: "software", link: "/en/principle/" },
-        { text: "API", icon: "api", link: "/en/api/" },
         { text: "Pro Edition", icon: "ability", link: "https://www.crawlab.cn/en/prices" },
-        { text: "Migration", icon: "navigation", link: "/en/migration/" },
         {
           text: "Official Site",
           icon: "home",
           link: "https://www.crawlab.cn/en/",
         },
-        { text: "Demo", icon: "slides", link: "https://demo-pro.crawlab.cn" },
+        { text: "Demo", icon: "slides", link: "https://demo.crawlab.cn" },
         {
           text: "Older Versions",
           icon: "tag",
@@ -58,11 +55,8 @@ export default hopeTheme({
     "/zh/": {
       navbar: navbar([
         { text: "指南", icon: "creative", link: "/zh/guide/" },
-        { text: "原理", icon: "software", link: "/zh/principle/" },
-        { text: "API", icon: "api", link: "/zh/api/" },
-        { text: "专业版", icon: "ability", link: "https://www.crawlab.cn/prices" },
-        { text: "旧版本迁移", icon: "navigation", link: "/zh/migration/" },
         { text: "官网", icon: "home", link: "https://www.crawlab.cn" },
+        { text: "购买", icon: "ability", link: "https://www.crawlab.cn/prices" },
         { text: "演示", icon: "slides", link: "https://demo.crawlab.cn" },
         {
           text: "历史版本",

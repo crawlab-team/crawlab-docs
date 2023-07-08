@@ -10,6 +10,10 @@ slides:
 
 # Notifications
 
+::: info NOTE
+This functionality is for [Pro Edition](https://www.crawlab.cn/en/prices) only.
+:::
+
 Crawlab allows users to receive email or mobile notifications.
 
 <SlideList :slides="$page.frontmatter.slides"></SlideList>
@@ -46,6 +50,12 @@ Please refer to related documentation for how to get webhook tokens.
 - [Wechat Work](https://developer.work.weixin.qq.com/document/path/91770)
 
 :::
+
+## Trigger
+
+1. Navigate to the `Notifications` page <br>![notifications-menu.png](./img/notification-menu.png)
+2. Click on the `Trigger` tab
+3. Select the event types you want to trigger
 
 ## Template
 

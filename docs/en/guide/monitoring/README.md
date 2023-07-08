@@ -1,10 +1,10 @@
 # Monitoring
 
-::: warning NOTE
-This functionality is for [Pro Edition](../../pro) only.
+::: info NOTE
+This functionality is for [Pro Edition](https://www.crawlab.cn/en/prices) only.
 :::
 
-[Crawlab Pro](../../pro) supports performance monitoring, which means you can use Crawlab Pro to monitor the performance
+[Crawlab Pro](https://www.crawlab.cn/en/prices) supports performance monitoring, which means you can use Crawlab Pro to monitor the performance
 of your nodes.
 
 ## Performance Metrics Overview

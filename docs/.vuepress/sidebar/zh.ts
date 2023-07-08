@@ -107,14 +107,14 @@ export const zhSidebar = sidebar([
         link: "deps/",
       },
       {
-        text: "消息通知",
-        icon: "notice",
-        link: "notifications/",
-      },
-      {
         text: "数据源",
         icon: "mysql",
         link: "data-sources/",
+      },
+      {
+        text: "消息通知",
+        icon: "notice",
+        link: "notifications/",
       },
       {
         text: "监控指标",
@@ -125,6 +125,11 @@ export const zhSidebar = sidebar([
         text: "权限管理",
         icon: "group",
         link: "permissions/",
+      },
+      {
+        text: "环境变量",
+        icon: "object",
+        link: "environment/",
       },
       // {
       //   text: '插件',

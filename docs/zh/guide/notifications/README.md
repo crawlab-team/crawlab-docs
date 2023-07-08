@@ -10,6 +10,10 @@ slides:
 
 # 消息通知
 
+::: info 注意
+该功能仅适用于 [Crawlab 专业版](https://www.crawlab.cn/prices)。
+:::
+
 Crawlab 允许用户接收邮件或手机消息通知。
 
 <SlideList :slides="$page.frontmatter.slides"></SlideList>
@@ -46,6 +50,12 @@ SMTP 配置:
 - [企业微信](https://developer.work.weixin.qq.com/document/path/91770)
 
 :::
+
+## 触发
+
+1. 导航到 `消息通知` 页面 <br>![notifications-menu.png](./img/notification-menu.png)
+2. 点击 `触发` 标签
+3. 选择需要触发的事件类型
 
 ## 模板
 

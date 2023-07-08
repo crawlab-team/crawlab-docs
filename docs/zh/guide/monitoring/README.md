@@ -1,10 +1,10 @@
 # 监控指标
 
-::: warning 注意
-该功能仅适用于 [Crawlab 专业版](../../pro)。
+::: info 注意
+该功能仅适用于 [Crawlab 专业版](https://www.crawlab.cn/prices)。
 :::
 
-[Crawlab 专业版](../../pro) 支持性能监控，这意味着您可以使用 Crawlab 专业版监控节点的性能。
+[Crawlab 专业版](https://www.crawlab.cn/prices) 支持性能监控，这意味着您可以使用 Crawlab 专业版监控节点的性能。
 
 ## 性能指标概览
 

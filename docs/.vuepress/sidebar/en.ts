@@ -107,14 +107,14 @@ export const enSidebar = sidebar([
         link: "deps/",
       },
       {
-        text: "Notifications",
-        icon: "notice",
-        link: "notifications/",
-      },
-      {
         text: "Data Sources",
         icon: "mysql",
         link: "data-sources/",
+      },
+      {
+        text: "Notifications",
+        icon: "notice",
+        link: "notifications/",
       },
       {
         text: "Monitoring",
@@ -125,6 +125,11 @@ export const enSidebar = sidebar([
         text: "Permissions",
         icon: "group",
         link: "permissions/",
+      },
+      {
+        text: "Environment",
+        icon: "object",
+        link: "environment/",
       },
       // {
       //   text: 'Plugin',
