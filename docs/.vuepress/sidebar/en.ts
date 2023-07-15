@@ -76,9 +76,14 @@ export const enSidebar = sidebar([
             link: "file-editor",
           },
           {
-            text: "Integration",
+            text: "Data Integration",
             icon: "class",
             link: "integration",
+          },
+          {
+            text: "Git Integration",
+            icon: "git",
+            link: "git",
           },
         ],
       },

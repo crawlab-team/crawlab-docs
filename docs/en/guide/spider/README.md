@@ -22,8 +22,11 @@ C --> D[View Results]
 ## Create Spider
 
 1. Navigate to `Spiders` page, and click `New Spider` button on the top left.
-2. Enter relevant info including `Name` and `Command`.
+2. Enter relevant info including `Name` and `Execute Command`.
 3. Click `Confirm`.
+
+`Execute Command` is the base command that will be executed when running the spider, e.g. `scrapy crawl myspider`, and
+it's the bash/shell command that will be executed when running the spider.
 
 ## Upload Spider
 

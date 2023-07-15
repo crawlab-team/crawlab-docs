@@ -1,4 +1,4 @@
-# Spider Integration
+# Data Integration
 
 You can integrate your spiders with Crawlab SDK. This allows you to view scraped results visually on Crawlab.
 

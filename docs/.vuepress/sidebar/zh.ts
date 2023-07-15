@@ -76,9 +76,14 @@ export const zhSidebar = sidebar([
             link: "file-editor",
           },
           {
-            text: "爬虫集成",
+            text: "数据集成",
             icon: "class",
             link: "integration",
+          },
+          {
+            text: "Git 集成",
+            icon: "git",
+            link: "git",
           },
         ],
       },

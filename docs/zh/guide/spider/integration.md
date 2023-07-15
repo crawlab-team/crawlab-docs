@@ -1,6 +1,6 @@
-# 爬虫集成
+# 数据集成
 
-您可以通过 Crawlab SDK 集成您的爬虫。这允许您在 Crawlab 上以可视化的方式查看爬取的结果。
+您可以通过 Crawlab SDK 集成您的爬虫数据。这允许您在 Crawlab 上以可视化的方式查看爬取的结果。
 
 Crawlab SDK 支持各种爬虫框架的集成，包括 Scrapy，以及各种编程语言，包括 Python，Node.js，Go。
 
