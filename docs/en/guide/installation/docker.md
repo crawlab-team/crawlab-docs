@@ -51,6 +51,7 @@ services:
       CRAWLAB_MONGO_AUTHSOURCE: "admin"  # mongo auth source 
     volumes:
       - "/opt/crawlab/master:/data"  # persistent crawlab data
+      - "/var/crawlab/log:/var/logs/crawlab" # log persistent 
     ports:
       - "8080:8080"  # exposed api port
     depends_on:
