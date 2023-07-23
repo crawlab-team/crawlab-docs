@@ -1,4 +1,4 @@
-import { sidebar } from "vuepress-theme-hope";
+import {sidebar} from "vuepress-theme-hope";
 
 export const enSidebar = sidebar([
   {
@@ -319,11 +319,11 @@ export const enSidebar = sidebar([
       },
     ],
   },
-  // TODO: implement
-  // {
-  //   text: 'FAQ',
-  //   link: '/en/faq',
-  // },
+  {
+    text: 'FAQ',
+    icon: 'question',
+    link: '/en/faq',
+  },
   // TODO: implement
   // {
   //   text: 'Develop',

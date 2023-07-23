@@ -318,11 +318,11 @@ export const zhSidebar = sidebar([
       },
     ],
   },
-  // TODO: implement
-  // {
-  //   text: 'FAQ',
-  //   link: '/zh/faq',
-  // },
+  {
+    text: 'FAQ',
+    icon: 'question',
+    link: '/zh/faq',
+  },
   // TODO: implement
   // {
   //   text: '开发',
