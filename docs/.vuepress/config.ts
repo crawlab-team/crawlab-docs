@@ -42,7 +42,7 @@ export default defineUserConfig({
       `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-1YYCQBYL6M');`,
+gtag('config', 'G-G9445D9CW9');`,
     ],
     [
       "script",
@@ -51,7 +51,7 @@ gtag('config', 'G-1YYCQBYL6M');`,
 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
 t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "e36ab99a5l");`,
+})(window, document, "clarity", "script", "e3a7lpontr");`,
     ],
   ],
 
