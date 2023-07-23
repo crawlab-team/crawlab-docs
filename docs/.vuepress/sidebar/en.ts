@@ -85,6 +85,11 @@ export const enSidebar = sidebar([
             icon: "git",
             link: "git",
           },
+          {
+            text: "Selenium Spider Integration",
+            icon: "keyboard",
+            link: "selenium",
+          },
         ],
       },
       {

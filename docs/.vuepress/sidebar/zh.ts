@@ -85,6 +85,11 @@ export const zhSidebar = sidebar([
             icon: "git",
             link: "git",
           },
+          {
+            text: "Selenium 爬虫集成",
+            icon: "keyboard",
+            link: "selenium",
+          },
         ],
       },
       {
