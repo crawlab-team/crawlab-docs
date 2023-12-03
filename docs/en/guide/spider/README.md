@@ -28,6 +28,12 @@ C --> D[View Results]
 `Execute Command` is the base command that will be executed when running the spider, e.g. `scrapy crawl myspider`, and
 it's the bash/shell command that will be executed when running the spider.
 
+`Incremental Sync` is whether to sync files incrementally when running the spider, instead of downloading all files
+every time. It can save time when downloading files.
+
+`Auto Install Dependencies` is whether to install dependencies automatically when running the spider, e.g. the
+dependencies in `requirements.txt`. (This feature is only available in Crawlab Pro Edition)
+
 ## Upload Spider
 
 There are several ways to upload spider files.
