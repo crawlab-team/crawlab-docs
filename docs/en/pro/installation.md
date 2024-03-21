@@ -1,7 +1,16 @@
 # Installation
 
 Crawlab Pro is distributed via [Docker](https://www.docker.com/). You can install it on any platform that supports
-Docker.
+Docker. You can pull the Crawlab Pro image directly from Docker Hub and then configure it via Docker-Compose.
+
+::: tip
+If you use Kubernetes, you can also configure it by creating Kubernetes resources. The installation process is very
+similar to [Crawlab Community Edition Installation](../guide/installation/kubernetes.md). The only difference is that
+you need to change the image name to `crawlabteam/crawlab-pro` and add the environment
+variable `CRAWLAB_LICENSE: <your_license>`.
+:::
+
+This guide will show you how to install Crawlab Pro in a Docker environment.
 
 ## Prerequisites
 
@@ -20,7 +29,8 @@ If you don't know how to obtain licenses, please refer to [Crawlab Pro License](
 :::
 
 The main process of installing Crawlab Pro is quite similar to that of Crawlab Community except that it requires
-a [license](./license). You can refer to [Crawlab Community Installation via Docker](../guide/installation/docker) for more
+a [license](./license). You can refer to [Crawlab Community Installation via Docker](../guide/installation/docker) for
+more
 information.
 
 1. Install [Docker](https://www.docker.com/) and [Docker-Compose](https://docs.docker.com/compose/)

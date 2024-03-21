@@ -1,6 +1,15 @@
 # 安装
 
-Crawlab 专业版通过 Docker 镜像的方式提供，您可以在任何支持 Docker 的环境中安装。
+Crawlab 专业版通过 Docker 镜像的方式提供，您可以在任何支持 Docker 的环境中安装。您可以直接通过 Docker Hub 来拉取 Crawlab
+专业版的镜像，然后通过 Docker-Compose 来进行配置。
+
+::: tip
+如果您使用 Kubernetes，也可以通过创建 Kubernetes
+资源来进行配置，安装方式跟社区版[Kubernetes安装](../guide/installation/kubernetes.md)
+非常相似，唯一不同的是你需要更改镜像名为 `crawlabteam/crawlab-pro`，还有环境变量加入 `CRAWLAB_LICENSE: <your_license>`。
+:::
+
+本指南将会介绍如何在 Docker 环境中安装 Crawlab 专业版。
 
 ## 前提条件
 
@@ -241,3 +250,5 @@ services:
 
 可以看到，服务 `mongo` 被移除了，MongoDB 连接相关的环境变量 (例如 `CRAWLAB_MONGO_HOST`, `CRAWLAB_MONGO_PORT`) 指向了外部
 MongoDB。您可以将其中一些不需要设置的环境变量留空。
+
+## Kubernetes 部署
