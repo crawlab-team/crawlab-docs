@@ -42,3 +42,9 @@ If enabled, it is very likely that your time zone is not set to your local time.
 variable `TZ` to your local time zone, such as `Asia/Shanghai`.
 
 Reference: [Issue #1383](https://github.com/crawlab-team/crawlab/issues/1383#issuecomment-1694423534)
+
+### What is Crawlab AI?
+
+Crawlab AI is a new product of Crawlab. It is in an early stage of development and provides a playground for users to
+experiment with intelligent data extraction. You can visit the [Crawlab AI](https://ai.crawlab.io) website for more
+information.

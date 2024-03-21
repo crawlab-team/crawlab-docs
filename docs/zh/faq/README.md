@@ -36,3 +36,9 @@ Crawlab 支持 Selenium 爬虫，详情参考 [Selenium 爬虫集成](../guide/s
 如果已启用，很有可能是因为你的时区没有设置为你本地时间，你需要设置环境变量 `TZ` 为你本地时区，例如 `Asia/Shanghai`。
 
 参考: [Issue #1383](https://github.com/crawlab-team/crawlab/issues/1383#issuecomment-1694423534)
+
+### Crawlab AI 是什么？
+
+Crawlab AI 是 Crawlab
+的新产品。它处于早期开发阶段，为用户提供了一个实验智能数据提取的平台。您可以访问 [Crawlab AI](https://ai.crawlab.io)
+网站了解更多信息。
