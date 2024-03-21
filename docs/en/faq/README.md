@@ -33,3 +33,12 @@ For more details, please refer to [Spider Integration](../guide/spider/integrati
 
 Yes, Crawlab supports Selenium for web scraping. For more details, please refer
 to [Selenium Spider Integration](../guide/spider/selenium.md).
+
+### Why do scheduled tasks not run as expected?
+
+First of all, check if your scheduled task is enabled.
+
+If enabled, it is very likely that your time zone is not set to your local time. You need to set the environment
+variable `TZ` to your local time zone, such as `Asia/Shanghai`.
+
+Reference: [Issue #1383](https://github.com/crawlab-team/crawlab/issues/1383#issuecomment-1694423534)

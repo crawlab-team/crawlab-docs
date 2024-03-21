@@ -28,3 +28,11 @@ Crawlab 支持 Scrapy，而且有内置的 Pipeline 可以使用，只需要在 
 ### Crawlab 支持 Selenium 吗？
 
 Crawlab 支持 Selenium 爬虫，详情参考 [Selenium 爬虫集成](../guide/spider/selenium.md)。
+
+### 为什么定时任务不按照预期执行？
+
+首先，确认你的定时任务是否已经启用。
+
+如果已启用，很有可能是因为你的时区没有设置为你本地时间，你需要设置环境变量 `TZ` 为你本地时区，例如 `Asia/Shanghai`。
+
+参考: [Issue #1383](https://github.com/crawlab-team/crawlab/issues/1383#issuecomment-1694423534)
