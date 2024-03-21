@@ -33,15 +33,11 @@ export const enSidebar = sidebar([
             icon: "app",
             link: "docker",
           },
-          // TODO: implement
-          // {
-          //   text: 'Kubernetes',
-          //   link: 'installation/kubernetes',
-          // },
-          // {
-          //   text: 'Direct Deploy',
-          //   link: 'installation/direct-deploy',
-          // },
+          {
+            text: 'Kubernetes',
+            icon: 'tree',
+            link: 'kubernetes',
+          },
         ],
       },
       {

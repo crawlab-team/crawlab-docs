@@ -1,4 +1,4 @@
-import { sidebar } from "vuepress-theme-hope";
+import {sidebar} from "vuepress-theme-hope";
 
 export const zhSidebar = sidebar([
   {
@@ -33,15 +33,11 @@ export const zhSidebar = sidebar([
             icon: "app",
             link: "docker",
           },
-          // TODO: implement
-          // {
-          //   text: 'Kubernetes',
-          //   link: 'installation/kubernetes',
-          // },
-          // {
-          //   text: '直接部署',
-          //   link: 'installation/direct-deploy',
-          // },
+          {
+            text: 'Kubernetes',
+            icon: 'tree',
+            link: 'kubernetes',
+          },
         ],
       },
       {
