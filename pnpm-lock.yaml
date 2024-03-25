@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 devDependencies:
   '@vuepress/client':
     specifier: 2.0.0-beta.61
@@ -1725,7 +1721,7 @@ packages:
       '@mdit/plugin-tex': 0.4.8
       '@types/katex': 0.16.0
       '@types/markdown-it': 12.2.3
-      katex: 0.16.7
+      katex: 0.16.10
       markdown-it: 13.0.1
     dev: true
 
@@ -5235,8 +5231,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /katex@0.16.7:
-    resolution: {integrity: sha512-Xk9C6oGKRwJTfqfIbtr0Kes9OSv6IFsuhFGc7tW4urlpMJtuh+7YhzU6YEG9n8gmWKcMAFzkp7nr+r69kV0zrA==}
+  /katex@0.16.10:
+    resolution: {integrity: sha512-ZiqaC04tp2O5utMsl2TEZTXxa6WSC4yo0fv5ML++D3QZv/vx2Mct0mTlRx3O+uUkjfuAgOkzsCmq5MiUEsDDdA==}
     hasBin: true
     dependencies:
       commander: 8.3.0
@@ -7579,7 +7575,7 @@ packages:
       echarts: 5.4.2
       flowchart.ts: 0.1.2
       js-yaml: 4.1.0
-      katex: 0.16.7
+      katex: 0.16.10
       markdown-it: 13.0.1
       mermaid: 10.1.0
       reveal.js: 4.5.0
@@ -8338,3 +8334,7 @@ packages:
     dependencies:
       tslib: 2.3.0
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
