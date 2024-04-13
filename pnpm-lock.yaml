@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 devDependencies:
   '@vuepress/client':
     specifier: 2.0.0-beta.61
@@ -21,8 +17,8 @@ devDependencies:
     specifier: ^2.0.1
     version: 2.0.1
   axios:
-    specifier: ^0.24.0
-    version: 0.24.0
+    specifier: ^0.28.0
+    version: 0.28.0
   chalk:
     specifier: ^4.1.2
     version: 4.1.2
@@ -3054,10 +3050,12 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /axios@0.24.0:
-    resolution: {integrity: sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==}
+  /axios@0.28.0:
+    resolution: {integrity: sha512-Tu7NYoGY4Yoc7I+Npf9HhUMtEEpV7ZiLH9yndTCoNhcpBH0kwcvFbzYN9/u5QKI5A6uefjsNNWaz5olJVYS62Q==}
     dependencies:
       follow-redirects: 1.15.2
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
     dev: true
@@ -8338,3 +8336,7 @@ packages:
     dependencies:
       tslib: 2.3.0
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false

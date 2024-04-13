@@ -33,7 +33,7 @@
     "@vuepress/shared": "2.0.0-beta.61",
     "@vuepress/utils": "2.0.0-beta.61",
     "argparse": "^2.0.1",
-    "axios": "^0.24.0",
+    "axios": "^0.28.0",
     "chalk": "^4.1.2",
     "dotenv": "^10.0.0",
     "md5": "^2.3.0",
