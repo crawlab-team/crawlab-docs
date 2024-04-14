@@ -1,16 +1,16 @@
-import { hopeTheme, navbar } from "vuepress-theme-hope";
-import { enSidebar } from "./sidebar/en.js";
-import { zhSidebar } from "./sidebar/zh.js";
+import { hopeTheme, navbar } from 'vuepress-theme-hope';
+import { enSidebar } from './sidebar/en.js';
+import { zhSidebar } from './sidebar/zh.js';
 
 export default hopeTheme({
-  hostname: "https://docs.crawlab.cn",
+  hostname: 'https://docs.crawlab.cn',
   author: {
-    name: "Marvin Zhang",
+    name: 'Marvin Zhang',
   },
-  favicon: "/favicon.ico",
-  logo: "/logo-main.svg",
-  repo: "crawlab-team/crawlab-docs",
-  docsDir: "docs",
+  favicon: '/favicon.ico',
+  logo: '/logo-main.svg',
+  repo: 'crawlab-team/crawlab-docs',
+  docsDir: 'docs',
 
   footer: `\
 <div style="display: flex;align-items: center">
@@ -24,44 +24,44 @@ export default hopeTheme({
   </a>
 </div>
 `,
-  copyright: "2019-2023 © Crawlab.cn All rights reserved",
+  copyright: '2019-2023 © Crawlab.cn All rights reserved',
 
-  pageInfo: ["Category", "Tag"],
+  pageInfo: ['Category', 'Tag'],
 
   displayFooter: true,
 
-  darkmode: "toggle",
-  iconAssets: "iconfont",
+  darkmode: 'toggle',
+  iconAssets: 'iconfont',
 
   locales: {
-    "/en/": {
+    '/en/': {
       navbar: navbar([
-        { text: "Guide", icon: "creative", link: "/en/guide/" },
-        { text: "Pro Edition", icon: "ability", link: "https://www.crawlab.cn/en/prices" },
+        { text: 'Guide', icon: 'creative', link: '/en/guide/' },
+        { text: 'Pro Edition', icon: 'ability', link: 'https://www.crawlab.cn/en/#pricing' },
         {
-          text: "Official Site",
-          icon: "home",
-          link: "https://www.crawlab.cn/en/",
+          text: 'Official Site',
+          icon: 'home',
+          link: 'https://www.crawlab.cn/en/',
         },
-        { text: "Demo", icon: "slides", link: "https://demo.crawlab.cn" },
+        { text: 'Demo', icon: 'slides', link: 'https://demo.crawlab.cn' },
         {
-          text: "Older Versions",
-          icon: "tag",
-          children: [{ text: "v0.5.x", link: "https://docs-v05.crawlab.cn" }],
+          text: 'Older Versions',
+          icon: 'tag',
+          children: [{ text: 'v0.5.x', link: 'https://docs-v05.crawlab.cn' }],
         },
       ]),
       sidebar: enSidebar,
     },
-    "/zh/": {
+    '/zh/': {
       navbar: navbar([
-        { text: "指南", icon: "creative", link: "/zh/guide/" },
-        { text: "官网", icon: "home", link: "https://www.crawlab.cn" },
-        { text: "购买", icon: "ability", link: "https://www.crawlab.cn/prices" },
-        { text: "演示", icon: "slides", link: "https://demo.crawlab.cn" },
+        { text: '指南', icon: 'creative', link: '/zh/guide/' },
+        { text: '官网', icon: 'home', link: 'https://www.crawlab.cn' },
+        { text: '购买', icon: 'ability', link: 'https://www.crawlab.cn/zh/#pricing' },
+        { text: '演示', icon: 'slides', link: 'https://demo.crawlab.cn' },
         {
-          text: "历史版本",
-          icon: "tag",
-          children: [{ text: "v0.5.x", link: "https://docs-v05.crawlab.cn" }],
+          text: '历史版本',
+          icon: 'tag',
+          children: [{ text: 'v0.5.x', link: 'https://docs-v05.crawlab.cn' }],
         },
       ]),
       sidebar: zhSidebar,
