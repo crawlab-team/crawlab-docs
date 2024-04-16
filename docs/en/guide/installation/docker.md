@@ -52,7 +52,7 @@ services:
     volumes:
       - "/opt/.crawlab/master:/root/.crawlab"  # persistent crawlab metadata
       - "/opt/crawlab/master:/data"  # persistent crawlab data
-      - "/var/crawlab/log:/var/logs/crawlab" # log persistent 
+      - "/var/crawlab/log:/var/log/crawlab" # log persistent 
     ports:
       - "8080:8080"  # exposed api port
     depends_on:
@@ -119,7 +119,7 @@ services:
     volumes:
       - "/opt/.crawlab/master:/root/.crawlab"  # persistent crawlab metadata
       - "/opt/crawlab/master:/data"  # persistent crawlab data
-      - "/var/crawlab/log:/var/logs/crawlab" # log persistent 
+      - "/var/crawlab/log:/var/log/crawlab" # log persistent 
     ports:
       - "8080:8080"  # exposed api port
       - "9666:9666"  # exposed grpc port
@@ -225,7 +225,7 @@ services:
     volumes:
       - "/opt/.crawlab/master:/root/.crawlab"  # persistent crawlab metadata
       - "/opt/crawlab/master:/data"  # persistent crawlab data
-      - "/var/crawlab/log:/var/logs/crawlab" # log persistent 
+      - "/var/crawlab/log:/var/log/crawlab" # log persistent 
     ports:
       - "8080:8080"  # exposed api port
       - "9666:9666"  # exposed grpc port
