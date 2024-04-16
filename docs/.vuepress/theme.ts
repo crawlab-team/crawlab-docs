@@ -31,19 +31,21 @@ export default hopeTheme({
   displayFooter: true,
 
   darkmode: 'toggle',
-  iconAssets: 'iconfont',
+
+  iconAssets: 'fontawesome-with-brands',
+  // iconAssets: 'https://kit.fontawesome.com/3b22754081.js',
 
   locales: {
     '/en/': {
       navbar: navbar([
-        { text: 'Guide', icon: 'creative', link: '/en/guide/' },
-        { text: 'Pro Edition', icon: 'ability', link: 'https://www.crawlab.cn/en/#pricing' },
+        { text: 'Guide', icon: 'lightbulb', link: '/en/guide/' },
         {
           text: 'Official Site',
           icon: 'home',
           link: 'https://www.crawlab.cn/en/',
         },
-        { text: 'Demo', icon: 'slides', link: 'https://demo.crawlab.cn' },
+        { text: 'Purchase', icon: 'shopping-cart', link: 'https://www.crawlab.cn/en/#pricing' },
+        { text: 'Demo', icon: 'play-circle', link: 'https://demo.crawlab.cn' },
         {
           text: 'Older Versions',
           icon: 'tag',
@@ -54,10 +56,10 @@ export default hopeTheme({
     },
     '/zh/': {
       navbar: navbar([
-        { text: '指南', icon: 'creative', link: '/zh/guide/' },
+        { text: '指南', icon: 'lightbulb', link: '/zh/guide/' },
         { text: '官网', icon: 'home', link: 'https://www.crawlab.cn' },
-        { text: '购买', icon: 'ability', link: 'https://www.crawlab.cn/zh/#pricing' },
-        { text: '演示', icon: 'slides', link: 'https://demo.crawlab.cn' },
+        { text: '购买', icon: 'shopping-cart', link: 'https://www.crawlab.cn/zh/#pricing' },
+        { text: '演示', icon: 'play-circle', link: 'https://demo.crawlab.cn' },
         {
           text: '历史版本',
           icon: 'tag',
