@@ -52,7 +52,7 @@ services:
     volumes:
       - "/opt/.crawlab/master:/root/.crawlab"  # 持久化 crawlab 元数据
       - "/opt/crawlab/master:/data"  # 持久化 crawlab 数据
-      - "/var/crawlab/log:/var/logs/crawlab" # 持久化 crawlab 任务日志
+      - "/var/crawlab/log:/var/log/crawlab" # 持久化 crawlab 任务日志
     ports:
       - "8080:8080"  # 开放 api 端口
     depends_on:
@@ -114,7 +114,7 @@ services:
     volumes:
       - "/opt/.crawlab/master:/root/.crawlab"  # 持久化 crawlab 元数据
       - "/opt/crawlab/master:/data"  # 持久化 crawlab 数据
-      - "/var/crawlab/log:/var/logs/crawlab" # 持久化 crawlab 任务日志
+      - "/var/crawlab/log:/var/log/crawlab" # 持久化 crawlab 任务日志
     ports:
       - "8080:8080"  # 开放 api 端口
       - "9666:9666"  # 开放 grpc 端口
@@ -214,7 +214,7 @@ services:
     volumes:
       - "/opt/.crawlab/master:/root/.crawlab"  # 持久化 crawlab 元数据
       - "/opt/crawlab/master:/data"  # 持久化 crawlab 数据
-      - "/var/crawlab/log:/var/logs/crawlab" # 持久化 crawlab 任务日志
+      - "/var/crawlab/log:/var/log/crawlab" # 持久化 crawlab 任务日志
     ports:
       - "8080:8080"  # 开放 api 端口
       - "9666:9666"  # 开放 grpc 端口
