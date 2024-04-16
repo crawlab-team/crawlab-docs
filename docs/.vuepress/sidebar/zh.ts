@@ -227,24 +227,6 @@ export const zhSidebar = sidebar([
     ],
   },
   {
-    text: 'API 文档',
-    icon: 'server',
-    prefix: '/zh/api/',
-    collapsible: true,
-    children: [
-      {
-        text: '介绍',
-        icon: 'info-circle',
-        link: 'README.md',
-      },
-      {
-        text: 'API 参考文档',
-        icon: 'book',
-        link: 'api-reference',
-      },
-    ],
-  },
-  {
     text: '专业版',
     icon: 'trophy',
     prefix: '/zh/pro/',
@@ -264,6 +246,52 @@ export const zhSidebar = sidebar([
         text: '许可证',
         icon: 'id-card',
         link: 'license',
+      },
+    ],
+  },
+  {
+    text: '人工智能 (Crawlab AI)',
+    prefix: '/zh/ai/',
+    icon: 'robot',
+    collapsible: true,
+    children: [
+      {
+        text: '介绍',
+        icon: 'info-circle',
+        link: 'README.md',
+      },
+      {
+        text: 'SDK',
+        icon: 'code',
+        link: 'sdk',
+      },
+      {
+        text: '许可证',
+        icon: 'id-card',
+        link: 'license',
+      },
+      {
+        text: 'API 令牌',
+        icon: 'key',
+        link: 'api-token',
+      },
+    ],
+  },
+  {
+    text: 'API 文档',
+    icon: 'server',
+    prefix: '/zh/api/',
+    collapsible: true,
+    children: [
+      {
+        text: '介绍',
+        icon: 'info-circle',
+        link: 'README.md',
+      },
+      {
+        text: 'API 参考文档',
+        icon: 'book',
+        link: 'api-reference',
       },
     ],
   },

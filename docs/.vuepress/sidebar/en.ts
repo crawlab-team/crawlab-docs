@@ -227,24 +227,6 @@ export const enSidebar = sidebar([
     ],
   },
   {
-    text: 'API Doc',
-    icon: 'server',
-    prefix: '/en/api/',
-    collapsible: true,
-    children: [
-      {
-        text: 'Introduction',
-        icon: 'info-circle',
-        link: 'README.md',
-      },
-      {
-        text: 'API Reference',
-        icon: 'book',
-        link: 'api-reference',
-      },
-    ],
-  },
-  {
     text: 'Pro Edition',
     icon: 'trophy',
     prefix: '/en/pro/',
@@ -268,6 +250,52 @@ export const enSidebar = sidebar([
     ],
   },
   {
+    text: 'Crawlab AI',
+    prefix: '/en/ai/',
+    icon: 'robot',
+    collapsible: true,
+    children: [
+      {
+        text: 'Introduction',
+        icon: 'info-circle',
+        link: 'README.md',
+      },
+      {
+        text: 'SDK',
+        icon: 'code',
+        link: 'sdk',
+      },
+      {
+        text: 'License',
+        icon: 'id-card',
+        link: 'license',
+      },
+      {
+        text: 'API Token',
+        icon: 'key',
+        link: 'api-token',
+      },
+    ],
+  },
+  {
+    text: 'API Doc',
+    icon: 'server',
+    prefix: '/en/api/',
+    collapsible: true,
+    children: [
+      {
+        text: 'Introduction',
+        icon: 'info-circle',
+        link: 'README.md',
+      },
+      {
+        text: 'API Reference',
+        icon: 'book',
+        link: 'api-reference',
+      },
+    ],
+  },
+  {
     text: 'Migration',
     icon: 'circle-up',
     prefix: '/en/migration/',
@@ -284,11 +312,6 @@ export const enSidebar = sidebar([
         link: 'v0.6',
       },
     ],
-  },
-  {
-    text: 'Crawlab AI',
-    icon: 'robot',
-    link: '/en/ai',
   },
   {
     text: 'FAQ',

@@ -46,6 +46,7 @@ export default hopeTheme({
         },
         { text: 'Purchase', icon: 'shopping-cart', link: 'https://www.crawlab.cn/en/#pricing' },
         { text: 'Demo', icon: 'play-circle', link: 'https://demo.crawlab.cn' },
+        { text: 'AI', icon: 'robot', link: '/en/ai' },
         {
           text: 'Older Versions',
           icon: 'tag',
@@ -60,6 +61,7 @@ export default hopeTheme({
         { text: '官网', icon: 'home', link: 'https://www.crawlab.cn' },
         { text: '购买', icon: 'shopping-cart', link: 'https://www.crawlab.cn/zh/#pricing' },
         { text: '演示', icon: 'play-circle', link: 'https://demo.crawlab.cn' },
+        { text: 'AI', icon: 'robot', link: '/zh/ai/' },
         {
           text: '历史版本',
           icon: 'tag',
