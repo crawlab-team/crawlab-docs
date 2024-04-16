@@ -114,7 +114,7 @@ spec:
             - name: crawlab-master-storage
               mountPath: /data
             - name: crawlab-master-storage
-              mountPath: /var/logs/crawlab
+              mountPath: /var/log/crawlab
       restartPolicy: Always
 ```
 
