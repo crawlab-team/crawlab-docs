@@ -50,7 +50,7 @@ Crawlab Docker image.
 1. Make sure you have created a Go spider on Crawlab.
 2. Add package import line to import method `SaveItem` to your spider code.
    ```go
-   import "github.com/crawlab-team/crawlab-sdk-go"
+   import "github.com/crawlab-team/crawlab-go-sdk"
    ```
 3. Call `SaveItem` method to save scraped item.
    ```go
