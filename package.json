@@ -6,11 +6,15 @@
   ],
   "packageManager": "pnpm@9.9.0",
   "scripts": {
-    "build": "pnpm -r run build",
     "dev": "pnpm -r run dev",
-    "test": "pnpm -r run test"
+    "test": "pnpm -r run test",
+    "build": "pnpm run build:v06 && pnpm run build:v07 && pnpm run merge-outputs",
+    "build:v06": "cd packages/v0.6 && pnpm install && pnpm build",
+    "build:v07": "cd packages/v0.7 && pnpm install && pnpm build",
+    "merge-outputs": "node scripts/merge-outputs.js"
   },
   "devDependencies": {
+    "fs-extra": "^11.2.0",
     "typescript": "^5.0.0"
   }
 }

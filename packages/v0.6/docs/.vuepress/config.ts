@@ -1,43 +1,44 @@
-import {registerComponentsPlugin} from "@vuepress/plugin-register-components";
-import {defineUserConfig} from "vuepress";
-import {redirectPlugin} from "vuepress-plugin-redirect";
-import {addCustomElement} from "vuepress-shared";
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
+import { defineUserConfig } from 'vuepress';
+import { redirectPlugin } from 'vuepress-plugin-redirect';
+import { addCustomElement } from 'vuepress-shared';
 
-import theme from "./theme.js";
+import theme from './theme.js';
 
 export default defineUserConfig({
-  base: "/v0.6/",
+  base: '/v0.6/',
+  dest: 'docs/.vuepress/dist',
 
   locales: {
-    "/en/": {
-      lang: "en-US",
-      title: "",
+    '/en/': {
+      lang: 'en-US',
+      title: '',
       description:
-        "Documentation for distributed web crawler management platform Crawlab",
+        'Documentation for distributed web crawler management platform Crawlab',
     },
-    "/zh/": {
-      lang: "zh-CN",
-      title: "",
+    '/zh/': {
+      lang: 'zh-CN',
+      title: '',
       description:
-        "Documentation for distributed web crawler management platform",
+        'Documentation for distributed web crawler management platform',
     },
   },
 
   head: [
     [
-      "meta",
-      {name: "default-lang", content: process.env.CRAWLAB_LANG || "zh"},
+      'meta',
+      { name: 'default-lang', content: process.env.CRAWLAB_LANG || 'zh' },
     ],
-    ["script", {src: "/assets/js/umeng.js"}],
+    ['script', { src: '/assets/js/umeng.js' }],
     [
-      "script",
+      'script',
       {
         async: true,
-        src: "https://www.googletagmanager.com/gtag/js?id=G-1YYCQBYL6M",
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-1YYCQBYL6M',
       },
     ],
     [
-      "script",
+      'script',
       {},
       `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -45,7 +46,7 @@ gtag('js', new Date());
 gtag('config', 'G-G9445D9CW9');`,
     ],
     [
-      "script",
+      'script',
       {},
       `(function(c,l,a,r,i,t,y){
 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -56,14 +57,14 @@ y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   ],
 
   extendsBundlerOptions: (bundlerOptions, app) => {
-    addCustomElement(bundlerOptions, app, "rapi-doc");
+    addCustomElement(bundlerOptions, app, 'rapi-doc');
   },
 
   theme,
 
   plugins: [
     registerComponentsPlugin({
-      componentsDir: "docs/.vuepress/components",
+      componentsDir: 'docs/.vuepress/components',
     }),
     redirectPlugin(),
   ],
