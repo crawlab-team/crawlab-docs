@@ -1,0 +1,12 @@
+.DS_Store
+../_book/
+node_modules/
+tmp/
+.idea
+*.log
+*.local
+.docs
+#dist/
+venv/
+.temp/
+.cache/

@@ -1,0 +1,61 @@
+{
+  "name": "crawlab-docs",
+  "version": "0.6.0",
+  "description": "Documentation for Crawlab",
+  "scripts": {
+    "build": "npm run docs:build",
+    "publish": "npm run docs:publish",
+    "docs:dev": "vuepress dev docs -p 8082",
+    "docs:build": "vuepress build docs",
+    "docs:build:debug": "vuepress build docs --debug",
+    "docs:publish": "node ./scripts/publish.js",
+    "build:serve": "serve ./docs/.vuepress/dist",
+    "translate:zh": "node ./scripts/translate.js",
+    "convert:image:logo:150x150": "node ./scripts/convertImage.js -i ./docs/.vuepress/public/assets/img/logo.svg -o ./docs/.vuepress/public/assets/img/logo-150x150.png -W 150 -H 150",
+    "move:images": "node ./scripts/moveImages.js",
+    "preview:doc:api:local": "redocly preview-docs ../crawlab-core/docs/api/openapi.yaml",
+    "build:doc:api:local": "reference-docs build ../crawlab-core/docs/api/openapi.yaml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crawlab-team/crawlab-docs.git"
+  },
+  "author": "Marvin Zhang",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/crawlab-team/crawlab-docs/issues"
+  },
+  "homepage": "https://github.com/crawlab-team/crawlab-docs#readme",
+  "packageManager": "pnpm@8.4.0",
+  "devDependencies": {
+    "@vuepress/client": "2.0.0-beta.61",
+    "@vuepress/plugin-register-components": "2.0.0-beta.61",
+    "@vuepress/shared": "2.0.0-beta.61",
+    "@vuepress/utils": "2.0.0-beta.61",
+    "argparse": "^2.0.1",
+    "axios": "^0.28.0",
+    "chalk": "^4.1.2",
+    "dotenv": "^10.0.0",
+    "md5": "^2.3.0",
+    "prettier": "^3.2.5",
+    "qiniu": "^7.8.0",
+    "qs": "^6.11.1",
+    "rapidoc": "^9.3.4",
+    "serve": "^13.0.4",
+    "vue": "^3.2.47",
+    "vueperslides": "^3.5.1",
+    "vuepress": "2.0.0-beta.61",
+    "vuepress-plugin-redirect": "2.0.0-beta.208",
+    "vuepress-shared": "2.0.0-beta.208",
+    "vuepress-theme-hope": "2.0.0-beta.208",
+    "walk-sync": "^3.0.0"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "react",
+        "react-dom"
+      ]
+    }
+  }
+}
