@@ -18,10 +18,10 @@ sources, such as MongoDB, MySQL, PostgreSQL, SQL Server, etc.
 
 ## Add Data Source
 
-1. Go to the `Data Sources` page <br>![data-sources-menu](./img/data-sources-menu.png)
-2. Click `New Data Source` button <br>![new-data-source-button](./img/new-data-source-button.png)
+1. Go to the `Data Sources` page <br/>![data-sources-menu](./img/data-sources-menu.png)
+2. Click `New Data Source` button <br/>![new-data-source-button](./img/new-data-source-button.png)
 3. Select `Type` as the data source type, and enter `Name` and connection
-   fields <br>![mongo-form](./img/mongo-form.png)
+   fields <br/>![mongo-form](./img/mongo-form.png)
 4. Click `Confirm` button to save the data source
 
 Now you should be able to see the data source in the `Data Sources` page.
@@ -29,11 +29,11 @@ Now you should be able to see the data source in the `Data Sources` page.
 ## Use Data Source
 
 1. Go to the `Spider Detail` page
-2. Select the data source in the `Data Source` field <br>![mongo-data-source](./img/mongo-data-source.png)
+2. Select the data source in the `Data Source` field <br/>![mongo-data-source](./img/mongo-data-source.png)
 3. Click on `Save` button to save the spider
 4. Add related integration code in the code where saving results data (refer to the `Spider Code Examples` section
    below)
-5. Run the spider, and you should see the results in the `Data` tab <br>![results](./img/results.png)
+5. Run the spider, and you should see the results in the `Data` tab <br/>![results](./img/results.png)
 
 ## Spider Code Examples
 

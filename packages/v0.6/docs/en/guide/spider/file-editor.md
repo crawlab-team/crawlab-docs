@@ -5,9 +5,9 @@ in the spider.
 
 ## Open File
 
-1. Navigate to `Files` tab in spider detail page. <br>![files-tab](./img/files-tab.png)
-2. Double-click the file you want to edit. <br>![files-sidebar](./img/files-sidebar.png)
-3. The file should be opened in the editor. <br>![file-editor](./img/file-editor.png)
+1. Navigate to `Files` tab in spider detail page. <br/>![files-tab](./img/files-tab.png)
+2. Double-click the file you want to edit. <br/>![files-sidebar](./img/files-sidebar.png)
+3. The file should be opened in the editor. <br/>![file-editor](./img/file-editor.png)
 
 ## Edit File
 
@@ -15,7 +15,7 @@ in the spider.
 
 ## Save File
 
-1. Press `Ctrl + S` or click `Save` button in the nav bar to save the file. <br>![save-btn](./img/save-btn.png)
+1. Press `Ctrl + S` or click `Save` button in the nav bar to save the file. <br/>![save-btn](./img/save-btn.png)
 
 ## Move File
 
@@ -23,12 +23,12 @@ in the spider.
 
 ## Rename File
 
-1. Right-click the file and select `Rename`. <br>![rename](./img/rename.png)
+1. Right-click the file and select `Rename`. <br/>![rename](./img/rename.png)
 
 ## Duplicate File
 
-1. Right-click the file and select `Duplicate`. <br>![duplicate](./img/duplicate.png)
+1. Right-click the file and select `Duplicate`. <br/>![duplicate](./img/duplicate.png)
 
 ## Delete File
 
-1. Right-click the file and click `Delete` in the context menu. <br>![delete-file](./img/delete-file.png)
+1. Right-click the file and click `Delete` in the context menu. <br/>![delete-file](./img/delete-file.png)

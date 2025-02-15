@@ -17,18 +17,18 @@ Crawlab 支持数据源集成，这意味着您可以使用 Crawlab 管理您的
 
 ## 新建数据源
 
-1. 导航至 `数据源` 页面 <br>![data-sources-menu](./img/data-sources-menu.png)
-2. 点击 `新建数据源` 按钮 <br>![new-data-source-button](./img/new-data-source-button.png)
-3. 选择 `类型` 作为数据源类型，并输入 `名称` 以及连接信息 <br>![mongo-form](./img/mongo-form.png)
-4. 点击 `保存` 按钮 <br>
+1. 导航至 `数据源` 页面 <br/>![data-sources-menu](./img/data-sources-menu.png)
+2. 点击 `新建数据源` 按钮 <br/>![new-data-source-button](./img/new-data-source-button.png)
+3. 选择 `类型` 作为数据源类型，并输入 `名称` 以及连接信息 <br/>![mongo-form](./img/mongo-form.png)
+4. 点击 `保存` 按钮 <br/>
 
 ## 使用数据源
 
 1. 导航至 `爬虫详情` 页面
-2. 在 `数据源` 中选择相应的数据源 <br>![mongo-data-source](./img/mongo-data-source.png)
+2. 在 `数据源` 中选择相应的数据源 <br/>![mongo-data-source](./img/mongo-data-source.png)
 3. 点击 `保存` 按钮
 4. 在保存结果数据的地方，添加相应的集成代码 (参考下面的 `爬虫代码例子`)
-5. 运行爬虫，您将能在 `数据` 标签中看到结果数据 <br>![results](./img/results.png)
+5. 运行爬虫，您将能在 `数据` 标签中看到结果数据 <br/>![results](./img/results.png)
 
 ## 爬虫代码例子
 

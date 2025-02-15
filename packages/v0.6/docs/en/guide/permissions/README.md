@@ -32,16 +32,16 @@ Fields of permissions are as below:
 ### Create a permission
 
 1. Go to the `Permissions` page by clicking the `Permissions` button in the
-   sidebar. <br>![permissions-menu](./img/permissions-menu.png)
-2. Click the `New Permission` button <br>![permissions-create](./img/permissions-create.png)
+   sidebar. <br/>![permissions-menu](./img/permissions-menu.png)
+2. Click the `New Permission` button <br/>![permissions-create](./img/permissions-create.png)
 3. Enter necessary info of the new permission and click `Confirm`
-   button <br>![permissions-create-form](./img/permissions-create-form.png)
+   button <br/>![permissions-create-form](./img/permissions-create-form.png)
 
 ### Delete a permission
 
 1. Go to the `Permissions` page by clicking the `Permissions` button in
-   the <br>![permissions-menu](./img/permissions-menu.png)
-2. Click the `Delete` button of the permission you want to delete <br>![delete-button](./img/delete-button.png)
+   the <br/>![permissions-menu](./img/permissions-menu.png)
+2. Click the `Delete` button of the permission you want to delete <br/>![delete-button](./img/delete-button.png)
 
 ## Roles
 
@@ -50,28 +50,28 @@ to users.
 
 ### Create a Role
 
-1. Go to the `Roles` page by clicking the navigation button on the left sidebar <br>![roles-menu](./img/roles-menu.png)
-2. Click the `New Role` button <br>![roles-create](./img/roles-create.png)
-3. Enter necessary info of the new role and click `Confirm` button <br>![roles-create-form](./img/roles-create-form.png)
+1. Go to the `Roles` page by clicking the navigation button on the left sidebar <br/>![roles-menu](./img/roles-menu.png)
+2. Click the `New Role` button <br/>![roles-create](./img/roles-create.png)
+3. Enter necessary info of the new role and click `Confirm` button <br/>![roles-create-form](./img/roles-create-form.png)
 
 ### Delete a role
 
 1. Go to the `Roles` page by clicking the `Roles` button in
-   the <br>![roles-menu](./img/roles-menu.png)
-2. Click the `Delete` button of the role you want to delete <br>![delete-button](./img/delete-button.png)
+   the <br/>![roles-menu](./img/roles-menu.png)
+2. Click the `Delete` button of the role you want to delete <br/>![delete-button](./img/delete-button.png)
 
 ### Link/Unlink permissions to a role
 
 1. Go to the `Permissions` tab in the `Role Detail` page by clicking the `View permissions`
-   button. <br>![view-permissions-button](./img/view-permissions-button.png)
-2. Click on `Link Permissions` button. <br>![link-permissions-button](./img/link-permissions-button.png)
+   button. <br/>![view-permissions-button](./img/view-permissions-button.png)
+2. Click on `Link Permissions` button. <br/>![link-permissions-button](./img/link-permissions-button.png)
 3. Select the permissions you want to link/unlink to the
-   role, and click `Confirm` button. <br>![link-permissions-form](./img/link-permissions-form.png)
+   role, and click `Confirm` button. <br/>![link-permissions-form](./img/link-permissions-form.png)
 
 ### Link/Unlink users to a role
 
 1. Go to the `Permissions` tab in the `Role Detail` page by clicking the `View users`
-   button. <br>![view-users-button](./img/view-users-button.png)
-2. Click on `Link Users` button. <br>![link-users-button](./img/link-users-button.png)
+   button. <br/>![view-users-button](./img/view-users-button.png)
+2. Click on `Link Users` button. <br/>![link-users-button](./img/link-users-button.png)
 3. Select the users you want to link/unlink to the
-   role, and click `Confirm` button. <br>![link-users-form](./img/link-users-form.png)
+   role, and click `Confirm` button. <br/>![link-users-form](./img/link-users-form.png)

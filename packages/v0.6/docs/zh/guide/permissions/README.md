@@ -30,14 +30,14 @@ Crawlab 专业版中的权限包含以下字段：
 
 ### 创建权限
 
-1. 点击侧边栏的 `权限管理`，进入权限管理页面 <br>![permissions-menu](./img/permissions-menu.png)
-2. 点击 `新建权限` 按钮，进入创建权限页面 <br>![permissions-create](./img/permissions-create.png)
-3. 填写权限信息，点击 `确认` 按钮，即可创建权限 <br>![permissions-create-form](./img/permissions-create-form.png)
+1. 点击侧边栏的 `权限管理`，进入权限管理页面 <br/>![permissions-menu](./img/permissions-menu.png)
+2. 点击 `新建权限` 按钮，进入创建权限页面 <br/>![permissions-create](./img/permissions-create.png)
+3. 填写权限信息，点击 `确认` 按钮，即可创建权限 <br/>![permissions-create-form](./img/permissions-create-form.png)
 
 ### 删除权限
 
-1. 点击侧边栏的 `权限管理`，进入权限管理页面 <br>![permissions-menu](./img/permissions-menu.png)
-2. 点击 `删除` 按钮，即可删除权限 <br>![permissions-delete](./img/delete-button.png)
+1. 点击侧边栏的 `权限管理`，进入权限管理页面 <br/>![permissions-menu](./img/permissions-menu.png)
+2. 点击 `删除` 按钮，即可删除权限 <br/>![permissions-delete](./img/delete-button.png)
 
 ## 角色
 
@@ -45,25 +45,25 @@ Crawlab 专业版中的角色可以被管理用户定义。角色是权限的集
 
 ### 创建角色
 
-1. 点击侧边栏的 `角色管理`，进入角色管理页面 <br>![roles-menu](./img/roles-menu.png)
-2. 点击 `新建角色` 按钮，进入创建角色页面 <br>![roles-create](./img/roles-create.png)
-3. 填写角色信息，点击 `确认` 按钮，即可创建角色 <br>![roles-create-form](./img/roles-create-form.png)
+1. 点击侧边栏的 `角色管理`，进入角色管理页面 <br/>![roles-menu](./img/roles-menu.png)
+2. 点击 `新建角色` 按钮，进入创建角色页面 <br/>![roles-create](./img/roles-create.png)
+3. 填写角色信息，点击 `确认` 按钮，即可创建角色 <br/>![roles-create-form](./img/roles-create-form.png)
 
 ### 删除角色
 
-1. 点击侧边栏的 `角色管理`，进入角色管理页面 <br>![roles-menu](./img/roles-menu.png)
-2. 点击 `删除` 按钮，即可删除角色 <br>![roles-delete](./img/delete-button.png)
+1. 点击侧边栏的 `角色管理`，进入角色管理页面 <br/>![roles-menu](./img/roles-menu.png)
+2. 点击 `删除` 按钮，即可删除角色 <br/>![roles-delete](./img/delete-button.png)
 
 ### 角色权限关联
 
-1. 点击侧边栏的 `角色管理`，进入角色管理页面 <br>![roles-menu](./img/roles-menu.png)
-2. 点击 `关联权限` 按钮 <br>![view-permissions-button](./img/view-permissions-button.png)
+1. 点击侧边栏的 `角色管理`，进入角色管理页面 <br/>![roles-menu](./img/roles-menu.png)
+2. 点击 `关联权限` 按钮 <br/>![view-permissions-button](./img/view-permissions-button.png)
 3. 在弹出的对话框中，勾选需要关联的权限，点击 `确认`
-   按钮，即可关联或取消关联权限 <br>![roles-permissions](./img/link-permissions-form.png)
+   按钮，即可关联或取消关联权限 <br/>![roles-permissions](./img/link-permissions-form.png)
 
 ### 角色用户关联
 
-1. 点击侧边栏的 `角色管理`，进入角色管理页面 <br>![roles-menu](./img/roles-menu.png)
-2. 点击 `关联用户` 按钮 <br>![view-users-button](./img/view-users-button.png)
+1. 点击侧边栏的 `角色管理`，进入角色管理页面 <br/>![roles-menu](./img/roles-menu.png)
+2. 点击 `关联用户` 按钮 <br/>![view-users-button](./img/view-users-button.png)
 3. 在弹出的对话框中，勾选需要关联的用户，点击 `确认`
-   按钮，即可关联或取消关联用户 <br>![roles-users](./img/link-users-form.png)
+   按钮，即可关联或取消关联用户 <br/>![roles-users](./img/link-users-form.png)

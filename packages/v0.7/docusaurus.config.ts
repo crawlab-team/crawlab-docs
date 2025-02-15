@@ -7,23 +7,32 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Crawlab Docs',
   tagline: 'Documentation for distributed web crawler management platform Crawlab',
-  favicon: 'img/favicon.ico',
+  favicon: 'favicon.ico',
 
   // Set the production url of your site here
   url: 'https://docs.crawlab.cn',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+  staticDirectories: ['static'],
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenMarkdownLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'zh'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      zh: {
+        label: '中文',
+      },
+    },
   },
 
   presets: [
@@ -45,20 +54,34 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    docs: {
+      sidebar: {
+        autoCollapseCategories: true,
+      },
+    },
+    image: 'logo-main.svg',
     navbar: {
-      title: 'My Site',
+      title: '',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Crawlab',
+        src: 'logo-main.svg',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'docsSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'examplesSidebar',
+          position: 'left',
+          label: 'Examples',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right',
         },
         {
           href: 'https://github.com/crawlab-team/crawlab',
@@ -74,13 +97,25 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Introduction',
+              to: '/docs/',
+            },
+            {
+              label: 'Getting Started',
+              to: '/docs/quick-start/',
+            },
+            {
+              label: 'Guides',
+              to: '/docs/guides/',
+            },
+            {
+              label: 'FAQ',
+              to: '/docs/faq',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Community',
           items: [
             {
               label: 'GitHub',
@@ -96,6 +131,12 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  markdown: {
+    mermaid: true,
+  },
+
+  themes: ['@docusaurus/theme-mermaid'],
 };
 
 export default config;
