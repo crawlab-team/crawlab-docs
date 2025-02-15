@@ -1,10 +1,11 @@
 {
-  "name": "crawlab-docs",
+  "name": "crawlab-docs-0.6",
   "version": "0.6.0",
   "description": "Documentation for Crawlab",
   "scripts": {
     "build": "npm run docs:build",
     "publish": "npm run docs:publish",
+    "dev": "npm run docs:dev",
     "docs:dev": "vuepress dev docs -p 8082",
     "docs:build": "vuepress build docs",
     "docs:build:debug": "vuepress build docs --debug",
@@ -49,13 +50,5 @@
     "vuepress-shared": "2.0.0-beta.208",
     "vuepress-theme-hope": "2.0.0-beta.208",
     "walk-sync": "^3.0.0"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "react",
-        "react-dom"
-      ]
-    }
   }
 }

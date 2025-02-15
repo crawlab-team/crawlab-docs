@@ -1,9 +1,9 @@
 {
-  "name": "crawlab-docs-next",
-  "version": "0.0.0",
-  "private": true,
+  "name": "crawlab-docs",
+  "version": "0.7.0",
   "scripts": {
     "docusaurus": "docusaurus",
+    "dev": "pnpm run start",
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",

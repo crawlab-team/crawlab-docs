@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "buildCommand": "pnpm install && pnpm build",
+  "installCommand": "pnpm install",
+  "builds": [
+    {
+      "src": "docs-old/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "docs-new/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/v0.6/:path*",
+      "destination": "/packages/v0.6/:path*"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/packages/v0.7/:path*"
+    }
+  ],
+  "build": {
+    "env": {
+      "ENABLE_PNPM_CACHE": "1"
+    }
+  }
+}

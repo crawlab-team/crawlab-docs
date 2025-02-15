@@ -1,2 +1,3 @@
 packages:
-  - 'packages/*'
+  - 'packages/v0.6'
+  - 'packages/v0.7'

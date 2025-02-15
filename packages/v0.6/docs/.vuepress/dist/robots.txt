@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://docs.crawlab.cn/sitemap.xml
+Sitemap: https://docs.crawlab.cn/v0.6/sitemap.xml

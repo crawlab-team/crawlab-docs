@@ -1,13 +1,13 @@
 {
-  "name": "my-monorepo",
-  "version": "1.0.0",
-  "private": true,
+  "name": "crawlab-docs",
+  "version": "0.7.0",
   "workspaces": [
     "packages/*"
   ],
+  "packageManager": "pnpm@9.9.0",
   "scripts": {
     "build": "pnpm -r run build",
-    "start": "pnpm -r run start",
+    "dev": "pnpm -r run dev",
     "test": "pnpm -r run test"
   },
   "devDependencies": {
