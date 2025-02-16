@@ -2,13 +2,14 @@ const dotenv = require('@dotenvx/dotenvx');
 const fs = require('fs-extra');
 const path = require('path');
 const OpenAI = require('openai');
+const cliProgress = require('cli-progress');
 
 // Load environment variables
 dotenv.config({override: true});
 
 // Configuration
 const DOCS_DIR = path.join(__dirname, '../docs');
-const I18N_DIR = path.join(__dirname, '../i18n/zh-Hans/docusaurus-plugin-content-docs/current');
+const I18N_DIR = path.join(__dirname, '../i18n/zh/docusaurus-plugin-content-docs/current');
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -106,6 +107,10 @@ async function processFile(filePath) {
 
   // Write translated file
   fs.writeFileSync(targetPath, `${translatedFrontmatter}\n\n${translationResult.content}`);
+
+  // Update total tokens and total requests
+  usageTracker.totalTokens += translationResult.tokens;
+  usageTracker.totalRequests += 1;
 }
 
 async function main() {
@@ -115,38 +120,47 @@ async function main() {
   usageTracker.tokenUsageMap.clear();
 
   console.log('🚀 Starting documentation translation...');
-  let processedCount = 0;
-
-  // Process all Markdown files with concurrency
+  
+  // Process all Markdown files
   const files = fs.readdirSync(DOCS_DIR, {
     recursive: true,
     encoding: 'utf-8',
   }).filter(file => file.endsWith('.md'));
 
+  // Create progress bar
+  const progressBar = new cliProgress.SingleBar({
+    format: '🔄 Progress |{bar}| {percentage}% | {value}/{total} Files | ETA: {eta_formatted}',
+    barCompleteChar: '█',
+    barIncompleteChar: '░',
+    hideCursor: true
+  });
+  progressBar.start(files.length, 0);
+
   const CONCURRENCY = 5;
-  const batches = [];
+  const totalFiles = files.length;
   
-  // Create batches of files
-  for (let i = 0; i < files.length; i += CONCURRENCY) {
-    batches.push(files.slice(i, i + CONCURRENCY));
-  }
+  // Create worker pool
+  const worker = async () => {
+    while (files.length) {
+      const file = files.shift();
+      if (file) {
+        try {
+          await processFile(path.join(DOCS_DIR, file));
+        } catch (error) {
+          console.error(`\n❌ Error processing ${file}:`, error.message);
+        } finally {
+          progressBar.increment();
+        }
+      }
+    }
+  };
 
-  // Process batches with progress
-  for (const [index, batch] of batches.entries()) {
-    console.log(`📦 Processing batch ${index + 1}/${batches.length}`);
-    
-    await Promise.all(
-      batch.map(file => 
-        processFile(path.join(DOCS_DIR, file))
-          .then(() => {
-            processedCount++;
-            console.log(`📊 Progress: ${processedCount}/${files.length} files`);
-          })
-      )
-    );
-  }
+  // Start concurrent workers
+  const workers = Array.from({ length: CONCURRENCY }, () => worker());
+  await Promise.all(workers);
 
-  console.log('🎉 Translation completed!');
+  progressBar.stop();
+  console.log('\n🎉 Translation completed!');
   console.log(`📂 Output directory: ${I18N_DIR}`);
   console.log('\n📊 Usage Statistics:');
   console.log(`- Total tokens used: ${usageTracker.totalTokens}`);
