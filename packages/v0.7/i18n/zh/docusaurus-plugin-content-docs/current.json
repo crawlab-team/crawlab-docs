@@ -28,7 +28,7 @@
     "description": "The generated-index page description for category Guides in sidebar docsSidebar"
   },
   "sidebar.docsSidebar.doc.Introduction": {
-    "message": "简介",
+    "message": "介绍",
     "description": "The label for the doc item Introduction in sidebar docsSidebar, linking to the doc introduction"
   },
   "sidebar.docsSidebar.doc.FAQ": {
