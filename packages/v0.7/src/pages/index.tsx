@@ -17,19 +17,25 @@ function HomepageHeader() {
           Crawlab
         </Heading>
         <p className="hero__subtitle">
-          <Translate id="homepage.hero.subtitle" />
+          <Translate id="homepage.hero.subtitle">
+            Distributed Web Crawler Management Platform
+          </Translate> 
         </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/getting-started/quick-start">
-            <Translate id="homepage.cta.quickStart" />
+            <Translate id="homepage.cta.quickStart">
+              Quick Start 🚀
+            </Translate>
           </Link>
           <Link
             className="button button--primary button--lg"
-            to="/docs/#main-features"
+            to="/docs/"
             style={{ marginLeft: '1rem' }}>
-            <Translate id="homepage.cta.features" />
+            <Translate id="homepage.cta.features">
+              Features ✨
+            </Translate>
           </Link>
         </div>
       </div>
