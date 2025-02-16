@@ -1,0 +1,18 @@
+{
+  "logo.alt": {
+    "message": "Crawlab",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Docs": {
+    "message": "文档",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Examples": {
+    "message": "示例",
+    "description": "Navbar item with label Examples"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

@@ -1,9 +1,11 @@
-
+---
+title: 环境变量
+---
 
 # 环境变量
 
-::: info 注意
-此功能仅在 [Crawlab Pro Edition](https://www.crawlab.cn/prices) 中可用。
+:::info
+该功能仅在 [Crawlab Pro Edition](https://www.crawlab.cn/prices) 中可用。
 :::
 
 Crawlab 允许用户在爬虫运行期间设置环境变量。
@@ -16,7 +18,7 @@ Crawlab 允许用户在爬虫运行期间设置环境变量。
 
 ## 访问环境变量
 
-假设我们已将一个环境变量的键设置为 `FOO`，值设置为 `BAR`，我们可以在爬虫脚本中使用以下示例代码访问它。
+假设我们已经设置了键为 `FOO` 和值为 `BAR` 的环境变量，我们可以在爬虫脚本中使用以下示例代码访问它。
 
 ```python
 import os

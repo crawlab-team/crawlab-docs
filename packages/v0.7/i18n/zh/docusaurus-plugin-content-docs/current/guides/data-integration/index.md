@@ -1,71 +1,63 @@
 ---
-title: Data Integration
----
-
-```yaml
----
 title: 数据集成
 ---
 
-# Data Integration
+# 数据集成
 
-You can integrate your spiders with Crawlab SDK. This allows you to view scraped results visually on Crawlab.
+您可以使用 Crawlab SDK 集成您的爬虫。这允许您在 Crawlab 上可视化查看抓取结果。
 
-Crawlab SDK supports integration with various web crawler frameworks including Scrapy, and programming
-languages including Python, Node.js, Go.
+Crawlab SDK 支持与包括 Scrapy 在内的各种网络爬虫框架以及包括 Python、Node.js 和 Go 的编程语言集成。
 
-:::tip NOTE
-By default, Crawlab SDK is installed in the base image of Crawlab. You can also install it manually if you are not using
-Crawlab Docker image.
+:::tip 注意
+默认情况下，Crawlab SDK 已安装在 Crawlab 的基础镜像中。如果您不使用 Crawlab Docker 镜像，也可以手动安装。
 :::
 
 ## Scrapy
 
-1. 确保您已在 Crawlab 上创建了一个 Scrapy 蜘蛛。
+1. 确保您已经在 Crawlab 上创建了一个 Scrapy 爬虫。
 2. 将 `crawlab.CrawlabPipeline` 添加到 `settings.py` 文件中的 `Item_PIPELINES`。
    ```python
    ITEM_PIPELINES = {
        'crawlab.CrawlabPipeline': 888,
    }
    ```
-3. 完成！现在您可以运行您的蜘蛛了。
+3. 完成！现在您可以在 Crawlab 上运行您的爬虫了。
 
 ## Python
 
-1. 确保您已在 Crawlab 上创建了一个 Python 蜘蛛。
-2. 向您的蜘蛛代码中添加导入语句以导入方法 `save_item`。
+1. 确保您已经在 Crawlab 上创建了一个 Python 爬虫。
+2. 向您的爬虫代码添加导入语句以导入方法 `save_item`。
    ```python
    from crawlab import save_item
    ```
-3. 调用 `save_item` 方法以保存抓取的数据项。
+3. 调用 `save_item` 方法保存抓取项。
    ```python
    save_item({'title': 'example', 'url': 'https://example.com'})
    ```
 
 ## Node.js
 
-1. 确保您已在 Crawlab 上创建了一个 Node.js 蜘蛛。
-2. 向您的蜘蛛代码中添加导入语句以导入方法 `saveItem`。
+1. 确保您已经在 Crawlab 上创建了一个 Node.js 爬虫。
+2. 向您的爬虫代码添加导入语句以导入方法 `saveItem`。
    ```javascript
    const { saveItem } = require('crawlab-sdk');
    ```
-3. 调用 `saveItem` 方法以保存抓取的数据项。
+3. 调用 `saveItem` 方法保存抓取项。
    ```javascript
    saveItem({ title: 'example', url: 'https://example.com' });
    ```
 
 ## Go
 
-1. 确保您已在 Crawlab 上创建了一个 Go 蜘蛛。
-2. 向您的蜘蛛代码中添加导入语句以导入方法 `SaveItem`。
+1. 确保您已经在 Crawlab 上创建了一个 Go 爬虫。
+2. 向您的爬虫代码添加导入语句以导入方法 `SaveItem`。
    ```go
    import "github.com/crawlab-team/crawlab-sdk-go"
    ```
-3. 调用 `SaveItem` 方法以保存抓取的数据项。
+3. 调用 `SaveItem` 方法保存抓取项。
    ```go
    crawlab.SaveItem(map[string]interface{}{
        "title": "example",
        "url": "https://example.com",
    })
    ```
-```

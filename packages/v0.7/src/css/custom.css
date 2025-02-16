@@ -28,3 +28,30 @@
   --ifm-color-primary-lightest: #80c4ff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.ctaSection {
+  text-align: center;
+  margin: 4rem auto;
+  max-width: 800px;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ctaButtons .button {
+    width: 100%;
+    max-width: 300px;
+  }
+}

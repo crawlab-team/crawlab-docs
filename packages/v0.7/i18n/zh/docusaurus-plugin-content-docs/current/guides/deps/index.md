@@ -1,4 +1,6 @@
-
+---
+title: 依赖管理
+---
 
 # 依赖管理
 
@@ -20,13 +22,13 @@ Crawlab 允许用户为爬虫和任务安装和管理依赖项。
 2. 点击 `Installable` 按钮<br/>![installable.png](/img/guide/installable.png)
 3. 输入搜索关键词并点击 `Search` 按钮<br/>![img.png](/img/guide/search.png)
 4. 点击 `Install` 按钮<br/>![install.png](/img/guide/install.png)
-5. 选择 `Mode`（要安装的节点）和 `Upgrade`（是否升级）并点击 `Confirm` 按钮<br/>![install-form.png](/img/guide/install-form.png)
+5. 选择 `Mode`（安装在哪些节点上）和 `Upgrade`（是否升级），然后点击 `Confirm` 按钮<br/>![install-form.png](/img/guide/install-form.png)
 
 ## 卸载依赖项
 
 1. 导航到依赖项管理页面（Python/Node.js）<br/>![deps-list.png](/img/guide/deps-list.png)
 2. 点击 `Uninstall` 按钮以卸载依赖项<br/>![uninstall.png](/img/guide/uninstall.png)
-3. 选择 `Mode`（要安装的节点）并点击 `Confirm` 按钮<br/>![uninstall-form.png](/img/guide/uninstall-form.png)
+3. 选择 `Mode`（安装在哪些节点上）并点击 `Confirm` 按钮<br/>![uninstall-form.png](/img/guide/uninstall-form.png)
 
 ## 设置
 
@@ -36,7 +38,7 @@ Crawlab 允许用户为爬虫和任务安装和管理依赖项。
 
 设置描述：
 
-- **Command**: 用于安装/卸载依赖项的可执行命令。例如 `pip`，`/usr/local/bin/pip39`，`npm`，`yarn`
+- **Command**: 用于安装/卸载依赖项的可执行命令。例如 `pip`，`/usr/local/bin/pip39`，`npm` 或 `yarn`
 - **Proxy**: 用于安装/卸载依赖项的代理。例如 `https://registry.npm.taobao.org` 或 `https://pypi.tuna.tsinghua.edu.cn/simple`
 
 ## 任务

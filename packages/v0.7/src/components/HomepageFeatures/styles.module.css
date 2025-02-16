@@ -1,0 +1,34 @@
+.features {
+    padding: 4rem 0;
+}
+
+.feature {
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.featureSvgContainer {
+    text-align: center;
+    justify-self: center;
+    margin-bottom: 1.5rem;
+    height: 80px;
+    width: 80px;
+}
+
+.featureContent {
+    text-align: center;
+}
+
+.featureTitle {
+    color: var(--ifm-color-primary);
+    margin-bottom: 1rem;
+}
+
+.featureDescription {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}

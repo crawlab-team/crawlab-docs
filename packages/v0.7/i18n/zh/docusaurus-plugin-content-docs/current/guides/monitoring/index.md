@@ -1,8 +1,10 @@
-
+---
+title: 监控
+---
 
 # 监控
 
-::: info 注意
+:::info
 此功能仅适用于 [Pro 版](https://www.crawlab.cn/en/prices)。
 :::
 
@@ -19,4 +21,4 @@
 2. 您可以看到所选节点的性能指标 <br/>![metrics-detail](/img/guide/metrics-detail.png)
 3. 您可以通过选择 `Metrics Source` 下拉菜单来切换指标源 <br/>![metrics-source](/img/guide/metric-source.png)
 4. 您可以通过选择 `Time Range` 下拉菜单来选择时间范围/单位 <br/>![time-range](/img/guide/time-range.png) <br/>和 `Time Unit` <br/>![time-unit](/img/guide/time-unit.png)
-5. 您可以在左侧面板上勾选或取消勾选指标以在右侧面板上显示或隐藏它们 <br/>![metrics-panel](/img/guide/metrics-panel.png)
+5. 您可以在左侧面板上勾选或取消勾选指标以在右侧面板上显示/隐藏它们 <br/>![metrics-panel](/img/guide/metrics-panel.png)

@@ -1,0 +1,42 @@
+{
+  "version.label": {
+    "message": "下一个",
+    "description": "The label for version current"
+  },
+  "sidebar.docsSidebar.category.Getting Started": {
+    "message": "入门指南",
+    "description": "The label for category Getting Started in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Getting Started.link.generated-index.title": {
+    "message": "开始使用",
+    "description": "The generated-index page title for category Getting Started in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Getting Started.link.generated-index.description": {
+    "message": "了解如何安装、设置和开始使用Crawlab。本节涵盖从初始部署到第一个项目的所有内容。",
+    "description": "The generated-index page description for category Getting Started in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Guides": {
+    "message": "指南",
+    "description": "The label for category Guides in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Guides.link.generated-index.title": {
+    "message": "指南",
+    "description": "The generated-index page title for category Guides in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Guides.link.generated-index.description": {
+    "message": "详细的操作指南和实用说明，帮助您高效使用Crawlab。探索高级功能、集成方案和最佳实践。",
+    "description": "The generated-index page description for category Guides in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.doc.Introduction": {
+    "message": "简介",
+    "description": "The label for the doc item Introduction in sidebar docsSidebar, linking to the doc introduction"
+  },
+  "sidebar.docsSidebar.doc.FAQ": {
+    "message": "常见问题解答",
+    "description": "The label for the doc item FAQ in sidebar docsSidebar, linking to the doc faq"
+  },
+  "sidebar.examplesSidebar.category.Examples": {
+    "message": "示例",
+    "description": "The label for category Examples in sidebar examplesSidebar"
+  }
+}

@@ -1,6 +1,6 @@
 # Environment Variables
 
-::: info NOTE
+:::info
 This feature is only available in the [Crawlab Pro Edition](https://www.crawlab.cn/prices).
 :::
 

@@ -5,7 +5,7 @@ const OpenAI = require('openai');
 const cliProgress = require('cli-progress');
 
 // Load environment variables
-dotenv.config({override: true});
+dotenv.config({ override: true });
 
 // Configuration
 const DOCS_DIR = path.join(__dirname, '../docs');
@@ -20,7 +20,7 @@ const openai = new OpenAI({
 const usageTracker = {
   totalTokens: 0,
   totalRequests: 0,
-  tokenUsageMap: new Map()
+  tokenUsageMap: new Map(),
 };
 
 async function translateText(text) {
@@ -32,12 +32,18 @@ async function translateText(text) {
         content: `Translate this technical documentation to Chinese while:
 1. Keeping technical terms in English
 2. Preserving Markdown formatting
-3. Maintaining frontmatter structure
+3. Translate the titles in the frontmatter
 4. Not modifying code blocks
 5. Using Chinese for UI elements (e.g. "Click 按钮")
 6. Keeping links unchanged
-7. Need to translate the title in the frontmatter
-8. Return the content without any other unnecessary text or comments
+7. Return the content without any other unnecessary text or comments
+
+You should also follow the translation mappings:
+- Node: 节点
+- Project: 项目
+- Spider: 爬虫
+- Schedule: 定时任务
+- Task: 任务
 
 Original text:
 ${text}`,
@@ -71,7 +77,7 @@ async function processFile(filePath) {
   }
 
   console.log(`🟡 Starting translation: ${relativePath}`);
-  
+
   const content = fs.readFileSync(filePath, 'utf-8');
 
   // Preserve frontmatter
@@ -88,25 +94,40 @@ async function processFile(filePath) {
   const translationResult = await translateText(body);
   if (!translationResult) return;
 
-  // Show immediate token usage for this document
-  console.log(`✅ Translated: ${relativePath} (${translationResult.tokens} tokens)`);
-  
-  // Record token usage for this file
-  usageTracker.tokenUsageMap.set(relativePath, translationResult.tokens);
+  // Extract translated H1 title from content
+  const h1Match = translationResult.content.match(/^#\s+(.+)/m);
+  const translatedH1 = h1Match ? h1Match[1].trim() : '';
 
   // Process frontmatter
-  const translatedFrontmatter = frontmatter
-    .replace(/^title: (.*)$/m, (_, title) => {
-      const hasChinese = /[\u4e00-\u9fa5]/.test(title);
-      return hasChinese ? `title: ${title}` : `title: ${title}`;
-    })
-    .replace(/^sidebar_label: (.*)$/m, 'sidebar_label: 翻译侧边栏标签');
+  let translatedFrontmatter = frontmatter;
+  if (frontmatter) {
+    // Update title with translated H1 if original title was English
+    translatedFrontmatter = frontmatter
+      .replace(/^title: (.*)$/m, (_, title) => {
+        const isEnglish = !/[\u4e00-\u9fa5]/.test(title);
+        return isEnglish ? `title: ${translatedH1}` : `title: ${title}`;
+      });
+  } else {
+    // Create new frontmatter with translated H1
+    translatedFrontmatter = `---
+title: ${translatedH1}
+---`;
+  }
+
+  // Remove H1 removal and keep it in content
+  const translatedBody = translationResult.content;
 
   // Ensure directory exists
   fs.ensureDirSync(path.dirname(targetPath));
 
   // Write translated file
-  fs.writeFileSync(targetPath, `${translatedFrontmatter}\n\n${translationResult.content}`);
+  fs.writeFileSync(targetPath, `${translatedFrontmatter}\n\n${translatedBody}`);
+
+  // Show immediate token usage for this document
+  console.log(`✅ Translated: ${relativePath} (${translationResult.tokens} tokens)`);
+
+  // Record token usage for this file
+  usageTracker.tokenUsageMap.set(relativePath, translationResult.tokens);
 
   // Update total tokens and total requests
   usageTracker.totalTokens += translationResult.tokens;
@@ -120,7 +141,7 @@ async function main() {
   usageTracker.tokenUsageMap.clear();
 
   console.log('🚀 Starting documentation translation...');
-  
+
   // Process all Markdown files
   const files = fs.readdirSync(DOCS_DIR, {
     recursive: true,
@@ -132,13 +153,13 @@ async function main() {
     format: '🔄 Progress |{bar}| {percentage}% | {value}/{total} Files | ETA: {eta_formatted}',
     barCompleteChar: '█',
     barIncompleteChar: '░',
-    hideCursor: true
+    hideCursor: true,
   });
   progressBar.start(files.length, 0);
 
-  const CONCURRENCY = 5;
+  const CONCURRENCY = 16;
   const totalFiles = files.length;
-  
+
   // Create worker pool
   const worker = async () => {
     while (files.length) {
@@ -167,4 +188,6 @@ async function main() {
   console.log(`- Total API requests: ${usageTracker.totalRequests}`);
 }
 
-main();
+(async function() {
+  await main();
+})();

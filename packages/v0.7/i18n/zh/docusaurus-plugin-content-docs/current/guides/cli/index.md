@@ -1,8 +1,10 @@
-
+---
+title: CLI
+---
 
 # CLI
 
-CLI 工具允许用户轻松管理 Crawlab 并执行包括上传爬虫在内的常见操作。它用 Python 编写，安装非常简单。
+CLI 工具允许用户轻松管理 Crawlab 并执行包括上传爬虫在内的常见操作。它是用 Python 编写的，安装非常简单。
 
 ## 安装
 
@@ -61,7 +63,7 @@ crawlab-cli upload \
 
 #### 上传到现有爬虫
 
-如果您想上传到一个已存在的爬虫，可以执行以下命令。
+如果您想上传到一个现有的爬虫，可以执行以下命令。
 
 ```bash
 crawlab-cli upload \
@@ -74,7 +76,7 @@ crawlab-cli upload \
 
 ## 配置
 
-您可以使用 CLI 工具查看和设置/取消设置配置。
+您可以使用 CLI 工具查看和设置/取消配置。
 
 #### 查看配置
 
@@ -90,10 +92,10 @@ crawlab-cli config --set <key>=<value>
 
 - `--set` 或 `-s` 是要在配置中设置的键值对。
 
-#### 取消设置配置
+#### 取消配置
 
 ```bash
 crawlab-cli config --unset <key>
 ```
 
-- `--set` 或 `-s` 是要从配置中取消设置的键。
+- `--set` 或 `-s` 是要从配置中取消的键。

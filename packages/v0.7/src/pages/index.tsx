@@ -1,26 +1,35 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
+import Translate from '@docusaurus/Translate';
 
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+          Crawlab
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">
+          <Translate id="homepage.hero.subtitle" />
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/docs/getting-started/quick-start">
+            <Translate id="homepage.cta.quickStart" />
+          </Link>
+          <Link
+            className="button button--primary button--lg"
+            to="/docs/#main-features"
+            style={{ marginLeft: '1rem' }}>
+            <Translate id="homepage.cta.features" />
           </Link>
         </div>
       </div>
@@ -29,13 +38,14 @@ function HomepageHeader() {
 }
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title}`}
+      description={siteConfig.tagline}>
       <HomepageHeader />
       <main>
+        <HomepageFeatures />
       </main>
     </Layout>
   );

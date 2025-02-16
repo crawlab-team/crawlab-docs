@@ -18,6 +18,7 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
+  onBrokenAnchors: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -102,11 +103,11 @@ const config: Config = {
             },
             {
               label: 'Getting Started',
-              to: '/docs/quick-start/',
+              to: '/docs/category/getting-started/',
             },
             {
               label: 'Guides',
-              to: '/docs/guides/',
+              to: '/docs/category/guides/',
             },
             {
               label: 'FAQ',

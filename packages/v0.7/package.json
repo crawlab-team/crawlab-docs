@@ -4,6 +4,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "dev": "pnpm run start",
+    "dev:zh": "pnpm run start --locale zh",
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
@@ -20,6 +21,7 @@
     "@docusaurus/core": "3.7.0",
     "@docusaurus/preset-classic": "3.7.0",
     "@docusaurus/theme-mermaid": "^3.7.0",
+    "@heroicons/react": "^2.2.0",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",

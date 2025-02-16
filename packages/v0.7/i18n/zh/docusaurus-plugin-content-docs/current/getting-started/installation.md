@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: Installation
+title: 安装
 ---
 
 # 安装
@@ -31,7 +31,7 @@ flowchart TB
     style mg fill: #67c23a, color: white
 ```
 
-**单节点部署** 类似于 [快速开始](./quick-start.md) 中的配置，通常用于演示目的或管理少量爬虫。在单节点部署中，所有 Docker 容器包括 Crawlab 和 MongoDB 都在一个机器上，即主节点（见上图）。
+**单节点部署** 类似于 [快速开始](./quick-start.md) 中的配置，通常用于演示目的或管理少量爬虫。在单节点部署中，所有 Docker 容器（包括 Crawlab 和 MongoDB）都在一台机器上，即主节点（见上图）。
 
 创建 `docker-compose.yml` 并输入以下内容。
 
@@ -66,9 +66,9 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: "password"  # mongo 密码
     volumes:
       - "/opt/.crawlab/master:/root/.crawlab"  # 持久化 Crawlab 元数据
-      - "/opt/crawlab/mongo/data/db:/data/db"  # 持久化 mongo 数据
+      - "/opt/crawlab/mongo/data/db:/data/db"  # 持久化 MongoDB 数据
     ports:
-      - "27017:27017"  # 将 mongo 端口暴露给主机
+      - "27017:27017"  # 将 MongoDB 端口暴露给主机
 ```
 
 然后，执行 `docker compose up -d` 并在浏览器中导航到 `http://<your_ip>:8080` 开始使用 Crawlab。
@@ -88,13 +88,13 @@ flowchart LR
     style w3 fill: #e6a23c, color: white
 ```
 
-**多节点部署** 通常用于生产环境，在这种环境中，由一个主节点和多个工作节点组成的集群被部署。主节点由工作节点连接，并作为集群中的中央控制系统。
+**多节点部署** 通常用于生产环境，在这种环境中，由一个主节点和多个工作节点组成的集群会被部署。主节点通过工作节点连接，并作为集群中的中央控制系统。
 
 多节点部署的配置比单节点部署更复杂，但你可以按照下面的指南设置一个小集群，这将非常简单。
 
 ### 设置主节点
 
-在 **主节点** 中创建 `docker-compose.yml` 并输入以下内容。然后通过执行 `docker compose up -d` 开始启动。
+在 **主节点** 中创建 `docker-compose.yml` 并输入以下内容。然后通过执行 `docker compose up -d` 开始。
 
 ```yaml
 # 主节点
@@ -129,14 +129,14 @@ services:
       MONGO_INITDB_ROOT_USERNAME: "username"  # mongo 用户名
       MONGO_INITDB_ROOT_PASSWORD: "password"  # mongo 密码
     volumes:
-      - "/opt/crawlab/mongo/data/db:/data/db"  # 持久化 mongo 数据
+      - "/opt/crawlab/mongo/data/db:/data/db"  # 持久化 MongoDB 数据
     ports:
-      - "27017:27017"  # 将 mongo 端口暴露给主机
+      - "27017:27017"  # 将 MongoDB 端口暴露给主机
 ```
 
 ### 设置工作节点
 
-在每个 **工作节点** 中创建 `docker-compose.yml` 并输入以下内容。然后通过执行 `docker compose up -d` 开始启动。
+在每个 **工作节点** 中创建 `docker-compose.yml` 并输入以下内容。然后通过执行 `docker compose up -d` 开始。
 
 ```yaml
 # 工作节点
@@ -154,7 +154,7 @@ services:
       - "/opt/crawlab/worker:/data"  # 持久化 Crawlab 数据
 ```
 
-请注意，你应该将 `<master_node_ip>` 替换为主节点的 IP 地址并确保它可以被工作节点访问。
+请注意，你应该将 `<master_node_ip>` 替换为实际的主节点 IP 地址，并确保工作节点可以访问该 IP 地址。
 
 在主节点和工作节点都启动后，你现在可以导航到 `http://<master_node_ip>:8080` 开始使用 Crawlab。
 
@@ -162,14 +162,14 @@ services:
 
 ### 暴露主节点端口
 
-由于工作节点通过端口 **8080** (API) 和 **9666** (gRPC) 连接到主节点，你需要确保它们都被打开并且不受主节点防火墙阻止。
+由于工作节点通过端口 **8080**（API）和 **9666**（gRPC）连接到主节点，你需要确保它们都被打开并且不受主节点防火墙的阻止。
 :::
 
 ## 外部 MongoDB
 
-在上面介绍的多节点部署中，你可能会注意到默认情况下 MongoDB 部署在主节点上。但从性能角度来看，这种便捷的部署配置可能会导致问题，因为 MongoDB 本身可能成为瓶颈，特别是在大规模分布式系统中。
+在上面介绍的多节点部署中，你可能会注意到 MongoDB 默认部署在主节点上。但从性能角度来看，这种便捷的部署配置可能会导致问题，因为 MongoDB 本身可能成为瓶颈，特别是在大规模分布式系统中。
 
-幸运的是，这个问题可以通过使用部署在其他节点上的外部 MongoDB 或从云数据库服务提供商（例如 AWS、Azure、阿里云等）来解决。这样，MongoDB 可以轻松扩展，从而确保数据库的稳健性。请参阅下图。
+幸运的是，这个问题可以通过使用部署在其他节点上的外部 MongoDB 或从云数据库服务提供商（例如 AWS、Azure、阿里云等）来解决。这样，MongoDB 可以轻松扩展，从而确保数据库的稳定性。请参阅下图。
 
 ```mermaid
 flowchart LR
@@ -187,10 +187,10 @@ flowchart LR
     style mg fill: #67c23a, color: white
 ```
 
-主节点的配置文件 `docker-compose.yml` 与 [默认多节点部署](#多节点部署) 略有不同。请找到以下内容。
+主节点的配置文件 `docker-compose.yml` 与默认的多节点部署略有不同。请找到以下内容。
 
 ```yaml
-# 带外部 mongo 的主节点
+# 带外部 MongoDB 的主节点
 version: '3.3'
 services:
   master:
@@ -199,7 +199,7 @@ services:
     restart: always
     environment:
       CRAWLAB_NODE_MASTER: "Y"  # Y: 主节点
-      CRAWLAB_MONGO_URI: "<mongo_uri>"  # mongo uri (单独设置)
+      CRAWLAB_MONGO_URI: "<mongo_uri>"  # mongo URI（单独设置）
       CRAWLAB_MONGO_HOST: "<mongo_host>"  # mongo 主机地址
       CRAWLAB_MONGO_PORT: "<mongo_port>"  # mongo 端口 
       CRAWLAB_MONGO_DB: "<mongo_db>"  # mongo 数据库 
@@ -217,4 +217,4 @@ services:
       - "9666:9666"  # 暴露 gRPC 端口
 ```
 
-如你所见，服务 `mongo` 被移除，MongoDB 相关的连接环境变量（例如 `CRAWLAB_MONGO_HOST`、`CRAWLAB_MONGO_PORT`）被更改为外部 MongoDB 的那些。如果你不需要某些环境变量，可以留空。
+如你所见，服务 `mongo` 被移除，并且 MongoDB 相关的连接环境变量（例如 `CRAWLAB_MONGO_HOST`、`CRAWLAB_MONGO_PORT`）被更改为外部 MongoDB 的相应值。如果你不需要某些环境变量，可以留空。

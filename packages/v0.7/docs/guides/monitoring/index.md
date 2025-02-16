@@ -1,6 +1,6 @@
 # Monitoring
 
-::: info NOTE
+:::info
 This functionality is for [Pro Edition](https://www.crawlab.cn/en/prices) only.
 :::
 
