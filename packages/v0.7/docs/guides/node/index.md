@@ -13,9 +13,9 @@ There are two types of nodes, each of which serves different functionalities.
 1. [Master Node](#master-node)
 2. [Worker Node](#worker-node)
 
-:::warning
-Of course you can set up multiple Crawlab instances (nodes) on a server, but that is **NOT** recommended as a single
-instance (node) on a server normally suffices.
+:::info
+Of course you can set up multiple Crawlab instances (nodes) on a single server, but that is **NOT** recommended as a
+single instance (node) on a server normally suffices.
 :::
 
 ## Master Node
@@ -25,7 +25,7 @@ Master Node assigns [tasks](../task/index.md) to [Worker Nodes](#worker-node) or
 deploys and distributes [spider](../spider/index.md) files to other nodes. Furthermore, it provides APIs to the
 frontend application and handles communication between each node.
 
-:::warning
+:::info
 There is only **ONE** Master Node in Crawlab.
 :::
 
@@ -36,7 +36,7 @@ server can be limited to its computing power and resources including CPUs, memor
 of Worker Nodes can be increased in order to scale up the throughput of data collection and improve the overall crawling
 performance of the distributed system.
 
-:::tip
+:::info
 There can be none or multiple Worker Nodes in Crawlab.
 :::
 
@@ -66,12 +66,8 @@ node detail page.
 
 ## Set Max Runners
 
-A node can run multiple tasks at the same time. The number of concurrent tasks is controlled by `Max Runners` of a node.
-It can be configured in the node detail page.
-
-## Set Basic Info
-
-Basic info such as node name, IP, MAC address can be set in the node detail page.
+A node can run multiple tasks at the same time. The number of concurrent tasks is controlled by `Max Runners` of a node,
+which is by default set as unlimited. It can be configured in the node detail page.
 
 ## Add Node
 

@@ -9,7 +9,7 @@ Spider is the basic unit of web crawler programs in Crawlab. You can regard it a
 consisted of code and files, e.g. a Scrapy project. Please note that the term *project* mentioned here is not the same
 as the basic concept [Project](../project/index.md) in Crawlab.
 
-:::warning
+:::info
 The concept *Spider* is so important in Crawlab that we strongly recommend you read through this section.
 :::
 
@@ -19,9 +19,16 @@ Below is a typical process for users to play with spiders in Crawlab.
 
 ```mermaid
 graph LR
-  A[Create Spider] --> B[Upload Spider]
-  B --> C[Run Spider]
-  C --> D[View Results]
+    A[Create Spider]
+    B1[Upload Code]
+    B2[Edit Code]
+    C[Run Spider]
+    D[View Logs/Results]
+    A --> B1
+    A --> B2
+    B1 --> C
+    B2 --> C
+    C --> D
 ```
 
 ## Create Spider
@@ -30,16 +37,21 @@ graph LR
 2. Enter relevant info including `Name` and `Execute Command`.
 3. Click `Confirm`.
 
-`Execute Command` is the base command that will be executed when running the spider, e.g. `scrapy crawl myspider`, and
-it's the bash/shell command that will be executed when running the spider.
+Here is the explanation of the core fields when creating a spider.
 
-`Incremental Sync` is whether to sync files incrementally when running the spider, instead of downloading all files
-every time. It can save time when downloading files.
+- `Project` is the project that the spider belongs to.
+- `Execute Command` is a command that will be executed in the [shell](https://en.wikipedia.org/wiki/Shell_(computing))
+  when running the spider, e.g. `scrapy crawl myspider`.
+- `Parameters` is a list of parameters that will be passed to the `Execute Command` when running the spider, e.g.
+  `-a param1=value1 -a param2=value2`.
+- `Default Mode` is the default mode of running the spider.
+    - `Random Node`: Run the spider on a random node.
+    - `All Nodes`: Run the spider on all nodes.
+    - `Selected Nodes`: Run the spider on selected nodes.
+- `Priority` is the priority of the spider. Higher priority means the spider will be executed earlier.
+- `Results Collection` is the collection where the results of the spider will be stored in the database.
 
-`Auto Install Dependencies` is whether to install dependencies automatically when running the spider, e.g. the
-dependencies in `requirements.txt`. (This feature is only available in Crawlab Pro Edition)
-
-## Upload Spider
+## Upload Code
 
 There are several ways to upload spider files.
 
@@ -68,6 +80,19 @@ There are several ways to upload spider files.
 2. Click `Files` tab.
 3. Drag and drop spider files or folders into folders on file navigator on the left.
 
+## Edit Code
+
+Crawlab provides an online code editor for users to edit spider code. You can follow the steps below to edit spider
+code.
+
+1. Navigate to spider detail page.
+2. Click `Files` tab.
+3. Click the file you want to edit.
+4. Edit the code.
+5. Click `Save` button in the nav bar.
+
+You can refer to the [File Editor](../file-editor/index.md) section for more details about the code editor.
+
 ## Run Spider
 
 You can follow the steps below to run a spider.
@@ -77,20 +102,15 @@ You can follow the steps below to run a spider.
 3. Select appropriate settings for running spider.
 4. Click `Confirm`.
 
-Here is the explanation of settings for running a spider.
-
-- `Command`: Actual cmd/bash/shell base command that will be executed.
-- `Param`: Actual parameters/arguments passed to `Command`.
-- `Mode`: Task running mode. Default to `Random Node`.
-- `Priority`: Task priority. Default to 5.
-
 ## Entity Relationships
+
+The relationships between spiders and other entities are shown below.
 
 ```mermaid
 erDiagram
-  Spider ||--o{ Project : "belongs to"
-  Spider ||--o{ Task : "runs"
-  Spider ||--o{ Schedule : "has"
-  Task ||--o{ Node : "runs on"
-  Schedule ||--o{ Task : "triggers"
+    Spider ||--o{ Project: "belongs to"
+    Spider ||--o{ Task: "runs"
+    Spider ||--o{ Schedule: "has"
+    Task ||--o{ Node: "runs on"
+    Schedule ||--o{ Task: "triggers"
 ```
