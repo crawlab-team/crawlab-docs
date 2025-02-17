@@ -14,8 +14,7 @@ execution sequence.
 
 ## Run Task
 
-You can either [run a task from spider](../spider/index.md#run-spider), or follow the
-steps below.
+You can either [run a task from spider](../spider/index.md#run-spider), or follow the steps below.
 
 1. Navigate to `Tasks` page.
 2. Click `New Tasks` button on the top left.
