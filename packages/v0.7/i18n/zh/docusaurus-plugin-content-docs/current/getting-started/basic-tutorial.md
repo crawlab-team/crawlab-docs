@@ -9,14 +9,12 @@ title: 基础教程
 
 ## 介绍
 
-在这个教程中，我们将创建一个爬虫，该爬虫会抓取[模拟站点](http://quotes.toscrape.com/)上的报价（由[Zyte](https://www.zyte.com/)提供，即Scrapy背后的公司）；然后我们将把这个爬虫上传到Crawlab，并运行它以提取报价数据；最后，我们将在Crawlab上以可视化方式查看抓取的数据。
+在这个教程中，我们将创建一个爬虫，该爬虫会抓取[模拟站点](http://quotes.toscrape.com/)上的名人名言（由[Zyte](https://www.zyte.com/)提供，即Scrapy背后的公司）；然后我们将运行它来抓取数据；最后，我们将在Crawlab上以可视化方式查看抓取的数据。
 
 我们将使用的框架是[Scrapy](https://scrapy.org/)，这是一个用Python编写的最流行的网络爬虫框架，易于使用且具有许多强大的功能。
 
-:::warning
+:::info
 我们假设您已经按照[快速入门](./quick-start.md)文档在本地机器上安装了Crawlab。如果没有，请参阅[快速入门](./quick-start.md)文档来在本地机器上安装它。
-
-由于我们使用的是Scrapy，请确保在继续下一步之前已安装[Python](https://www.python.org/)（>=3.6）和模块管理工具[pip](https://pip.pypa.io/en/stable/installation/)。
 :::
 
 ## 创建爬虫
@@ -57,20 +55,14 @@ title: 基础教程
 
 ![](/img/getting-started/basic-tutorial/view-task-data.png)
 
-## 爬虫统计信息
-
-如果我们回到`爬虫`页面，我们应该能够看到爬虫的统计信息。
-
-![](/img/guide/quick-tutorial-10.png)
-
 ## 总结
 
 让我们回顾一下整个过程。我们遵循了一个简单的流程在Crawlab上运行Scrapy爬虫：
 
 1. 在Crawlab上创建Scrapy爬虫
-2. 上传爬虫文件
-3. 触发任务
-4. 在Crawlab上查看实时日志和抓取数据
+2. 触发任务
+3. 查看实时日志
+4. 查看抓取数据
 
 ## 接下来做什么
 

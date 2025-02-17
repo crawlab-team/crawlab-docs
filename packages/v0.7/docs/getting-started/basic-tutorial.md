@@ -11,19 +11,16 @@ features in Crawlab.
 
 ## Introduction
 
-In this tutorial, we are going to create a spider that crawls quotes on a [mock site](http://quotes.toscrape.com/)
-provided by [Zyte](https://www.zyte.com/) (the company behind Scrapy); then we will upload this spider to Crawlab, and
-run it to extract quotes data; finally, we will view the crawled data visually on Crawlab.
+In this tutorial, we are going to create a spider that crawls quotes by famous people on
+a [mock site](http://quotes.toscrape.com/) provided by [Zyte](https://www.zyte.com/) (the company behind Scrapy); then
+we will run it on Crawlab to extract data from the site; finally, we will view the crawled data visually on Crawlab.
 
 The framework we are going to use is [Scrapy](https://scrapy.org/), the most popular web crawler framework written in
 Python, which is easy to use yet with many powerful features.
 
-:::warning
+:::info
 We assume you have installed Crawlab on your local machine by following [Quick Start](./quick-start.md). If you
 haven't, please refer to [Quick Start](./quick-start.md) to install it on your local machine.
-
-As we are using Scrapy, please make sure you have installed [Python](https://www.python.org/) (>=3.6) and module
-management tool [pip](https://pip.pypa.io/en/stable/installation/) before proceeding any further steps.
 :::
 
 ## Create Spider
