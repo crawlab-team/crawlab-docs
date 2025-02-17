@@ -13,7 +13,7 @@ installed Docker before proceeding any further steps.
 
 There are several deployment modes for Docker installation, but the main process is similar.
 
-1. Install [Docker](https://www.docker.com/) and [Docker-Compose](https://docs.docker.com/compose/)
+1. Install [Docker](https://www.docker.com/)
 2. Pull Docker image of Crawlab (and [MongoDB](https://www.mongodb.com/) if you have no external MongoDB instance)
 3. Create `docker-compose.yml` and make configurations
 4. Start Docker containers
@@ -55,8 +55,7 @@ services:
       CRAWLAB_MONGO_AUTHSOURCE: "admin"  # mongo auth source 
     volumes:
       - "/opt/.crawlab/master:/root/.crawlab"  # persistent crawlab metadata
-      - "/opt/crawlab/master:/data"  # persistent crawlab data
-      - "/var/crawlab/log:/var/log/crawlab" # log persistent 
+      # - "/var/crawlab/log:/var/log/crawlab" # optional persistent crawlab logs 
     ports:
       - "8080:8080"  # exposed api port
     depends_on:
@@ -64,12 +63,12 @@ services:
 
   mongo:
     image: mongo:5
+    container_name: mongo
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: "username"  # mongo username
       MONGO_INITDB_ROOT_PASSWORD: "password"  # mongo password
     volumes:
-      - "/opt/.crawlab/master:/root/.crawlab"  # persistent crawlab metadata
       - "/opt/crawlab/mongo/data/db:/data/db"  # persistent mongo data
     ports:
       - "27017:27017"  # expose mongo port to host machine
@@ -106,7 +105,6 @@ executing `docker compose up -d`.
 
 ```yaml
 # master node
-version: '3.3'
 services:
   master:
     image: crawlabteam/crawlab
@@ -122,8 +120,7 @@ services:
       CRAWLAB_MONGO_AUTHSOURCE: "admin"  # mongo auth source 
     volumes:
       - "/opt/.crawlab/master:/root/.crawlab"  # persistent crawlab metadata
-      - "/opt/crawlab/master:/data"  # persistent crawlab data
-      - "/var/crawlab/log:/var/log/crawlab" # log persistent 
+      # - "/var/crawlab/log:/var/log/crawlab" # optional persistent crawlab logs
     ports:
       - "8080:8080"  # exposed api port
       - "9666:9666"  # exposed grpc port
@@ -132,6 +129,7 @@ services:
 
   mongo:
     image: mongo:5
+    container_name: mongo
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: "username"  # mongo username
@@ -149,7 +147,6 @@ executing `docker compose up -d`.
 
 ```yaml
 # worker node
-version: '3.3'
 services:
   worker:
     image: crawlabteam/crawlab
@@ -160,7 +157,6 @@ services:
       CRAWLAB_MASTER_HOST: "<master_node_ip>"  # master node ip address
     volumes:
       - "/opt/.crawlab/worker:/root/.crawlab"  # persistent crawlab metadata
-      - "/opt/crawlab/worker:/data"  # persistent crawlab data
 ```
 
 Please note that you should replace `<master_node_ip>` with the IP address of Master Node and make sure it is accessible
@@ -180,9 +176,8 @@ both opened and NOT blocked by firewall on Master Node.
 ## External MongoDB
 
 In Multi-Node Deployment introduced above, you may notice that MongoDB is by default deployed on Master Node. But
-performance wise, this
-handy deployment configuration can result in problems, because MongoDB itself can be a bottleneck particularly in a
-large-scale distributed system.
+performance wise, this handy deployment configuration can result in problems, because MongoDB itself can be a bottleneck
+particularly in a large-scale distributed system.
 
 Fortunately, this issue can be resolved by using external MongoDB deployed in other nodes, or from cloud database
 service providers, e.g. AWS, Azure, Aliyun etc. By doing so, MongoDB can be easily scaled so that the database
@@ -209,7 +204,6 @@ of [default Multi-Node Deployment](#multi-node-deployment). Please find the cont
 
 ```yaml
 # master node with external mongo
-version: '3.3'
 services:
   master:
     image: crawlabteam/crawlab
@@ -228,8 +222,7 @@ services:
       CRAWLAB_MONGO_AUTHMECHANISMPROPERTIES: "<mongo_auth_mechanism_properties>"  # mongo auth mechanism properties
     volumes:
       - "/opt/.crawlab/master:/root/.crawlab"  # persistent crawlab metadata
-      - "/opt/crawlab/master:/data"  # persistent crawlab data
-      - "/var/crawlab/log:/var/log/crawlab" # log persistent 
+      # - "/var/crawlab/log:/var/log/crawlab" # optional persistent crawlab logs
     ports:
       - "8080:8080"  # exposed api port
       - "9666:9666"  # exposed grpc port

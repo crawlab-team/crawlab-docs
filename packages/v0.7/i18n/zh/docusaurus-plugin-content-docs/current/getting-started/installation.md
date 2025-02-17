@@ -11,8 +11,8 @@ Docker 是安装和部署 Crawlab 最方便和最简单的方式。如果你不�
 
 Docker 安装有几种部署模式，但主要过程是相似的。
 
-1. 安装 [Docker](https://www.docker.com/) 和 [Docker-Compose](https://docs.docker.com/compose/)
-2. 拉取 Crawlab 的 Docker 镜像（如果没有外部 MongoDB 实例，则还需要拉取 [MongoDB](https://www.mongodb.com/)）
+1. 安装 [Docker](https://www.docker.com/)
+2. 拉取 Crawlab 的 Docker 镜像（如果没有外部 MongoDB 实例，还需要拉取 [MongoDB](https://www.mongodb.com/)）
 3. 创建 `docker-compose.yml` 并进行配置
 4. 启动 Docker 容器
 
@@ -51,8 +51,7 @@ services:
       CRAWLAB_MONGO_AUTHSOURCE: "admin"  # mongo 认证源 
     volumes:
       - "/opt/.crawlab/master:/root/.crawlab"  # 持久化 Crawlab 元数据
-      - "/opt/crawlab/master:/data"  # 持久化 Crawlab 数据
-      - "/var/crawlab/log:/var/log/crawlab" # 日志持久化 
+      # - "/var/crawlab/log:/var/log/crawlab" # 可选日志持久化
     ports:
       - "8080:8080"  # 暴露 API 端口
     depends_on:
@@ -60,12 +59,12 @@ services:
 
   mongo:
     image: mongo:5
+    container_name: mongo
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: "username"  # mongo 用户名
       MONGO_INITDB_ROOT_PASSWORD: "password"  # mongo 密码
     volumes:
-      - "/opt/.crawlab/master:/root/.crawlab"  # 持久化 Crawlab 元数据
       - "/opt/crawlab/mongo/data/db:/data/db"  # 持久化 MongoDB 数据
     ports:
       - "27017:27017"  # 将 MongoDB 端口暴露给主机
@@ -98,7 +97,6 @@ flowchart LR
 
 ```yaml
 # 主节点
-version: '3.3'
 services:
   master:
     image: crawlabteam/crawlab
@@ -114,8 +112,7 @@ services:
       CRAWLAB_MONGO_AUTHSOURCE: "admin"  # mongo 认证源 
     volumes:
       - "/opt/.crawlab/master:/root/.crawlab"  # 持久化 Crawlab 元数据
-      - "/opt/crawlab/master:/data"  # 持久化 Crawlab 数据
-      - "/var/crawlab/log:/var/log/crawlab" # 日志持久化 
+      # - "/var/crawlab/log:/var/log/crawlab" # 可选日志持久化
     ports:
       - "8080:8080"  # 暴露 API 端口
       - "9666:9666"  # 暴露 gRPC 端口
@@ -124,6 +121,7 @@ services:
 
   mongo:
     image: mongo:5
+    container_name: mongo
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: "username"  # mongo 用户名
@@ -140,7 +138,6 @@ services:
 
 ```yaml
 # 工作节点
-version: '3.3'
 services:
   worker:
     image: crawlabteam/crawlab
@@ -151,7 +148,6 @@ services:
       CRAWLAB_MASTER_HOST: "<master_node_ip>"  # 主节点 IP 地址
     volumes:
       - "/opt/.crawlab/worker:/root/.crawlab"  # 持久化 Crawlab 元数据
-      - "/opt/crawlab/worker:/data"  # 持久化 Crawlab 数据
 ```
 
 请注意，你应该将 `<master_node_ip>` 替换为实际的主节点 IP 地址，并确保工作节点可以访问该 IP 地址。
@@ -191,7 +187,6 @@ flowchart LR
 
 ```yaml
 # 带外部 MongoDB 的主节点
-version: '3.3'
 services:
   master:
     image: crawlabteam/crawlab
@@ -210,11 +205,8 @@ services:
       CRAWLAB_MONGO_AUTHMECHANISMPROPERTIES: "<mongo_auth_mechanism_properties>"  # mongo 认证机制属性
     volumes:
       - "/opt/.crawlab/master:/root/.crawlab"  # 持久化 Crawlab 元数据
-      - "/opt/crawlab/master:/data"  # 持久化 Crawlab 数据
-      - "/var/crawlab/log:/var/log/crawlab" # 日志持久化 
+      # - "/var/crawlab/log:/var/log/crawlab" # 可选日志持久化
     ports:
       - "8080:8080"  # 暴露 API 端口
       - "9666:9666"  # 暴露 gRPC 端口
 ```
-
-如你所见，服务 `mongo` 被移除，并且 MongoDB 相关的连接环境变量（例如 `CRAWLAB_MONGO_HOST`、`CRAWLAB_MONGO_PORT`）被更改为外部 MongoDB 的相应值。如果你不需要某些环境变量，可以留空。

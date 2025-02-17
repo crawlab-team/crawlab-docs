@@ -8,25 +8,21 @@ title: Quick Start
 The quickest way to install Crawlab is [Docker](./installation.md). If you are not familiar with Docker, you can
 refer to [Docker Official Site](https://www.docker.com/) and install it on your local machine.
 
-## Pull Images
+## Pre-requisites
 
-Make sure you have installed Docker, and then pull the image of Crawlab and MongoDB.
+Make sure you have installed Docker on your local machine.
 
-```bash
-docker pull crawlabteam/crawlab
-docker pull mongo
-```
+- For Windows and Mac users, you can install [Docker Desktop](https://www.docker.com/products/docker-desktop).
+- For Linux users, you can install Docker by following the instructions on the [Docker Official Site](https://docs.docker.com/engine/install/).
 
 ## Configure docker-compose.yml
 
 Create a config file named `docker-compose.yml` and enter the content below.
 
 ```yaml
-version: '3.3'
 services:
   master:
     image: crawlabteam/crawlab
-    container_name: crawlab_master
     environment:
       CRAWLAB_NODE_MASTER: "Y"
       CRAWLAB_MONGO_HOST: "mongo"
@@ -38,9 +34,17 @@ services:
     image: mongo:5
 ```
 
+## Pull images
+
+Pull the images by executing the command below.
+
+```bash
+docker compose pull
+``` 
+
 ## Start Crawlab
 
-Start Crawlab along with MongoDB by executing the command below.
+Start Crawlab by executing the command below.
 
 ```bash
 docker compose up -d
