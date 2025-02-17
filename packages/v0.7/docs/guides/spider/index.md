@@ -23,12 +23,14 @@ graph LR
     B1[Upload Code]
     B2[Edit Code]
     C[Run Spider]
-    D[View Logs/Results]
+    D[View Logs]
+    E[View Data]
     A --> B1
     A --> B2
     B1 --> C
     B2 --> C
     C --> D
+    D --> E
 ```
 
 ## Create Spider
@@ -101,6 +103,22 @@ You can follow the steps below to run a spider.
 2. If in `Spiders` page, click `Run` button with play icon on the right.
 3. Select appropriate settings for running spider.
 4. Click `Confirm`.
+
+## View Data
+
+After spider execution, you can view collected data through these steps:
+
+1. Navigate to spider detail page
+2. Click `Data` tab in the navigation bar
+3. Browse collected records in the table view
+4. Use pagination controls to navigate through results
+
+The data shown here comes from the MongoDB collection specified in `Results Collection` during spider creation. You can:
+- Export data as CSV/JSON using the export data button
+
+:::tip
+Collection name follows the pattern `results_<spider_name>` if not explicitly configured. Use this name to directly query data via MongoDB client.
+:::
 
 ## Entity Relationships
 
