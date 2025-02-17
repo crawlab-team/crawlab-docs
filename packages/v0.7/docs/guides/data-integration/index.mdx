@@ -1,0 +1,99 @@
+---
+sidebar_position: 6
+title: Data Integration
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Data Integration
+
+You can integrate your spiders with Crawlab SDK. This allows you to view scraped results visually on Crawlab.
+
+Crawlab SDK supports integration with various web crawler frameworks including Scrapy and programming languages
+including Python, Node.js, Go and Java.
+
+:::info
+By default, Crawlab Python SDK ([crawlab-sdk](https://pypi.org/project/crawlab-sdk)) is pre-installed in the base image of Crawlab. You can directly use
+it in the docker image of Crawlab.
+:::
+
+## Basic Usage
+
+Below code snippets show how to save a basic item with different programming languages. The item is a dictionary with
+key `hello` and value `crawlab`. This will be saved to the database and displayed on the Crawlab web interface once the
+code is executed.
+
+<Tabs defaultValue="python">
+  <TabItem value="python" label="Python">
+    ```python
+    from crawlab import save_item
+
+    # Save dictionary as item
+    save_item({'hello': 'crawlab'})
+    ```
+  </TabItem>
+  <TabItem value="node" label="Node.js">
+    ```javascript
+    const { saveItem } = require('@crawlab/sdk');
+    
+    // Save object as item
+    saveItem({'hello': 'crawlab'})
+    ```
+    :::info
+    Node.js is supported in **Crawlab Pro**.
+    :::
+  </TabItem>
+  <TabItem value="go" label="Go">
+    ```go
+    package main
+
+    import "github.com/crawlab-team/crawlab-sdk-go"
+
+    func main() {
+      // Save map as item
+      crawlab.SaveItem(map[string]interface{}{
+        "hello": "crawlab",
+      })
+    }
+    ```
+    :::info
+    Go is supported in **Crawlab Pro**.
+    :::
+  </TabItem>
+  <TabItem value="java" label="Java">
+    ```java
+    import io.crawlab.sdk.CrawlabSdk;
+    import java.util.HashMap;
+
+    public class Main {
+      public static void main(String[] args) {
+        // Save HashMap as item
+        CrawlabSdk.saveItem(new HashMap<String, Object>() {{
+          put("hello", "crawlab");
+        }});
+      }
+    }
+    ```
+    :::info
+    Java is supported in **Crawlab Pro**.
+    :::
+  </TabItem>
+</Tabs>
+
+## Scrapy
+
+[Scrapy](https://scrapy.org) is a very popular web crawler framework for efficient and scalable web crawling tasks in Python.
+
+Integrate Scrapy to Crawlab is very easy. You only need to add `crawlab.CrawlabPipeline` to `settings.py`.
+```python
+ITEM_PIPELINES = {
+  'crawlab.CrawlabPipeline': 888,
+}
+```
+
+## More Examples
+
+Crawlab allows users to integrate with other web crawling frameworks quite easily.
+
+You can refer to [Examples](/docs/category/examples) for more detailed data integration examples.

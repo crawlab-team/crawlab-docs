@@ -125,11 +125,12 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Crawlab Team. Built with Docusaurus.`,
+      copyright: `Copyright © 2019-${new Date().getFullYear()} Crawlab Team. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['java'],
     },
   } satisfies Preset.ThemeConfig,
 

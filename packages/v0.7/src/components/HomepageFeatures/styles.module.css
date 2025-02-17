@@ -11,9 +11,15 @@
     transform: translateY(-5px);
 }
 
+.featureSvgWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .featureSvgContainer {
     text-align: center;
-    justify-self: center;
     margin-bottom: 1.5rem;
     height: 80px;
     width: 80px;
