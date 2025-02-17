@@ -67,7 +67,7 @@ Min ( 0 - 59 )
 
 :::warning
 *Cron Expression* in Crawlab uses the same format as the one in Linux `crontab`. That is to say, the smallest unit
-is **`minute`**. It is different from some crontab-style schedule frameworks whose smallest unit is second.
+is **minute**. It is different from some crontab-style schedule frameworks whose smallest unit is second.
 :::
 
 :::tip
