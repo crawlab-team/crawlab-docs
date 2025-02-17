@@ -1,17 +1,27 @@
 ---
+sidebar_position: 7
 title: Git
 ---
 
 # Git
 
-Crawlab allows users to configure a Git repository for version control of their spiders. This is very useful for team collaboration.
+:::info
+Git support is only available in **Crawlab Pro**.
+:::
 
-## Configure Git Repository
+You can integrate Git to Crawlab for team collaboration, version control and CI/CD. Crawlab supports both HTTPS and SSH
+for Git repositories.
 
-1. Navigate to the `Git` tab on the spider details page.
-2. Enter the URL of the Git repository, and the system will detect whether it's HTTPS or SSH.
-3. Enter the username and password for the Git repository or SSH key.
-4. Click the `Save` button.
+## Clone Git Repository
+
+1. Navigate to the `Git Repo` list page.
+2. Click the `New Git Repo` button.
+   ![Create Git Repo](/img/guides/git/create-git-repo.png)
+3. Enter the URL of the Git repository, and the system will detect whether it's HTTPS or SSH.
+4. Enter the username and password for the Git repository or SSH key.
+5. Click the `Confirm` button.
+6. The system will start cloning the Git repository.
+   ![Git Repo List](/img/guides/git/git-repo-list.png)
 
 ## Switch Branch
 
