@@ -38,5 +38,25 @@
   "sidebar.examplesSidebar.category.Examples": {
     "message": "示例",
     "description": "The label for category Examples in sidebar examplesSidebar"
+  },
+  "sidebar.docsSidebar.category.Concepts": {
+    "message": "概念",
+    "description": "The label for category Concepts in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Concepts.link.generated-index.title": {
+    "message": "概念",
+    "description": "The generated-index page title for category Concepts in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Concepts.link.generated-index.description": {
+    "message": "深入了解Crawlab的核心概念，包括任务、调度、节点、插件等。掌握这些概念，有助于您更好地使用Crawlab。",
+    "description": "The generated-index page description for category Concepts in sidebar docsSidebar"
+  },
+  "sidebar.examplesSidebar.category.Examples.link.generated-index.title": {
+    "message": "示例",
+    "description": "The generated-index page title for category Examples in sidebar examplesSidebar"
+  },
+  "sidebar.examplesSidebar.category.Examples.link.generated-index.description": {
+    "message": "示例展示了Crawlab的各种功能和用法。通过这些示例，您可以更快地了解Crawlab的功能和特性。",
+    "description": "The generated-index page description for category Examples in sidebar examplesSidebar"
   }
 }

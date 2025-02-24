@@ -311,16 +311,13 @@
     "description": "The title of the tag list page"
   },
   "homepage.hero.subtitle": {
-    "message": "分布式网络爬虫管理平台",
-    "description": "Hero section subtitle"
+    "message": "分布式网络爬虫管理平台"
   },
   "homepage.cta.quickStart": {
-    "message": "快速开始 🚀",
-    "description": "Quick start button text"
+    "message": "快速开始 🚀"
   },
   "homepage.cta.features": {
-    "message": "功能特性 ✨",
-    "description": "Features button text"
+    "message": "功能特性 ✨"
   },
   "homepage.features.distributed.title": {
     "message": "分布式架构",

@@ -93,7 +93,7 @@ code.
 4. Edit the code.
 5. Click `Save` button in the nav bar.
 
-You can refer to the [File Editor](../file-editor/index.md) section for more details about the code editor.
+You can refer to the [File Editor](../../guides/file-editor/index.md) section for more details about the code editor.
 
 ## Run Spider
 

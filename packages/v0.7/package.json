@@ -14,7 +14,6 @@
     "write-translations": "docusaurus write-translations --locale zh",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "migrate": "node scripts/migrate-from-v06.js",
     "translate": "node scripts/translate-docs.js"
   },
   "dependencies": {
