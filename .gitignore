@@ -1,4 +1,4 @@
 node_modules/
 dist/
 .idea/
-.env
+packages/v0.7/.env

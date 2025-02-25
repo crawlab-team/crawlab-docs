@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 title: Spider
 ---
 
@@ -12,26 +12,6 @@ as the basic concept [Project](../project/index.md) in Crawlab.
 :::info
 The concept *Spider* is so important in Crawlab that we strongly recommend you read through this section.
 :::
-
-## Typical Process
-
-Below is a typical process for users to play with spiders in Crawlab.
-
-```mermaid
-graph LR
-    A[Create Spider]
-    B1[Upload Code]
-    B2[Edit Code]
-    C[Run Spider]
-    D[View Logs]
-    E[View Data]
-    A --> B1
-    A --> B2
-    B1 --> C
-    B2 --> C
-    C --> D
-    D --> E
-```
 
 ## Create Spider
 
@@ -93,7 +73,7 @@ code.
 4. Edit the code.
 5. Click `Save` button in the nav bar.
 
-You can refer to the [File Editor](../../guides/file-editor/index.md) section for more details about the code editor.
+You can refer to the [File Editor](../../guides/code-editor/index.md) section for more details about the code editor.
 
 ## Run Spider
 
