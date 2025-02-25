@@ -146,7 +146,7 @@ async function main() {
   const files = fs.readdirSync(DOCS_DIR, {
     recursive: true,
     encoding: 'utf-8',
-  }).filter(file => file.endsWith('.md'));
+  }).filter(file => file.endsWith('.md') || file.endsWith('.mdx'));
 
   // Create progress bar
   const progressBar = new cliProgress.SingleBar({

@@ -1,9 +1,9 @@
 ---
 sidebar_position: 7
-title: 版本控制
+title: 版本控制 (Git)
 ---
 
-# 版本控制
+# 版本控制 (Git)
 
 :::info
 Git 版本控制仅在 **Crawlab Pro** 中可用。
@@ -46,7 +46,7 @@ Crawlab 支持基本的 Git 仓库管理。您可以在 Git 仓库中创建、�
 
 ### 编辑代码
 
-您可以在 `Files` 标签页中编辑代码。这与爬虫详情页面中的 [代码编辑器](../file-editor/index.md) 类似。
+您可以在 `Files` 标签页中编辑代码。这与爬虫详情页面中的 [代码编辑器](../code-editor/index.md) 类似。
 
 ### 提交/回滚更改
 

@@ -1,9 +1,9 @@
 ---
 sidebar_position: 7
-title: Version Control
+title: Version Control (Git)
 ---
 
-# Version Control
+# Version Control (Git)
 
 :::info
 Version control with Git integration is only available in **Crawlab Pro**.

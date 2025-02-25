@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 title: 数据集成
 ---
 
@@ -8,36 +8,36 @@ import TabItem from '@theme/TabItem';
 
 # 数据集成
 
-您可以通过 Crawlab SDK 将爬虫集成到 Crawlab 平台，从而在网页界面中可视化查看爬取结果。
+您可以使用 Crawlab SDK 集成您的爬虫。这允许您在 Crawlab 上以可视化方式查看抓取结果。
 
-Crawlab SDK 支持多种主流爬虫框架（如 Scrapy）和编程语言（包括 Python、Node.js、Go 和 Java）。
+Crawlab SDK 支持与包括 Scrapy 在内的各种网络爬虫框架以及包括 Python、Node.js、Go 和 Java 在内的编程语言的集成。
 
 :::note
-Crawlab Python SDK ([crawlab-sdk](https://pypi.org/project/crawlab-sdk)) 已预装在 Crawlab 的基础镜像中。在 Crawlab 的 Docker 环境中可直接使用。
+默认情况下，Crawlab Python SDK（[crawlab-sdk](https://pypi.org/project/crawlab-sdk/)）已预装在 Crawlab 的基础镜像中。您可以在 Crawlab 的 Docker 镜像中直接使用它。
 :::
 
-## 基础用法
+## 基本用法
 
-以下代码示例展示了如何用不同编程语言保存基础数据项。该数据项为包含键值对 `hello: crawlab` 的字典，执行后数据将存入数据库并在 Crawlab 网页界面中展示。
+以下代码片段展示了如何使用不同的编程语言保存一个基本项。该条目是一个字典，键为 `hello`，值为 `crawlab`。一旦执行代码，该条目将被保存到数据库并在 Crawlab Web 界面上显示。
 
 <Tabs defaultValue="python">
   <TabItem value="python" label="Python">
     ```python
     from crawlab import save_item
 
-    # 保存字典格式数据项
+    # 以字典形式保存项
     save_item({'hello': 'crawlab'})
     ```
   </TabItem>
   <TabItem value="node" label="Node.js">
     ```javascript
     const { saveItem } = require('@crawlab/sdk');
-    
-    // 保存对象格式数据项
+
+    // 以对象形式保存项
     saveItem({'hello': 'crawlab'})
     ```
     :::info
-    Node.js 支持需要 **Crawlab 专业版**。
+    Node.js 仅在 **Crawlab Pro** 中受支持。
     :::
   </TabItem>
   <TabItem value="go" label="Go">
@@ -47,14 +47,14 @@ Crawlab Python SDK ([crawlab-sdk](https://pypi.org/project/crawlab-sdk)) 已预�
     import "github.com/crawlab-team/crawlab-sdk-go"
 
     func main() {
-      // 保存 Map 格式数据项
+      // 以映射形式保存项
       crawlab.SaveItem(map[string]interface{}{
         "hello": "crawlab",
       })
     }
     ```
     :::info
-    Go 语言支持需要 **Crawlab 专业版**。
+    Go 仅在 **Crawlab Pro** 中受支持。
     :::
   </TabItem>
   <TabItem value="java" label="Java">
@@ -64,7 +64,7 @@ Crawlab Python SDK ([crawlab-sdk](https://pypi.org/project/crawlab-sdk)) 已预�
 
     public class Main {
       public static void main(String[] args) {
-        // 保存 HashMap 格式数据项
+        // 以 HashMap 形式保存项
         CrawlabSdk.saveItem(new HashMap<String, Object>() {{
           put("hello", "crawlab");
         }});
@@ -72,16 +72,16 @@ Crawlab Python SDK ([crawlab-sdk](https://pypi.org/project/crawlab-sdk)) 已预�
     }
     ```
     :::info
-    Java 支持需要 **Crawlab 专业版**。
+    Java 仅在 **Crawlab Pro** 中受支持。
     :::
   </TabItem>
 </Tabs>
 
-## Scrapy 集成
+## Scrapy
 
-[Scrapy](https://scrapy.org) 是 Python 生态中流行的网页爬虫框架，适合高效、可扩展的爬取任务。
+[Scrapy](https://scrapy.org) 是一种非常流行的 Python 网络爬虫框架，用于高效和可扩展的网络爬取任务。
 
-集成 Scrapy 到 Crawlab 非常简单，只需在 `settings.py` 中添加 `crawlab.CrawlabPipeline` 即可：
+将 Scrapy 集成到 Crawlab 非常简单。您只需要在 `settings.py` 中添加 `crawlab.CrawlabPipeline`。
 ```python
 ITEM_PIPELINES = {
   'crawlab.CrawlabPipeline': 888,
@@ -90,4 +90,24 @@ ITEM_PIPELINES = {
 
 ## 更多示例
 
-Crawlab 可轻松集成其他爬虫框架，更多详细示例请参考：[示例文档](/docs/category/examples)。
+Crawlab 允许用户轻松地与其他网络爬虫框架集成。
+
+您可以参考 [示例](/docs/category/examples) 获取更多详细的数据集成示例。
+
+## 数据预览
+
+Crawlab 提供了一个数据预览功能，允许用户直接在界面上检查爬取数据的增量。
+
+### 查看任务数据
+
+您可以按照以下步骤查看任务数据：
+
+1. 导航到 `任务` 详情页面
+2. 单击 `数据` 标签以查看任务数据
+
+### 查看爬虫数据
+
+您可以按照以下步骤查看爬虫数据：
+
+1. 导航到 `爬虫` 详情页面
+2. 单击 `数据` 标签以查看爬虫数据

@@ -4,7 +4,7 @@
     "description": "The label for version current"
   },
   "sidebar.docsSidebar.category.Getting Started": {
-    "message": "入门指南",
+    "message": "入门",
     "description": "The label for category Getting Started in sidebar docsSidebar"
   },
   "sidebar.docsSidebar.category.Getting Started.link.generated-index.title": {
@@ -32,7 +32,7 @@
     "description": "The label for the doc item Introduction in sidebar docsSidebar, linking to the doc introduction"
   },
   "sidebar.docsSidebar.doc.FAQ": {
-    "message": "常见问题解答",
+    "message": "常见问题",
     "description": "The label for the doc item FAQ in sidebar docsSidebar, linking to the doc faq"
   },
   "sidebar.examplesSidebar.category.Examples": {
