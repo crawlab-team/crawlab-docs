@@ -1,67 +1,109 @@
 ---
-slides:
-- title: Email
-  content: Notification preview
-  image: /assets/img/screenshots/screenshot-email-notifications.png
-- title: Mobile
-  content: Notification preview
-  image: /assets/img/screenshots/screenshot-mobile-notifications.png
+sidebar_position: 9
+title: 通知
 ---
 
 # 通知
 
 :::info
-此功能仅适用于[专业版](https://www.crawlab.cn/en/prices)。
+通知仅在 **Crawlab Pro** 中可用。
 :::
 
-Crawlab 允许用户接收电子邮件或移动通知。
+Crawlab Pro 的通知系统允许您了解重要事件和系统性能指标。本指南将解释如何配置和有效使用通知。
 
-## 电子邮件
+## 通知概念
 
-1. 导航到 `通知` 页面 <br/>![notifications-menu.png](/img/guide/notification-menu.png)
-2. 单击 `Email` 类型的通知配置
-3. 填写配置表单 <br/>![email-config.png](/img/guide/email-config.png)
-4. 单击 `保存` 按钮
+Crawlab 的通知系统围绕几个关键概念构建：
 
-SMTP 配置：
+### 通知设置
 
-- **SMTP 服务器**：SMTP 服务器地址
-- **SMTP 端口**：SMTP 服务器端口
-- **SMTP 用户**：SMTP 服务器用户名
-- **SMTP 密码**：SMTP 服务器密码
-- **发件人邮箱**：SMTP 服务器发件人邮箱
-- **发件人身份**：SMTP 服务器发件人身份
-- **收件人**：收件人邮箱
-- **抄送**：抄送邮箱
+通知设置定义了触发通知的条件以及通知消息的格式。
 
-## 移动
+#### 模板
 
-1. 导航到 `通知` 页面 <br/>![notifications-menu.png](/img/guide/notification-menu.png)
-2. 单击 `Mobile` 类型的通知配置
-3. 填写配置表单 <br/>![mobile-config.png](/img/guide/mobile-config.png)
-4. 单击 `保存` 按钮
+模板决定了通知消息的内容和格式。您可以为不同类型事件创建自定义模板，这些模板会在发送通知时填充实际数据。
 
-:::tip
-请参阅相关文档以获取 webhook 令牌的方法。
+![模板](/img/guides/notifications/templates.png)
 
-- [钉钉](https://open.dingtalk.com/document/robots/custom-robot-access)
-- [企业微信](https://developer.work.weixin.qq.com/document/path/91770)
+#### 触发器
 
-:::
+触发器定义了导致通知发送的条件。常见的触发器包括：
 
-## 触发器
+- 任务完成（成功/失败）
+- 爬虫定时任务执行
+- 节点离线/在线
+- CPU/内存/磁盘警报
 
-1. 导航到 `通知` 页面 <br/>![notifications-menu.png](/img/guide/notification-menu.png)
-2. 单击 `触发器` 标签
-3. 选择您希望触发的事件类型
+每个触发器可以与特定的模板和通道关联。
 
-## 模板
+### 通知通道
 
-1. 导航到 `通知` 页面 <br/>![notifications-menu.png](/img/guide/notification-menu.png)
-2. 单击任何类型的通知配置
-3. 单击 `模板` 标签 <br/>![template.png](/img/guide/template.png)
+通道表示用于传递通知的通信方法。Crawlab Pro 支持多种通道类型：
 
-:::tip
-要了解模板的语法和变量，请参阅
-[template-parser](https://github.com/crawlab-team/template-parser)
-:::
+#### 即时通讯（IM）
+
+- **Slack**：向 Slack 频道或直接消息发送通知
+- **Discord**：向 Discord 服务器发布通知
+- **Microsoft Teams**：与 Microsoft Teams 频道集成
+- **Telegram**：向 Telegram 群组或用户发送警报
+- **DingTalk**：通过 DingTalk 聊天机器人通知用户
+- **Lark**：向 Lark 用户发送消息
+- **企业微信**：向企业微信用户发送消息
+
+#### 电子邮件
+
+配置 SMTP 设置以向指定收件人发送电子邮件通知。
+
+### 通知警报
+
+当节点的性能阈值被超过时会触发警报。它们帮助您监控 Crawlab 基础设施的健康状况。
+
+#### 指标类型
+
+- **CPU 使用率**：当 CPU 使用率超过定义的阈值时发出警报
+- **内存使用率**：监控 Crawlab 系统的内存消耗
+- **磁盘空间**：当可用磁盘空间低于临界水平时接收警告
+
+#### 警报配置
+
+对于每个指标，您可以定义：
+
+- **指标目标**：要监控的节点或节点
+- **警报规则**：触发警报的条件
+- **持续时间**：条件必须持续多久才会触发警报
+
+### 通知请求
+
+通知请求维护所有已发送通知的历史记录，提供审计跟踪并洞察您的通知模式。
+
+#### 请求详情
+
+- **设置**：触发通知的通知设置
+- **通道**：使用的通知通道
+- **状态**：成功、失败、待处理
+- **时间戳**：通知触发的时间
+- **触发器**：导致通知的事件
+- **标题**：通知的标题
+- **内容**：通知的实际内容
+
+#### 请求管理
+
+- 查看通知历史
+- 重试失败的通知
+- 通过过去的通知进行过滤和搜索
+
+## 设置通知
+
+以下是设置和使用 Crawlab Pro 中通知系统的步骤：
+
+1. 在 `通知 → 通知通道` 中创建通知通道
+2. 在 `通知 → 通知设置` 中创建通知设置，并配置适当的触发器、模板和通道
+3. 对于性能监控，创建具有适当阈值的通知警报
+
+## 最佳实践
+
+- 从一组关键通知开始，避免警报疲劳
+- 为不同优先级使用不同的通道
+- 为每种通知类型创建特定模板以确保清晰度
+- 定期审查通知历史以识别模式并优化您的设置
+- 根据系统的基线性能设置合理的性能警报阈值

@@ -8,7 +8,7 @@ title: 权限管理
 此功能仅适用于 [Pro 版](https://www.crawlab.cn/en/prices)。
 :::
 
-[Crawlab Pro](https://www.crawlab.cn/en/prices) 支持基于 [RBAC](https://www.imperva.com/learn/data-security/role-based-access-control-rbac/) 的权限管理，这意味着您可以使用 Crawlab Pro 通过 `角色` 管理您的 [用户](../user) 的 `权限`。
+[Crawlab Pro](https://www.crawlab.cn/en/prices) 支持基于 [RBAC](https://www.imperva.com/learn/data-security/role-based-access-control-rbac/) 的权限管理，这意味着您可以使用 Crawlab Pro 通过 `角色` 管理您的用户 的 `权限`。
 
 ## 权限
 

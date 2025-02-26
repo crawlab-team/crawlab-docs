@@ -6,7 +6,7 @@ This functionality is for [Pro Edition](https://www.crawlab.cn/en/prices) only.
 
 [Crawlab Pro](https://www.crawlab.cn/en/prices) supports a [RBAC](https://www.imperva.com/learn/data-security/role-based-access-control-rbac/)
 -based permissions management, which means you can use Crawlab Pro to manage the `Permissions`
-of your [users](../user) via `Roles`.
+of your users via `Roles`.
 
 ## Permissions
 
