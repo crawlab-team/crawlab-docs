@@ -9,7 +9,11 @@ title: 数据库
 数据库支持仅在 **Crawlab Pro** 中可用。
 :::
 
-默认情况下，Crawlab 将收集的数据保存到默认数据库（MongoDB）。然而，Crawlab 的目标是成为一个多功能的网络爬虫管理平台，这意味着它可以用于管理各种用途的爬虫。因此，它被设计为灵活的，并且可以轻松集成到主流数据库中，以便您可以将抓取的数据存储到您选择的数据库中。
+默认情况下，Crawlab 将收集的数据保存到默认数据库（MongoDB）。然而，Crawlab 的目标是成为一个多功能的网络爬虫管理平台，
+这意味着它可以用于管理各种用途的爬虫。因此，它被设计为灵活的，并且可以轻松集成到主流数据库中，以便您可以将抓取的数据存储到您选择的数据库中。
+
+Crawlab 数据库模块类似于一些数据库管理工具，如
+[DBeaver](https://github.com/dbeaver/dbeaver) 或 [DataGrip](https://www.jetbrains.com/datagrip/)。
 
 ## 支持的数据库
 
@@ -42,7 +46,7 @@ Crawlab 提供了一个集中的数据库管理界面，在这里您可以管理
 
 ### 更新数据库模式
 
-您可以在 `数据库` 详细页面的 `数据库` 标签页中像添加、更新或删除表一样更改数据库模式。这类似于一些数据库管理工具，如 [DBeaver](https://dbeaver.io/) 或 [DataGrip](https://www.jetbrains.com/datagrip/)。
+您可以在 `数据库` 详细页面的 `数据库` 标签页中像添加、更新或删除表一样更改数据库模式。
 
 ![更新数据库模式](/img/guides/database/update-database-schema.png)
 

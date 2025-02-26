@@ -14,6 +14,9 @@ multipurpose web crawler management platform, which means it can be used to mana
 Therefore, it is designed to be flexible and can be easily integrated with mainstream databases, so that you can store
 your scraped data in the database of your choice.
 
+The Database module in Crawlab is similar to some database management tools like
+[DBeaver](https://github.com/dbeaver/dbeaver) or [DataGrip](https://www.jetbrains.com/datagrip/).
+
 ## Supported Databases
 
 Crawlab currently supports the following databases:
@@ -47,8 +50,7 @@ the database connection information.
 ### Update Database Schema
 
 You can alter the database schema like adding, updating or deleting tables in the `Databases` tab in the `Database`
-detail page. This is similar to some database management tools like [DBeaver](https://dbeaver.io/)
-or [DataGrip](https://www.jetbrains.com/datagrip/).
+detail page.
 
 ![Update Database Schema](/img/guides/database/update-database-schema.png)
 
@@ -64,8 +66,10 @@ to test your queries before running them in your code.
 In the [Data Integration](../data-integration/index.mdx) section, you have already learnt how to use Crawlab SDK to
 store data to Crawlab so that you can preview scraped data.
 
-The Database module is designed to be a centralized database management interface, where you can easily manage your databases
-and tables. In addition, you can select the database you would like to store your scraped data to in the `Spider` detail page.
+The Database module is designed to be a centralized database management interface, where you can easily manage your
+databases
+and tables. In addition, you can select the database you would like to store your scraped data to in the `Spider` detail
+page.
 
 Follow the steps below to connect to a database.
 
