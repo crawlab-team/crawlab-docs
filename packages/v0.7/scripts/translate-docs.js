@@ -44,6 +44,7 @@ You should also follow the translation mappings:
 - Spider: 爬虫
 - Schedule: 定时任务
 - Task: 任务
+- Crawlab Pro: Crawlab 专业版
 
 Original text:
 ${text}`,

@@ -5,18 +5,18 @@ title: 爬虫管理
 
 # 爬虫管理
 
-爬虫是Crawlab的核心执行单元。本节涵盖了管理您的网络爬虫的基本操作，包括：
+爬虫是 Crawlab 的核心执行单元。本节涵盖了管理您的网络爬虫的基本操作，包括：
 
-- **多语言支持**：使用Python、Go、Node.js或Java开发爬虫
-- **框架集成**：原生支持Scrapy、Colly、Selenium和Puppeteer
-- **版本控制**：Git集成用于协作开发和CI/CD
+- **多语言支持**：使用 Python、Go、Node.js 或 Java 开发爬虫
+- **框架集成**：原生支持 Scrapy、Colly、Selenium和 Puppeteer
+- **版本控制**：Git 集成用于协作开发和 CI/CD
 - **任务编排**：分布式调度和实时监控
 
 管理界面提供了集中控制，用于部署、执行和分析节点集群中的爬虫活动。
 
 ## 典型工作流程
 
-Crawlab通过五个关键阶段提供了一个简化的生命周期管理过程。这个集成的工作流程使团队能够高效地开发、部署和优化爬虫，同时确保数据质量和系统可靠性。该过程从初始设置到持续优化，内置反馈循环以进行迭代改进。
+Crawlab 通过五个关键阶段提供了一个简化的生命周期管理过程。这个集成的工作流程使团队能够高效地开发、部署和优化爬虫，同时确保数据质量和系统可靠性。该过程从初始设置到持续优化，内置反馈循环以进行迭代改进。
 
 ```mermaid
 graph TD
@@ -60,9 +60,9 @@ graph TD
 
 ## 设置
 
-在设置阶段，您可以通过定义爬虫的设置和执行逻辑来在Crawlab中创建爬虫。要开始此过程，请导航到`爬虫`列表页面并点击`创建爬虫`按钮。有关爬虫设置的更多详细信息，请参阅[爬虫](../../concepts/spider/index.md)。
+在设置阶段，您可以通过定义爬虫的设置和执行逻辑来在Crawlab中创建爬虫。要开始此过程，请导航到`爬虫`列表页面并点击`新建爬虫`按钮。有关爬虫设置的更多详细信息，请参阅[爬虫](../../concepts/spider/index.md)。
 
-对于Crawlab Pro用户，您可以方便地从[Git仓库](../version-control/index.md)创建爬虫，只需选择Git仓库的爬虫项目的根路径即可。
+对于**Crawlab 专业版**用户，您可以方便地从[Git仓库](../version-control/index.md)创建爬虫，只需选择Git仓库的爬虫项目的根路径即可。
 
 ## 管理
 
@@ -86,18 +86,18 @@ Crawlab通过UI和API接口提供灵活的任务执行选项。用户可以从�
 
 ### 定时任务
 
-对于重复执行，Crawlab使用cron表达式提供强大的调度功能。用户可以通过[Schedules](../../concepts/schedule/index.md)配置周期性运行，选项包括：
+对于重复执行，Crawlab 使用 cron 表达式提供强大的调度功能。用户可以通过[定时任务](../../concepts/schedule/index.md)配置周期性运行，选项包括：
 
 - 使用标准[cron语法](https://en.wikipedia.org/wiki/Cron)设置精确的执行时间
 - 每个调度继承或覆盖爬虫参数
 - 启用/禁用调度而不删除
 - 查看历史执行和下次运行时间
 
-调度系统与Crawlab的分布式架构集成，自动将调度传播到各个节点。已调度的任务保留完整的执行历史，同时防止节点特定的调度冲突。
+调度系统与 Crawlab 的分布式架构集成，自动将调度传播到各个节点。已调度的任务保留完整的执行历史，同时防止节点特定的调度冲突。
 
 ## 监控
 
-在监控阶段，您可以通过查看[任务日志](../task-logs/index.md)、[数据预览](../data-integration/index.mdx#数据预览)、[通知](../notifications/index.md)和[性能监控](../performance-monitoring/index.md)来监控爬虫的执行情况。
+在监控阶段，您可以通过查看[任务日志](../task-logs/index.md)、[数据预览](../data-integration/index.mdx#数据预览)、[消息通知](../notifications/index.md)和[性能监控](../performance-monitoring/index.md)来监控爬虫的执行情况。
 
 Crawlab通过统一的[任务界面](../../concepts/task/index.md)提供全面的实时监控。关键监控功能包括：
 
@@ -108,6 +108,6 @@ Crawlab通过统一的[任务界面](../../concepts/task/index.md)提供全面�
 
 ## 数据存储
 
-默认情况下，Crawlab将收集的数据保存到操作数据库（MongoDB）。用户可以轻松地将抓取的数据保存到配置的数据集合中，只需少量的[数据集成](../data-integration/index.mdx)。
+默认情况下，Crawlab 将收集的数据保存到操作数据库（MongoDB）。用户可以轻松地将抓取的数据保存到配置的数据集合中，只需少量的[数据集成](../data-integration/index.mdx)。
 
-对于Crawlab Pro用户，平台通过其[数据库](../database/index.md)模块提供灵活的数据存储选项。用户可以配置不同的数据存储目标（例如MongoDB、MySQL、PostgreSQL等）以满足各种数据处理需求。
+对于**Crawlab 专业版**用户，平台通过其[数据库](../database/index.md)模块提供灵活的数据存储选项。用户可以配置不同的数据存储目标（例如 MongoDB、MySQL、PostgreSQL 等）以满足各种数据处理需求。

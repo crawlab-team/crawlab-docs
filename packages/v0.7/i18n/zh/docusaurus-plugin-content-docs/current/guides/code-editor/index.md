@@ -58,12 +58,12 @@ Crawlab 允许用户在浏览器中使用轻量级在线代码编辑器编辑代
 1. 点击 `上传` 按钮
 2. 选择要上传的文件或文件夹
 
-## Git 集成
+## 版本控制
 
 :::info
-Git 集成仅在 **Crawlab Pro** 中可用。
+版本控制功能仅在 **Crawlab 专业版** 中可用。
 :::
 
 你还可以使用代码编辑器与 Git 仓库交互，以确保版本控制。Crawlab 提供了一个简单的界面来克隆、拉取、提交和推送对 Git 仓库的更改。
 
-更多信息，请参阅 [Git Integration](../version-control/index.md) 指南。
+更多信息，请参阅 [版本控制](../version-control/index.md) 指南。
