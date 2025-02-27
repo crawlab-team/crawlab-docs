@@ -58,5 +58,9 @@
   "sidebar.examplesSidebar.category.Examples.link.generated-index.description": {
     "message": "示例展示了Crawlab的各种功能和用法。通过这些示例，您可以更快地了解Crawlab的功能和特性。",
     "description": "The generated-index page description for category Examples in sidebar examplesSidebar"
+  },
+  "sidebar.docsSidebar.category.System Settings": {
+    "message": "System Settings",
+    "description": "The label for category System Settings in sidebar docsSidebar"
   }
 }
