@@ -60,7 +60,19 @@
     "description": "The generated-index page description for category Examples in sidebar examplesSidebar"
   },
   "sidebar.docsSidebar.category.System Settings": {
-    "message": "System Settings",
+    "message": "系统设置",
     "description": "The label for category System Settings in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Technical Details": {
+    "message": "技术原理",
+    "description": "The label for category Technical Details in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Technical Details.link.generated-index.title": {
+    "message": "技术原理",
+    "description": "The generated-index page title for category Technical Details in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Technical Details.link.generated-index.description": {
+    "message": "探索Crawlab的技术架构和实现细节。了解各组件如何交互以及系统内部的工作原理。",
+    "description": "The generated-index page description for category Technical Details in sidebar docsSidebar"
   }
 }
