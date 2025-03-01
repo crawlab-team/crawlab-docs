@@ -74,5 +74,9 @@
   "sidebar.docsSidebar.category.Technical Details.link.generated-index.description": {
     "message": "探索Crawlab的技术架构和实现细节。了解各组件如何交互以及系统内部的工作原理。",
     "description": "The generated-index page description for category Technical Details in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.系统设置": {
+    "message": "系统设置",
+    "description": "The label for category 系统设置 in sidebar docsSidebar"
   }
 }
