@@ -42,10 +42,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          docItemComponent: '@theme/ApiItem',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -57,7 +54,8 @@ const config: Config = {
   themeConfig: {
     docs: {
       sidebar: {
-        autoCollapseCategories: true,
+        hideable: true,
+        autoCollapseCategories: false,
       },
     },
     image: 'logo-main.svg',
@@ -79,6 +77,12 @@ const config: Config = {
           sidebarId: 'examplesSidebar',
           position: 'left',
           label: 'Examples',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'apiSidebar',
+          position: 'left',
+          label: 'API Reference',
         },
         {
           type: 'localeDropdown',
@@ -138,7 +142,27 @@ const config: Config = {
     mermaid: true,
   },
 
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: ['@docusaurus/theme-mermaid', 'docusaurus-theme-openapi-docs'],
+
+  plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'crawlab-api',
+        docsPluginId: 'docusaurus-plugin-content-docs',
+        config: {
+          crawlab: {
+            specPath: 'openapi.yaml',
+            outputDir: 'docs/api-ref',
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+              categoryLinkSource: 'tag',
+            },
+          },
+        },
+      },
+    ],
+  ],
 };
 
 export default config;

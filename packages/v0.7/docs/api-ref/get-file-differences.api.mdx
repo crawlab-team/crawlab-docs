@@ -1,0 +1,71 @@
+---
+id: get-file-differences
+title: "Get file differences"
+description: "Get differences between current file and previous versions"
+sidebar_label: "Get file differences"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVFFv00AM/isniweQ0rUaSIi8dYxNe0BMDJ6qIjmJ09xI724+p1sV5b8jJ1nbrQwJ6EvUu8/29/mzrwXBVYR0AZdWYJlAQTFnG8R6BylckpjCliUxuZyiyUjuiZzJG2ZyYkpbk0FXmMC0sb6JZkMcrXcREgjIuCYh1vwtOFwTpGALSMBq8oBSQQJMd41lKiAVbiiBmFe0RkhbkG3QiChs3apPKEKsoT8Ws8kHnJTzycWyPX3XvYLnzD97t/LnZ+ZLdku5XBWGKTBFckKFwWjQVPSABeV2jbXZlRArtdZ8DIPueeLhxlydQ5fsRI1Sell3DfH2L3QdVbhGqYx4IxX1DYZuqdli8C5S1ASns5l+noZdqBcHZkECuXdCThSLIdQ2R8VOb6MGtMeMfK9NO80+EIsdyuW+oAOUdUIrYkig9LxGGY7enqqSNcWIK/q9SpTfFOu6fddvmjynGKHTnyaTyheQwopksL+CFKYrK3Ha2qKbanfiVDVDApF48zhrDdeKxGCPBuOcSmxqMfPrKzOE9P2NlDdsZduHnxEy8bzReovl4fWNtmzoyiFoJ6oSCTB6rf+zHtSLtK70PXIU+5HxvsZMiRyRVHKlZzNiEoPO+EBuEn3Dudqsbc0aHeZ7ykyuOGKDxdo6E2oUtQYSGNcRUpidvD+ZqQ3BR1ljPwDj9OqWl8fT84RSux+m/3sVxkYJPcg01Gidcur9akeHF6AOQwJp/1b0JisdtXmZQOWjKKhtM4z0neuu0+Nh7dS9wkbMal28EutIfxDy+uu4o2/M0dK9wPQnbff7vsG6UUg/QRtkq3X/ncP+aXmh+HiIbntY/JGULaBbdglUhAVxT2O4mOc5BTkIOXoMlP9u2y4/fYOu+wUnZRO7
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get file differences"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}/files/diff"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get differences between current file and previous versions
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"},{"name":"path","in":"query","required":true,"schema":{"type":"string"},"description":"Path to the file"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File differences","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

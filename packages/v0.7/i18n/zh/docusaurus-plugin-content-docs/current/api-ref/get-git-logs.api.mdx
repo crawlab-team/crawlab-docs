@@ -1,0 +1,71 @@
+---
+id: get-git-logs
+title: "Get Git logs"
+description: "Get commit history logs from the Git repository"
+sidebar_label: "Get Git logs"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMFu00AQ/ZXViANIThMVJIRvKYWoEghE4RQZabI7trfYu9vdcdvI8r+jsd02bYADvsTeeTPz5r2d9MBYJci3sLEMRQaGko42sPUOctgQK+3b1rKqbWIf96rxVVJl9K3imtTGsooUfLIShAwCRmyJKUrRHhy2BDlYAxlYqRiQa8gg0nVnIxnIOXaUQdI1tQh5D7wPkpE4WleNBZkpSurP7WrxDhflevGx6E/fDC/gOd3P3lX+/Ex92V2R5gsj1CIlckxGYVKoarpDQ9q22KiHFmy5kZ73aTA8LzxF1MU5DIWQT8G7REn4nq5W8vMU/8kmVr4cxYIMtHdMjgWHITRWo+CWV0nA/fHwfmwnw0cfKLKdWmlv6ABlHVNFETIofWyRp6PXp0K/pZSwomNBZTTkPzQbhkchLjutKSUY5JFiXHsDOVTEkyM15LCsLKdlb82wnMdMFG/uje9iIxgM9silcyqxa1itv16oKWVUNZHuouX9mH5GGCmuO+m0LQ7DlyLWpMch6GGcmjnAfKHkezeCxvGsK/2InMd8H/G2wZ0QOSIp5Eof1YzJFDrlA7lF8l3UpIwVQXed3Kxb2iktOIoKTWudCg2ymAIZiCJTydXJ25OVGBB84hZH6+f9kD2TVZqFfEKlf7w+/7GPsypMd7wMDVonBEZz+tnILYiRkEE+bulIocig9okl2Pc7TPQjNsMgx9cdRbGoyOAGo8WdKLntwdgk7wbyEptE/5jh5bd591+px7X6C9H5EJ2McoNNJ1+QwS/aT/8qQzFkUBMaiiONKbDWmgIfpBxtndyoh2u9+fAdhuE3uP+2Gw==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Git logs"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}/logs"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get commit history logs from the Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of logs","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

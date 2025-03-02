@@ -1,0 +1,71 @@
+---
+id: download-export
+title: "Download export"
+description: "Download an exported database file"
+sidebar_label: "Download export"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE2L2zAQ/Sti6KEFZx2WQqlv2Wa35FBa+nEKKYytSazWlrTSuLvB+L+XsR1vuiGlpL7YsubjzXsz0wLjLkK2hiUy5hgJNgloikUwno2zkMHSPdjKoVZoFT16F5i00qO52pqKIAGPAWtiChKsBYs1QQZGQwJGgnjkEhIIdN+YQBoyDg0lEIuSaoSsBd578YgcjN31AZkpiOv39Xz2Fmfbxexu016/7l7Ac4QfnN255Y36mP+ggldaBfKBIllBilGhKukRNRWmxkpNKdhwJTkPbtA9DzzcqNUSumQqqkd6WVknCW57PnsSVW96lGfgenUphedySTEbCRO9s5GieF7P5/L60/5OQOlRfEigcJbJshii95UpUAxTVzDxLHIgrOXuvKRbF2pkyCA3FsMeOnkSqIlLpyGDHfEgfAkZpIcOi2lrdJcObKStBO3S9kBOlx4hjBR+HTqwCZVEQW9O2mVJW2wqVotPKzW49IxEKppgeN+73xAGCotGsKw3x9dfpL6BtmOjqdyS2cMoi5zz3gikUmO3rrccG+9dwIcKcwFyAlLAbV1Qo00i0+c82Vl0TShIaSO85o20+APlqhA7Cgp1bazyFbLQDQkII0PI+dWbq7n0hXeRa7QCZey1acYHXp+jaZ/E/7d1MHLB9Mipr9BYSdtL0o4Cr2ESGBLI+k0xJc/GGcuOZmDSeZNA6SJLiLaVAN9C1XXy+76hIPJtEviFwWAuLK9b0CbKt4Zsi1WkvxT38vM4Xa/U0+yfKWf8iXYvLGPVyAkS+En7YfXJLF+U+mQrXIRg2if/g+HS8ifhuk2XQEmoKfRaDNeLoiDPR45nN4qM3rQh3t9+ha77DfOMSR4=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download export"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/{id}/export/{type}/{exportId}/download"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Download an exported database file
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"},{"name":"type","in":"path","required":true,"schema":{"type":"string"},"description":"Export file type"},{"name":"exportId","in":"path","required":true,"schema":{"type":"string"},"description":"Export ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File download","content":{"application/octet-stream":{"schema":{"type":"string","format":"binary"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

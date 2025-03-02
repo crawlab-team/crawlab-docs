@@ -1,0 +1,71 @@
+---
+id: get-database-list
+title: "Get database list"
+description: "Get list of configured databases"
+sidebar_label: "Get database list"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMFu1DAQ/RVrzqFdCgIpt0JRhYRQRUEcVnuYJJPExbGNPWlZovw7Giftpl26rXpabfxm3vi98RuAsYmQr+EMGQuMBJsMKopl0J61s5DDObEyOrJytSqdrXXTB6pUNRdEyMBjwI6YgrQawGJHkIPHhiADLU1+9xS2kEEsW+oQ8gF46wWkLVNDAYS1xt4w5K/HhyNcYEPK9l1BQdUuKI+NtpgOx+yOL+q/L+Nb7RF+nbhcrTRTF5WnREpLOjTmSbbCOUNol2w1mkh7hN+I+2AVGjMz3mhuXc/3rrrJIFD0zorq+QAnq5X83O/0ZbZq6U/pLJNlAaP3Rpep4fFVlIphf2xXXFHJYmxwngLria90Ff1XytqFDnn69OYExgw6ilH02qEjB20bOZPJniaTlVugMAQUiZM6+9XjmAE7RvPkfO/ewjgmuGYjsMu+LCnGn5pb0S6dphtw6yrIoaE0HHILORwvZY0Urm93vg9GjtFreOjt2WS9Or34rKaSZGWksg+at6n8A2GgcNoLyXqzPL4UcyZJlqC7W7bM/nb10solUBJE29ol5HzTjwFvDBYyyN6QMpw8rRmTKbTKebKvoutDSarSYmDRM1XqhgpVCo6CwqrTVnmDLCJDBqLI1HJ19P5oJYZ7F7nDtGrz25FMuVUyhcvDeYbdzj4ngGYtmP7wsTeoJRcmS4bZuTXs8JsMWifbtYZhkE8/ghlH+Tw9ZDGk0hELQ9X8YA+MdyCcHhnsF2138XiNphdIipbnsz6aUAc554h8IedzQuog/RSZO/aN/Ala6NPaZ9ASVhSSA1PJaVmS50XVXoBJl7vHev7pO4zjP8y5VxA=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get database list"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get list of configured databases
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"query","schema":{"type":"integer","default":1},"description":"Page number for pagination"},{"name":"size","in":"query","schema":{"type":"integer","default":10},"description":"Number of items per page"},{"name":"all","in":"query","schema":{"type":"boolean","default":false},"description":"Return all items without pagination"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of databases","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object","properties":{"list":{"type":"array","items":{"type":"object"}},"total":{"type":"integer","format":"int64"}}}},"title":"SuccessWithList"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

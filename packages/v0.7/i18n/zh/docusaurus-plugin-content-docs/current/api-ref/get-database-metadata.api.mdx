@@ -1,0 +1,71 @@
+---
+id: get-database-metadata
+title: "Get database metadata"
+description: "Get metadata for a database"
+sidebar_label: "Get database metadata"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFVE1v2zAM/SsCscMGKE3QDRjmW7psRQ/DhnU7BS5AW0yszpZUiW4bGP7vA20nTZt95OJYeiQf3yPdAeM2QbaGFTIWmAhyDYZSGW1g6x1kcEmsGmI0yKg2PipUZg/WEDBiQ0xRsnTgsCHIwBrQYCU6IFegIdJdayMZyDi2pCGVFTUIWQe8CxKROFq3HRIyU5TQm/Vi9gFnm+Xsc96dv+tfwUtqX7zb+tWF+lrcUslXRkUKkRI5JqMwKVQVPaKh0jZYq0MJtlxLzX0Y9C8TjzfqagV9LuRT8C5REr7ni4U8nuP36h2EAg2ld0yOBYwh1LZEAc9vk0R0pwr4oaYoEH2gyHasV3pDRyjrmLYUQcPGxwZ5PHp7Lj00lBJu6VRV6U9InRTr+yc1rtuypJSgl58k48obyGBLPNpSQQbzvfVp3lnTz4/6TRTv92PQxlrAGOyJZyvaYFuzWn67UmPIoHGiso2Wd0P4BWGkuGyl5Do/vr4W1UZhjkGHvirmANN4yXsxgIY+rdv4ATn1+zHiQ42FEDkhKeRk1CeMVuiUD+RmybexJGWsKFu0MmcPVKhScBQVmsY6FWpkcQc0iCJjysXZ+7OFOBF84gaHGZi2RTbM/GGCnnHqngbqPys5ScH0yPNQo3VSdXCkm2xcw8FG0JAN23qom2uofGJBdZ1gfsa67+X4rqUoBuUa7jFaLETHdQfGJvlvINtgnegfxF9/n74Db9TTiv2F8XSIbic6Yt3KG2j4RbvxC9PnvYaK0FAcaIwXy7KkwEchJ8sn83SY7stPP6DvfwPrm7Sd
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get database metadata"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/{id}/metadata"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get metadata for a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Database metadata","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: delete-git-repository-by-id
+title: "Delete Git repository by ID"
+description: "Delete a Git repository by its ID"
+sidebar_label: "Delete Git repository by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVNtu2zAM/RWB2MMGKE3QDRjmt3TpigIbNuzyFGQAbTGxOllSJbptYPjfB9pumzbbML/Ypng5PIdUB4y7DMUaLizDRoOhXCUb2QYPBazIEZNCdWFZJYohWw5pr8q9spzV5Qo0REzYEFOSNB14bAgKsAY0WMkRkWvQkOi6tYkMFJxa0pCrmhqEogPeR4nInKzfDQmZKUnoz/Vi9g5n2+Xsw6Y7fdO/gOcAPwW/C6sz9bm8ooovjYBMlMkzGYVZoarpDg1VtkGnHkqwZSc178Ogf554PJEO+42AzzH4TFnwni4W8nrq/4wgMxBnVG6rinLets7tQUMVPJNnCccYna1QwudXWXJ0x5yEAYVwkkKkxHZEUAVDB17WM+0ogYZtSA3yaHp9Kl01lDPu6Jhn6Rj5D8X6/pGfbyN86OWRZFwHAwWM7Y1a1VDAfGc5zztretCQKd3cT0ObnBxjtEfSrWiLrWO1/HKpxpCB6kxVmyzvh/AzwkRp2UqR9ebw+JtQNbJx6PTQTM0cYZoy+S8Hp6E567dh8JyafJ/w1mEpQI5ACrhtSGry0Qq9CpH8LIc2VaSMFTrLVrS+pVJV4kdJoWmsV9EhiySgQRgZUy5O3p4shP4YMjc4CD8tzbRux8s2LNoTZN3jLP3Xlk60MN3xPDq0XhAM6nSTiGsQEUFDYY3cBHXILNauKzHTj+T6XszXLSURZ6PhBpPFUjhcd2Bslm8DxRZdpn/Affl1ugpeqcct+wvCyYhetucGXSt/oOEX7cdLpt/0GmpCQ2mAMR4sq4oiH4QcbZvM0sM4r84/nn8/h77/DVWttuY=
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Git repository by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/gits/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a Git repository by its ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Git repository deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

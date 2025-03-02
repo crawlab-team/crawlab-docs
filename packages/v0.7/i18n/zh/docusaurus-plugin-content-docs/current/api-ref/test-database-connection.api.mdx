@@ -1,0 +1,71 @@
+---
+id: test-database-connection
+title: "Test database connection"
+description: "Test connection to a configured database"
+sidebar_label: "Test database connection"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1v2zAM/SsCscMGqE3QDRjmW9pgQA9Di7U7BRnASEyszpZUiW4bGP7vA23no802YLk4kvnIx/dIt8C4yVAsYI6MK8wESw2WskkusgseCrinzMoE78nIjeKgUM5rt2kSWWV3SA0RE9bElCRlCx5rggKcBQ1OUkXkEjQkemxcIgsFp4Y0ZFNSjVC0wNsoiMzJ+U2fkJmSQH8upmdf8Gw9O/u6bC8+de/gLc9vwW/C/FLdrB7I8LVViWKiTJ7JKswKVUkvaMm4Giu1L8GOK6m5g0H3NvHwRl3PoVsK+RyDz5SF78V0Ko/X8VdHWol2iXJTMWgwwTN5FgTGWDmDEjR5yAJrT2UIfWGRIYVIid1Q1ARLR1HOM20ogYZ1SDXycPXxQhqpKWfc0Km00iTyH4p13UGSu8YYyhk6+UkyLoMVG0PmwZwSCpjsBiBPWme7yWFUJtI+aMiUnnYz0aRKMBjdiYFzWmNTsZrdXqsB0gueyTTJ8baHXxImSrNGKi+Wx6/vRL1BoOOgfX8lc4Rx1uS86oP6fp1fhz5y7Psq4XOFKyFyQlLIrUNSY4xW6FWI5M9yaJIhZZ0ovGpk6J5ppYzEUVJoa+dVrJDFJdAgigwpp+efz6fiiOhaYz8L4+r0u7fT92gJ39JqD7P1P/s6SsP0wpNYofPConeoHd1dwN5d0FD0q/yKRm/xUkMpM1EsoG0l+Eequk6uHxtK4txSwxMmhysReNGCdVn+WyjWWGX6Rzvvv49fiw/qsIh/oT5eot+KwFg1cgINv2g7fIe6ZaehJLSUehrDi5kxFPkIcrKdMmj78b+9ubuHrvsNJKLJ0A==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Test database connection"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases/{id}/connection/test"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Test connection to a configured database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Connection test result","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

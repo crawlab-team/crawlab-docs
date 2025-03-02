@@ -1,0 +1,71 @@
+---
+id: add-a-new-dependency-repository
+title: "Add a new dependency repository"
+description: "Add a new dependency repository"
+sidebar_label: "Add a new dependency repository"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVttu2zgQ/RVisI9y7LgtstWb0+wCBbqbIBcUqOENaHFssZVIlhzVEQT9ezGUbcmxt+kC+1C/2KbmeubMoRoguQ6QzuEKHRqFJtMYYJGAwpB57UhbAynMlBJSGNwItbOrhUdngybra0jA49cKA11aVUPaxL/ao4KUfIUJZNYQGuJH0rlCZ5Ijjz8HDt9AyHIsJf+i2iGkYJefMSNIwHnr0BNXlTbwqNXAKJDXZs1Gkgg9F/rPfDJ6K0er2ejPRTN93f4Gz1v5y5q1vboU1zHDe8VteAxoCJWQQUiR45NUmOlSFmKfgjQVnHPnBm0CRpZ4qpzDhH/LEoVdCcrxX9BrE6h88XKkh9sPLwbqIhxHQlOVPGdXU24NJGCswuNB39cuFnsYVFaUP/Yj3UdfWlugNEeFfsyRcvSC/dDQdtpCB7EPwj0H9D8H4cPWUqysH5T2LD7HdDKEjfUnWbLxmvDaFPWOlIdJbrauwnpB9gual7NlHiWhepR0Kt/K+pKfgJKEI9Ilxq6d+s8+uzzL+hdi/66RX6iotj/c61l9i85C2/JDj8FZEzotmU4m/HVYytWpvRJSKVQiVFmGIayqomDF+58kLeM97K20IVyjH1JBG3o1ZcRLDEGuT+xLmzBfTiQbInLXlR+hiMEotwpScDZQN7AcUhirwUUwjhhAAgH9N/R8UTSdVMFYOn00yCtcyaogMbt5LzoXaBfsnVVeUx3dL1F69LOKs80Xw8d3jFgHytBo31NO5LiWaMbqE41ijwz6bX8D/fEkS1fg/sboadnpTf+/a6anVJdpL5LPhK+TjV63hnTf6U5/NlQHmE6mr0eTi9H07f35m/TNeTr9/Wxycf4JDhXhR3ZDFRh0MFjDAR+0WdmI3Xb677zcFHLJozkaG4+LtW5rkwhphHVoRsFWPkOhNMddVryOG1yKjO1Y3lWpjXCFJOYqJMAc6UJOzi7OJlGQbaBSxo3YYvbyu8RBdU2/aD/huh0g4RONXSG1GVyuHcPnMGR4fHNhji8SyHkR0jk0zVIGfPBF2/Lx1wo9U3eRwDfptVwynvNFm0COUqGPrP6CDP+7rtIR36IMhywqruZIHtpk5zHLMnT0Q9vFYFdvru/uIYHl9i2rjNoBXm64D7mBFCABG5GLexTPGiikWVdROaCLyZ/vZNZv0w==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add a new dependency repository"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/dependencies/repos"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Add a new dependency repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"name":{"type":"string","description":"Name of the dependency repository"},"url":{"type":"string","description":"URL of the dependency repository"},"type":{"type":"string","enum":["python","node"],"description":"Type of repository"},"auth_required":{"type":"boolean","description":"Whether authentication is required"},"username":{"type":"string","description":"Username for repository authentication"},"password":{"type":"string","writeOnly":true,"description":"Password or token for repository authentication"},"created_at":{"type":"string","format":"date-time"},"updated_at":{"type":"string","format":"date-time"},"created_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"updated_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"}},"title":"DependencyRepo"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Dependency repository added successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

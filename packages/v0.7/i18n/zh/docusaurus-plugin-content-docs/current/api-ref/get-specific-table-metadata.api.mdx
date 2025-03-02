@@ -1,0 +1,71 @@
+---
+id: get-specific-table-metadata
+title: "Get specific table metadata"
+description: "Get metadata for specific tables in a database"
+sidebar_label: "Get specific table metadata"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVVFr2zAQ/ivi2MMGThO6wZjf0mYbhY2WtnsKHpytS6LOtlTp3DQY//dxst2kzVYYzC+JpftO9919+twC4zpAuoQFMuYYCLIENIXCG8fG1pDCV2JVEaNGRrWyXgVHhVmZQjHmJQVlaoVKj/gEHHqsiMlL4hZqrAhSMBoSMJLQIW8gAU/3jfGkIWXfUAKh2FCFkLbAOyeIwN7U65iQmbxAfy5nk084Wc0nX7L29EP3Bl5W+93Wa7s4U5f5HRV8oZUn5ylQzaQVBoVqQ4+oqTAVlurpCDZcypkjDLqXifsddbGALuuLp8BnVu+k4pdcClsz1Sxb6FxpCpQs07sgqdpjqjYmF6reOvJsKMTd2OCDOPQed9JHpioct+qo6G8msLKrflJKJhGgi49QCM7Woc9/OpvJz3P0bUSNs4f/Rquwmg6iTM20Jg8JrKyvkPul96dCp6IQcE1/pipFHR0m1MZp3jRFQWGgLMl4Y7Uo0AbudbWBFKajdsO0Nbqb9l2fjryna5LgQP5hlHTjS8GhM0f6W9AKm5LV/OpC9ZCol0BF4w3vIvyM0JOfN3L6MjvcvpEO9k06DHriuGF2MFwVec9jUOQsQ7jeq/LzI1aupEMVLcfeZZ3cxJWNm0Orzj1uS8yl7iNOwkUu/hCTKKyVdVRPgm18QUobSZw3csW2lKtC4sgr1JWplSuRZbCQgDSwTzk7+XgykyHKKCqM8hmMQvzmucUcSvBZZe1ekf9uU0NLmR556ko0tZQTJ9sOyljCkzIggTQ62NDMKKaxJhFIlsBGVJUuoW0F8sOXXSfL9w15mXuWwAN6I/ioAm2C/NeQrrAM9Aq1t9eDvbxTexf6C4HRKGqxiQcsG3mDBH7RrjfhTqa/IdTkYxn9xnl/2ORW4Hvg0S3vkhExLwpy/GpsdnDlri5vbiGBfDDMKloAeNzKlwC3fZE2ko/yj2stlFivm2gA0OeU5zeyC0tm
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get specific table metadata"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases/{id}/tables/metadata/get"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get metadata for specific tables in a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"tables":{"type":"array","items":{"type":"string"},"description":"List of table names"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Table metadata","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

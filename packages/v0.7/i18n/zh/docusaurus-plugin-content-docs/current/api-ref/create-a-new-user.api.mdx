@@ -1,0 +1,71 @@
+---
+id: create-a-new-user
+title: "Create a new user"
+description: "Create a new user"
+sidebar_label: "Create a new user"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVU1v2kAQ/SurUY8mQWmkqj4VklTKoUrUpCdEq7E9wKb27mZ2HYIs//dq1gaMsHrppb5gdr7fm7duIODaQ7qAH57YwzIBpteafJjbYgdpE/9qpgLSwDUlkFsTyAQxoXOlzjFoay5fvDVy5vMNVShvYecIUrDZC+UBkkGiBdSe2GBFkIBD77eWCynt2DrioMlLgoPTMZkPrM0a2kHYmJEq1OW5JYGV5QoDpL1HmwDbcryAGH7pkfxSOwRiAyn8XEwnn3Gymk2+Lpur6/YDJFCQz1k7QQVS+GbN2t7O1UOE4b5QTI7JkwlUKPQK1YbesaBcV1iqQ4mgg/QF+zBo4yMoemeN7xC6mk7l57SiEKlyJpQKvs5z8n5Vl+UO/oG8U2ZyWwxB0ybQmniIrzbh45XAWJH3uB6HuMAwUkym3I//1LUP3ezXY+POUTCNK/vfDUjMlkcsgwnvoktP7ulkN5FDhcrQVokYQKqFjS0gBWfjvA7DBlK4rKN6E/DEb/KWLhqouRQTOn22lbe0wroMavZ4r7oQaJcSndeswy6GzwmZeFZLgcVyaH4SFDughk6HMTchOOklukEKWXSKYwsR348XzN07Vq4T4FHtQ6HtRX4867Ud/b9QF3+R2wr2Wj66HiQ8oESblY2t9vjfMG5LzASJM5QEnZVl1fskCo2yjszE25pzUoWWvFktQttSpnLxI1ZYVNooV2KQdYEEhJIu5fTi08U03l/WhwrjUvZTj9F90s8B30Dv4dKVqI1kijQ3/SZ0V2u8xzeyIekCmiZDTz+4bFs5fq2JheBlAm/IGjOBYbFsE9gQFsSR+9+0k446MU2epay4l7WUPxNWm+wjZnlOLvzVdzlY4seHp2dIIOs/NVVUHTBuhTzcQgqQgI3jx22LZw2UaNZ11Bx0OeX5A6KJVAA=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a new user"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/users"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new user
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["username","password"],"properties":{"username":{"type":"string"},"password":{"type":"string"},"email":{"type":"string","format":"email"},"role":{"type":"string"},"role_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"User created successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

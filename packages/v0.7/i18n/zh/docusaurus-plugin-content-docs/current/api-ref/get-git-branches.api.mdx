@@ -1,0 +1,71 @@
+---
+id: get-git-branches
+title: "Get Git branches"
+description: "Get all branches in a Git repository"
+sidebar_label: "Get Git branches"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVFFv00AM/isniweQsrUaSIi8dQyqSSAQg6eqSM7FbW4kdzefs62K8t+Rk6zrVkD0Jc3dZ/vz99npQHCbIF/B0gmsMygpWXZRXPCQw5LEYF2bgtHbipJx3qBZOjFMMSQngXeQQUTGhoRYM3XgsSHIwZWQgdM0EaWCDJhuWsdUQi7cUgbJVtQg5B3ILmpEEnZ+OyQUIdbQn6v5yTs82SxOPq67szf9C3jO8XPw23Bxbr4U12TlslRqTIm8UGkwGTQV3WNJ1jVYm30JcVJrzYcw6J8nHm/M5QX0ayWfYvCJkvI9m8/18RT/ySUxYbMXCzKwwQt5USzGWDuLip1dJw3ojgUIQ0kVgEMkFjeWs6GkA5TzQltiyGATuEEZj16faQsNpYRbOhZV20P5Q7G+fxTjqrWWUoJef5pMqlBCDluS0ZUKcphtnaRZ58p+dtBqIr59GICWa8VhdEduXdAG21rM4uulGUMGdRPZlp3shvBzQiZetFpttT68vlLBRk0OQfuWKpEI02DpezGAhhad34QBObX6nvGuxkKJHJFUcpvAZsJkBr0JkfxJCi1bMqVTUYtWJ+yOCmMVR2ywbJw3sUZRYyADVWRMOT99ezpXE2JI0uBg/7QnumS6UgdiPqHTPY7R/y7kJIfQvcxijc5r5cGVbnJxBeoiZJAPa7qvvc6gCkkU0HUFJvrBdd/r8U1LrP6sM7hFdliojKsOSpf0fwn5ButE/yD/8tv0AXhlHnfrL2SnQ/Tazi3Wrb5BBr9oN35a+nWfQUVYEg80xouFtRTlIORo7XSc9nO9/PAd+v43eSazAw==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Git branches"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}/branches"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get all branches in a Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of branches","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

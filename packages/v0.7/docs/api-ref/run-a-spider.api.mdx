@@ -1,0 +1,71 @@
+---
+id: run-a-spider
+title: "Run a spider"
+description: "Run a spider"
+sidebar_label: "Run a spider"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SsCscMGKE3QDRjmW9puQA9Di2Y7BR7AWEyizpZUSW4aGP7vAyXnqymGHeaLbYlfj++RHURcBSjmMHNakQ9QSnDosaHIf8W8A4MNQQFagQRtoACHcQ0SPD212pOCIvqWJIRqTQ1C0UHcOvYI0WuzAg4YI3l2/TWfjL7gaDkdfSu7y0/9O5CgKFReu6gtW3y3ZmVvrsTd4pGqeKuEJ+cpkImkBAaBYk0vqKjSDdZinyLqWHPOnRv0rwPnG3F7A32Zi6cQr6zacsWVNZFM5E90rtYVstf4MbBrdw7NpmAMzVtHPmoKfOu8tl7H7ZGlNpFW5EHC0voGYz76eMkFpka/FRWV0lwA1vdH8bnNfXq4/uCsCTnt5WTCr1O8mVARInpuXWirikJYtnW9Bfm/AFdW0T+CbSgEXNG5PpgpjG8kY5w7Xme5fBjgn0J9aI1AERJg4ExxbRUL1YaY5beGAsbZIIw7rfqxbw1ICOSfdzpvfc1W6PSZKG9oiW0dxfT+VmSXJKJAVZvpnndwRejJT1vONS+Pr2fczNyvY6M93HWMDob54f9FMkrwmY+Hg1S/vmDjajqV2uQgJHbRZmlT8KFz1x43NS649jNcjGdpvRhspEAjrCMzCrb1FQmlmaNFywLa0EJUbEdeoGq0Ea7GyDyDBG5iDjm5+HwxSeK2ITaY1DRskFc0nZSyb0aklzh2NWrDQRIn3cDgHAYGQUKR1hGTWEpYM8/FHLpugYF++rrv+fipJc/clBKe0WtccD/mHSgd+FtBscQ60Fkl+9mA9w/DjvsgDutDvl3qcIiGx+sZ65b/QMJv2ubt2Ze9hDUho+cy8sV1Tjb6we4Hx7Oh7OXOY1pV5OJfbcujIbi/m/0ACYth0zVpYsHjhvuHm1ykTeCTRNNZBzWaVZvmFXJMfv4AIBMcnA==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Run a spider"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spiders/{id}/run"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Run a spider
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"priority":{"type":"integer","format":"int32"},"param":{"type":"object","additionalProperties":true}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Spider started successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

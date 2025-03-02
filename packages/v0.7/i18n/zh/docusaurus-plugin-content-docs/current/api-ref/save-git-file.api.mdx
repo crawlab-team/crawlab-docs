@@ -1,0 +1,71 @@
+---
+id: save-git-file
+title: "Save Git file"
+description: "Save content to a file in the Git repository"
+sidebar_label: "Save Git file"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE2P0zAQ/SvWiANILq0WJERuuyygPSAQC6cqSNN42hgS29iT7lZR/jsaJ912W0BC5JLEnq/35s30wLhJUCzhvWUoNRhKVbSBrXdQwC1uSVXeMTlW7BWqtW1IWae4JvXesooUfLLs4w40BIzYElOUiD04bAkKsAY0WAkXkGvQEOlnZyMZKDh2pCFVNbUIRQ+8C+KROFq3yQGZKYrrt+Vi9hpn68vZu7K/eDk8gdNaP3i38ddX6uPqO1V8Y6S0SIkck1GYFKqa7tFQZVts1EMKttxIzr0bDKeBxxt1cw1DORZPia+82UnFp1gmsuQKQ2hshRJl/j1JqP4cqs/BH5Gy3PO0j1VqCNEHimwpiW++P6NreJT95C4/kiUF79IY5mKxkNdjtO+kwQm3ZFTqqopSWndNs4P/gPa4+MobOrKyjmlDETSsfWyRx6MXFwKnpZRwQ7+FapB/k0ww7jt6O5YPE/SWuPZGVOgTj9qqoYD5xnKa99YMc9F2mgt20JAobvdC7mIjlhjsmequaY1dw+ry040aXbJKElVdtLzL7leEkeJlJ/mW5fH1rXA20nJs9ICqZg4wDYj8r7JRRim0fz5o8e09tqGhgzoOQ/TQtyP2rFv7nGfi6k3EuwZXAuMMokBb+6gmG63QKR/IzZLvYkXKWIm76mTO7milKrGjqNC01qnQIEtnQYPwOYZcPH/1fCF1SC9azPqZtkVeObJZpBuntfRHYP5xN02MMt3zPDRonaTPjd0ztgSRAmgo8sbKahDyRQ+lhlpkUyyh71eY6GtshkGOf3YUpc2lhi1Giyvhc9mDsUm+DRRrbBL9BcjTz9PoP1OHVfOHgqdDdAJpi00nf6DhB+3GTTuUg4aa0FDMZYwXb8Zksy/ifnA8G+NB7z0uq4oC/9W2PJqpTx9vv4CG1bQV2zzjEPFONhvejUX6DD6rPZ/10KDbdHnCYYwpzy+SQT54
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save Git file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/files/save"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Save content to a file in the Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["path","content"],"properties":{"path":{"type":"string"},"content":{"type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File saved successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

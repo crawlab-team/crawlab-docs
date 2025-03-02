@@ -1,0 +1,71 @@
+---
+id: get-notification-alert-by-id
+title: "Get notification alert by ID"
+description: "Get a specific notification alert by ID"
+sidebar_label: "Get notification alert by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVFFv1DAM/iuRxQNIud1pICH6dmMw7YGBGDydDslNfNeMNskSd9up6n9HbrvttoNJ9CVN8tn+/NlOB4zbDMUKLgK7jTPILvgMaw2Wskkuyh4KOCNWqHIkIyjl99AKa0qsyp06PwUNERM2xJTEbQceG4ICnAUNTjxF5Ao0JLpuXSILBaeWNGRTUYNQdMC7KBaZk/PbwSEzJTH9tVrMPuBss5x9XnfH7/pX8Jzml+C34fREfS2vyPC5VYliokyeySrMClVFd2jJuAZr9RCCHdcS894M+ueOxxvJsF8L+RyDz5SF7/FiIctT/MWhQJYYXZ1BgwmeybNYYYz1BJtfZTHtDqUIQ3CRIoVIid0Y2ARLeyjnmbaUQMMmpAZ5PHp7LMk0lDNu6VBeSRT5L8H6/lGWy9YYyhl6+cQZV8FCAVvisT4VFDDf74k8H3LO887ZHjRkSjf3HdGmWuAY3UH5TmmDbc1q+e1cjSaD3JlMmxzvBvMTwkRp2UrQ1Xr/+lJ0G6XZBz1kVjFHmDpN9uUAGjJ1fhMG5JTxx4S3NZZC5ICkkNuEpCaMVuhViORnObTJkLJOtC1bablbKpURHCWFtnFexRpZ6gMaRJHR5eLo/dFCahFD5gaHLpgGRwbvhWl7Qq177Kz/GNhJHaY7nscanRciQ5G6qbYreFJb0DBWFzQUzspjUYXMguu6EjP9THXfy/F1S0mqttZwg8lhKeKuOrAuy7+FYoN1phfSeP19eifeqMcR/Afn6RD9TsTFupUdaPhNu/EF6te9horQUhpojBdLYyjynsnBTEqTPTT92acf0Pd/AOLgx7o=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get notification alert by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/notifications/alerts/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a specific notification alert by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Notification alert details","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

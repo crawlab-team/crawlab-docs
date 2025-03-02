@@ -1,0 +1,71 @@
+---
+id: checkout-a-branch
+title: "Checkout a branch"
+description: "Checkout an existing branch in the Git repository"
+sidebar_label: "Checkout a branch"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE2P2zgM/SsC0UMLKE0wW6Cob/PRFnNYtOh0T4EXYCQmVmtLqkTPTGD4vy9oOU0m0+2hvtiWROq9x0cOwLjLUK3ho2OoNVjKJrnILnio4Loh8z30rNArenSZnd+pTUJvGuW84obUR8cqUQzZcUh70BAxYUdMSdIO4LEjqMBZ0OAkZ0RuQEOiH71LZKHi1JOGbBrqEKoBeB8lInNyfjclZKYkof+uV4t3uNheLj7Uw8Wb8QWcA/47+F24uVKfNt/I8K0VaIkyeSarMCtUDT2iJeM6bNXPK9hxK3cewmA8T1x21O0NjHUBT5mvgt0L4nMuJngmz7KFMbbOoGRZfsuSanhONUzJn4iyLsLVGmIKkRI7yhJR5DwXaZweic8x+FyOXqxW8nrK46oUz0hhySqpbe6NoZy3fdtK/f4Y/FOgJthToM4z7SiBhm1IHXJZ+utClO4oZ9z9ipYGi/yLy4TroWZ3BT7MEnTETbDis5C5uKeBCpY7x3k5ODsui38pL83sbtCQKd0fHNunVgIwumf2uqEt9i2ry8+3qoRMdshk+uR4P4VfESZKl71cu65Pt+9EuqLO6aGf5BrmCHMnyP9mOjSRFfW/HE33/hG72NLRECeKOb8NU9JZn+uEDy1uBPMzPsJjG5Kaz2jp8xDJL3LokyFlneTd9NI9D7RRRs5RUmg751VskaWaoEHEKylXr9++XgkO0b9Df4LxOE3mGXKOZzia749Gz6wj0yMvY4vOC46pnMPsgzWID0BDNQ2kgxXE9gcz1BoasU61hmHYYKZ/UjuOsvyjpyQ1rjXcY3K4EX3XA1iX5dtCtcU2029IvfwyN/grdRwo/4N7XkQvzO6x7eUPNHynfZmnYz1qaAgtpQlG2bguly2+Svgx8Fkrj/oQcWkMRf7t2fqkrz5/uvsq0s2zr5v6HBI+yPzChwIyTOQnq09rA7Tod/3U5VByyvMfPms5sQ==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Checkout a branch"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/branches/checkout"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checkout an existing branch in the Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["name"],"properties":{"name":{"type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Branch checked out successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

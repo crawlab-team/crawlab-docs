@@ -1,0 +1,71 @@
+---
+id: get-list-of-schedules
+title: "Get list of schedules"
+description: "Get list of schedules"
+sidebar_label: "Get list of schedules"
+hide_title: true
+hide_table_of_contents: true
+api: eJydlNtu1DAQhl/FmmvTLgWBtHfloAoJoYqDuFjtxSSZTVwc29iTliXKu6Nx0m1KelKvosT/+Jv8c+iBsU6w3sC3sqGqs5RgqyFgxJaYohz14LAlWEPAmkCDcbCG3x3FPWhIZUMtwroH3gcRGcdUUwQNFe2wswzrl4O8pDKawMZL9DnWpFzXFhTVzkcVsDYO8+GgD7xk/j6Pt1oAv4wsv1OGqU0qUIbSHIfWPkorvLeEbk7boU20AH4l7qJTaO1EvDLc+I5v/epWQ6QUvEuUBHKyWsnj9k2fTWJJPB0KpKH0jsmxiDEEa8p84fFFkoh+mbYvLqhk0BCiDxTZjLzSV3SnlTsfW+Tx06sTGDS0lJL4daNOHI2r5axCfgLMmsQzFcaIYnF2Zxk9DBrYM9pH83vzGoYhyw1bkX3rypJS+mm4Ee/y6aI+Z8TK3uFsS9z4CtZQU/4F5AbWcDyXJIqX15PRRSvHGAz8T/gwNog6Pf+kxpBc8ERlFw3vc/g7wkjxtBPIZjs/lnFsR+PmooMXDXO4btDcmFmUbTNu57Ny8uN9xCuLhSSySFKSkwGcNFqhUz6Qe5F8F0tSlZEyFx1Tpa6oUKXoKCqsWuNUsMhSCtAgjoxXro7eHq2kLYJP3GJuyGnC7jP9Vk6HX2T6w8fBopGlMDrdTwXZQJqvq8ZLa22g7wtM9CPaYZDP4xSLz5VJWFiqpmldEA/z9NBm0ncn9ov2N7vxEm0nkrxXnk69dz09yJz24zOZT9lQD+LHfXlD38pLNILP3ayhIawo5gqMIadlSYFnUYvtJbccZvDs43cYhn/XcUVN
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get list of schedules"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/schedules"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get list of schedules
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"query","schema":{"type":"integer","default":1},"description":"Page number for pagination"},{"name":"size","in":"query","schema":{"type":"integer","default":10},"description":"Number of items per page"},{"name":"all","in":"query","schema":{"type":"boolean","default":false},"description":"Return all items without pagination"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of schedules","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object","properties":{"list":{"type":"array","items":{"type":"object"}},"total":{"type":"integer","format":"int64"}}}},"title":"SuccessWithList"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

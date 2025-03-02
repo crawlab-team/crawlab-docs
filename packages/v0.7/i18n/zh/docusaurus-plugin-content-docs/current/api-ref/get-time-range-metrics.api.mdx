@@ -1,0 +1,71 @@
+---
+id: get-time-range-metrics
+title: "Get time-range metrics"
+description: "Get performance metrics for a database over a time range"
+sidebar_label: "Get time-range metrics"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVF9v0zAQ/yrWiQeQ0rUaSIi8dXRMe0AgBk9Vka7xtfFIbM++bKuifHd0SZpm6zaBoC+V47v7/bnz1cC4jZAuYYGMa4wEqwQ0xSwYz8ZZSOGCWHkKGxdKtBmpkjiYLKqNCwqV7vOUuyU5sylJBbRbggQ8BiyJKQhEDRZLghSMhgSMlPbIOSQQ6KYygTSkHCpKIGY5lQhpDbzzkhE5GLttCzJTkNSfy9nkA04288mnVX36rnkFj3l/dnbrFmfqy/qaMr7UKpAPFMkyaYVRocrpHjVlpsRCDRBsuBDMfRo0jwt3N+pyAU0yiIqMgfe6bioKO3hJSOsmQwoamSZi2jHOlZRU/d0ARFb/X5hzq3uQlbQiemcjRal2OpvJ38Pw76akSdvg/SRAApmzTJYlGr0vTIYSPb2OklIfE3SthdLQ4DwFNh1g5jSNooxl2lIY6zCW356KhpJixC0dixZ9yE+ANc2huVdVllGM0MhPinHuNKSwJe6mLIcUpvvZjtPa6Gbay53y4IB4T+F2P99VKCQNvTkaxgVtsCpYzb9eqi6ltTtSVgXDuzb9jDBQmFcCvlyNr6/Ev86icdCgMGf2+zmQ87oNahUbu3FtZK/8Y8C7AtdC5IikkJNX3cckCq1ynuwkuipkpLQRj9eVPKA7WqtM4uTV69JY5Qtk6RMkII50JWcn709m0hPvIpfYTkM/yLJX+KlhekCqPszWv2yi3iime576Ao0VTm2/6r7dSxjaDQmk7ZI6cBr1fJVA7iJLRl1L/I9QNI187t6jtFKbiOtCNtoGi0gvaBo98mdY/qLdaL/cYlFJTLsS/hxmeOQvgnS75QCxkkMwgvGXsl5/63f6G3VYl89g9x/R7sbge05GQ7NqEsgJNYWWRncxzzLyY0uONo/wH572xfl3aJrfKcdbLQ==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get time-range metrics"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/{id}/metrics/time-range"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get performance metrics for a database over a time range
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"},{"name":"start","in":"query","schema":{"type":"string","format":"date-time"},"description":"Start time"},{"name":"end","in":"query","schema":{"type":"string","format":"date-time"},"description":"End time"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Time-range metrics","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

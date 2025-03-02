@@ -1,0 +1,71 @@
+---
+id: create-a-new-schedule
+title: "Create a new schedule"
+description: "Create a new schedule"
+sidebar_label: "Create a new schedule"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVMtu2zAQ/BVi0SPdGGmBorrl0QI5FAma9GS4xYpcW0wpkiGpOIbgfy+W8kOG3V6qiy1yXzOzox4yLhNUM3hUDenOUoK5hEgvHaV87fUaqr68mkgaqhw7kqC8y+QyX2EI1ijMxruL5+QdnyXVUIv8L68DQQW+fiaVQY4KzcBhSyAhBaMp/jIaJKjoHbcP0QeK2VDiIiXwUCzlaNwSNuPUk1sJAXOm6KCCn7Pp5DNOFleTr/P+8uPmHUjQlFQ0gceGCr55t/S31+K+zHmnRaQQKZHLpAUmgaKhN9SkTItW7Ftkky333KXxTAXCuWEDRmzPcYJaG54D7cMINhO9kUAOa0tjgLX3ltAVDAvsbN7GlocZTsG7NDB3OZ3yzzHYndBCRUIGmDqlKKVFZ+0a/kPcY9WU12PVjMu0pAgSFj62mIejD5dMTUsp4fK8xhrzmWaMdMf+4zA+bAk4BntTMAoUjlYibZEDt8yN11BB8CkP29JABRdp7wIJieIrRTZHD120fI3BnCzP7SCDuHq4E0MKbOacrbpo8rqkXxNGilcdN5nNx9esRjswNg7aA25yDjxLCWP5S1AhgBX5fjDqlzdsg6WDYw5eGBnlcDhs6tgww4KOt267hcYtfJlpS/lNxJXFmiGf0ME0LHwU2xgp0AkfyE2S76IioQ13rDvevBXVQnEcRYG6NU4Ei5kXBCQw90PJ6ftP76fFQz7lFt0I4t/0PZppT2amt3wRLBrH1Yqm/Vb6GaTxB7Dhtahm0Pc1JvoR7WbDxy8dRVZ0LuEVo2GWiqASGkJNsYj9m9Y82WCjyRO35nDb8QgnltrIXcaVUhTyP2Pno819uH98Agn19hvdFr9BxBV/Z3EFFYAEXygo61XOerDoll1xGww1+fkDb5wSVQ==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a new schedule"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/schedules"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new schedule
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["name","spider_id","cron"],"properties":{"name":{"type":"string"},"spider_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"cron":{"type":"string"},"param":{"type":"object","additionalProperties":true},"enabled":{"type":"boolean","default":true}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Schedule created successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

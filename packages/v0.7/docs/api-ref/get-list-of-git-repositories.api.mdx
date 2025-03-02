@@ -1,0 +1,71 @@
+---
+id: get-list-of-git-repositories
+title: "Get list of Git repositories"
+description: "Lists all Git repositories configured in the system"
+sidebar_label: "Get list of Git repositories"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMtu20AM/JUFz2ripkUL+JY+YBQoiqAP9GD4QEm0xHS1u92lkrqC/r3gyomduHGCnAyLj5mdITmAYJNgvoQFC6wKqClVkYOwdzCHz5wkGbTWLFhMpOATi49MyVTerbnpI9WGnZGWTNokoQ4KCBixI6GojQdw2BHMIWBDUABr3989xQ0UkKqWOoT5ALIJmsROqKEISmSNvRWYvxzvs7rAhozru5KiWftoAjbsMAfH4hYv8d/n4c0OAL9MWH5tWKhLJlAGpX04tPZRtNJ7S+j20dZoEx0AfiXpo8vCT4jXLK3v5c5TVwVESsG7RElBzmYz/Tl0UInf9w8KqLwTcqI1GILlKvc9vUxaOByy9+UlVaL+Rh8oCk+wla/pv4qufexQpk+vzmAsoKOUVLZddpLIrtFYjfIEMMtJ9rIwRlSls0iH1eNYgHhB+yi/N69hHHM6i9W0b31VUUo/WVqVMEfzC6T1NcyhoUwOpYU5nDYsqmiieHUz9X20GsHAcN/dD5P55vzik5lKspmJqj6ybHL5O8JI8bzX/svVfvib+jKpsZ90+8BWJNwMXx66nJS1YLf2OXP7yPcRry2WSuSApJLT5drmFAad8YHci+T7WJGpWb0re6HaXFNpKs2jaLDu2JlgUVRfKEAVmVrOTt6ezNTr4JN0mKdsuz0LEmMfHtU71Ibd5D7zQG2VEvojp8Ei692YDBu2li4hW7oqoPU6cUsYhhIT/Yh2HPXztOPqVM0JS0v1dpePkD1ytx7g9Is2u8t5hbbXlHx1no764PE6irm9ns/EfMr9Ogo/XdMd+kr/RFb4vA8FtIQ1xezAVHJeVRRkr+rgqGmX2wVefPwO4/gPZTNm3Q==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get list of Git repositories"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Lists all Git repositories configured in the system
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"query","schema":{"type":"integer","default":1},"description":"Page number for pagination"},{"name":"size","in":"query","schema":{"type":"integer","default":10},"description":"Number of items per page"},{"name":"all","in":"query","schema":{"type":"boolean","default":false},"description":"Return all items without pagination"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of Git repositories","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object","properties":{"list":{"type":"array","items":{"type":"object"}},"total":{"type":"integer","format":"int64"}}}},"title":"SuccessWithList"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

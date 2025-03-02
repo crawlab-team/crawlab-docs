@@ -1,0 +1,71 @@
+---
+id: delete-multiple-git-repositories
+title: "Delete multiple Git repositories"
+description: "Delete multiple Git repositories by IDs"
+sidebar_label: "Delete multiple Git repositories"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVN9v0zAQ/lesE4/uVg0kRN46WqZJIBCDpypIl/jaejixZ1/WVVH+d3ROu3UrAoFfEp/v1/d9Z/fAuE5QLOHKMpQaDKU62sDWt1DAnBwxqaZzbIMjdWVZRQo+WfbRUlLVTl3PE2iIdNdR4ktvdlD0eWsjGSg4dqSh9i1Ty3KEIThbo1Q4v01SpodUb6hB+eNdICjAV7dU8z7vmGgJ1iRpMUQfKLKlJAFifIrDGHEHGixTc2xPHG27Bg0BmSkKth/L6eQdTlazyYeyv3gzvIKX6D/5du3nl+pzbubaCPRIiVomozApVBt6QEO1bdCpxxJs2UnNQxgM4xIwKfg2jY1fTKfyeV7yhGCTFTAqdXVNKa065wTff/P5nLzaGzrysi3TmiJoWPnYII+m1xcwaGgoJVzTKaeDBoP8m2KC+MDFzdg+7IloiDfeQAEjvFGXDRRwvrYs45Qo3lOUweyhi05OMNgThea0ws6xmn25VmMIDKVE1120vMvhl4SR4qyT/Mvy+PhGWBqJOHZ6xLFhDtJLdoMCquyUcQnRX59GfvGATXD0OI/LAznloMG2K5+z7rl4H3HrsJKmTwAJkJWPau+jFbbKB2onyXexJmWsJK46GYktVaoWP4oKTWNbFRyyKAcahL0x5fTs7dlUVAo+cYN5PlrMgP52vV+21z/N3T88DXs2mR74PDi0rTSTRe33si8hy15q2PjEsu/7ChN9j24YxHzXURQ1Sw33GC1WQuRSyN0QGopZ6J+0E3bHDiffpKq4uy4/DC9vyaAPEbO6psB/9C2PRna++Lj4tgAN1f6ta/Ilgohbea9wCwWABp85y8OVbT04bNddvkIwZpX1C+FP5Rs=
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete multiple Git repositories"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/gits"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete multiple Git repositories by IDs
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["ids"],"properties":{"ids":{"type":"array","items":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Git repositories deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

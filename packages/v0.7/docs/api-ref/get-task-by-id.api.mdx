@@ -1,0 +1,71 @@
+---
+id: get-task-by-id
+title: "Get task by ID"
+description: "Get task by ID"
+sidebar_label: "Get task by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVMFu2zAM/RWB2GEDlCboCgzzLV27oodhw9qdggygLSZWa0uqRLcNDP37QDtNk6W775SYfBTfe6LYA+M6QbGAW0z3CZYaAkZsiSlKuAeHLUEB1oAG66CAgFyDhkgPnY1koODYkYZU1dQiFD3wJkhF4mjdGuRAZopS+nsxm3zGyWo++brsT8/yO9BgKFXRBrZeEN+8W/uLc/W9vKOKr42KFCIlckxGYVKoanpGQ5VtsVG7Fmy5kZ4vZZD/PnjMqOsLyEshn4J3iZLwPZ3N5OcQL3YoQ4y2SaCh8o7JseAwhMZWKLjpXRJwfyzeD+1EfPSBItuxVeUN7aGsY1pTBA0rH1vkMfTxVOi3lBKu6dhQkYb8RrOcX4246aqKUoKcJXo2O/uHQudZrXznzH+nkWL08Y3MnsjLAZJHjYfirogVi8ByI3curbj2BgpYE48zWUMBU8GkaW9NBg2J4uPL2HexkTwGezSjF7TCrmE1/3GtxpJhphJVXbS8GcrPCSPFeSddFsv99I3YODq1D9rprJkDbJ+TfJcDaNBt3coPyK3+LxGfGiyFyBFJIbfyUW0xWqFTPpCbJN/FipSxYmjZybt6olJVgqOo0LTWqdAgy3WBBnFkPHJ28ulkJlcTfOIWh6HYbocjuw/I7LQxPfM0NGidHDNY3G+vYgHDVYCGwhpZQ7VPLOG+LzHRr9jkLOGHjqJYvNTwiNFiKU4sejA2yX8DxQqbREcMdsMN739uN9cH9boU9NsUt0F0G3ECm06+QMM9bcadmJdZQ01oKA40xsS8qijwXsnRe5KJ2I3k1eUt5PwHzlffFQ==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get task by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/tasks/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get task by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task details","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}},"404":{"description":"Task not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: rename-a-table
+title: "Rename a table"
+description: "Rename an existing table in the database"
+sidebar_label: "Rename a table"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SsCscMGKE3QDRjmWz82oId9oO1OQTYwFhNrsyVPopsGhv/7QMlp0mYbNmC+JLb0yPfIR/bAuI5QzOESGZcYCRYaDMUy2Jatd1DANTlsSKFTdG8jW7dWjMualHWKK1Jmh9TQYsCGmIKE7EFwUIA1oMFKqBa5Ag2BfnQ2kIGCQ0caYllRg1D0wNtWEJGDdesUkJmCQL/MZ5M3OFmdTd4t+tNXwzN4yvO9d2t/ea4+Lr9RyVdGBWoDRXJMRmFUqCq6R0OlbbBWDynYci05dzAYngbOJ+rqEoZFJk+Rz73ZCuOnWkrvmBzLEbZtbUuUKNNvUUL1x1J9Ci5Sg28psKUop7l0xwV5zOyiC4Ecj/1ImEGDo83Xv8N/oM0jbHpEYmy9i5nJ6WwmP4+BtwkUkjOMil1ZUoyrrq638N9KUHpzKME6pjUF0LDyoUHOn16eiuKGYsT1LwRLL5F/kUxk7jp/k+nDqL4hrrwRt/rI2YMVFDDd+TxOe2uGaapbnOYagIZI4W5n/C7UgsDWHpX8klbY1azOPl2pDEmuilR2wfI2wc8JA4WzTvLOF4fHN1K7XJ7DSw/qKuYWxoGS92W6lNRK+a/33n17j01b095re4/s/XNQRutWPiUai3YRcFPjUnQcaRRtKx/UeEfL7vAtuUn0XShJGStxl50M5oaWqpR7FBSaxjrV1sjSYtAgBc0hZyevT2bCQ5rSoDvgvdtP2clPyfR7O/7LJhvryXTP07ZG6yR3ams/GmIOD4YADUVactkTacMlcgsNlZiomEPfy9XPoR4G+fyjoyDNXmi4w2ATc2m9sVH+GyhWWEf6g5jn1+PmeaH2C+o3xMeP6GQ877Du5A00fKdt3s/DYtBQERoKiUY+uMjJJrcC3wOPhnrQO8RZWVLLf7y7OJiwTx9vbkHDctylTZp4CLiREuImk/RJfPJ8+tZDjW7dpXmHHFOen0BHUvA=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Rename a table"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases/{id}/tables/rename"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Rename an existing table in the database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"Current table name"},"new_name":{"type":"string","description":"New table name"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Table renamed successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: download-export-file
+title: "Download export file"
+description: "Download the exported file"
+sidebar_label: "Download export file"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVMuOm0AQ/JVRn3alWWPlEombk11FvkV5nCwODTRmEpiZnWnstRD/HjVg4n1G2vhiQz+qu6rLPTDuI6Q7uHvwLjBkGkqKRTCejbOQwq072sZhqbgmRWMSlaoyDYEGjwFbYgrSogeLLUEKfPISNFLukWvQEOi+M4FKSDl09BRjwlZSp66KeNDqV3RWK+JidQ0aYlFTi5D2U+sUIgdj9zAMegGdRtuW7wHe3r4Jkkmb6J2NFCX+Yb2WrxdbzcQUzjJZljT0vjEFSlriCia+iRwIW4m9hqmhcqFFhhRyYzGcYJCPhpa4diWksCce+ecaUkim5ZNeugxJf+ZiSMpZPdmPwuEsVBcaKUNv4JneVGHXsNp83aqpBISASEUXDJ/G8k+EgcKmE/Bddhn+LgtNLF0mLfvVzP7MtTznY5IICcZWbsw03Ejoc8Bjg7kM8mxIGa5yQc05WqFVzpO9ia4LBanSCJF5J6d6pFwVkkdBYdkaq3yDLPyCBmFkarlefVytYdDgXeQWrYwyn9ZiAXqk8aOR+r+Sv22ZmQimB058g8YK5qhHP8u5m28ZNKSzldKL614kzTTULrIU9H2OkX6GZhjk9X1HQZTKNBwwGMyF0F0PpYnyu4S0wiY+dcPlClffZt9cq3+Z88WF5pdoT0IyNp08gYbfdDr/QYh3/2eg0bTvAF+oHLJBQ01YUhjZmcKboiDPF4Wv+lfufvHjl7sfMAx/ANKK0JI=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Download export file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/export/{type}/{exportId}/download"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Download the exported file
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"type","in":"path","required":true,"description":"Export type (csv, json, etc.)","schema":{"type":"string"}},{"name":"exportId","in":"path","required":true,"description":"Export ID","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Export file","content":{"application/octet-stream":{"schema":{"type":"string","format":"binary"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

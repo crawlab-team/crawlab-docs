@@ -1,0 +1,71 @@
+---
+id: delete-a-branch
+title: "Delete a branch"
+description: "Delete a branch in the Git repository"
+sidebar_label: "Delete a branch"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVNtu3DYQ/RVikIcW4HoXboEgerOzbmCgQYpcnhYqMCvOrphKJEOObC8E/XswpOxdr9OgqF4kkXM558xlBMZ9gmoD7yxDrcFQaqINbL2DCtbUEZNCtY3omlZZp7gl9c6yihR8suzjATQEjNgTU5RQIzjsCSqwBjRYiROQW9AQ6dtgIxmoOA6kITUt9QjVCHwI4pE4WrfPAZkpiuvfm9XiDS52V4s/6vHy9+kVnIN8793er6/Vh+1XavjWCLRIiRyTUZgUqpYe0FBje+zUUwq23EnORzeYzgOXG3W7hqku4CnxtTcHQXzOpfGOybFcYQidbVCiLL8mCTW+pOpz8GeibIpwtYYQfaDIlpJ4FDnPRZryI/4peJeK6eVqJa/nPK5L8UwuplFpaBpKaTd0ndTufwN/DrLx5hSkdUx7iqBh52OPXI5+uxSVe0oJ9z+ipMEg/yCZ8Hys16cCH2b6PXHrDVRQ6JXeaaGC5d5yWo7WTMvSvZRAQ6J499imQ+zEDoN90VNr2uHQsbr661YVl9wDiZohWj5k92vCSPFqkGyb+vT6k2hWZDk1emLVMgeY21/+t9kosxTZPx477eYB+9DRsQtOpLJu53PQWZi3Ee873ArmF3yEx85HNdtohU75QG6R/BAbUsZK3O0g/XFPW9WIHUWFprdOhQ5ZyggaRLwScnXx+mIlOIJP3KM7wXi2Ns7RjMee+88bZlaO6YGXoUPrJHMu4DgXfANScNBQ5b3zVPNaQ+sTi8E4bjHRl9hNkxx/GyhKKWsNdxgtbkXGzQjGJvk2UO2wS/QT9L98nIf3V3VcFv8Cdj5EJ3TusBvkDzT8Q4eyK6d60tASGooZRrl4W5ItPov70fHFqE760eOqaSjwT23rk7lZ3/x58/lGFJs3W58nGSLey3bC+wLTZ/q5p/PZCB26/ZDnGEpUeb4Dw7cnfQ==
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a branch"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/gits/{id}/branches"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a branch in the Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["name"],"properties":{"name":{"type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Branch deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

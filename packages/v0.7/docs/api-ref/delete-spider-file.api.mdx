@@ -1,0 +1,71 @@
+---
+id: delete-spider-file
+title: "Delete spider file"
+description: "Delete a file in the spider directory"
+sidebar_label: "Delete spider file"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMlu2zAQ/RVi0EML0LGRFiiqW5YGyKFIkLQnwwXG4thiKpEMOUpiCPr3Yig5duM06KG6SCJnee/N0gHjOkExh9tgDcUECw2GUhltYOsdFHBONTEpVCtbk7JOcUUqZWtlbKSSfdyAhoARG2KJUcw7cNgQFGANaLASJyBXoCHSfWsjGSg4tqQhlRU1CEUHvAnikThat84BmSmK68/5bPIFJ6uTycWiO/7Uv4OXIL95t/bnp+pqeUclXxoVKURK5JiMwqRQVfSEhkrbYK2eU7DlWnJu3aB/GXi4UZfn0C8G8JT41JuNIH7JpfSOybFcYQi1LVGiTO+ShOoOqfocXKhGHyiypSS3WakDQfr8CIYUvEuD6fFsJq8/MV9IoUwum6j/n1CV3tCelXVMa4qgYeVjgzwcfTwWCRtKCdf0CgcNBvmVZEJsW4zbtiwpJRj5NsSVN9JAPvHQFhUUMB1aME07a/qp9GaaDpxBQ6L4sG3ENtZijsEedM05rbCtWZ1cX6rBJVc5UdlGy5vsfkoYKZ60knS+2L++FeEGbfaNnqlVzAHGBpf/ZTbKVEX7m10vfX3CJtS0q/2eXtatfA46qnMW8bHGpWA+4CM8Vj6q0UYrdMoHcpPk21iSMlbiLlsZikdaqlLsKCo0jXUq1MhSS9Ag4g0hZ0efj2aCQ9RvMHfMONrjYhhXgVTgJaBu13v/vEZG8ZieeBpqtE6S5xpuxZnDWHrQUOT9kqufk+f6LzRU0ivFHLpuiYl+xLrv5fi+pShlXWh4wGhxKZLOOzA2ybeBYoV1ojdovL8ZZ/6D2q2Gv6AeD9EJrwesW/kDDb9oM2zGftFrqAgNxQxjuDgbkk2+i/vO8WB2e731OClLCvym7WJvkK6vbr+DhuW4xZo82BDxUdYzPg4gfSafuzufdVCjW7d5rGGIKc9vjj0ihw==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete spider file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spiders/{id}/files/delete"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a file in the spider directory
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"path":{"type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File deleted","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

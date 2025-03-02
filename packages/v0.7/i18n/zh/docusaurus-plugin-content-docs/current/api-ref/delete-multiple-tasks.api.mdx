@@ -1,0 +1,71 @@
+---
+id: delete-multiple-tasks
+title: "Delete multiple tasks"
+description: "Delete multiple tasks"
+sidebar_label: "Delete multiple tasks"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zAM/SsCz2oTdIcBvrVrDgN2GNbuFORAy0yiVpZUiWoaGP7vA+UkTdd2h/lim3r8eI+kBmDcZGiWcI/5McNKQ6KnQplvQreHZqi/NlEHDadCGkzwTJ7lCGN01iDb4GcPOXixZbOlHuWL95GggdA+kGHQZ4GWYLuaKqYQKbGlLA5ifPXDlHAPGixTf27PnKzfwDg9EjbH4PMU4mo+l1dH2SQbpTBoJmaqI0dMncrFGMp5XZyT8P9N523tJnR0hrKeaUMJNKxD6pEn05crGDX0lDNu6ANKGjrkD5IJTbbsxHQ3lQ8H9m+Z3laOqi+ObXSkuPZUUvI2dNDAJIJUj7yFBmZHRKb0TEkGYYCSnBxhtPA+wRqLY3X987uaXGBcibcpyfK+ut8QJkrXRRIsV+fHdyLmpNc56ER3yxyllgqDBtoKqvSlH79eB3Pxgn10dJqa5VHD1ajB+nWoUQ+SfUu4c9hK0e8ICZF1SOqA0Qq9CpH8RQ4lGVKdlcBtkcnZUauM4Cgp7HrrVXTI0mDQIOpNIeeXXy/n0swYMvdYx8hjJfRZf97UdJKD6YVn0aH1Eq12ZTg0bgl8XNdtyCyGYWgx0+/kxlHMT4WS9GOl4RmTxVakWIo8W8KOUm3VI+1Fn2kFLu4lrcBdqQv49zqM+uhxbQxF/id2dTZ1t4sfi/sFaGgPd0pftwUS7uRewB00ABpCFaCOR7UN4NBvSt0VmKLK8weMjp3L
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete multiple tasks"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/tasks"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete multiple tasks
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["ids"],"properties":{"ids":{"type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Tasks deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

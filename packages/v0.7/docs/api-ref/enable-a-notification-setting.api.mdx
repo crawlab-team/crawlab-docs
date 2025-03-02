@@ -1,0 +1,71 @@
+---
+id: enable-a-notification-setting
+title: "Enable a notification setting"
+description: "Enable a notification setting"
+sidebar_label: "Enable a notification setting"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFVMFu2zAM/RWB2GEDlCboBgzzLV03oIe1xbqdAg+gZTpWZ0uqRLcLDP/7QNtt06Zbcwkk8ZGP75HugXGbINvAuWdbWYNsvUuQaygpmWiDnCGDLw6LhhQqtxenEjFbtwUNASO2xBQlWQ8OW4IMbAkarOADcg0aIt10NlIJGceONCRTU4uQ9cC7IIjE8T4hM0WB/tqsFp9wUa0XX/P++MPwBp6T++bd1p+eqIvimgyflSpSiJTIMZUKk0JV0x8sydgWG/VQgi03UvMeBsPzxNOLOjuFIRfyKXiXKAnf49VK/p7Gn78gjqJRulKlzhhKqeqaZgcajHdMjiUJhtDMqOV1kkz9oTJ+5CLKRB8osp14GF/SXpR1TFuKoKHysUWert4fS28tpYRbOlRb+kZ+odgwPKp0NdGHQX6SjGtfirM+8eRXDRks9+cjLWcN0rK35bCclAANieLt/ah0sREcBnvg6ylV2DWs1pdnaoKMPiQyXbS8G+EnhJHiupPqm3z/+UoUnETaD3rosWYOMI+gnIsxaOzZusqPkXPvnyPeNVgIkQOSQq7yUc0xWqFTPpBbJN9FQ6q0onLRySzeUaGMxFFUWLbWqdAgi1OgQRSZUq6OPh6txBXRtsVxHuaNem0Pn3DrH4fsVeAsCtMfXoYGrZP6ozf97O0Gnng72ji5CxqycdVng3MNtUxFtoG+LzDRz9gMg1zfdBTFt1zDLUY7RouLpU3jkkBWYZPoP328/T5/Qt6px+38B/35Ep3s2y02nZxAw2/aTR+nIR801IQlxZHG9LA2hgLvQQ72U8bsYQEuL65+wDD8Bfi50NM=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Enable a notification setting"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/notifications/settings/{id}/enable"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Enable a notification setting
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Notification setting enabled successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

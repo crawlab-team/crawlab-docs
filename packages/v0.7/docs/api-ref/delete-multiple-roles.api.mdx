@@ -1,0 +1,71 @@
+---
+id: delete-multiple-roles
+title: "Delete multiple roles"
+description: "Delete multiple roles by IDs"
+sidebar_label: "Delete multiple roles"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zAM/SsGz2obdIcBvrVrDgV2KNruFPhA20yiTpZUimoaGP7vA+W0TT+wAfPFNkU+8j2SGkFwk6BewQ3xYFOywSdoDPSUOrZRbPBQwxU5EqqG7MRGRxUHR6lq99X1VQIDTI+ZklyGfg/1WH4tUw+1cCYDXfBCXvQIY3S2Q4U9e0iKPULqtjSgfsk+EtQQ2gfq5IA7A63A9qWuyCESi6WkAWp8i0Nm3IMBKzQc25Ow9RuY5kdhUww+zRDni4W+3vO9Lfz6wrqvUu46SmmdnVP4/6bzvvYu9HTkZb3QhhgMrAMPKLPp2zlMBgZKCTf0BSUDPcoXyZSmWHFqupvLhwP7gWQbeqhhpqd1oWyhhrPSVTCQiJ+IdSpGyOz0CKOFz0Oxxuykuri5ruYQmBqN7jJb2ZfwS0ImvsiaYNUcH9+pTLMSx06vRLYiUWspblBDW5wKMVX69m3kls84REev87B6UaeZDFi/DgX1IMYPxp3DVov+REiJrANXBx9Toa9CJH+SQuaOqt4qcJt1JnbUVp36EVfYD9ZX0aFo68CAqjdDLk6/ny60TTEkGbAMiMdC6Mud+ljT+DZt/1rCg25Cz3IWHVqvaUv7xkOHVzDnaAxsQxI1jGOLiX6xmyY1P2ZibVxj4AnZYquarVTHLWFPXHr6m/Yq5FzXyb2mVXeXyw5+3IjJvERcdB1F+atvczSeV8ufy/slGGgP18pQFgYYd3o14A5qAAOhKFXmqNhGcOg3uawLzKj6/AEtKLCf
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete multiple roles"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/roles"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete multiple roles by IDs
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["ids"],"properties":{"ids":{"type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Roles deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

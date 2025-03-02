@@ -1,0 +1,71 @@
+---
+id: export-spider-files
+title: "Export spider files"
+description: "Export spider files to a downloadable file"
+sidebar_label: "Export spider files"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMFu2zAM/RWB2GEDnCboBgzzLV1XoIehxbKdggygLTpWZ0uqRLcNDP/7QNlJs6YbMF9sU4/k4yOpHhi3EfI1rLzRFCJk8OXJu8CwyUBTLIPxbJyFfLKrmICqMg1FxU6h0u7RNg41Fg0lO2TgMWBLLBHzdQ8WW4IcjIYMjATzyDVkEOi+M4E05Bw6yiCWNbUIeQ+88+IRORi7TQGZKYjrz/Vi9gln1XJ2tenPPwxv4CXTr85u3eWFuinuqORrrQL5QJEsk1YYFaqanlBTaVps1CEFG24k594NhpeBxxN1fQnDRshH72ykKHzPFwt5/Ym/SiJREo6k9tJZJsuCRO8bU6Ig53dR4P1p+S4llPKD8xTYjMlKp+kIZSzTlgJkULnQIo+m9+dSQEsx4pZOJZXikF9JNgzPUqy6sqQYYZBHgnHttLTPRR6bUkMO83Em4rw3epinyZiPRUMGkcLDfgy60AgcvTnp2SVV2DWslrfXanRJGkcqu2B4l9wvCAOFZSdJ15vj45UIN2pzDDqUVjN7mMZL/osESqUaW7mEnEr+HPCxwUKInJAUcpULasJkCq1ynuwsui6UpLQRcYtO5uyRClUKjoJC3RqrfIMsDYIMRJEx5OLs49lCmiGStpjGYNqWVxbuJaP+eaL+bz8nXZieeO4bNFYopPb0U1fXEA9XQp4Wd8+ADhdELWOQr6HvC4z0IzTDIOb7joJ0bJPBAwYjeVP/tInyrSGvsIn0j1refpsuhnfqeef+wnoyot2JsNh08gcZ/KLdeOUMmyGDmlBTSDTGg2VZkucjl5OFlAE7TPztzeo7DMNvK/XE1Q==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Export spider files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spiders/{id}/files/export"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Export spider files to a downloadable file
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Files exported","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

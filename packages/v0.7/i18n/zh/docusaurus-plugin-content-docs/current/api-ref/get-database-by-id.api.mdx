@@ -1,0 +1,71 @@
+---
+id: get-database-by-id
+title: "Get database by ID"
+description: "Get database configuration details by ID"
+sidebar_label: "Get database by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1v00AQ/SurEQeQnCYqSAjfUgJVDwhE4RSl0nh3HG+xd7e747aR5f+OxnbStAEkfLG98/XmvZntgHGbIF/DChkLTASbDAwlHW1g6x3kcEmszGRV2rvSbtuIYlSGGG2dVLFTVyvIIGDEhpiipOzAYUOQgzWQgZVUAbmCDCLdtTaSgZxjSxkkXVGDkHfAuyARiaN12yEhM0UJvVkvZh9wVi5nnzfd+bv+FbzE+cW7rV9dqK/FLWm+MipSiJTIMRmFSaGq6BENadtgrQ4l2HItNfdh0L9MPFqkw34j4FPwLlESvOeLhbye+++p3NMDGWjvmByLL4ZQWz3wN79NEtCdEuCHkkJA9IEi27Gc9oaOvKxj2lKEDEofG+Tx6O25tNBQSrilU1KlPeQ/FOv7JzKuW60pJejlkWRceQM5bIlHVSrIYb6fijTvrOkhg0Txfi9+G2vxwWBPlFpRiW3NavntSo0hA7OJdBst74bwC8JIcdlKpfXm2HwtZI18HDsd2qmYA0xDJf/F4DS0Z13pB8+pzY8RH2osBMgJSAFX+qgmn0yhUz6QmyXfRk3KWCG0aGW6HqhQWvwoKjSNdSrUyCIKZCCMjCkXZ+/PFiJA8IkbHKSfduTZku3X6Rmg7mmI/mclJ1KYHnkearRO6g/adJOOazjoCBnk1sgVUPnEYuo6MfyMdd/L8V1LUfTZZHCP0WIhNK47MDbJt4G8xDrRP6C//j4t/xv1tFd/gTkdotsJjVi38gcZ/KLdeK30mz6DitBQHGCMhqXWFPgo5GTlZJwOM3356Qf0/W/YArVi
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get database by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get database configuration details by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Database details","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-dependency-setting-by-id
+title: "Get dependency setting by ID"
+description: "Get a specific dependency setting by ID"
+sidebar_label: "Get dependency setting by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMFu2zAM/RWB2GEDnCboBgzzLV22oodhw7qdggygJdpWZ0uqRLcNDP/7QNtt02YrsFwcy4/k43ukemCsEuRb2FAgZ8hpSwl2GRhKOtrA1jvI4ZxYoUqBtC2tVuYevFeJmK2rVLFXFxvIIGDElpiiZO3BYUuQgzWQgZVMAbmGDCJddzaSgZxjRxkkXVOLkPfA+yARiaN11ZiQmaKE/tquFh9wUa4Xn3f96bvhFTyn+cW7ym/O1NfiijRfGBUpRErkmIzCpFDVdIeGtG2xUQ8l2HIjNe/DYHieePoiHQ47IZ+Cd4mS8D1dreTxFL85FsgQo20SZKC9Y3IsURhCYzVK1PIqSWh/LIUfi4sU0QeKbKfC2hs6QFnHVFGEDEofW+Tp6O2pNNNSSljRsbzSKPJfig3DoyyXndaUEgzyk2RcewM5VMSTPzXksDQHA7Scm07L3poBMkgUb+5HoouN4DHYI/82VGLXsFp/u1BTyKh3It1Fy/sx/IwwUlx3UnW7O/x8KcJN2hyCHlqrmQPMoybvxQgaW7Wu9CNybvljxNsGCyFyRFLIlT6qGZMpdMoHcovku6hJGSviFp3M3C0VSguOokLTWqdCgywGQQaiyJRydfL+ZCVmBJ+4xXEM5s2RzXth3Z5Q6x9H6z82dlaH6Y6XoUHrhMhoUj+bu4VDc0c7J3shg9wauS5qn1iAfV9gop+xGQY5vu4oim27DG4wWixE3W0Pxib5byAvsUn0Qh+vv883xRv1uIT/ID0fotuLuth08gYZ/Kb9dAcNuyGDmtBQHGlMH9ZaU+CDkKOtlCl7GPvzTz9gGP4AR+PHxQ==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get dependency setting by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dependencies/settings/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a specific dependency setting by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Dependency setting details","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: list-spider-files
+title: "List spider files"
+description: "List spider files"
+sidebar_label: "List spider files"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVF1v2zAM/CsCsYcNcJqgGzDMb+m6DQU2rFi3pyADGIuO1dmSKtFtA8P/faDsfLRJBywvgaUjeXck1QHjOkK+gBtvNIUIyww8BmyI5StfdGCxIcjBaMjAWMjBI1eQQaC71gTSkHNoKYNYVNQg5B3wxktE5GDsGiQhMwUJ/b2YTT7gpJxPPi+783f9K8hAUyyC8WycIL45u3aXF+r76pYKvtIqkA8UyTJphVGhqugRNRWmwVrtSrDhWmpuw6B/nni4UVeX0Gc7UaOUJOuupbCBl3UcZbxGrpSxiitSMdmntAlUsAsb6JfiUPTORoqS7Hw2k7+nKb6ayMqVqjQ1RcigcJbJsgDR+9oUKMDpbRR0d0zNJVFicXCeApuhVuE0HaCMZVpTgAxKFxrk4ejtuUhqKEZc02m5yCeK9f3e7pu2KChG6OX33J8kbjRmK7AhrpyGHNbEw2RUkMN0QMVpZ3Q/TdhpbaIgIoX77SS2oRYwenM0NpdUYluzml9fqSEkdSBS0QbDmxR+QRgozFspuVgeXt+Ir4N1h6Cd8orZbydDvlcJlJwwtnQJOTryMeBDjSshckRSyJUuqBGTKbTKebKT6NpQkNJGvF+1MuoPtFKF4Cgo1I2xytfI0j/IQBwZUs7O3p/NpFfeRW4wTck426fsf8JnJ4/pkae+RmMlU3K5G1uzgLE1kEGenoBtqtSfZQaViyy4rlthpF+h7ns5HrZJbNcm4qqWd6LEOtIRid3M/3uhstNs/9Bmv8f3WLcCSb2/x2Ck8H+SeP1jfNfeqP2T8ULx8RDt5rD4lpTR0C/7DCpCTSHRGC7mRUGeD0KOdl3471bly6ef0Pd/AXp37BQ=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List spider files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/spiders/{id}/files/list"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+List spider files
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"},{"name":"path","in":"query","schema":{"type":"string"},"description":"Path in the spider directory"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of files","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

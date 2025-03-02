@@ -1,0 +1,71 @@
+---
+id: get-spider-file-info
+title: "Get spider file info"
+description: "Get metadata information about a spider file"
+sidebar_label: "Get spider file info"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVM1u2zAMfhWB2GEDnCboBgzzLV3Xoodhw7qdggygLSZRZ1uqRLcNDL37QNlJ3CY9bLkYkUh+PyTVAeM6QL6AW2c0+QDLDDSF0hvHxjaQwzWxqolRI6Myzcr6GuVKYWFbVqhCylQrUxFk4NBjTSyl8kUHDdYEORgNGRgp55A3kIGn+9Z40pCzbymDUG6oRsg74K2TjMDeNOtUkJm8pP5ezCafcLKaT66W3fmH+AZecv1qm7W9vFDfijsq+UYrT85ToIZJKwwK1YaeUFNpaqzUHoINV4K5S4P4snB/o24uIWZ7UYOUJOu+Jb89oet5mStTkRrSXlMc41LKBGebQEHuz2cz+ZwoNWoHZFDahqlhiUXnKlOmi+ldkITuGNAmUWKxt448mx6utJpGUaZhWpOHDHqs/uj9uZhUUwi4phMiMpB5OQaL8WD3bVuWFAJE+Ukx3lgNOayJ+75vIIdpP15h2hkdpzJkYSqyxUHyD7s5a30lwejM0VBc0grbitX8+43qU0AsDlS23vA2pV8QevLzViAXy/H1rbjWGzMO2uvaMLtdN+V/kYKSzkRTIge9nz0+VlgIkSOSQm5lvRpiMoWNso6aSbCtL0lpI84WrQzyIxWqlDjyCnVtGuUqZOkOZCCO9CVnZx/PZtIJZwPXmGZgmFzZ6dHaqsHQZ5S6wzz96xswWMP0xFNXoWmERepQN7R1AUNbIYM8PQ6pszCYtsxgYwNLXNcVGOiXr2KU437PpGXaBCwq2bQVVuHlqo3Zv/0xLOU7NV7Akyz/0Paw2Q9YtRKS5uUBvRHA/wc/PCKvgA+H2GzH4DtSRkNcxgw2hJp8otFfzMuSHI9SjrZf+O/X6/rLT4jxL2NGB74=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get spider file info"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/spiders/{id}/files/info"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get metadata information about a spider file
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"},{"name":"path","in":"query","required":true,"description":"File path","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File information","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

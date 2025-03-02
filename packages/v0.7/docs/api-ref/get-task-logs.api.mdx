@@ -1,0 +1,71 @@
+---
+id: get-task-logs
+title: "Get task logs"
+description: "Get task logs"
+sidebar_label: "Get task logs"
+hide_title: true
+hide_table_of_contents: true
+api: eJxtVMFu2zAM/RWB2GEDlCboBgzzLV23oodhw9qdAhegLcZWa0uqRLcNDP/7QNtN06a+2KIeycdH0j0wVgmyDVxjukuQawgYsSWmKOYeHLYEGVgDGqyDDAJyDRoi3Xc2koGMY0caUllTi5D1wLsgHomjdRVIQGaK4nqzWS2+4WK7XvzM+9MvwwfQYCiV0Qa2XhC/vKv8+Zn6XdxSyZdGRQqREjkmozApVDU9oaHSttiofQq23EjOZzcY3gaebtTlOQy5kE/Bu0RJ+J6uVvJ6jRc5VOOrBBpK75gcCwhDaGyJAlreJkH2x5X7MZdUHn2gyHbKU3pDByjrmCqKoGHrY4s8mT6fCveWUsKKjtWUupDfSTYMLypcdWVJKcEgz1shLogVHxTXEtfeQAYV8dSsGjJYCiQte2uG5QxMFB+eh6KLjYAw2KMOntMWu4bV+s+lmlxGxROVXbS8G93PCCPFdSepNvnh9ZVoOcl1CNpXWzMHmIdNzsUIGqu3butH5KzC94iPDRZC5IikkNv6qGaMVuiUD+QWyXexJGWs6F10MnWPVKhScBQVmtY6FRpk6RloEEWmkKuTrycr6U/wiVscJ2PenbeSv+KyL43piZehQeskyqhwP7djA2M7QEM27uEYJ9dQ+8Ry2/cFJvoXm2EQ831HUYTONTxgtFiIHpsejE3ybSDbYpPoiMh+zuHj33m7P6mXxdHvM52N6HaiBzadnEDDHe2m/8aQDxpqQkNxpDFdrMuSAh+4HK2WzMV+Oi9+XMMw/Ad0DpS5
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get task logs"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/tasks/{id}/logs"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get task logs
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task logs","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

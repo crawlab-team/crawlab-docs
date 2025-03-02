@@ -1,0 +1,71 @@
+---
+id: get-database-tables-metadata
+title: "Get database tables metadata"
+description: "Get metadata for all tables in a database"
+sidebar_label: "Get database tables metadata"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMFu2zAM/RWB2GEDnCboBgzzLV22oodhw9qdAhegLSZWJ0uqRLcNDP/7QNtJ0wYbsFwcS4/k43ukO2DcJsjXsELGEhNBkYGmVEUT2HgHOVwSq4YYNTKqjY8KrVWMpaWkjFOo9D40g4ARG2KKkrMDhw1BDkZDBkZyBeQaMoh035pIGnKOLWWQqpoahLwD3gWJSByN2w4JmSlK6O16MfuEs81y9rXozj/0b+A10W/ebf3qQn0v76jiK60ihUiJHJNWmBSqmp5QU2UatOpQgg1bqbkPg/514vFGXa2gL4R8Ct4lSsL3fLGQx0v8jYhz0AwyqLxjcixIDMGaCgU5v0sC707b90NBaT/6QJHNWKzymo5QxjFtKUIGGx8b5PHo/bk00FBKuKVTSaU5IXVSrO+fpbhuq4pSgl5+koxrryGHLfHoSQ05zPe+p3lndD8fR2J+1Hai+LAfhTZaicFgTnxb0QZby2r540qNIYPOiao2Gt4N4ReEkeKylcrr4vj6WsQb9TkGHdqrmQNMIybv5QAa2jVu4wfk1PbniI8WSyFyQlLIyfBPmEyhUz6QmyXfxoqUNiJw2cqsPVKpKsFRVKgb41SwyGISZCCKjCkXZx/PFmJI8IkbHEZh2hjZub28+107EvYFte55vP5rVyd9mJ54HiwaJ1QGm7rJ4jUcLIYM8mGNx2QwDMVIp8ig9okF3nUC/hVt38vxfUtR7CsyeMBoJHIwU5sk/zXkG7SJ/tHP25/Tl+Kdel7Cv1CfDtHtRGW0rbxBBr9pN36D+qLPoCbUFAca48WyqijwUcjJhsq0HVbg8ssN9P0fIcbFdg==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get database tables metadata"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/{id}/tables/metadata"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get metadata for all tables in a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Table metadata","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

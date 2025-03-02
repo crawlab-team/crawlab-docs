@@ -1,0 +1,71 @@
+---
+id: delete-spider-by-id
+title: "Delete spider by ID"
+description: "Delete spider by ID"
+sidebar_label: "Delete spider by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVFFv0zAQ/ivWiQeQ0rUakxB562iRJoFADJ6qIl3iS+OR2J592aii/Hd0cdZ1tLzzlNj+zvd9352vB8ZdhHwDt95oChG2GXgM2BLLKt/0YLElyMFoyMBYyMEj15BBoPvOBNKQc+gog1jW1CLkPfDeS0TkYOwO5EJmChL6c7OYvcdZtZx93PaXV8MryEBTLIPxbJwgPju7c6tr9aW4o5JvtArkA0WyTFphVKhq+o2aStNiow4p2HAjOZ/CYPj74nSiblYwbIV89M5GisL3crGQz0t8MkRpakhSx64sKcaqa5o9ZFA6y2RZwtD7xpQoYfO7KLH9qRduzC5eBOcpsEmZS6fpCGUs044CZFC50CKnrbeXoqalGHFHp/6KUuQzyYbh2ZfbRB+GQXavFlf/FGwdq8p1Vv93KikEF86cHMlcj5AhqXwpbzUWUsWksthLJ0g+rp2GHFKdU7PWkMM8AeO8N3qADCKFh6cX0YVGEOjNSfuuqMKuYbX8eqNSyNhukcouGN6P4deEgcKykzyb7fHxrRiaPDsGHRTXzB6mlybrYgSNDhhbuRE5OfEh4GODhRA5ISnkKhfUhMkUWuU82Vl0XShJaSPWFp30/SMVqhQcBYW6NVb5BlkKBxmII+nKxcW7i4UUybvILY7tMQ2O88a/YHQQyPSb575BY+Wu0ed+qsgGpopABrnRMqhqF1kO+r7ASD9CMwyyfd9REKe3GTxgMFiIIZsetInyryGvsIl0wuHQ7fD62zTb3qjnsZGdJzltopWx8IBNJyvI4Bft09QctkMGNaGmMNJIB8uyJM9HIScPTBrj0J6r9af19zUMwx8c/u6D
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete spider by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/spiders/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete spider by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Spider deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}},"404":{"description":"Spider not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

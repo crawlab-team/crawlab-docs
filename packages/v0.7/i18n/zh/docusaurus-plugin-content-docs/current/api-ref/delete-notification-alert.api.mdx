@@ -1,0 +1,71 @@
+---
+id: delete-notification-alert
+title: "Delete notification alert"
+description: "Delete a notification alert"
+sidebar_label: "Delete notification alert"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFVFFv0zAQ/ivWiQeQ0rUaSIi8dXRIk2AgBk9VkS72pfFIbM++bKui/Hd0SdZ164C+pLa/8333fXfugHGbIF/DpWdbWo1svUuwycBQ0tEGWUMOK6qJSaFyBziFNUWGDAJGbIgpylUdOGwIcrAGMrASHZAryCDSTWsjGcg5tpRB0hU1CHkHvAsSkThatx0uZKYoob/Wi9kHnJXL2adNd/qufwXPqX3xbutXZ+prcU2aL4yKFCIlckxGYVKoKrpHQ9o2WKt9CrZcS86HMOifXzyeqIsV9Bshn4J3iZLwPV0s5PMUf3kkjTKDbKKD9o7JsURhCPUEm18nCe2OpfBDcpEi+kCR7ZhYe0MHKOuYthQhg9LHBnncensqxTSUEm7pWF4pFPmFZH3/KMtVqzWlBL385DKuvIEcxopGiyrIYX7YEGk+lJ3mnTU9ZJAo3j40RRtrgWOwRw6uqMS2ZrX8dqHGkEHxRLqNlndD+BlhpLhsJel6c3h8JdKN6hyC9sVVzAGmZpN1MYCGYq0r/YCciv4Y8a7GQogckRRypY9qwmQKnfKB3Cz5NmpSxoq8RStdd0eF0oKjqNA01qlQI4tFkIEoMl65OHl/shA7gk/c4NAI0+xM8/bitD3h1T121n+GdJKD6Z7noUbrJPPgSjeZuYYnZkIGo52QQW6NPAqVTyy4risw0c9Y971s37QUxaZNBrcYLRai5roDY5P8N5CXWCf6B/XX36e34Y16HLu/cJ420e1ETaxbWUEGv2k3vjr9ps+gIjQUBxrjwVJrCnwQcjSH0lX7Rl+dfz7/cQ59/wcm38GG
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete notification alert"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/notifications/alerts/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a notification alert
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Notification alert deleted","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

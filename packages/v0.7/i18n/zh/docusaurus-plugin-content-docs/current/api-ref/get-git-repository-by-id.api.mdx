@@ -1,0 +1,71 @@
+---
+id: get-git-repository-by-id
+title: "Get Git repository by ID"
+description: "Get detailed information about a Git repository"
+sidebar_label: "Get Git repository by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v00AQ/SurEQeQNk1UkBC+pRSiHhCIwikK0nh3Em+xd7e747aR5f+OxnbbkAAHfLG98/XmvZntgHGXoVjDyjFsNFjKJrnILngoYEWsLDG6mqxyfhtSg2JSWIaWFaqVY5Uohuw4pD1oiJiwIaYkSTvw2BAU4CxocJIxIlegIdFt6xJZKDi1pCGbihqEogPeR4nInJzfDQmZKUnoj/Vi9g5n2+Xs46Y7f9O/gGO4n4LfhcsL9bm8IcNXVqAlyuSZrMKsUFX0gJaMa7BWTyXYcS01H8OgP048WtTVJfQbAZ9j8Jmy4D1fLOR1xNtvtEwUZtBggmfyLBEYY+3MQOf8JktYd0pDGAoLDSlESuzGoiZYOvBynmlHCTSMCo1Hr8+lkYZyxh2dUitNIv+hWN8/U3LdGkM5Qy+PJOMqWChgRzxqU0EB853jPO+c7UFDpnT3qH6bajFjdCdSXdIW25rV8suVGkMGajOZNjneD+EXhInSspUi682h+Vp4Gqk4dHrqpGKOME2V/JeD09CZTPHgOXX4PuF9jaUAOQEp4LYhqclHK/QqRPKzHNpkSFknXJatjNc9lcqIHyWFtnFexRpZ9AANwsiYcnH29mwh3MeQucFB9WlJZNmOBqfcy8wdweqep+g/FnRiiOmB57FG5wXMIFQ36bkG0RM0FM7KlVCFzHLadSVm+p7qvpfj25aS6LTRcIfJYSl0rjuwLsu3hWKLdaZ/gH/5dboFXqnnBfsLwukQvfRwh3Urf6DhJ+3H+6Xf9BoqQktpgDEalsZQ5IOQk62TsXoa69WHb9D3vwAH/Lqb
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Git repository by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get detailed information about a Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Git repository details","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

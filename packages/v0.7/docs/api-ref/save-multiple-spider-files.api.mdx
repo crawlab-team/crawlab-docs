@@ -1,0 +1,71 @@
+---
+id: save-multiple-spider-files
+title: "Save multiple spider files"
+description: "Save content to multiple spider files"
+sidebar_label: "Save multiple spider files"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVcFu2kAQ/ZXVqIdWMgGllar6RpJGyqFKFNITotLgHWBT27vZHUOQ5X+vZm0DgSTtoVzA3pnZeW/ePGpgXAZIpzBxRpMPMEtAU8i8cWxsCSlMcE0qsyVTyYqtKqqcjctJhZihFianAAk49FgQS410WkOJBUEKRkMCRuo45BUk4OmpMp40pOwrSiBkKyoQ0hp46yQjsDflMhZkJi+pv6ajwTccLMaD61l9/qX5AMdN/rDl0l5dqNv5I2V8o5Un5ylQyaQVBoVqRc+oKTMF5mp3BRvO5c4+DZrjwu2JurmCZtY2T4EvrN5Kx8dYOpbkCJ3LTYZSZfgYpFR9CtXG4gLVW0eeDQU5bRndh6H3uBUamYrw9/RI9AmfzYv2js76jyAMzpahrXQ+GsnXS0aupTsVcE0y2v8EObOaDqJMybQkDwksrC+Q21efzwVFQSHgkl5FqJFfuUxw9ZOeVFlGIUAHtyBeWS3qtIFbza0ghWGr7TCsjW6GcR5DQTycI2ei4kB+3Su98rmkoDMnsryiBVY5q/HdjWpToowCZZU3vI3pF4Se/LiSi6ezw+OJkNfycxi0g7didtBtkDzPY1CEK/zf78X6/RkLl9OBuKa9Tvb7thvljtBZI7u7sPHOjsBLj5sc5wLpBK7AXFivuphEYamso3IQbOUzUtpI5XklS7mhucokjrxCXZhSuRxZxg0JCLdtydHZ17ORjFYGVGAUVWct0ZjecqMXjdUH2P7VzjqOmZ556HI0pTQRR90zN4VOJZBAGn2uzxWpQAKtWGYJrERc6RTqeo6Bfvq8aeT1U0VeNDBLYI3e4FwIntagTZDfGtIF5oHeAfPxvnOgT2pvVG/03ptJKVayxrySJ0jgN21bn47jXhFq8rGN9uCyvWzwIOn7xJNlb5I+Y5xl5Pjd2NnB5t3dTh6ErM5Ti+gE4HEjfxa4aZu0EXxchfiuhhzLZRV9ANqa8vkDStNU9Q==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save multiple spider files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spiders/{id}/files/save/batch"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Save content to multiple spider files
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"files":{"type":"array","items":{"type":"object","properties":{"path":{"type":"string"},"content":{"type":"string"}}}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Files saved","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

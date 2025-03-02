@@ -1,0 +1,71 @@
+---
+id: get-dependency-configs-for-a-language
+title: "Get dependency configs for a language"
+description: "Get dependency configurations for a specific language"
+sidebar_label: "Get dependency configs for a language"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMFu2zAM/RWBpxXQmqA7DPCtW4dit2LdTkEOtETb6mxJleh2geF/H2g7mdt0h82X2CKp9/gemQEY6wzFDm4okrfkjaMMew2WskkusgseCrglVvaYcVAm+MrVfUIJZ1WFpFDlSMZVzqgWfd1jTaAhYsKOmJJgDOCxIyhgleDk9ojcgIZEj71LZKHg1NNrCncp1Am7zvn6hKDexQM3wWvlgyWtiM3lBWjIpqEOoRiAD1EQMyfnaxjHvcDkGHymLPGr7VZ+XkLd/K1T0GCCZ/IsRRhj68wU2TxkqRzOkUP5QIZFihQiJXYzrgmWVlnOM9WUQEMVUoc8H324glFDRzmLWOfdaLDIb4CNowZ23MrRfW8M5QyjPHIZN8FCATVNpET5AjZ25f5m7jlvhqPMo0hK6eloY59aKcLo4LVLN1Rh37K6vvuq5hIQzTOZPjk+TOWfCBOl616gd/t1+F7UmwVaJ536a5jj0V75LqekqV/nqzBlLn1/TvjcYilEzkgKOZnZJUcr9CpE8u9z6JMhZZ0oXPZMVj1TqYzkUVJoO+dVbJHFJdAgisxXbi8/Xm7FkRgydzjNwjLtb+7OcWlWq/CC4/Bn0P57+RbRmH7xJrbovPCbvBsW43ewNn6ebiEHGorTRXsNTcgs2cNQYqYfqR1HOX7sKYmlew1PmByWovxuAOuyvFsoKmzz601et/bu27LzF+pf9vvNzpZD9AdxBttevkDDTzqs/3PG/aihIbSUJrJz+NoYirwqPFtumdPT9tx++Q7j+Bssjc/P
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get dependency configs for a language"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dependencies/configs/{language}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get dependency configurations for a specific language
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"language","in":"path","required":true,"description":"Programming language (python, node, etc.)","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Dependency configurations","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

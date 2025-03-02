@@ -1,0 +1,71 @@
+---
+id: delete-multiple-projects
+title: "Delete multiple projects"
+description: "Delete multiple projects"
+sidebar_label: "Delete multiple projects"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zAM/SsGz2obdIcBvrVrDgN2KNbuFORA20yiTpZUimoaGP7vA+U0ddeih/pim3r8eI+kBhDcJqhXcMvhgVpJsDbA9JgpyXXoDlAP5dcydVALZzLQBi/kRY8wRmdbFBv8xUMKXm2p3VGP+iWHSFBDaDQymFmgFdiupIocIrFYSuqgxlc/ZMYDGLBC/dyehK3fwjg9GjbF4NMU4nKx0FdHqWUbtTCoT+SqjhwJdVXKbUspbbJzmuHLjN6W34aOZijrhbbEYGATuEeZTN8uYTTQU0q4pQ9YGehQPkimTMWKU9PdVD4cBXhL9qZwrPrsxEZHVXzprGaVXeighkkHJYCygxouZqBE/ESsQzFAZqenGC28T7PB7KS6uv1ZTS4wrtW7zWzlUNyvCZn4KmuO1Xp+fKeSTqrNQSfSO5GotRQY1NAUUBFBu/L7dUKXz9hHR6fxWb0ouR4NWL8JJepRuB+Me4eNFv2OkBLZBK6OGFOhr0Ikf5ZC5paqzmrgJuv87KmpWsURV9j11lfRoWibwYCqN4VcnH8/X2hLY0jSYxkmj4XQJ116U9ZJEaFnuYgOrdeApTHDsX0riLPt3YUkahuGBhP9YTeOan7MxNqVtYEnZIuNCrJSkXaEHXFp2F86qErTOpzda2aFu1z28f/VGM2Lx1XbUpRPsevZ+N0sfy3vl2CgOV4xfdkcYNzrNYF7qAEMhKJBGZJiG8Ch3+ayNzBF1ecfz/ClYw==
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete multiple projects"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/projects"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete multiple projects
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["ids"],"properties":{"ids":{"type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Projects deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

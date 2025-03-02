@@ -1,0 +1,71 @@
+---
+id: clone-a-git-repository
+title: "Clone a Git repository"
+description: "Clone a remote Git repository to local storage"
+sidebar_label: "Clone a Git repository"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMFu2zAM/RWB2GEDlCboBgzzLW2xooehRbudggxgZCZWJ0uqRLcNDP/7QNtt0mQbsFwcS3zk43ukW2DcZCgWcGkZlhpKyibZyDZ4KODcBU8KVaI6MKlLyypRDNlySFvFQblg0KnMIeGGQEPEhDUxJcnZgseaoABbggYrCSNyBRoSPTQ2UQkFp4Y0ZFNRjVC0wNsoiMzJ+k2fkJmSQH8uZpMvOFnPJ1+X7emn7h0csv0W/CZcnKnr1T0ZviqFa6JMnqlUmBWqip6xJGPrnvRYgi07qfkCg+4w8XCjri6gWwr5HIPPlIXv6Wwmj7fxtzuNjChYqtwYQzmvG+e2oMEEz+RZkBijswYFOb3PAm+P5Qg9AZEjhUiJ7VDchJL2oqxn2lACDeuQauTh6OOpNFRTzmLRkcTSLPIfinXdTpq7gT508pNkXIVS7AyZB5MqKGC6sZynrS27ad82aMiUHl+GoUlOgjDaI+cuaI2NYzW/uVIDpFc6k2mS5W0PPyNMlOaNlFos96/vRK5Bkf2g14Yq5gjjkMn7qg/qG7R+HfrIsdHzhE8OV0LkiKSQW4ekxhit0KsQyU9yaJIhVVqRdNXItD3RShmJo6SwrK1X0SGLLaBBFBlSzk4+n8zEAhGyxt78cWdeVu/tzh2Sanej9P/LOsrD9MzT6NB6YdK71I6WLkAsBQ1Fv8KDq0sNlfheLKBtV5jpR3JdJ8cPDSUxa6nhEZPFlWi6aKG0Wf6XUKzRZfpHD+9vxy/DB7Vbur8wHQ/RiyqP6Bp5Aw2/aDt8c7plp6EiLCn1NIaLuTEUeQ9ytIEyW68jfnN99x267jdX/cIo
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Clone a Git repository"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/clone"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Clone a remote Git repository to local storage
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Repository cloned successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

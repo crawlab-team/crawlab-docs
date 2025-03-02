@@ -1,0 +1,71 @@
+---
+id: get-export-status
+title: "Get export status"
+description: "Get status of a database export"
+sidebar_label: "Get export status"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1v00AQ/SurEQeQNk1UkBC+paRUOSAQhVMUpIl3HG+xvdvdcdvI8n9HYztuaFqEQi6O1+/Nx3uz0wDjNkKyggUybjASrDUYimmwnq2rIIErYhUZuY7KZQqVGZCKHrwLDBo8BiyJKUikBiosCRKwBjRYieCRc9AQ6La2gQwkHGrSENOcSoSkAd55YUQOttp2AZkpCPXnajb5gJNsPvm0bs7fta/gaXmfXbV1iwv1ZXNDKS+NCuQDRaqYjMKoUOX0gIZSW2KhxhRsuZCcexq0TwP3X9RyAa0em+oqPa2towSXnX4qswWpDnqQp9d2eaqEL+WSZtYSJnpXRYrCPJ/N5PEsvvcdNKSuYqpYgOh9YVMU4PQmCro5rsN14omVwXkKbPtcqTN0gLIV05YCaMhcKJH7o7fnUn9JMeKWnu8N+Zlkbfto63WdphQjtPKTYJw7AwlsqR9YziGB6X6U47Sxpp32ok8bCdtOm70HLWiIFO72812HQsjo7dEwLijDumA1/7pUPaXTO1JaB8u7jn5BGCjMaylhtT78fC0q9kIdgsY+c2YPg+nyvulAXd+2ylyHHPr/GPC+wI0UclSkFJe5oAaMVlgp56maRFeHlJSxovSmlgt0TxuVCo6CQlPaSvkCWdwCDaJIH3J29v5sJs54F7nEbiaGSZb1QU+m6Y96msfh+oddM0jB9MBTX6CtJGvnSDPYuoLRVtCQdGtopCfDBU7GC7bWkLvIwmsaYf0IRdvK8W1NQSxba7jDYHEjyq4aMDbKfwNJhkWkv7Tz+ttwX9+ox23yQg/DIVY7URaLWt5Awy/a9ctUtsNJqY/2zEkVjBvqf2o4tf3RrXbdasgJDYXOi/7zPE3J8wHxaEfJNRuXwNXld2jb37wVXyA=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get export status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/{id}/export/{type}/{exportId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get status of a database export
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"},{"name":"type","in":"path","required":true,"schema":{"type":"string"},"description":"Export file type"},{"name":"exportId","in":"path","required":true,"schema":{"type":"string"},"description":"Export ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Export status","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

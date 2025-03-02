@@ -1,0 +1,71 @@
+---
+id: get-list-of-projects
+title: "Get list of projects"
+description: "Get list of projects"
+sidebar_label: "Get list of projects"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMtu3DAM/BWBZzXZpkUL7C19IChQFEEf6GGxB9rm2kplSZXopFvD/15QdjZOnRdyMmQONdSQnB4Y6wTrDZxHf0ElJ9hqCBixJaYokR4ctgRrCFgTaDAO1vC7o7gHDalsqEVY98D7ICDjmGqKoKGiHXaWYf1ykEMqowlsvGSfY03KdW1BUe18VAFr4zAHB33gS+bv8/hWC8IvI5ffKcPUJhUok9KcDq19lK3w3hK6OdsObaIF4VfiLjqF1k6MV4Yb3/Gtp241RErBu0RJSE5WK/ncvumzSSyFh+v+aCi9Y3IsWAzBmjLfd3yRJKFfVu0LyQQNIfpAkc1IV/qK7lRy52OLPP56dQKDhpZSErlu0ImjcbXEKuQnkFmTeIbCGFEUzuIss4dBA3tG+2h9b17DMGS4YSuwb11ZUko/DTciXY4u2nNGrOxS2Ja48RWsoab8AuQG1nA8QySKl9dr0UUrUQwG/r//wzgd6vT8kxpTcrcTlV00vM/p7wgjxdNOODbbefibNHCUbQ46KNEwh+vpzFOZQVk043Y+Iyc13ke8slhIIYsipTjZvgmjFTrlA7kXyXexJFUZaXLRMVXqigpVCo6iwqo1TgWLLI0ADaLIeOXq6O3RSoYi+MQt5nGc1useyW+VdHgh0x8+DhaNGMIodD+1YwNh5lSNl7HaQN8XmOhHtMMgv8cFFpUrk7CwVE2LuiA87NJDpqTvrusX7W9s8RJtJ5BsKU9nvdeZHuScrPGZnE8xpwfpR6u8Yd/KIRqhz7OsoSGsKOYOjCmnZUmBZ1kL55JbDgt49vE7DMM/YRFDSQ==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get list of projects"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/projects"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get list of projects
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"query","schema":{"type":"integer","default":1},"description":"Page number for pagination"},{"name":"size","in":"query","schema":{"type":"integer","default":10},"description":"Number of items per page"},{"name":"all","in":"query","schema":{"type":"boolean","default":false},"description":"Return all items without pagination"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of projects","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object","properties":{"list":{"type":"array","items":{"type":"object"}},"total":{"type":"integer","format":"int64"}}}},"title":"SuccessWithList"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

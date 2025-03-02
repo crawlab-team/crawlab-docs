@@ -1,0 +1,71 @@
+---
+id: create-a-new-dependency-configuration
+title: "Create a new dependency configuration"
+description: "Create a new dependency configuration"
+sidebar_label: "Create a new dependency configuration"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVk2P2zYQ/SvEoIcUkL1eN8E2uu1HC+TQZtHdXmq4i7E0lphIJEOO4jUE/fdgKNnSxps0RXuIL7LI+eKb94ZqgbEIkK7ghhyZnEymKcA6gZxC5rVjbQ2kcO0JmRQqQzuVH0z3KrNmq4vGY7RLwNOHhgJf2XwPaRtftaccUvYNJZBZw2RYttC5SmfR7+xdkCQthKykGuUf7x1BCnbzjjKGBJy3jjxLbWkLDzqfGAX22hRihMzkpdy/V4vZa5xtL2e/rtvly+4H+PxAv1lT2Jsr9TZmeJMrT85TIMOUKwwKVUmPmFOma6zUMQVrriTnwQ26BAzW9Fw5TxP+jjUpu1Vc0pcB7JIhymk0Mk0tfXJ7LiPUxuZ02qj7vYtp8kk71QvnbeGxrrUpVIWmaLCgHyWbQy7/ufZb5FKx/bz2ra5Igsjz4T+hIBHUC5oX80QNnKnJcJjzIyfKYfYeC5oLTWLVWWRj/oD8XMat9bXsQI5MM9Z1LLJx+b/2OeTZ7L8juh0O8h0V1Y2LxzGyv47Mhq6TbU/BWRN6+S4XC3k8LebmC5pQQxNUaLKMQtg2VbWH/22UZKKi0UobpoL8lBHa8E9LAb6mELB4huRdIrR5JtkUmLu+/IhHDMalzSEFZwPDQYhwNtXtWQ9EgAQC+Y/kZVC30PhKLNHpk47e0BabitXl7RvVu0C3Fu+s8Zr30f2K0JO/bCTfaj3dvhPMelimRsdTlcxOaolmkMImGsVTCux/jLP/l0esXUXHWT3ysx8T4/sQ+jjVBhxGYY6zZVyc6h+Wi+XL2eJitnx9f/4qfXWeLn+eLy7O/4Knmv+a3VTnY5ap0Cat1mZrIyhDY6897ircCOYn/ZA+bK1Xg02i0CjryMyCbXxGKtcSd9MIv3e0UZnYkVeY19ooVyELDSEBaX4fcjG/mC/i6LaBa4xkH/D51kv6SY3tqKRvDjA0jemRz1yFOl5ckZbt0MAVTIncyzVSeZ1AKYxPV9C2Gwz0p6+6TpY/NOSFoesEPqLXuBF0V+sugZIwJx/J+56kGdd9xTO57AQcrBqp52QOdMnB4zLLyPFXbdcTUd6+vbuHBDbDZ0wdhwR43MknDu4gBUjARgSjXOJaC4erFVLoY8rvE08WNgw=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a new dependency configuration"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/dependencies/configs"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new dependency configuration
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"name":{"type":"string","description":"Name of the dependency configuration"},"type":{"type":"string","enum":["python","node"],"description":"Type of dependencies (programming language)"},"path":{"type":"string","description":"Path to the dependency file"},"file_name":{"type":"string","description":"Name of the dependency file (e.g., requirements.txt, package.json)"},"created_at":{"type":"string","format":"date-time"},"updated_at":{"type":"string","format":"date-time"},"created_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"updated_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"}},"title":"DependencyConfig"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Dependency configuration created successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

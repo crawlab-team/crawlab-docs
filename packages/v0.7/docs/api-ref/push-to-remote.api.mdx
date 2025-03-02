@@ -1,0 +1,71 @@
+---
+id: push-to-remote
+title: "Push to remote"
+description: "Push commits to the remote Git repository"
+sidebar_label: "Push to remote"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVFFr20AM/iuH2MMGThO6wZjfspWVPoyWdXsKHihnOb7Ovrvq5LbB+L8P2W4bmm4wv8S++yR9+j4pPQjuEuQbOHcCRQYlJcsuigsecrjqUm1saFsnyUgwUpNhaoOQOXdimGJITgLvIYOIjC0JsabrwWNLkIMrIQOnuSJKDRkw3XaOqYRcuKMMkq2pRch7kH3UiCTs/G5MKEKsob82q8UnXFTrxdeiP/0wvIGXRL8Fvwtnn83l9oasXJRKjSmRFyoNJoOmpgcsyboWG/NUQpw0WvMxDIaXiacbc3EGQ6HkUww+UVK+p6uV/ryiWOqspZSqroEMbPBCXhSKMTbOokKXN0nx/XH/Yayo/XOIxOKmajaUdIByXmhHDBlUgVuU6ej9qXbQUkq4o2NNtTuUV4oNw7MW1xN5GPTRZFKHUv0LSSZXashhuXOSlr0rh2XskhqbiO8eze+4UQxGd+TUGVXYNWLWVxdmChmVTWQ7drIfwz8TMvG600qb4vD6WtWaBDkEPfVTi0SYh0q/tyNo7M/5KozIuc8vjPcNbpXIEUklVwU2MyYz6E2I5BcpdGzJlE4V3XY6Xfe0NVZxxAbL1nkTGxR1BTJQRaaUq5OPJyt1QHVscfR+3pFxZiTMm/WSTP88Qf+1j7MiQg+yjA06r8VHY/rZxA2oiZBBPm7p6GORQa1G5xvo+y0m+snNMOjxbUes9hQZ3CE73KqKmx5Kl/S9hLzCJtE/2L/9Pu/+O/O8Vn8hOh+i11busOn0CzL4TfvpX2UohgxqwpJ4pDFdrK2lKAchRyun0/Q001eX1z9gGP4Aby+1Ww==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Push to remote"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/push"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Push commits to the remote Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Push successful","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

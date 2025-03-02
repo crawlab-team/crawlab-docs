@@ -1,0 +1,71 @@
+---
+id: delete-multiple-users
+title: "Delete multiple users"
+description: "Delete multiple users"
+sidebar_label: "Delete multiple users"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMFu2zAM/RWBZ7UNusMA39o1hwE7DGt7MnKgZSZRJ0uqRDUNDP/7QDlp07XdYb7YpshHvkdSIzBuMjQt3GdKGVYaEj0Wynwd+j00Y/21iXpoOBXSYIJn8ixHGKOzBtkGf/GQgxdbNlsaUL54HwkaCN0DGQZ9AtSC7WuqmEKkxJayBIjxNQ5Twj1osEzDqT1zsn4D0/wIbI7B5xnicrGQV0/ZJBulMGhmZqonR0y9ysUYynldnBP4/6bztnYTejrxsp5pQwk0rEMakGfTl0uYNAyUM27oA0oaeuQPkglNtuzEdDuXDwf2b5neVI5qKI5tdKRK7amk5G3ooYFZBKkeeQsNXBw9MqUn+WraEUpycoTRwvsEayyO1dXP72oOgWkl0aYky/safk2YKF0VSdCuTo9vRcxZr1OnF7pb5ii1VDdooKtOlb7049frYC6fcYiOXqamPWq4mjRYvw4V9SDZt4Q7h50U/Y6QEFmHpA4+WqFXIZI/y6EkQ6q3AtwVmZwddcqIHyWF/WC9ig5ZGgwaRL0ZcnH+9XwhzYwh84B1jDxWQp/1501NL3IwPfNFdGi9oNWujIfGtVCO67oNmcUwjh1muk9umsT8WChJP1YanjBZ7ESKVuTZEvaUaqt+0170mVfg7E7SirsrdQH/XodJHyOujKHI//RdnUzdzfLH8m4JGrrDnTLUbYGEO7kXcAcNgIZQBajjUW0jOPSbUncFZlR5/gBOj54T
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete multiple users"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/users"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete multiple users
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["ids"],"properties":{"ids":{"type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Users deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

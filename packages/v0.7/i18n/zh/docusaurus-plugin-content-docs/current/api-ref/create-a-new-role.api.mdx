@@ -1,0 +1,71 @@
+---
+id: create-a-new-role
+title: "Create a new role"
+description: "Create a new role for role-based access control"
+sidebar_label: "Create a new role"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVk1v20YQ/SuLQY+kLasJ3PBmOy2QQxvDdi8V2GBIjsRNyd3N7jCyQPC/F7OURVpRvooe4otJ7pvvN2/VA+MmQLaCW/KtDkFbEyBPoKJQeu1YWwMZ3HhCJoXK0FZ525BaWx8f0gIDVQrLkkJQpTXsbQMJePrQUeBrW+0g6+Or9lRBxr6jBARIhuUInWt0iRLp/H2QcD2EsqYW5Yl3jiADW7ynkiEB560jz5qCnL7T1QwU2GuzERAyk5fE/14t0leYrq/S3/J++WL4CY5L+92ajX19rd7GCG8q5cl5CmRYygoKVU2PWFGpW2zUIQRrbiTmkxkMCRhs6VQ6zwP+gS0pu1ZcU+ygWD5DfM3B6+nt2I+bDXHyg97jDhLQTG34elM9Bdv58htKudsjVax8SABL/sbYB49kulb4V0aKReZgBQl0rhrfK2ooPtAjlR0T5MMwHPdsTl+18Rinx1ZxrcOhO2OI6h3yqUTW1rdyAhI3ZT1WNKbxfTZPcYrdD0TOp0J+oKSG6eNdHFGcq6fgrAkjF5eLhfw7op0I0L7JKnRRetZd0wjP/idhKW015782TBvy84lrwz8vpbEthYCbE9siHEU+EWxe+P2Yfqw9OuPaVpCBs4HHudSQwblQOEACgfxH8iLYPXS+kSN0+oRErLFrWF3dvlGjCQy5WJed17yL5teEnvxVJwFW+fz4Xpo09mEOOpRRMzvJJcIggyKCYlnS57tJ+n99xNY1dJDqiXCjVn5OWCZezgVtNdemCXMQnYOIxGrm2w7LxfJFurhMl68eLl5mLy+y5S9ni8uLv+D5hn8JN9/qKfh8rWaD12ZtY8f2Y77xuG2wkIF8UqwMSa7TPSZRaJR1ZNK9uFZa/BadsH1LhSoFR15h1WqjXIMspIQEhBmjy8XZ5dkiXgg2cIuR+vuOf3KVH+fTTzv0H+79PUWYHvncNahN1B5har8n8wpGMucJ1ELybAV9L97+9M0wyOcPHXnhaJ7AR/QaC2nhKh8SqAkr8pEJ/5B0/GZMNX2QsAJvunjrHK/+kDxZXJUlOf4iNp/t4e3b+wdIoNj/jmmjLoDHrdxUuIUMIAHrDtde/NZDg2bTRVWA0af8/QsCRTYL
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a new role"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/roles"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new role for role-based access control
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"name":{"type":"string","description":"Name of the role"},"description":{"type":"string","description":"Description of the role"},"permissions":{"type":"array","items":{"type":"object","properties":{"resource":{"type":"string","description":"Resource name"},"actions":{"type":"array","items":{"type":"string","enum":["create","read","update","delete","execute"]}}}},"description":"Permissions granted to this role"},"created_at":{"type":"string","format":"date-time"},"updated_at":{"type":"string","format":"date-time"},"created_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"updated_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"}},"title":"Role"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Role created successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

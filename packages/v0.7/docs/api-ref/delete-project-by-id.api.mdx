@@ -1,0 +1,71 @@
+---
+id: delete-project-by-id
+title: "Delete project by ID"
+description: "Delete project by ID"
+sidebar_label: "Delete project by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVE1v2zAM/SsCscMGOE3QFRjmW7pkQIENK/ZxCjKAtuhYnS2pEt02MPTfB9pumi7tfafE4qP43iPFHhh3EfINXAd3QyVH2GbgMWBLTEEiPVhsCXIwGjIwFnLwyDVkEOi2M4E05Bw6yiCWNbUIeQ+895IRORi7A7mQmYKk/t4sZh9xVi1nn7f9+UV6AxloimUwno0TxFdnd251qb4VwudKq0A+UCTLpBVGhaqmB9RUmhYbdSjBhhup+ZgG6d+Lx4i6WkHaCvnonY0Uhe/5YiE/z/GTI0pTQ1I7dmVJMVZd0+whg9JZJsuSh943pkTJm99ESe5PzXBDeTEjOE+BzVi6dJqOUMYy7ShABpULLfJ49P5c5LQUI+7o1GCRivxCsZSejPkx0oeU5PRicfG6YutYVa6z+r+TSSG48ELkSOd6gKRR5nN9q6GTyk8yi70MgxTk2mnIYez0OK815DCfkHHeG50gg0jh7vFVdKERCHpzMsIrqrBrWC2vr9SYMoxcpLILhvdD+iVhoLDspNBmexz+IZaOrh2DDpprZg/Ta5PvYgANHhhbuQE5efEp4H2DhRA5ISnkKhfUhMkUWuU82Vl0XShJaSPmFp2M/j0VqhQcBYW6NVb5BllaBxmII+OVi7MPZwtpk3eRWxwGZFoer1j/jNJBIdMDz32Dxsplg9H91JMNPPYEMsiNlnVVu8gS6fsCI/0KTUpyfNtREK+3GdxhMFiIJZsetInyX0NeYRPphMRh4uHt92nDvVNPyyN7meV0iFZ2wx02nXxBBn9oP+7OtE0Z1ISawkBjDCzLkjwfpZw8MhmNw4Su1l/WP9eQ0l/RifGT
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete project by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/projects/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete project by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Project deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}},"404":{"description":"Project not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-project-by-id
+title: "Get project by ID"
+description: "Get project by ID"
+sidebar_label: "Get project by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVE1v2zAM/SsCscMGuE3QFRjmW7p2RQ/Din2cggygLSZWZ0sqRbcNDP/3gbabpkt23ymx+Ci+90ixA8FNgnwJtxzuqJQEqwwiMjYkxBrpwGNDkIOzkIHzkENEqSADpvvWMVnIhVvKIJUVNQh5B7KNmpGEnd+AXihCrKm/lvOTj3iyXpx8XnVn5/0byMBSKtlFcUERX4LfhMsL87VQPjfWMEWmRF7IGkwGTUVPaKl0DdZmV0Kc1FrzOQ36vy8eI+bmEvqVkk8x+ERJ+Z7N5/rzGj85YiwJujpBBmXwQl4UijHWrkSFzu6S4rtD/WGoqPo5RGJxY7UyWNpDOS+0IYYM1oEblPHo/ZkqaCgl3NChp6oO5Uixvn/x4ntblpQS9L2ens/P/y3SBzHr0Hr738kk5sBHIns6rwZIP8p8re+axMRJY7HV5ms1qYKFHDYk43BWkMNsgqVZ52wPGSTih+cn0HKtEIzuYF4vaY1tLWZxe2PGlGG+EpUtO9kO6ReETLxotdBytR/+rmaOfu2DdmorkQjT09LvYgAN6p1fhwE5ufCJ8bHGQokckFRy68BmwmQGvQmR/EkKLZdkrFNbi1bf2CMVplQcsUHbOG9ijaJNgwzUkfHK+emH07k2KIYkDQ6jMW2KY6a/4rOTJ/Qks1ij83rT4HI3NWQJzw2BDHJndTFVIYlGuq7ARD+57ns9vm+J1ehVBg/IDgv1Y9mBdUn/W8jXWCc6ILEbdHj7bdpl78zLmsiOs5wO0W/VD6xb/YIMftN23JL9qs+gIrTEA40xsChLirKXcvC2dC52s3l99QP6/g/U6+fx
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get project by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/projects/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get project by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Project details","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}},"404":{"description":"Project not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

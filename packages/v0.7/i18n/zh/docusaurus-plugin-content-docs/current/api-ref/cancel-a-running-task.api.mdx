@@ -1,0 +1,71 @@
+---
+id: cancel-a-running-task
+title: "Cancel a running task"
+description: "Cancel a running task"
+sidebar_label: "Cancel a running task"
+hide_title: true
+hide_table_of_contents: true
+api: eJx1VMFu2zAM/RWB2GEDlCboBgzzLW0xoIehxdqdggxgZDpWK0uqRLcNDP/7QNtN06bzxbb0KD6+R6oDxm2GYgW3mO8zrDVETNgQU5LlDjw2BAXYEjRYDwVE5Bo0JHpobaISCk4tacimpgah6IB3USIyJ+u3IAcyU5LQv6vF7AfOquXs57o7/dZ/Ag0lZZNsZBsE8Sv4bbg4U1ebOzJ8WapEMVEmz1QqzApVTc9YkrENOrVPwZad5HwJg/79weOOuryAfi3kcww+Uxa+p4uFvN7iRQ5l0BtyjkqVW2Mo56p1bgcaTPBMniUMY3TWoITN77LEdsdahCG7aJFCpMR2zGxCSQco65m2lEBDFVKDPC59PZVqGsoZt3Ssr1SK/EGyvn/V5WakD70876U5H6pUqFLrvfVbxZjvQVJyHUpxPGQefayhgLls53lny34+CgQaMqXHl45pkxMYRntk7wVV2DpWy+tLNYYMdmQybbK8G8LPCBOlZSvJVuvD7RuRdVTuELQvvGaOMHWi/G8G0CCE9VUYkJMg5wmfHG6EyBFJIVeFpCaMVuhViORnObTJkCqtSL9ppSWfaKOM4CgpLBvrVXTIYh9oEEXGIxcn308WYpVI2eDQJNNg/U/9N5z2JTI98zw6tF5OG5TuJmNWMBgDGophWCdv1hpq8a9YQddtMNOf5Ppelh9aSiL5WsMjJosbUWbVQWmzfJdQVOgyHVHZNz98/j1dAl/U63zpj7lOi+hlfh7RtfIHGu5pN14v/brXUBOWlAYa48bSGIp8EHI0b9Ih+1a9vrq5hb7/B2HYpBg=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Cancel a running task"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/tasks/{id}/cancel"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Cancel a running task
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task cancelled successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

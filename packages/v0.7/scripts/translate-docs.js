@@ -159,7 +159,6 @@ async function main() {
   progressBar.start(files.length, 0);
 
   const CONCURRENCY = 16;
-  const totalFiles = files.length;
 
   // Create worker pool
   const worker = async () => {

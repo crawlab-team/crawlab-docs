@@ -1,0 +1,71 @@
+---
+id: get-list-of-tasks
+title: "Get list of tasks"
+description: "Get list of tasks"
+sidebar_label: "Get list of tasks"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zAM/SsCz1qbdcMG5NZ9oBgwDMW6YYcgB9pmbLWypEl0u8zwfx8oO2lad23Rk2HxUY96JF8PjHWC5Qp+YLpKsNYQMGJLTFGOe3DYEiwhYE2gwThYwu+O4hY0pLKhFmHZA2+DgIxjqimChoo22FmG5etBflIZTWDjJfsca1KuawuKauOjClgbhzk46D1fMn9fxreYEX4bufxGGaY2qUCZlA7p0Non2QrvLaE7ZNugTTQj/E7cRafQ2onxxnDjO77z1LWGSCl4lygJycliIZ+7N301iaVwzs3RUHrH5FiAGII1Zb7s+DIJup+X7ItLKhk0hOgDRTYjV+krelDGjY8t8nj05gQGDS2lJFrdohNH42qJVcjPILMm8QEKY0SRNyszzx4GDewZ7ZP1vXsLw5Dhhq3ALrqypJR+GW5Etxyd9eaMWNl7qrbEja9gCTXl8pEbWMLxLpwoXu+2oYtWQhgM3L/50zgU6vT8ixpTcpMTlV00vM3pHwgjxdNOCFbrw/CFtG4U7BC016BhDruhzMOYQVku4zY+IycdPka8sVhIIbMipThZugmjFTrlA7lXyXexJFUZaW/RMVXqhgpVCo6iwqo1TgWLLC0ADaLIeOXi6P3RQsYh+MQt5kGctuohse/Us38e0x8+DhaNmMCocj81YgW8s6bGyyitoO8LTPQz2mGQ43FjRd/KJCwsVdNmztj2+/OYC+mHi7qi7a0PXqPtBJI95Pms/7WiRzknL3wh53Pc6FH60Rtv2dfyE43Q5ynW0BBWFHMHxpTTsqTAB1kzt5Jb9nt39vkHDMM/fc47sQ==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get list of tasks"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/tasks"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get list of tasks
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"query","schema":{"type":"integer","default":1},"description":"Page number for pagination"},{"name":"size","in":"query","schema":{"type":"integer","default":10},"description":"Number of items per page"},{"name":"all","in":"query","schema":{"type":"boolean","default":false},"description":"Return all items without pagination"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of tasks","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object","properties":{"list":{"type":"array","items":{"type":"object"}},"total":{"type":"integer","format":"int64"}}}},"title":"SuccessWithList"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

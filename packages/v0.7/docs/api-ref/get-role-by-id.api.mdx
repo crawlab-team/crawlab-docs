@@ -1,0 +1,71 @@
+---
+id: get-role-by-id
+title: "Get role by ID"
+description: "Get detailed information about a role"
+sidebar_label: "Get role by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVE1v00AQ/SurEQeQnCYqSAjfUgpVD4iqhVMUpLF3Em+xd7ez47aR5f+OxnbT0ADCF3t3vt68N+MOBLcJ8hVcETcuJRd8gnUGllLJLooLHnK4IDGWBF1N1ji/CdygmgwWoRWDhkNNkEFExoaEWFN24LEhyMFZyMBpnohSQQZMd61jspALt5RBKitqEPIOZBc1Igk7vx0SihBr6I/VYvYBZ5vl7PO6O33Xv4KXIL8Evw3nZ+ZrcUulXFrDFJkSeSFrMBk0FT2ipdI1WJt9CXFSa82nMOhfJh4t5vIc+rWCTzH4REnxni4W+vrd/zrUNNGVIIMyeCEv6ocx1q4cqJvfJnXujpsPQzltnkMkFjeWKoOlAy/nhbbEkMGoxnj19lThN5QSbumYUG0N5Q/F+v6ZiJu2LCkl6PXRZFIFCzlsSUZFKshhroqneedsDxkk4vsn0Vuu1Y7RHSl0ThtsazHLq0szhgyMJipbdrIbws8ImXjZapXV+tB8o0SNXBw67VupRCJMw6TnYnAaWtORHTynFj8yPtRYKJAjkApuE9hMPplBb0IkP0uh5ZKMdUpm0epUPVBhSvUjNmgb502sUVQQyEAZGVMuTt6fLJT8GJI0OMg+7YZullJpip0O2Asw3fPw/PcOTmwIPco81ui8Fh5E6SbxVjCIBxnkzuqyVyGJXnddgYm+c933en3XEqso6wzukR0Wyt2qA+uSflvIN1gn+gfm19fTpr8xz0v0F4jTJfqdcod1qyfI4Cftxn9Iv+4zqAgt8QBjNCzLkqIchBztmM7QfogvPn2Dvv8FOBWvBw==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get role by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/roles/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get detailed information about a role
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Role details","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

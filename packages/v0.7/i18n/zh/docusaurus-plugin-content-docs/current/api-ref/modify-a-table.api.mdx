@@ -1,0 +1,71 @@
+---
+id: modify-a-table
+title: "Modify a table"
+description: "Modify an existing table in the database"
+sidebar_label: "Modify a table"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVU2P2zYQ/SvEoIcEkGNjW6Cobt7dFthDmiC7PRlOMBbHNhOJZMjReg1B/70Y0rKc1TZIgehiS5yPN49vZjpg3EUoV3CLjBuMBOsCNMUqGM/GWSjhrdNme1RoFT2ZyMbuFOOmJmWs4j0pPXgW4DFgQ0xBQnZgsSEowWgowEgoj7yHAgJ9bU0gDSWHlgqI1Z4ahLIDPnrxiByM3aWAzBTE9eNqMfsDZ9vl7K91d/Vb/wtMcdqdu71W7zafqeI7rQL5QJEsk1YYFao9PaGmyjRYq3MKNlxLzsEN+ueB84m6u4V+ncFT5Gunj4L4eS2Vs0yW5Qi9r02FEmX+OUqoblqqS8Gl1OA8BTYU5TRTNyXkW2QP6R6SbS+p67ax8cINQ8CjkM/UxJ+V9CalOWe1dPj0Y45/00FVo7N6tXVBBUr/BUZiKr6WoDnQDyIRAapk2ReAVT6c+pJtG1E6atFjk1QtIYPzU9EvUxjFTnkKWxca5bLacwHQD48IInpnY6bwarGQn5euKWU0pFVsq4pi3LZ1LQB+kmIqpy8pM5ZpRwEKEPTI+dOvV8JRQzHi7gWCRfrILySTOodGuc/w4VR+Q7x3WprbRc4tu4cS5sNYiPPO6H6eRkacn2mPFB6HOdGGWjzQm8kV39IW25rV8v2dyi6pCSNVbTB8TO7XhIHCspW8q/Xl8b1wl+m5NDpXt2f2cJo/8r5JRqlaof/D2Op/PmHjaxq7ZNTVue1W07OxOcZvz3U5KDYJs1/3Miu3LqE8MX4T8FDjRkiYECTESB+dbAqZ086TnUXXhoqUNpJo08oQPNBGVWJHQaFujFW+RhZ9QAFyGznk4s3vbxaiBbnRBu1F0cMuyBvgOZhu1PL/2RonQpieeO5rNFZyJ010JzWt4KwmKKBMCyULauzkdQF7UWC5gq4T039C3ffy+WtLQZSyLuARg0nI5bK0ifJfQ7nFOtJ3inn14TTlX6txGfwH8GH0WlH5I9atvEEBX+iYd2G64j2hppBg5IObnGz2IO6j42Qi9MXgsawq8vxd2/VFe75/d/8ABWxOe6tJ4wICHmQh4yGDdKn41DDpWwc12l2bhgXkmPL8Cwp4z+U=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Modify a table"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases/{id}/tables/modify"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Modify an existing table in the database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"Table name"},"columns":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"Column name"},"new_name":{"type":"string","description":"New column name (for rename operations)"},"type":{"type":"string","description":"Column data type"},"action":{"type":"string","enum":["add","modify","drop"],"description":"Action to perform on the column"}}}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Table modified successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

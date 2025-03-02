@@ -1,0 +1,71 @@
+---
+id: get-remote-git-branches
+title: "Get remote Git branches"
+description: "Get all remote branches in the Git repository"
+sidebar_label: "Get remote Git branches"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVFFv00AM/isniweQ0rUaSIi8dQyqSSAQg6eqSM7FbW4kdzefs62K8t+Rk2zrVkCiL2nu/Nnf99lOB4K7BPkaVk5gk0FJybKL4oKHHFYkBuvaMDVByBSM3laUjPNGKjIrJ4YphuQk8B4yiMjYkBBryg48NgQ5uBIycJovolSQAdN165hKyIVbyiDZihqEvAPZR0UkYed3Q0IRYoX+XC9m73C2Xc4+brrTN/0LeE72c/C7cH5mvhRXZOWiVGpMibxQaTAZNBXdYUnWNVibhxLipNaa9zDonyceb8zFOfQbJZ9i8ImS8j1dLPTxNP6TS2LC9rlrkIENXsiLQjDG2llUyPwqKa479iEMldUHDpFY3FjVhpIOopwX2hFDBtvADcp49PpUlTSUEu7o2FtVifKHYn3/6Mllay2lBL3+NJlUoYQcdiRjcyrIYb5zkuadK/v5vdT5KB0ySMQ39+PQcq3hGN1R785pi20tZvn1woyQwetEtmUn+wF+RsjEy1aLrjeH15fq22jNYdCDskokwjRm+l4MQYNS57dhiJwUv2e8rbFQIkckldw2sJliMoPehEh+lkLLlkzp1Nui1Xm7pcJYjSM2WDbOm1ijaH8gA3VkTLk4eXuy0F7EkKTBYQqmrdHdmyZI9+xgip6w6h6H6r/XdbJH6E7msUbnlcnQpW5q7hq0uZBBPizxAYmpw5sMqpBEI7uuwEQ/uO57Pb5uibVxmwxukB0W6u+6g9Il/V9CvsU60T/kvPw2fSdemccV/Avr6RC96rrButU3yOAX7ccvUL/pM6gIS+KBxnixtJaiHECO1lLn7GHuVx++Q9//BoAsxSo=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get remote Git branches"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}/branches/remote"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get all remote branches in the Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of remote branches","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

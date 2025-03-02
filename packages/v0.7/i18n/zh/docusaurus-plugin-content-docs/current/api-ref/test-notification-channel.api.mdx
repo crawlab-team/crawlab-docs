@@ -1,0 +1,71 @@
+---
+id: test-notification-channel
+title: "Test notification channel"
+description: "Test a notification channel by sending a test notification"
+sidebar_label: "Test notification channel"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SsCscMGKE3QDRjmWz82oIetxdqdAg+gbSZWZ0uqRDcNDP/3gbbTpEnay+ZLIolf7/GRLTAuIyRz+OHYLEyObJyNkGooKObBeDlDAncUWaGyO1YqL9FaqlS2VpFsYexSoWIx3DUDDR4D1sQUJFMLFmuCBEwBGowE98glaAj00JhABSQcGtIQ85JqhKQFXnvxiByMXfYBmSmI6+/5bPIFJ4uzybe0Pf3UvYP9yr87u3SX5+o6u6ecrwoVyAeKZJkKhVGhKukJC8pNjZV6TsGGK8m5cYNuP/Dwoq4uoUuH4inyuSvWUvE+ltxZJsvyhN5XIzfT+yih2kOorg8uUIPzFNhQlNeaYsQlHePkSL9Ga8WubxB0/Se1Ru9sHEKezmbyc8T9RbOFMPhvOHJX7IIwlmlJATQsXKiRh6uPp0L6q5ClIchHkgnETftumzynGGFEXhOXrhDJuciDkEpIYLoLNU5HYcdpa4puKooGDZHC40bBTajEC705IP6SFthUrM5urtTg0ssjUt4Ew+ve/ZwwUDhrJPc83X2+Ff4GinaNnhGWzB7GyZBz1hv1iKUFP7ci/PqEta/ohWh2mDN24fq4I08XAVcVZlL2ASSBsnBBjTZaoVXOk51E14ScVGEkbtbIQK0oU7nYUVBY1MYqXyFLV0GD8DeEnJ18PplJHdKHGnvtjGvhUHpjO/brardi/Lf1NHLL9MRTX6GxUljf4nYUyBxeCETmYJQIaEj6RdarJNVQirCSObRthpF+harr5PqhoSDNTzU8YjCYCevzFgoT5X8ByQKrSG9AfP9zXCkf1HbzvFL8eIl2Laxj1cgJNPyh9bB4u7TTUBIWFPoyhoeLIdnkTty3jgeD3umNx1mek+c3bdOdqbu5vr0DDdm4JOt+C0DAlWx/XA1FOj+QLFtU7lqo0C6bQcFDTPn+AnFlUj8=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Test notification channel"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/notifications/channels/{id}/test"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Test a notification channel by sending a test notification
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"message":{"type":"string","description":"Test message to send"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Test notification sent","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

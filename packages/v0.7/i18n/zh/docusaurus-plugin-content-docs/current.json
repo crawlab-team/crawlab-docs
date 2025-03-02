@@ -78,5 +78,665 @@
   "sidebar.docsSidebar.category.系统设置": {
     "message": "系统设置",
     "description": "The label for category 系统设置 in sidebar docsSidebar"
+  },
+  "sidebar.apiSidebar.category.Authentication": {
+    "message": "Authentication",
+    "description": "The label for category Authentication in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Users": {
+    "message": "Users",
+    "description": "The label for category Users in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Projects": {
+    "message": "Projects",
+    "description": "The label for category Projects in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Spiders": {
+    "message": "Spiders",
+    "description": "The label for category Spiders in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Tasks": {
+    "message": "Tasks",
+    "description": "The label for category Tasks in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Schedules": {
+    "message": "Schedules",
+    "description": "The label for category Schedules in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Nodes": {
+    "message": "Nodes",
+    "description": "The label for category Nodes in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.System": {
+    "message": "System",
+    "description": "The label for category System in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Git": {
+    "message": "Git",
+    "description": "The label for category Git in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Dependencies": {
+    "message": "Dependencies",
+    "description": "The label for category Dependencies in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Notifications": {
+    "message": "Notifications",
+    "description": "The label for category Notifications in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Database": {
+    "message": "Database",
+    "description": "The label for category Database in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Permissions": {
+    "message": "Permissions",
+    "description": "The label for category Permissions in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.category.Export": {
+    "message": "Export",
+    "description": "The label for category Export in sidebar apiSidebar"
+  },
+  "sidebar.apiSidebar.doc.Login to get authentication token": {
+    "message": "Login to get authentication token",
+    "description": "The label for the doc item Login to get authentication token in sidebar apiSidebar, linking to the doc api-ref/login-to-get-authentication-token"
+  },
+  "sidebar.apiSidebar.doc.Get list of API tokens": {
+    "message": "Get list of API tokens",
+    "description": "The label for the doc item Get list of API tokens in sidebar apiSidebar, linking to the doc api-ref/get-list-of-api-tokens"
+  },
+  "sidebar.apiSidebar.doc.Create a new API token": {
+    "message": "Create a new API token",
+    "description": "The label for the doc item Create a new API token in sidebar apiSidebar, linking to the doc api-ref/create-a-new-api-token"
+  },
+  "sidebar.apiSidebar.doc.Get list of users": {
+    "message": "Get list of users",
+    "description": "The label for the doc item Get list of users in sidebar apiSidebar, linking to the doc api-ref/get-list-of-users"
+  },
+  "sidebar.apiSidebar.doc.Create a new user": {
+    "message": "Create a new user",
+    "description": "The label for the doc item Create a new user in sidebar apiSidebar, linking to the doc api-ref/create-a-new-user"
+  },
+  "sidebar.apiSidebar.doc.Delete multiple users": {
+    "message": "Delete multiple users",
+    "description": "The label for the doc item Delete multiple users in sidebar apiSidebar, linking to the doc api-ref/delete-multiple-users"
+  },
+  "sidebar.apiSidebar.doc.Get user by ID": {
+    "message": "Get user by ID",
+    "description": "The label for the doc item Get user by ID in sidebar apiSidebar, linking to the doc api-ref/get-user-by-id"
+  },
+  "sidebar.apiSidebar.doc.Update user by ID": {
+    "message": "Update user by ID",
+    "description": "The label for the doc item Update user by ID in sidebar apiSidebar, linking to the doc api-ref/update-user-by-id"
+  },
+  "sidebar.apiSidebar.doc.Delete user by ID": {
+    "message": "Delete user by ID",
+    "description": "The label for the doc item Delete user by ID in sidebar apiSidebar, linking to the doc api-ref/delete-user-by-id"
+  },
+  "sidebar.apiSidebar.doc.Change user password": {
+    "message": "Change user password",
+    "description": "The label for the doc item Change user password in sidebar apiSidebar, linking to the doc api-ref/change-user-password"
+  },
+  "sidebar.apiSidebar.doc.Get current user information": {
+    "message": "Get current user information",
+    "description": "The label for the doc item Get current user information in sidebar apiSidebar, linking to the doc api-ref/get-current-user-information"
+  },
+  "sidebar.apiSidebar.doc.Change current user password": {
+    "message": "Change current user password",
+    "description": "The label for the doc item Change current user password in sidebar apiSidebar, linking to the doc api-ref/change-current-user-password"
+  },
+  "sidebar.apiSidebar.doc.Get list of projects": {
+    "message": "Get list of projects",
+    "description": "The label for the doc item Get list of projects in sidebar apiSidebar, linking to the doc api-ref/get-list-of-projects"
+  },
+  "sidebar.apiSidebar.doc.Create a new project": {
+    "message": "Create a new project",
+    "description": "The label for the doc item Create a new project in sidebar apiSidebar, linking to the doc api-ref/create-a-new-project"
+  },
+  "sidebar.apiSidebar.doc.Delete multiple projects": {
+    "message": "Delete multiple projects",
+    "description": "The label for the doc item Delete multiple projects in sidebar apiSidebar, linking to the doc api-ref/delete-multiple-projects"
+  },
+  "sidebar.apiSidebar.doc.Get project by ID": {
+    "message": "Get project by ID",
+    "description": "The label for the doc item Get project by ID in sidebar apiSidebar, linking to the doc api-ref/get-project-by-id"
+  },
+  "sidebar.apiSidebar.doc.Update project by ID": {
+    "message": "Update project by ID",
+    "description": "The label for the doc item Update project by ID in sidebar apiSidebar, linking to the doc api-ref/update-project-by-id"
+  },
+  "sidebar.apiSidebar.doc.Delete project by ID": {
+    "message": "Delete project by ID",
+    "description": "The label for the doc item Delete project by ID in sidebar apiSidebar, linking to the doc api-ref/delete-project-by-id"
+  },
+  "sidebar.apiSidebar.doc.Get list of spiders": {
+    "message": "Get list of spiders",
+    "description": "The label for the doc item Get list of spiders in sidebar apiSidebar, linking to the doc api-ref/get-list-of-spiders"
+  },
+  "sidebar.apiSidebar.doc.Create a new spider": {
+    "message": "Create a new spider",
+    "description": "The label for the doc item Create a new spider in sidebar apiSidebar, linking to the doc api-ref/create-a-new-spider"
+  },
+  "sidebar.apiSidebar.doc.Delete multiple spiders": {
+    "message": "Delete multiple spiders",
+    "description": "The label for the doc item Delete multiple spiders in sidebar apiSidebar, linking to the doc api-ref/delete-multiple-spiders"
+  },
+  "sidebar.apiSidebar.doc.Get spider by ID": {
+    "message": "Get spider by ID",
+    "description": "The label for the doc item Get spider by ID in sidebar apiSidebar, linking to the doc api-ref/get-spider-by-id"
+  },
+  "sidebar.apiSidebar.doc.Update spider by ID": {
+    "message": "Update spider by ID",
+    "description": "The label for the doc item Update spider by ID in sidebar apiSidebar, linking to the doc api-ref/update-spider-by-id"
+  },
+  "sidebar.apiSidebar.doc.Delete spider by ID": {
+    "message": "Delete spider by ID",
+    "description": "The label for the doc item Delete spider by ID in sidebar apiSidebar, linking to the doc api-ref/delete-spider-by-id"
+  },
+  "sidebar.apiSidebar.doc.Run a spider": {
+    "message": "Run a spider",
+    "description": "The label for the doc item Run a spider in sidebar apiSidebar, linking to the doc api-ref/run-a-spider"
+  },
+  "sidebar.apiSidebar.doc.List spider files": {
+    "message": "List spider files",
+    "description": "The label for the doc item List spider files in sidebar apiSidebar, linking to the doc api-ref/list-spider-files"
+  },
+  "sidebar.apiSidebar.doc.Get content of a spider file": {
+    "message": "Get content of a spider file",
+    "description": "The label for the doc item Get content of a spider file in sidebar apiSidebar, linking to the doc api-ref/get-content-of-a-spider-file"
+  },
+  "sidebar.apiSidebar.doc.Save content to a spider file": {
+    "message": "Save content to a spider file",
+    "description": "The label for the doc item Save content to a spider file in sidebar apiSidebar, linking to the doc api-ref/save-content-to-a-spider-file"
+  },
+  "sidebar.apiSidebar.doc.Get spider results": {
+    "message": "Get spider results",
+    "description": "The label for the doc item Get spider results in sidebar apiSidebar, linking to the doc api-ref/get-spider-results"
+  },
+  "sidebar.apiSidebar.doc.Get spider file info": {
+    "message": "Get spider file info",
+    "description": "The label for the doc item Get spider file info in sidebar apiSidebar, linking to the doc api-ref/get-spider-file-info"
+  },
+  "sidebar.apiSidebar.doc.Save multiple spider files": {
+    "message": "Save multiple spider files",
+    "description": "The label for the doc item Save multiple spider files in sidebar apiSidebar, linking to the doc api-ref/save-multiple-spider-files"
+  },
+  "sidebar.apiSidebar.doc.Save spider directory": {
+    "message": "Save spider directory",
+    "description": "The label for the doc item Save spider directory in sidebar apiSidebar, linking to the doc api-ref/save-spider-directory"
+  },
+  "sidebar.apiSidebar.doc.Rename spider file": {
+    "message": "Rename spider file",
+    "description": "The label for the doc item Rename spider file in sidebar apiSidebar, linking to the doc api-ref/rename-spider-file"
+  },
+  "sidebar.apiSidebar.doc.Copy spider file": {
+    "message": "Copy spider file",
+    "description": "The label for the doc item Copy spider file in sidebar apiSidebar, linking to the doc api-ref/copy-spider-file"
+  },
+  "sidebar.apiSidebar.doc.Export spider files": {
+    "message": "Export spider files",
+    "description": "The label for the doc item Export spider files in sidebar apiSidebar, linking to the doc api-ref/export-spider-files"
+  },
+  "sidebar.apiSidebar.doc.Delete spider file": {
+    "message": "Delete spider file",
+    "description": "The label for the doc item Delete spider file in sidebar apiSidebar, linking to the doc api-ref/delete-spider-file"
+  },
+  "sidebar.apiSidebar.doc.Get list of tasks": {
+    "message": "Get list of tasks",
+    "description": "The label for the doc item Get list of tasks in sidebar apiSidebar, linking to the doc api-ref/get-list-of-tasks"
+  },
+  "sidebar.apiSidebar.doc.Delete multiple tasks": {
+    "message": "Delete multiple tasks",
+    "description": "The label for the doc item Delete multiple tasks in sidebar apiSidebar, linking to the doc api-ref/delete-multiple-tasks"
+  },
+  "sidebar.apiSidebar.doc.Run a task directly": {
+    "message": "Run a task directly",
+    "description": "The label for the doc item Run a task directly in sidebar apiSidebar, linking to the doc api-ref/run-a-task-directly"
+  },
+  "sidebar.apiSidebar.doc.Get task by ID": {
+    "message": "Get task by ID",
+    "description": "The label for the doc item Get task by ID in sidebar apiSidebar, linking to the doc api-ref/get-task-by-id"
+  },
+  "sidebar.apiSidebar.doc.Delete task by ID": {
+    "message": "Delete task by ID",
+    "description": "The label for the doc item Delete task by ID in sidebar apiSidebar, linking to the doc api-ref/delete-task-by-id"
+  },
+  "sidebar.apiSidebar.doc.Restart a task": {
+    "message": "Restart a task",
+    "description": "The label for the doc item Restart a task in sidebar apiSidebar, linking to the doc api-ref/restart-a-task"
+  },
+  "sidebar.apiSidebar.doc.Cancel a running task": {
+    "message": "Cancel a running task",
+    "description": "The label for the doc item Cancel a running task in sidebar apiSidebar, linking to the doc api-ref/cancel-a-running-task"
+  },
+  "sidebar.apiSidebar.doc.Get task logs": {
+    "message": "Get task logs",
+    "description": "The label for the doc item Get task logs in sidebar apiSidebar, linking to the doc api-ref/get-task-logs"
+  },
+  "sidebar.apiSidebar.doc.Get list of schedules": {
+    "message": "Get list of schedules",
+    "description": "The label for the doc item Get list of schedules in sidebar apiSidebar, linking to the doc api-ref/get-list-of-schedules"
+  },
+  "sidebar.apiSidebar.doc.Create a new schedule": {
+    "message": "Create a new schedule",
+    "description": "The label for the doc item Create a new schedule in sidebar apiSidebar, linking to the doc api-ref/create-a-new-schedule"
+  },
+  "sidebar.apiSidebar.doc.Delete multiple schedules": {
+    "message": "Delete multiple schedules",
+    "description": "The label for the doc item Delete multiple schedules in sidebar apiSidebar, linking to the doc api-ref/delete-multiple-schedules"
+  },
+  "sidebar.apiSidebar.doc.Get schedule by ID": {
+    "message": "Get schedule by ID",
+    "description": "The label for the doc item Get schedule by ID in sidebar apiSidebar, linking to the doc api-ref/get-schedule-by-id"
+  },
+  "sidebar.apiSidebar.doc.Update schedule by ID": {
+    "message": "Update schedule by ID",
+    "description": "The label for the doc item Update schedule by ID in sidebar apiSidebar, linking to the doc api-ref/update-schedule-by-id"
+  },
+  "sidebar.apiSidebar.doc.Delete schedule by ID": {
+    "message": "Delete schedule by ID",
+    "description": "The label for the doc item Delete schedule by ID in sidebar apiSidebar, linking to the doc api-ref/delete-schedule-by-id"
+  },
+  "sidebar.apiSidebar.doc.Enable a schedule": {
+    "message": "Enable a schedule",
+    "description": "The label for the doc item Enable a schedule in sidebar apiSidebar, linking to the doc api-ref/enable-a-schedule"
+  },
+  "sidebar.apiSidebar.doc.Disable a schedule": {
+    "message": "Disable a schedule",
+    "description": "The label for the doc item Disable a schedule in sidebar apiSidebar, linking to the doc api-ref/disable-a-schedule"
+  },
+  "sidebar.apiSidebar.doc.Run a schedule immediately": {
+    "message": "Run a schedule immediately",
+    "description": "The label for the doc item Run a schedule immediately in sidebar apiSidebar, linking to the doc api-ref/run-a-schedule-immediately"
+  },
+  "sidebar.apiSidebar.doc.Get list of nodes": {
+    "message": "Get list of nodes",
+    "description": "The label for the doc item Get list of nodes in sidebar apiSidebar, linking to the doc api-ref/get-list-of-nodes"
+  },
+  "sidebar.apiSidebar.doc.Get node metrics": {
+    "message": "Get node metrics",
+    "description": "The label for the doc item Get node metrics in sidebar apiSidebar, linking to the doc api-ref/get-node-metrics"
+  },
+  "sidebar.apiSidebar.doc.Get metrics for a specific node": {
+    "message": "Get metrics for a specific node",
+    "description": "The label for the doc item Get metrics for a specific node in sidebar apiSidebar, linking to the doc api-ref/get-metrics-for-a-specific-node"
+  },
+  "sidebar.apiSidebar.doc.Get time-range metrics for a node": {
+    "message": "Get time-range metrics for a node",
+    "description": "The label for the doc item Get time-range metrics for a node in sidebar apiSidebar, linking to the doc api-ref/get-time-range-metrics-for-a-node"
+  },
+  "sidebar.apiSidebar.doc.Get current metrics for a node": {
+    "message": "Get current metrics for a node",
+    "description": "The label for the doc item Get current metrics for a node in sidebar apiSidebar, linking to the doc api-ref/get-current-metrics-for-a-node"
+  },
+  "sidebar.apiSidebar.doc.Get system information": {
+    "message": "Get system information",
+    "description": "The label for the doc item Get system information in sidebar apiSidebar, linking to the doc api-ref/get-system-information"
+  },
+  "sidebar.apiSidebar.doc.Get system statistics": {
+    "message": "Get system statistics",
+    "description": "The label for the doc item Get system statistics in sidebar apiSidebar, linking to the doc api-ref/get-system-statistics"
+  },
+  "sidebar.apiSidebar.doc.Get system settings": {
+    "message": "Get system settings",
+    "description": "The label for the doc item Get system settings in sidebar apiSidebar, linking to the doc api-ref/get-system-settings"
+  },
+  "sidebar.apiSidebar.doc.Update system settings": {
+    "message": "Update system settings",
+    "description": "The label for the doc item Update system settings in sidebar apiSidebar, linking to the doc api-ref/update-system-settings"
+  },
+  "sidebar.apiSidebar.doc.Get list of Git repositories": {
+    "message": "Get list of Git repositories",
+    "description": "The label for the doc item Get list of Git repositories in sidebar apiSidebar, linking to the doc api-ref/get-list-of-git-repositories"
+  },
+  "sidebar.apiSidebar.doc.Create a new Git repository": {
+    "message": "Create a new Git repository",
+    "description": "The label for the doc item Create a new Git repository in sidebar apiSidebar, linking to the doc api-ref/create-a-new-git-repository"
+  },
+  "sidebar.apiSidebar.doc.Delete multiple Git repositories": {
+    "message": "Delete multiple Git repositories",
+    "description": "The label for the doc item Delete multiple Git repositories in sidebar apiSidebar, linking to the doc api-ref/delete-multiple-git-repositories"
+  },
+  "sidebar.apiSidebar.doc.Get Git repository by ID": {
+    "message": "Get Git repository by ID",
+    "description": "The label for the doc item Get Git repository by ID in sidebar apiSidebar, linking to the doc api-ref/get-git-repository-by-id"
+  },
+  "sidebar.apiSidebar.doc.Delete Git repository by ID": {
+    "message": "Delete Git repository by ID",
+    "description": "The label for the doc item Delete Git repository by ID in sidebar apiSidebar, linking to the doc api-ref/delete-git-repository-by-id"
+  },
+  "sidebar.apiSidebar.doc.Clone a Git repository": {
+    "message": "Clone a Git repository",
+    "description": "The label for the doc item Clone a Git repository in sidebar apiSidebar, linking to the doc api-ref/clone-a-git-repository"
+  },
+  "sidebar.apiSidebar.doc.Get Git branches": {
+    "message": "Get Git branches",
+    "description": "The label for the doc item Get Git branches in sidebar apiSidebar, linking to the doc api-ref/get-git-branches"
+  },
+  "sidebar.apiSidebar.doc.Create a new branch": {
+    "message": "Create a new branch",
+    "description": "The label for the doc item Create a new branch in sidebar apiSidebar, linking to the doc api-ref/create-a-new-branch"
+  },
+  "sidebar.apiSidebar.doc.Delete a branch": {
+    "message": "Delete a branch",
+    "description": "The label for the doc item Delete a branch in sidebar apiSidebar, linking to the doc api-ref/delete-a-branch"
+  },
+  "sidebar.apiSidebar.doc.Get current Git branch": {
+    "message": "Get current Git branch",
+    "description": "The label for the doc item Get current Git branch in sidebar apiSidebar, linking to the doc api-ref/get-current-git-branch"
+  },
+  "sidebar.apiSidebar.doc.Get remote Git branches": {
+    "message": "Get remote Git branches",
+    "description": "The label for the doc item Get remote Git branches in sidebar apiSidebar, linking to the doc api-ref/get-remote-git-branches"
+  },
+  "sidebar.apiSidebar.doc.Checkout a branch": {
+    "message": "Checkout a branch",
+    "description": "The label for the doc item Checkout a branch in sidebar apiSidebar, linking to the doc api-ref/checkout-a-branch"
+  },
+  "sidebar.apiSidebar.doc.Checkout a remote branch": {
+    "message": "Checkout a remote branch",
+    "description": "The label for the doc item Checkout a remote branch in sidebar apiSidebar, linking to the doc api-ref/checkout-a-remote-branch"
+  },
+  "sidebar.apiSidebar.doc.Get Git changes": {
+    "message": "Get Git changes",
+    "description": "The label for the doc item Get Git changes in sidebar apiSidebar, linking to the doc api-ref/get-git-changes"
+  },
+  "sidebar.apiSidebar.doc.Stage Git changes": {
+    "message": "Stage Git changes",
+    "description": "The label for the doc item Stage Git changes in sidebar apiSidebar, linking to the doc api-ref/stage-git-changes"
+  },
+  "sidebar.apiSidebar.doc.Discard Git changes": {
+    "message": "Discard Git changes",
+    "description": "The label for the doc item Discard Git changes in sidebar apiSidebar, linking to the doc api-ref/discard-git-changes"
+  },
+  "sidebar.apiSidebar.doc.Pull from remote": {
+    "message": "Pull from remote",
+    "description": "The label for the doc item Pull from remote in sidebar apiSidebar, linking to the doc api-ref/pull-from-remote"
+  },
+  "sidebar.apiSidebar.doc.WebSocket for Git pull": {
+    "message": "WebSocket for Git pull",
+    "description": "The label for the doc item WebSocket for Git pull in sidebar apiSidebar, linking to the doc api-ref/web-socket-for-git-pull"
+  },
+  "sidebar.apiSidebar.doc.WebSocket for Git push": {
+    "message": "WebSocket for Git push",
+    "description": "The label for the doc item WebSocket for Git push in sidebar apiSidebar, linking to the doc api-ref/web-socket-for-git-push"
+  },
+  "sidebar.apiSidebar.doc.Get file differences": {
+    "message": "Get file differences",
+    "description": "The label for the doc item Get file differences in sidebar apiSidebar, linking to the doc api-ref/get-file-differences"
+  },
+  "sidebar.apiSidebar.doc.Commit changes": {
+    "message": "Commit changes",
+    "description": "The label for the doc item Commit changes in sidebar apiSidebar, linking to the doc api-ref/commit-changes"
+  },
+  "sidebar.apiSidebar.doc.Push to remote": {
+    "message": "Push to remote",
+    "description": "The label for the doc item Push to remote in sidebar apiSidebar, linking to the doc api-ref/push-to-remote"
+  },
+  "sidebar.apiSidebar.doc.Get Git logs": {
+    "message": "Get Git logs",
+    "description": "The label for the doc item Get Git logs in sidebar apiSidebar, linking to the doc api-ref/get-git-logs"
+  },
+  "sidebar.apiSidebar.doc.List Git files": {
+    "message": "List Git files",
+    "description": "The label for the doc item List Git files in sidebar apiSidebar, linking to the doc api-ref/list-git-files"
+  },
+  "sidebar.apiSidebar.doc.Get Git file content": {
+    "message": "Get Git file content",
+    "description": "The label for the doc item Get Git file content in sidebar apiSidebar, linking to the doc api-ref/get-git-file-content"
+  },
+  "sidebar.apiSidebar.doc.Save Git file": {
+    "message": "Save Git file",
+    "description": "The label for the doc item Save Git file in sidebar apiSidebar, linking to the doc api-ref/save-git-file"
+  },
+  "sidebar.apiSidebar.doc.Get spiders in Git repository": {
+    "message": "Get spiders in Git repository",
+    "description": "The label for the doc item Get spiders in Git repository in sidebar apiSidebar, linking to the doc api-ref/get-spiders-in-git-repository"
+  },
+  "sidebar.apiSidebar.doc.Create spider from Git repository": {
+    "message": "Create spider from Git repository",
+    "description": "The label for the doc item Create spider from Git repository in sidebar apiSidebar, linking to the doc api-ref/create-spider-from-git-repository"
+  },
+  "sidebar.apiSidebar.doc.Get dependency configurations": {
+    "message": "Get dependency configurations",
+    "description": "The label for the doc item Get dependency configurations in sidebar apiSidebar, linking to the doc api-ref/get-dependency-configurations"
+  },
+  "sidebar.apiSidebar.doc.Create a new dependency configuration": {
+    "message": "Create a new dependency configuration",
+    "description": "The label for the doc item Create a new dependency configuration in sidebar apiSidebar, linking to the doc api-ref/create-a-new-dependency-configuration"
+  },
+  "sidebar.apiSidebar.doc.Get dependency repositories": {
+    "message": "Get dependency repositories",
+    "description": "The label for the doc item Get dependency repositories in sidebar apiSidebar, linking to the doc api-ref/get-dependency-repositories"
+  },
+  "sidebar.apiSidebar.doc.Add a new dependency repository": {
+    "message": "Add a new dependency repository",
+    "description": "The label for the doc item Add a new dependency repository in sidebar apiSidebar, linking to the doc api-ref/add-a-new-dependency-repository"
+  },
+  "sidebar.apiSidebar.doc.Get dependencies": {
+    "message": "Get dependencies",
+    "description": "The label for the doc item Get dependencies in sidebar apiSidebar, linking to the doc api-ref/get-dependencies"
+  },
+  "sidebar.apiSidebar.doc.Get spider dependencies": {
+    "message": "Get spider dependencies",
+    "description": "The label for the doc item Get spider dependencies in sidebar apiSidebar, linking to the doc api-ref/get-spider-dependencies"
+  },
+  "sidebar.apiSidebar.doc.Install dependencies for a spider": {
+    "message": "Install dependencies for a spider",
+    "description": "The label for the doc item Install dependencies for a spider in sidebar apiSidebar, linking to the doc api-ref/install-dependencies-for-a-spider"
+  },
+  "sidebar.apiSidebar.doc.Get dependency settings": {
+    "message": "Get dependency settings",
+    "description": "The label for the doc item Get dependency settings in sidebar apiSidebar, linking to the doc api-ref/get-dependency-settings"
+  },
+  "sidebar.apiSidebar.doc.Create dependency setting": {
+    "message": "Create dependency setting",
+    "description": "The label for the doc item Create dependency setting in sidebar apiSidebar, linking to the doc api-ref/create-dependency-setting"
+  },
+  "sidebar.apiSidebar.doc.Get dependency setting by ID": {
+    "message": "Get dependency setting by ID",
+    "description": "The label for the doc item Get dependency setting by ID in sidebar apiSidebar, linking to the doc api-ref/get-dependency-setting-by-id"
+  },
+  "sidebar.apiSidebar.doc.Update dependency setting": {
+    "message": "Update dependency setting",
+    "description": "The label for the doc item Update dependency setting in sidebar apiSidebar, linking to the doc api-ref/update-dependency-setting"
+  },
+  "sidebar.apiSidebar.doc.Delete dependency setting": {
+    "message": "Delete dependency setting",
+    "description": "The label for the doc item Delete dependency setting in sidebar apiSidebar, linking to the doc api-ref/delete-dependency-setting"
+  },
+  "sidebar.apiSidebar.doc.Get dependency configs for a language": {
+    "message": "Get dependency configs for a language",
+    "description": "The label for the doc item Get dependency configs for a language in sidebar apiSidebar, linking to the doc api-ref/get-dependency-configs-for-a-language"
+  },
+  "sidebar.apiSidebar.doc.Get notification settings": {
+    "message": "Get notification settings",
+    "description": "The label for the doc item Get notification settings in sidebar apiSidebar, linking to the doc api-ref/get-notification-settings"
+  },
+  "sidebar.apiSidebar.doc.Create a new notification setting": {
+    "message": "Create a new notification setting",
+    "description": "The label for the doc item Create a new notification setting in sidebar apiSidebar, linking to the doc api-ref/create-a-new-notification-setting"
+  },
+  "sidebar.apiSidebar.doc.Enable a notification setting": {
+    "message": "Enable a notification setting",
+    "description": "The label for the doc item Enable a notification setting in sidebar apiSidebar, linking to the doc api-ref/enable-a-notification-setting"
+  },
+  "sidebar.apiSidebar.doc.Disable a notification setting": {
+    "message": "Disable a notification setting",
+    "description": "The label for the doc item Disable a notification setting in sidebar apiSidebar, linking to the doc api-ref/disable-a-notification-setting"
+  },
+  "sidebar.apiSidebar.doc.Get notification channels": {
+    "message": "Get notification channels",
+    "description": "The label for the doc item Get notification channels in sidebar apiSidebar, linking to the doc api-ref/get-notification-channels"
+  },
+  "sidebar.apiSidebar.doc.Create a new notification channel": {
+    "message": "Create a new notification channel",
+    "description": "The label for the doc item Create a new notification channel in sidebar apiSidebar, linking to the doc api-ref/create-a-new-notification-channel"
+  },
+  "sidebar.apiSidebar.doc.Get notification requests": {
+    "message": "Get notification requests",
+    "description": "The label for the doc item Get notification requests in sidebar apiSidebar, linking to the doc api-ref/get-notification-requests"
+  },
+  "sidebar.apiSidebar.doc.Test notification setting": {
+    "message": "Test notification setting",
+    "description": "The label for the doc item Test notification setting in sidebar apiSidebar, linking to the doc api-ref/test-notification-setting"
+  },
+  "sidebar.apiSidebar.doc.Test notification channel": {
+    "message": "Test notification channel",
+    "description": "The label for the doc item Test notification channel in sidebar apiSidebar, linking to the doc api-ref/test-notification-channel"
+  },
+  "sidebar.apiSidebar.doc.Get notification alerts": {
+    "message": "Get notification alerts",
+    "description": "The label for the doc item Get notification alerts in sidebar apiSidebar, linking to the doc api-ref/get-notification-alerts"
+  },
+  "sidebar.apiSidebar.doc.Create notification alert": {
+    "message": "Create notification alert",
+    "description": "The label for the doc item Create notification alert in sidebar apiSidebar, linking to the doc api-ref/create-notification-alert"
+  },
+  "sidebar.apiSidebar.doc.Get notification alert by ID": {
+    "message": "Get notification alert by ID",
+    "description": "The label for the doc item Get notification alert by ID in sidebar apiSidebar, linking to the doc api-ref/get-notification-alert-by-id"
+  },
+  "sidebar.apiSidebar.doc.Update notification alert": {
+    "message": "Update notification alert",
+    "description": "The label for the doc item Update notification alert in sidebar apiSidebar, linking to the doc api-ref/update-notification-alert"
+  },
+  "sidebar.apiSidebar.doc.Delete notification alert": {
+    "message": "Delete notification alert",
+    "description": "The label for the doc item Delete notification alert in sidebar apiSidebar, linking to the doc api-ref/delete-notification-alert"
+  },
+  "sidebar.apiSidebar.doc.Get database collections": {
+    "message": "Get database collections",
+    "description": "The label for the doc item Get database collections in sidebar apiSidebar, linking to the doc api-ref/get-database-collections"
+  },
+  "sidebar.apiSidebar.doc.Find documents in a collection": {
+    "message": "Find documents in a collection",
+    "description": "The label for the doc item Find documents in a collection in sidebar apiSidebar, linking to the doc api-ref/find-documents-in-a-collection"
+  },
+  "sidebar.apiSidebar.doc.Aggregate documents in a collection": {
+    "message": "Aggregate documents in a collection",
+    "description": "The label for the doc item Aggregate documents in a collection in sidebar apiSidebar, linking to the doc api-ref/aggregate-documents-in-a-collection"
+  },
+  "sidebar.apiSidebar.doc.Get database list": {
+    "message": "Get database list",
+    "description": "The label for the doc item Get database list in sidebar apiSidebar, linking to the doc api-ref/get-database-list"
+  },
+  "sidebar.apiSidebar.doc.Create a new database": {
+    "message": "Create a new database",
+    "description": "The label for the doc item Create a new database in sidebar apiSidebar, linking to the doc api-ref/create-a-new-database"
+  },
+  "sidebar.apiSidebar.doc.Get database by ID": {
+    "message": "Get database by ID",
+    "description": "The label for the doc item Get database by ID in sidebar apiSidebar, linking to the doc api-ref/get-database-by-id"
+  },
+  "sidebar.apiSidebar.doc.Update database by ID": {
+    "message": "Update database by ID",
+    "description": "The label for the doc item Update database by ID in sidebar apiSidebar, linking to the doc api-ref/update-database-by-id"
+  },
+  "sidebar.apiSidebar.doc.Test database connection": {
+    "message": "Test database connection",
+    "description": "The label for the doc item Test database connection in sidebar apiSidebar, linking to the doc api-ref/test-database-connection"
+  },
+  "sidebar.apiSidebar.doc.Get database metadata": {
+    "message": "Get database metadata",
+    "description": "The label for the doc item Get database metadata in sidebar apiSidebar, linking to the doc api-ref/get-database-metadata"
+  },
+  "sidebar.apiSidebar.doc.Get database tables metadata": {
+    "message": "Get database tables metadata",
+    "description": "The label for the doc item Get database tables metadata in sidebar apiSidebar, linking to the doc api-ref/get-database-tables-metadata"
+  },
+  "sidebar.apiSidebar.doc.Get specific table metadata": {
+    "message": "Get specific table metadata",
+    "description": "The label for the doc item Get specific table metadata in sidebar apiSidebar, linking to the doc api-ref/get-specific-table-metadata"
+  },
+  "sidebar.apiSidebar.doc.Create a new table": {
+    "message": "Create a new table",
+    "description": "The label for the doc item Create a new table in sidebar apiSidebar, linking to the doc api-ref/create-a-new-table"
+  },
+  "sidebar.apiSidebar.doc.Modify a table": {
+    "message": "Modify a table",
+    "description": "The label for the doc item Modify a table in sidebar apiSidebar, linking to the doc api-ref/modify-a-table"
+  },
+  "sidebar.apiSidebar.doc.Drop a table": {
+    "message": "Drop a table",
+    "description": "The label for the doc item Drop a table in sidebar apiSidebar, linking to the doc api-ref/drop-a-table"
+  },
+  "sidebar.apiSidebar.doc.Rename a table": {
+    "message": "Rename a table",
+    "description": "The label for the doc item Rename a table in sidebar apiSidebar, linking to the doc api-ref/rename-a-table"
+  },
+  "sidebar.apiSidebar.doc.Get table data": {
+    "message": "Get table data",
+    "description": "The label for the doc item Get table data in sidebar apiSidebar, linking to the doc api-ref/get-table-data"
+  },
+  "sidebar.apiSidebar.doc.Modify table data": {
+    "message": "Modify table data",
+    "description": "The label for the doc item Modify table data in sidebar apiSidebar, linking to the doc api-ref/modify-table-data"
+  },
+  "sidebar.apiSidebar.doc.Get filtered table data": {
+    "message": "Get filtered table data",
+    "description": "The label for the doc item Get filtered table data in sidebar apiSidebar, linking to the doc api-ref/get-filtered-table-data"
+  },
+  "sidebar.apiSidebar.doc.Get column types": {
+    "message": "Get column types",
+    "description": "The label for the doc item Get column types in sidebar apiSidebar, linking to the doc api-ref/get-column-types"
+  },
+  "sidebar.apiSidebar.doc.Execute a database query": {
+    "message": "Execute a database query",
+    "description": "The label for the doc item Execute a database query in sidebar apiSidebar, linking to the doc api-ref/execute-a-database-query"
+  },
+  "sidebar.apiSidebar.doc.Get database metrics": {
+    "message": "Get database metrics",
+    "description": "The label for the doc item Get database metrics in sidebar apiSidebar, linking to the doc api-ref/get-database-metrics"
+  },
+  "sidebar.apiSidebar.doc.Get time-range metrics": {
+    "message": "Get time-range metrics",
+    "description": "The label for the doc item Get time-range metrics in sidebar apiSidebar, linking to the doc api-ref/get-time-range-metrics"
+  },
+  "sidebar.apiSidebar.doc.Get current metrics": {
+    "message": "Get current metrics",
+    "description": "The label for the doc item Get current metrics in sidebar apiSidebar, linking to the doc api-ref/get-current-metrics"
+  },
+  "sidebar.apiSidebar.doc.Export database data": {
+    "message": "Export database data",
+    "description": "The label for the doc item Export database data in sidebar apiSidebar, linking to the doc api-ref/export-database-data"
+  },
+  "sidebar.apiSidebar.doc.Get export status": {
+    "message": "Get export status",
+    "description": "The label for the doc item Get export status in sidebar apiSidebar, linking to the doc api-ref/get-export-status"
+  },
+  "sidebar.apiSidebar.doc.Download export": {
+    "message": "Download export",
+    "description": "The label for the doc item Download export in sidebar apiSidebar, linking to the doc api-ref/download-export"
+  },
+  "sidebar.apiSidebar.doc.Get roles": {
+    "message": "Get roles",
+    "description": "The label for the doc item Get roles in sidebar apiSidebar, linking to the doc api-ref/get-roles"
+  },
+  "sidebar.apiSidebar.doc.Create a new role": {
+    "message": "Create a new role",
+    "description": "The label for the doc item Create a new role in sidebar apiSidebar, linking to the doc api-ref/create-a-new-role"
+  },
+  "sidebar.apiSidebar.doc.Delete multiple roles": {
+    "message": "Delete multiple roles",
+    "description": "The label for the doc item Delete multiple roles in sidebar apiSidebar, linking to the doc api-ref/delete-multiple-roles"
+  },
+  "sidebar.apiSidebar.doc.Get role by ID": {
+    "message": "Get role by ID",
+    "description": "The label for the doc item Get role by ID in sidebar apiSidebar, linking to the doc api-ref/get-role-by-id"
+  },
+  "sidebar.apiSidebar.doc.Update role": {
+    "message": "Update role",
+    "description": "The label for the doc item Update role in sidebar apiSidebar, linking to the doc api-ref/update-role"
+  },
+  "sidebar.apiSidebar.doc.Delete role": {
+    "message": "Delete role",
+    "description": "The label for the doc item Delete role in sidebar apiSidebar, linking to the doc api-ref/delete-role"
+  },
+  "sidebar.apiSidebar.doc.Export data": {
+    "message": "Export data",
+    "description": "The label for the doc item Export data in sidebar apiSidebar, linking to the doc api-ref/export-data"
+  },
+  "sidebar.apiSidebar.doc.Download export file": {
+    "message": "Download export file",
+    "description": "The label for the doc item Download export file in sidebar apiSidebar, linking to the doc api-ref/download-export-file"
   }
 }

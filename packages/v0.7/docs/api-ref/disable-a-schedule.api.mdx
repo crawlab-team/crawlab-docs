@@ -1,0 +1,71 @@
+---
+id: disable-a-schedule
+title: "Disable a schedule"
+description: "Disable a schedule"
+sidebar_label: "Disable a schedule"
+hide_title: true
+hide_table_of_contents: true
+api: eJxtVMFu2zAM/RWB2GEDlCboBgzzLV0woIehxbqdggxgZDpWJ0uqRLcNDP/7QNtJ06a+GJIexcf3SHXAuMtQrOHO1FS2jjJsNERM2BBTkqMOPDYEBdgSNFgPBUTkGjQkemhtohIKTi1pyKamBqHogPdRIjIn63cgFzJTktC/68XsG86q5ezHprv80n8ADSVlk2xkGwTxM/hdWF2pm+09Gb4uVaKYKJNnKhVmhaqmZyzJ2AadOqZgy05yHsKgf3vxeKKuV9BvhHyOwWfKwvdysZDfa/xBElXajFtHpcqtMZRz1Tq3Bw0meCbPEokxOmtQIuf3WcK7cznCQEDkSCFSYjsmN6GkE5T1TDtKoKEKqUEetz5fSkEN5Yw7OpdYikV+J1nfv0hzN9KHXr636qzGIhWqPNUNko/rUIrjIfPoYw0FzA+QPO9s2c8ngUBDpvR4aJs2OcFitGcer6jC1rFa3l6rMWTwJJNpk+X9EH5FmCgtW8m43pweizHNqN0p6Fh6zRxhakdZbwfQIIX1VRiQkyTfEz453AqRM5JCrgpJTRit0KsQyc9yaJMZ2oKT3bbSl0+0VUZwlBSWjfUqOmQxEDSIIuOVi4uvFwsxS/RscGiTabre1f8VoWN9TM88jw6tl6sGmbvJmjUcrQENxTCyB3c2GmqxsVhD120x05/k+l62H1pKIvpGwyMmO6DFgkPjQ1Ghy3TG5zgA8PHX9BZ8Ui9jpt8nPG2ilxl6RNfKCjT8o/34yvSbXkNNWFIaaIwHS2Mo8knI2cxJjxw79vbm7jf0/X9aq6jH
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Disable a schedule"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/schedules/{id}/disable"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Disable a schedule
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Schedule disabled successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

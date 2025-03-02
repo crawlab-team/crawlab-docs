@@ -1,0 +1,71 @@
+---
+id: get-current-metrics
+title: "Get current metrics"
+description: "Get current performance metrics for a database"
+sidebar_label: "Get current metrics"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1v00AQ/SurEQeQ3CYqSAjf0gaqHhCIwikK0mQ9ibfYu9vZcdvI8n9HYzsfbQCJXBzvvvl6741bENwkyBcwR8EVJoJlBgUlyy6KCx5yuCYxtmEmLyYSrwPX6C2ZmoSdTWYd2KApdvEZRGSsSYg1cQsea4IcXAEZOE0YUUrIgOm+cUwF5MINZZBsSTVC3oJso0YkYec3fUIRYg39uZiefcCz9ezs07K9eNe9gpfdfg5+E+aX5svqjqzcFIYpMiXyQoXBZNCU9IQFWVdjZfYlxEmlNXdh0L1MPNyYmzl0S20+xeATJe33YjrVx3P81UjZSBNkYIMX8qJQjLFyFhU6uUuKb0/nD31FnZ9DJBY3VLOhoCOU80IbYsigV0aGo7cXOkFNKeGGTjnV6VD+UKzrDlzcNtZSStDpT5NJGQrIYUMyiFJCDpOd8GnSuqKbjONORsdABon4YeeFhiuNwehOhJvTGptKzOzrjRlCeqIT2YadbPvwS0ImnjVaebE8vr5V8gZ+jkH78UqRCKPH9H3Vg/pxnV+HHjmOfcX4WOFKGzlpUptTv4+YzKA3IZI/S6FhS6ZwSvCqUbM90spYxREbLGrnTaxQVCTIQBkZUk7P359PVZAYktTYW2FcmePNO9joWUftwVX/v6gjN0JPMokVOq9t9BK1o7wL2MsLGeT9Dh8ZetR4mUEZkii8bRX8g6uu0+P7hlilW2bwgOxwpQwvWihc0v8F5GusEv1jqNffxs/EG3PYwL+0Ph6i3yrDWDX6Bhn8ou3wAeqWXQYlYUHctzFczKylKEchJ9upTtvb//rjd+i639PEyMw=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get current metrics"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/{id}/metrics/current"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get current performance metrics for a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Current metrics","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

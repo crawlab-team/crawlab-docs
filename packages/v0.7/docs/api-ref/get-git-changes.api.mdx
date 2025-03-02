@@ -1,0 +1,71 @@
+---
+id: get-git-changes
+title: "Get Git changes"
+description: "Get all changes in the Git repository working directory"
+sidebar_label: "Get Git changes"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1v2zAM/SsCscMGOE3QDRjmW7puQYENG/ZxCjyAkRhbrS2pEt02MPzfB9pOkzbbLsvFsfRIvvdIugPGMkG+hpVlKDIwlHS0ga13kMOKWGFdK12hKykp6xRXpFaWVaTgk2Ufd+rexxvrSmVsJC0nkEHAiA0xRUnegcOGIAdrIAMrmQNyBRlEum1tJAM5x5YySLqiBiHvgHdBIhJH68ohITNFCf21Xsze4Wy7nH0suvM3/Qt4Tvuzd6W/vFBfNtek+coI2UiJHJNRmBSqih7QkLYN1uqxBFuupeY+DPrniccbdXUJfSHkU/AuURK+54uFPJ7iP9nEym/3/kEG2jsmxwLFEGqrUaDz6yT47lS/HyqK/ugDRbZjNe0NHaGsYyopQgZbHxvk8ej1uShoKCUs6dRTUYf8h2J9f/Die6s1pQS9/CQZV95ADiXx2JQKcpiXltO8s6afH5Qminf79rexFhgGe9KrS9piW7Nafr1SY8jgbSLdRsu7IfyCMFJctlJsXRxffxe/RkuOQY+KKuYA01jJ+2YADQqt2/oBOSl9H/G+xo0QOSEp5LY+qgmTKXTKB3Kz5NuoSRkrnm5ama972igtOIoKTWOdCjWy9AUyEEfGlIuzt2cL6UHwiRscuj9tiWydrNjByydsusMQ/ceCTgYxPfA81GidcBn61E1tXYO0FTLIh7XdsykyqHxiue+6DSb6Geu+l+PblqI0rMjgDqPFjfi67sDYJP8N5FusE/1Dzstv0/fglTqs2l+4TofoRM0d1q28QQY3tBu/NH3RZ1ARGooDjfFiqTUFPgo5WUOZr8c5X334AX3/GyphwGE=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Git changes"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}/changes"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get all changes in the Git repository working directory
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of changes","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

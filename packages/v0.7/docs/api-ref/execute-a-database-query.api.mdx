@@ -1,0 +1,71 @@
+---
+id: execute-a-database-query
+title: "Execute a database query"
+description: "Execute a custom SQL query on the database"
+sidebar_label: "Execute a database query"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVF1r20AQ/CvH0ocW5NikhVK9OXEKgZZ8tU9GhZW0ti6V7pS7VWwj9N/LnqTYidNAoXqxpdudm52d3RYY1x7iJSyQMUVPkESQk8+crllbAzFcbClrmBSqrPFsK3V38009NOR2yhrFBal8zI2gRocVMTkBbcFgRRCDziECLWA1cgEROHpotKMcYnYNReCzgiqEuAXe1ZLh2WmzDoDM5CT113I2+YKT1XzyNWlPP3Xv4CXT79as7eJMXaX3lPFlrhzVjjwZplyhV6gK2mJOma6wVE9XsOZS7hzToHsJ3J+oywV0SU+ePJ/ZfCeMX9aSWcNkWI6wrkudoaBM771Atcel2gAupTpbk2NNXk6Dwq8p8pzavhlsFfWtgi48wtTX1vge8HQ2k5/n6Tch1ZFvSvbw38hnNqeDKG2Y1uQggpV1FXL/6eOpKF2R97im40qlC8ivXCaVjT27a7KMvIeh4Iq4sLn4zHru3VNADNPRoX7a6ryb9tpG4Mk9jlZtXCmRWOsjjRe0wqZkNb++VH1K8IGnrHGadyH9jNCRmzdy3zI5PL4TzXpZDoOeqiqYaxhGQN7TEBSqFNlv92672GJVl3TgjgOttFnZgDooc+5wU2IqpI8KkkJW1qkhJlJolK3JTLxtXEYq14KbNjI3G0pVJnHkFOaVNqoukaWPEIGo10POTj6fzISHKF9hcMsw/fsFMrZBjQ14Rqvdu+/fls4gJNOWp3WJ2giP0M92cMASnhwAEcRhH/UckggK8Uq8hLaVgJ+u7Dr5PEi8TCJ4RKcxFVmXLeTay/8c4hWWnt4o4v3tsBo+qP0G+Qvd4SMakeURy0beIILftOsXaJd0ERSEOblAoz847y+b/JD0feLR7HbRmDHPMqr5zdjkYJCur+5+QATpsOyqMNjgcCNbHDc9SRuKDxYP31oo0aybMNbQY8rzB1ZbMzU=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Execute a database query"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases/{id}/query"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Execute a custom SQL query on the database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"query":{"type":"string","description":"SQL query to execute"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Query results","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

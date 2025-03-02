@@ -1,0 +1,71 @@
+---
+id: get-metrics-for-a-specific-node
+title: "Get metrics for a specific node"
+description: "Get detailed metrics for a specific node"
+sidebar_label: "Get metrics for a specific node"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1v2zAM/SsCscMGOE3QDRjmW7puRQ/7wD5OgQfQEh2rsyVVotsGhv/7QNtp2mYrsFwcS4/k43uke2DcJsg38NkbSlBkYCjpaANb7yCHC2JliNE2ZFRLHK1OqvJRoUqBtK2sVs4bggwCRmyJKUq+Hhy2BDlYAxlYSRWQa8gg0nVnIxnIOXaUQdI1tQh5D7wLEpE4WrcdEzJTlNBfm9XiHS6q9eJj0Z++GV7AU56fvNv68zP1pbwizZdGRQqREjkmozApVDXdoSFtW2zUfQm23EjNfRgMTxNPN+ryHIZCyKfgXaIkfE9XK3k8xouOe6EgA+0dk2PBYQiN1Si45VUScH/cvB/LSfPRB4psp1JaJD6grGPaUoQMKh9b5Ono9anQbykl3NKxoNIa8l+KDcNBiO+d1pQSDPKTZFx7AzlsiSdHashhKY6nZW/NsDy0mije7M3vYiM4DPbIqXOqsGtYrb9eqilkVDaR7qLl3Rh+RhgprjuptikeXn8XwSZNHoLuW6qZA8xDJe/lCBpbtK7yI3Ju9X3E2wZLIXJEUsjJlM+YTKFTPpBbJN9FTcpYEbXsZLpuqVRacBQVmtY6FRpkMQYyEEWmlKuTtycrMSH4xC2O9s87Ikv2/G49Ytcfpup/9nNWiOmOl6FB64TMaFQ/G7uB0VjIIB/Xdu9tkUHtEwug70tM9DM2wyDH1x1FsazI4AajxVKU3fRgbJL/BvIKm0TPNPDy2/w9eKUOq/YPsvMhup0oi00nb5DBb9pNX5qhGDKoCQ3FkcZ0sdaaAj8IOdpEmbD7Ub/48AOG4Q+Sf7s9
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get metrics for a specific node"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/nodes/{id}/metrics"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get detailed metrics for a specific node
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Node metrics","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: create-a-new-spider
+title: "Create a new spider"
+description: "Create a new spider"
+sidebar_label: "Create a new spider"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVUtv2zAM/isCsaOyBt2AYb71sQE9DC2W7mRkAy0ziTpZUiW5aWDkvw+Uk9pZsmHALvXFtvj4+PhIdZBwGaEoYeZ1TSHCXEKgx5ZiunT1Boou/+pANRQptCRBOZvIJhah90YrTNrZs4foLJ9FtaIG+SttPEEBrnoglUCOHJVgsSGQ4INj4Q9dM7APzlNImiKbZ5XBTUxB2yVsJdQUVdCeUU/KR06PxBI8pkTBQgHfy+nkI04WF5PP8+78/fYN/OYbvji7dNeX4jancFOLQD5QJJuoFhgFihU9Y01KN2jEC0TSyTDm3oyDUs2JaHKw2gWdNiOhtomWFEDCwoUGU3/07jy7ceZ15bXUr6rQ+WGqRe9s7Il0Pp3y6xCx57tQgZAxYqsUxbhojdnAf3D8kMLK1fSPjW0oRlz+gfCYToBxnvsCzPrwYZf+YapXOUeBwtJaxJw3MGBauRoK8C6mvl0rKOAs7haBhEjhib+KsoM2GBai10e9u6YFtiaJi7sb0ZvAds7Wqu2JXXZwSRgoXLQMUc7H4hmXsq/WWOkl2VVKnmPJalBAlZVy8tyNr8Ou+vSMjTc0rI6BiocBDwwdLYrhNE/qWGk/oNNh/Abxnv+jdmm7cDmDXXOuAq4NVlygo1i4aAsXxE5HCrTCebKT6NqgSNSa/VYtc3RNlVCsR0Fg3WgrvMHEVAIJ3Kne5fTth7fTvFpcTA3aUUFOM+H0Pk30nM68QW3ZV+5/tyNJCXG4LVZMn6KErqsw0rdgtls+fmwpcO/nEp4waKy4FOV8K2FFyLhMi5+04aj6YZvcMzCrm5YDOBq8rdxbXChFPv1Vdz5i+N3t7B4kVLsLrclTCQHXfCnhGgoACS4XIBMxn3Vg0C7bPJPQ++TnF4wLdYA=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a new spider"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spiders"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new spider
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["name","project_id"],"properties":{"name":{"type":"string"},"description":{"type":"string"},"project_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"cmd":{"type":"string"},"priority":{"type":"integer","format":"int32"},"col_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"git_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Spider created successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

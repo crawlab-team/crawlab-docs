@@ -1,0 +1,71 @@
+---
+id: login-to-get-authentication-token
+title: "Login to get authentication token"
+description: "Login to get authentication token"
+sidebar_label: "Login to get authentication token"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVVcFu2zAM/RWBZ7fNugEDfGu3HgYMWLG2pyAH2mZitbakUnTTzMi/D5SdxlmCYcAumy62JYrke4+kexBcRcjncNVJTU5siWK9g0UGkcqOrWwgny8yYHruKMq1rzaQ9+nTMlWQC3eUQemdkBM9whCa0c3FY/RO92JZU4v6JptAkIMvHqkUyCaO5tBFYoctQQYBY1x7rjSRwD4Qi6WoDt6M9s6isHUr2E6uHR+mpfFi8C4Ovi5nM31UFEu2IQHP4a4rS4px2TWm8Svr4C/QHaZe+mqatnVCK2LIYOm5RRm23l8qkJZixNVpkBXKiWAKTqw0tIcAA+QPp1BeY2VGTf85gMTs+ZSEe4Q3yWSH790xvgeHndSe7Q+q/m+AqvgBtK9alUa8WZEYPOhbI/6JtGJbktpXkEPwSeCAUkMOF7uKjsQvxNr5PXTc6BEGC7+G+kxL7BoxV7dfzHAFtpPRcKe0DcxcEzKxTpEJrlokaLBkBjkUySjhVOa/72fKzSu2oaHDBt/xMu3rCYvWLX0KNlL2iXHdYKHJHgFRAEvPZrTJDDrjA7mz6DsuyVRW/RadUGXWVJhS7YgNVq11JjQoqjBkoKwNLmfnH89naej4KC2mOhrz/hOFDvJ7Y0zoVS5Cg9ap56RMP4o3h0G8RQa1iprPoe8LjPTAzXar288d8TiuX5AtFkrLfLHNoCasiJPaT7RRroZ+OLvXsGredBr+qDe22e7GVVlSkN/aLiZ1d/vt7h4yKMb/RZsaBxjXOvNxDTlABj7BT/WT9npo0K261DYw+NT1E2/DS2k=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Login to get authentication token"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/login"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Login to get authentication token
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["username","password"],"properties":{"username":{"type":"string"},"password":{"type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Successful login","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}},"400":{"description":"Bad request","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}},"401":{"description":"Unauthorized","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

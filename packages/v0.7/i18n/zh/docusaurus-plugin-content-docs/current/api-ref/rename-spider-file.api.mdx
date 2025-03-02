@@ -1,0 +1,71 @@
+---
+id: rename-spider-file
+title: "Rename spider file"
+description: "Rename a file in the spider directory"
+sidebar_label: "Rename spider file"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SsCscMGKE3QDRjmW9quQA9Di3Y7Bd5AW0yszpZUSW4aGP7vA2WnyZK22GG+2Jb49R4f2UHEVYBsAXdOK/IBcgmKQum1i9oayOCWDDYkUCx1TUIbESsSIVkLpT2V0foNSHDosaHIMbJFB+wEGWgFEjTHcRgrkODpodWeFGTRtyQhlBU1CFkHcePYI0SvzSoFjJE8u/5czCZfcLKcTy7z7vRT/w4Oi/xmzcpenInr4p7KeKWEJ+cpkImkBAaBoqInVFTqBmvxnCLqWHPOrRv0h4GHG3F1AX0+FE8hnlm14YoPsZTWRDKRr9C5WpfIUab3gUN1x1BtCs5QvXXko6bAt4mpI0J6CYbWv165TA8XGJw1YYhzOpvx629Al9xFn3rKrflPJZdW0Z6VNpFW5EHC0voG43D08ZRBNBQCruhFgArjC8kY2LZTd21ZUggw4m0oVlaxumyIg2YqyGA66DNMO636KQs3TAfMICGQf9yqtPU1m6PTR5K6oCW2dRTzmysxuCQJBCpbr+MmuZ8RevLzlpMu8v3rOyZu4Gbf6BlaFaODUf38XySjBJW5v90J7esTNq6mnTB2E7LTwx6H2ixtSjQydu5xXWPBOI4wMral9WK0kQKNsI7MJNjWlySU5rhFy1O0pkKUbEdeoGq0Ea7GyP0FCUzoEHJ28vlkxnVwRxpMKhp3wbhJxt3BXTksqNvp8Z/3zkhopKc4dTVqw8lTX7eELWCUA0jI0kJKikjLKJWWS6hYP9kCuq7AQD983fd8/NCS51bnEh7RayyY0kUHSgf+VpAtsQ70Boz3t+OS+CB2u+SVqsdDNIzrEeuW/0DCb9oMq7TPewkVoSKfyhguzodkk+/svnM8mudebj3mZUkuvmmb7w3XzfXdd5BQjGuvScMOHtdMIa6HIm0CnxSfzjqo0azaNOowxOTnD3FPM5M=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Rename spider file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spiders/{id}/files/rename"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Rename a file in the spider directory
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"path":{"type":"string"},"new_path":{"type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File renamed","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

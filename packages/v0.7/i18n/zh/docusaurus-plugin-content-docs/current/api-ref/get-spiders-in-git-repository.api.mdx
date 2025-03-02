@@ -1,0 +1,71 @@
+---
+id: get-spiders-in-git-repository
+title: "Get spiders in Git repository"
+description: "Get list of spiders in a Git repository"
+sidebar_label: "Get spiders in Git repository"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVFFv00AM/isniweQ0rUaSIi8dQyqSSAQg6eqSG7ObW4kdzefs62K8t+Rk6ztVkCiL2nuPtufv89OC4LbBPkSFk5glYGlVLCL4oKHHBYkpnJJTNiYFJ0lTsZ5g2bhxDDFkJwE3kEGERlrEmJN1oLHmiAHZyEDp5kiSgkZMN02jslCLtxQBqkoqUbIW5Bd1Igk7Py2TyhCrKE/l7PJO5xs5pOPq/b8TfcCntP8HPw2XF6YL+sbKuTKKjWmRF7IGkwGTUkPaKlwNVZmX0KcVFrzMQy654mHG3N1Cd1KyacYfKKkfM9nM308xX96qhVkUAQv5EWhGGPlClTo9CYpvj3tP/QVtX8OkVjcUK0Ilo5QzgttiSGDTeAaZTh6fa4d1JQSbulUU+0O5Q/Fuu6gxXVTFJQSdPrTZFIGCzlsSQZTSshhunWSpq2z3fTQaSK+e7S/4UphGN2JV5e0waYSM/96ZYaQXttERcNOdn34BSETzxsttlwdX1+rXoMkx6B9R6VIhHGs9H3dg/oOnd+EHjl2+p7xvsK1EjkhqeQ2gc2IyQx6EyL5SQoNF2SsU03Xjc7XPa1NoThig7Z23sQKRX2BDFSRIeXs7O3ZTD2IIUmNvfvjluiWHW3XyW494dYeRuo/1nOUR+hBprFC55VJ71I7mroENRUyyPulffR1lUEZkuh9264x0Q+uuk6PbxtitWuVwR2yw7WqumzBuqT/LeQbrBL9g/7Lb+PX4JU5LNpfuI6H6LWbO6wafYMMftFu+M50qy6DktAS9zSGi3lRUJSjkJMl1OnaT/niw3fout9aDLmi
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get spiders in Git repository"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}/spiders"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get list of spiders in a Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of spiders","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

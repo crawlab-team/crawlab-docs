@@ -1,0 +1,71 @@
+---
+id: get-spider-results
+title: "Get spider results"
+description: "Get spider results"
+sidebar_label: "Get spider results"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVdtu00AQ/ZXViAeQnCaUCoTfUgpVJS4VBfEQBWlsT+wt9u52d9w2WP53NHZurdNSeIrWe2bPmTOXNMCYB4hncOF0Rj7APAKHHitiOcWzBgxWBDHoDCLQBmJwyAVE4Omq1p4yiNnXFEFIC6oQ4gZ46SQisNcmB3mQmbyE/pxNRm9xtJiOPsybw6P2GUSQUUi9dqytID5Zk9uTY/UluaSUzzLlyXkKZJgyhUGhKugWM0p1haXaULDmUjjXYdDef7i/UWcn0EabpBzmtE7rqia/hD15aMOUk++kLrAuGeKXg+fPMSdl6iohrxbWK4e5Nthd7vAF/fv/+CYDws89l10ozVQF5agjJWjnUpvgrAkU5NnDyUR+7ob39VaeQl1ygAhSa5gMCxKdK3XaiR9fBoE3Q5W281Oq660jz7onS21Ge3NZWF8h959eHUp9KgpBBA86RnJFfgJZqQPvoNB7FEc7Q4bRbRsBW8byr/peH0HbdvBVW13UaUoh/NBcfBTOtr++a+kpsQr3ba2IC5tBDDlxPwoFxDDucWHc6Kwdb9GB/PV67mpfChKdHgzJSd8Xanp+pvqQruqB0tprXnbhx4Se/LQWvtl89/pCStkbuAvaeFIwu3VfyjnpQJ192ixsh1z58s7jTYmJCBmIFHEyCStMpNAo68iMgq19SirTUu6klsG+oUSlgiOvMKu0Ua5ElpJABOJI/+Tk4M3BRNrD2cAVdo25mqy95t8RtMmP6ZbHrkQto9nb3KwKM4NVYSCCuNt468fmERRWum0GTZNgoO++bFv53M+xWJ7pgEkpG3GBZaAB/2bEHtsW0X6Zv2i53VfXWNYC6VbL01kfXBmPcq521pZzLgevhfQf037+dfWf8UJt1/ED5OuZNstd8rUonUE7byMoCDPynYz+Ypqm5HgnZLDMRP9mKk/ff4O2/QP3RWMQ
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get spider results"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/spiders/{id}/results"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get spider results
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"},{"name":"page","in":"query","schema":{"type":"integer","default":1},"description":"Page number for pagination"},{"name":"size","in":"query","schema":{"type":"integer","default":10},"description":"Number of items per page"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Spider results","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object","properties":{"list":{"type":"array","items":{"type":"object"}},"total":{"type":"integer","format":"int64"}}}},"title":"SuccessWithList"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

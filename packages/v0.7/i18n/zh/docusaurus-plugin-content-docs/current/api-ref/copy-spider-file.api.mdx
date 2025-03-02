@@ -1,0 +1,71 @@
+---
+id: copy-spider-file
+title: "Copy spider file"
+description: "Copy a file in the spider directory"
+sidebar_label: "Copy spider file"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SsCscMGOEvQDRjmWz82oIehRbudgmxgJCbWZkuqRDcNDP/3gbLTZM1a7DBfbEvkIx/5yA4Y1wnKOdwGaygmWBRgKOloA1vvoIRzH7YK1crWpKxTXJFK2VYZG0mzj1soIGDEhlgQynkHDhuCEqyBAqygBOQKCoh019pIBkqOLRWQdEUNQtkBb4N4JI7WrTMgM0Vx/T6fTT7iZHU6+bzoTt73r+Bpil+8W/uLM3W1/EmaL42KFCIlckxGYVKoKnpAQ9o2WKvHEGy5lpg7N+ifAg836vIC+sWQPCU+82YrGT/lor1jcixXGEJtNQrK9GcSqO6Yqs/gQjX6QJEtJbnNlToqSF+Ao82PZy7zIwmm4F0acE5mM3n9SeizdFH7YEk6858y1t7QgZV1TGuKUMDKxwZ5OHp3IhwaSgnX9Fd+BvkvwYTXrlG3rdaUEox0G+LKGxGXTzxIpoISpoM807Szpp+KbtNU+yAqTRTvdxJtYy3GGOyRni5ohW3N6vT6Ug0uuf+JdBstb7P7GWGkeNpKyPni8PpWyjZU5tDokVjFHGCUvvwvs1EmKpW/2avs0wM2oaa9KvbjsRfDQQWtW/kcaKzXecRNjUvhccRRuK18VKNNodApH8hNkm+jJmWs4C5bGaENLZUWO4oKTWOdCjWydBcKkIIOkLO3H97OJA/pR4NZQ+MiyEtkXBvSkafpdHst/uPCGYvJ9MDTUKN1Ejj3dFesOYxCgALKvImyFrLuw1YWXSW6KefQdUtM9C3WfS/Hdy1FafKigHuMFpdSzHkHxib5NlCusE70AoXXN+NueKP2K+SZnMdDdMLqHutW/qCAX7QdNmi/6AuoCA3FnMZwcT4Em3wV973j0Rz3xc7jVGsK/KLt4mCorq9uv0IBy3HbNXnIIeJG1jhuhiR9Jp+1ns86qNGt2zziMGDK8xsV6S96
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Copy spider file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spiders/{id}/files/copy"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Copy a file in the spider directory
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"path":{"type":"string"},"new_path":{"type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File copied","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

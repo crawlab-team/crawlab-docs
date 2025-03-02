@@ -1,0 +1,71 @@
+---
+id: get-list-of-spiders
+title: "Get list of spiders"
+description: "Get list of spiders"
+sidebar_label: "Get list of spiders"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu2zAM/RWBZ6/NumEDfGu3oSgwDMW6YYcgB1pmYnWypEl0uyzwvw+U3SSd27QodjJkPfJRj+TbAOMqQTmHq2BqigkWBQSM2BLLqZxvwGFLUELAFUEBxkEJvzqKaygg6YZahHIDvA4CMo5pRREKqGmJnWUoX/dySDqawMZL9CWuSLmurSiqpY8q4Mo4zJd9seVL5s/L+GYTwi8Dl18qw9QmFSiT0j4dWvskW+W9JXT7bEu0iSaEX4m76BRaOzLeGm58x489lZHT/2O/cNp2NSlJaxIbnZRxKlIK3iWCflHA3SFJ/pPZTD73k3w2iUWxNM5FAdo7JscCxRCs0fkdx9dJ8Jtpvb66Js1QQIg+UGQzsGlf04MdXPrYIg+/3pxAX0BLKUmbdujE0biV3NXIzyCzJvEeCmNE0TY3ZRrd9wWwZ7RP1vfuLfR9hhu2ArvqtKaUfhhuRLl8O2nMObGyE11b4sbXUMKK8gOQGyjheAdIFG/ulrGLVi4xGPg3+8dhKtTp5YUaQnKrE+kuGl7n8DPCSPG0E4r5Yv/6Sto3iLYP2urQMIe7qczTmEFZMuOWPiNHLT5EvLVYSSGTIqU42fkRUyh0ygdyr5LvoiZVG2lx1THV6pYqpQVHUWHdGqeCRZY2QAGiyJBydvT+aCYjEXziFvMwjov1sOD3Kto+kOk3HweLRlZz0HkzNmMOaeeOjZeRmsNmU2Gi79H2vfwe1lY0rk3CylI9rueEb7tHh4yweLisn7TeWfEN2k4g2Uqez/qoGx7kHO34hZzPMcSD9IM9v5D9CUM8/O7Rm3fUCzlEI9x5iQpoCGuKuflD0KnWFHgvamKYkmW7+OefvkHf/wWw2pV4
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get list of spiders"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/spiders"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get list of spiders
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"query","schema":{"type":"integer","default":1},"description":"Page number for pagination"},{"name":"size","in":"query","schema":{"type":"integer","default":10},"description":"Number of items per page"},{"name":"all","in":"query","schema":{"type":"boolean","default":false},"description":"Return all items without pagination"},{"name":"stats","in":"query","schema":{"type":"boolean","default":false},"description":"Include statistics in response"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of spiders","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object","properties":{"list":{"type":"array","items":{"type":"object"}},"total":{"type":"integer","format":"int64"}}}},"title":"SuccessWithList"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: create-spider-from-git-repository
+title: "Create spider from Git repository"
+description: "Create a new spider from files in a Git repository"
+sidebar_label: "Create spider from Git repository"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE2P2zYQ/SvEoIcUoGNjU6CobvvRBnsIEmTTk6EAY3FkM5VIhhyt1xD034sh5di7TnKILpLImeF7bx5nBMZtgmoNby1DrcFQaqINbL2DCm4jIZNC5WivUrCGomqj71VrO0rKOoXqrWUVKfhk2ccDaAgYsSemKHVHcNgTVGANaLBSNCDvQEOkr4ONZKDiOJCG1OyoR6hG4EOQjMTRum0uyExRUj+vV4u/cNFeL/6px6s/pt/gJeJ33m393Y16v/lCDd8bgRYpkWMyCpNCtaMnNNTYHjv17Qi23MmZxzSYXhYuO+r+Dqa6gKfEN94cBPFLLo13TI5lC0PobINSZfklSanxkqrPxZ+Jsi461RpC9IEiW0qSkVcvRJryI/kpeJdK6NVqJa/nPB5KF5vcWaPS0DSUUjt0nfTul4E/B9l4Q2dR1jFtKYKG1sceuSy9uRKVe0oJt/QdShoM8ncOE57Hfj0U+DDT74l33ojHfOLinB1UsNxaTsvRmmlZTJxAQ6L4ePToEDsJw2AvDHVHLQ4dq+sP96qkZAMkaoZo+ZDTbwgjxetBDlvX59sPIljR5DzoG6Udc4DZ+/K/yUGZomj+8WSzv5+wDx2dLHCmk3Wtz0VnVW4j7jvcCOYLPsKj9VHNMVqhUz6QWyQ/xIaUsVJ3M4g59rRRjcRRVGh661TokKWHoEHEKyVXr/98vRIconqP2SnzrZ8HyPnouJgXz/CNJwv+2vSZhWV64mXo0DoBlvt7FG4NYgfQUOWZdHRErWEnrqnWMI4bTPRv7KZJlr8OFKXRtYZHjBY3IvJ6BGOTfBuoWuwS/YTJq4/zvf5dnebID7DOi+iEzSN2g/yBhv/oUMboVE8adoSGYoZRNm7LYYtPkn5KvLjFkz5mXDcNBf5pbH12pT68f/gEGjbzyOvzFYeIexlbuC8gfSaf/Z7XRujQbYd8waHUlOd/VMM2kA==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create spider from Git repository"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/spiders"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new spider from files in a Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["path"],"properties":{"path":{"type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Spider created successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: commit-changes
+title: "Commit changes"
+description: "Commit staged changes to the Git repository"
+sidebar_label: "Commit changes"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVNtu1DAQ/RVrxANIXnZVkBB56wVQH1CrtjytFmk2nk1cEtvYk7arKP+OxsnSbRcqIfKSxJ7LOWcuPTBWCYolfLEMKw2GUhltYOsdFHDq29aySowVGVXW6CpKir3imtQXyypS8Mmyj1vQEDBiS0xRAvbgsCUowBrQYCVaQK5BQ6SfnY1koODYkYZU1tQiFD3wNohH4mhdlQMyUxTX78vF7CPONsezz6v+6P3wCp5D/epd5c9O1MX6lko+NwItUiLHZBQmhaqmBzRU2hYb9TsFW24k584NhueBxxt1fgbDagRPiU+82Qri51xK75gcyxWG0NgSJcr8Nkmo/pCqz8GfiLKEllLCiqQcIfpAkS0lcdpdHEg15EeipOBdGq2PFgt5/bmiXVlSSpuugf8A/RRd6c0+NOuYKoqgYeNjizwevTsShf9ORINB/kMyYber1fUIHibSLXHtjfSXTzx2TQ0FzCvLad5bM8zLTBo0JIp3u/bsYiNWGOxBL53RBruG1fHluRpdcu0TlV20vM3uJ4SR4nEnuZar/etr0WuUZN/oN6OaOcDU9vK/zkaZoUh+9dhhnx6wDQ09Kf2eUtZtfI476XIa8b7BtcA+oCRUNj6qyUYrdMoHcrPku1iSMlbirjuZlntaq1LsKCo0rXUqNMhSRdAg+o0hF28/vF0IDtG9xdwr08xPXTYtjOdg+seO+8cNMynI9MDz0KB1kj4Xsp/KvgQpO2go8t6ZKr/SUEtzFEvo+zUm+habYZDjnx1FKehKwx1Gi2tRctmDsUm+DRQbbBK9wOD11TS6b9TjqvgL1OkQnZC5w6aTP9Dwg7bjphxWg4aa0FDMMMaL0zHZ7EbcHx0PhnXQO4/jsqTAL9qu9ibn8uL6BjSsp63W5kmGiPeymfB+BOkz+dzX+ayHBl3VjV05xpTnF7efKjw=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Commit changes"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/commit"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Commit staged changes to the Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["message"],"properties":{"message":{"type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Commit successful","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

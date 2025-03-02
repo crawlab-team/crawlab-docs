@@ -1,0 +1,71 @@
+---
+id: update-project-by-id
+title: "Update project by ID"
+description: "Update project by ID"
+sidebar_label: "Update project by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVktv2zgQ/ivEYA9bQE4Ub4q0uiVNF8hhd4M2udTwFiNxbLOVSJYcJTEE/fdiJFm2Y6fAAntILo44r29eH9kA4zJCNoPb4L5RwRHmCXgMWBFTEEkDFiuCDIyGBIyFDDzyChII9KM2gTRkHGpKIBYrqhCyBnjtxSJyMHYJ4pCZgpj+O0sn73GyuJz8OW+m5+1vkICmWATj2TjR+MvZpbu+Uv/kgudGq0A+UCTLpBVGhWpFT6ipMBWWagzBhkuJuTGD9rnjXqJurqGd9+Ap8pXTa0H8PJfCWSbLIkLvS1OgeDn9FsVVc5iq65xLqsF5CmwoivSr0a+oHn0jn8N5Xqgj8uiN7qZhlBnLtKRwgPbvusopKLdQg40yVvHKROX7ARN3RSBk0l+RjxVn4UIlEtDINGFTkdjUXv9nm02cfP2KmrBJ5BWBareHt5sutXIaKHpnYz/L0zSVn30Mg74aslKxLgqKcVGX5Rr+tzUqnKajwzf23Vj+YyrlrShGXL4w5shHgu2m/7mHP6R/np6/nLF1rBautvrVpUkhuHBEspPnx06l7dPcz+++6+RmXVW+FsaUgLxyWsi/5n5OV5DB6aAWTxujW0ggUnjY3Bt1KEUFvTkY3WtaYF2yury9Ub1JR8qRijoYXnfmV4SBwmUtgWbzXfFnqWdfsl2lMeEVs4fhPpLvvFPqCiAt+bSl/o9PWPmSRqreLuJw6Y3f+/jH45EZ031ag2k6PZ+kF5Pp+7uzt9nbs2z67iS9OPsC+1T2K71d+tpG3OWPnaYbu3BdCYYOfwj4WGIuFT5AL1VfuKAGnUShVc6TnURXh4KUNuI3r2WhHylXhehRUKgrY5UvkWUgIQFpde8yPbk4SQWHd5Er7MZ+KOELA3X8zmF64lNforEdV8oENcOwzWAzbJBAZrS8VFYuskiaJsdI96FsWzn+UVOQIZon8IDBYC4lmTWgTZT/NWQLLCMdgBj3GH7/NDwI3qjtuyE5jnI4RCuM94BlLV+QwHda98+mdt4msCLUFDoYveBDH2xyJ+ZbwwMCaZONxWVRkOdf6s53NvX2/g4SyIcXTtWRCwR8lKcbPvYYXZd7t0rdWQMl2mXdUQv0LuXvJ8yKcAY=
+sidebar_class_name: "put api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update project by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/projects/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update project by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"name":{"type":"string"},"description":{"type":"string"},"spiders":{"type":"integer","description":"Number of spiders in this project"},"created_at":{"type":"string","format":"date-time"},"updated_at":{"type":"string","format":"date-time"},"created_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"updated_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"}},"title":"Project"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Project updated successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}},"404":{"description":"Project not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

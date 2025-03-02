@@ -1,0 +1,71 @@
+---
+id: pull-from-remote
+title: "Pull from remote"
+description: "Pull changes from the remote Git repository"
+sidebar_label: "Pull from remote"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVFFr20AM/iuH2MMGThO6wZjfspWVPoyWdXsKHihnOb7Ovrvq5LbB+L8P2W4bmm4wv8S++yR9+j4pPQjuEuQbOHcCRQYlJcsuigsecrjqmsbYGv2Okqk4tEZqMkxtEDLnTgxTDMlJ4D1kEJGxJSHWhD14bAlycCVk4DRbRKkhA6bbzjGVkAt3lEGyNbUIeQ+yjxqRhJ3fjQlFiDX012a1+ISLar34WvSnH4Y38JLqt+B34eyzudzekJWLUqkxJfJCpcFk0NT0gCVZ12JjnkqIk0ZrPobB8DLxdGMuzmAolHyKwSdKyvd0tdKfVzRLnbWUUtU1kIENXsiLQjHGxllU6PImKb4/7j+MFbV/DpFY3FTNhpIOUM4L7YghgypwizIdvT/VDlpKCXd0rKl2h/JKsWF41uJ6Ig+DPppM6lCqfyHJ5EoNOSx3TtKyd+WwjF2jfSbiu0fzO24Ug9EdOXVGFXaNmPXVhZlCRmUT2Y6d7Mfwz4RMvO600qY4vL5WtSZBDkFP/dQiEeah0u/tCBr7c74KI3Lu8wvjfYNbJXJEUslVgc2MyQx6EyL5RQodWzKlU0W3nU7XPW2NVRyxwbJ13sQGRV2BDFSRKeXq5OPJSh1QHVscvZ93ZJyZcb+m3XpJp3+eof/cyVkVoQdZxgadVwKjOf1s5AbUSMggHzd19LLIoFaz8w30/RYT/eRmGPT4tiNWi4oM7pAdblXJTQ+lS/peQl5hk+gf/N9+n/f/nXlerb8QnQ/Rayt32HT6BRn8pv30zzIUQwY1YUk80pgu1tZSlIOQo7XTiXqa66vL6x8wDH8AwLm3dg==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Pull from remote"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/pull"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Pull changes from the remote Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Pull successful","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

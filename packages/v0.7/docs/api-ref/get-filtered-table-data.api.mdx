@@ -1,0 +1,71 @@
+---
+id: get-filtered-table-data
+title: "Get filtered table data"
+description: "Get data from a database table with filtering"
+sidebar_label: "Get filtered table data"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVt9v20YM/lcOxB42QKm9rNhQvSXNOgTY1qDJ0AfDBWgdZV0n6a53VB1P0P8+8E6yndhJ1216sXVH8uOPj6R6YFwHyBdwhYwrDATLDDSFwhvHxraQwy/ESiOjKr1tFMb/IqkYVzWpjeFKlaZm8qZdQwYOPTbE5MVuDy02BDkYDRkYseeQK8jA06fOeNKQs+8og1BU1CDkPfDWiUbgnUFm8qL6YTE/e4Vn5cXZm2V//nL4Bh47+5tt1/bqUr1dfaSCr7Xy5DwFapm0wqBQVXSPmgrTYK12EGy4FsxJDYbHhtONur6CIdsF5XBNU1ifOvJbOBGHaZnW5KOrJXY1Q/79kfkbXJNqu2ZFXpXWK4dr02K8PMAL5q9/hzc/Avw9YdlSGaYmKEcRlGBYptpQ4Eurt2L4cakK2zK1LFfoXG2K6OjsYxDL/bFHNuZOKumtI8+GQrwV/pwq+ENP7yLNYgaGDDYVeTplG7U2ooH1zQFKcvihwfdiQhW2TQpBzAbr+b9ZvbWelXWjxfhIIoOzbUjxns/n8vNQ7U3sHNJjN0lzwf+W4cJqOsmM0voGOR39cC4JaCgEKf9ROYQ54tQXwWoTDlOI3qPwM9LrWFuyw5ax/qJ/P76ElMypSW+7oqAQ3huufhXMMdcNcWW1dKUNnMZGBTnMpnkVZr3RwyzmOcTT2ZpEMJD/PE2rzteig84c8fAqdZO6uLlWSSX2SqCi84a3Uf2S0JO/6AR5sTy8vpWSpUQdCu1ir5jd1M3yvopCMU1S9Xf7jvz5Hhs3Nk7qoH3nTN2xZ7QYMG1po/iYwNceNzWuJJKjKCU6GUCjTKawVdZRexZs5wtS2gjYqpN5uqGVKkSOvELdmFa5GllqBxlISpPJ+YufXsyFR1KYBiODx4Emu6U82QEPvOr3DfHV62jML9M9z1yNRgZqKnM/UmQBO4pABnncVIklMHI/A2HKMoNKqJUvoO9F/A9fD4Mcp1ksBNAmiKaGvMQ6PB4Sh3E8M/GfcPpP2u53zmesOxGJ6+Gfoz459p/FHPfOHnMpL94k+n1V2N++G5fJd2q/Up8AnyZJuz0En5wyGoblkEFFqMlHN9LF6wR2difqe8WjQSqZSxoXRUGOn5VdHgyYm7e3d5DBalyPTZyy4HEjnzW4SU5Oq0D2p5z1UGO77uKMhWRTnr8B4D9A5A==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get filtered table data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases/{id}/tables/data/get"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get data from a database table with filtering
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"},{"name":"page","in":"query","schema":{"type":"integer","default":1},"description":"Page number for pagination"},{"name":"size","in":"query","schema":{"type":"integer","default":10},"description":"Number of items per page"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"table":{"type":"string","description":"Table name"},"where":{"type":"object","additionalProperties":true,"description":"Where conditions"},"sort":{"type":"object","additionalProperties":true,"description":"Sort options"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Filtered table data","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object","properties":{"list":{"type":"array","items":{"type":"object"}},"total":{"type":"integer","format":"int64"}}}},"title":"SuccessWithList"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

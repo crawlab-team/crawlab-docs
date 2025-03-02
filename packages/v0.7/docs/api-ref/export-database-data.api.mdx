@@ -1,0 +1,71 @@
+---
+id: export-database-data
+title: "Export database data"
+description: "Export database data to a file"
+sidebar_label: "Export database data"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVU1rGzEQ/Sti6KEFOTZpoXRvSdNCDqUhSU/GhfHu2FarlRRpNolZ9r+XkdaJidMUQn3xrjRf783M2x4Y1wmqOZwh4xITwUJDQ6mOJrDxDir4ch98ZNWMBvlBsVeoVsYSaAgYsSWmKIF6cNgSVGAa0GAkQEDegIZIN52J1EDFsSMNqd5Qi1D1wNsgHomjcesckJmiuP6czyafcLI6mXxd9McfhjfwtLpv3q392an6vvxFNZ83KlKIlMgxNQqTQrWhe2yoNi1a9ZCCDVvJuXOD4WngcqPOz2DQD6Bypa+FRa5rheo63YKGX8k70JBuLCwOko+cC8EqhxkWJRMlPvXNVsI/TVx7x+RYrjAEa2qUYNOcp+oP6/IZoNAdfaDIhlK+xaUdn4odxohbAc3UpkNcB7Vf5wAyIZRRwJB/Un8K3qUS/Hg2k79nYSfGKO1LXV1TSqvOWingPwGsfUN7VsYxrSmChpWPLXI5en8swFpKCdf0PGjkZ5IJzt1sXZXyYYTfEm98I4PjE5cp30AF091ipWlvmmFaSJv2EneQAaF4u1utLlrxwGAO9uCMVthZVicX56q45JlJVHfR8Da7nxJGiied5J0v9q+vhLtCz77RA7oNc4BxtuV9mY0yWqH/8nEyv9xjGyztT9J8x5rMuXErny9Hkj5HvLO4lLoPMAmWlY9qtNEKnfKB3CT5LtakGiOBl53Myh0tVS12FBU2rXEqWGRpKWgQAkvI2dHHo5m0T5rQYh6ccbef07mnJfWPQ/hvXRy5Y7rnabBonOTNLezH5s/hofmgocqSOS6Nhir7LzRsZF6qOfS9WP6Idhjk+KajKH1daLjFaITs3OXGJHluoFqhTfQCgreXo4S8U49q95e6d2LgZBNv0XbyBhp+07aIvajkq1IfaN2rKhhVctCwIWwoZirK1eeSdXJdgu9cDzREEBSPk7qmwC/aLvYW+uL71TVoWI7C3GaBgYh38nnAu1KmzyzkFctnPVh06y7LS/kYZJ34Ay1+lb4=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Export database data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases/{id}/export/{type}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Export database data to a file
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"},{"name":"type","in":"path","required":true,"schema":{"type":"string","enum":["csv","json","sql"]},"description":"Export file type"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"tables":{"type":"array","items":{"type":"string"},"description":"Tables to export"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Export started successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

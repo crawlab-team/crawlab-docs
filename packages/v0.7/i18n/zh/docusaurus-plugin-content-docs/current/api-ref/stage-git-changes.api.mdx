@@ -1,0 +1,71 @@
+---
+id: stage-git-changes
+title: "Stage Git changes"
+description: "Stage changes in the Git repository"
+sidebar_label: "Stage Git changes"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v1DAQ/SvWiANI2e6qICFy6wegHlARhdNqkWbj2cSQ2K49abuK8t/R2NnutgsIkUsSe+bNvDcfAzDWEcolfDQMqwI0xSoYz8ZZKOGGsSZVNWhrispYxQ2pj4ZVIO+iYRe2UIDHgB0xBQEawGJHUILRUIARFI/cQAGBbnsTSEPJoacCYtVQh1AOwFsvHpGDsXUCZKYgrt+Xi9k7nG3OZh9Ww+mb8QU8T/GTs7W7PFfX6x9U8ZWW1AJFskxaYVSoGnpATZXpsFWPIdhwKzF3bjA+B8436uoSxlVOniKfO72VjJ9zqZxlsixX6H1rKhSU+Y8oUMMxVZfAn4iyTDpFKYIPzlNgQ1Fc8vHeF0NAkd0wdfFYvjE/Ah29szGDnC4W8npK8WIqbJQyaxX7qqIYN33bCv5/c3qafuU0HVgZy1RTgAI2LnTI+ej1qRSgoxixpt9wKkAj/yaY8NyV8ianDxP9jrhxWtrPRc5N1UAJ89pwnA9Gj/Opr6GASOFu1759aMUMvTnqtUvaYN+yOvt8pbJL6o1IVR8Mb5P7OWGgcNZLsOXq8PpGBMuaHBo9UmqYPUxjIf/rZJQoiuZf9h34/gE739JBcyx3Sq1GGbqNS7iTMBcB71tcS9pHlITKxgU12RQKrXKe7Cy6PlSktBHgdS/TdE9rVYkdBYW6M1b5FlnKCAWIfhlycfL2ZCElE+E7TM0y7YS8T2SB7LV/ks+w77p/XD6TeEwPPPctGiuRUw2HqeRLkJJDAWVaSbvIqwIa6YxyCcOwxkjfQjuOcnzbU5Birgq4w2BwLSouB9AmyreGcoNtpL+k/vLLNNav1H6N/CHX3VRbYXOHbS9/UMBP2uYtOkpNG0JNIaWRLy5ysNlXcd87Hk3qWOw8zqqKPP/VdnUwNp+vb75CAetp43VpjCHgvWwtvM9JukQ+9XQ6G6BFW/dpiCFjyvML3HIwFg==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Stage Git changes"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/changes"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Stage changes in the Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["paths"],"properties":{"paths":{"type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Changes staged successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

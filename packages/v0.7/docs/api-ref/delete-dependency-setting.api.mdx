@@ -1,0 +1,71 @@
+---
+id: delete-dependency-setting
+title: "Delete dependency setting"
+description: "Delete a dependency setting"
+sidebar_label: "Delete dependency setting"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFVFFv0zAQ/ivWiQeQ0rUqSIi8dbRIk0AgBk9VJ13sa+OR2J592VZF+e/oknQr7YC8JLHv8333fXdugXGXIF/DkgI5Q05bSrDJwFDS0Qa23kEOS6qISaEyh7C9SsRs3Q4yCBixJqYoJ7XgsCbIwRrIwAo6IJeQQaS7xkYykHNsKIOkS6oR8hZ4HwSROB4OZKYo0Jv1bPIBJ9vF5NOmnb/rXsEptS/e7fzyUn0tbknzlVGRQqREjskoTApVSY9oSNsaK/WUgi1XkvMAg+704GFHXS2h2wj5FLxLlITvfDaT16lGp9Io08smOmjvmBwLCkOorEZBTW+TQNtzKXyfXKSIPlBkOyTW3tBRlHVMO4qQwdbHGnlYejuXYmpKCXd0Lq8UivxCsq57luW60ZpSgk4eOYxLbyCHoaLBohJymJqjvpmOdadpa00HGSSK94euaGIl8RjsmYVL2mJTsVp8u1IDpJc8kW6i5X0PvySMFBeNZF1vjrevRbtBnuOgp+pK5gBjt8l/0Qf11Vq39X3kWPXHiA8VFkLkjKSQ2/qoxphMoVM+kJsk30RNyljRt2ik7R6oUFriKCo0tXUqVMjiEWQgigxHzi7eX8zEj+AT19h3wjg848C9OG5/8GqfW+s/UzrKwfTI01ChdZK5d6Ud3VzDsZu9f4OfkEFujVwLpU8sgW1bYKKfseo6Wb5rKIpPmwzuMVosRM51C8Ym+TaQb7FK9A/ur7+Pt8Mb9Tx4fyE9LqLbi5xYNfIHGfyi/XDvdJsug5LQUOxpDBsLrSnwEeRsEqWtnlp9ufq8+rGCrvsNi43BkQ==
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete dependency setting"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/dependencies/settings/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a dependency setting
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Dependency setting deleted","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

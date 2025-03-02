@@ -1,0 +1,71 @@
+---
+id: modify-table-data
+title: "Modify table data"
+description: "Insert, update, or delete data in a database table"
+sidebar_label: "Modify table data"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVcFu4zYQ/RVi0EML0GsjLVBUN2fTAjksNtik6MHwAmNxbHMrkVxyFMcQ9O/FkFLstdMCLaqLLZLz+GbmvVEPjLsE1QrukHGDiWCtwVCqow1svYMK7l2iyFp1wSCTVj4qQw0xKYOMyjqF+Z9EK8ZNQ6AhYMSWmKKA9+CwJajAGtBgBTQg70FDpK+djWSg4tiRhlTvqUWoeuBjkIjE0bpdBmSmKKGfV4vZLzjbLme/rfubn4bv4JLxB+92/u5Wfdx8oZrvjYoUIiVyTEZhUqj29IKGattio16vYMuN3DmFwXAJXHbU/R0M60KeEt96cxTGl7nU3jE5li0MobE1Csr8SxKo/jpVn8El1egDRbaU8m6u6BsV+ZbakxxTuc6DBqzL8nUUua6VftvcVdBQ2prxpKnX/V9mLMVeBYpbH9tcF+Rz7hgjHqW3TG16Kyc0xgoMNg9n2UmhroosSpTbCkOR20hx0HDYU6R/h38J/4dAqNq7EqC2rxeclA1DfqTFKXiXSiduFgv5eYNt643dWjIqdXVNKW27ppFy/E8SqL05T9o6ph1F0CDdQC5LP95IgVpKCXdv6OW6Z+Nlkuak/MdCH8bsW+K9N+JWn7h4cA8VzCe3p3lvzTDPCk15FTQkis+T7bvYyHkM9kqvd7TFrmG1fLhXJSR7KlHdRcvHHH5LGCkuO7l1tT7ffpTKleKcH3rNbc8cYBwn8r7Jh3KuUvxPJ+f++oJtGA1WnHbyyuSik1lKCVe9cJm0KKDWbX2GGAv5PuKhwY1kd5W5ZCyiG89ohU75QG6WfBdrUsYKgU0nw+pAG1XLOYoKTWudCg1yNqEGKXOBXLz7+d1CWiyNajGLaxy5H0SaxzKX1diib/j0J5X+t1E/lpzpheehQeuESO58PypmBa+KAQ1V/goU0UwlXWvYi8aqFfS9HPw9NsMgy187iqKGtYZnjLa0aNWDsUn+G6i22KRLl58n9f2ncTD/oE7z+29oT+PMiXufsenkDTT8Scfy+RrWg4Y9oaGYaZSN9+Wy2ZOEnwKvPD/oKWJZ1xT4H8+uzwz48PHxCTRsxk9NmwcCRDzINxQPhaTPyWdT5LUeGnS7Lo8DKJjy/AU3Irmt
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Modify table data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases/{id}/tables/data"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Insert, update, or delete data in a database table
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"table":{"type":"string","description":"Table name"},"action":{"type":"string","enum":["insert","update","delete"],"description":"Action to perform"},"data":{"type":"array","items":{"type":"object","additionalProperties":true},"description":"Data to insert or update"},"where":{"type":"object","additionalProperties":true,"description":"Where condition for update or delete"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Data modified successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-notification-alerts
+title: "Get notification alerts"
+description: "Get a list of notification alerts"
+sidebar_label: "Get notification alerts"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVNtu1DAQ/RVrnkN3KQikvJWLKiRUVSqIh9U+TJJJ4uLYxp60LFH+HY2T7qXbLhVPkeMzc47PXAZgbCLkK7hyrGtdImtnI6wzqCiWQXs5Qw6XxAqV0ZGVq5XdAys0FDhCBh4DdsQUJOEAFjuCHDw2BBloyfKrp7CBDGLZUoeQD8AbLyBtmRoKILQ19oYhfz0+1nCNDSnbdwUFVbugPDbaJg0wZlu+qP/8H9/yiPBq4nK10kxdVJ4SKcG4ziBQ9M5GipL2fLmUz2H415Nulc4yWZYw9N7M94vbKLHDsWRX3FLJYnNwngLribl0FT35sNqFDnn69eYcxgw6ilHU79CRg7aN3FXILyCT+u+hMAQUe5M7x9HjmAE7RvNPfe/ewjgmuGYjsJu+LCnGH5pbcTHdphdw6yrIoaEkDrmFHBb7BsfF1uFI4e6hGftgBIlew+Mqf5o6QF1cf1FTSKpvpLIPmjcp/ANhoHDRC99qvX99I3Wa3NkHbR/cMvuHDpRzkUDJG21rl5Dzoz8GvDdYiJAjkSJOen7GZAqtcp7sq+j6UJKqtNSy6JkqdU+FKgVHQWHVaau8QRa/IQNxZEq5PHt/tpTaexe5w9R18wzJtD/dtQeqhl0Tv2hBzJYw/eaFN6hlbqfKDHMtV3BQS8hgDl5n0DppvhUMQ4GRvgczjvJ7mnEpUqUjFoYqyGs0kU6IPbFJnlH5kza7XXaHphdIWjsvZ312nZzknPfZjnMth6CFNDVjBi1hRSF5MMVclCV53os62jCSZTtNl5+/wTj+BS4aEzg=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get notification alerts"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/notifications/alerts"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a list of notification alerts
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"query","schema":{"type":"integer","default":1},"description":"Page number for pagination"},{"name":"size","in":"query","schema":{"type":"integer","default":10},"description":"Number of items per page"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of notification alerts","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object","properties":{"list":{"type":"array","items":{"type":"object"}},"total":{"type":"integer","format":"int64"}}}},"title":"SuccessWithList"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

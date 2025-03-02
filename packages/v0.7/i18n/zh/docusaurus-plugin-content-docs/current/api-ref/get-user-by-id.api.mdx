@@ -1,0 +1,71 @@
+---
+id: get-user-by-id
+title: "Get user by ID"
+description: "Get user by ID"
+sidebar_label: "Get user by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVMFu2zAM/RWB2GEDlCboCgzzLV27oodhw7qdggygLSZWZ0uqRLcNDP37QNtN06W772SLfBT5Hin2wLhNUKzgZ6KYYK0hYMSWWE7FqgeHLUEB1oAG66CAgFyDhkh3nY1koODYkYZU1dQiFD3wLkhE4mjdFuRCZooS+mu1mH3E2WY5+7zuT8/yG9BgKFXRBrZeEF+82/qLc/W1vKWKr42KFCIlckxGYVKoanpEQ5VtsVH7FGy5kZxPYZD/vnj0qOsLyGspPgXvEiWp93SxkM9LvMihDDHaJoGGyjsmx4LDEBpboeDmt0nA/TF5P6QT8tEHimzHVJU3dICyjmlLETRsfGyRR9P7Uym/pZRwS8eCCjXkV5Ll/CzETVdVlBLkLNazxdk/GDrPauM7Z/47jhSjj694DkheDpA8cnxJ7opYdUKw3EnPJRXX3kABW+JxJmsoYC6YNO+tyaAhUbx/GvsuNuLHYI9m9II22DWslt+u1RgyzFSiqouWd0P4OWGkuOwky2p96L4RGUelDkF7njVzgOk5ybkcQANv6zZ+QE78P0V8aLCUQo6KlOI2PqoJoxU65QO5WfJdrEgZK4KWnbyrBypVJTiKCk1rnQoNsrQLNIgi45WLkw8nC2lN8IlbHIZi2g5Hcr8oZs+N6ZHnoUHr5JpB4n5qxQqGVoCGwhpZQ7VPLOa+LzHRz9jkLOa7jqJIvNZwj9FiKUqsejA2yb+BYoNNoqMK9sMNb79Pm+udel4K+vUSJyO6nSiBTScn0PCbduNOzOusoSY0FIcyRseyqijwQcjRe5KJ2I/k1eUPyPkPyfXfaQ==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get user by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/users/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get user by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"User details","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}},"404":{"description":"User not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: discard-git-changes
+title: "Discard Git changes"
+description: "Discard changes in the Git repository"
+sidebar_label: "Discard Git changes"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVN9v0zAQ/lesEw8gpWs1kBB529aBJoFAGzxVRbrG18aQ2Ma+bKui/O/o7HTt1oEQeUli331333c/emDcRCgX8MEwLAvQFKtgPBtnoYS5iRUGraoa7YaiMlZxTeqDYRXIu2jYhS0U4DFgS0xBoHqw2BKUYDQUYATHI9dQQKBfnQmkoeTQUQGxqqlFKHvgrRePyMHYTQJkpiCu3xezyTucrM8m75f96ZvhBTxN8pOzGzc/V59XP6jiKy2pBYpkmbTCqFDVdI+aKtNiox5CsOFGYu7cYHgKnG/U1RyGZU6eIp87vZWMn3KpnGWyLFfofWMqFJTpjyhQ/TFVl8AfibJIOkUpgw/OU2BDUVzy8d4XQ0CR3TC18Vi+IT8CHb2zMYOczmbyekzxYiyszoUmrWJXVRTjumsaCfHftB4zqJymAytjmTYUoIC1Cy1yPnp9KjVoKUbc0DO0CtDIzwQTqrtq3uT0YVSgJa6dhhI0NcSUO6uGEqYbw3HaGz1Mx+aGAiKF210Pd6ERM/TmqOHmtMauYXX25Upll9QgkaouGN4m93PCQOGsk2CL5eH1jUiWVTk0eiBVM3sYZ0P+V8kokRTVr/dteHmPrW/ooEMWO62Wg0ze2iXcUZqLgHcNriTtI0pCZe2CGm0KhVY5T3YSXRcqkv7gYFadjNQdrVQldhQU6tZY5RtkKSQUIPplyNnJ25OZFM27yC2mdhkXw26tyB7Zq/8oo37fef+8hUYBme556hs0VqKnOvZj2RcgZYcCyrSbdrGXBdQustz3/QojfQvNMMjxr46CFHRZwC0GgytRctGDNlG+NZRrbCL9JfmX1+N8v1L7ffKHXHfjbYXNLTad/EEBP2mb1+kgda0JNYWURr64yMEmX8V973g0r0Ox8zirKvL8V9vlwfDMLz9efr2EAlbj8mvTOEPAO1lgeJfTdIl+6ux01kODdtOlYYaMKs9v8eA0rQ==
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Discard Git changes"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/gits/{id}/changes"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Discard changes in the Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["paths"],"properties":{"paths":{"type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Changes discarded successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

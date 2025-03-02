@@ -1,0 +1,71 @@
+---
+id: get-spider-by-id
+title: "Get spider by ID"
+description: "Get spider by ID"
+sidebar_label: "Get spider by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVE1v2zAM/SsCscMGqE3QFRjmW7p2RQ/DhnU7BRlAW0yszpZUiW4bGPrvA203TZfsvpMt8fHjPVLsgXGToFjCbbCGYoKVhoARW2I5FcseHLYEBVgDGqyDAgJyDRoi3Xc2koGCY0caUlVTi1D0wNsgHomjdRuQgMwUxfXXcn7yEU/Wi5PPq/7sPL8BDYZSFW1g6wXxxbuNv7xQX8s7qvjGqEghUiLHZBQmhaqmJzRU2RYbtUvBlhvJ+ewG+e/Ao0XdXEJeSfEpeJcoSb1n87l8XuNHQZQhRtsk0FB5x+RYkBhCYysU5OwuCbw/pO+HhEI/+kCR7Zis8ob2UNYxbSiChrWPLfJ49f5MCLSUEm7oUFIhh3wkWc4vUtx2VUUpQc5yez4//ydH51mtfefMf8eSYvTxiGWP5tUAySPL1/SuiVUaKZZb6bwk49obKGBDPE5mDQXMRlSa9dZk0JAoPjyPfxcbQWCwB7N6SWvsGlaLbzdqdBlmK1HVRcvbwf2CMFJcdJJnudo334qUo1r7oB3XmjnA9KzkXA6ggbt1az8gJw0+RXxssJRCDoqU4tY+qgmjFTrlA7mT5LtYkTJWRC07eV+PVKpKcBQVmtY6FRpkaRloEEXGkPPTD6dzaU/wiVscBmPaEkckf1XOjh3TE89Cg9ZJoEHkfmrHEqZ2gIbCGllJtU8shr4vMdHP2OQs1/cdRZF5peEBo8VS1Fj2YGySfwPFGptEBzXshhzefp+22Dv1siD08SKnS3RbUQObTk6g4Tdtx/2YV1lDTWgoDmWMhkVVUeA9l4N3JVOxG8zrqx+Q8x9pieTh
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get spider by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/spiders/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get spider by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Spider details","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}},"404":{"description":"Spider not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

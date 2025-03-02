@@ -1,0 +1,71 @@
+---
+id: run-a-task-directly
+title: "Run a task directly"
+description: "Run a task directly"
+sidebar_label: "Run a task directly"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVM1u2zAMfhWB2NFZgm7AMN/SdQN6GFq03cnIBtpiErW2pEpU08Dwuw+U0zRZimHAfLEtUSS/H6oHxlWEsoI7jA8RFgUEekwU+dzpLZR9/jWBNJQcEhXQOMtkWbbQ+9Y0yMbZ6X10VtZis6YO5Yu3nqAEV99Tw1AcJKogeqMp/DJaCvrgPAU2FHOC/dZrjsjB2BUU4JGZgoUSflazyWecLOeTb4v+7OPwDgrQFJtgvPQDJXx3duUuztVVbuBSq0A+UCTLpBVGhWpNz6ipMR22al+CDbdS8+UYDNKhccHw9qAlY5lWFKCApQsd8rj04SyHY8DuLQpQayPdYXt9gFl4HfIjJEXvbBypOJvN5HUMS3RSkTEIjJiahmJcprbdwn9ocyxB4zT9I9SOYsQVnWo1FKCR3ygmKF84vh3bhx34Y6A3ySpULHC1CdRwhtgRr52GEryLPDpiDSVMJS5OQ7JQQKTwREFc3UMKrWyjNycGuaAlppbV/PpSjUdgWMjpJo1iVz2cEwYK8yRFqsXh9q2QOfJ1GLSHu2b20ksOgxLqHJThix43r1P29Rk739If5j8w/d59s1dvSR5jly5X3NH5JeCmxVoAnYAVkEsX1C6mUGiV82Qn0aXQkNJG6tVJXLWhWjUSR0Gh7oxVvkUW8aEAYXZMOXv/6f0s+91F7jBbzGIG+7Z2Rx3tiWJ65qlv0VjJlfXqd7JWkGWVyyNZuSrWInpZQd/XGOlHaIdBlh8TBdFrUcATBoO10FEthgLWhJpClvKBtsLROCKTOyku4W2SJk7GZSheTsybhjz/NXZx4Mvrq9s7KKDeXZ9dniUIuBEUuIESoACXScjmyWs9tGhXKU8SjDnl+Q2gCO5n
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Run a task directly"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/tasks/run"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Run a task directly
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["spider_id"],"properties":{"spider_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"priority":{"type":"integer","format":"int32"},"param":{"type":"object","additionalProperties":true}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task started successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

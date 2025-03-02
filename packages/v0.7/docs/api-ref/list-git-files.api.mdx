@@ -1,0 +1,71 @@
+---
+id: list-git-files
+title: "List Git files"
+description: "List files in the Git repository"
+sidebar_label: "List Git files"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVF1v2zAM/CsCsYcNcJqgGzDMb+m6FQU2rNjHU5ABjE3b6mxJlei2geH/PlC2k6xphi0vRqQjeXck1QFjGSBdwZVmWCeQU8i8dqytgRQ+6cCq0DUFpY3iitSVZuXJ2aDZ+i0k4NBjQ0xesnRgsCFIQeeQgJYUDrmCBDzdtdpTDin7lhIIWUUNQtoBb51EBPbalDEhM3kJ/blazN7hrFjOPq678zf9C3jK77M1pb28UF82t5TxdS7UPAUyTLnCoFBV9Ig5ZbrBWu1KsOZaak5h0D9NPNyo60vok52oUUqUdddSlH9Kx1HGG+RqMvHAwH4t3gRnTaAgac4XC/k80wdbDK2ABDJrmAwLEJ2rdYYCnN8GQXfHpGyUI+Z668izHmplNqcDlDZMJXlIoLC+QR6OXp+LmIZCwJKeF4r8TLG+3xv9rc0yCgF6+UkyrmwOKZTEQ8crSGFeag7zTuf9POqc1zrIdSB/P41X62tBotNHs3BJBbY1q+XNtRpCormBstZr3sbwC0JPftlKvdX68PqbWDa4cgjaiaqY3dRu+b+JoChSm8JG5Cj2vceHGjdC5IikkCusVyMmUWiUdWRmwbY+I5VrsXXTyvw+0EZlgiOvMG+0Ua5GltZAAuLIkHJx9vZsIW1wNnCDcQDGgY1jIxs7zc0fZLr9GP3Loo9GMD3y3NWojdSM/ejGDq5AOggJpHH9p6KxjesEKhtYQF23wUA/fN33cjxsknQn1wE3tbwRBdaB/kL3xDKdIPmLtvvtvce6FUgcjnv0Wkr+Z/mXX8fX7JXaPxQnio+HaLaHxSdSOod+3SdQEebkI43hYpll5Pgg5GjPhf9uka4+fIe+/w22hPeG
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"List Git files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}/files/list"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+List files in the Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"},{"name":"path","in":"query","schema":{"type":"string"},"description":"Path in the repository"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of files","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

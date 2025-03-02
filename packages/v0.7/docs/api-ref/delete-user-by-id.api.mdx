@@ -1,0 +1,71 @@
+---
+id: delete-user-by-id
+title: "Delete user by ID"
+description: "Delete user by ID"
+sidebar_label: "Delete user by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVMFu2zAM/RWB2GEDnCboCgzzLV0yoMCGDet6CjKAtuhYnS2pEt02MPTvA+00TZbsvpMt8lHke6TYA+MmQr6Cu0ghwjoDjwFbYjnlqx4stgQ5GA0ZGAs5eOQaMgj00JlAGnIOHWUQy5pahLwH3nqJiByM3YBcyExBQn+tZpOPOKnmk8/r/vIqvYEMNMUyGM/GCeKrsxu3uFbfinsq+UarQD5QJMukFUaFqqZn1FSaFhu1T8GGG8n5Egbp74tHj7pZQFpL8dE7GylKvZezmXyO8SKH0tSQJI5dWVKMVdc0W8igdJbJsgSh940pUYKm91Ei+1Ml3JBblAjOU2Az5i2dpgOUsUwbCpBB5UKLPJreXwqXlmLEDZ2qKzyRzyRL6VWV27F8SEmsV7Orf9C1jlXlOqv/O44UggtnPAcklwMkjRyPyS2GNqpOOBZbmQHJxrXTkMPY43FMa8hhKrA47Y1OkEGk8PjyErrQiB+9ORnbBVXYNazm32/UGDKMWaSyC4a3Q/g1YaAw7yTLan3ovhUxR70OQXu2NbOH3QuTczGABvbGVm5A7lT4FPCpwUIKOSlSiqtcUDtMptAq58lOoutCSUobkbXoZOKfqFCl4Cgo1K2xyjfI0jTIQBQZr5xdfLiYSYO8i9ziMBq7hXFO9KN69vSYnnnqGzRWbhpU7nfdWMHQDcggN1qWU+0ii7nvC4x0F5qUxPzQURCV1xk8YjBYiBirHrSJ8q8hr7CJdFLBfsrh7Y/dPnunXldFdr7EnRGtLINHbDo5QQa/aTtuyrROGdSEmsJQxuiYlyV5Pgg5eVgyFPvBXCy/LH8uIaU/8tHpCw==
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete user by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/users/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete user by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"User deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}},"404":{"description":"User not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

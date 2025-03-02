@@ -1,0 +1,71 @@
+---
+id: delete-task-by-id
+title: "Delete task by ID"
+description: "Delete task by ID"
+sidebar_label: "Delete task by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVMFu2zAM/RWB2GEDnCboCgzzLV0yoMCGDWt3ClKAtuhYrS2pEt02MPTvA+00TZfsvlNi6lF875FiD4ybCPkKbjDeR1hn4DFgS0xBwj1YbAlyMBoyMBZy8Mg1ZBDooTOBNOQcOsogljW1CHkPvPWSETkYuwG5kJmCpN6uZpPPOKnmk6/r/vwivYMMNMUyGM/GCeK7sxu3uFQ/ijsq+UqrQD5QJMukFUaFqqZn1FSaFhu1L8GGG6n5kgbp74vHE3W1gLQW8tE7GykK3/PZTH7e4sUOpakhKRy7sqQYq65ptpBB6SyTZUlC7xtToiRN76Jk9sdOuKG2OBGcp8BmrFs6TQcoY5k2FCCDyoUWeQx9PBctLcWIGzp2V3QinyiW0qsr1yN9SEmiF7OLf8i1jlXlOqv/O40UggsnTg5ELgdIGjW+FbcY2qhYNBZbmQGpxrXTkMPY43FMa8hhKrA47Y1OkEGk8PjyErrQyDl6czS2C6qwa1jNf16pMWUYs0hlFwxvh/RLwkBh3kmV1frw+FrMHP06BO3V1swedi9MvosBNKg3tnIDcufCl4BPDRZC5IikkKtcUDtMptAq58lOoutCSUobsbXoZOKfqFCl4Cgo1K2xyjfI0jTIQBwZr5ydfTqbSYO8i9ziMBq7hXHK9Dd89vKYnnnqGzRWbhpc7nfdWMHQDcggN1qWU+0iS7jvC4z0OzQpSfihoyAurzN4xGCwEDNWPWgT5b+GvMIm0hGD/ZTD+1+7ffZBva6K7DTFXRCtLINHbDr5ggzuaTtuyrROGdSEmsJAYzyYlyV5Pkg5elgyFPvBXCy/LW+WkNIf80/otw==
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete task by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/tasks/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete task by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}},"404":{"description":"Task not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
