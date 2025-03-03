@@ -5,11 +5,15 @@ description: "Get commit history logs from the Git repository"
 sidebar_label: "Get Git logs"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVMFu00AQ/ZXViANIThMVJIRvKYWoEghE4RQZabI7trfYu9vdcdvI8r+jsd02bYADvsTeeTPz5r2d9MBYJci3sLEMRQaGko42sPUOctgQK+3b1rKqbWIf96rxVVJl9K3imtTGsooUfLIShAwCRmyJKUrRHhy2BDlYAxlYqRiQa8gg0nVnIxnIOXaUQdI1tQh5D7wPkpE4WleNBZkpSurP7WrxDhflevGx6E/fDC/gOd3P3lX+/Ex92V2R5gsj1CIlckxGYVKoarpDQ9q22KiHFmy5kZ73aTA8LzxF1MU5DIWQT8G7REn4nq5W8vMU/8kmVr4cxYIMtHdMjgWHITRWo+CWV0nA/fHwfmwnw0cfKLKdWmlv6ABlHVNFETIofWyRp6PXp0K/pZSwomNBZTTkPzQbhkchLjutKSUY5JFiXHsDOVTEkyM15LCsLKdlb82wnMdMFG/uje9iIxgM9silcyqxa1itv16oKWVUNZHuouX9mH5GGCmuO+m0LQ7DlyLWpMch6GGcmjnAfKHkezeCxvGsK/2InMd8H/G2wZ0QOSIp5Eof1YzJFDrlA7lF8l3UpIwVQXed3Kxb2iktOIoKTWudCg2ymAIZiCJTydXJ25OVGBB84hZH6+f9kD2TVZqFfEKlf7w+/7GPsypMd7wMDVonBEZz+tnILYiRkEE+bulIocig9okl2Pc7TPQjNsMgx9cdRbGoyOAGo8WdKLntwdgk7wbyEptE/5jh5bd591+px7X6C9H5EJ2McoNNJ1+QwS/aT/8qQzFkUBMaiiONKbDWmgIfpBxtndyoh2u9+fAdhuE3uP+2Gw==
+api: eJydVE1v00AQ/SurEQeQnCYqSBTfUgpRJRCIj1MUpIk9trfYu9vdcdvI2v+OZu00aSM44Ivtna83b97sAIx1gHwNK82wyaCkUHjtWFsDOayIVWG7TrNqdGDrd6q1dVCVt53ihtRKs/LkbNBihAwceuyIyUvSAQx2BDnoEjLQktEhN5CBp9teeyohZ99TBqFoqEPIB+Cdk4jAXps6JWQmL6G/1ovZO5xVy9nHzXD+Jr6A53A/W1Pbq0v1ZXtDBV+XAs1TIMNUKgwKVUMPWFKhO2zVYwnW3ErNfRjE54lHi7q+grgR8MFZEygI3vPFQl5P/T/pwMpWiSzIoLCGybD4oXOtLlD85jdBnIfT5m0qJ81768izHksVtqQjL22YavKQQWV9hzwevT4X+B2FgDWdEhrjod/vfVFQCBDlkRhubAk51MQj8Q3kMK81h/mgyzifugnk7/bz7X0LOQypA4r5fD40NnDMB2c9xzk6fTKkK6qwb1ktv16rMRVkcIde47Yd+xyzyReZvhNxNswOsvQKo0pTDshHS8xAyo5z2FtaW2CbjmMGAueJ+WJxsYhRphmo6L3mXernktCTX/bS+npzbP6eQCV8x06P/E4Q99hhm5wS39pUNnlOvL/3eN/iVhg4YUdYqaxXk0+m0CjryMyC7X1BqtQyyG0vir6nrSrEj7zCstNGuRZZxCCMkg9jysXZ27PFSELgDpPkpr2U/ZYVnib7BMpwkO1/3AMTK0wPPHctaiMAklqGSVlrEGVBBnm6HRKEzX6QaxiGLQb66dsY5fi2Jy8j2hy0kgZW6iDfJeQVtoH+0cPLb9Od80od1vkvQKdDNLukzbaXP8jgN+3G2yxuRHOEJfkEYzQsi4IcH4WcbLso6nHPVh9+QIx/ABcr4Gs=
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Get commit history logs from the Git repository
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of logs","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"List of logs","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>

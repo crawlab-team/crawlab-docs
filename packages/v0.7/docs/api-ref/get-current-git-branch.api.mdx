@@ -5,11 +5,15 @@ description: "Get the current active branch in the Git repository"
 sidebar_label: "Get current Git branch"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVMFu00AQ/ZXViANIbhMVJIRvaQtRDwhE4RQFabyexFuc3e3sOG1k+d/R2E6aNsCBXBzvvpl5782MWxBcJ8gXMHcCywxKSpZdFBc85DAnMVKRsQ0zeTFoxW3JFIzeVsb5/nLuxDDFkJwE3kEGERk3JMSauAWPG4IcXAkZOM0aUSrIgOm+cUwl5MINZZBsRRuEvAXZRY1Iws6v+4QixBr6czE9+4Bnq9nZp2V78a57BS8pfw5+Ha4vzZfijqzclEqNKZEXKg0mg6aiRyzJug3W5lBCnNRacx8G3cvEw425uYZuqeRTDD5RUr4X06k+nuOvRs8GsyADG7yQF0VijLWzqMjJXVJ4eyo/9AVVPodILG4oZkNJRyjnhdbEkMEq8AZlOHp7oQI2lBKu6dRSFYfyh2Jd92TFbWMtpQSd/jSZVKGEHNYkQ08qyGGydpImrSu7ySCU0mScFsggEW/3Y9BwrXiM7qRn17TCphYz+3pjhpDe40S2YSe7PvySkIlnjVZdLI+vb9W4wZtj0EFaJRJhHC99L3pQL9X5VeiRo+QrxocaCyVyQlLJrQKbEZMZ9CZE8mcpNGzJlE7NLRqdswcqjFUcscFy47yJNYo2CDJQR4aU0/P351NtRgxJNtiPwbgtunn7rdMFO0zRM1Lt01D9566OHgk9yiTW6LzS6VvVji1egLYYMsj7Dd53WQd67PMygyokUWjbFpjoB9ddp8f3DbG2b5nBFtlhoS4vWihd0v8l5CusE/1D1etv41fijXlawL/QHg/Rq7At1o2+QQa/aDd8f7pll0FFWBL3NIaLmbUU5SjkZDt12g7jP//4HbruN//bxws=
+api: eJydVEtv1EAM/isjiwNIabMqSEBufUDVAwLxOK0WyTvxbqYkM6nHaVlF89+RJ9m+VnAglyTjx3z+/NkjCG4jVEu4dAKrAmqKll0vLnio4JLESEPGDszkxaAVd0tmzehtY5zPxksnhqkP0UngHRTQI2NHQqyJR/DYEVTgaijAadYepYECmG4Gx1RDJTxQAdE21CFUI8iu14go7Pw2JxQh1tCfy8XRezzanB59XI0nb9ILeA75U/DbcHFmPq+vycpVrdCYInmh2mA0aBr6jTVZ12Fr7q8QJ63euQ+D9DzxZDFXF5BWCj72wUeKivdksdDXU//zmbOJLCjABi/kRT2x71tnUT3L66ju42H5IV+o5XPoicVNl9lQ0yMv54W2xFDAJnCHMh29PtECOooRt3RIaUoPFX8brKUYIemjMdKEGirYkkzUN1BBuXUSy9HVqZzqoVjOooACIvHtvtsDt1DBmKuhVJXl2IQoqRr7wJJK7N1Byy5og0Mr5vTLlZlSQQG3yA7X7VTzlE2/yA+dyrUR6aHIrzjpNueAarKkAvTaqSt7Sxsstvk4FaBwnpjfLd4tUtLeRrIDO9nles4Imfh0UBqWq8fmbxlUxvfY6Z7rGeIeO6yzU+be+U3InnMPzhnvWlwrAwfsKCubwGb2KQx6E3ryRzEMbMnUTpu6HlTfd7Q2Vv2IDdad86ZvUVQYyihxnFIujt8eLyYSonSY5TdPqU78ftp1sO/V+wTU+CDm/9wRM0dCv6XsW3Re4WTtjLPmlqCagwKqvDn2stNBmoW32jd5CeO4xkg/uE1Jj28GYm3f6kFHuZm1i/pdQ7XBNtI/qnr5dd5Or8zD4P8F9nyIfpd12w76BwX8ot2099JK9UhYE2cYk+HUWurlUcjBVlC13c/j5YfvkNIfU77xWw==
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Get the current active branch in the Git repository
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Current branch","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Current branch","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>

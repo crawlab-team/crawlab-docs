@@ -5,11 +5,15 @@ description: "Add a new Git repository to the system"
 sidebar_label: "Create a new Git repository"
 hide_title: true
 hide_table_of_contents: true
-api: eJylVU1v4jAQ/SvWnNOCuoeVcmu7q3al1S4q9IRQNSQDcZvYrj0pRSj/fTVOIFDoh7S5QCYzzzPP79kbYFwGSKdwoxlmCeQUMq8da2sghcs8V6gMrdSNZuXJ2aDZ+rViq7ggFdaBqYIEPD3XFPjK5mtIN/FVe8ohZV9TApk1TIblEzpX6gxlgcFjkFU2ELKCKpR/vHYEKdj5I2Xc4bZAUzBYESRQ+1Iadd468qwpSF381tcH9tos4e04f7AiZRex9cOBoGmBP4W4v/v9PgLWXDy09cc4ZOoqjmGNjFEwO0gghOIE7TUXZLijSQmSWlj/Xt+B/Nfmv+8yI9jtZDJSeLCSoDkMYWV9/jnaqMscsH0i8xFmCMXDE60/hxyPb5Xz+gWZ1BOtI6bETkN+vVXBELxthdLtFkpMh134zHnLlDHl0MRHBBicNaFV2cVwKD+H2G+ckXlCplyFOssohEVdlmv4Dwcc6jyz+f4+a8O0JA8JLKyvkNvQtwthqKIQcHlCFU0COfKJxWRe1lxKaNy2Dx0NFXFhc0jB2RC7Qi4ghcFScxAVk38hL+fIprURDNDpo234QQusS1aXo1+qLYFmJtVZ7TWvY/kVoScvDoB0Otv/PBaOWhr2k3ZTbB0V0yCFeUyKUwnNd/0R9fMVK1dSf3D0umm7373uOXpr3N5ufVqvxD62E/1h6Di1SUCbhY2TdOxfe1yVOBeijkgU8sQXXU6i0CjryJwFW/uMVK4Fd16LCFc0V5nkkVeYV9ooVyKLViAB2bEWcnj+/XwYzW8DV2j2iLmOcj55CbztbNOL/OsXR8ct0ysPXIna7J3ErcimEEU2S6AQ7aVT2GzmGOjel00j4eeavGhnlsALeo1zoXA6axIoCHPyUVbtTly3DZ5NZFVJL2tZ/ciRTbKtuMwycvxh7mzPHqO/4wkkMO/uwSraFTyu5C7DFaQACdhIWBRyjG2gRLOso1mhxZTnHx4no9s=
+api: eJylVU1v2zAM/SsCz+4SdIcNvrXd0A4YtmJpT0FQMDYTa7UlTaKbBYb/+0DJqZOmX8B8sU1RT/x4j+qAcR0gn8OlZlhkUFIovHasrYEczspSoTK0UZealSdng2brt4qt4opU2AamBjLw9KelwOe23ELexV/tqYScfUsZFNYwGZYldK7WBcoBk99BTukgFBU1KF+8dQQ52OVvKnjATUBzMNgQZND6WgJ13jryrCnIvrg27g/stVnD03R+YEPKrmLohwlBn4DfhLj99f1lBGy5ukv7j3HItE1MwxpJo2J2kEEI1TNlb7kiw0OZlCCplfUvxR3Ivy//28Ezgl3d3FwrPDhJ0ByGsLG+fBvtevCcsL0n8xpmCNXdPW3fhpzNrpTz+gGZ1D1tI6bYnod8f6iCIXi7HUqnFopNh0fzifOWqWAqoY+PEDA4a0Ji2el0Kq9D7CfKKDwhU6lCWxQUwqqt6y38hwIOeV7Ycr/P2jCtyUMGK+sb5GT6eCoVaigEXD/DCkmLNddimqUoYci2Ia5sCTk4G+LhyBXkMFlrDkJW8g/kZVx0SS3QxcCpzyeTrrKB+7xz1nM/QaePuvCFVtjWrM6uv6kEBRk8oNe4rFN6CU2+dmoZZCKvkIQSMSBPK30Gcmzqym6ltgXW0Sx8tv5w+fP087Tv+4WkU7Re8zbmc07oyYvyIJ8v9pdnMagY377TY1l3Sh5ih2V0imWW9v4aR+PXv9i4msaBNfI1lfPxd2+S7AbGKPPRbVTAaHsU26Hp2LXPQJuVjZkMdLjwuKlxKR066p50TfQ4+GQKjbKOzEmwrS9IlVpwl62Qf0NLVYgfeYVlo41yNbJwVDpOPiTI6YdPH6apSYEbNHuFuYgyevbyeRpZN4rr/RfWUFumvzxxNWqzdwMk1s8hsn6xY9gcum6JgW593fdi/tOSF+4sRhJH6mRQEZbkI61SJy5SgCc3cqq4162cfjQJ+my346woyPGrvos9vV7/nN1ABsvh/m3imACPG7lDcQM5QAY2FiwSOdo6qNGs2zgkIGHK8w956s4r
 sidebar_class_name: "post api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Add a new Git repository to the system
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Git repository created successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Git repository created successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>

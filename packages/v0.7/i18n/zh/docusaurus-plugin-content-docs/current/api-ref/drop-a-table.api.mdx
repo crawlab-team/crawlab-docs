@@ -5,11 +5,15 @@ description: "Delete a table from the database"
 sidebar_label: "Drop a table"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVMFqGzEQ/RUx9NDCOjZpoXRvSexCoKUlSU/BhfFq7FWqlRRpNolZ9t/LaO3YtdPQQ32xLc28ee/NaDpgXCUob2GKjAtMBPMCNKUqmsDGOyhhSpaYFCrGhSW1jL5RXJPS24wCAkZsiCkKVAcOG4ISjIYCjEAE5BoKiHTfmkgaSo4tFZCqmhqEsgNeB8lIHI1bZUBmipL683Yy+oSj5dno87w7/dC/gUN+X71b+em5+ra4o4ovtYoUIiVyTFphUqhqekJNlWnQqucSbNhKzW0a9IfAw426nEI/H8hT4nOv18L4UEvlHZNjucIQrKlQUMZ3SaC6Y6k+g4vU6ANFNpTkdrDu2JA/md3kTuTYPn+EXgrepQHldDKRr5eSdPQhkFaprSpKadlau4b/Rr/yep++cUwrilDA0scGeTh6fypeN5QSrl4QK31AfqGYyNx27XqgDxv1DXHtNZSg87AOE1RDCePtlKZxZ3Q/zjOcxuICFJAoPmyHto1W4jGYI7untMTWsjr7fqmGlDwRiao2Gl7n9HPCSPGslaq38/3ra/FusGc/6FldzZy55DAoYZGDslqx/2o3d7MnbIKl3ZzsWWbc0mfQjUEXER8tLoTzkR7RsfRRbWIKhU75QG6UfBsrUtoI7qKVB/RIC1VJHEWFujFOBYss7YQCxLwBcnLy8WQiPIJP3KDb4ziNPmy3xyGVbjd4/7JnNo4xPfE4WDROKubGdZuG38Jzw6GAMq+goedSWro+L6D2iSW06yTwR7R9L8f3LUVp5ryAB4wm85XWapPkt4ZyiTbRKxLeXm22wju1Wx5/ob05RCfP7wFtK/+ggF+0HnZnP+8LqAk1xUxjuLgYio1uJH2XePRo+2KbcVZVFPjV2PneC5rOvsxuZlDAYrPpmvymIeKjrHB8HGj6LD9PdT7rwKJbtflFw4Aqn9+xAyzz
+api: eJytVVGP2zYM/isCsYcOcOrgNmCd3+6aG3DAhg3t9SnIAMZiEnWypEp07wLD/32gZCfppSv2UL84EcmPH8lP9ACM+wTNGlbIuMVEsKlAU2qjCWy8gwZWZIlJoWLcWlK76DvFB1J6jqggYMSOmKJADeCwI2jAaKjACERAPkAFkT71JpKGhmNPFaT2QB1CMwAfg0QkjsbtMyAzRQn9e71c/IqL3e3it81w8/P4A7zk94d3e7+6U39uP1LLD1pFCpESOSatMClUB3pGTa3p0KpTCjZsJeccBuNL4GJRDysYN4U8Jb7z+iiMX9bSesfkWEwYgjUtCkr9MQnUcF2qz+BSavSBIhtKYi2tu27Il8we8ySy75gfoZeCd6mg3CyX8vpakI4+BNIq9W1LKe16a4/w3ei3Xl/SN45pTxEq2PnYIZejn26k1x2lhPuvFCvVzMN5X1jCVGRHfPAaGtBZk0UoB2ignsWY6sHosc5STbUUCxUkip9nbfbRQgNDLojGpq6Hg088NkPwkccag7nq9op22FtWt389qAIFFXzGaHKSU3tyKeT6Tq7TgVkyyyuVK5UxoCmWsQJJW4Y0W6xv0ebjsQKh84X5zfLNchxFiYnaPho+5nruCCPF217asN5cmt9nUpnfpdOp3RPFmTtss1Nuv4z93Vnv98/YBUtnfZ5GJfd75zPoNLG3EZ8sbqVZV42UBu58VJNPpdApH8gtku9jS0obwd32cnGfaKta8aOoUHfGqWCRRUbSfIqpQC5f//J6WfqVuEN3wXEVfZi31ksqw1nw/2e/TR1jeuY6WDROMmYlDZMC13BSIFTQ5NVXRCipRYabeeRrGAZx/BDtOMrxp56iDHNzVlUerTZJfmtodmgTfaOEV++mbfSjOi+t/6A9HaI7ZhXbXv5BBf/QsezscSPqJNQUM41ieFuSLR4l/Bx4tSzGao64bVsK/E3fzcWVXt3/fv94DxVspw3b5V0CEZ/k04FPhabP5WdV57MBLLp9nzcJFFR5/gU/c1dD
 sidebar_class_name: "delete api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Delete a table from the database
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Table dropped successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Table dropped successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>

@@ -1,0 +1,75 @@
+---
+id: install-spider-dependency
+title: "Install spider dependency"
+description: "Install a dependency for a specific spider"
+sidebar_label: "Install spider dependency"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVVFvGzcM/isCsYcOOOeMtMC6e0uaDcjD0KLpngwPoCXaVquTVEmXxDjovw+U7mLH6YoV6L2cLYrkx48feSMk3EXoVnBDnqwiKzVFWDegKMqgfdLOQge3NiY0RqBQ872D2LogUERPUm+1FNFrRQEa8Biwp0SBA49gsSfoQCtoQHMwj2kPDQT6OuhACroUBmogyj31CN0I6eDZI6ag7a4ETIkCu/6zWi5+x8X2avHnerx8k3+Bc6R/ObtzN9fi/eYzyXSrRCAfKJJNpARGgWJPj6hI6h6NeEqRdDKcc3aDfB64WsTtDeR1BU8xXTt1YMTntUhnE9nEJvTeaIkcpf0cOdT4slRXgnOpwXkKiZvQzdS9JOQ5sptjS4pDbuCeQtQ11//2nX1yebjE6J2NFcnlcsmv5853peOnktBVJ8S9/kkcSKdOOdA20a7IbOtCj6kevb7kqnuKEXffYIzLmTt8N0hJMcJUZU9p7xSr0sVUtbaHDlp1Mg9tlXZsR61yO9UIDUQK97PKh2Cgg7FURblr23HvYsrd6F1IuUWvv8H9FgeTxNWHW1FDQQP3GDRuTK29RuNfZIeex3SfkoemvKYxLTGgq5bcAKetrZotxkk05Tg3wHCemd8u3y5zZk1HkkPQ6VDquSYMFK4GZmO1PjXfFVAF3+mlJ84niDN22JRLpQfc+4/HyfnjEXtv6Kj0o0qfBPzUQl4eW1fyTJ18F/DB4Ib5e8Etc8r7abrTCLTCebKL6IYgSSjNcTcDb4UH2gjJ9ygIVL22whtMLK9nQJYXv10sK4Ux9WhPYM/rMZ4PxDmu8TgVP7ZTJ24TPabWG9SWgRTNjZNkV3AqWW5AFS000E27t+p2PWtkBeO4wUh/B5MzH38dKHD310cZFi0oHfm3gm6LJtJ3anr1cVqEv4rjvvwP9NMh2kORvRn4HzTwhQ71c5HXLGdCZoBhVMO7mmzxid2Pji9WTG5mjyspyafv3l2fLIIP7+8+QQObabX3Zf9AwAf+ZuFDBelK8WUIytkIBu1uKNsHakx+/gUWMYrN
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Install spider dependency"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/dependencies/spiders/{id}/install"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Install a dependency for a specific spider
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"Dependency name"},"version":{"type":"string","description":"Dependency version"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Spider dependency installed","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

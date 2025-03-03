@@ -5,11 +5,15 @@ description: "Execute a custom SQL query on the database"
 sidebar_label: "Execute a database query"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVF1r20AQ/CvH0ocW5NikhVK9OXEKgZZ8tU9GhZW0ti6V7pS7VWwj9N/LnqTYidNAoXqxpdudm52d3RYY1x7iJSyQMUVPkESQk8+crllbAzFcbClrmBSqrPFsK3V38009NOR2yhrFBal8zI2gRocVMTkBbcFgRRCDziECLWA1cgEROHpotKMcYnYNReCzgiqEuAXe1ZLh2WmzDoDM5CT113I2+YKT1XzyNWlPP3Xv4CXT79as7eJMXaX3lPFlrhzVjjwZplyhV6gK2mJOma6wVE9XsOZS7hzToHsJ3J+oywV0SU+ePJ/ZfCeMX9aSWcNkWI6wrkudoaBM771Atcel2gAupTpbk2NNXk6Dwq8p8pzavhlsFfWtgi48wtTX1vge8HQ2k5/n6Tch1ZFvSvbw38hnNqeDKG2Y1uQggpV1FXL/6eOpKF2R97im40qlC8ivXCaVjT27a7KMvIeh4Iq4sLn4zHru3VNADNPRoX7a6ryb9tpG4Mk9jlZtXCmRWOsjjRe0wqZkNb++VH1K8IGnrHGadyH9jNCRmzdy3zI5PL4TzXpZDoOeqiqYaxhGQN7TEBSqFNlv92672GJVl3TgjgOttFnZgDooc+5wU2IqpI8KkkJW1qkhJlJolK3JTLxtXEYq14KbNjI3G0pVJnHkFOaVNqoukaWPEIGo10POTj6fzISHKF9hcMsw/fsFMrZBjQ14Rqvdu+/fls4gJNOWp3WJ2giP0M92cMASnhwAEcRhH/UckggK8Uq8hLaVgJ+u7Dr5PEi8TCJ4RKcxFVmXLeTay/8c4hWWnt4o4v3tsBo+qP0G+Qvd4SMakeURy0beIILftOsXaJd0ERSEOblAoz847y+b/JD0feLR7HbRmDHPMqr5zdjkYJCur+5+QATpsOyqMNjgcCNbHDc9SRuKDxYP31oo0aybMNbQY8rzB1ZbMzU=
+api: eJytVduO2zgM/RWB6MMu4DTBbIF2/Ta3BQbYopeZPgVZgJGZRK0sqRLdmcDwvxeU7Elm0hZYoH6xI4pHh4dHTA+M2wT1Eq6QcY2JYFVBQ0lHE9h4BzVcP5DumBQq3SX2rbr98K/62lHcK+8U70g1U24FASO2xBQFtAeHLUENpoEKjIAF5B1UEOlrZyI1UHPsqIKkd9Qi1D3wPkhG4mjcNgMyU5TU/5aL2d8425zP/ln1Z6+GF/Cc6Vvvtv7qQr1bfybNN42KFCIlckyNwqRQ7egBG9KmRasej2DDVs6c0mB4Dlwi6uYKhlUhT4kvfLMXxs9r0d4xOZYQhmCNRkGZf04C1Z+W6jO4lBp9oMiGkkSzwj9S5Cm1QzPYKyqtgiE/wjQF71IBPFss5PU0/UNOjZQ6ywl+G3ntGzraZRzTliJUsPGxRS5Lf52J0i2lhFs6rVQKmFpz22lNKcFYV0u8843YyScuJtlBDfPJiGnem2aYFwkrSBS/TY7sooUa+lwIDfV83u984qHug488zDGYE4mvaIOdZXX+/kYVKKjgG0aDa1vKLWjyRa5r5TrtmANU+ZXKlcoYUJfIUIEcW/oxRazXaPPyUIHQeRJ+s3izGAbxXyLdRcP7XM8FYaR43okAy9Vx+DaTyvyONz3KPFKcuMM6b8qyS7s/Hlx+/YBtsHTkysceybXe+Iw6tuoy4r3Ftah1oqQouPFRjXsqhU75QG6WfBc1qcYI7rqT+3pPa6VlH0WFTWucChZZ/CPqU0wFcvHy9ctFESxxi9ml49Q5DK7JF2pyxBNa/cH1/2/YjUIyPfA8WDROeGSD9aMll/BoSaigznOwcFhNDlhC38uGT9EOgyyPEi9XB5PlTjcmyXcD9QZtol8U8cfHcST9qQ6T6yd0x0V0+2xq28kvqOAL7cvgHlZiVsKGYqZRApflsNmdpB8ST2bGUE0Z51pT4F/uXR3d7Pfvbu+ggvU4ZNs8UCDivfx74H0h6XPx2eJ5rQeLbtvlcQIFU57vFUNdhQ==
 sidebar_class_name: "post api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Execute a custom SQL query on the database
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Query results","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Query results","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>

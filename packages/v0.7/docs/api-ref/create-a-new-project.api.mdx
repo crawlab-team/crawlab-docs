@@ -5,7 +5,7 @@ description: "Create a new project"
 sidebar_label: "Create a new project"
 hide_title: true
 hide_table_of_contents: true
-api: eJylVD1v2zAQ/SvEzUxipEMBbU7aoVODOp0MDyfqbDOlSIY8xjEE//fiKLtWPpdqkXS8r3fvHQdg3GRolnCXwgMZzrDSkOixUOab0O2hGeqvTdRBw6mQBhM8k2c5whidNcg2+KuHHLzYstlSj/LF+0jQQGglM+hJoiV47ElqxRQiJbaUJaJaz5GZk/UbOGjoKJtkoxR657w+kj/H4POY6no2k9eLwBNKZRIhU6dyMYZyXhfn9vAfyF6iMKGborCeaUMJNKxD6pFH05drwdVTzrj5ADPyO8UEKFt2YlqM7cMR/0ustxWjQuVpp+IIHKQib0MHDcSQa+vIW2jgKp4EoCFTeqIkshigJCenGC28LvCN1lgcq/ndDzWGwGEl0aYky/safkOYKM2L1FiupscLGeY4r6nTP7hb5ii9VDdooK1OFb7w8eus0e/P2EdHZ/2cZvi64fNorV+HWus4yNuEO4etQHkTJfDWIamjj1boVYjkL3IoyZDqrORti+hpR60y4kdJYddbr6JDFtpBg8x0TDm7/Ho5kz6Egx79pPUPWHtf/0zPfBUdWi/JKlXDkdAlxMlGb4XrZgnD0GKm38kdDmJ+LJSEp5WGJ0wWWxnGcnXQsCXsKFUK/9Be+hpX4+JeKou7K9LBmzU56FPE3BiK/KnvaiLHu5+Le9DQHi+dvu4QJNzJxYE7aAA0hDqBKppqG8Ch35S6QTDmlOcvvkGrPw==
+api: eJzNVkuP2zYQ/ivEIEc6NrYFmui2m22BHNpdZFPkYDiLkTS2mFIkQ47iNQT992Ioa23HTor0FF0kk/P65puHe2DcJCiWcB/9J6o4wUpDpM8dJb7x9Q6KPv80kWooOHakofKOybFcYQjWVMjGu/mn5J2cpaqhFuWLd4GgAF+KZdBHhpbgsCXxFaIPFNlQEo18etBMHI3bwKChplRFE8TRhfv8iP0UvEujqavFQl4nihNKVUVCplqlrqoopXVn7Q5+ABlae7eGYnmO8RRP5etjPMYxbSiChrWPLfJ49MuVIGwpJdx8Az3yhYQKZDZs5ehhBPLBcHMrwoP+r9Au2/xa6tHU5xFpCMhMUTL6cbmYvcbZ+nr2x6q/+nV4AV+RBX96t/G3N+oue3hbq0ghUiInBGBSqBp6wpoq06JVzy4mZJOa5OF/loeGFExNMV2k4jTav7q2pKj8Wu11lHGKG5NUGGtHzO3L5xH5UnKeua2RacamJdHpQv3DOpOfcvcTkTAB+YmCOmqE+4mlYVjtx8Kp0zc5pwqVo+0zp9J+3PgaCgg+8YijgQLmYZqLGhLFL7mIlj100UIBfZ4INBTzed/4xEPRBx95mGMwZ2hvaY2dZXV9/1aNpkDDF4wGSzs222hNvsh1rUzJhjmAzq88mevRBhTjzaBB3I5zbrqxvkKbjwcNEs7J9avFq4XkRuBUXTS8y3huCCPF605AL1fH1w85qBzfsdAz8/sQp9ihzEKZE5mb7w675PcnbIOlw5w/VM1ppg59a9zaZ197dt9E3FosJYdnWpLXtY9qL6MVOuUDuVnyXaxI1Ubslp0U15ZKVYkcRYV1a5wKFlmaUDihmEaTi5e/vVyMaUzcojsK/RtldHkQMT3xPFg0LjeQ1E6/r7AlhKPNO7K5hL4vMdHf0Q6DHH/uKApPq0PBZJo0NIQ1xUzhP7STuMYVNnsvnkXcdhLB2TqTBTFqXFcVBf6u7OqoP+7vHt6DhnL/56DNGw4ibmXB4xYKAA0+ZyAXTT7rwaLbdHm/wWhTnn8Bxg/sXA==
 sidebar_class_name: "post api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
@@ -62,7 +62,7 @@ Create a new project
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Project created successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Project created successfully","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"name":{"type":"string"},"description":{"type":"string"},"spiders":{"type":"integer","description":"Number of spiders in this project"},"created_at":{"type":"string","format":"date-time"},"updated_at":{"type":"string","format":"date-time"},"created_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"updated_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"}},"title":"Project"}}}]}}}}}}
 >
   
 </StatusCodes>

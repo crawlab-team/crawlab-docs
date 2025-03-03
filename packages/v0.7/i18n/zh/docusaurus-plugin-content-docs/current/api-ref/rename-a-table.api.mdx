@@ -5,11 +5,15 @@ description: "Rename an existing table in the database"
 sidebar_label: "Rename a table"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVE1v2zAM/SsCscMGKE3QDRjmWz82oId9oO1OQTYwFhNrsyVPopsGhv/7QMlp0mYbNmC+JLb0yPfIR/bAuI5QzOESGZcYCRYaDMUy2Jatd1DANTlsSKFTdG8jW7dWjMualHWKK1Jmh9TQYsCGmIKE7EFwUIA1oMFKqBa5Ag2BfnQ2kIGCQ0caYllRg1D0wNtWEJGDdesUkJmCQL/MZ5M3OFmdTd4t+tNXwzN4yvO9d2t/ea4+Lr9RyVdGBWoDRXJMRmFUqCq6R0OlbbBWDynYci05dzAYngbOJ+rqEoZFJk+Rz73ZCuOnWkrvmBzLEbZtbUuUKNNvUUL1x1J9Ci5Sg28psKUop7l0xwV5zOyiC4Ecj/1ImEGDo83Xv8N/oM0jbHpEYmy9i5nJ6WwmP4+BtwkUkjOMil1ZUoyrrq638N9KUHpzKME6pjUF0LDyoUHOn16eiuKGYsT1LwRLL5F/kUxk7jp/k+nDqL4hrrwRt/rI2YMVFDDd+TxOe2uGaapbnOYagIZI4W5n/C7UgsDWHpX8klbY1azOPl2pDEmuilR2wfI2wc8JA4WzTvLOF4fHN1K7XJ7DSw/qKuYWxoGS92W6lNRK+a/33n17j01b095re4/s/XNQRutWPiUai3YRcFPjUnQcaRRtKx/UeEfL7vAtuUn0XShJGStxl50M5oaWqpR7FBSaxjrV1sjSYtAgBc0hZyevT2bCQ5rSoDvgvdtP2clPyfR7O/7LJhvryXTP07ZG6yR3ams/GmIOD4YADUVactkTacMlcgsNlZiomEPfy9XPoR4G+fyjoyDNXmi4w2ATc2m9sVH+GyhWWEf6g5jn1+PmeaH2C+o3xMeP6GQ877Du5A00fKdt3s/DYtBQERoKiUY+uMjJJrcC3wOPhnrQO8RZWVLLf7y7OJiwTx9vbkHDctylTZp4CLiREuImk/RJfPJ8+tZDjW7dpXmHHFOen0BHUvA=
+api: eJytVU2P2zYQ/SvEIIcWoCNjWyCJbvvRAntoE+xuToYTjKWxzZQiFXIUryHovwdDSrZ3nQQNEF1kczjD9948jnpg3EQoF3CDjCuMBEsNNcUqmJaNd1DCHTlsSKFT9GgiG7dRjCtLyjjFW1L1lKmhxYANMQUp2YPkQQmmBg1GSrXIW9AQ6HNnAtVQcuhIQ6y21CCUPfC+lYzIwbhNKshMQVI/LOazNzhbX87+XvYXfw4v4DnOf7zb+Jsr9Xb1iSq+rVWgNlAkx1QrjArVlh6xpso0aNXhCDZs5cwpDYbnhXNE3d7AsMzgKfKVr/eC+DmXyjsmxxLCtrWmQqlSfIpSqj+n6lNxoRp8S4ENRYlm6c4FeYrsuguBHI/9SDmDBke7j/8v/1/aPclNj1CMrXcxI7mYz+X1NPEhJYXkjFrFrqooxnVn7R5+mQSVr08pGMe0oQAa1j40yHnpjwth3FCMuPkGYWEzNfg+o4SRZEO89bWY0kfOVttCCcVk51j0ph6KJE8sMlXQECl8mfzdBQsl9IkQDWVR9FsfeSj71gceCmzNmeI3tMbOsrp8d6tyKdDwBYNJxxzkSVTIdY1czS1zCzq9Yr6eqQaUOTJokGNzk6aI9RXatDxoEDhPwq/nr+fDIG6OVHXB8D7xuSIMFC47EWKxPA3fJ1AJ3+mmg9wjxAk7rNKmJL+0/e54Z/56xKa1dPT40ZtH3x7aJ3Nj7dNBYxevA+4srkTAM3FF1LUPatyjZWb5ltws+i5UpGojdVedDIQdrVQl+ygorBvjVGuRxVrSEAoxl5y/fPVynjWM3KA7wT3NxXyDnoPpj9fgZyboqCfTIxetRePk7OSzfnToAg4OBQ1lGq7ZpGmyJnDLyRIL6HvZ+j7YYZDlzx0Fafby6LrU+tpE+V1DuUYb6QdkfrsbJ97v6jgYvwN8XES3Ty63nfwDDf/RPn8XhqW4l7CmkGDkwHU+bPYg6cfEs2Ey6Cnjsqqo5R/uXZ5c+Xdv7x9Aw2qc4U2aNBBwJxLiLoP0iXzyfFrrwaLbdGnOQK4pz1dpnH1A
 sidebar_class_name: "post api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Rename an existing table in the database
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Table renamed successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Table renamed successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>

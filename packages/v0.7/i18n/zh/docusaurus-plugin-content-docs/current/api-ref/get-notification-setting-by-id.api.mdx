@@ -1,0 +1,75 @@
+---
+id: get-notification-setting-by-id
+title: "Get notification setting by ID"
+description: "Get a specific notification setting by ID"
+sidebar_label: "Get notification setting by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVF1v0zAU/SvWFQ8gpUs1kBh56xhMe2AgBk9VkW6S29YjsT37ZlsV+b+j66Rru8Ik8pLE98PnnnPsHhhXAYo5XFvWS10ha2sCLDKoKVReO/mHAi6JFargqJIsZfayVSBmbVaq3KirC8jAoceWmLw07sFgS1CAriEDLb0c8hoy8HTXaU81FOw7yiBUa2oRih5446QisNdmlRoyk5fSX/Pp5ANOlrPJ50V/+i6+gudAv1izshfn6mt5SxVf1cqT8xTIMNUKg0K1pkesqdItNuppC9bcyJ7bMojPGw8RmTAuBHxw1gQKgvd0OpXXYf713yiqiVE3ATKorGEyLHXoXDMm5rdBivtjMmzaXsjw1pFnPWxd2Zr2srRhWpGHDJbWt8jD0ttTGaelEHBFxwTHuJv/pqsqCgGiPFLDa1tDASviQYg1FJDvyx/ycbiQ97qOkEEgf78Vv/MNFNCncSgWed6vbeBY9M56jjk6faTgBS2xa1jNvl2poRVkcI9eY9kMQw/d5ItM14p718wOsvQazZt6QDFEYgay7SDSNtLYCpu0HDMQOAfhs+nZNEaROlDVec2bNM85oSc/64SH+WI/fJNAJXz7SU9kjxC32KFMSYl8bZY2ZY4ifPT40GApDByxI6wsrVdjTqbQKOvITILtfEWq1qJq2YndH6hUleSRV1i32ijXIIszhFHyYWg5PXl/Mh1ICNxi8t94aOXYv3jWD8D1O1f/14UxMsT0yLlrUBsBk5zTj5abw4HlkskG00EGha5F80HhOfR9iYF++iZGWb7ryIt2i52JkpK1DvJdQ7HEJtALo7z+Pt5Ub9TuEvgH6nERzSaZtunkDzL4TZvhDowLMSNhTT7BGAKzqiLHeyVHd4JY7ek0Xn76ATH+AcJt924=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get notification setting by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/notifications/settings/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a specific notification setting by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Notification setting details","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -5,7 +5,7 @@ description: "Get current user information"
 sidebar_label: "Get current user information"
 hide_title: true
 hide_table_of_contents: true
-api: eJyFUsFu2zAM/RWBZ60JusMA37puKHYb0PUU5EDLTKzOljSSThcY/veBclBk7YD5YoN89ON7jzMoHgWaHTwJscDeA5OUnIQEmhlut1t7dSSBY9GYEzRwPzFTUjcJsetIMQ4CHkJOSkkNj6UMMaDhN89iQzNI6GlE+9JzIWggt88UFDwUzoVY40oZckdXqJiUjsTg4ZB5RF1LH29h8TCSCB6v0aIc09F6Heo/yJbFg0YdrPQ4hUAisNjj32h8IHXhWmdMK7+1jVn73EEDR6oKUHtoYGNI2YwEHoT4ZI42uxkmHqyLJcJbni90wGlQd/f9m1tHYNnbdJg46rmOfyZk4rvJOHb76/ajebradg16Vd2rFtulwqCBtoKqC6anIi9u3DO+DNjaIu+WtOUOmd0F4x0mlwulD5InDuS6aL63k1LnXqh1wXDEDrsxJlcGVPMOPJgj6y+3N59utpZTyaIj1gtJWJf8j/V/rfaqVOm3bsqAMdlPq+HzJZYd1FhqanbgfRa16jy3KPTEw7JY+ddEbH7vPZyQI7Zmy26/eOgJO+IaxU86mx8hULHcTzhMxv7u3i2k1xt5+PoDluUPcPYryA==
+api: eJzNVcGOGzcM/RWB6FGOjW2BpnPbZNsgh2ILpEEPhrvgaGhbqWakUpxsjIH+vaDGdp1do0Fv64sM8Ukk36PeTCC4y9Cs4WMmzrCxwJRTHDJlaCa4Wa106Sg79kl8HKCBtyMzDWLGTGw6EvQhgwUXB6FBFI8pBe9Q8ctPWQ9NkN2eeqzREO630KwnkEMiaCC2n8gJWEgcE7H4ObmLHel6RPlBaEcMFraRe5R56/sbKBZ6yhl3l+gs7IedxjoUvAgck5ViQbwE3fowOkc5/+Flf6fgYr9V2vU7n6IefPe8IgsJRYiVyT/Xq8VPuNjeLn7ZTDc/lO/APuH61zjs4t0bc18zvO8MU2LKNAh1BrNBs6cv2JHzPQZzTnHq7HRMeVC5Buyvk5Qw58fIV+t9ZC90P4QDNMIjFQvUow/XoGdlZkSxwDFcz6iBl0UQxygP2PV+eHhSdRtjIBwU5JhQqHtA+c/+OxRaiO+pMp+6/33mlKc9vCCGTo28oKIunrFaGJRSNkV/TzO+IzHu0rn8MDOvYXUQ2ccOGtiRzL3soYGlIvOyJ7CQiT+rR6pxjRyggal6GpVmuZz2MUtpphRZyhKTf9bxHW1xDGJuf3tv5qvAwmdkj22Y7WK+Tf/RMPZqynuRBLYu1Zu7+Q5o5kixoGlnhz5FQnQY6rY+68hfh1+vXq+UIm3HjezlUPt5Q8jEt6M2vd5chj/Uomp9l6Cz+scST7VDW0FVFyW4Io/6vGV8DNgqA8/YUVa2kc0RYw0OJiYaFjmO7Mh0XmegHXU8Hqk1TnHEpj5XkwKKiqmMEuf5ytWrH1+tZhKy9Fg/QrP/fWsWvirt3KnQF1mmgL76QJ2A6Tgn62quuY6R6jSrsoZpajHTRw6l6PbfI7HyvflX+Eq3hT1hR1yl+IsOyodzlKROSBg1+7NPqop0Htp3P/8OpfwDsyOrmQ==
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Get current user information
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Current user details","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Current user details","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"username":{"type":"string"},"password":{"type":"string","writeOnly":true},"email":{"type":"string","format":"email"},"role":{"type":"string"},"role_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"root_admin_role":{"type":"boolean"},"created_at":{"type":"string","format":"date-time"},"updated_at":{"type":"string","format":"date-time"},"created_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"updated_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"}},"title":"User"}}}]}}}}}}
 >
   
 </StatusCodes>

@@ -1,15 +1,19 @@
 ---
 id: get-notification-requests
 title: "Get notification requests"
-description: "Get list of notification requests"
+description: "Get a list of notification requests"
 sidebar_label: "Get notification requests"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNU01v2zAM/SsCz1oTtIcBvnUfKAYUw4Bup8AHWqZjdY6kUnS6wPB/H6gYnbNu2HyxLT+Sj+89TyC4z1Dt4HMU33mH4mPIUFtoKTv2Sd+hgjsSM/gsJnYmrKCG6WmkLBksMOUUQ6YM1QTX263eLrvc/6ODi0EoiBZiSsOC2DxmrZ4gu54OqE9ySgQVxOaRnICFxDERiz/PdrGlFcoHoT0xWOgiH1DORzfXMFs4UM64X6OzsA97/dai/GHYPFsQL4MePYzOUc4w66XNpI8tVLCnQgqlhwo2623zZrVuJj4Sq/wTjDwoFpOH37X/QB2Og5jbL5/MuQTmWqvdyF5OpfwdIRPfjjpxV68/P6hoZ13WoJe1epGkXAoMKmgKqKzpQxcLcln3PePzgI0SeUVSyXWRzYKxBoOJicKbHEd2ZFqvwjajUGueqTFOccQG24MPJg0oag5YUEXOLbdXb6+2akSKWQ5YIhCwkNQ4/i1EF7ymX5n6rwwvogj9kE0a0AedX7yZFj93cOFnyf1SXlvoYxbFTFODmb7xMM96/DQSq1G1hSOyx0b13NWzhZ6wJS4efqeTCukcJY3PEYdRubz6E9Tdl6jdffwK8/wTP3pP5A==
+api: eJydVE1v2zAM/SsCz16TdcM2+NZ9oBgwFAW6YYcgB9qmE3WypEp0u8zQfx8oO03SrB/YyYn4SD49PXIAxlWEcgEXjnWra2TtbIRlAQ3FOmgv/6GEc2KFyujIyrXK7oFVoJueIkcowGPAjpiClBzAYkdQgscVQQFa6tz0FDZQQKzX1CGUA/DGC0hbphUFkMYt9oahfJ0esrjEFSnbdxUF1bqgPK60zSwgFff9ov7zf/3mRw0vxl6uVZqpi8pTbkqQlgUEit7ZSFHKns7n8jlM//aMXrWzTJYlEb03E2J2HSV7OCbtqmuqWYQOzlNgPfauXUP/vFrrQoc8Hr05hVRARzEK/x06ctB2JbEG+QXNxAN7KAwBReCsz3F2SgWwYzTP8nv3FlLKcM1GYFd9XVOMPzWvRccczTfgtWughBVlcshrKGG2L3Gc7WkcKdxuDdkHAyUMWVdK5Ww2rF3kVA7eBU4z9BoeOuDz6A51dvlVjaWggFsMGiszCjJWk19k+05mac3socifaZQmh42RVIC0He2yjRhXo8nHqQChcxD+MP8wT0lMF6nug+ZNvs9HwkDhrBcJFsv98FUmlfntg+7fYKK45Q5VBuXn0rZ1GTm9w6eAdwYrUeBIHVFFBnHCFAqtcp7sq+j6UJNqtNir6pkadUeVqgVHQWHTaau8QRYLiKIU4lhyfvL+ZD6KELnDPAjTYMsSemyUDngNu8l64eaaZGH6zTNvUMtCGe0yTBZbwIHFQOZ/Sl9uH3QBw1BhpB/BpCTH4/qRp2p0FMc0ULZoIj1B+Ikl9wjPX7TZrdlbNL1A8kZ8eddHN92TPadVu+u53A1HtmQBa8KGQtZgzDmra/K8l3W0+qTK/Ziff/kOKf0FzPxLZQ==
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -36,10 +40,18 @@ import Heading from "@theme/Heading";
 
 
 
-Get list of notification requests
+Get a list of notification requests
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
 
 <ParamsDetails
-  parameters={undefined}
+  parameters={[{"name":"page","in":"query","schema":{"type":"integer","default":1},"description":"Page number for pagination"},{"name":"size","in":"query","schema":{"type":"integer","default":10},"description":"Number of items per page"}]}
 >
   
 </ParamsDetails>
@@ -54,7 +66,7 @@ Get list of notification requests
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of notification requests","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"List of notification requests","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object","properties":{"list":{"type":"array","items":{"type":"object"}},"total":{"type":"integer","format":"int64"}}}},"title":"SuccessWithList"}}}}}}
 >
   
 </StatusCodes>

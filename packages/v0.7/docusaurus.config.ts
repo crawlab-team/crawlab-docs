@@ -1,8 +1,20 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import type * as OpenApiPlugin from 'docusaurus-plugin-openapi-docs';
+import { createApiPageMD } from 'docusaurus-plugin-openapi-docs/lib/markdown';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+
+const API_REF_PRO_PATH_REGEX_PATTERNS = [
+  /^\/dependencies/,
+  /^\/notifications/,
+  /^\/gits/,
+  /^\/databases/,
+  /^\/roles/,
+  /^\/settings/,
+  /\/metrics/,
+];
 
 const config: Config = {
   title: 'Crawlab Docs',
@@ -158,7 +170,28 @@ const config: Config = {
               groupPathsBy: 'tag',
               categoryLinkSource: 'tag',
             },
-          },
+            markdownGenerators: {
+              createApiPageMD: (pageData) => {
+                // 1. 获取默认的 Markdown 内容 (假设插件内部导出了默认函数)
+                const defaultMarkdown = createApiPageMD(pageData); // 路径和方法名需要根据实际情况调整
+
+                if (API_REF_PRO_PATH_REGEX_PATTERNS.every(regex => !pageData.api.path.match(regex))) {
+                  return defaultMarkdown;
+                }
+
+                // 2. 添加自定义内容 (例如，在页面顶部添加一段自定义文本)
+                const customContent = `:::info\nThis API is only available in **Crawlab Pro**.\n:::\n\n`;
+                const modifiedMarkdown = customContent + defaultMarkdown; // 将自定义内容添加到默认内容之前
+
+                // 3. 返回修改后的 Markdown 字符串
+                return modifiedMarkdown;
+                // if (API_REF_PRO_IDS.includes(id)) {
+                //   return `:::info\nThis API is only available in **Crawlab Pro**.\n:::`;
+                // }
+                // return '';
+              },
+            },
+          } satisfies OpenApiPlugin.Options,
         },
       },
     ],

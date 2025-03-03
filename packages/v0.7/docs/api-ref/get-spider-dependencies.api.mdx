@@ -1,15 +1,19 @@
 ---
 id: get-spider-dependencies
 title: "Get spider dependencies"
-description: "Get spider dependencies"
+description: "Get dependencies for a specific spider"
 sidebar_label: "Get spider dependencies"
 hide_title: true
 hide_table_of_contents: true
-api: eJx9VMFu2zAM/RWB2GEDnCboBgzzLV22osCGDet6CjKAluhYnS2pEt02MPzvA203TZu1vtiW3iMfHyl1wLhNkK9hRYGcIactJdhkYCjpaANb7yCHc2KVgjUUlTkEZhAwYkNMUaJ04LAhyMEayMAKMyBXkEGkm9ZGMpBzbCmDpCtqEPIOeBeEkThatx0CMlMU6p/1YvYJZ+Vy9nXTnX7o38BzWd+92/rVmfpRXJPmC6MihUiJHJNRmBSqiu7RkLYN1mqfgi3XkvOBBv3zwOOOulhBvxHxKXiXKIne08VCXk/x32xi5csXPNLeMTkWGoZQW41Cm18n4XbHXvghu3gRfaDIdsysvaEDlHVMW4qQQeljgzwuvT+VahpKCbd07K9UivyfZH3/6MtlqzWlBL08EowrbyCHLfHYoApymB8WOR8LT/POmh4ySBRvH0aijbXAMdij/q2oxLZmtfx5oUbK4Hci3UbLu4F+RhgpLltJut4cbl+Kb6M1h6B9ZRVzgGnU5L8YQEOl1pV+QE4Vf454V2MhQo5EirjSRzVhMoVO+UBulnwbNSljxduilZm7o0JpwVFUaBrrVKiRpT+QgTgyhlycfDxZSC+CT9zgMAXTyXn5pD1R1T0O1SuUyQime56HGq2TnEM/uqmNa3hGmRoJGeTWyEVQ+cSC67oCE13Fuu9l+aalKA3aZHCL0WIhPq47MDbJt4G8xDrRK7Lf/pruhHfq8bi9oHlaRLcTH7Fu5Q8y+Eu78bbpN30GFaGhOMgYN5ZaU+ADytHxk3naz/f5l9/Q9/8Avr+7IA==
+api: eJyNVN9v0zAQ/lesEw8gZWs1kIC8bRSmPSAQg6eqSFf72noktmdftlWR/3d0Trq1KyDyksT367vvvnMPjOsE9RxmFMgZctpSgkUFhpKONrD1Dmq4JFZmz0OtfFSoUiBtV1arFKyhCBUEjNgSU5SkPThsCWqwBiqwkiggb6CCSLedjWSg5thRBUlvqEWoe+BtkIjE0bp1SchMUUJ/zqcn7/FkdX7yadGfvckv4DnKz96t/exCfVnekOYroyKFSIkck1GYFKoNPaAhbVts1GMJttxIzV0Y5OeJB4u6mkFeCPgUvEuUBO/ZdCqvQ//rQscBY1CB9o7JsbhjCI3VKO6TmyQx/TEHvlQVDqIPFNkOFbU3tOdlHdO6cL/ysUUejl6fSRctpYRrOuY156e2rzutKSXI8kgMb7yBGtbEA/8bqGGy38tkGHea9NZkqCBRvNtNvIsN1NCXZijXk0m/8Ylz3QcfOU8w2KOxzWiFXcPq/OuVGlJBBXcYLS6boeUhm3yR61qR64Y5QFVeo1xLDqgHS65Ayg6T2Vkar7Epx7kCgXNgfjd9N81Z5ptId9HytvRzQRgpnnfCwnyxb74uoAq+fadHqkeIO+ywLE6FeutWvniOI/gQ8b7BpTBwxI6wIts2+lQKnfKB3EnyXdSkjJWZLjvR+D0tlRY/igpNa50KDbLoQhilmIaU09O3p9OBhMQtFvWNmyqLnv6o3gNU/ZOY//9uGHlheuBJaNA6gVD00o8ym8OzoqPQoILaGpnzMNU59P0SE/2ITc5yfNtRlHktnoRTpmdskm8D9QqbRP/o4uW38Up6pZ62/S+Yx0N02yLUppM/qOAXbYfLLi9EgITSt8AYDOdaU+C9kKNbQOT1uH+XH79Dzr8BTkftOw==
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -36,7 +40,7 @@ import Heading from "@theme/Heading";
 
 
 
-Get spider dependencies
+Get dependencies for a specific spider
 
 <Heading
   id={"request"}
@@ -62,7 +66,7 @@ Get spider dependencies
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of spider dependencies","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Spider dependencies","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>

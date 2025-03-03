@@ -5,11 +5,15 @@ description: "Get status of a database export"
 sidebar_label: "Get export status"
 hide_title: true
 hide_table_of_contents: true
-api: eJylVE1v00AQ/SurEQeQNk1UkBC+paRUOSAQhVMUpIl3HG+xvdvdcdvI8n9HYztuaFqEQi6O1+/Nx3uz0wDjNkKyggUybjASrDUYimmwnq2rIIErYhUZuY7KZQqVGZCKHrwLDBo8BiyJKUikBiosCRKwBjRYieCRc9AQ6La2gQwkHGrSENOcSoSkAd55YUQOttp2AZkpCPXnajb5gJNsPvm0bs7fta/gaXmfXbV1iwv1ZXNDKS+NCuQDRaqYjMKoUOX0gIZSW2KhxhRsuZCcexq0TwP3X9RyAa0em+oqPa2towSXnX4qswWpDnqQp9d2eaqEL+WSZtYSJnpXRYrCPJ/N5PEsvvcdNKSuYqpYgOh9YVMU4PQmCro5rsN14omVwXkKbPtcqTN0gLIV05YCaMhcKJH7o7fnUn9JMeKWnu8N+Zlkbfto63WdphQjtPKTYJw7AwlsqR9YziGB6X6U47Sxpp32ok8bCdtOm70HLWiIFO72812HQsjo7dEwLijDumA1/7pUPaXTO1JaB8u7jn5BGCjMaylhtT78fC0q9kIdgsY+c2YPg+nyvulAXd+2ylyHHPr/GPC+wI0UclSkFJe5oAaMVlgp56maRFeHlJSxovSmlgt0TxuVCo6CQlPaSvkCWdwCDaJIH3J29v5sJs54F7nEbiaGSZb1QU+m6Y96msfh+oddM0jB9MBTX6CtJGvnSDPYuoLRVtCQdGtopCfDBU7GC7bWkLvIwmsaYf0IRdvK8W1NQSxba7jDYHEjyq4aMDbKfwNJhkWkv7Tz+ttwX9+ox23yQg/DIVY7URaLWt5Awy/a9ctUtsNJqY/2zEkVjBvqf2o4tf3RrXbdasgJDYXOi/7zPE3J8wHxaEfJNRuXwNXld2jb37wVXyA=
+api: eJylVE1v00AQ/SurEQeQnDoqSBTfUlKqHBCIwikK0sSeJFtsr7s7bhtZ+9/R7DpOaFqEgi+2d+fzvTfTAePaQTaHKTIu0REsEijI5VY3rE0NGVwTK8fIrVNmpVAVvaWix8ZYhgQatFgRk5VIHdRYEWSgC0hAS4QGeQMJWLprtaUCMrYtJeDyDVUIWQe8bcTDsdX1OgRkJiuuP+fj0QccrSajT4vu/J1/BU/L+2zqtZleqi/LW8p5VihLjSVHNVOh0ClUG3rEgnJdYamGFKy5lJw7N/BPA8cbNZuCT4amQqWntXWU4Crgp1a6JBVMD/JEbGenQvhSLmlmIWFcY2pHTjzPx2N5PWsfeYcEclMz1SyG2DSlzlEM01sn1t1xHSaAJ1Ra05BlHXPlpqADK10zrclCAitjK+R49PZc6q/IOVzTM735PXs3bZ6Tc+DlER/emAIyWFPUJW8gg3SnWJd2uvBpxDbtJKxPux3UHhJwZO93Mm5tCRl0oTXyWZp2G+PYZ52Y+xQbfaTFKa2wLVlNvs5UDAUJ3KPVuCwjADGafFHdVjJ4G+YGkvBycfhCDMjijU9A0kaGdjelybEMxz6BMISH1xfji7H3wrOjvLWat6GfS0JLdtIKJvPF4fVNKCrUd2g0AN+XuKsdlsEoEKHrlQmWPSEfLT6UuBQEjtARVFbGqt4mUVgr01A9cqa1OalCC8PLVgb3gZYqFzuyCotK16opkUUlgihZF0OOz96fjSMIjisMWuwnSNYWPVHxH/V0e1H/w47roWB65LQpUdeSNUik63U2h0FnkEAW1t/gnvWLIxsGe7Ejdg5dJ14/bOm9HN+1ZIWyxV47gcBCO/kuIFth6egv7bz+1u+JN2q/xV7ooT/Eehu0WrbyBwn8om1c4rKVTkp9tN9OqmDYjP9Tw6ntD2z5hQwiYUE2cBGvJ3lODR84Hu1GGbNhK11ffQfvfwPKFolw
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Get status of a database export
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Export status","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Export status","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>
