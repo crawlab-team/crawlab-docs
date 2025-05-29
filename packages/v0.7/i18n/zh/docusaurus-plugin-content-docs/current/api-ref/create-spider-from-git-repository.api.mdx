@@ -5,11 +5,15 @@ description: "Create a new spider from files in a Git repository"
 sidebar_label: "Create spider from Git repository"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVE2P2zYQ/SvEoIcUoGNjU6CobvvRBnsIEmTTk6EAY3FkM5VIhhyt1xD034sh5di7TnKILpLImeF7bx5nBMZtgmoNby1DrcFQaqINbL2DCm4jIZNC5WivUrCGomqj71VrO0rKOoXqrWUVKfhk2ccDaAgYsSemKHVHcNgTVGANaLBSNCDvQEOkr4ONZKDiOJCG1OyoR6hG4EOQjMTRum0uyExRUj+vV4u/cNFeL/6px6s/pt/gJeJ33m393Y16v/lCDd8bgRYpkWMyCpNCtaMnNNTYHjv17Qi23MmZxzSYXhYuO+r+Dqa6gKfEN94cBPFLLo13TI5lC0PobINSZfklSanxkqrPxZ+Jsi461RpC9IEiW0qSkVcvRJryI/kpeJdK6NVqJa/nPB5KF5vcWaPS0DSUUjt0nfTul4E/B9l4Q2dR1jFtKYKG1sceuSy9uRKVe0oJt/QdShoM8ncOE57Hfj0U+DDT74l33ojHfOLinB1UsNxaTsvRmmlZTJxAQ6L4ePToEDsJw2AvDHVHLQ4dq+sP96qkZAMkaoZo+ZDTbwgjxetBDlvX59sPIljR5DzoG6Udc4DZ+/K/yUGZomj+8WSzv5+wDx2dLHCmk3Wtz0VnVW4j7jvcCOYLPsKj9VHNMVqhUz6QWyQ/xIaUsVJ3M4g59rRRjcRRVGh661TokKWHoEHEKyVXr/98vRIconqP2SnzrZ8HyPnouJgXz/CNJwv+2vSZhWV64mXo0DoBlvt7FG4NYgfQUOWZdHRErWEnrqnWMI4bTPRv7KZJlr8OFKXRtYZHjBY3IvJ6BGOTfBuoWuwS/YTJq4/zvf5dnebID7DOi+iEzSN2g/yBhv/oUMboVE8adoSGYoZRNm7LYYtPkn5KvLjFkz5mXDcNBf5pbH12pT68f/gEGjbzyOvzFYeIexlbuC8gfSaf/Z7XRujQbYd8waHUlOd/VMM2kA==
+api: eJydVE2P2zYQ/SvEoIcWoGNjW6CpbvvRBnsoEmTTk6ECY2lkM6VIhhzFawj678WQ8tpetzlEF9mcmcc3M09vBMZtgmoN7wxDraGl1EQT2HgHFdxHQiaFytFepWBaiqqLvledsZSUcQrVO8MqUvDJsI8H0BAwYk9MUXBHcNgTVGBa0GAENCDvQEOkL4OJ1ELFcSANqdlRj1CNwIcgFYmjcdsMyExRSv9erxa/4aK7XfxRjze/TD/Aa8Z/erf1D3fq/eYzNfzYCrVIiRxTqzApVDt6xpYa06NVL1ewYSt3Hstgeg1cIurxAaa6kKfEd749COPXvTTeMTmWEIZgTYOCsvycBGq8btVn8IuhrMucag0h+kCRDSWpyKdXQ5ryI/UpeJdK6s1qJa/LPp7KFpu82ValoWkopW6wVnb33cQvSTa+pbMs45i2FEFD52OPXI5+vpEp95QSbum/Wjqt5amwhLnLnnjnW5GST1wEsoMKllvDaTmadloWrSbQkCh+PUpxiBYqGHMXNFXL5bjziadqDD7ytMRgrvT0QB0OltXth0dVoEDDV4wGN7b0WtDkF7mhl8XtmAPo/Erlm8oYUJXIpEGuLas5Rqxv0ObjSYPQuQi/Xb1dTZMIL1EzRMOH3M8dYaR4O0j36/o8/JRJZX7nSS8znikeucMmJ+WZy64/nuT9+zP2wdJJei/7kc+58xl0XtN9xL3FjQzrapAywM5HNedohU75QG6R/BAbUq0R3M0gotzTRjWSR1Fh2xungkUW7cjwKaYCuXrz65tVmVfiHrNCZ7eZjevcsq586oLfeJL+97nePFimZ14Gi8YJsSy44+DWIPoEDVX2wqNE66Mc1jCOG0z0V7TTJMdfBoqy6PqkuLz21iT53ULVoU30jU5+/Dj7yU/q5F//w3U+RHfICreD/AMN/9Ch2PdUi3IJW4qZRgncl8sWn6T8VHjlHpM+Vtw2DQX+Zm599o1/eP/0CTRsZqvts7VAxL3YJe4LSZ+bz3rPZyNYdNshGwsUTHn+BX8qYOA=
 sidebar_class_name: "post api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Create a new spider from files in a Git repository
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Spider created successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Spider created successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>

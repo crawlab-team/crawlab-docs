@@ -1,0 +1,75 @@
+---
+id: get-roles-list
+title: "Get roles list"
+description: "Get list of all roles"
+sidebar_label: "Get roles list"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVtuO2zYQ/RVi0Ec5drdBm+pt07RBgLZZbBrkwXCDkTS2mFKkSo521xX078WQku2199YFCsQvssThnJkz1x4YNwHyJVyQb3QI2tkAqwwqCqXXLWtnIYe3xMrowMqtFRqjvDMUIIMWPTbE5EVFDxYbghxa3BBkoOXm3x35LWQQypoahLwH3rYipC3ThjwI1Bo7w5B/OxzjXuCGlO2agrxaO69a3GiL8XDIdnhB//M8vMUJ4O8Jy62VZmqCaimC0iEcGvMoWuGcIbSHaGs0gU4AL4k7byOpCfFac+06vuXqKgNPoXU2UBCQs8VCHrc1/TrGZ4pN6SyTZRHEtjW6jMrmX4JI9wcmozHv1zF+o/Gu+EIlS3i9a8mzTqilq+hOQtfON8jp03dnMGTQUAjC2l46sNd2I2cV8iFT94BJth1IofcoREeOTm8PQwbsGM2j9n3/EoYhims2IvahK0sK4ZPmWhiMgX7YtP/DgePbn3V1Sp7UGzN5ifafy8XsR5ytz2e/rPqzl8M3cJxZvzm7cW9eq/cR4V2lPLWeAlmmSmFQqGq6wYpK3aBRO4iJl+mahCwl/qk5R7WDDUkCck0xCeE42R9T8Gb/dqynPehOzybVU3CdL5/gyuUoqaLnQwZY8hOxdxrJdo001tITsvQnT1hBBl1bpfeKDMU/dENlxwSrlJlHLXDvudp4jNFjp7jWYcdOgqg+I99lyC79BXfGOnmUzPhvdyacYvsVJefkyFdk1EF7uYwhir8Y3tgcuXYV5LAhThbWkMN86tuB/NU0UDtvIIc+9moa8vm8r13gIe9b53mYY6vvKKI4b9T5xTuVVEEGV+g1FiaVQdIm/6YUrZlbyOJjHP7jzEonQwYCm0bOdGJciSZ+lvJ0/vbxq8Wrhbgs7pSd17yN/rwm9OTPO/F4uTo8/hCNivYdCu0COpo42Q5FFIpUa7t2UXKk/CeP1wYLYeCEHWFFFolRJlNolWvJzsZ6r7SEtegk4tdUqFLkyCusGm1Va5ClMoRR8iGpXLz44cUikRC4wdjnxk1B1qYY1rg8HRvT70f0vQvW6D3TDc9bg9rGjPdxzqXEWUKSXU1BWkLfFxjoozfDIJ/TkiL0VzpIFlTjMvKAPQ8sXvcY9Rdt96vfFZpOROI0fTrqvdvXg5jj+vdMzKcsYA/Cp3Vwj77al1tM8gxqwop8jEC6cl6W1PLBrZMFTbTs+sTbn/+AYfgXAJX+Kg==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get roles list"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/roles"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get list of all roles
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"query","schema":{"type":"integer","default":1},"description":"Page number for pagination"},{"name":"size","in":"query","schema":{"type":"integer","default":10},"description":"Number of items per page"},{"name":"all","in":"query","schema":{"type":"boolean","default":false},"description":"Return all items without pagination"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of roles","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object","properties":{"list":{"type":"array","items":{"type":"object"}},"total":{"type":"integer","format":"int64"}}}},"title":"SuccessWithList"},{"type":"object","properties":{"data":{"type":"object","properties":{"list":{"type":"array","items":{"type":"object","properties":{"_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"name":{"type":"string","description":"Name of the role"},"description":{"type":"string","description":"Description of the role"},"permissions":{"type":"array","items":{"type":"object","properties":{"resource":{"type":"string","description":"Resource name"},"actions":{"type":"array","items":{"type":"string","enum":["create","read","update","delete","execute"]}}}},"description":"Permissions granted to this role"},"created_at":{"type":"string","format":"date-time"},"updated_at":{"type":"string","format":"date-time"},"created_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"updated_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"}},"title":"Role"}}}}}}]}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

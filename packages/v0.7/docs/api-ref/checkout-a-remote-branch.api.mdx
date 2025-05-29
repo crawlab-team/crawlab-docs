@@ -5,11 +5,15 @@ description: "Checkout a remote branch in the Git repository"
 sidebar_label: "Checkout a remote branch"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVE2P2zYQ/SvEoIcWoGNjU6CobvvRBnsIEuymJ0MBxtTYYiKRDDnaXUPQfy+GlGOvNwmQ6CKJ5Azfe/NmRmDcJajW8MYy1BoaSibawNY7qOC6JfPZD6xQReo9k9pEdKZV1iluSb2xrCIFnyz7uAcNASP2xBQl5wgOe4IKbAMarCQMyC1oiPRlsJEaqDgOpCGZlnqEagTeB4lIHK3b5YTMFCX043q1+BsX28vFv/V48ef0G5yjfevdzt9cqXebT2T4thFokRI5pkZhUqhaesKGjO2xU1+vYMud3HkIg+k8cdlRtzcw1QU8Jb7yzV4Qn3Mx3jE5li0MobMGJcvyU5JU40uqPid/Jsq6CFdrCNEHimwpSUSR81ykKT8Sn4J3qRy9WK3k9ZzH3bMaGikuNUrqmwZjKKXt0HVSxl/m8Byv8c0pXuuYdhRBw9bHHrksvb4QwXtKCXffYqehQf7GZUL5ULr7Ah9mJXri1jdiN5+4mKiFCpY7y2k52mZaFgkoLc3s8GXxN2hIFB8O/h1iJ3EY7Auz3dAWh47V5ftbVUKyORKZIVre5/ArwkjxcpDb1/Xp9r0oWEQ6PfSVY8scYO4L+d/kQ5mzFOHuaMF/nrAPHR3tcSKcdVufk84yXUd87HAjmF/wER5bH9V8Rit0ygdyi+SHaEg1VvJuBumlR9ooI+coKmx661TokKWooEHEKylXr/56tRIcUoYe3QnG7w2Wc1jj0Yo/P4xmLZmeeBk6tE6w5JKOsyXWIJYADVUeUQdXSAfMl+W+zM6oNbRip2oN47jBRP/Fbppk+ctAUQpea3jAaHEjYq9HaGyS7waqLXaJfkDt97u59/9Qx1nzHQLzIjqh+IDdIH+g4TPty6id6klDS9hQzDDKxnW5bPFBwo+BL9p70oeIS2Mo8A/P1ie99v7d/QfRcB6Lfe59iPgoEuJjAekz+ez7vDZCh2435M6HklOe/wHmYUIm
+api: eJydVE2P2zYQ/SvEoIcWkCNjW6CpbvvRBnsoEuymJ8MFxtTYYkKRDDnKriHovxdDyuuPbQK0ukjicB7fvHmcERh3CZoVvDMM6wpaSjqawMY7aOC2I/3ZD6xQReo9k9pEdLpTxinuSL0zrCIFnwz7uIcKAkbsiSkK5ggOe4IGTAsVGAEMyB1UEOnLYCK10HAcqIKkO+oRmhF4HyQjcTRulwGZKUrq36vl4jdcbK8Xf6zHq1+mH+CS7Z/e7fzdjXq/+USa71uhFimRY2oVJoWqo2dsSZserXo5gg1bOfOQBtMlcImo+zuY1oU8Jb7x7V4YX9aivWNyLCEMwRqNglJ/SgI1vi7VZ/AzUVZFuHUFIfpAkQ0lyShyXoo05UfyU/Aula1Xy6W8zut4OOuhluZSq6S/adCaUtoO1kob/3cN53y1b0/5Gse0owgVbH3skcvSz1cieE8p4e5fqzt26LGwhLngnrjzrbjKJy5e6aCBemc41aNpp7pUSqnWs5HrYmOoIFH8erDpEC00MOayaGrqeux84qkZg4881RjMK6/d0RYHy+r6w70qUFDBV4wGN7YUX9Dki9zQS1M75gBVfqVy1zIGNCUyVSDHlrYdItZrtHl5qkDonIXfLt8up0lMmUgP0fA+13NDGCleDyLHan0afsykMr/TTS+izxQP3GGTN+UmSPMfjtb//Rn7YOloy5eGyVXf+gw69+024pPFjYj1SkgRcOujmvdUCp3ygdwi+SFqUq0R3M0gd/iJNkrLPooK2944FSyymEnEp5gK5PLNr2+WRa/EPboTjt8aaJe0xuMV+O9DcNaS6ZnrYNE44ZI9Ns4eXYF4FCpo8mg82FRu3nxYngfZquuDLVYwjhtM9Fe00yTLXwaK0vD10Xm5/a1J8t1Cs0Wb6Dul/fgwz5yf1HHGfaOAeRHdPjvdDvIHFXymfRnx01ocTNhSzDRK4LYctvgo6cfEV2Nlqg4Z11pT4O/uXZ9c/g/vHz+KhvM47vPMgYhPIiE+FZI+F599n9dGsOh2Q544UDDl+QfaF2x2
 sidebar_class_name: "post api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Checkout a remote branch in the Git repository
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Remote branch checked out successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Remote branch checked out successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>

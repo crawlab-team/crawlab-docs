@@ -5,11 +5,15 @@ description: "Get performance metrics for a node over a time range"
 sidebar_label: "Get time-range metrics for a node"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVE1v2zAM/SsCscMGOE3QDRjmW7t2RQ/7wNqdggxgJCZWZ0uqRLcNDP/3gbaTeM1abMN8sWWRfHyPHw0wrhPkc/jkDSVYZGAo6WgDW+8ghwtiFSiufKzQaVIVcbQ6qZWPCpXzhpS/I/lmW5GK6NYEGQSMWBFTlNgNOKwIcrAGMrASNiAXkEGk29pGMpBzrCmDpAuqEPIGeBPEI3G0bt0FZKYort/ns8k7nKxOJh8WzfGb9gU8zvmjd2t/dqo+L29I86VRkUKkRI7JKEwKVUEPaEjbCku1g2DLpWBu3aB9HLi/UZdn0GY7Uokx8pbXbU1xA88R6ZRkyMEg00REO8S5kpBquNsBkTP/F+bcmQFkIaVIwbtESaIdz2by+tX82lY06Qq87QLIQHvH5FisMYTSahTr6U0Sl+YwQd9JKAWNPlBk2wNqb2hkZR3TmuKYh3X8+lg4VJQSrumQtPBD/g1Y2+6Le1VrTSlBK48E48IbyGFN3HdZATlMpa/TtLGmnQ5Up7xjL7pTvNv2dh1LccFgDxrxjFZYl6xOvlyq3qWTOpGuo+VN535KGCme1AI8X4yvr0S7Xp6x0Y5dwRy2PSDnZWfUsbVu5TvLgfX7iPclLiWRgyQlOZnmwSZT6JQP5CbJ11GTMlb0XdYyPPe0VFrsZOJNZZ0KJbLUCDIQRfqQs6O3RzOpR/CJK+w6YWhi2Sd80EijdfI4v2bfYv+6jAa9mB54Gkq0TlLrytYMFZ9DV3HIIO921L6/R2VfZFD4xGLdNEtM9C2WbSu/+3GUahqbcFnKQlthmegZLqMZfyLDH7QZrZc7LGux6TbCn8PsZvxZkH617CEWcohWMP6S1suvw0p/pfbb8gns4Se6zRh8m5M10C7aDApCQ7FLo7840ZrCWJKDxSP57yb74vwa2vYnrL1Xgw==
+api: eJytVcGO2zYQ/RVi0EMKyJGxLdBUt002DfaQtOgmJ8MFxuTYZiqRDDnaxBD478FQsq2skUUSxBcJmuG8mTePzwMw7hI0K3jjDSVYV2Ao6WgDW++ggVfEKlDc+tih06Q64mh1UlsfFSrnDSl/T/LOtiMV0e0IKggYsSOmKLUHcNgRNGANVGClbEDeQwWRPvQ2koGGY08VJL2nDqEZgA9BTiSO1u1KQWaKcvS/1XLxJy6214u/1sPV7/kXeNjza+92/ua5+nvznjTfGhUpRErkmIzCpFDt6RMa0rbDVp0g2HIrmMdjkB8WHiPq9gZydRoqMUY+zvWhp3iAxwYpTDI0YJBpIaRd4txJSTXFTkDkzM+FeenMBLKWVaTgXaIk1a6WS3l8mf7WdrQoCz6qACrQ3jE5lmwMobUaJbt+n+TIcNmgLxTKQqMPFNmOgNobmmVZx7SjOJ/DOv7tSmboKCXc0eXQOZ93eNdrTSlBlp+c4b030MCOeBTTHhqoRb6pHqzJ9TRRzachhV6K90cJ97GFBoYyEOWmroe9T5ybIfjIucZgL3R4Q1vsW1bX/9yqsRRUcI/R4qYdxx6ryRu5vpNruGcOUJXHdBtLDWjGSK5AYMflHCOt19iWz7kCaeeL8LPls2XOsuJEuo+WD2We54SR4nUvTKzW8/Bdaar0N0860T21eOwdNiWp0G/d1pfMaQ0vIn5scSMMXLAjrIiLTDmVQqd8ILdIvo+alLGy100vl/YjbZSWPHEa01mnQoss2hBGKaax5PLpH0+XIwmJOywKnC6P+BhfCHhmYw/7G87S/lETnPhi+sR1aNE6aa3oaJgkuIIiQaigKd54vlczHa6PO1/BMGww0bvY5iyfRxuQbRqbRFQGmi22iR6ZZeYtX+nwfzrMbO0e215yihN9O8zJWx4FGS3tDLE+34/vHOvJv9Nfya/q7NJfwZ4+ojvMwY89WQN5LfeM0FAsbYyBa60pzCm5MDzp/2Q1r16+hZw/A2HPgdM=
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Get performance metrics for a node over a time range
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Time-range metrics","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Time-range metrics","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>

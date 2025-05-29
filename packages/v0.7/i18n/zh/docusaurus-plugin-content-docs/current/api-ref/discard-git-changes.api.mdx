@@ -5,11 +5,15 @@ description: "Discard changes in the Git repository"
 sidebar_label: "Discard Git changes"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVN9v0zAQ/lesEw8gpWs1kBB529aBJoFAGzxVRbrG18aQ2Ma+bKui/O/o7HTt1oEQeUli331333c/emDcRCgX8MEwLAvQFKtgPBtnoYS5iRUGraoa7YaiMlZxTeqDYRXIu2jYhS0U4DFgS0xBoHqw2BKUYDQUYATHI9dQQKBfnQmkoeTQUQGxqqlFKHvgrRePyMHYTQJkpiCu3xezyTucrM8m75f96ZvhBTxN8pOzGzc/V59XP6jiKy2pBYpkmbTCqFDVdI+aKtNiox5CsOFGYu7cYHgKnG/U1RyGZU6eIp87vZWMn3KpnGWyLFfofWMqFJTpjyhQ/TFVl8AfibJIOkUpgw/OU2BDUVzy8d4XQ0CR3TC18Vi+IT8CHb2zMYOczmbyekzxYiyszoUmrWJXVRTjumsaCfHftB4zqJymAytjmTYUoIC1Cy1yPnp9KjVoKUbc0DO0CtDIzwQTqrtq3uT0YVSgJa6dhhI0NcSUO6uGEqYbw3HaGz1Mx+aGAiKF210Pd6ERM/TmqOHmtMauYXX25Upll9QgkaouGN4m93PCQOGsk2CL5eH1jUiWVTk0eiBVM3sYZ0P+V8kokRTVr/dteHmPrW/ooEMWO62Wg0ze2iXcUZqLgHcNriTtI0pCZe2CGm0KhVY5T3YSXRcqkv7gYFadjNQdrVQldhQU6tZY5RtkKSQUIPplyNnJ25OZFM27yC2mdhkXw26tyB7Zq/8oo37fef+8hUYBme556hs0VqKnOvZj2RcgZYcCyrSbdrGXBdQustz3/QojfQvNMMjxr46CFHRZwC0GgytRctGDNlG+NZRrbCL9JfmX1+N8v1L7ffKHXHfjbYXNLTad/EEBP2mb1+kgda0JNYWURr64yMEmX8V973g0r0Ox8zirKvL8V9vlwfDMLz9efr2EAlbj8mvTOEPAO1lgeJfTdIl+6ux01kODdtOlYYaMKs9v8eA0rQ==
+api: eJydVMGO2zYQ/RVi0EMLyLGxLdBUt931NligRYskPRkuMBbHFlOKZMhRdg1B/14MKcX2OgmK6iKJ5Lx5M+9xBmA8JKg38MYwbCvQlJpoAhvvoIa1SQ1GrZoW3YGSMk5xS+qNYRUp+GTYxyNUEDBiR0xRoAZw2BHUYDRUYAQnILdQQaSPvYmkoebYUwWpaalDqAfgY5CIxNG4QwZkpiihf29Wi19wsb9d/Lodbn4av4OXJH/37uDXd+qP3Qdq+FELtUiJHJNWmBSqlp5RU2M6tOpzCjZsJeccBuNL4LKjHtcwbgt5Snzn9VEYv6yl8Y7JsWxhCNY0KCjLD0mghutSfQa/aMom9ymJDCH6QJENJQkpy6dYjBGl7YapS9ftG8sj0Cl4lwrIzWolr8sS7ydhdRGatEp901BK+95aSfG/y7qsoPGazk4Zx3SgCBXsfeyQy9KPN6JBRynhgb5U1km0d4UlTIV2xK3XUIMmS0zFQC3UsDwYTsvB6HE5eRgqSBQ/zVbto4UahlwHjfVyObQ+8VgPwUcelxjMld/WtMfesrr981EVKKjgE0aDO1uqLWjyRa7vRNiWOUCVX6lcs4wBddkZK5C0RZ95x/oGbV4eKxA6F9uvV69X4yjGTNT00fAx13NHGCne9lL9Znu+/S6TyvzOD33u8kRx5g67fCh3XdR+e7L/wzN2wdKZMzezRttRbvzeZ9xJq/uITxZ30q+rXkoP9z6q6Uyl0CkfyC2S72ND4kuOZtfLVX6inWrkHEWFujNOBYssBpL+U0wFcvXq51er0rLEHWabTgNpHmcyv052uGA0nBz/n6ff1ECmZ14Gi8ZJ9mysYfLhBsSHUEGdZ+KcezvLvoFh2GGiv6IdR1n+2FMUQbcnZ2V5tUnyraHeo030DfLfv53myg/qNMe+wnUeK+6YnWx7+YMK/qFjGeOj6NoSaoqZRtm4L8kW7yX8FHg1J8ZqjrhtGgr8zbPbs9u8fvjt4f0DVLCbhm6XxwhEfJLBiU+Fps/lZ2fntQEsukOfhwgUVHn+BY/FXv0=
 sidebar_class_name: "delete api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Discard changes in the Git repository
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Changes discarded successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Changes discarded successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>

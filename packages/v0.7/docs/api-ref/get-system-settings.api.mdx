@@ -5,11 +5,15 @@ description: "Get system settings"
 sidebar_label: "Get system settings"
 hide_title: true
 hide_table_of_contents: true
-api: eJxtkk1v2zAMhv+KwLPWBN1hgG/dB4rdBmQ7BT7QMmOrsyWNpNMFhv/7QCcIsqa+yKAeki9fagbFTqDaw+4kSiPUHpik5CQkUM3wuN3a0ZIEjkVjTlBdWCekGlMn4CHkpJTUUCxliAEN3byI8TNI6GlE+9NTIaggNy8UFDwUzoVY47lbyC3dUDEpdcTg4ZB5RD2HPj7C4mEkEexuaVGOqbO7FvWdZsviQaMOFtpNIZAILPb5N+M9kzq5G3Ek7XMLFXS0CkftoYLNDSHER2Jzc4aJB7vFEuFt+a90wGlQ9/TjuzunwFJbdpg46mlN/0zIxE+T9djXt9c7s/Ls1i10HbZXLaZlxaCCZoXW4WM65JW8mPCF8XXAxoTciTRxh8zuwniHyeVC6YPkiQO5NprdzaTUuldqXDCO2GE7xuTKgGorAw/myLnk9uHTw9bWU7LoiOvDSLiKfN/x/xRdB1T6q5syYExWa/V5vmxjD9fs2kOfRS02zw0K/eJhWSz8ZyI2k2sPR+SIjXmxrxcPPWFLvPr/m05mQghUbNlHHCbrffe2bTPXh/H87Scsyz/P+iPg
+api: eJyFU8Fu2zAM/RWDZ60OusMK37p1KHZagWzYIciBlplYnSxpEt0uMPTvA2UnS5sC9UUG+UQ+Pj5NwLhP0GxgfUhMA2wVRErBu0QJmgmuVys5Oko6msDGO2gWbJWI2bh9AgXaOybHAsUQrNEo0PoxCX6CpHsasGSt/b6DZjMBHwJBA759JM2gIEQfKLKZ+2rfkZwLyjimPUVQsPNxQJ5DH68hKxgoJdyfoxNH4/aS65DxLLE0y1kBG7YSWo9aU0q/DPd3As7qPWpv11SAXWdkarQPZ3iOI+Wct1k+9UrIe+IqXYg5EPe+gwb2VLoj99BAfYZIFJ8opqLjGC00MBWJKTd1PfU+cW6m4CPnGoOB123vaIej5er24Vs1lwIFTxgNtnaeca4mf+TGQfzRMwdQ5Ujikm6uAc2cyQqk7eyVY8Z6jbaEswKh8yJ9s7pZiTIyjh6j4UOZ5zNhpHg7ytCb7Xl6XUgVfueg0yYWikfu0BZQ2bZxO1+Qy9a/RHy22IoCF+qIKjsfqwWjKnSVD+Q+JD9GTVVnxF/tyNRVz9RWWnAUK+wG46pgkcWjoijFNJdcXX26Ws0iJB6wvAmHheTbFnjB6DQg01+ug0XjpFZZ/LTYYwOn29vjKjYwTS0m+hltzhL+M1IUkbf/t100VtATdhSL/r/pICJoTYGLLewovS+etWzm5NT7rz8g539OWHxi
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -54,7 +58,7 @@ Get system settings
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"System settings","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"System settings","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","additionalProperties":true}}}]}}}}}}
 >
   
 </StatusCodes>

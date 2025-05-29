@@ -5,11 +5,15 @@ description: "Get metadata for all tables in a database"
 sidebar_label: "Get database tables metadata"
 hide_title: true
 hide_table_of_contents: true
-api: eJyVVMFu2zAM/RWB2GEDnCboBgzzLV22oodhw9qdAhegLSZWJ0uqRLcNDP/7QNtJ0wYbsFwcS4/k43ukO2DcJsjXsELGEhNBkYGmVEUT2HgHOVwSq4YYNTKqjY8KrVWMpaWkjFOo9D40g4ARG2KKkrMDhw1BDkZDBkZyBeQaMoh035pIGnKOLWWQqpoahLwD3gWJSByN2w4JmSlK6O16MfuEs81y9rXozj/0b+A10W/ebf3qQn0v76jiK60ihUiJHJNWmBSqmp5QU2UatOpQgg1bqbkPg/514vFGXa2gL4R8Ct4lSsL3fLGQx0v8jYhz0AwyqLxjcixIDMGaCgU5v0sC707b90NBaT/6QJHNWKzymo5QxjFtKUIGGx8b5PHo/bk00FBKuKVTSaU5IXVSrO+fpbhuq4pSgl5+koxrryGHLfHoSQ05zPe+p3lndD8fR2J+1Hai+LAfhTZaicFgTnxb0QZby2r540qNIYPOiao2Gt4N4ReEkeKylcrr4vj6WsQb9TkGHdqrmQNMIybv5QAa2jVu4wfk1PbniI8WSyFyQlLIyfBPmEyhUz6QmyXfxoqUNiJw2cqsPVKpKsFRVKgb41SwyGISZCCKjCkXZx/PFmJI8IkbHEZh2hjZub28+107EvYFte55vP5rVyd9mJ54HiwaJ1QGm7rJ4jUcLIYM8mGNx2QwDMVIp8ig9okF3nUC/hVt38vxfUtR7CsyeMBoJHIwU5sk/zXkG7SJ/tHP25/Tl+Kdel7Cv1CfDtHtRGW0rbxBBr9pN36D+qLPoCbUFAca48WyqijwUcjJhsq0HVbg8ssN9P0fIcbFdg==
+api: eJy9VU2P20YM/SsDoocW0EbGdoGmum26abCHIkGTogfDBWgNbU86mlE4VBJDmP9ecGR5tesmRS69+EPkkI+Pb55GENwnaNZwh4JbTASbCiylll0vLgZo4BWJ6UjQoqDZRTbovRHcekrGBYPGzkcr6JGxIyHWmiME7AgacBYqcFqrRzlABUwfBsdkoREeqILUHqhDaEaQY68nkrAL+1JQhFiP/rVeXf2MV7vbq1834/VN/g6eAv0thn28e2Feb99TK/fWMPVMiYKQNZgMmgN9Rkut69Cbcwtx4rXnfAzy08JTxNzfQd4o+NTHkCgp3uvVSr8e579Tcs6cQQVtDEJBNBP73rsWNbN+nzR9XIyP3r/eFepORMTSWong2BOLm9q20dKCLheE9sRQwS5yhzI9+vFaR+koJdzTJbk6psJrnjbL+YGUt0PbUkp/OjmoQiBX/wXtSU1kxqOuX6hLl70qQGudsoH+zaKO6iLnnDf6UcHN6uaS5lmyJkQxuzgE+y1U/y8EE3Pkf4ksGH5ZUvI0Z0dyiBYa2JNM6j9AA/V8w1I9Opvr6fLVC4El4o/zpRvYQwNjmZRyU9fjISbJzdhHllxj7y5uzh3tcPBibt/cm6kUVPAR2ZVGZ97KjBSGTg3jINJDVb7SZBqlBjRTJFegbaetzREfW/Tlca5A4TwKP189X+nKdZx2YCfHMs8LQia+HZSK9WYZfltAFXzLpDPbJ4gzdtiWpMK+C7tYMk9b+IXxk8etMnDBjrKivnfKqQwGE3sKVykO3JKxTte6HdRmPtHWtJpHbNB2Lpjeo6holFHiNJVcPfvp2WoiIUmHRZons1S7nfc92+xi04+gjQ9y/yabPvEj9Fnq3qMLCqXoZjxpbg1nzUEFTXHwqRgUlU5wNvOS1zCOmvwH+5z18YeBWNe3edBRWaZ1SX9baHboE31lnu9/P70kfjAP/vsF6LPXhGPRrR/0H1TwNx2n10/eqB4JLXGBMQVu25Z6WRy5cAxV2/lOvnr5DnL+B/dZdX4=
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Get metadata for all tables in a database
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Table metadata","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Table metadata","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","additionalProperties":true}}}}]}}}},"404":{"description":"Database not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
 >
   
 </StatusCodes>

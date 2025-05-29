@@ -5,7 +5,7 @@ description: "Get system information"
 sidebar_label: "Get system information"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1kk1v2zAMhv+KwLPaBN1hgG/dB4rdBmQ7BT7QMmOrsyWNotMFhv/7QDkIvLbzRQb5UHz5UjMIdhmqIxwuWWiE2gJTTjFkylDN8LDf69FSduyT+BigurLGh1PkEUvQgotBKIjSmNLgXUnsnrOWzJBdTyPqn1wSQQWxeSYnYCFxTMTi14YutrShfBDqiMHC2msNfXiAxcJIOWO3pbOwD53mWpR3mi2LBfEyaOgwOUc5w6KffTXhE4nJ7005kvSxhQo6KtpReqhgt7J3yoKFTHwmVltnmHhQAJOH102+0AmnQczj929mLYGl1mo3sZdLKf9EyMSPk7Y51tv0QQ1dPdtCt5F7kaRaCgYVNAUqFhSZSl6t+Mz4MmCjQt6IVHGnyObKWIPBxEThLseJHZnWq+nNJNSaF2qMU47YYDv6YNKAovaBBXVkvXJ///F+r0tKMcuI5XkELCL/6/s/om4zCv2RXRrQB72uWD1fd3KE7U5qC33MouF5bjDTTx6WRcO/J2K1urZwRvbYqCPHerHQE7bEZQu/6KJWOEdJt37GYdL2b9657uf2Qp6+/oBl+QtAhimZ
+api: eJyFVMtu2zAQ/BVhz0wkpIcGuqVNEfTUAmnRg+EDRa0tphTJkqukhsB/L5aUXb+KXkxjZ7yPmYFnILmN0K7geRcJR1gLCBi9sxEjtDPcNQ0/PUYVtCftLLQLt9J248Ioc1GAcpbQErOl90arDNQvkX8yQ1QDjjKjxnzZQLuagXYeoQXXvaAiEOCD8xhIl9HK9cjvwtKWcIsBBJSppfTuDpKAEWOU22N2pKDtlrFekjwClmEpCSBNhkvPk1IY4w9NwyOTk/jfatd7nrNeMURdrr/YanR2664iAXsdryL2VJDDJSmldf4UZz49IVXxmlcj0uB6aGGLeW1JA7RQF+4Nc0FAxMAXZKemYKCFOZuIqa3reXCRUjt7FyjV0ms4H/6IGzkZqh6+fq5KKxDwKoOWnSn6lG78De00cggHIg8iP5Gj2Jce0BYkCeCxJZB7xDglTS4nAbzOCXzf3DesD5+jpqBpl+/5gDJgeJj47tX6GH7OS+X9jkkH1ZcV97tDl0k5T1k3Zi65+hjkm5EdK3ChDquycaFaOKKStnIe7U10U1BY9Zp97ybCvnrDrlLMw1DJftS28kYS+8mK7kMGze3726aIEGmUOXdW5iX/GYSTpQ43Ev6m2hupLbfL3s9LSFZwHJL13pAVzHMnI34PJiUu/5owsNTrv55npQUMKHsM2YWfuGMplEJPORxm4vEXfx/szyGyT5++QUp/AHgioOU=
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Get system information
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"System information","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"System information","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","properties":{"version":{"type":"string"},"mongo":{"type":"string"},"redis":{"type":"string"},"node":{"type":"object"}}}}}]}}}}}}
 >
   
 </StatusCodes>

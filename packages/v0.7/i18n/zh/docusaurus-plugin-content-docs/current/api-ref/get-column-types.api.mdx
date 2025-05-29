@@ -5,11 +5,15 @@ description: "Get available column data types for a database"
 sidebar_label: "Get column types"
 hide_title: true
 hide_table_of_contents: true
-api: eJyVVE1v2zAM/SsCscMGOE3QDRjmW7psRQ/Dhn2cggxgJCZWZ0uqRLcNDP/3gbKTpsk2YLk4lvnIx/dIdcC4TVAuYYGMa0wEqwIMJR1tYOsdlHBNrPAebY3rmpT2dds4ZZBR8S5QUhsfFeaDjC8gYMSGmKIk7sBhQ1CCNVCAlYQBuYICIt21NpKBkmNLBSRdUYNQdiB5oYTE0bptTshMUaA/l7PJO5xs5pOPq+7yTf8CTtl+8m7rF1fq8/qWNN8YFSlESuSYjMKkUFX0iIa0bbBWhxJsuZaaexj0p4mHL+pmAf1KyKfgXaIkfC9nM3k8j5+fSpbVggK0d0yOBYEh1FajIKa3SWDduQw+FxYZog8U2Q5FtTd0FGUd05YiFLDxsUEejl5fSiMNpYRbOpdWmkT+Q7G+f5LkW6s1pQS9/CQZV95ACVviwZsKSpju/U/Tzpp+OvScpvumE8X7/UC0sRYEBnvm3oI22Nas5l9u1ADJaifSbbS8y/Arwkhx3krd5er48zeRblDnOOjQXMUcYBw0eV/noNysdRufI8em30d8qHEtRM5ICjkZ+jGmUOiUD+QmybdRkzJW5F23MnEPtFZa4igqNI11KtTIYhEUIIoMKWcXby9mYkfwiRvMgzDujazfyQQ9o9M9DdT/r+ooDNMjT0ON1gmH7E83OruEg7NQQJm3eDR3xCe5MiqfWIK7TkJ/xLrv5fiupSiurQq4x2iFVvbQ2CT/DZQbrBP9o6WXX8dr4pV62sC/EB8P0e1EXKxbeYMCftFuuID6VV9ARWgoZhrDh7nWFPgIcraWMmSHub/+8B36/jcAt8e7
+api: eJyVVNuO0zAQ/RVrxANI2U21ILHkrUthtQ8IxMJTVaRpMm29OLbXnuxFkf8djZNethVI5CWJ5+Iz5xy7B8Z1hGoOM2RcYiRYFNBQrIP2rJ2FCq6JFT6gNrg0pGpnutaqBhkVP3uKauWCwryQ6wvwGLAlpiCNe7DYElSgGyhAS0OPvIECAt13OlADFYeOCoj1hlqEqgfpCxVEDtquc0NmClL6az45+4Bnq+nZ50V/8S69gmO0X5xdu9mV+rq8o5pvGhXIB4pkmRqFUaHa0BM2VOsWjdptwZqN7Lktg3TceIiomxmkhYCP3tlIUfBeTCbyepk/PaYsswUF1M4yWZYK9N7oGqWivItS1p/S4PLGQkNwngLrYdPaNXSQpS3TmgIUsHKhRR6W3l7IIC3FiGs6pTal/eS3XV1TjJDkkRreuAYqWBMPEmyggnIrcyx73aRyGC2W29kihYet7l0wUEGf56FUlWW/cZFT1XsXOJXo9Yl4M1phZ1hNv92ooRUU8IBBC49xx06ehGzXinE3zB6K/IqDeXMPqIZIKkC2HfTZRoyr0eTlVIDAeRG+nFxOUhKVI9Vd0Pyc57kiDBSmnRAxXxyGbzOojO8wacf2CHGLHZY5KbOv7crlzFGFjwEfDS6FgRN2hBU5bGNOodAq58meRdeFmlSjRdZlJ05/pKWqJY+CwqbVVnmDLNYQRinEoeXk/P35ZCAhcovZgON5lWN/5NwXcPq9kf//ihiJYXri0hvUVjBkw/Sj1eawsxoUUOXbY3TbWJ/VHrSdQ99L6s9gUpLl+46CqLbY2ydr2Ogo3w1UKzSR/jHS6+/j9fRG7U/+X4CPi2ifs11NJ39QwG96Hi6+tBAbEjYUMowhMK1r8nxQcnIdiMl2B/H60w9I6Q+n4/IL
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Get available column data types for a database
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Available column types","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Available column types","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>

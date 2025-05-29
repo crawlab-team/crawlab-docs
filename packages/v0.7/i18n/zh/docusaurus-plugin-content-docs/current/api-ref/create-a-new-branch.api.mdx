@@ -5,11 +5,15 @@ description: "Create a new branch in the Git repository"
 sidebar_label: "Create a new branch"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVE2P2zYQ/SvEoIcGoGNjU6CobvvRBHsIEmTTk6EAY3FsMZVIhhyt1xD034shtWuvdxug1UUSOTN8783jjMC4S1Ct4YNlqDUYSk20ga13UMF1JGRSqBzt1Saia1plneKW1AfLKlLwybKPB9AQMGJPTFHKjeCwJ6jAGtBgpVZAbkFDpB+DjWSg4jiQhtS01CNUI/AhSEbiaN0uF2SmKKnf1qvFH7jYXi7e1+PFb9MvcA70o3c7f3OlPm2+U8O3RqBFSuSYjMKkULX0gIYa22Onno5gy52c+ZgG03nhsqNub2CqC3hKfOXNQRCfc2m8Y3IsWxhCZxuUKsvvSUqNL6n6XPyZKOsiXK0hRB8osqUkGUXOc5Gm/Eh+Ct6lEnqxWsnrOY+r0rwmN9SoNDQNpbQduk5697+BPwfZeHMK0jqmHUXQsPWxRy5L7y5E5Z5Swt1rlDQY5FcOE56P/bor8GGm3xO33ojHfOLinBYqWO4sp+VozbQs3qUEGhLF+0eTDrGTOAz2haNuaItDx+ry860qKdkBiZohWj7k9CvCSPFykNPW9en2nShWRDkNeuLUMgeYzS//mxyUOYroX44++/MB+9DR0QMnQlm39bnoLMt1xH2HG8H8go/w2Pqo5hit0CkfyC2SH2JDylipuxnEHXvaqEbiKCo0vXUqdMjSRNAg4pWSq7e/v10JDpG9R3eC8ZXBcY5oPLruP82ZWUGmB16GDq0TBLmR49z4NUjjQUOVp89T72sNrRikWsM4bjDRX7GbJln+MVCUltYa7jFa3Iic6xGMTfJtoNpil+gnDH79Ml/hN+o4Mv4F7LyITujcYzfIH2j4mw5lYk71pKElNBQzjLJxXQ5bfJX0Y+KLCzvpx4zLpqHAP42tT27P5093X0Wvebr1+TZDxL1MKNwXkD6Tz87OayN06HZDvstQasrzD8OoKqU=
+api: eJydVE2P2zYQ/SvEoIcUkGNjW6CpbvvRBnsoEmSTk6ECY2psMaVIhhzFawj678WQ8trrTQM0ukjicB7fvHmcERh3Ceo1vDUMTQUtJR1NYOMd1HAbCZkUKkd7tYnodKeMU9yRemtYRQo+GfbxABUEjNgTUxS4ERz2BDWYFiowghWQO6gg0pfBRGqh5jhQBUl31CPUI/AhSEbiaNwuAzJTlNS/16vF77jYXi/+bMarX6ef4JLoX97t/N2Nerf5TJrvW6EWKZFjahUmhaqjR2xJmx6tejqCDVs585gG0yVwiaj7O5iaQp4S3/j2IIwva9HeMTmWEIZgjUZBWX5OAjW+LNVn8GeirItwTQUh+kCRDSXJKHJeijTlR/JT8C6VrVerlbye13FTmqdzQ1uVBq0ppe1grfTuh4k/J6l9e07SOKYdRahg62OPXJZ+uRKVe0oJd98s6dSWh8IS5ip74s63YiWfuBikgxqWO8NpOZp2WhaLUoIKEsWvRy8O0UINYy6Dpnq5HDufeKrH4CNPSwzmhaHuaIuDZXX9/l4VKKjgK0aDG1uKLWjyRW7opXMdc4Aqv1K5SxkD6hKZKpBjS2+OEes12rw8VSB0noXfrN6spkmcl0gP0fAh13NDGCleD1L+ujkPP2RSmd/5pieRZ4pH7rDJm7Lo0uwPJ3//8Yh9sHTy3lOD5D5vfQad+3QbcW9xI2K9EFIE3Pqo5j2VQqd8ILdIfoiaVGsEdzOIK/e0UVr2UVTY9sapYJHFPCI+xVQgV69/e70qeiXu0Z1x/MbAumQ0ntz+v+bbrCDTIy+DReOEQXbWODtxDeJEqKDOU+/JjM2x8WsYxw0m+hTtNMnyl4GitLQ5eSs3uDVJvluot2gTfaeCVx/m0fGzOo2q/yA7L6I7ZC/bQf6ggn/oUCb11IhHCVuKmUYJ3JbDFh8l/ZT4YlBM1THjWmsK/N29zdl1fv/u4aPoNU/VPk8RiLiXyYj7QtLn4rOz89oIFt1uyDMECqY8/wLQwVT1
 sidebar_class_name: "post api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Create a new branch in the Git repository
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Branch created successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Branch created successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>

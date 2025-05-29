@@ -5,7 +5,7 @@ description: "Get system statistics"
 sidebar_label: "Get system statistics"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1UsFu2zAM/RWBZ60JusMA37qtKHYbkO0U+EDLTKzOljSSThcY/veBdhBkbeeLDPKRfHyPEygeBao97M6iNEDtgUlKTkIC1QT32609LUngWDTmBNUF60RRo2gMAh5CTkpJDYyl9DGggTfPYhUTSOhoQPvTcyGoIDfPFBQ8FM6FWOM6L+SWblAxKR2JwcMh84C6hj7ew+xhIBE83qJFOaaj5VrUd4bNsweN2ltoN4ZAIjDb518t+ETq5J0lB9Iut1DBkRbqqB1UsDGMpYX4RGxyTjBybyksEV53/0oHHHt1D9+/ubUE5tqqw8hRz0v5Z0ImfhhtwL6+Te9MyVWsW9B11061GJcFBhU0C2jZPaZDXpAXDb4wvvTYGJE3JI3cIbO7YLzD5HKh9EHyyIFcG03tZlRq3Qs1LhiO2GE7xORKj2qOgQdTZG25vft0tzV3ShYdcLmLhAvJ/wn+D6frikp/dFN6jMm6LUpPFzP2sJpRe+iyqAWmqUGhn9zPs4V/j8Smce3hhByxMSn29eyhI2yJF/l/0dk0CIGKGX3CfrTBby7bjLkexdPjD5jnvzlhI+o=
+api: eJyFVE1v2zAM/SsGz14TdIcVvm3rUOy0Ad2wQ5ADLTOxWlnSRLpdYOi/D5TdLk0bzAfL0Hvix+OTJxDcMzQbuD2w0ADbGhJxDJ6JoZngcr3WpSM2yUaxwUOzcCsWFMtiDUMNJnghL0rGGJ01qOTVHeuJCdj0NGBBnfu2g2YzgRwiQQOhvSMjUENMIVISO2c2oSNdF5b1QntKUMMupAFl3np/CbmGgZhxf8xmSdbvFetQ8AhYkuVcg1hxunU7GkPMv6z010rO9f9KezvmKcuHbv446SAXoh45g3K0HaUzoCDfnztneupGdy7pyGeC6rMt7/pk0DckFb8x7IGkDx00sKfSN0oPDayUozBTeii5NhOMyUEDU5k/5Wa1mvrAkpsphiR5hdHCadZr2uHopPr4/Ws1h4IaHjBZbJfm5mj6RX4c1L69SIS6LKwm7uYY0MxIrkHTzlZ+Qlww6Mq2jiSkl/DV+mqtwmg7ZkxWDqWfT4SJ0sdRO95sj+HbUlSp75j0rPdS4lPt0BZSsaL1u1CYiyU/J3x02KoCr9RRVXYhVQunrtBXIZJ/x2FMhqrOqvnbUairHqmtjPIoVdgN1lfRoegFUkUp8RxyffHhYj2LwDJgubAeS5HnHPCipucWhf7IKjq0vhhORz8t7tjA7I7t0yQ2ME0tMv1MLmfd/j1SUo23/4ZdJK6hJ+woFfnv6aAaGENRiivcqIlf/XJ0MM8uvfnyA3L+CxuVsow=
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
@@ -54,7 +54,7 @@ Get system statistics
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"System statistics","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"System statistics","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","properties":{"nodes":{"type":"integer"},"projects":{"type":"integer"},"spiders":{"type":"integer"},"tasks":{"type":"integer"},"schedules":{"type":"integer"},"users":{"type":"integer"}}}}}]}}}}}}
 >
   
 </StatusCodes>

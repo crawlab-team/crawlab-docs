@@ -5,11 +5,15 @@ description: "Checkout an existing branch in the Git repository"
 sidebar_label: "Checkout a branch"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVE2P2zgM/SsC0UMLKE0wW6Cob/PRFnNYtOh0T4EXYCQmVmtLqkTPTGD4vy9oOU0m0+2hvtiWROq9x0cOwLjLUK3ho2OoNVjKJrnILnio4Loh8z30rNArenSZnd+pTUJvGuW84obUR8cqUQzZcUh70BAxYUdMSdIO4LEjqMBZ0OAkZ0RuQEOiH71LZKHi1JOGbBrqEKoBeB8lInNyfjclZKYkof+uV4t3uNheLj7Uw8Wb8QWcA/47+F24uVKfNt/I8K0VaIkyeSarMCtUDT2iJeM6bNXPK9hxK3cewmA8T1x21O0NjHUBT5mvgt0L4nMuJngmz7KFMbbOoGRZfsuSanhONUzJn4iyLsLVGmIKkRI7yhJR5DwXaZweic8x+FyOXqxW8nrK46oUz0hhySqpbe6NoZy3fdtK/f4Y/FOgJthToM4z7SiBhm1IHXJZ+utClO4oZ9z9ipYGi/yLy4TroWZ3BT7MEnTETbDis5C5uKeBCpY7x3k5ODsui38pL83sbtCQKd0fHNunVgIwumf2uqEt9i2ry8+3qoRMdshk+uR4P4VfESZKl71cu65Pt+9EuqLO6aGf5BrmCHMnyP9mOjSRFfW/HE33/hG72NLRECeKOb8NU9JZn+uEDy1uBPMzPsJjG5Kaz2jp8xDJL3LokyFlneTd9NI9D7RRRs5RUmg751VskaWaoEHEKylXr9++XgkO0b9Df4LxOE3mGXKOZzia749Gz6wj0yMvY4vOC46pnMPsgzWID0BDNQ2kgxXE9gcz1BoasU61hmHYYKZ/UjuOsvyjpyQ1rjXcY3K4EX3XA1iX5dtCtcU2029IvfwyN/grdRwo/4N7XkQvzO6x7eUPNHynfZmnYz1qaAgtpQlG2bguly2+Svgx8Fkrj/oQcWkMRf7t2fqkrz5/uvsq0s2zr5v6HBI+yPzChwIyTOQnq09rA7Tod/3U5VByyvMfPms5sQ==
+api: eJydVE2P2zgM/SsCsYcu4NTBdIFtfZuPbjGHokWnPQUpwMhMrFaWVInuTGD4vy8oOZNMZreH+mJbFJ8eH584AuMuQbOCd4ZhXUFLSUcT2HgHDVx3pL/7gRU6RQ8msXE7tYnodKeMU9yRemdYRQo+GfZxDxUEjNgTUxTYERz2BA2YFiowghmQO6gg0o/BRGqh4ThQBUl31CM0I/A+SEbiaNwuAzJTlNSvq+XiDS62l4t/1uPFX9MfcE74vXc7f3OlPmy+kebbVqhFSuSYWoVJoeroAVvSpkerHo9gw1bOPKTBdA5cIur2BqZ1IU+Jr3y7F8bntWjvmBxLCEOwRqOg1N+SQI3PS/UZ/IkoqyLcuoIQfaDIhpJkFDnPRZryI/kpeJfK1ovlUl5P67gqzdPSWGqV9DYNWlNK28Fa6d9vk39KVPv2lKhxTDuKUMHWxx65LL26EKV7Sgl3/1nWsTV3hSXMlfbEnW/FTj5xMUkHDdQ7w6keTTvVxaaUaj2bGCpIFH8ejDlECw2MuR6amroeO594asbgI081BvPMXTe0xcGyuvx4qwoUVPATo8GNLVUXNPkiN/TSxo45QJVfqVywjAFNiUwVyLGlUYeI9RptXp4qEDpPwq+Xr5fTJDZMpIdoeJ/ruSKMFC8H0WG1Pg3fZVKZ3+mmR7VnigfusMmbsvrS9U9Hs799wD5YOhrxsVNyubc+g84Nu454b3EjYj0TUgTc+qjmPZXMFx/ILZIfoibVGsHdDHJr72mjtOyjqLDtjVPBIouLRHyKqUAuX/79cln0StyjO+F4nGLz7DrnMx5N/1sjb9aR6YHrYNE44ZH9Nc7GXIEYEypo8iA8eFOu28Gd64MTVjCOG0z0JdppkuUfA0Xp8fpottzx1iT5bqHZok30i6JefJoHy5/qOMj+h/e8iG6fzW0H+YMKvtO+zPFpLaYlbClmGiVwXQ5bfJb0Y+KzETJVh4xLrSnwL/euTy76xw93n0W6eeb2eb5AxHuZm3hfSPpcfLZ6XhvBotsNebpAwZTnXxTjZAE=
 sidebar_class_name: "post api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Checkout an existing branch in the Git repository
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Branch checked out successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Branch checked out successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>

@@ -5,11 +5,15 @@ description: "Delete a branch in the Git repository"
 sidebar_label: "Delete a branch"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVNtu3DYQ/RVikIcW4HoXboEgerOzbmCgQYpcnhYqMCvOrphKJEOObC8E/XswpOxdr9OgqF4kkXM558xlBMZ9gmoD7yxDrcFQaqINbL2DCtbUEZNCtY3omlZZp7gl9c6yihR8suzjATQEjNgTU5RQIzjsCSqwBjRYiROQW9AQ6dtgIxmoOA6kITUt9QjVCHwI4pE4WrfPAZkpiuvfm9XiDS52V4s/6vHy9+kVnIN8793er6/Vh+1XavjWCLRIiRyTUZgUqpYe0FBje+zUUwq23EnORzeYzgOXG3W7hqku4CnxtTcHQXzOpfGOybFcYQidbVCiLL8mCTW+pOpz8GeibIpwtYYQfaDIlpJ4FDnPRZryI/4peJeK6eVqJa/nPK5L8UwuplFpaBpKaTd0ndTufwN/DrLx5hSkdUx7iqBh52OPXI5+uxSVe0oJ9z+ipMEg/yCZ8Hys16cCH2b6PXHrDVRQ6JXeaaGC5d5yWo7WTMvSvZRAQ6J499imQ+zEDoN90VNr2uHQsbr661YVl9wDiZohWj5k92vCSPFqkGyb+vT6k2hWZDk1emLVMgeY21/+t9kosxTZPx477eYB+9DRsQtOpLJu53PQWZi3Ee873ArmF3yEx85HNdtohU75QG6R/BAbUsZK3O0g/XFPW9WIHUWFprdOhQ5ZyggaRLwScnXx+mIlOIJP3KM7wXi2Ns7RjMee+88bZlaO6YGXoUPrJHMu4DgXfANScNBQ5b3zVPNaQ+sTi8E4bjHRl9hNkxx/GyhKKWsNdxgtbkXGzQjGJvk2UO2wS/QT9L98nIf3V3VcFv8Cdj5EJ3TusBvkDzT8Q4eyK6d60tASGooZRrl4W5ItPov70fHFqE760eOqaSjwT23rk7lZ3/x58/lGFJs3W58nGSLey3bC+wLTZ/q5p/PZCB26/ZDnGEpUeb4Dw7cnfQ==
+api: eJydVMGO2zYQ/RVi0EMLyLGxKdBEt914GyyQokWSngwFGItjiylFMuQou4agfy+GlNdebxIU1UUSh/P45s3jjMC4T1Bv4K1haCrQlNpoAhvvoIY1WWJSqLYRXdsp4xR3pN4aVpGCT4Z9PEAFASP2xBQFagSHPUENRkMFRnACcgcVRPoymEgaao4DVZDajnqEegQ+BMlIHI3bZ0BmipL6abNavMbF7nrxezNe/Tr9BJck//Bu79c36s/tZ2r5Tgu1SIkck1aYFKqOHlBTa3q06vEINmzlzGMaTJfAJaLu1jA1hTwlvvH6IIwva2m9Y3IsIQzBmhYFZfk5CdT4vFSfwZ+IsinCNRWE6ANFNpQko8h5KdKUH8lPwbtUtl6tVvJ6WsdNaZ7OzdQqDW1LKe0Ga6V3/5v4U5Kt1+ckjWPaU4QKdj72yGXp5ZWo3FNKuP9mSae2fCgsYa6yJ+68hhpKFcUiHdSw3BtOy9HoaVlMSgkqSBS/Ht04RAs1jLkQmurlcux84qkeg488LTGYZ5Za0w4Hy+r6rztVoKCCrxgNbm0pt6DJF7mhl951zAGq/ErlJmUMqEtkqkCOLd05Rqxv0eblqQKh8yT8avVqNU3ivUTtEA0fcj03hJHi9SDlb5rz8IdMKvM73/Qo80zxyB22eVOWXdr9/uTw2wfsg6WT+x5bJDd65zPo3Kk3Ee8tbkWsZ0KKgDsf1bynUuiUD+QWyQ+xJaWN4G4H8eU9bVUr+ygq1L1xKlhksY+ITzEVyNWL316sil6Je3RnHC/G1SWb8eT1/zzZZuWYHngZLBonJ2dHjbMDNyAOhArqPO8eTdgcG76Bcdxior+jnSZZ/jJQlFY2J0/lxmqT5FtDvUOb6Afsf34/D41f1GlIfYfsvIjukD1sB/mDCv6hQ5nRUyPeJNQUM40SeFMOW3yU9FPisxExVceM67alwD/c25xd5PXtu9uPt6LYPFH7PEEg4r1MRbwvNH0uP3s6r41g0e2HPD+goMrzL3nQUc0=
 sidebar_class_name: "delete api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Delete a branch in the Git repository
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Branch deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Branch deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>

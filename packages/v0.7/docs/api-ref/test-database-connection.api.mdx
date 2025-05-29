@@ -5,11 +5,15 @@ description: "Test connection to a configured database"
 sidebar_label: "Test database connection"
 hide_title: true
 hide_table_of_contents: true
-api: eJyVVE1v2zAM/SsCscMGqE3QDRjmW9pgQA9Di7U7BRnASEyszpZUiW4bGP7vA23no802YLk4kvnIx/dIt8C4yVAsYI6MK8wESw2WskkusgseCrinzMoE78nIjeKgUM5rt2kSWWV3SA0RE9bElCRlCx5rggKcBQ1OUkXkEjQkemxcIgsFp4Y0ZFNSjVC0wNsoiMzJ+U2fkJmSQH8upmdf8Gw9O/u6bC8+de/gLc9vwW/C/FLdrB7I8LVViWKiTJ7JKswKVUkvaMm4Giu1L8GOK6m5g0H3NvHwRl3PoVsK+RyDz5SF78V0Ko/X8VdHWol2iXJTMWgwwTN5FgTGWDmDEjR5yAJrT2UIfWGRIYVIid1Q1ARLR1HOM20ogYZ1SDXycPXxQhqpKWfc0Km00iTyH4p13UGSu8YYyhk6+UkyLoMVG0PmwZwSCpjsBiBPWme7yWFUJtI+aMiUnnYz0aRKMBjdiYFzWmNTsZrdXqsB0gueyTTJ8baHXxImSrNGKi+Wx6/vRL1BoOOgfX8lc4Rx1uS86oP6fp1fhz5y7Psq4XOFKyFyQlLIrUNSY4xW6FWI5M9yaJIhZZ0ovGpk6J5ppYzEUVJoa+dVrJDFJdAgigwpp+efz6fiiOhaYz8L4+r0u7fT92gJ39JqD7P1P/s6SsP0wpNYofPConeoHd1dwN5d0FD0q/yKRm/xUkMpM1EsoG0l+Eequk6uHxtK4txSwxMmhysReNGCdVn+WyjWWGX6Rzvvv49fiw/qsIh/oT5eot+KwFg1cgINv2g7fIe6ZaehJLSUehrDi5kxFPkIcrKdMmj78b+9ubuHrvsNJKLJ0A==
+api: eJy9VU1v3DgM/SsC0UMXUOpBGqCtb2mzC+SwSNG06GEwC3AsekZdWXIlum1g6L8XlO3MNJNu0cv64A+JpB4fH+kRGHcJ6jVcIeMWE8FGg6HURNuzDR5qeE+JVRO8p0ZWFAeF8t3a3RDJKLN4augxYkdMUUKO4LEjqMEa0GAlVI+8Bw2RPg82koGa40AaUrOnDqEege968Ugcrd+VgMwUxfWf9ersFZ61l2d/bcbzi/wEHuL8O/hduHqtbrafqOFroyL1kRJ5JqMwKVR7+oaGGtuhU/dHsGUnZy5ukB8GnnbU9RXkjYBPffCJkuA9X63k8aP9myOuhLtIaXAMGprgmTyLB/a9sw2KUfUpidt4RAM6d9MWCmdCQoEghMTQU2Q7Hd8EQ0e0Wc+0owga2hA75Gnp+bmk1FFKuKNTkiVd5GP258NyPpBzOzQNpfTR8l6EAln/CtrjMR9aJUYe0qOgfg5Yro3cNFysLk75X6SsfGDVhsGb3+H+f2GcYgzxsdQOlP9ZTPKUZ0e8D0Y6KCSe+mIPNVRL76VqtCZXhy6tRHmgIVH8srTjEB3UMJZUKddVNe5D4lyPfYicK+ztSU9dUYuDY3X59lpNoUDDF4wWt26uYIkmb+SHTibJnrkHXR5pmiYlBtTTTtYgx05lW3ZcaNCV5axB4Pyw/XL1ciU1l3SaIVq+K/m8JowULwehYr053r4toAq+Y6N7umeIC3bYFqNCv/VtKJZzGd5E/OpwKwycsCOstCGq2UYr9Cr05M9SGGJDylip63aQAfSVtqoRO4oKTWe96h2yqEYYpZimkKtnL56tJhISd1i0OY/RMoeXgh8N5IewxoPWf2d2z9QwfeOqd2i9oCiSGWe5reFebqChtnNbHWAUzW2W+q5hHMX4Q3Q5y/LngaJUbnOQUKmjsUneDdQtukT/kc7Td/Of4w91GMo/gT4vor8rknWDfIGGf+lu+ifljUiR0FAsMKaNy6ahno9cTqaFCO2+H9/e3L6HnL8DUJ5/hw==
 sidebar_class_name: "post api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Test connection to a configured database
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Connection test result","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Connection test result","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","properties":{"status":{"type":"string"},"message":{"type":"string"}}}}}]}}}},"404":{"description":"Database not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
 >
   
 </StatusCodes>

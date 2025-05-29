@@ -1,0 +1,75 @@
+---
+id: update-notification-setting
+title: "Update notification setting"
+description: "Update a notification setting"
+sidebar_label: "Update notification setting"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zgQ/SvEoIddgK6NtEBb3ZJmF8hh26JtToYXGItjm12JZMlRE0Pgfy+GlGMn3rZAdZHE+Xrz5nFGYNwmaJbwzrPd2BbZepdgpcFQaqMN8g8N3AaDTAqVO/FTiZit24KGgBF7YoqSbASHPUED1oAGK/EBeQcaIn0dbCQDDceBNKR2Rz1CMwLvg0QkjoeEzBQl9N/lYvYGZ5vL2d+r8eJlfgZPwf3j3dZfX6n36y/U8o1RkUKkRI7JKEwK1Y7u0VBre+zUQwm23EnNQxjkp4mrRd1cQ15V8JT4ypu9IH7aS+sdk2MxYQjdxNH8S5JU43mrviSHnHOW3Cl4lyiJw8ViIa/HWN79D/FqKGMRln+zuoYQfaDItpZuvaETL+uYthRBw8bHHrkevbgQqnpKCbd0Pjzp58Dtp6FtKaXSZYnhnTeih4HrkHfQwPxUVGk+NZfmozUZNCSK3w7CGmIHDYylHcrNfD7ufOLcjMFHznMM9kwd17TBoWN1+eFG1VSg4RtGi+uuNl2zyRe5oZfbsGMOoMtrugwlBzTVkjVI2Tqkg6XzLXblOGsQOI/MrxevFzmLjBK1Q7S8L/1cEUaKl4PwsFydmj8VUAXfqdMD2RPEA3ZYF6dCvgz941Gsf91jH2QaY5bbuPElyzSgtxHvOlwLO2fMCWMbH9XkoxU65QO5WfJDbEkZKxNfD3LN7mitWvGjqND01qnQIYtqhG2KqaZcPH/1fFEJStxj0ea0LKYV84MF8wjZeJT7LzfTRBfTPc9Dh9ZJ9SKjcdLfEh7pryiuKhA0NNaIAOq4lzCOa0x0G7uc5fjrQFEGuToqqozV2CTfBpoNdol+Av+Pj9Ma+VMdt80PUE+H6PZFwd0gf6DhP9rXZZtXokxCQ7HAqIa3tdjss4QfA8/WRNaHiMu2pcA/9V2dXOYPt59Bw3rai31ZIRDxThY+3lWMPlRyZXHK2Qgduu1QFgjUlPJ8B6/FQ2Y=
+sidebar_class_name: "put api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update notification setting"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/notifications/settings/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update a notification setting
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Notification setting updated","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

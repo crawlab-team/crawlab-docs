@@ -1,15 +1,19 @@
 ---
 id: get-notification-channels
 title: "Get notification channels"
-description: "Get list of notification channels"
+description: "Get a list of notification channels"
 sidebar_label: "Get notification channels"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNU01v2zAM/SsCz1oTdIcBvnUfKAoUw4Bup8AHWqZjdbKkUXS6wPB/H+hknbNu2HyxLT+Sj+89TyC4L1Dt4GMS33mH4lMsUFtoqTj2Wd+hglsSE3wRkzoTV1DjeoyRQgELTCWnWKhANcH1dqu3yy73/+jgUhSKooWYczgjNo9FqycorqcB9UmOmaCC1DySE7CQOWVi8afZLrW0QvkotCcGC13iAeV09PoaZgsDlYL7NboI+7jXby3KH4bNswXxEvToYXSOSoFZL20mfWqhgj0tpFB6qGCz3rZsVusW4gOxyj/ByEGxmD38rv176nAMYm4+3ZlTCcy1VruRvRyX8reETHwz6sRdvf78oKKddFmDntfqRbJyWWBQQbOAljV97NKCPK/7jvEpYKNEXpBUcl1ic8ZYg9GkTPFVSSM7Mq1XYZtRqDVP1BinOGKD7eCjyQFFzQELqsip5fbqzdVWjcipyIBLBCIuJDWOfwvRBa/pV6b+K8NnUYS+yyYH9FHnL95MZz93cOGnpvZneW2hT0UUM00NFvrCYZ71+NtIrEbVFg7IHhvVc1fPFnrClnjx8CsdVUjnKGt8DhhG5fLiT1B3n6N2++EzzPMPH+ROxA==
+api: eJydVE1v2zAM/SsCz16TdcNW+NZ9oBgwFAW6YYcgB9pmYnWypEl0u8zQfx8oO03SrB/YyYn4SD49PXIAxnWEcgGXjvVK18ja2QjLAhqKddBe/kMJF8QKldGRlVspuwdWdYvWkolQgMeAHTEFKTmAxY6gBI9rggK01PnVU9hAAbFuqUMoB+CNF5C2TGsKII1X2BuG8nV6yOIK16Rs31UU1MoF5XGtbWYBqbjvF/Wf/+s3P2p4OfZyK6WZuqg85aYEaVlAoOidjRSl7Ol8Lp/D9K/P6FU7y2RZEtF7MyFmN1Gyh2PSrrqhmkXo4DwF1mPv2jX0z6utXOiQx6M3p5AK6ChG4b9DRw7ariXWIL+gmXhgD4UhoAic9TnOTqkAdozmWX7v3kJKGa7ZCOy6r2uK8YfmVnTM0XwDbl0DJawpk0NuoYTZvsRxtqdxpHC7NWQfDJQwZF0plbPZ0LrIqRy8C5xm6DU8dMCn0R3q/OqLGktBAbcYNFZmFGSsJr/I9p3MUsvsocifaZQmh42RVIC0He2yjRhXo8nHqQChcxA+m5/NUxLTRar7oHmT7/OBMFA470WCxXI/fJ1JZX77oPs3mChuuUOVQfm5tF25jJze4WPAO4OVKHCkjqgigzhhCoVWOU/2VXR9qEk1WuxV9UyNuqNK1YKjoLDptFXeIIsFRFEKcSw5P3l/Mh9FiNxhHoRpsGUJPTZKB7yG3WS9cHNNsjD95pk3qGWhjHYZJost4MBiMr3b9OX2QRcwDBVG+h5MSnI8rh95qkZHcUwD5QpNpCcIP7HkHuH5kza7NXuLphdI3ogv7/ropnuy57Rqdz2Xu+HIliygJWwoZA3GnPO6Js97WUerT6rcj/nF52+Q0l/7mEpF
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -36,10 +40,18 @@ import Heading from "@theme/Heading";
 
 
 
-Get list of notification channels
+Get a list of notification channels
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
 
 <ParamsDetails
-  parameters={undefined}
+  parameters={[{"name":"page","in":"query","schema":{"type":"integer","default":1},"description":"Page number for pagination"},{"name":"size","in":"query","schema":{"type":"integer","default":10},"description":"Number of items per page"}]}
 >
   
 </ParamsDetails>
@@ -54,7 +66,7 @@ Get list of notification channels
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of notification channels","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"List of notification channels","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object","properties":{"list":{"type":"array","items":{"type":"object"}},"total":{"type":"integer","format":"int64"}}}},"title":"SuccessWithList"}}}}}}
 >
   
 </StatusCodes>

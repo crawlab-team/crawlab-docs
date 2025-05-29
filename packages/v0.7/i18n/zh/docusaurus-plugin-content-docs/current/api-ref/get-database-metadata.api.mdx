@@ -5,11 +5,15 @@ description: "Get metadata for a database"
 sidebar_label: "Get database metadata"
 hide_title: true
 hide_table_of_contents: true
-api: eJyFVE1v2zAM/SsCscMGKE3QDRjmW7psRQ/DhnU7BS5AW0yszpZUiW4bGP7vA20nTZt95OJYeiQf3yPdAeM2QbaGFTIWmAhyDYZSGW1g6x1kcEmsGmI0yKg2PipUZg/WEDBiQ0xRsnTgsCHIwBrQYCU6IFegIdJdayMZyDi2pCGVFTUIWQe8CxKROFq3HRIyU5TQm/Vi9gFnm+Xsc96dv+tfwUtqX7zb+tWF+lrcUslXRkUKkRI5JqMwKVQVPaKh0jZYq0MJtlxLzX0Y9C8TjzfqagV9LuRT8C5REr7ni4U8nuP36h2EAg2ld0yOBYwh1LZEAc9vk0R0pwr4oaYoEH2gyHasV3pDRyjrmLYUQcPGxwZ5PHp7Lj00lBJu6VRV6U9InRTr+yc1rtuypJSgl58k48obyGBLPNpSQQbzvfVp3lnTz4/6TRTv92PQxlrAGOyJZyvaYFuzWn67UmPIoHGiso2Wd0P4BWGkuGyl5Do/vr4W1UZhjkGHvirmANN4yXsxgIY+rdv4ATn1+zHiQ42FEDkhKeRk1CeMVuiUD+RmybexJGWsKFu0MmcPVKhScBQVmsY6FWpkcQc0iCJjysXZ+7OFOBF84gaHGZi2RTbM/GGCnnHqngbqPys5ScH0yPNQo3VSdXCkm2xcw8FG0JAN23qom2uofGJBdZ1gfsa67+X4rqUoBuUa7jFaLETHdQfGJvlvINtgnegfxF9/n74Db9TTiv2F8XSIbic6Yt3KG2j4RbvxC9PnvYaK0FAcaIwXy7KkwEchJ8sn83SY7stPP6DvfwPrm7Sd
+api: eJy9VU1v2zAM/SsCscMGOE3QFdjmW7t2RQ9Di3XDDkEGMBaTqJMlV6LbBob++0DZSdOPtdhlJ9vi1+PjE90B4zJCOYVjZJxjJJgVoClWwTRsvIMSTolVTYwaGdXCB4VKb5wLaDBgTUxBsnTgsCYowWgowEh0g7yCAgJdtyaQhpJDSwXEakU1QtkBrxuJiByMW+aEzBQk9Nd0MvqEo8Xh6Mus2z9Ib+AxtK/eLf3xkTqfX1HFZ1oFagJFckxaYVSoVnSHmipTo1XbEmzYSs1NGKTHiXuLOjuGNBPwsfEuUhS8+5OJPB76b9jbEgUFVN4xORZnbBprKhTn8VWUiG6HAbT2fJHZG7jwubpwEXxDgU1fufKadhgzjmlJAQpY+FAj90fv96WbmmLEJT3lVzoVeOXjYind83LZVhXF+NPwShqDVLwG7fmcBaDWRrpGe7HjLxJIKc1SkqoHk4MXCHWe1cK3Tv8Lo/+FRwrBh2csO0SeZJfU91kTr7yGEpbEvc5XUMJ4c5fiuDM6jXcEFCncbO5VGyyU0OUWKZXjcbfykVPZNT5wGmNjnlyOY1pga1kdXpypPhUUcIPB4Nz2RPTZ5I1cW8sWWDE3UORH7DdBzgFlb0kFSNl+XBuL9RXafJwKEDgPzB8nHycya2mnaoPhde7niDBQOGyFg+ls13yZQWV8u05bmgeIG+wwz06ZduMWPnsO9H8OeGtxLgw8YUdYkWU2+BQKnfINuVH0bahIaSPznLeySW5prirxo6BQ18apxiKLWoRRCrFPOdn7sDfpSYhcY9bksA9lh+pndsQDTN29wF9ZugMVTHc8biwaJ1WzRLpBV1PY6goKKPM+3tadbcY4ha4Tnx/BpiTH1y0FGdDsXil5XNpEeddQLtBGegH422/Dpn+n7pfoXxAPh+jWWZm2lS8o4Det+39ImoniCDWFDKM3HFYVNbwT8mQZiJ621+305Duk9AcUSlw+
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Get metadata for a database
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Database metadata","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Database metadata","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","additionalProperties":true}}}]}}}},"404":{"description":"Database not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
 >
   
 </StatusCodes>

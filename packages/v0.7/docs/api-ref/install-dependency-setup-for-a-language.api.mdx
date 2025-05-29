@@ -1,0 +1,75 @@
+---
+id: install-dependency-setup-for-a-language
+title: "Install dependency setup for a language"
+description: "Install a dependency setup for a specific language"
+sidebar_label: "Install dependency setup for a language"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVcFu2zAM/RWBpxXQ6mA7bPCtXXfoacW6nYocGJlJtNmSJtHrAkP/PlByFjfdBmy52KEo8pF8fJ6AcZegfYAbCuQ6csZSgrWGjpKJNrD1Dlq4dYmx7xWq7uh3UIl4DGrro0KVAhm7tUb16HYj7gg0BIw4EFOUBBM4HAhaWDhYCR2Q96Ah0rfRRuqg5TjSef676HcRh8G63a8M6kU48N47rZzvSCtic3kBGpLZ04DQTsCHIBkTR+t2kPO6pqHE1747iMd5VuMdk2M5whB6a1AANF+SoJieh/abL2QYcs5ZYqfgXaIkDq9WK3k8LePmvHm29pU6+O/cGkL0gSLbmtj4jhZe1jHtKIKGrY8DcjW9fgVZw0ApySR+0yoNbLkX0/1oDKVUaix3eO87mZtPJbmMr4WmW/CnMd5t7S4103FWuSn1pmYuWMZE8fuRGmPsoYWplEi5bZpp7xPndgo+cm4wWDhnxA1tcexZXd3dqhoKNHzHaHHT10bUaPJGbhyE43vmALo8Zo6XGNDWk6xB0taxHU96b7Av5qxB4Dw5frt6u8qFWInMGC0fSj3XhJHi1SiteVgvj+8LqIJv6fRrADPEI3bYFKcyECHCxxN93//AIciEpiybtPUlyjy0dxEfe9xId551TjomSzv7aIVO+UDuZfJjNKQ6KyzYjEydeqSNMuJHUWE3WKdCjyxMkm5TTDXk6vLN5ao2KPGAha/zuh+V4w+6sVCDJyin0zr8n/jM/WT6wU3o0TqBV3g2zZx9gCVn6wIKa0FDuwhUiVvUqlJ3faTJA0zTBhN9jn3OYv42UhQCrE9MLHTobJL3Dtot9ulc3Jalvvg4C9KF+hfJ+22xsxHdoWxGP8o/0PCVDksZzmvhPWFHsYCtx+8qpJefJMjp+jNhyvp448oYCvxX3/VCPu4+3H8CDZtZiIeiWhDxUb4F+Fih+tKisi3FNp1gt1Bjyu8n5eBZYA==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Install dependency setup for a language"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/dependencies/configs/{language}/setups/install"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Install a dependency setup for a specific language
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"language","in":"path","required":true,"description":"Programming language (python, node, etc.)","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Dependency setup installed","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

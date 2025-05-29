@@ -5,11 +5,15 @@ description: "Save content to a file in the Git repository"
 sidebar_label: "Save Git file"
 hide_title: true
 hide_table_of_contents: true
-api: eJylVE2P0zAQ/SvWiANILq0WJERuuyygPSAQC6cqSNN42hgS29iT7lZR/jsaJ912W0BC5JLEnq/35s30wLhJUCzhvWUoNRhKVbSBrXdQwC1uSVXeMTlW7BWqtW1IWae4JvXesooUfLLs4w40BIzYElOUiD04bAkKsAY0WAkXkGvQEOlnZyMZKDh2pCFVNbUIRQ+8C+KROFq3yQGZKYrrt+Vi9hpn68vZu7K/eDk8gdNaP3i38ddX6uPqO1V8Y6S0SIkck1GYFKqa7tFQZVts1EMKttxIzr0bDKeBxxt1cw1DORZPia+82UnFp1gmsuQKQ2hshRJl/j1JqP4cqs/BH5Gy3PO0j1VqCNEHimwpiW++P6NreJT95C4/kiUF79IY5mKxkNdjtO+kwQm3ZFTqqopSWndNs4P/gPa4+MobOrKyjmlDETSsfWyRx6MXFwKnpZRwQ7+FapB/k0ww7jt6O5YPE/SWuPZGVOgTj9qqoYD5xnKa99YMc9F2mgt20JAobvdC7mIjlhjsmequaY1dw+ry040aXbJKElVdtLzL7leEkeJlJ/mW5fH1rXA20nJs9ICqZg4wDYj8r7JRRim0fz5o8e09tqGhgzoOQ/TQtyP2rFv7nGfi6k3EuwZXAuMMokBb+6gmG63QKR/IzZLvYkXKWIm76mTO7milKrGjqNC01qnQIEtnQYPwOYZcPH/1fCF1SC9azPqZtkVeObJZpBuntfRHYP5xN02MMt3zPDRonaTPjd0ztgSRAmgo8sbKahDyRQ+lhlpkUyyh71eY6GtshkGOf3YUpc2lhi1Giyvhc9mDsUm+DRRrbBL9BcjTz9PoP1OHVfOHgqdDdAJpi00nf6DhB+3GTTuUg4aa0FDMZYwXb8Zksy/ifnA8G+NB7z0uq4oC/9W2PJqpTx9vv4CG1bQV2zzjEPFONhvejUX6DD6rPZ/10KDbdHnCYYwpzy+SQT54
+api: eJylVE2P3DYM/SsC0UMDeOLBpkBT33azTbCHIEE2OQ1cgGNzZpTIkiLRuzsw/N8LSvbOVxsgiC+2Renx8fGJAzBuI1QreKcZ6gJaik3QnrWzUME9PpBqnGWyrNgpVBttSGmreEfqnWYVyLuo2YU9FOAxYEdMQRAHsNgRVKBbKEALnEfeQQGBvvc6UAsVh54KiM2OOoRqAN57ORE5aLtNgMwU5Og/q+XiL1xsrhdv6+Hqj/E3OOf63tmtu71RH9ZfqeG7VqgFimSZWoVRodrRE7bU6A6Nek7Bmo3knI/BeA6cI+ruFsY6k6fIN67dC+PzWiaxJITeG92goJRfo0ANl6W6BH4iymrWacaqC/DBeQqsKcrZFL+QazzJfhZLj2SJ3tmYYa6WS3mdVvtWGhzxgVoV+6ahGDe9MXv4hdJOyTeupaNd2jJtKUABGxc65Lz06krK6ShG3NJ/lXNo3H1mCVOFHfHOtWI2FzlbaAcVlFvNsRx0O5Zi4VhKiVBApPAw+7UPBioYUiE0VmU57FzksRq8CzyW6PWF6W5pg71hdf3xTmUoKOABg8a1yeVmNPki23fS3R2zhyK9Yr5yCQOqHBkLkLS5M3PEuAZNWh4LEDon4dfL18txFHdGavqgeZ/quSEMFK57EWBVH4fvE6nE73jTs8wTxZk7rNOmJLu0+9PhDvz9hJ03dHDl4fI+++XIoNpuXMozNe9NwEeDa9HvQlvRdOOCmvYUCq1ynuwiuj40pFotuOte7vcjrVUj+ygobDttlTfI4ijpB4WYIZcv/3y5zBJG7jD5dppSadTJRBN7nHMZjor5yZk4Kcr0xKU3qK2kT06bFVuBeBMKqNKkTPYU8cWg9WyGFQzDGiN9CWYcZfl7T0HaXB/8lpre6ijfLVQbNJF+UMjvn6aR80IdRtz/EJ4W0e6Tv00vf1DAN9rnCT/W4lvClkKikQNvcrLFZzl+OHgxPsZiPnHdNOT5h3vro0v+8cP9ZyhgPU3jLs0WCPgoExUfM0mXik9uT2sDGLTbPk0WyJjy/As81WjI
 sidebar_class_name: "post api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Save content to a file in the Git repository
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"File saved successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"File saved successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
 >
   
 </StatusCodes>

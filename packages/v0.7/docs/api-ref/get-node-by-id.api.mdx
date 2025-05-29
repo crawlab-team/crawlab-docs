@@ -1,0 +1,71 @@
+---
+id: get-node-by-id
+title: "Get node by ID"
+description: "Get node by ID"
+sidebar_label: "Get node by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVlFv4zYM/isCsYcNcC5BN2A3v/XW7dCHuxt2O9xDkBWMxcS6ypIr0W0DQ/99oOymbuJhuz0tL0ZIih/5kSLVA+M+QrmG915ThE0BLQZsiCmIuAeHDUEJRkMBxkEJLXINBQS660wgDSWHjgqIVU0NQtkDH1o5ETkYtwdxyExBjv65Xi1+wsXucvHrpr/4IX0DBWiKVTAtGy8W77zb+6s36sP2C1V8rVWgNlAkx6QVRoWqpkfUVJkGrTpCsGErmE/HIJ06HjTq+grSRoKPrXeRosR7sVrJ56W90KE0MRoboYDKOybHYodta02FYrf8EsW4nySP1n7YZeJGGnwGFhqCbymwGUArr2lClnFMewpQwM6HBnkQfX8hiTQUI+7pnFpJEnnK+QiW0jMlH7uqohg/G66vxDgV/xTavM9Tqxuj/0fFvqXDXDQv8T45c9eRuqWD2vmguCblpAypGLt8hmDTzoobrGbltY/8t75eRDOHFW8ajExhot16bwndWS6fa+KaJAkTcxbKxJzR4OGYWGTkLs7CkcOtJT0DlgrAis09/ddAqi4EcmwPavRz9HiDPFeoY9drZFqwaWgOyE1QHjAqi5EnCCPqTeicy+Nr5nqd3PKu2VJQfqcY4+00bvFh3F75CeZQ+Mev8P8OH03TNcqd4HCNrCp0AnMGUQVCJv3vmUoFdK3+yjOTEfE+A6e0SfI7zeEt8cD49iDjU+YR115DCXvi4cbXUMJSbOKyNzpBAZHC/dMG6YKFEvo8IymVy2UvtySVfesDpyW25oy3K9phZ1ld/natBldQwD0GIx0bjxM39ye5rpEFVjO3UORP3mN68AHloBkv5zDpnzTWV2izOBUg4bxQv169Xgktkk7VBcOHnM8bwkDhspO015up+mMOKsc3NToWZAzxKXbYZqNcC+N2PluONfk54IPFrTBwxo6wIgNstCkUOuVbcovou1CR0kYqv+1kjD7QVlViR0GhboxTrUWWhhBGKcTB5erVj69WAwmRG8zzadz8Z/WfH2NMj7xsLZo8PnLN+7E31pB7AwoojZbSDIVYQ99vMdKnYFMS8V1HQSjePNc6E65NHCfVDm2kswiOyxm+/X18lXynnhd+MR/iKER3yL1lO/kH4yqR907aSM8QahnI635UXFYVtTw5cvYekI443pG3v/wBKf0FEFo3qg==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get node by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/nodes/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get node by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Node details","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"key":{"type":"string","description":"Unique key for the node"},"name":{"type":"string"},"ip":{"type":"string"},"mac":{"type":"string"},"hostname":{"type":"string"},"description":{"type":"string"},"is_master":{"type":"boolean","description":"Whether this node is the master node"},"status":{"type":"string"},"enabled":{"type":"boolean"},"active":{"type":"boolean","description":"Whether this node is currently active"},"active_at":{"type":"string","format":"date-time","description":"When this node was last active"},"current_runners":{"type":"integer","description":"Number of tasks currently running on this node"},"max_runners":{"type":"integer","description":"Maximum number of tasks that can run on this node"},"created_at":{"type":"string","format":"date-time"},"updated_at":{"type":"string","format":"date-time"}},"title":"Node"}}}]}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -5,11 +5,15 @@ description: "Delete a role by ID"
 sidebar_label: "Delete role"
 hide_title: true
 hide_table_of_contents: true
-api: eJx9VMFu2zAM/RWB2GEDnCboBgzzLV06oMCGFe12CjKAlphYnSypEt02MPzvA223zZp1vtii+MjHR9IdMO4ylGu4pNTYnG3wGTYFGMo62cg2eChhRY6YFKoUHKlqry5WUEDEhA0xJQnQgceGoARroAArqIhcQwGJblubyEDJqaUCsq6pQSg74H0UROZk/W4IyExJoL/Wi9knnG2Xsy+b7vRD/wZeUvoW/C6sztT36oY0XxiVKCbK5JmMwqxQ1fSAhrRt0KmnFGzZSc5HGPQvA483UmG/EfI5Bp8pC9/TxUJef/tfiSRmEMio3GpNOW9b5/ZQgA6eybOAMEZnNQpofpMF2R0rEYbcokQKkRLbMa8Ohg68rGfaUYICtiE1yKPp/anU0lDOuKNjdaVO5H8k6/tnVa5H+tDLI8G4DgZKGMsbO1RDCXOZgzzvrOmhgEzp7nEI2uTkHqM96tiKttg6VsvLCzVCBoUz6TZZ3g/wM8JEadlKlvXm8PpatBrlOHR6qqZmjjANl5yrwWmozvptGDynKj8nvHdYCZEjkkJuG5KafAqFXoVIfpZDmzQpY0XPqpVm31OltPhRUmga61V0yNITKEAUGUMuTj6eLET/GDI3OHR+2pVpr0TNl0y65+F5Zf2mwpkeeB4dWi85Bv27qU9rGPoEBZTWyFbXIbOYu67CTD+T63sx37aURP9NAXeYLFYi07oDY7N8Gyi36DL9h+Hbq2nJ36nn/XmF4mRELxtyh66VExTwm/bj76Pf9AXUhIbSQGO8WGpNkQ8gRxsl4/I0sqvzr+c/zqHv/wBzuKbK
+api: eJzNVE1PGzEQ/SvWqIdWWkhEkdruDRoqIbUqgvYUpdJkPUlMvfYy9gLRyv+9GnuBQATnnrKx5+O9N88zQMR1gHoOF8StCcF4F2BRgabQsOmi8Q5qmJGlSAoVe0tquVXnM6igQ8aWIrEUGMBhS1CD0VCBkawO4wYqYLrpDZOGOnJPFYRmQy1CPUDcdpIRIhu3zgVjJJbUP/PpwRc8WJ0cfFsMR8fpHbyE9MO7tZ+dqp/La2riuVZMHVMgF0krDArVhu5RU2NatOqxRTTRSs+HNEgvC5cbYZgWAj503gUKgvdoOpWf5/GXIonOAmkV+qahEFa9tVuooPEukouShF1nTYOSNLkOkjnsK+Fzb1GCfUccTenbeE07UcZFWhNDBSvPLcZy9PFIuLQUAq5pX92UnshfFZSQkpweT49fYeV8VCvfO/2fUamAmD2/TfIsh6TCsaW48RpqKIMqXttADRNxdJgMRieoIBDfPti5Zws1DJkYpXoyGTY+xFQPneeYJtiZPU/OaIW9jerk4lyVUlDBLbLBpS30SzX5Ite38u42MXZQ5Z/x4eUaUJebVIG0LQN6uLG+QZuPUwUC59n15+nnaUpi3kBNzyZuM59TQiY+6YX2fLF7fZVBZXy7QY/ijhAfsMMyB2WxjVv5HDmK/pXxzuJSFNhTR1RZeVZjTKXQKd+ROwi+54aUNjLFZS/v6I6WqpE4YoW6NU51FqN4RBQlDqXk9PDT4bSIEGKL2YnjGhpXloz3JZLhycyvbLaReKT7OOksGic9siGG0ThzyMaBCmqjZW5lSnMYhiUG+s02JTm+6YlF/8WTEfI0tAnyraFeoQ30BsL3l+P+/KCeVtMrEMdDdNtsPNvLP6jgL23LZk4LMRShJs4wysVJ01AXd1L2XrjY5fENzc6+n/06g5T+AZHYHrY=
 sidebar_class_name: "delete api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Delete a role by ID
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Role deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Role deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}},"404":{"description":"Role not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
 >
   
 </StatusCodes>

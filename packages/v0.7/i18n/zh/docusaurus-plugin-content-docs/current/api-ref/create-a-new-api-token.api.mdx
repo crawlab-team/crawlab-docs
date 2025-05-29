@@ -5,7 +5,7 @@ description: "Create a new API token"
 sidebar_label: "Create a new API token"
 hide_title: true
 hide_table_of_contents: true
-api: eJylVE1T3DAM/SsenQ3s0ENncgPaQ09luvS0k4PiaDeGxDa2zLKTyX/vyEkhFNpLfUki6+M9PSkjMB4SVDu4ytyRY2uQrXdQa4j0mCnxtW9PUI3l00ZqoeKYSYPxjsmxXGEI/RJ4cZ+8E1syHQ0ob3wKBBX45p4Mg14l2oHDgaRWiD5QZEtJIor1NTJxtO4AUzkSn4J3aXa93Gzk0VIy0YYCvYI7/0BOmUjI1KqUjaGU9rnvT/AfuN9iNL5dY7SO6UARNOx9HJBn06dLmDQMlBIePmKkoUX+oJjQZMu9mLYzfFjYv2V6UzgqVI6O6ur2m2KhDlKTO99CBcGnAh65gwouyn0CDYniE0WRfoQce7nDYOHPAl9oj7nnknsOgamWaJOj5VMJvyaMFGWAoNrV6+utNHPu19rphW7HHARLcYMKmuJU6IseP14n8OszDqGn1+lY9dC6vS9Jl47dRDz22Ajmd3yEx95HtfhohU75QO4s+RwNqdZK3ibL4BypUUb8KCpsB+tU6JFFX9AgzZtTbs4/n28Eh7R6QLfC+Fd53oB6aQfTM1+EHq2TdEWVcVFuB4tytYZOJK12MI4NJvoZ+2kS82OmKILUGp4wWmykGbt60tARthSLVg90ElzzDpzdSV1x77PUf7cPk/4dcWUMBf6nb72autvv2zvQ0Cz/jqEsC0Q8yv7jESoADb7wL9NRbCP06A65rArMOeX8ApyUl/E=
+api: eJzNVUtv00AQ/iurEccNiQoS4FtLQeKAimgRhyhUY3sSL6x3l90xaWT5v6NZO21KAogbvtie5zfvHhg3CYolnHfckGNTIRvvYKUh0veOEl/4egdFn39NpBoKjh1pqLxjciwsDMFOivOvyTuhpaqhFuWLd4GgAF9+pYpBHxhagsOWxFeIPlBkQ0k0MvVBM3E0bgNDfkQ/Be/SKHq2WMirplRFEzL0Am78N3KqioRMtUpdVVFK687aHfwDbrT2ag3F8jiCx2grXx+iNY5pQxE0rH1skUfSszMYNLSUEm5OxaahRj6RLgmYDVshXY+BfDbcXIrwoP8G7bTNX6VuTX2MSENAZoqSzy/LxewVztbns7er/uz58AT0Lxl/793GX16oq+zhXa0ihUiJnBQAk0LV0B3WVJkWrbp3sY9sryZ5+E3xNbBU9SRnqvQt8qk47stQI9OMTUui04X6n3X2fsrdf5SvfSD/EaiDns2jKKO7mqb3scvXOaMKlaOtOv/wTo1FlknhxtdQQPCJxzgaKGCe+Qk0JIo/KKY8n120UECfR5eGYj7vG594KPrgIw9zDOYo1ktaY2c5+xxNgYYfGA2WdpyK0Zp8ketaWVYNcwCdX0mWVj3agGLkDBrE7biO9hzrK7SZPGgQOI/YLxcvF5IbCafqouFdjueCMFKUjQzFcnXIvs6gMr5Dofu6TxD32KHMQrkisuA+Pqz0N3fYBksP6/Zgnoxb+2x0KuLriFuLpSTrKJGSwLWPapLRCp3ygdws+S5WpGojdstOemhLpapEjqLCujVOBYsssybJp5hGk4unL54uxnwlbtEdYPxtvzwCdZ8OpjueB4vG5UmRNumnVlrC1EqrfdmW0PclJvoU7TAI+XtHUQqyeuiMXA8NDWFNMdfqG+0E13hUZjfiV8RtJ/6PDoys7FHjvKoo8B9lVwdj8OHq+gY0lNMxbvPNgYhbOai4hQJAg8/x5+7ItB4suk2XLw6MNuX5CceGubc=
 sidebar_class_name: "post api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
@@ -62,7 +62,7 @@ Create a new API token
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Token created successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Token created successfully","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"name":{"type":"string"},"token":{"type":"string"},"created_at":{"type":"string","format":"date-time"},"updated_at":{"type":"string","format":"date-time"},"created_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"updated_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"}},"title":"Token"}}}]}}}}}}
 >
   
 </StatusCodes>

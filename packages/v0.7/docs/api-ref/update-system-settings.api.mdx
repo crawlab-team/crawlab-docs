@@ -5,11 +5,15 @@ description: "Update system settings"
 sidebar_label: "Update system settings"
 hide_title: true
 hide_table_of_contents: true
-api: eJylVLFy2zAM/RUeZib2pUPvtDlth07N1cnk0wBRsM2UIhkSTOLT6d97oNxUadIu9SBb4APw8B7oERgPGZodbE+ZaYBWQ6KHQpmvQ3+CZqyvNlEPDadCGkzwTJ7lCGN01iDb4Ff3OXiJZXOkAeUXnyJBA6G7J8OgAfveChTdTQqRElvKc9Fpmibpm2PwWYIjXK3X8tVTNslGSYMGtsRs/SGrEntk6lUuxlDO++LcCf6DWlwQGsGEnhYo65kOlEDDPqQBeQ59uIJJw0A542GJzpysP8hZj/xOM5mULTsJbWf6MM0CvB72rs6ocvVF5fPoID35GHpoIIZcySMfoYHVApIpPVISX0coyckpRgt/tvhMeyyO1ebmq5pTYGol25Rk+VTTrwkTpU2RHrt2ebwVOWfFlqCXgY/MUbhUGDTQVVAVQBz5/nvNvjzjEEWRcdJg/T7UKmeRPiV8ctgJyTcDCPF9SOqM0Qq9CpH8RQ4lGVK9FTu6IrvyRJ0ygqOksB+sV9Ehi6WgQdSaS64vP16uxT5Rd8C6OB7rAH915BWpl/mZnnkVHVov5aoN49msHbxktxqO4mOzg3HsMNNdctMk4YdCSTxoNTxistiJHLt20nAk7ClVe37QSTSaF//iVjoL3BVh8OYSTPpXxsYYivxPbLtYtZtv21vQ0J3/E4Z6QyDhE+j6bAA0hKpAXYgaG8GhP5R6P2CuKZ+fAiKLOg==
+api: eJyVVE1v2zAM/SsGz2oTdIcVvrXrDju1WFrsEORA20yiTpZUiWobGPrvA6W0TT+2Yj7YMklRj4+PmoBxE6FdwmIXmUZYKQh0lyjyuRt20E7lVwcaoOWQSEHvLJNlcaH3RvfI2tnZbXRWbLHf0oiy4p0naMF1t9QzKMBh0BKK5io4T4E1xZo055zl3OidjWKc4GQ+l89AsQ/ayzZoYUHM2m5ik/yATEMTU99TjOtkzA7+Axoac7mGdvkepD+ANkHvBjooRVumDQVQsHZhRK6mLyeQFYwUI24OoyMHbTfiG5A/YERqZs1GTItayC/N2wsJzuozaB/n/ITlVa5Uv6b1prDZxKKAJu5JBqmJt26AFryLBQHyFlqYHYRECvcUYuEyBQMtTIVmyu1sNm1d5NxO3gXOM/Qa3h59QWtMhpuzqx9NTQUK7jFo7Eyts2aTFdk0ilK3zB5U+UTR61BzQFs9WYEcW9Xz5DGuR1PMWYHAeeU+nZ/OhR0pp09B867Uc04YKJwlKXq5OnQvCqiC7zDouRt7iE/YoStBpeMixp8vE/b9EUcvEpiyAm3XrmTZq+JbwAeDnbDzjjlhbO1Cs49RDdrGebJH0aXQUzNo0V+XZEweqGt6iaPQ4DBq23iDLBoWtinEmnJ+/PV4XgmKPGKZGYulgL9K5BWo5/qZHnnmDWor6Youpr16lvC8e/XUqSVMU4eRboLJWcx3iYL0YPUihtICBVvCgUJpz2/aCUd15o+u5WQJN0kQvJt/mai646zvyfM/Y1cH2r+6XFyDgm5/HY7lSoCAD6DKuwVQ4AoDRRDFNoFBu0nlQoCaU54/31njvA==
 sidebar_class_name: "post api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
 
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
 import ParamsDetails from "@theme/ParamsDetails";
@@ -62,7 +66,7 @@ Update system settings
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Settings updated successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"Settings updated successfully","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","additionalProperties":true}}}]}}}}}}
 >
   
 </StatusCodes>
