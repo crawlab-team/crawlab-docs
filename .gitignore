@@ -2,3 +2,4 @@ node_modules/
 dist/
 .idea/
 packages/v0.7/.env
+packages/v0.6/docs/.vuepress/*.mjs

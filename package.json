@@ -8,10 +8,14 @@
   "scripts": {
     "dev": "pnpm -r run dev",
     "test": "pnpm -r run test",
-    "build": "pnpm run build:v06 && pnpm run build:v07 && pnpm run merge-outputs",
-    "build:v06": "cd packages/v0.6 && pnpm install && pnpm build",
-    "build:v07": "cd packages/v0.7 && pnpm install && pnpm build",
-    "merge-outputs": "node scripts/merge-outputs.js"
+    "build": "pnpm run build:packages && pnpm run merge-outputs",
+    "build:packages": "pnpm -r --filter='./packages/*' run build",
+    "build:parallel": "pnpm -r --parallel --filter='./packages/*' run build && pnpm run merge-outputs",
+    "build:v06": "pnpm --filter='./packages/v0.6' run build",
+    "build:v07": "pnpm --filter='./packages/v0.7' run build",
+    "merge-outputs": "node scripts/merge-outputs.js",
+    "clean": "pnpm -r run clean && rm -rf dist",
+    "install:all": "pnpm install"
   },
   "devDependencies": {
     "fs-extra": "^11.2.0",
