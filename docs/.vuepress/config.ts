@@ -28,7 +28,6 @@ export default defineUserConfig({
       "meta",
       {name: "default-lang", content: process.env.CRAWLAB_LANG || "zh"},
     ],
-    ["script", {src: "/assets/js/umeng.js"}],
     [
       "script",
       {

@@ -1,0 +1,102 @@
+import{_ as i,Z as o,$ as u,a0 as n,a1 as a,a2 as s,a3 as r,a4 as p,G as t}from"./framework-1b68163c.js";const k={},d=n("h1",{id:"kubernetes",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#kubernetes","aria-hidden":"true"},"#"),a(" Kubernetes")],-1),v={href:"https://kubernetes.io/",target:"_blank",rel:"noopener noreferrer"},m=n("h2",{id:"主要过程",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#主要过程","aria-hidden":"true"},"#"),a(" 主要过程")],-1),b={href:"https://kubernetes.io/",target:"_blank",rel:"noopener noreferrer"},y=n("li",null,[a("创建Kubernetes资源，包括"),n("code",null,"Deployment"),a("、"),n("code",null,"Service"),a("、"),n("code",null,"PersistentVolumeClaim"),a("等。")],-1),_=n("li",null,"启动Crawlab。",-1),h=n("div",{class:"hint-container warning"},[n("p",{class:"hint-container-title"},"注意"),n("p",null,"在按照下面的指南之前，我们假设你已经安装了Kubernetes并且已经创建了Kubernetes集群。")],-1),g=n("h2",{id:"多节点部署",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#多节点部署","aria-hidden":"true"},"#"),a(" 多节点部署")],-1),A=n("p",null,"Kubernetes设计用于大规模部署，很容易将Crawlab扩展到多个节点。在下面的图中，我们有一个主节点和三个工作节点。主节点连接到一个MongoDB实例。",-1),w=p(`<h3 id="主节点持久卷声明-pvc" tabindex="-1"><a class="header-anchor" href="#主节点持久卷声明-pvc" aria-hidden="true">#</a> 主节点持久卷声明（PVC）</h3><p>在Kubernetes中，你需要创建<code>PersistentVolume</code>和<code>PersistentVolumeClaim</code>来存储Crawlab节点数据。下面是主节点的一个示例。</p><div class="language-yaml line-numbers-mode" data-ext="yml"><pre class="language-yaml"><code><span class="token key atrule">kind</span><span class="token punctuation">:</span> PersistentVolumeClaim
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> crawlab<span class="token punctuation">-</span>master<span class="token punctuation">-</span>pvc
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> crawlab
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+    <span class="token key atrule">requests</span><span class="token punctuation">:</span>
+      <span class="token key atrule">storage</span><span class="token punctuation">:</span> 10Gi
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上述的<code>PersistentVolumeClaim</code>为主节点请求了10Gi的存储。通常你只需要为主节点创建<code>PersistentVolumeClaim</code>，因为工作节点可以随时扩展和缩减。</p><h3 id="主节点部署" tabindex="-1"><a class="header-anchor" href="#主节点部署" aria-hidden="true">#</a> 主节点部署</h3><p>下面是主节点的<code>Deployment</code>示例。这里我们假设你正在连接到一个外部的MongoDB实例。</p><div class="language-yaml line-numbers-mode" data-ext="yml"><pre class="language-yaml"><code><span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> crawlab<span class="token punctuation">-</span>master
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> crawlab
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">1</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">matchLabels</span><span class="token punctuation">:</span>
+      <span class="token key atrule">app</span><span class="token punctuation">:</span> crawlab<span class="token punctuation">-</span>master
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">app</span><span class="token punctuation">:</span> crawlab<span class="token punctuation">-</span>master
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> crawlab<span class="token punctuation">-</span>master<span class="token punctuation">-</span>storage
+          <span class="token key atrule">persistentVolumeClaim</span><span class="token punctuation">:</span>
+            <span class="token key atrule">claimName</span><span class="token punctuation">:</span> crawlab<span class="token punctuation">-</span>master<span class="token punctuation">-</span>pvc
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> master
+          <span class="token key atrule">image</span><span class="token punctuation">:</span> crawlabteam/crawlab<span class="token punctuation">:</span>latest
+          <span class="token key atrule">env</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> CRAWLAB_NODE_MASTER
+              <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">&#39;Y&#39;</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> CRAWLAB_MONGO_URI
+              <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">&#39;&lt;mongo_uri&gt;&#39;</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> CRAWLAB_MONGO_HOST
+              <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">&#39;&lt;mongo_host&gt;&#39;</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> CRAWLAB_MONGO_PORT
+              <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">&#39;&lt;mongo_port&gt;&#39;</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> CRAWLAB_MONGO_DB
+              <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">&#39;&lt;mongo_db&gt;&#39;</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> CRAWLAB_MONGO_USERNAME
+              <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">&#39;&lt;mongo_username&gt;&#39;</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> CRAWLAB_MONGO_PASSWORD
+              <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">&#39;&lt;mongo_password&gt;&#39;</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> CRAWLAB_MONGO_AUTHSOURCE
+              <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">&#39;&lt;mongo_auth_source&gt;&#39;</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> CRAWLAB_MONGO_AUTHMECHANISM
+              <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">&#39;&lt;mongo_auth_mechanism&gt;&#39;</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> CRAWLAB_MONGO_AUTHMECHANISMPROPERTIES
+              <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">&#39;&lt;mongo_auth_mechanism_properties&gt;&#39;</span>
+          <span class="token key atrule">volumeMounts</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> crawlab<span class="token punctuation">-</span>master<span class="token punctuation">-</span>storage
+              <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /root/.crawlab
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> crawlab<span class="token punctuation">-</span>master<span class="token punctuation">-</span>storage
+              <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /data
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> crawlab<span class="token punctuation">-</span>master<span class="token punctuation">-</span>storage
+              <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /var/log/crawlab
+          <span class="token key atrule">restartPolicy</span><span class="token punctuation">:</span> Always
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="主节点服务" tabindex="-1"><a class="header-anchor" href="#主节点服务" aria-hidden="true">#</a> 主节点服务</h3><p>主节点服务用于将API和GRPC端口暴露给内部和外部环境。这对于工作节点连接到主节点至关重要。同时，对于Crawlab Web UI连接到主节点也是必要的，这样你就可以从浏览器访问Crawlab Web UI了。</p><p>下面是主节点的<code>Service</code>示例。</p><div class="language-yaml line-numbers-mode" data-ext="yml"><pre class="language-yaml"><code><span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> crawlab<span class="token punctuation">-</span>master<span class="token punctuation">-</span>service
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> crawlab
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> api
+      <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8080</span>
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> <span class="token number">8080</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> grpc
+      <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">9666</span>
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> <span class="token number">9666</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> crawlab<span class="token punctuation">-</span>master
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,11),C={class:"hint-container tip"},R=n("p",{class:"hint-container-title"},"提示",-1),L={href:"https://kubernetes.io/docs/concepts/services-networking/service/",target:"_blank",rel:"noopener noreferrer"},B=p(`<p>创建好 <code>Service</code> 之后，你可以通过浏览器访问 <code>http://&lt;service_ip&gt;:8080</code> 来访问Crawlab Web UI。</p><h3 id="工作节点部署" tabindex="-1"><a class="header-anchor" href="#工作节点部署" aria-hidden="true">#</a> 工作节点部署</h3><p>工作节点的<code>Deployment</code>示例与主节点类似。唯一的区别是你需要将<code>CRAWLAB_NODE_MASTER</code>设置为<code>N</code>，并将<code>CRAWLAB_GRPC_ADDRESS</code> 设置为主节点服务地址，即<code>crawlab-master-service:9666</code>。</p><p>下面是工作节点的Deployment示例。</p><div class="language-yaml line-numbers-mode" data-ext="yml"><pre class="language-yaml"><code><span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> crawlab<span class="token punctuation">-</span>worker
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> crawlab
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">3</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">matchLabels</span><span class="token punctuation">:</span>
+      <span class="token key atrule">app</span><span class="token punctuation">:</span> crawlab<span class="token punctuation">-</span>worker
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">app</span><span class="token punctuation">:</span> crawlab<span class="token punctuation">-</span>worker
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> worker
+          <span class="token key atrule">image</span><span class="token punctuation">:</span> crawlabteam/crawlab<span class="token punctuation">:</span>latest
+          <span class="token key atrule">env</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> CRAWLAB_NODE_MASTER
+              <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">&#39;N&#39;</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> CRAWLAB_GRPC_ADDRESS
+              <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">&#39;crawlab-master-service:9666&#39;</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> CRAWLAB_FS_FILER_URL
+              <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token string">&#39;http://crawlab-master-service:8080/api/filer&#39;</span>
+      <span class="token key atrule">restartPolicy</span><span class="token punctuation">:</span> Always
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在上述示例中，我们将创建3个工作节点。你可以通过更改 <code>replicas</code> 字段来扩展或缩减工作节点。</p>`,6);function O(S,P){const e=t("ExternalLinkIcon"),l=t("RouterLink"),c=t("Mermaid");return o(),u("div",null,[d,n("p",null,[n("a",v,[a("Kubernetes"),s(e)]),a(" 是一个开源的容器编排平台，它自动化了容器化应用程序的部署、扩展和管理。它在业界被广泛使用，并拥有庞大的社区。如果你打算部署大规模的Crawlab集群，Kubernetes是一个不错的选择。")]),m,n("p",null,[a("如果你熟悉Crawlab的"),s(l,{to:"/zh/guide/installation/docker.html"},{default:r(()=>[a("Docker安装")]),_:1}),a("，你会发现Kubernetes安装的主要过程类似。唯一的区别是你需要创建Kubernetes资源，而不是Docker容器。")]),n("ol",null,[n("li",null,[a("安装"),n("a",b,[a("Kubernetes"),s(e)]),a("。")]),y,_]),h,g,A,s(c,{id:"mermaid-40",code:"eJxLy8kvT85ILCpR8AniUlAoLk1KL0osyFB4umTWi66m5007XzaveL53E1BKQSElsyg1uSQzP08hxAkskBv9ZMduiLJYBRtdXTuFcsPop9uXPtk7ByJqGAtRB5U0QpE0QpU0RpE0hkqmR/vm56XnuzhBLcgFCqfmpYCcWlKZkwrUnZaZk2OlbJJkYZxkpJOcn5NfZFWekVmSCldSbghVk2qWaGScjF2NERFqjAmryU2HqjEzTzYyTkRRAwCqNYYC"}),w,n("div",C,[R,n("p",null,[a("通常一个Service有一个ClusterIP类型，这意味着它只能在Kubernetes集群内部访问。如果你想将主节点暴露给外部环境，你可以使用NodePort或LoadBalancer类型。更多信息，请参考"),n("a",L,[a("Kubernetes Service"),s(e)]),a("。")])]),B])}const E=i(k,[["render",O],["__file","kubernetes.html.vue"]]);export{E as default};

@@ -1,0 +1,1 @@
+import{_ as t,Z as n,$ as o,a2 as c,G as r}from"./framework-1b68163c.js";const _={};function a(s,d){const e=r("Redirect");return n(),o("div",null,[c(e,{path:"/en/develop/introduction"})])}const l=t(_,[["render",a],["__file","index.html.vue"]]);export{l as default};
