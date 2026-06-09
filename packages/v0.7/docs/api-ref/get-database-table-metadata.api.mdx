@@ -1,0 +1,75 @@
+---
+id: get-database-table-metadata
+title: "Get Database Table Metadata"
+description: "Get the metadata of a table of a database"
+sidebar_label: "Get Database Table Metadata"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVttu20gM/RWBT+1CqLPdFgvoLdsGgVHstsjlqTAMWkNb045mFA6Vxmvo3xczkhKlHjvJ9inO8JA8vIjkDgQ3Hoqv8BEFV+jJwyIHRb5k3Yh2Fgo4J8mkoqwmQYWCmVtnmAmuDPU/1aALObiGGIPeXEEBG5LlKFxGheVoBHJokLEmIQ4EdmCxJihAK8hBB78NSgU/k5l/DD4DnYlXpptWMykohFvKwZcV1QjFDmTbBKNeWNvN84ytHdcoUIBbfaNStIKuy+/pTYCR5E1LvN0z/A/WlDD9XF5J9SmLmMvnUxjh/zdP+7a6bhHM+cbZ0DPFDt6enIQ/jxU/f4IcSmeFrAQpNo3RZWyQ2TcfILt9En3eQ4NwaCfRvYPYNU+iSmfa2voJEJkxpEcL1f5pA9iKW2pbMtUD6QG/cs4QWuhyKCttFJM97AVKzWVrkF+dWdGyHT+vD5He62BE0RpbI/vZ73KgO+FEXbocKvRVUvCdtsn3vmNSAidL2xqTDtGx3miLZnlQv2FdI2/T6l5QWp/U6x/2BEGixYSnVMoiQFtFd/QLxf3l7jiYDceKeCLRVmhDPJ0n2sofb48EOg/RTaI9WOojJJ4q2svrkkNr9U1LqTofDyXKDzDpfh4x141CITWsFUVrbXUUHXJx1c+hHIjZcZJ4Td7j5oWJmMT0wVlhZwyxvxhG3W/nWqp2laTSBd13qTH4F6rsgm5a8gIR8/s+5tpiK5Vj/S+pAHqfMjS3QmzRZJfEt8TZWYy9i7FK5YadG3erVFDAbNwefrbTqpvF7PrZZAl7KlvWsr0MU3iYgI2+ct8fT7dGf6LtuHAqQhVbe9hGp1/mWa/Rf6RrF1XHLDL+MLjKTr/M9xbLxdnlVRBka8fZAIQcbol9Dzh58+ebkzhtnJca7cM3GM+SsQJZLEH290Ncj/zsHnbQi66ZIXqhO5k1BnUcbS3Hkdln+Ov9QeAhhyIeL32SIdakp7PIoXJeAny3C+BrNl0XnvvdHc4fpX3QU1Cs0Xg6EsGB4yJJNm6F6dFyiyZ8ywDhmni+z1cXw+nwOksdFkd8j5AHx4vwD+v4/rLIJyySp1uSxtjCdjtlMdIL590iDNu+pwOfXnBaltTIRGXvdgmB3H9252dX0HX/ATiD3bg=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Database Table Metadata"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/{id}/tables/metadata"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the metadata of a table of a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the database","required":true,"schema":{"type":"string","description":"ID of the database","format":"objectid"}},{"name":"database","in":"query","description":"Name of the database","schema":{"type":"string","description":"Name of the database"}},{"name":"table","in":"query","description":"Name of the table","required":true,"schema":{"type":"string","description":"Name of the table"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"columns":{"type":"array","items":{"type":"object","properties":{"auto_increment":{"type":"boolean"},"children":{"type":"array","items":"circular(EntityDatabaseColumn)"},"default":{"type":"string"},"extra":{"type":"string"},"hash":{"type":"string"},"key":{"type":"string"},"name":{"type":"string"},"not_null":{"type":"boolean"},"original_name":{"type":"string"},"primary":{"type":"boolean"},"status":{"type":"string"},"type":{"type":"string"}},"title":"EntityDatabaseColumn"}},"indexes":{"type":"array","items":{"type":"object","properties":{"columns":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string"},"order":{"type":"integer","format":"int32"}},"title":"EntityDatabaseIndexColumn"}},"hash":{"type":"string"},"name":{"type":"string"},"original_name":{"type":"string"},"status":{"type":"string"},"type":{"type":"string"},"unique":{"type":"boolean"}},"title":"EntityDatabaseIndex"}},"name":{"type":"string"}},"description":"Updated table definition","title":"EntityDatabaseTable"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponse*GithubEntityDatabaseTable"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

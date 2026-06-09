@@ -1,0 +1,71 @@
+---
+id: disable-schedule
+title: "Disable Schedule"
+description: "Disable a schedule"
+sidebar_label: "Disable Schedule"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFU01v2zAM/SsGTxsgNNmwYYBv3dpD0EODpN0lCAbGYhK1sqRScrbM0H8f6I9+LMF2Miw+PvI9ki0k3EUoV7Cs9qQbSxHWCjTFik1Ixjso4cpE3FgqsIgDCBT4QIwCmGkoQfeQH68AARlrSsRC34LDmqAEo0GBEdaAaQ9/lxq7KGZXoIDpqTFMGsrEDSkQ9hqhbCEdg7DFxMbt/sOy9VxjghL85oGqZDTkvBbyGLyLFIXv43Qqn7c0tzegoPIukUsSxRCsqTrRk4cokPa0pb6I6GexKJm+ADF7Pu08K6gpRtzR2VhMmJp4JpQVJJOsPH3zLrG3ljh+90YvBlmQs6A+nRP2FXWxoKeGYoIO8+EUc++wSXvP5jdpAX0+RzRzidihLZbEB+LiulOZO1Vp72Uzgo+dGzLtEibjgsRJa3SeDHsDCiJVDZt0lNnVvWcYzJ1/JPdKPwZzQ8dxhfaEmhjUuFyX81nRZ0gLxm19lzoaxfjT4qa4nM9ONmZxvbyTQLH1XAxAUHAgjj1gevHlYio+iJ4au56GquN5LF92/w15+7JD509p0JboV5oEi8ZJnYatpPa+reDZN1BQdkc0WrdWsBePyxW07QYj3bPNWZ6fGuIjlKu1ggOy6dByikOmhnKLNtI/2n23GC7wffH2ps62PM7IyYAOaBv5AwWPdOwvP6+zGocmjfSBy6qikF6lnNyZnOvzQs1vl3eQ8x/Ee5lK
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Disable Schedule"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/schedules/{id}/disable"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Disable a schedule
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Schedule ID","required":true,"schema":{"type":"string","description":"Schedule ID","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

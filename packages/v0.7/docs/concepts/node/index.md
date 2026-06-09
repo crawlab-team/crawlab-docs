@@ -80,6 +80,16 @@ flowchart LR
 3. Worker Nodes report task status and results back to the Master Node
 4. The Master Node aggregates and stores results
 
+Worker Nodes connect to the Master Node over **gRPC** (default port **9666**), register themselves with the Master
+Node on startup, and are continuously health-monitored through a **HEARTBEAT** mechanism. Spider files are also synced
+from the Master Node to Worker Nodes over this gRPC connection.
+
+:::warning
+v0.7 uses gRPC for all node-to-node communication, which is a **breaking change** from v0.6.x. v0.7 and v0.6.x nodes
+**cannot** interoperate in the same cluster. If you are upgrading from v0.6.x, follow the
+[Migration Guide](../../getting-started/migration.md).
+:::
+
 ## Node Management
 
 ### Viewing Node Status
@@ -131,9 +141,13 @@ Actual requirements will vary based on your specific workload and the complexity
 To expand your Crawlab cluster by adding Worker Nodes:
 
 1. Install Crawlab on the new server
-2. Configure it to connect to the same database as your Master Node
-3. Set the node type to "Worker" in the configuration
-4. Start the Crawlab service
+2. Set the node type to "Worker" in the configuration (`CRAWLAB_NODE_MASTER: "N"`)
+3. Point it at the Master Node by setting `CRAWLAB_MASTER_HOST` to the Master Node's address, so it can connect over
+   gRPC (default port `9666`)
+4. Start the Crawlab service — the Worker Node will register with the Master Node and begin sending heartbeats
+
+Worker Nodes no longer need direct access to the Master Node's database; they communicate with the Master Node
+exclusively over gRPC.
 
 For detailed instructions, refer to [Set up Worker Nodes](../../getting-started/installation.md#set-up-worker-nodes) in
 the Multi-Node Deployment section.
@@ -144,8 +158,8 @@ the Multi-Node Deployment section.
 
 1. **Node shows as offline**
     - Check if the Crawlab service is running
-    - Verify network connectivity between nodes
-    - Ensure database connection is working properly
+    - Verify the Worker Node can reach the Master Node's gRPC port (default `9666`)
+    - Confirm heartbeats are being received (a node is marked offline after repeated missed heartbeats)
 
 2. **Node not receiving tasks**
     - Check if the node is enabled
@@ -153,9 +167,10 @@ the Multi-Node Deployment section.
     - Check log files for potential errors
 
 3. **Communication issues between nodes**
-    - Verify firewall settings allow necessary communication
-    - Check that all nodes are connected to the same database
-    - Ensure consistent Crawlab versions across all nodes
+    - Verify firewall settings allow gRPC traffic on the Master Node's port (default `9666`)
+    - Confirm `CRAWLAB_MASTER_HOST` on each Worker Node points to the correct Master Node address
+    - Ensure consistent Crawlab versions across all nodes — v0.7 nodes cannot communicate with v0.6.x nodes (see the
+      [Migration Guide](../../getting-started/migration.md))
 
 ## Best Practices
 

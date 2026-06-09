@@ -1,0 +1,75 @@
+---
+id: install-dependency-spider
+title: "Install Dependency Spider"
+description: "Install a dependency spider"
+sidebar_label: "Install Dependency Spider"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVMFu2zAM/RWDpw0QmmzYMMC3bu0h6KFF0u4SBANjMbVaR1IpOVtm6N8HWnaTIsG2k23xiY98fHQHER8DlEu4Ik9Wk60MBVgp0BQqNj4aZ6GEmQ0Rm6bAQo+4fRG80cSgwHliFORMQwkmY38ckD9ekR4ZtxSJhbMDi1uSGxoUGOHxGGs4Ib8q3KaINR0YmV5aw6ShjNySglDVtEUoO4h7LylDZGMf/yfVxvEWI5Tg1k9URaMhpZUwBO9soCBJP06n8nib6/YGFFTORrJRouh9Y6peh8lTEEh3WlcmESVYVIsmExCz49Pyk4IthYCPdDYWIsY2nAklBdHERo6+ORvZNQ1x+O6Mng9tQUqC+nSusa+oizm9tBQi9JgPp5gHi22sHZvfpAX0+VyimY3EFptiQbwjLq77LlPfVaydmMW70Kshcy9hoo9cOMkjCpPO6DQZXAUKAlUtm7hfiLZZPvTm3j2TPZICvbmh/eirmjBPe3Dc5d2syDekGmM3rr86asb4s8F1cXk3O3HQ/HpxL4Fi47gYgKBgRxwyYHrx5WIqkkhrW+xrGljHLbo67NBitOEblu7gq3+s3tBtpF9x4hs0VphbbiRHFnUJx6KKfllWUFAOi5eVXSmoZRrlErpujYEeuElJjl9a4j2Uy5WCHbLBtai07ECbIO8ayg02gf7SxLv5sLDvizMreLaJcY5WhrjDppUvUPBM+/zLSKukxsFKNTlwWVXk49GVk7WU7X71393t4h5S+gOXDrc3
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Install Dependency Spider"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/dependencies/spiders/{id}/install"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Install a dependency spider
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the spider","required":true,"schema":{"type":"string","description":"ID of the spider","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

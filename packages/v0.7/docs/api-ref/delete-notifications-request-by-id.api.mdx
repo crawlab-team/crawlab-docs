@@ -1,0 +1,75 @@
+---
+id: delete-notifications-request-by-id
+title: "Delete Notifications Request by ID"
+description: "Delete an item by ID"
+sidebar_label: "Delete Notifications Request by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzlWNtu4zYQ/RVinlpA3aTpFgX8lk2ChbubbBA76EMQCJQ0triRRC05Suoa+vdiSFpWYsdWGvQS9ClweM4hNcO5cJZAcm5hdAMXmtRMpZKUrsQVfmvQkoXbCDK0qVE1/x9GcIoFEgpZCUVYimQhxqcQga7ROOo4gxFkDhRXPUkbG68ZJ4tYZRBBLY0skdDw9kuoZIkwArekeKdaUg5Pt5/mKManQs8E5eiPQFr4/SAC3kMZzGBEpsEIbJpjKWG0BFrULG/JqGr+UtmZNqUkGIFOvmJKKoO2veXdbK0ri5Y3ODo85D+Pdb98gghSXRFWxKuyrotgkIOvliHLzTP6TdhChs1Kym+QSRqAYtvu/Vznsi0fFUGay6rC4u/fx6AkzGJJ+1VOPFaQKtGSLOu+aCYJf+CVvmqyGK6aLJ474yP8PrnT3q82grnW8wJjLRvKj+KVq3dLfHQc8eWYOeLXyZcLVvJxsY97Ib0FaqPvVYZmP+NyhWwjsCXVcS2tfdBmgFsn59NL0cE7vjZ9Z6qKcI7mGTJje2ZXFf101ClZNPdDPsFJBfCK21g0w0zm2B28jYCwwLmRZZxoiknf4QCfTQNHJJqE5/SV0lzSoEjpdJjBKZVVHGMvk1cjwKopOY2rEiIopSrgto2gqbPBYXbtsQPCbKU6JMxWqs+H2QMmudZ3cWOK/XK/ebC4vvoM7dMYdWmc0yQnb39IiIAUFax4rjMsbL/MnYRkt857g3wVaGJHdltn/D1SAfhGMiIaowfE5ZmDtf4exkma9ijSGMn6XGPtptSGS8+lKsSHk5NO7vVqPTHSrxUj7VIPVhmaGF3g7c88Di08es0emLY8eZW0LBIx7B9qDGKV2eEmG1JYe+Fk30ocvKYzwEomBfZ9kWhdoKw2wygg/0+B9LJu598LO5L2Liaj5vMhjcpU2juxQrv+oKwLrk4D+oKA7LHiUpq7TD8Mak88RXSURzo6e8ERhIP3+UaleUz4+4BI7USYIxxnq9LAVnlTruuXO03KcYhjOymPb7uGYS/RwRg/+Bqsb8BbaMwai3HaWNJl/EygPZe5ri0KzxT2UdC9tmObhGq3LnyDylqg7ejYLElqtlawJ0oe5+6ZpQGmmDLsL1yq//4Fea0vw4xpR1/JxQWtlfMthtvhs3ZtbtdgG10UaOxVmNZ8VJQ3yY7ztCzwfts454PMRO/Y7w9/3MRcV/zm10b94Uv3z9uExhXxu7MQE/d6FaFjdh9MuV7P0NycjHIYwcGjadpBmKbZg6XKWuBwSBujaDHhaZLv+GStpk9esbJWn3CxmrDlKDP3Qg+zt+PLsfAMPomqZr6or0xp5EMhE3F8Od64K1dnkykviJk2IgAhgns01gMO3/3y7tANKLSlUrozhV3DRLHvCruycjdffNJxdQ+s5+aR4Xu5MhzUhVSu8IUXpjfoDTwyaBgeuqFnBCOV8egz1xzjN7BcJtLitSnalv/9rUGzgNHNbQT30iju0twIM1M29HYzWVjccervrsKg8nuxZ/S49UNW3qzYlfeyaPgXRHCHCz9CbfnxH9zLJ/MLx2mKNfUoG+NInmp2N/D07PPZ9Aza9k+2g6ai
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Notifications Request by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/notifications/requests/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete an item by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to delete","required":true,"schema":{"type":"string","description":"The ID of the item to delete","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"channel":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"google_oauth2_json":{"type":"string","description":"Google OAuth2 JSON"},"name":{"type":"string","description":"Name"},"provider":{"type":"string","description":"Provider"},"smtp_password":{"type":"string","description":"SMTP password"},"smtp_port":{"type":"integer","description":"SMTP port","format":"int32"},"smtp_server":{"type":"string","description":"SMTP server"},"smtp_username":{"type":"string","description":"SMTP username"},"telegram_bot_token":{"type":"string","description":"Telegram bot token"},"telegram_chat_id":{"type":"string","description":"Telegram chat ID"},"type":{"type":"string","description":"Type","enum":["im","mail"]},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"webhook_url":{"type":"string","description":"Webhook URL"}},"description":"The data to update","title":"ModelsNotificationChannel"},"channel_id":{"type":"string","description":"Channel ID","format":"objectid"},"content":{"type":"string","description":"Content"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"error":{"type":"string","description":"Error"},"mail_bcc":{"type":"array","items":{"type":"string"},"description":"Mail BCC"},"mail_cc":{"type":"array","items":{"type":"string"},"description":"Mail CC"},"mail_to":{"type":"array","items":{"type":"string"},"description":"Mail to"},"sender_email":{"type":"string","description":"Sender email"},"sender_name":{"type":"string","description":"Sender name"},"setting":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"channel_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Channel IDs"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"mail_bcc":{"type":"array","items":{"type":"string"},"description":"Mail BCC"},"mail_cc":{"type":"array","items":{"type":"string"},"description":"Mail CC"},"mail_to":{"type":"array","items":{"type":"string"},"description":"Mail to"},"name":{"type":"string","description":"Name"},"sender_email":{"type":"string","description":"Sender email"},"sender_name":{"type":"string","description":"Sender name"},"task_trigger":{"type":"string","description":"Task trigger"},"template":{"type":"string","description":"Template"},"template_markdown":{"type":"string","description":"Template markdown"},"template_mode":{"type":"string","description":"Template mode"},"template_rich_text":{"type":"string","description":"Template rich text"},"template_rich_text_json":{"type":"string","description":"Template rich text JSON"},"template_theme":{"type":"string","description":"Template theme"},"title":{"type":"string","description":"Title"},"trigger":{"type":"string","description":"Trigger"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"use_custom_sender_email":{"type":"boolean","description":"Use custom sender email"}},"description":"The data to update","title":"ModelsNotificationSetting"},"setting_id":{"type":"string","description":"Setting ID","format":"objectid"},"status":{"type":"string","description":"Status"},"test":{"type":"boolean","description":"Test"},"title":{"type":"string","description":"Title"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsNotificationRequest"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsNotificationRequest"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

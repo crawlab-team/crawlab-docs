@@ -1,0 +1,71 @@
+---
+id: batch-update-project-list
+title: "Batch Update Project List"
+description: "Batch update multiple items with partial fields"
+sidebar_label: "Batch Update Project List"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVdtu4zgM/RWBz55pd7GLBfzWG3aC2UvQpk9BENAWU2tGtjQS3U428L8vaNmtJ/Vsg8XkJbJEHlJHPOQBGB8i5GtYBveJSo6wyUBTLIPxbFwDOVwil5VqvUYmVbeWjbekDFMd1ZPhSnkMbNCqnSGrI2TgPAUU74WGHArx3yb/rU9httZEhgwCfWkp8qXTe8gPULqGqWFZovfWlD3K2acoiRwglhXVKCvee4IcXCFgkIEPEpMNRTk1Ok6MMATcQwZ9xpP9yME0D9Ad33dVkVpcR+V2iqvxouwGBsR+WM3kgVobgUG7nGY0G2NgdPDtusSGCaTlPUzP5BBpkwEbtjS+xhybi8a3ApOAondNTGz8fH4uf98m8PdHyH4U3Rr5BKut0a/JP+ZlcQ0Z7FyokZ+RjBbOy0DIpLfIb6NcJVvFpqbIWPspqBD3Tk6mqMX+dNRi/70cv7F/C+568tVl0GBNbzv9hfWkAk9j4z7ZnsDGiHoKGyPq99iYLXmplImUXqr6T6fJxqEHSSoUgguzYq0pRnyY4arLIDJyO6fx7iXUlWs4OGspxNtBJr8brtriKIdeSL/MaecStbpNjQt6m59e29w32HLlgvmH+tL4dQ5o0TCFBq26o/BIQd30l+76S3LlpHl6kbtoCbmCHM782KYziFS2wfD+TmSaNIberNxnmlYfevOR+vYnEStCTQHGcoOL5UIlD4kqwr996cg3X7H2lp476nqkczNpgeJnmp3rQ44UB3yyWKiL5eJV3dze3K3kQO1cUIMhZPBIISaD8/e/vT8XyryLXGN/lyHbNIlS5anhodQfaZIcae+5tf2P8TUwx/SVz7xF0+uzDVZw0zuswU/GZeUiy97hUGCk+2C7Tra/tBT2kK83GTxiMFgIN+tNl42vkK8P8Jn2Q01Sw+9WElnMbZve7qgpd9nocVGW5Pk/bTeTMlperK4+QAbFMGhrp8Up4JMMYXyCHPq5Le59JfV7B7DYPLS92iCByu9fod7WlQ==
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Batch Update Project List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/projects"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Batch update multiple items with partial fields
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"type":"array","items":{"type":"string"},"description":"The IDs of the items to update"},"update":{"type":"object","additionalProperties":{},"description":"The update object"}},"required":["ids","update"],"title":"Batch_update_project_listInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"name":{"type":"string","description":"Name"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsProject"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsProject"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

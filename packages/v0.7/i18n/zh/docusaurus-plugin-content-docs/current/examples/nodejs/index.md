@@ -48,7 +48,7 @@ job_board_scraper/
   "dependencies": {
     "axios": "^1.3.4",
     "cheerio": "^1.0.0-rc.12",
-    "crawlab-sdk": "^0.6.0"
+    "@crawlab/sdk": "^0.7.0"
   }
 }
 ```
@@ -58,7 +58,7 @@ job_board_scraper/
 ```javascript
 const axios = require('axios');
 const cheerio = require('cheerio');
-const { saveItem } = require('crawlab-sdk');
+const { saveItem } = require('@crawlab/sdk');
 
 // 配置
 const baseUrl = 'https://example-jobs.com';
@@ -172,7 +172,7 @@ scrapeJobListings().then(() => {
 
 1. 导入 Crawlab SDK：
    ```javascript
-   const { saveItem } = require('crawlab-sdk');
+   const { saveItem } = require('@crawlab/sdk');
    ```
 
 2. 将数据保存到 Crawlab：
@@ -251,7 +251,7 @@ scrapeJobListings().then(() => {
 // "puppeteer": "^19.7.2"
 
 const puppeteer = require('puppeteer');
-const { saveItem } = require('crawlab-sdk');
+const { saveItem } = require('@crawlab/sdk');
 
 async function scrapeDynamicWebsite() {
   // 启动无头浏览器

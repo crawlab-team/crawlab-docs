@@ -1,0 +1,75 @@
+---
+id: replace-git-by-id
+title: "Replace Git by ID"
+description: "Replace an item by ID with (full update)"
+sidebar_label: "Replace Git by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWEtv2zgQ/ivCnFpASZygQXZ1S9MgMLqPwHH2sIYhUNLYYkOJKjlK6hr674sRpUq25di5LuKTTc6bM99ncg0klhaCGdxJgrkPCdrYyIKkziGACRZKxOiJ3JOEmRetvPEX70VS6n1YlEp5ZZEIwo/ggy7QCFYbJxCAcYrhUlIYrUKZgA+FMCJDQsP+1pCLDCGAekuys0JQCtsRTFNkl3rhUYouCNKNW/DB4PdSGkwgIFOiDzZOMRMQrIFWBZu3ZGS+fKvZhTaZIAhAR98wJplAVc2dN7T0WScrdhHrnDAn/iqKQsm4zv/sm2UX691YnDGuhOFqkUTLu4mgI6S4hgfTGn8ZDt4HUVIaOuVDRq5LSr1axOnpsCiV6ulFWisU+ZCi9mrZyodY6RxDpZe2pymMESs+b8LM7kZSbVu8YSNebYRNGhSESSjocBI3TtYjmaElkRX9wvApn/BO32q0Ot5qtNpX57g0BnMKIyPyOD3CopP3GvnKBzRGm8OKt7VY5TdzdEj8L+GyLYS1L9oc0Uv3rWTFjb845hj3tC4jRTgcZuVDKuxAnfYmVkeTacKQjIifBgW6Qx/IcrgLhkejqo2R4qV/YnsnaYKL3TadcHmaMoUORI7rUlZsUCfxBO2NzpKgcmBgtu09OLnKh7dE8dgEcHhWWqvHzEprdf+slEYdYWbyRy1r0RzX6Y+tZLVzToz6jLYbWN+e7586QcVHXCt2xDJzAD3vJCfb5DbOi5LVnKItdG5d51+MRjXCb0Tx91fw37njnTveueOdO9654//GHXuHsPIhQ2vFcrgx9x1Tv41udE5GK4XGThqauZOUllGfu1jh0xDvfBaJN3E3GKhlzndlHnMGe23kT6zLfDlkaJwTl0l5D2ie0XgNnNQJUqr5/sd86LsbXQBnS0n2bC2TCnywGJdG0uqBGc7NuCjkVD9h3keJQn7FVXszTFEkaKAda7i+H3tOg50yZ066m9ntD5EVCvvsWPNfd+Y9PttYbMnKXSX7JDRr5eabTAIXo4tPJ6Ork4vfp+eXweV5cPHb6ejq/F/Y5IbOzTbGdztN23QLTbK/fnfw2605cJ1t4GS36+Bxv8VNMOzWexj4WoZbjTofALHX1NuO7/weq9mHkp42Q0Lv56+p74+SzBe67rN2pIx4USLyru/Huwh7+zDlDW+hjdcIgg/PaKwTGJ1enY5qZtSWMlE3cOOyfTm5k+ReTbat954P3vLM0tSc8AedFUrIvAeGbtxmwOMGPgQy4X5NtSVeXa8jYfHRqKri5e8lmhUEs7kPz8JIEXE5ZmtIpOXvCQQLoSy+EvWHSfMf+aN34DllMOh20nMe82ehSv4FPjzhyj0LVXNmeDf6HJnbuHH+T6as3inu/Imu/FbjOo6xoFdl5z3oun+cgg9R88aT6YRVjHjheREvLkZdl6MGr3ptDUrky7LGdnAm+fMfbuiW+A==
+sidebar_class_name: "put api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Replace Git by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/gits/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Replace an item by ID with (full update)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to update","required":true,"schema":{"type":"string","description":"The ID of the item to update","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"auth_type":{"type":"string","description":"Auth type"},"auto_pull":{"type":"boolean","description":"Auto pull"},"clone_logs":{"type":"array","items":{"type":"string"},"description":"Clone logs"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_branch":{"type":"string","description":"Current branch"},"error":{"type":"string","description":"Error"},"name":{"type":"string","description":"Name"},"password":{"type":"string","description":"Password"},"refs":{"type":"array","items":{"type":"object","properties":{"full_name":{"type":"string"},"hash":{"type":"string"},"name":{"type":"string"},"remote_track":{"type":"string"},"timestamp":{"type":"string","format":"date-time"},"type":{"type":"string"}},"title":"VcsGitRef"},"description":"Refs"},"refs_updated_at":{"type":"string","description":"Refs updated at","format":"date-time"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"url":{"type":"string","description":"URL"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsGit"}},"required":["data"],"title":"Replace_git_by_idInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"auth_type":{"type":"string","description":"Auth type"},"auto_pull":{"type":"boolean","description":"Auto pull"},"clone_logs":{"type":"array","items":{"type":"string"},"description":"Clone logs"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_branch":{"type":"string","description":"Current branch"},"error":{"type":"string","description":"Error"},"name":{"type":"string","description":"Name"},"password":{"type":"string","description":"Password"},"refs":{"type":"array","items":{"type":"object","properties":{"full_name":{"type":"string"},"hash":{"type":"string"},"name":{"type":"string"},"remote_track":{"type":"string"},"timestamp":{"type":"string","format":"date-time"},"type":{"type":"string"}},"title":"VcsGitRef"},"description":"Refs"},"refs_updated_at":{"type":"string","description":"Refs updated at","format":"date-time"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"url":{"type":"string","description":"URL"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsGit"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsGit"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

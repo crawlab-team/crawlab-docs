@@ -56,6 +56,15 @@ graph TD
    - MongoDB storage for persistent data
    - File system for spider code and related assets
 
+### Observability
+
+As part of the v0.7 infrastructure improvements, the API engine is instrumented for observability:
+
+- **OpenTelemetry tracing**: Requests can be traced across the API engine and into downstream services, making it
+  easier to diagnose latency and failures.
+- **Structured logging**: Logs are emitted in a structured form throughout the engine, improving filtering, searching,
+  and correlation with traces.
+
 ## Request Processing Flow
 
 The following sequence diagram illustrates how requests flow through the system:
@@ -238,16 +247,19 @@ Crawlab's API is organized into several logical resource categories:
 
 ## Response Handling
 
-The API uses standardized response formats for consistency:
+The API uses standardized response formats for consistency. Every response is wrapped in a common envelope whose
+status and message reflect the outcome of the request: successful responses carry the result payload in `data`, while
+error responses carry error information (and the corresponding HTTP status code described under
+[Error Handling](#error-handling)).
 
 ### Response Structure
 
 ```go
 type Response struct {
-    Status  string      `json:"status"`   // "ok" for all responses
-    Message string      `json:"message"`  // "success" or "error"
-    Data    interface{} `json:"data"`     // Payload for success
-    Error   string      `json:"error"`    // Error message
+    Status  string      `json:"status"`   // status reflecting success or error
+    Message string      `json:"message"`  // human-readable message
+    Data    interface{} `json:"data"`     // payload (present on success)
+    Error   string      `json:"error"`    // error message (present on error)
 }
 
 type ListResponse struct {

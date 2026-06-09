@@ -1,0 +1,75 @@
+---
+id: batch-update-notifications-alert-list
+title: "Batch Update Notifications Alert List"
+description: "Batch update multiple items with partial fields"
+sidebar_label: "Batch Update Notifications Alert List"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttu2zgQ/RVintUm293FAn7LDVujSRskzpMRGCNpbLGlSJUcOfUa+vdiSNlRYmdtFPWLJerMhWeua2BcBBhN4bNjPdcFsnZWnRnyHOAxg5JC4XUjpzCCc+SiUm1TIpOqW8O6MaQ0Ux3Uk+ZKNehZo1FzTaYMkIFryEed4xJGkIv8LMnP7MBimKGYnBkdGDLw9L2lwOeuXMFoDYWzTJblEZvG9DInX4M4tYZQVFSjPPGqIRiBy79SIXoaL/ZZU5CvugwDEHqPK8ggej84D+y1XUD3+u6TitT4Mig3V1xtLs2uZ0Pw/dMeP7AstahBczv0aK+Nnt1etusSG9pTKWHSkdXe0mMGrNnQJjKHmB3bphWVSWlonA2JmQ+np/L30pkvnyD7XdSXyEegZrrcDcRrjsaXkMHc+Rp5q0mXwn/hCZnKGfJhLRcJq1jXFBjrZqhUSHwnX4Za89XxWvPVWz6+wB9Sdzl46zIgi7mhIUW5c4bQ7ghe9cgugwrDrCb2upgx+gXxEeIfMagko3qZLgODgbVdzAIVzr6oJG2ZFuR31FwnCbWRGFCiLf/5IWqlJZnDTFxHWJdBfxWLNR2Wukl3iOBn2XSlo3LtZkiCejvzjnPnc+9H6onOH5b4skF2GfRuL9G0Q1u2rfM93E+Sywk98HpuHMZwMtWNkWbxjY5I7EmPVoLetrrjSu0hYY8otY3WY0pto/WtUtvbW6UNDXr2c/u8cSWZMJyBcQTGqvN+X6hiPoWAiz2B7zIIjNzuGyvds9ELZ9k7Y8iHu74b/6u5avM3vYmd+699zfocS3WXpiZEzB+7mAeLLVfO6/9Sa/h7n6KxZfIWjbonvySvruL1u1Q+lZMp3siskeaNXMEITl6MmxNMu0MGgYrWa17dy4xIDR4bPXHfaNj6sNGfKM5hsV4RljGbU0XB2e1YJQnxQKbO3fNqcPUD68bQdrRPNyQ/DmaxyGk7d9HkhniPTwZzdXY73smru6v7iXxQc+dVD4QMluRDApy+/+f9qdDXuMA1xrv03qb1KGWmGoYvpI1KXaf15tUQ2M7YX9ivehaZfvBJY1DHQdH62FJTfKbwIj6yjWy3u8oFFsR6nWOgB2+6To6/t+RXMJo+ZrBEr2WWyJtMkxSf0XQNsW/EHCbL7ybih8Bjd9rdFbpsI3FWFNTw/2IfB8l2eza5+AgZ5P0uWLtShDw+yZ6ITzCCuGamy43W6WwNBu2ijdUJSan8fgLTTs5j
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Batch Update Notifications Alert List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/notifications/alerts"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Batch update multiple items with partial fields
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"type":"array","items":{"type":"string"},"description":"The IDs of the items to update"},"update":{"type":"object","additionalProperties":{},"description":"The update object"}},"required":["ids","update"],"title":"Batch_update_notifications_alert_listInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"has_metric_target":{"type":"boolean","description":"Has metric target"},"lasting_seconds":{"type":"integer","description":"Lasting seconds","format":"int32"},"level":{"type":"string","description":"Level"},"metric_name":{"type":"string","description":"Metric name"},"metric_target_id":{"type":"string","description":"Metric target ID","format":"objectid"},"name":{"type":"string","description":"Name"},"operator":{"type":"string","description":"Operator"},"target_value":{"type":"number","description":"Target value","format":"float"},"template_key":{"type":"string","description":"Template key"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsNotificationAlert"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsNotificationAlert"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: save-spider-file
+title: "Save Spider File"
+description: "Save a spider file"
+sidebar_label: "Save Spider File"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVVGP2jgQ/ivRPLWSr3Cn3p2Ut2271aHq1BXQe0GoGvAAbhPbtSdsaZT/fho7WdgSrfahSIiQzHyeb75vJi0w7iOUK1h4oylEWCvQFLfBeDbOQgkLPFKBRUzPi52pCBQ4TwElYKahhIhH+pwDPvcBHgPWxIJYrlqwWBOUYDQoMILqkQ9wdVQ+Y/YOFAT61phAGkoODSmI2wPVCGULfPKCFTkYu38SY+dCjQwluM0X2rLR0HXrDE2R3zh9Eryts0yW5RK9r8w2EZt8iYLXXh+cwYRjkDawoShP3wvxZ0XlZvxMpFPwD6GmMAaCWhupCqu7R3B9HIaAJ2ktUx1HoLtOwcL8uDzVWKY9hcsuGct/vQaJfdzS5YGS7oVGxuJFE0kXOxfkWxd9M+NLUMCGpQfwb1Ox8RhY2PakBBX5GQJKTjFo0qnslOdlSWjBrhA/Jh5DQYufDDqzvmFpSyduiN7ZmPv5x3QqP4+xP34A9atcQiG4MCp+TTHiftwYkZGbUWHPHN86y8FVFYX4nzN63tPqWb4eI/YGdTHP+kGK+f065pPFhg8umB+kJejPMaCZZQoWq2JB4UihuE0su8SKD052hHcxdSOpCZMsRpy0RncTkSROkmoKIm2bYPi0kI7mpqE3S/eV7KXjvflAp2GbHLLH1LBnbu5mRc6QGkSj+Xnmb79j7fOsDjN7nsqzvx6G8WF2pg8ePkf1fM5SGbtzqc5BloD3FW6Km7vZlWnnt4ulPEjT1AeCgiOFmAOmr/5+NU1D4CLXmBrQ15nWcr/s3ued+wj8Yq+Nr/C+kUzfeeIrNFbOaUIlqZnVCnqVQEGZVncSSjQSqdYKDiJquYK23WCkT6HqOrn9raFwgnK1VnDEYHAjnVi1oE2Uaw3lDqtIT1T8Yt6v/5fF5UIfrXlwhBU7HLFq5B8o+Eqn/Mrp1p0aLCJl5Adv82G/LSX9nHg13J0aMm62W/L8ZOz6wvF3HxdLULDpXzO105IT8F7ebnifi3SJfHJ5utdChXbfpEUAGVM+/wPLJppK
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save Spider File"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spiders/{id}/files/save"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Save a spider file
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Spider ID","required":true,"schema":{"type":"string","description":"Spider ID","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"File":{"type":"object","properties":{"Filename":{"type":"string"},"Header":{"type":"object","additionalProperties":{"type":"array","items":{"type":"string"}}},"Size":{"type":"integer","format":"int64"}},"description":"The file data (used for form requests)","title":"MultipartFileHeader"},"data":{"type":"string","description":"File content"},"path":{"type":"string","description":"File path to save"}},"title":"Save_spider_fileInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

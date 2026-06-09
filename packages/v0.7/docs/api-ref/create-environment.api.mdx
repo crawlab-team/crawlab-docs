@@ -1,0 +1,71 @@
+---
+id: create-environment
+title: "Create Environment"
+description: "Create a new item"
+sidebar_label: "Create Environment"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVsFO4zAQ/ZVozi60FYjd3ICtVhVagdqyh60q5CRDY0hsYzuUbpR/X42TkpQW6HEP9JRmZp49M+9lpgTHlxbCOYzkszBK5iidhQWDBG1shHZCSQjh0iB3GPBA4ioQDnNgoDQaTvZxAiHE3uMOWxhgYPCpQOsuVLKGsIRYSUeGsASudSZiH378YOmMEmycYs7pya01QggqesCYcLShw5xAS9aEuwO87kTScbLOCLmEt3mNfwCDe2Vy7l6RRAIVa/JJ7rj7HKWuThI4kaN1PNdd0IQ77JGlixqtD0eN1u/d8REPgJmRtWJQ6OTghG5r3wMS2qAektAG9f2EnnlW4OdAv71bVe2kmmJA5AicCuqLAQMnXEZYv1SCme3Q3AMQQ4XBhCTgebVoIy53KD2WuqC4OtJqJW1NtmG/75m5dZ3rK2BfnP/i/H/FeQZojDK7B1YMcrSWL/dcpmJgHXeF3WOqOoJR0hmVZWjspFHHT+HSItqnPQo82SebC54Ek3pwgPcZ7PrcSl64VBnxF30RT/cBjaVDI3kWTNE8owlGPvHKJ+pSRVNLK+tVxF0KIRxjdwgysBgXRrj1lERaK4xrMVOPKDuF4FpcIbVX0KEp8gQNMJA8J+v5zTioI+hgkv2kHYqjF57rDLsC9xJuSdCVJAz7w5Ne/6w3/D4bnIang3D47ah/NvgD2yJro71Y2r9dOXwE1iV4G90Qtdt4Ie+Vr8TrF5OvMh4F5zfjHQJPRtMZGYJ7ZYLGkVDR2Nqhf3R21KdmUlNy7kvcFLFZP0Zby8UWfGe52LusNL1y+OKOdcaF9EI2GUXW3Z8DvlmBUiJHOIeyjLjFW5NVFb1+KtCsIZwvqCRG8IhSny8qtul9OC+byl/Wd+r571FbwZ1BULFNxHkco3Yf+i46/L25ns6AQdQsWLlKKMbwFS1ffAUh+EWNoj19/bsSMi6XhVc61Jj0+wdUl26k
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Environment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/environments"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new item
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"key":{"type":"string","description":"Type"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"value":{"type":"string","description":"Value"}},"description":"The data to update","title":"ModelsEnvironment"}},"required":["data"],"title":"Create_environmentInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"key":{"type":"string","description":"Type"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"value":{"type":"string","description":"Value"}},"description":"The data to update","title":"ModelsEnvironment"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsEnvironment"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

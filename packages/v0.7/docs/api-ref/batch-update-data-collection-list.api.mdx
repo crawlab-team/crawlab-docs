@@ -1,0 +1,71 @@
+---
+id: batch-update-data-collection-list
+title: "Batch Update Data Collection List"
+description: "Batch update multiple items with partial fields"
+sidebar_label: "Batch Update Data Collection List"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttu5DYM/RWBz95NWuyigN9ya3ewWzRIJk+DwYC2OLE2sqWV6GSnA/97QctOnMS5tOi8jG2Rh9ThEak9MF5HyFdwiozqxFlLJRvXRFhnoCmWwXh5hxyOkctKtV4jk6pby8ZbUoapjurOcKU8BjZo1daQ1REycJ4CivdCQw6F+G+S/0Yj46a8D7exJjJkEOhHS5GPnd5BvofSNUwNyyN6b03Zox18j5LQHmJZUY3yxDtPkIMrvlMpOD5IbDYUZdXoODHCEHAHGfSZT75HDqa5hu7pvpcVqcVpVG6ruBo3zG5gQuyHp5k8UGsjMGjPpxnNxhiYHXy7LrFhAmmpj+kZHSKtM2DDlsaqvMbqovGtwCXA6F0TEyu/Hh7K3+NE/voK2f9Fu2TzttXG6OdFeMrP4hQy2LpQI98jGS3cl4GQSW+Q30Y5SbaKTU2RsfZTUCHwg6xMUYvd+1GL3Us5atKtf5sJarCwNGWjcM4SNoJxQ7t/I+IuG748X+kyGE7o23AvZHpDM7y8EvJBrmcNG95Js/ldcujXGqznvEa1v6+2V8n2HbUdUd9T2xH1pdrOHmTR/aRBPGz+T6fJRtn8Q6OVjCgEF2YZqClGvJ5nJzJy+1Lth4gnruEgsUK8GM7+H4artphPpRfHp7m+cIxaXaTmDL3NL89trhpsuXLB/E297D/PAS0aptCgVZcUbimos37vXb9XrpwMCi8tTTSHXEEOB8LnQTkZTRlEKttgeHcprShpEr1Zuhtqpqr25iv1spbIFaGmAKPe4Oh8oZKHRJfmdvEwfc5+Yu0t3U+P1cjuetLuxc80W9eHHBkPeGexUEfni2dquji7XMqC2rqgBkPI4JZCTAaHH3/7eCjUeRe5xn4vQ7Zp+iY9qifDWn1L0/NRtMn0/A+je2CQ6ScfeIum12kbrOCmuqxSf5dp8ejSULnIsrrfFxjpKtiuk88/Wgo7yFfrDG4xGOl08tZlY13y1dBXetFSwx+WkoOY2zZV88ko6rLR46gsyfOrtuuJwM6PlidfIINiuGbUTotTwDu5guAd5NDfXtKe8n36tgeLzXXbH0dIoPL7B6O9M/8=
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Batch Update Data Collection List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/data/collections"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Batch update multiple items with partial fields
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"type":"array","items":{"type":"string"},"description":"The IDs of the items to update"},"update":{"type":"object","additionalProperties":{},"description":"The update object"}},"required":["ids","update"],"title":"Batch_update_data_collection_listInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"dedup":{"type":"object","properties":{"enabled":{"type":"boolean"},"keys":{"type":"array","items":{"type":"string"}},"type":{"type":"string"}}},"fields":{"type":"array","items":{"type":"object","properties":{"key":{"type":"string"},"type":{"type":"string"}},"title":"EntityDataField"}},"name":{"type":"string"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsDataCollection"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsDataCollection"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

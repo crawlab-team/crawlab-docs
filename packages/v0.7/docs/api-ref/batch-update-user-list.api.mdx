@@ -1,0 +1,71 @@
+---
+id: batch-update-user-list
+title: "Batch Update User List"
+description: "Batch update multiple items with partial fields"
+sidebar_label: "Batch Update User List"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVsFu2zgQ/RVizmqTXbRYQLckzbZGu9ggsU+GYYykccSWEllylNRr6N8XQ0qtkjgbbVFfLEjvvRk+Dmd4AMbbAPkaVoF8gE0GFYXSa8fatpDDOXJZq85VyKSazrB2hpRmaoK611wrh541GrXTZKoAGVhHHoW9qCCHQvjbxN92gfzW6MCQgaevHQU+t9Ue8gOUtmVqWR7ROaPLKHHyOUgWBwhlTQ3KE+8dQQ62+Eyl6DgvAVlTkK+6ChMQeo97yCCmO3kf2Ov2FvrHi13WpBbvgrI7xfW4SrbD8gU/PB3JA6tKiwyaq2lGR2MMdg7cvk9uaE+V7ISONg6RNhmwZkPjVjyxctG6TjSSSnC2DcmK309P5e9h9L8/QvarvK6QZ6C2unrq/GNTFu8gg531DfJ3JV2J4aUnZKq2yC+rXCSsYt1QYGzcVFRceyVfpqrFfr5qsX8uR2pQm5eFLiOsz2CnfeBtiw29TPpTsCpi+wwMziZ+wgnPWzODci2oAT1r24Sgnt87by1vsWp0O5EqrDWE7REtyyqBH1C3j3If+RHUMf2f8/79AM+rp1XCzqinUXVOPY2qz9eTnO15m7wakf3RPiMndNK/frSSv2xFJgg71q/31h9tjw2FgLdHEukzCIzcPePyGOfCtuytMeTD9dCb3muuu2KaQGxdb451q3Os1HWaExAxvz3FrFrsuLZe/0PRvLfHhBYti1FG3ZC/I68u44r7uEKurQwqJ91VuhdyDTmcdHEeZhCo7Lzm/Y10xVRt6PTSfqFpVaPTHymWnoSrCSvykEHaRTi7WqjEkJDSZ69/TL/Lb9i4VOJxeq1HIzeTcSM83e5sDDma6/HeYKHOrhZPT9PlzVI+qJ31agBCBnfkQwKcvv7j9an45WzgBuNahmzTyE9lqmSL1Kc0sh+EmIzsn7gkDLYxfeMTZzAd+s7HLpp2YA3deCOpbWB5cTgUGGjlTd/L668d+T3k600Gd+g1FuLKetNno//5+gBfaD/UIbX8ailhBW66tGuPpl+fjYyzsiTH/4ndTKrn6mx58QEyKIbrTGMrIXm8l6sO3kMO8Wok9FhD8d0BDLa3XTxhkETl9y8A3E4W
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Batch Update User List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/users"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Batch update multiple items with partial fields
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"type":"array","items":{"type":"string"},"description":"The IDs of the items to update"},"update":{"type":"object","additionalProperties":{},"description":"The update object"}},"required":["ids","update"],"title":"Batch_update_user_listInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"email":{"type":"string","description":"Email"},"first_name":{"type":"string","description":"First name"},"last_name":{"type":"string","description":"Last name"},"role":{"type":"string","description":"Role"},"role_id":{"type":"string","description":"Role ID","format":"objectid"},"root_admin":{"type":"boolean","description":"Root admin"},"root_admin_role":{"type":"boolean"},"routes":{"type":"array","items":{"type":"string"}},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsUser"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsUser"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

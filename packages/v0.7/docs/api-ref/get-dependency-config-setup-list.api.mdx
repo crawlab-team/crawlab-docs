@@ -1,0 +1,75 @@
+---
+id: get-dependency-config-setup-list
+title: "Get Dependency Config Setup List"
+description: "Get the setup list of a dependency"
+sidebar_label: "Get Dependency Config Setup List"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdV21v20YM/isHftoArU67DQP8LXOCzOjSBXnZl8IwaIm2r5XulDsqi2vovxe8k2LVdmwZ24Bhnwz5HpIPX45HroFx4WH4ES6oJJORSTV5mCSQkU+dLllbA0O4Ila8JOWJq1Ll2rOyc4Uqa6VWkIAtyaEIjDMYwoJ4ujmeptbM9WIaFExFASRQosOCmJwwWIPBgmAIOZoFJKDFbom8hG0y90tSpbMLh0WhzUKJQIULEkpCcmNVRatVpAUJOHqstKMMhuwqSsCnSyoQhmvgVSnGPTsdzP9DJus6eXGsxAW1jj1W5FY7Zm5EpamKGTnYQ04bpkU4OiQ2t65AjvAf3wXwHKucYfi2y8brL33YNLDTuDRCB5ic1fVE0uFLazx5Ufzu7Ex+vlX3x3tIILWGybCcYlnmOg2xHXzyAlnvcrOzT5SGAnNSk6yjgQy5i0LnUJzWTIU/Lj3V2fE6GV903Y6adAZ1AqkjZMqmyMe1jCJWsS7IMxZlV2mGTD/ISVfrbNVf62z1Gsfd69rH54vt2levR4Gcs+64yssAqxMwNqN/PTWYsn7qmplZmxOaHRXnEfgi0iuZUUghH03if7k00so5Mjx1lTGhXx9tBKMooVqJnXZQb0kcr7PNl5SSwVlOWY+0XTbIOoGl9Rz73zFrv7XIOgFd9iivm4D00wI9k+tBa+xVg60T+Ew90nQvp3UCBabHwdfno4h9PiFp1/h8MGH9YvehiZtn5Mofx99FXJ1AVWa9r8JDxPa4Cq3WPleh1fraVdiu2jAayMui2KpoCBJgzbkYubYZ5f6DdLGmm/XqVSJwoIv+H+OawBM536sR/NkANzLdWJz4rJ9W0adzrLeLYfNcXjj9FG//Xll/UHgUnto7GacD7pWXVToAeS+T576z1yqpa3lkDTub5+T8bTOvXWleVrPDlETFT/tGul8xU7f0WJFnCJi3u5gHgxUvrdNfYt/+eZ+isWFyBnN1R+6JnGqmhuAyL22zhIQ9g5cwhEHW2XEGcVbxg7XM8vUgLCbS9DylldO8upOpMtYIlvrefqZu2rHU72nVzs9Lwix002a2Pr8ZqyghbLSZ2yDaBtThXznO1PnNeKdubi/v7uVAza1TDRA6dQdnb355cyYhKa3nAs2mhsOS1hnGYjpUyIf6PW5cWw/uy2Ddb8FrfGd65kGZow5XsHK5qIox/gjdGMfRXaIMCQybva4J9CQ+xiKyXs/Q04PL61r+jsuILISZ9s0bP8fc0wH6325Ae3mGF7bdwZ4wrwQCshCdaKZZbg4YaRAbIxP5cFqsnOjYd7fNxvq9+htr716ubSWbVZdr60PIVj2RmSkWt/COR+dpSiV3hHaWMnH45Q5eXd5DXX8FsPanJg==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Dependency Config Setup List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dependencies/configs/{lang}/setups"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the setup list of a dependency
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"lang","in":"path","description":"The programming language of the dependency configuration","required":true,"schema":{"type":"string","description":"The programming language of the dependency configuration"}},{"name":"page","in":"query","description":"Page number","schema":{"type":"integer","description":"Page number","format":"int32","default":1}},{"name":"size","in":"query","description":"Page size","schema":{"type":"integer","description":"Page size","format":"int32","default":10}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"dependency_config_id":{"type":"string","description":"Dependency config ID","format":"objectid"},"error":{"type":"string","description":"Error"},"node":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"active":{"type":"boolean","description":"Active"},"active_at":{"type":"string","description":"Active at","format":"date-time"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_runners":{"type":"integer","description":"Current runners","format":"int32"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"hostname":{"type":"string","description":"Hostname"},"ip":{"type":"string","description":"IP"},"is_master":{"type":"boolean","description":"Is master"},"key":{"type":"string","description":"Type"},"mac":{"type":"string","description":"MAC"},"max_runners":{"type":"integer","description":"Max runners","format":"int32"},"name":{"type":"string","description":"Name"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsNode"},"node_id":{"type":"string","description":"Node ID","format":"objectid"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"version":{"type":"string","description":"Version"},"versions":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"Name"},"version":{"type":"string","description":"Version"}},"title":"ModelsDependencyDriver"},"description":"Versions"}},"title":"ModelsDependencyConfigSetup"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsDependencyConfigSetup"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

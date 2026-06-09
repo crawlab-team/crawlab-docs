@@ -1,7 +1,7 @@
 ---
 id: crawlab-api
 title: "Crawlab API"
-description: "API for Crawlab, an open-source distributed web crawler admin platform"
+description: "REST API for Crawlab"
 sidebar_label: Introduction
 sidebar_position: 0
 hide_title: true
@@ -29,7 +29,7 @@ import Export from "@theme/ApiExplorer/Export";
 
 
 
-API for Crawlab, an open-source distributed web crawler admin platform
+REST API for Crawlab
 
 <div
   style={{"marginBottom":"2rem"}}
@@ -44,8 +44,8 @@ API for Crawlab, an open-source distributed web crawler admin platform
     className={"openapi-tabs__security-schemes"}
   >
     <TabItem
-      label={"HTTP: Bearer Auth"}
-      value={"BearerAuth"}
+      label={"API Key: apiToken"}
+      value={"apiToken"}
     >
       
       
@@ -58,13 +58,13 @@ API for Crawlab, an open-source distributed web crawler admin platform
               <th>
                 Security Scheme Type:
               </th><td>
-                http
+                apiKey
               </td>
             </tr><tr>
               <th>
-                HTTP Authorization Scheme:
+                Header parameter name:
               </th><td>
-                bearer
+                API Token
               </td>
             </tr>
           </tbody>

@@ -1,0 +1,75 @@
+---
+id: get-notifications-alert-list
+title: "Get Notifications Alert List"
+description: "Get a list of items"
+sidebar_label: "Get Notifications Alert List"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVltv00oQ/iureTY0cDg6Ut4KlJ6IFqo2faqqaGxP4oW11+yOCyHyf0d7SercHANPkbPfN9/s7NxWwLiwMH6AT5rlXGbIUlfiXJFhC48J5GQzI2v3L4zhkligUNKy0HMhmUoLCeiajOdNchjDgnhWdYzZGTprM8eCBGo0WBKTcaorqLAkGMNcKiYDCUgn860hs4Rd8Q8eI9aHNiuoRBivgJe1s2HZyGrRT2vbZKNZ44L6FW9wQaJqytS7ticoK6aFP+qjzbUpkQP8n9cePMdGMYxfdb2x8ucQbyLs93yJpB5PRluuaMP9rtxpw0L7L/sbT7FD28jDi5nMoW0fEzBka11Zss7a69HI/Wwb+fwREsh0xVSxO8W6VjHVzr5YB1ntO6TTL5T59DMuW1kGgRy5i0Jj0F02JPZJtnP65J0n77uRD5bcZRPIDCFTPkM+beVdwAqWJVnGsu4azZHphTvpWk2Xw62my2M+buFPmXvf+WoToApTRd0QpVorwmqPeBGRbQIF2llJbGQ2YzQL4gH0/9GKwBGR0yag0LKsFjNLma5yO6BUrgJDrBl7BeOs0hOp05G48rA2gXiVUFinWNfhDh78zA1XGpRr190giOOZN8ydT9GP0N61Oc34vEa2CUS3n1A1Xa1NW9xmToPLAd3xeq40+udkKmuFTLOvNCCxpxEtHLpNoKnzwaV2H7ADSm1tdUipra0eK7XdWoNpQcK1J8FaBCFIgCUrJ3Ktc1K2O7L9xPZmyJhDb+UTylo38w6dWUZu7MEj1ozqYP3s1kf77OE7XbHRSpGxV9LybWzrl5KLJj3uvjPx5lDXf4u5uKVvDVmfDm9Gr/Yx9xU2XGgjf4Ze8u8hQ5OKyVSoxB2ZJzLiwoerDfVW6LjB+EWFCxjD2dYuc4ZhM0rAUtYYycs7N2rCPMBaTvVX6nZKrOVHWq6HaUGY+8DFQXt+MxGB4fRlNdeeug6hwe8KU3F+M9lLp9uLu6k7EHNtRARCAk9kbACMXv73cuSCUGvLJXqfoqpb4rqxt2HdE1dhQdtp+ZtJe2T5ixdl+sFntULpW39jfMKEED7AVgghAdysl4W27BCrVYqW7o1qW/d32DrcfphLG6fIHJWlHvd21sODfvnm8bxsxuYE4Jaf4Urb+12PUNww/0Ymrm49IhHxhyI7K1mfTtgKn3Ue3YeRTgjGD49ueIf8du8WOOdZRnWXtbesOSubwru8mELb/gL8O1Cf
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Notifications Alert List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/notifications/alerts"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a list of items
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"filter","in":"query","description":"Filter query","schema":{"type":"string","description":"Filter query"}},{"name":"page","in":"query","description":"Page number","schema":{"type":"integer","description":"Page number","format":"int32","default":1}},{"name":"size","in":"query","description":"Page size","schema":{"type":"integer","description":"Page size","format":"int32","default":10}},{"name":"sort","in":"query","description":"Sort options","schema":{"type":"string","description":"Sort options","default":"-_id"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"has_metric_target":{"type":"boolean","description":"Has metric target"},"lasting_seconds":{"type":"integer","description":"Lasting seconds","format":"int32"},"level":{"type":"string","description":"Level"},"metric_name":{"type":"string","description":"Metric name"},"metric_target_id":{"type":"string","description":"Metric target ID","format":"objectid"},"name":{"type":"string","description":"Name"},"operator":{"type":"string","description":"Operator"},"target_value":{"type":"number","description":"Target value","format":"float"},"template_key":{"type":"string","description":"Template key"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsNotificationAlert"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"},"total":{"type":"integer","format":"int32"}},"title":"ControllersListResponseGithubModelsNotificationAlert"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

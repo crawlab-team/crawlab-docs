@@ -1,0 +1,75 @@
+---
+id: post-git-changes
+title: "Post Git Changes"
+description: "Post the changes of a git repository"
+sidebar_label: "Post Git Changes"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVd9v00AM/lciP4EU6EAgpLxtY0wVD1Rt4aWqpmviNscud8HnbCtR/nfkS9J0axgg0ZdezvZn+/OPq4HVzkOygmvNsI4hQ5+SLlk7CwnMnOeIc4zSXNkd+shtIxXtNEeEpfOaHe0hBlciKTGZZpBA6Tzf7DTfdEYQQ6lIFchI4qoGqwqEBHQGMWjxUyrO4anzZY7R9KO4lAhOnBL+qDRhBglThTH4NMdCQVID70uB90za7v4VduuoUAwJuM13TFln0DTr1ht6vnDZXlykzjJalqMqS6PTkP7kuxcX9WksLZgwQUIWa/QBpmNoUFRESsLQjIX/GwBtMkL7ewRINaWVUfTiW+qvNX/SBhesuPIvoYkBH5hGSGti0P4m03Qk2jhnUFmRtQUcMQqFHBN4Vjs5jsnuHd0y4RhiEwNrNnL1NHyxPK1s36jsInGJAWJoldWB8vWAPHvSsFNbVgxN05r60lnfsv327Ez+Hnv98hni/9UPSORolKMCvZd0fsOt8PEse5fOMjljkPw3p7N5l1aX5buxxC5UFs3btoeg8+ZU56tVFeeO9E/MROn9GNDUMpJVJlog3SFFVyHLJmTFuet3BvTtA5OdZj+pddZMhh3iMa1I834hXLZ0qVIv3e3j7i/1Z9z3eyVHlSFB37BwPptGrYV4l+rMh7m+elBFafDRXK6OR2xlK2PWh5kZFkw/Ku0i6nwdpF1Sh+/DKAxXwwQcareWEbRbF3Lri0jq3qhNdD6bnqy1+dViKYJo6yjqFCGGOyTfKpy9/vD6LMyo81yoQFoXaljz15qjywPbj8CP9t3fPgldORgfeFIapcPaqMgIWEvICqTKEEMS3oGjucylGZIV1PVGefxKpmnk+keFtIdktY7hTpFWG+FkVUOmvZwzSLbKeHwm9hfzbhG8jP7wCoyG37eYFY07ZSr5ghhucd++ZqFoXc9JZK3gsvX/ainmg+HJnmji3uI8TbHkZ3XXR8Mz+7JYQgyb7m0qXCY2pO7llVT3bZAu8BHGJtzVYJTdVWGnQIspv1+oIcLu
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Post Git Changes"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/changes"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Post the changes of a git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the git repository","required":true,"schema":{"type":"string","description":"The ID of the git repository","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"changes":{"type":"array","items":{"type":"object","properties":{"children":{"type":"array","items":"circular(VcsGitFileStatus)"},"extra":{"type":"string"},"is_dir":{"type":"boolean"},"name":{"type":"string"},"path":{"type":"string"},"staging":{"type":"string"},"worktree":{"type":"string"}},"title":"VcsGitFileStatus"},"description":"The changes to stage"}},"required":["changes"],"title":"Post_git_changesInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

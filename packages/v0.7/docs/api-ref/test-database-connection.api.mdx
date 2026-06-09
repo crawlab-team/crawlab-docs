@@ -1,11 +1,11 @@
 ---
 id: test-database-connection
-title: "Test database connection"
-description: "Test connection to a configured database"
-sidebar_label: "Test database connection"
+title: "Test Database Connection"
+description: "Test the connection of a database"
+sidebar_label: "Test Database Connection"
 hide_title: true
 hide_table_of_contents: true
-api: eJy9VU1v3DgM/SsC0UMXUOpBGqCtb2mzC+SwSNG06GEwC3AsekZdWXIlum1g6L8XlO3MNJNu0cv64A+JpB4fH+kRGHcJ6jVcIeMWE8FGg6HURNuzDR5qeE+JVRO8p0ZWFAeF8t3a3RDJKLN4augxYkdMUUKO4LEjqMEa0GAlVI+8Bw2RPg82koGa40AaUrOnDqEege968Ugcrd+VgMwUxfWf9ersFZ61l2d/bcbzi/wEHuL8O/hduHqtbrafqOFroyL1kRJ5JqMwKVR7+oaGGtuhU/dHsGUnZy5ukB8GnnbU9RXkjYBPffCJkuA9X63k8aP9myOuhLtIaXAMGprgmTyLB/a9sw2KUfUpidt4RAM6d9MWCmdCQoEghMTQU2Q7Hd8EQ0e0Wc+0owga2hA75Gnp+bmk1FFKuKNTkiVd5GP258NyPpBzOzQNpfTR8l6EAln/CtrjMR9aJUYe0qOgfg5Yro3cNFysLk75X6SsfGDVhsGb3+H+f2GcYgzxsdQOlP9ZTPKUZ0e8D0Y6KCSe+mIPNVRL76VqtCZXhy6tRHmgIVH8srTjEB3UMJZUKddVNe5D4lyPfYicK+ztSU9dUYuDY3X59lpNoUDDF4wWt26uYIkmb+SHTibJnrkHXR5pmiYlBtTTTtYgx05lW3ZcaNCV5axB4Pyw/XL1ciU1l3SaIVq+K/m8JowULwehYr053r4toAq+Y6N7umeIC3bYFqNCv/VtKJZzGd5E/OpwKwycsCOstCGq2UYr9Cr05M9SGGJDylip63aQAfSVtqoRO4oKTWe96h2yqEYYpZimkKtnL56tJhISd1i0OY/RMoeXgh8N5IewxoPWf2d2z9QwfeOqd2i9oCiSGWe5reFebqChtnNbHWAUzW2W+q5hHMX4Q3Q5y/LngaJUbnOQUKmjsUneDdQtukT/kc7Td/Of4w91GMo/gT4vor8rknWDfIGGf+lu+ifljUiR0FAsMKaNy6ahno9cTqaFCO2+H9/e3L6HnL8DUJ5/hw==
+api: eJyVVE1vGkEM/Ssjn1ppFGjVqtLe0iQHlEMiIL0gFJldEyZZZjYeLy1dzX+vvB8JKShqT8D44/k9+9GA4EOEbAGXKLjCSBGWFgqKObtKXPCQwZyiGNmQyYP3lOurCWuDpuhrwEKoiFEjkwIyEIpyP0TvX8vAQoWMWxJiRW3A45YgA1eABadgFcoG/p5gcqmAOsLQ1EgwigIWmJ5rx1RAJlyThZhvaIuQNSD7SptHYecf/q/pOvAWBTIIq0edvYCUlooVq+BVpayBz+OxfrztenMNFvLghbxoFKuqdHkrzegxakpzPGEHouqwCimuAyDmwMdEkoUtxYgPdDIWBaWOJ0LJgjgp9ekieOFQlsTxR3DFtKcFKWnWl1PEvmNhpvRcqz5tzqfjnDuPtWwCu99UaNLXU40mXog9lmZGvCM2Vy3L1LKSTdD7qUK7hPYWMhgN+4mjxhVp9HpPo35bkfKanexnKmynHVZuHp7IH+iAlbum/XBoG8KCGOxwgue3E9NV6CjOr0NbOgjG+LPElTm/nRwd0vRqNteAWQc2fSJY2BHHLmF89u1srHoory22M/WorbcG75mLQ6e8AWleb+qf/NhTFvolo6pE5xW+5lI7dbIu4EVWsJC1Dnzj1FbbpYWNLiNbQNNo8h2XKenzc028h2yxtLBDdrhSnRYNFC7q9wKyNZaR3uHxYdo796N514snuQw79brQHZa1/gILT7Tv/k/SMtlhyTpXFzjPc6rkoOTIn2rzl0O8vZnNIaU/IZ3A9w==
 sidebar_class_name: "post api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
@@ -26,7 +26,7 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Test database connection"}
+  children={"Test Database Connection"}
 >
 </Heading>
 
@@ -40,7 +40,7 @@ import Heading from "@theme/Heading";
 
 
 
-Test connection to a configured database
+Test the connection of a database
 
 <Heading
   id={"request"}
@@ -51,7 +51,7 @@ Test connection to a configured database
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+  parameters={[{"name":"id","in":"path","description":"ID of the database to test","required":true,"schema":{"type":"string","description":"ID of the database to test","format":"objectid"}}]}
 >
   
 </ParamsDetails>
@@ -66,7 +66,7 @@ Test connection to a configured database
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Connection test result","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","properties":{"status":{"type":"string"},"message":{"type":"string"}}}}}]}}}},"404":{"description":"Database not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
 >
   
 </StatusCodes>

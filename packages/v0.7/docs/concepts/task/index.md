@@ -194,6 +194,24 @@ This is useful when:
 - You need to refresh data with the same parameters
 - You want to compare results over time
 
+### Deleting Tasks
+
+Tasks can be deleted individually, or several at once by selecting multiple rows in the task list and using **batch
+delete**. This makes it easy to clean up large numbers of historical task records.
+
+## Execution Reliability (v0.7)
+
+Crawlab v0.7 improves how tasks are executed and cleaned up on each node:
+
+- **Bounded goroutine pools**: Task execution runs within a bounded worker pool with a configurable, dynamic
+  max-workers limit, preventing a node from being overwhelmed by too many concurrent tasks.
+- **Zombie & orphaned process prevention**: The engine actively cleans up spider processes and detects orphaned tasks,
+  so crashed or abandoned executions don't leave lingering processes behind.
+- **Graceful shutdown**: When a node shuts down, in-flight tasks are wound down cleanly rather than being abruptly
+  killed.
+
+These mechanisms make distributed task execution more reliable, especially under heavy or long-running workloads.
+
 ## Task Results and Data
 
 Every task that successfully scrapes data stores its results in a MongoDB collection:
@@ -223,7 +241,7 @@ Task results can be accessed in several ways:
    - Use Crawlab's API to programmatically retrieve results
    - Filter and format data as needed for integration with other systems
 
-## Performance Metrics (WIP)
+## Performance Metrics
 
 Tasks collect and display various performance metrics to help you understand and optimize your spiders:
 

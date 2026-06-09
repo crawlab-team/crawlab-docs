@@ -44,7 +44,7 @@ Crawlab SDK 支持与包括 Scrapy 在内的各种网络爬虫框架以及包括
     ```go
     package main
 
-    import "github.com/crawlab-team/crawlab-sdk-go"
+    import "github.com/crawlab-team/crawlab-go-sdk"
 
     func main() {
       // 以映射形式保存项
@@ -59,13 +59,13 @@ Crawlab SDK 支持与包括 Scrapy 在内的各种网络爬虫框架以及包括
   </TabItem>
   <TabItem value="java" label="Java">
     ```java
-    import io.crawlab.sdk.CrawlabSdk;
+    import io.crawlab.sdk.CrawlabSDK;
     import java.util.HashMap;
 
     public class Main {
       public static void main(String[] args) {
         // 以 HashMap 形式保存项
-        CrawlabSdk.saveItem(new HashMap<String, Object>() {{
+        CrawlabSDK.saveItem(new HashMap<String, Object>() {{
           put("hello", "crawlab");
         }});
       }

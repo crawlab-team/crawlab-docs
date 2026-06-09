@@ -1,0 +1,71 @@
+---
+id: get-spider-file-content
+title: "Get Spider File Content"
+description: "Get the content of a spider file"
+sidebar_label: "Get Spider File Content"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMtu20AM/JUFTy2wiN2iRQHd0jQNjBwa2MkpMAJaoq1NpF2FS7l1Bf17QT0Sp3aD9GTAO+QMR0M2ILiJkNzConIZcYSlhYxiyq4SFzwkcEFiJCeTBi/kxYS1QRM7tFm7gsBCqIhR4bMMEtiQ3PXvd/p+NxSChQoZSxKlSW4b8FgSJOAysOCUqkLJ4W/+XpiZfQMLTI+1Y8ogEa7JQkxzKhGSBmRXaa8o7Pzm1R7rwCUKJBBW95SKy6Bt7ZOYQUIn57Em3h30+u4KMgPsrfzPNW271DFiFXykqJUfp1P9eVnw4xIsjMYlDWBVFS7tPJ7cR4U0h+T9QOoz6xcR1xNkKPsoZEadygmV8VB621og5sBHniyUFCNu6OhbFJT6Hx3FSaF/nQUvHIqCOM4HExYjSnGfjpnxFTMzp8eaokCH+XCIufFYSx7Y/aZMQZ+PNZp5IfZYmAXxlticd3O23VyShyG8XVAlhwQmfYzjpHFZO9Ewx0kPiJTW7GS30G/Q24yVuw4P5Petrtwl7cY45YQZMdgxaqdXM9NXqALn16ErHZ1i/FngypxezQ7iND9fXOuDWQc2AxAsbIljD5iefDmZqg1ViFJip2lg1XUe1qFL5dnTdr7gaJ7T95YLMAws9EsmVYHOK3nNhTbqzbyFwUywkHQr3/kJtrN8aSEPURTWNCuMdMNF2+rf/RLquchcxFWhy7/GItIrgvdX9KiyB9o97/oWi1ohoKu5RXbK8p+M7+bDZXpv9m/NUfIxHH63Tz6K0nu0bO2YFpXRP5ymKVWyV3JwE1T/U5Avzq+hbf8AUkn7sw==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Spider File Content"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/spiders/{id}/files/get"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the content of a spider file
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Spider ID","required":true,"schema":{"type":"string","description":"Spider ID","format":"objectid"}},{"name":"path","in":"query","description":"File path","schema":{"type":"string","description":"File path"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"string"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseString"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,75 @@
+---
+id: create-database-table-data
+title: "Create Database Table Data"
+description: "Create a new table of a database"
+sidebar_label: "Create Database Table Data"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVd9v0zAQ/lesewLJ0IFASHkbY0gVEkxdx0tVoWt8bQ2JHWxnpVT+39HZSZutZQNBn5rkfnx39913Owi48lDM4B0GXKAnD3MJinzpdBO0NVDAhSMMJFAY2oiAi4qEXQoUqnMBCbYhh2w+VlBAmRy+9N+/JJ/0CBIadFhTIMdpd2CwJihAK5CgOVuDYQ33IYzfccqwpmFSR99b7UhBEVxLEny5phqh2EHYNhzUB6fN6s+CLa2rMUABdvGVyqAVxDjPOciHt1ZtOXBpTSAT+C82TaXLVPToq+fAu2MEORhX7bhFQZPnr/vO5OofA/wRazqCHCU4u/EDb3QOt9zGQLV/HMRSV4HcKTtUSnNqrK6GHvE+rvcpglhaJ5baKG1WgiGJYEXbKOaMdUJRRaGH+y/ZmKEpF9OQY0UJPmBo/eMd/NTzU2QP8cTQRnYolexAqqccM7/8F6Q3uXjVA05zilFC0KHiiBfWBGeripyf8m5waZNc0d1Ik66deaN6wHLQVwm1NuM88RecIu3a3/Mq+SWQh7WaZYbdCTofVPHbNR+bpg0QYw7nG2t85tzLs7PE/7vD+QDyf20WOWfdceVRQk3e4+pEVx6g0W9m9tlqNenK6qp8daqwt6jEJAsIJJsXxzY3Btuwtk7/JMVGr08FGptAzmAlrsndkhOXqcqYqgpry5rbWJ+6wepZwKgfih/ttIqjNBo/6iTYU9k6HbbX3NTcN2z01H4jM5STRn+gbS/La0JFDmQv2OdXY5E9GAaPaXKQyssfWDcVnZC6AxWzeM0GOrSXiMFEDvb7tUy6PKT5YJDaLG0qYU9R3FS4EOdX4yP2Ty6vp/whrWhnCBJuyflscPb8zfMzjsq9rTH1psvYncT+aIq0xenxfprBzfiTQ9r1PtCPMGoq1CYpkqs4UJ7tbN9S3swiHc48Xk7NCOYS1syGYga7HRveuCpGfv29JbeFYjaXcItOp5XnESjt+b+CYomVpwdKeDLp1OGpOHlGT+LvCWWYTbdYtfwEEr7RNp/+OI+yZxjjyR8uctZnU3Y/OB7JQ5S9x3lZUhMetJ0Pdubq0/UUJCy6415bxT4ON0xP3GSQNnUhLUl6t4MKzapNUgI5Jv9+AbT/Mgs=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Database Table Data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases/{id}/tables/data"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new table of a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the database","required":true,"schema":{"type":"string","description":"ID of the database","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"database_name":{"type":"string","description":"Name of the database"},"rows":{"type":"array","items":{"type":"object","properties":{"filter":{"type":"object","additionalProperties":{},"description":"Filter for finding rows to update or delete"},"row":{"type":"object","additionalProperties":{},"description":"Data for new row"},"status":{"type":"string","description":"Operation status (new, updated, deleted)"},"update":{"type":"object","additionalProperties":{},"description":"Update data for rows"}},"title":"ControllersTableDataRow"},"description":"Rows to create, update, or delete","minItems":1},"table_name":{"type":"string","description":"Name of the table"}},"required":["rows","table_name"],"title":"Create_database_table_dataInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

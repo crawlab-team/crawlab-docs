@@ -1,12 +1,12 @@
 ---
 id: delete-spider-file
-title: "Delete spider file"
-description: "Delete a file in the spider directory"
-sidebar_label: "Delete spider file"
+title: "Delete Spider File"
+description: "Delete a spider file"
+sidebar_label: "Delete Spider File"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVcFuEzEQ/RVrxAGkDRsVJGBvLQWpB9SKwikK0mQ9SQxe27Vn20ar/Xc09qYpDSAO7GU3nvHzmzfPkwEYNwmaBVwHoykmWFagKbXRBDbeQQPnZIlJoVobS8o4xVtSKWcrbSK17OMOKggYsSMWjGYxgMOOoAGjoQIjOAF5CxVEuulNJA0Nx54qSO2WOoRmAN4F2ZE4GrfJgMwUZeu3xXz2Dmfr09nH5XDyenwGT0l+8m7jz8/U5eo7tXyhVaQQKZFj0gqTQrWle9TUmg6tejiCDVs5c78NxqfAJaIuzmFcFvKU+MzrnTB+WkvrHZNjCWEI1rQoKPX3JFDDcak+g0up0QeKbChJNCt1JMiYH+GQgneppJ7M5/L6lfNHaZTObRP1/xOr1mt6lGUc04YiVLD2sUMuS69ORMKOUsIN/a6Gg+bXfdtSSjCV1RFvvRaf+MSl+1tooC5OS/Vg9FiLBVNdSoMKEsXbvd/6aKGBIVdDY1PXw9YnHpsh+MhjjcEcmeac1thbVqdXF6pAQQW3GA2ubKm5oMkXub6Ta7JlDlDl13RXMgY0JTJWIMeWnuwj1rdo8/JYgdD5Jfx2/nY+juKuRG0fDe9yPWeEkeJpLyoslo/D15lU5vc46UHrieKeO6xyUtZeev754OEP99gFSwfPPfRJ7uzaZ9CpXe8j3llciVhHQoqAax/VlFMpdMoHcrPk+9iS0kZwV71cxjtaqVbyKCrUnXEqWGTxkIhPMRXI+cs3L+dFr8QdZqdOI2UaSNMIEks8JTQcPP/P42sSj+me62DRODk8m2ovzgImL0IFTZ5r2Y758GzI5b75CxiGFSb6Gu04yvJNT1Haujz4KzdZmyTfGpo12kR/KeP552nWvFCHkfQH1tMiul32s+3lF1Twg3ZlIo9L8SmhpphplMD7ctjsi2w/bDyaGWO133HathT4r7nLRzf76vL6C1SwmqZnlwcKRLyTvwW8KyR9Lj67O68NYNFt+jxOoGDK8xPHA0zX
-sidebar_class_name: "post api-method"
+api: eJx9U11v2zAM/CsGnzZAaLJhwwC/dWsGBB2wImn3EgQFYzGNWkdSKTpbZui/D7SdtV2yPvmDpyPvdGxB8C5BuYB5dJY4wdKApVSxi+KChxIuqCahAovUIYq1qwkMhEiMCplaKMF2oNsecjtAIjJuSZS1XLTgcUtQgrNgwClzRNnAv+36OYrpBRhgemwck4VSuCEDqdrQFqFsQfZRuZKw83evcqwDb1GghLC6p0qchZyXSp1i8ImSsr0fj/XxkuT7JRioghfyolWMsXZVJ3l0nxTSHg/UN1HtrAaJ6xsQc+DjubOBLaWEd3SylgSlSSdK2YA4qfXXl+CFQ10Tpx/B2dkgC3JW1IdTwj6jLWb02FAS6DDvjjE3HhvZBHa/ySro4ymiqRdij3UxJ94RF5NOZe5UySY85aLLgmyghFGfkDRqnc0jzUkCA4mqhp3s52pn7xhGdx0eyD9Tj9Fd0v4Qng2hJQZziNX51bToT+gAzq9Dd/RgE+PPGlfF+dX0KC2zyfxaC8U6cDEAwcCOOPWA8dmns7G6EEOSLXYzDV2H5RgC97XP/Qv69ilD/1ulQZ/QLxnFGp3XXg3Xerj3bQGDb2Cg7Baot25pYBOSKKBtV5johuuc9fdjQ7yHcrE0sEN2uFIbFi1Yl/TdQrnGOtErw76ZDdv3tni+TyeHPdyQ1+vZYd3oFxh4oH2/8XmZzeHKdIy+cF5VFOXZkaMd01X9G6aLybfJ9QRy/gN65pbB
+sidebar_class_name: "delete api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
 ---
@@ -22,13 +22,13 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Delete spider file"}
+  children={"Delete Spider File"}
 >
 </Heading>
 
 <MethodEndpoint
-  method={"post"}
-  path={"/spiders/{id}/files/delete"}
+  method={"delete"}
+  path={"/spiders/{id}/files"}
   context={"endpoint"}
 >
   
@@ -36,7 +36,7 @@ import Heading from "@theme/Heading";
 
 
 
-Delete a file in the spider directory
+Delete a spider file
 
 <Heading
   id={"request"}
@@ -47,14 +47,14 @@ Delete a file in the spider directory
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+  parameters={[{"name":"id","in":"path","description":"Spider ID","required":true,"schema":{"type":"string","description":"Spider ID","format":"objectid"}}]}
 >
   
 </ParamsDetails>
 
 <RequestSchema
   title={"Body"}
-  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"path":{"type":"string"}}}}}}}
+  body={undefined}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ Delete a file in the spider directory
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"File deleted","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
 >
   
 </StatusCodes>

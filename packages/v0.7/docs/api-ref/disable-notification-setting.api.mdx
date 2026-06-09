@@ -1,11 +1,11 @@
 ---
 id: disable-notification-setting
-title: "Disable notification setting"
+title: "Disable Notification Setting"
 description: "Disable a notification setting"
-sidebar_label: "Disable notification setting"
+sidebar_label: "Disable Notification Setting"
 hide_title: true
 hide_table_of_contents: true
-api: eJyFVE1v1DAQ/SvWiANIabMqSEBuW1ZIPdBWFE6rRZpNZnddEtu1J21Xkf87GifZjy6FXKx4vt97ng4Y1wGKOVxb1itdImtrAiwyqCiUXjv5hwJmOuCyJoXKHDiqQMzarCEDhx4bYvKSrQODDUEBuoIMtCRwyBvIwNNDqz1VULBvKYNQbqhBKDrgrZOIwH5MyExeQn/NJ2ef8Ww1Pfu66C4+xDfwsrtv1qzt7FLdLO+p5KtKeXKeAhmmSmFQqDb0jBWVusFa7Uqw5lpqjmEQXybuLepqBnEhzQdnTaAg/V5MJnIc+1//BRxV9dgJFKU1TIYlEJ2rB8/8Pkh0d4qGTfUFDW8dedZ97dJWdOClDdOaPGSwsr5B7q/eX8g8DYWAazpFOMY9AHdtWVIIEOWTGN7YSkizgXsqNlBAfkh9yIfxQt7pKubDkJBBIP84yqD1NRTQpbkoFnnebWzgWHTOeo45On3C5YxW2NasprdXqk8FGTyi15I+7FBKE5FpGxHvhtlBlo5BuykHFL0lZiBle7pGS21LrNN1zEDaOTJ/mnyaxCikBypbr3mb5rkk9OSnreAxXxya71JTqb9Dpx3qQ4tj77BMTokFbVY2eQ5sfPH4VONSEDhBR1BZWa8Gn0yhUdaROQu29SWJ1tjrZSvCf6KlKsWPvMKq0Ua5GlkkIoiSD33KyfnH80kPQuAGkxCH5zu++lfe/FFr3V7c/98WAyhMz5y7GrWR+kks3aC2ORypLemq1xtkUKS9MkpuMdI7h65bYqCfvo5Rrh9a8kLcYq+gROPuRRYrrAP9Y5K334eF9U7td8Er/Q+XaLZJsXUrf5DBb9r2qzAuRImEFfnURm+YliU5Pgg52Qyis92bvL25+wEx/gEFi/fr
+api: eJyVVE1rG0EM/SuLTi0MsVtaCntLmxxMoAl20osxQd6VvZOsZ9YarVt3mf9etB+JE7sNPRmPnvT0nqRtQHAdIJ3Ddy92ZTMU610yIxHr1gEWBnIKGdtK3yGFCxtwWVKCiTtMCF0CGPAVcfs2ySGFvIPfH4Lvn8EVMm5IiLWFBhxuCFKwORiwylahFPC6hclF4leJFPS3Fpi2tWXKIRWuyUDICtogpA3IvlKCINwh/7PwyvMGBVLwywfKxOYQ40L5QuVdoKAUH8dj/XlZ+foKDGTeCTnRKFZV2ZcfPQSFNMdddiTqEqupYjsCYvZ8LCYa2FAIuKaTsSAodTgRigbESqlP37wT9mVJHH54m097WRCjoj6dEvYV82RK25qCQIv5cIy5c1hL4dn+plxBn08VmjghdlgmM+IdcXLZqoytKim87lLlQ+uG7kQKo8MZhVE/pDBqbB5H/dqBgUBZzVb2M3W3MxAre+sfyR2YgZW9ov2wdQVhTgxm2Mfzm0nSZWg/1q18mzq4xvizxGVyfjM52qjp5exWA8nKc9IDwcCOOHSA8dmXs7GaouI22PbUsw6XduowXxM1z8v19oX2moV+yagq0Trlr7nUMp25c3hhbmtj/0EwkLbnOTi8MFDoXNI5NM0SA91xGaM+b2viPaTzhYEdsm3ReuR9Zg7pCstA/1Dybtof8vvkzdM8KWqYrtPR7rCs9R8YeKR995mJi2iGcWtvXeA8y6iSg5Sjc9Wrf9rLm+vZLcT4B+aG0mA=
 sidebar_class_name: "post api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
@@ -26,7 +26,7 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Disable notification setting"}
+  children={"Disable Notification Setting"}
 >
 </Heading>
 
@@ -51,7 +51,7 @@ Disable a notification setting
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+  parameters={[{"name":"id","in":"path","description":"ID of the notification setting","required":true,"schema":{"type":"string","description":"ID of the notification setting","format":"objectid"}}]}
 >
   
 </ParamsDetails>
@@ -66,7 +66,7 @@ Disable a notification setting
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Notification setting disabled","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
 >
   
 </StatusCodes>

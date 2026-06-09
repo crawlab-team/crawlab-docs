@@ -22,10 +22,18 @@ The `Execution Command` and `Parameters` in the crawler are concatenated to form
 crawler task. For example, if the `Execute Command` of a certain crawler is `python main.py` and the parameter
 is `spider1`, then the Shell command for the crawler task will be `python main.py spider1`.
 
-### Why does Crawlab always pull version v0.6.0 instead of the latest version?
+### Why does Crawlab always pull version v0.7.0 instead of the latest version?
 
 For users in China, it is highly possible that you have configured the Aliyun mirror proxy. Please use other mirror
 proxies, such as [Tencent Cloud mirror proxy](https://mirror.ccs.tencentyun.com).
+
+### How do I upgrade from v0.6 to v0.7?
+
+v0.7 switches node-to-node communication and file synchronization to **gRPC**, which is a **breaking change**: v0.7 and
+v0.6.x nodes cannot interoperate, so you must upgrade the **whole cluster** (master and all workers) together. Make sure
+the master node's gRPC port (default `9666`) is reachable by every worker node.
+
+For step-by-step instructions, see the [Migration Guide](./getting-started/migration.md).
 
 ### Does Crawlab support Scrapy?
 

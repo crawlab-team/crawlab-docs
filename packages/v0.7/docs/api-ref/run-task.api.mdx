@@ -1,0 +1,71 @@
+---
+id: run-task
+title: "Run Task"
+description: "Run a task"
+sidebar_label: "Run Task"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVVFv2kAM/iuRn7PCuk2T8tZu1YSqqQjoE0LIJC5cSe6uPoeWofz36e7CCG02bdJ4IZw/++Lv82cOILh2kM1hhm7rYJFCQS5nZUUZDRlMap1gIui2kIKxxOgDowIy4Fov2wDTU01Ork2xh+wAudFCWvwjWluqPCQNHp0veQCXb6hC/yR7S5CBWT1SLpCCZX+FKHKhTFV0QE5Y6TU0KVSmoN6ANgUt12xqu1SF60CQGfeQghKqXE/qMfefsywyVr3vYlkZVrLvBJUWWhNDCg+GK5R49OHSw51VBfFS9XXcRIIVU+GVOkEXKYiSkqJOQYyRtrVA08QkZ412kczL4dB/nat7dwvp/1KrQMG/J6/DQaynitAoMRvuV52cw3W/8E5Q6t9IdGToi9HCpiyJ3aQl5pv5bvTaFKsxq0qJ2tFdeJfR15bBj32kXWORTOLAQ8C8f4u511jLxrD6QYUHfeorNNJCrLFMpsQ74uQm9N6EXmVjvMescYFplA1kMPAKuwHXGlJwlNd+wKZenygBWjUzW9JdGay6paCDv3FDWIQB1Fj56NV4lMQMf6tXfHJy8s0LVrakX048SRcNePr92nfzY2jR9VX3tPXNqcTJLsMzM3REVvrBhM6OgjI+l7hKrsYjeLO2bqYzH0geDCctEFLYEbsIGF58vhgGnxonFQbKWlL8ypvFvXZWtLPXztdiS7XQiwxsiUr7ujWXPiUqN4egnN+Utfb9b7yu2RwOhxU6uueyafzxU028h2y+SGGHrHDlG50vmvSoXDY/wJb27TiTlnczf7mHl3XU+5WDm/SYcZXnZOWP2EVn9MZ30xmksGp3eqs547PvAp8hg/CP4LPD8IWzA5So13XwKcSa/vMTla4u4g==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Run Task"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/tasks/run"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Run a task
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"cmd":{"type":"string"},"mode":{"type":"string"},"node_group_ids":{"type":"array","items":{"type":"string"}},"node_ids":{"type":"array","items":{"type":"string"}},"param":{"type":"string"},"priority":{"type":"integer","format":"int32"},"spider_id":{"type":"string"}},"required":["spider_id"],"title":"Run_taskInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"string","format":"objectid"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGoMongodbPrimitiveObjectID"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

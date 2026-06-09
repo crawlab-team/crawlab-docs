@@ -1,0 +1,71 @@
+---
+id: delete-schedule-by-id
+title: "Delete Schedule by ID"
+description: "Delete a single schedule by ID with deletion prevention checks"
+sidebar_label: "Delete Schedule by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVWNtuGzcQ/RVinlpgHbtpgwJ6cyPBENKLYNlPhiFQy5HEmEuuyVknqrD/Hgy5a+uyijZIDaRPtpZnbmeGQ3I2QHIZYHAH03yFqjIY4D4DhSH3uiTtLAxgiAYJhRRB26VBERqomK/FeCg+aVoJxRjtrCg9PqGN/+YrzB8CZOBK9JI/jRUMIEJx1mqZzdczrSCDUnpZIKFnfzZgZYEwgLik2Y1S0gr2fbtZIfvgFoJWKDRhIcglbxAy8PhYaY8KBuQrzICNFhIGG6B1yeoDeW2X36p24XwhCQbg5h8xJ62gru/ZWiidDRjYwNuLC/6zq/efD5BB7iyhJV6VZWl0Hrk5/xgYsjn0MRlhhjwzSToZUJJ6oJjbk+GOh91BZZAXPcTfFwnrURKqmaQeIgkrSBcYSBbltgNKEp7xyrbW+bq/1vn6aDw+kXxKj7OM3vl6Smi49avOAK2cG9xmb+6cQWkPBEcNMgqRX++mTFvCJfoOKfK8/7Yj1ZZ+fRv1fMa8YuAskJeEyx7kjVoZMW1l6gwKp/C07F+MqrNm055C/y1Taq1TOFt6V5UzrcKWnPRecgp544UufZ253TPiFIorVi7Gw/Bs7pUMNSZiDztNwCTCGO+185rWPfI9aaFd+Q6lVuh/jG6Q6ghF7opC2iTnTC/LQ0lS5M4YtuisiM3/0BMWKz3mvNdTZ29s9Cu/fStW7naaH7l/cdOfy4C96WSwGHfzyPrm30Ba1NWy9T29campVwDXaCIfV5rE8apkbd45msUbwkmlrIzhIsJ7t7ghLmRlSJAMDyKKcLuuCr48eWmVKyADaQxkEJBLC9UZd5wA970b4zRu42eKX7U/tvGwERGNCK1CJqqASmgrdoI4i4CQ4n69Vrrj03FvXvzo2W93clf+p82XkVE5DN5FnY6D61Xdk4T9SmUTFiXvgN6V8yywJTyLAYfTh4M0xn1CNVOukNp25nDX6GUSEK3AVvz96r1loC34dIz1FN7bLIGkp1nlTQ/Hp4wVEVsfFOEelaKhLwPSZLC57JiQYDcNapJAdQZVqXqfIrcJ2+MUabX2OUVarcdOkYOI+bWTqBd8vvBTJ51aR4LeSlWfOm8IPV7m/1PKWq6SoUOumgduvI977/yhG3z4YAhy2VHuqaSp6ihndqe19d5Z8nyX8eG6eX5eaVpV830napb6retR+odU4hofKwwEEfPLIebWyopWzut/00PlXZeisSX0VhoxRf+EXoxi1HWMklbu5fEfX/t8VsN5OwYI5xut6nh45hW3Wva8aBpTqW/cA27fM2SpP+C6HQ2sUKrYtZuhweVkLJIEG9d24aJoS5mXn4yci8vJ+PDGMZre8IJYOC8aIGTwhD4kwMWb399cxE7nAhUy+tRYbeYk053xyL6Fzcvz//sHKw0ZhJ/pvDRSx8tV5Q2bSQTfwTPBkMFAKx7vrFwgXtps+EZ3601d8+fHCv0aBnf3GTxJr/lRGicxSofmKbuQJuBXAvrpupm3/CxOTFA6PW9zazmxT9JU/AsyeMB1mgTVfJVqks2epYXLPMeStkQOpio8nHkuweHoz9HNCOr6C+4+iig=
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Schedule by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/schedules/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a single schedule by ID with deletion prevention checks
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to delete","required":true,"schema":{"type":"string","description":"The ID of the item to delete","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"cmd":{"type":"string","description":"Cmd"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"cron":{"type":"string","description":"Cron"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"entry_id":{"type":"integer","description":"Entry ID","format":"int32"},"execution_strategy":{"type":"string","description":"Execution Strategy"},"mode":{"type":"string","description":"Mode"},"name":{"type":"string","description":"Name"},"node_group_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Node Group IDs"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Node IDs"},"param":{"type":"string","description":"Param"},"priority":{"type":"integer","description":"Priority","format":"int32"},"spider":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"cmd":{"type":"string","description":"Execute command"},"col_id":{"type":"string","description":"Data collection id","format":"objectid","deprecated":true},"col_name":{"type":"string","description":"Data collection name"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"database_id":{"type":"string","description":"Database Id","format":"objectid"},"db_name":{"type":"string","description":"Database name"},"description":{"type":"string","description":"Description"},"git_id":{"type":"string","description":"Related Git ID","format":"objectid"},"git_root_path":{"type":"string","description":"Git root path"},"mode":{"type":"string","description":"Default task mode","enum":["random","all","selected-nodes"]},"name":{"type":"string","description":"Spider name"},"node_group_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node group ids, used in selected-node-groups mode"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node ids, used in selected-nodes mode"},"param":{"type":"string","description":"Default task param"},"priority":{"type":"integer","description":"Priority","format":"int32","default":5},"project_id":{"type":"string","description":"Project ID","format":"objectid"},"template":{"type":"string","description":"Spider template"},"template_params":{"type":"object","properties":{"allowed_domains":{"type":"string","description":"Allowed domains"},"project_name":{"type":"string","description":"Project name"},"spider_name":{"type":"string","description":"Spider name"},"start_urls":{"type":"string","description":"Start urls"}},"description":"Spider template params","title":"ModelsSpiderTemplateParams"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The spider data to create","title":"ModelsSpider"},"spider_id":{"type":"string","description":"Spider ID","format":"objectid"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsSchedule"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsSchedule"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

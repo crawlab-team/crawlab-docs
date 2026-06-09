@@ -1,0 +1,75 @@
+---
+id: get-node-metrics
+title: "Get Node Metrics"
+description: "Get the metrics of a node"
+sidebar_label: "Get Node Metrics"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVF1v2zAM/CsCHwejSbsNA/zWbl0QFFmDfjwVQSHbtK1WllyJzpYa/u8DZadNm8DosCfD4pF3OpFsgWThIb6DXzZDD6sIMvSpUzUpayCGGZKgEkWF5FTqhc2FFMZmCBHYGp1k3DyDGAqkew7cD1CIoJZOVkjomKEFIyuEGHKlCR1EoJjgqUG3gfe0PwNGbIM+LbGSELdAm5preHLKFONpXRe9cNaywHHGpSxQmKZKgrQ9QmUIixAaS8utqyT18M8nAZzLRhPEx7tqvHr+iJoB9m9ahqQRJdOuW0Xg0NfWePRc+GQ65c/bcpcXEEFqDaEhjsq61ioNDz558Axp97XZ5AFT4rd33B6kegJ0zrr99+siqNB7fpxDMU+SGn8g1EVAijQffbeGnNUanb8arrSQ9cwurClsliydqhSpNV4GYfMfn2aKyiZZ2Ay1X4RWha7jil8OmXAmM3GFTw16goA53sfcGtlQaZ16xoxBXw8VmhtCZ6QW1+jW6MR5cKQLDlBphwkKQ0MlxDDhWfKT12HymDZO0eaaLe9dlbW6sY9odhyStbrAzba5SpRZaJSh8U6Xc9FnMLEyuQ2pWyud/K1lIk6X873eujq/vuGAyK0TAxAiWKPzPWB69O1oyrevradKBk0DK+8QXi9i8XKZN8Xb1y4b3TfDFQn/0KTWUhmma5zmCr1rdxBcg2BqoFpFUFpPHGrbRHq8dbrr+LgfPN5LmfIy0ZhBnEvtcUTdu7V0UNAjbnaX3FrqhkHA8/9xprd7ZYRo2Gz/QzOsjBGSAfFKsuIfp5gF4rtVF21bjf3sc07TFGvaydrbH1zlpfln5zfQdX8BeBw5Ow==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Node Metrics"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/nodes/metrics"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the metrics of a node
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"filter","in":"query","description":"Filter query","schema":{"type":"string","description":"Filter query"}},{"name":"page","in":"query","description":"Page number","schema":{"type":"integer","description":"Page number","format":"int32","default":1}},{"name":"size","in":"query","description":"Page size","schema":{"type":"integer","description":"Page size","format":"int32","default":10}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseMapGoMongodbPrimitiveObjectID*GithubModelsMetric"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

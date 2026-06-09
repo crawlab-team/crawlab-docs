@@ -1,0 +1,67 @@
+---
+id: delete-git-list
+title: "Delete Git List"
+description: "Delete a list of gits"
+sidebar_label: "Delete Git List"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVt9P2zAQ/lese86gm5gm9Y1BVVWwDRXYS1VFl+TaGJw42BdYV/l/n+ykI9B0zZ6aJt99vvvul7fAuLYwXsBUMiwjyMimRlYsdQljuCRFTAKFkpaFXom1ZAsR6IoMeswsgzFkARWvJcceBxEYspUuLVkYb+HTaOR/3jL/uIIIUl0yley/YlUpmQbO0wfrIVuwaU4F+ifeVARj0MkDpZ6/Mt4Dls0BGfIAVCyzDsiykeUa3gc8u4QIVtoUyH+ZZAYuAqw5jxvjYyTnNeciQBo7HVe1Uh27RGtFWPYZahGwLoJU6ZJipde2Y4nG4AYikEyF3ffEvWe88CQikHhKQ8iUxcjHg7hosIJlQZaxqLrCZMj0wX/psiab4azJ5pDOaW0MlRwnBss0H8DY4EWLdxGQMdocN5wEmIugxGJAUr9jE22F1r5oM6CWbnZI5xtiNSSNB0p3VSsV97vpIsjR9uh0MLDgTaGZYjaYPvYCXpPeE2V/FfS3hgtkrPyrn6mdSp7Tar9M516eVqa4rrLBVeoNRWsgkA96Zxm57mmY93y3Dc5F8D9e3LcOHO+VHeuQXtmxHu6V2qgBNPPrgLVkhlX6/Q7p9vJ0l5Pw01awblWH1/x+0xkpn+J/NKGLoCBrcd1fmIfS1C2jC12y0UqRsfN2zUwl53XSOd95g7O+vfMVMzGnp5pscPNs9HEfc1/6Ya+N/E1B5s99RLOSvUxK3JJ5JiPacRIC5Fy/7kXfzcg5jOG03Z6W0tpI3tz6/dZ0OFbyTj9S2Z0RlbyiMCT8cTlhRgZ2TQ3nNzPRWPgjZbnSwXSnkcEXhYk4v5ntt8zk9s5/ECttRAuECJ7J2AYwOvlyMgqjTlsuMPjUntreB6aSxXWz6d9wb183+sGrQxsd0y8+rRTKslPIjU4LCNBlBLm27P9vtwlaujfKOf/6qSazgfFiGcEzGomJj3mx9KOwUWm82MIjbbxMaUqV9/MZVd2o+u6e4ZadjF1Orid3E3DuDx3THWg=
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Git List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/gits"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a list of gits
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"auth_type":{"type":"string","description":"Auth type"},"auto_pull":{"type":"boolean","description":"Auto pull"},"clone_logs":{"type":"array","items":{"type":"string"},"description":"Clone logs"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_branch":{"type":"string","description":"Current branch"},"error":{"type":"string","description":"Error"},"name":{"type":"string","description":"Name"},"password":{"type":"string","description":"Password"},"refs":{"type":"array","items":{"type":"object","properties":{"full_name":{"type":"string"},"hash":{"type":"string"},"name":{"type":"string"},"remote_track":{"type":"string"},"timestamp":{"type":"string","format":"date-time"},"type":{"type":"string"}},"title":"VcsGitRef"},"description":"Refs"},"refs_updated_at":{"type":"string","description":"Refs updated at","format":"date-time"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"url":{"type":"string","description":"URL"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsGit"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsGit"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

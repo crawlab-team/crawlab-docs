@@ -1,0 +1,75 @@
+---
+id: create-notifications-alert
+title: "Create Notifications Alert"
+description: "Create a new item"
+sidebar_label: "Create Notifications Alert"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV01v2zgQ/SvCnJnEcRtkV7c0DXaNNm2QOJc1AmMsjW22EqmSI6euof++ICnb9Ffte+OTTL55HA5nHjkLYJxYSAfwRbMcywxZapXcFGTYwouAnGxmZOVGIYVbQ8iUYKLoNZFMJQjQFRlv1cshhcwjhipis0N0dCDA0I+aLH/Q+RzSBWRaMSl2n1hVRQu/+GbdWguw2ZRKdF88rwhS0KNvlDmeyrhFWZJ1sznyCaihzCOQZSPVBLb31/sIAsbalMgrJplDI9p95UPk4ywhSnnCsiTLWFYxaY5MZ24mZh3NT2cdzQ/5uIE/Rvcx+tcIIIWjguIQjbQuCNWO4V2LbARM0Q5LYiOzIaOZEJ9g/i/aJNgkrU0joEDLUk2GljKtchvRSMU0IbND8zlYJEuLKCRS8buuZ6UZFccj8dnDGgHtVhSWdNzqPuzBg9e2YUsn5dp9HITkcOad5s6X1o9Qjdoct/i6RDYCWrdnWNTxWqouR3ti3w8uB3Tk9bjQ6I+TqawKJwPf6YTE7rfoxKEbAXWVn1xqzwF7QqktWU8ptSXroVLbrjXoTylxMpSwTsJCIIAlF26Re51TYWN99fLqaZwiSuPqbhB07GVtd3tQSnuqqp19YLCVVjaIXLfT8Yq4edCfQLxp7ZvWvmntm9b+sVorgIzZd1Q+n6zFyZ6DbwRYRq7tnqkmEmqt2OiiIGMfWzX+R/K0Hh1Wfmf+fp9Yf8A8eQzPZPCYy13Ms8Kap9rIX0EarvYR9RSTUVgkT2RmZJI7v/0mlM9Uu7d6pa3XbuQppHCxcdFcYGgBBFjKaiN5/uSuiKDvWMm+/k6x8mElP5E7QukWnxLmPplDQcHNQy8JFs4Bd+k8rluBu59YVgXF14sv6nXGxBcCdDvd92ed67Pu3/3Lq/TqMu3+dd65vvwPNiX+UL6thlcqzKamvfoaJnb0srNSuzXZhpztDEdKtZ7bxq7VZD22qRWd7WpfA+M6/l2E4sqMU1mqsfanuXp74GuBo+TmobcTwce7p76bSMbaJC0QBMzI2ADonF+fd1xiugQr0adJu9u2gYxLwoZuc3uZqD3c23a2ecf0ky+qAqW/WWvj76CQ0QPYyGgQgKu2dupSPx3AYjFCS8+maBo3/KMmM4d08CJghka6BHH/3PUbMjodLCCE/jZ4d9Z3fji4P6Ldx1UjlhY3WUYV/xb7ElXnw9enPggYtc1yqXNnY/DVNdL4Cin4pAl7SxdhbAEFqknt1QwCp/v9D2bPfj0=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Notifications Alert"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/notifications/alerts"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new item
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"has_metric_target":{"type":"boolean","description":"Has metric target"},"lasting_seconds":{"type":"integer","description":"Lasting seconds","format":"int32"},"level":{"type":"string","description":"Level"},"metric_name":{"type":"string","description":"Metric name"},"metric_target_id":{"type":"string","description":"Metric target ID","format":"objectid"},"name":{"type":"string","description":"Name"},"operator":{"type":"string","description":"Operator"},"target_value":{"type":"number","description":"Target value","format":"float"},"template_key":{"type":"string","description":"Template key"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsNotificationAlert"}},"required":["data"],"title":"Create_notifications_alertInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"has_metric_target":{"type":"boolean","description":"Has metric target"},"lasting_seconds":{"type":"integer","description":"Lasting seconds","format":"int32"},"level":{"type":"string","description":"Level"},"metric_name":{"type":"string","description":"Metric name"},"metric_target_id":{"type":"string","description":"Metric target ID","format":"objectid"},"name":{"type":"string","description":"Name"},"operator":{"type":"string","description":"Operator"},"target_value":{"type":"number","description":"Target value","format":"float"},"template_key":{"type":"string","description":"Template key"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsNotificationAlert"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsNotificationAlert"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

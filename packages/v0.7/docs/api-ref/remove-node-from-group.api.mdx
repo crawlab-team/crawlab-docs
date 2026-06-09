@@ -1,0 +1,71 @@
+---
+id: remove-node-from-group
+title: "Remove Node from Group"
+description: "Remove a node from a node group"
+sidebar_label: "Remove Node from Group"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1v2zAM/SsGTxugNdmwYYBv3RoURoeuSNtdgqBQbCZW60gqRWfLDP33gv7I2ibYiu5kWXwkH59INsB6FSCdwbkrMDklV/sAcwUFhpyMZ+MspDDFtdtgohMrqCW59XBeiQcocB5JCzorIAVq8TeCuBH0zQDzmvQaGUlyNmD1GiEFU4ACI4m85hKeZz/fJUqyE1BAeF8bwgJSphoVhLzEtYa0Ad56iReYjF39I06MakdAiGYvIJGdJOySrrr/JfIkVoxzCRe8swGDRPgwHsvnqeP3M1CQO8toWaza+8rkre6j2yCQZp+EW9xiziI+ySux6RIgkaN9rlHBGkPQKzxoC6y5DgdMUQEbruTqq7NMrqqQwg9nimlfFsQoqI+HCvuii2SK9zUGhhbzfh9zbXXNpSPzGwsBfToUKLOMZHWVXCJtkJJJW2Vsq+LSSXMWWCFj24xcQgojef13bV+EUWOK2F6EUdN1RQQFAfOaDG8vRdtOPu3NlbtD+0gK7c0ZbocuKlEXSKCGHju+yJLOQ9gYu3St66AZ6Z+VXiTHF9leu0wnl1diSJaOkh4ICjZIoQOMjz4fjUUS7wKvdcupz9pP7vlubk/7SXySovnTVC+Y9b5cxl888pU2VlLXVEmcTtMZPNIUFKTthLeyyl8/bnMFpQss8KZZ6IDXVMUo1/c10hbS2VzBRpPRC9Fo1kBhgpwLSJe6CviXKt5M+9l8mzxfHwfpD09o5f02uqrlDxTc4bZbULItXp/+2eJ4BYVesziPamgtUaQzHuc5en7ktrcYZL/sJuBk8m1yNYEYHwBvYgZH
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Remove Node from Group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/node-groups/{id}/nodes/{nodeId}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Remove a node from a node group
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Node group ID","required":true,"schema":{"type":"string","description":"Node group ID"}},{"name":"nodeId","in":"path","description":"Node ID to remove","required":true,"schema":{"type":"string","description":"Node ID to remove"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -48,7 +48,7 @@ job_board_scraper/
   "dependencies": {
     "axios": "^1.3.4",
     "cheerio": "^1.0.0-rc.12",
-    "crawlab-sdk": "^0.6.0"
+    "@crawlab/sdk": "^0.7.0"
   }
 }
 ```
@@ -58,7 +58,7 @@ job_board_scraper/
 ```javascript
 const axios = require('axios');
 const cheerio = require('cheerio');
-const { saveItem } = require('crawlab-sdk');
+const { saveItem } = require('@crawlab/sdk');
 
 // Configuration
 const baseUrl = 'https://example-jobs.com';
@@ -172,7 +172,7 @@ The main integration points with Crawlab are:
 
 1. Importing the Crawlab SDK:
    ```javascript
-   const { saveItem } = require('crawlab-sdk');
+   const { saveItem } = require('@crawlab/sdk');
    ```
 
 2. Saving data to Crawlab:
@@ -251,7 +251,7 @@ For websites that require JavaScript rendering, you can use Puppeteer instead of
 // "puppeteer": "^19.7.2"
 
 const puppeteer = require('puppeteer');
-const { saveItem } = require('crawlab-sdk');
+const { saveItem } = require('@crawlab/sdk');
 
 async function scrapeDynamicWebsite() {
   // Launch a headless browser

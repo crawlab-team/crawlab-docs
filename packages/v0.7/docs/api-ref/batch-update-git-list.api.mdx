@@ -1,0 +1,75 @@
+---
+id: batch-update-git-list
+title: "Batch Update Git List"
+description: "Batch update multiple items with partial fields"
+sidebar_label: "Batch Update Git List"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttu20YQ/ZXFPDOxW7QooDfZMVwhaWvIdl8EgRiSI3HjJZfZHVpRBf57MLuUzdhUTLT1iynyzO3M9QCMWw+zFVxrhnUCBfnc6Ya1rWEGF8h5qdqmQCZVtYZ1Y0hppsqrneZSNehYo1EbTabwkIBtyKFILwqYQSbyaZRPt5pToz1DAo6+tOT5whZ7mB0gtzVTzfKITWN0HjScffbixAF8XlKF8sT7hmAGNvtMuehpnNhjTV6+6sIPQOgc7iGB4O3gvWen6y10L2O9K0ktPnhlN4rLY5Bs++gF3z+N+IFFoUUNmpuhR6M2ejZ72a6LbGhHhaRBBxZ7S+sEWLOhYyZeMrmom1ZURCW+sbWPTPx8fi7/vjf+10dI/i+qC+QJqFQXr4l/ycniAySwsa5CftKkC+EbWy7TKPyWknnLpQqQKGfTpjVmIJdZawjrMUGrArZLIDe2ptTY7X+po0tRooISUekImYoU+e0gLiNWsa7IM1bNkBhJ/Dv5MtSa7adrzfaneM5b56jmNHNY5+UEjRGvenyXADln3duCVwHWJVBjNSGpf2KMtkHvd9ZNqKWbIzI0xGZKGk+U7qY1Jh13s0ugRD/C08nAgjeVZUrZYf4wCnhO+kiU41Uw3hpd9zw1/s79teYlbV6X6VLo6Wnq58q0KhXBfogVCvmkd56R25GGeanvNuKe5us0L+57B97ulaPWKb1y1Hq6V1pnJqhZfgpYT25apd8fkd3oypBpO1hFz/n9wxZkJMU/aMIugYq8x+14YZ5K07CMLm3NzhpDzi/7NXOtuWyzgf2whH4Z2zsXWKhlXPgQMD+9xtzXMuyt0/9QoPnXMUWLmoUmo27JPZJT/TgJAXJp5eBoZE1KMyOXMIOzrWbZp57y1mne38p6iw2Ojb6zD1QPR0SjP1KYEWKtJCzIwbGnYX6zUFFCLMrCXD5fMVdfsWoMPV0hqyON68HZIHK63thg8kitw53BTM1vFq877er2Tj6ojXWqB0ICj+R8BJy//+39eZiQ1nOFIZbe23i5xXpW15rVp3h5fWdhcHn9i1OvZ43pK581BnU96I/I/woC/+sESutZfh8OGXq6d6br5PWXltweZqt1Ao/oNGbCyWotEzayP1sd4IH2fQ1Sze/uxKrATRtz9uKI6ZKjxDzPqeEfYteD0rmZ313+Dglk/VFa2UKEHO7kYMUdzCDctyIeKii8O4DBetuG7oKoVP6+ASPr6Vg=
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Batch Update Git List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/gits"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Batch update multiple items with partial fields
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"type":"array","items":{"type":"string"},"description":"The IDs of the items to update"},"update":{"type":"object","additionalProperties":{},"description":"The update object"}},"required":["ids","update"],"title":"Batch_update_git_listInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"auth_type":{"type":"string","description":"Auth type"},"auto_pull":{"type":"boolean","description":"Auto pull"},"clone_logs":{"type":"array","items":{"type":"string"},"description":"Clone logs"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_branch":{"type":"string","description":"Current branch"},"error":{"type":"string","description":"Error"},"name":{"type":"string","description":"Name"},"password":{"type":"string","description":"Password"},"refs":{"type":"array","items":{"type":"object","properties":{"full_name":{"type":"string"},"hash":{"type":"string"},"name":{"type":"string"},"remote_track":{"type":"string"},"timestamp":{"type":"string","format":"date-time"},"type":{"type":"string"}},"title":"VcsGitRef"},"description":"Refs"},"refs_updated_at":{"type":"string","description":"Refs updated at","format":"date-time"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"url":{"type":"string","description":"URL"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsGit"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsGit"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

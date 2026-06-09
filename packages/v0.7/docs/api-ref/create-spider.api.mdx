@@ -1,0 +1,71 @@
+---
+id: create-spider
+title: "Create Spider"
+description: "Create a new spider"
+sidebar_label: "Create Spider"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWEtv2zgQ/ivEnOXE8TbIrm5pGxRGsagRO5c1DIMWJzYbSVRJKonX0H8vhpQs+pUohz0sYJ9s8psZznAen7kBy5cG4imMCylQG5hFINAkWhZWqhxi+KKRW2Sc5fjCjENBBKpAzQkxFBBD4jDz7a7GXyUa+1mJNcQbSFRuMbf0lRdFKhMnefnTkIENmGSFGadvdl0gxKAWPzGxEEGhyY6VaGhXcNsBNZciABmrZb6EfaeGXyGCR6UzbreapIAqgiTrIH73iklpkSUqy3ju5VTayfJXbjlLVJqSRZUzKY6ehMQKjQm3KCC2usTaRs4z/LgVJ0Ua3EWJObfv6/AXL5iVGRrLsyI8qOAWe7QTal2su2tdrE/dAF3zghvsHE4Cs+HxOJK+xQeC5nQ10drZflc6+FVFsJS2kwP3mLp4fJOWnc5K0qaVsvOC29X7SkkZwZmDVxFkSnQJAD7yMrXMcvPEnEgEmJcZ9QfNc6EyiICnKURgkFILRS9XAg3Mqgi6Bdn3mW2ISXy+1Kos5lKYQJxrzSlFpMXMHFN7/K6P+kNGmDPCpDARKw0KJnO240TPAYz3uznZf3ym06dpz1FwzbMP3p2XIWEtlZY2rEuZW1y6Lr2rYNRAAzdkbv8YOKRTDvG106nIuU7ZPfLYNzLbYlZQBXTOnK1AIDx3Dpv3hwNPU/WCYi5UxmV+9A53jd56AdYIBP53y/cmAk3C+xnZUXivWIzl2s5LnXY4+JiwzGGrgyTcCyWrwxeBlTYlpX8rganxsEmNGnlQFUFZiM5T5MFjO0yRRmuXKdJoPTVFDjyerLAmL4zmC7OK+al1wmmngmiM1DSAp558zFrwl5DyDPOitFBVXsgUKjc+3wb9vmMuO2f58R2iMyc6c6IzJzpzojMnOnOiMyc6c6L/ByeKALVW+vAs1E7RGL48coH+kmx55ILoTFtCpXKraTprc19TqG/SrsrFHi0jmU/HaNVnLti9f3gCh7k6xDzkvLQrpeW/6Crt+piiYW5R5zxlY9TPqNmd87lyPtqVogevQhlXSG7ywKWpH89oBiQldYwx8be6vgo5UU8YjkteyO/ouibZWyH3z2a+AOB2NGRegmwSI7xv39PuXnlWpBhyP9d12qxwbC34uSVIwVpAeWDQH3zq9W96g78mV9fx9VU8+POif3P1D+ySmCDtQjISLC8O7OzGdbvc8IDdlWCWtxt+SLeTdt/C/qycNluzcFqFq/XsaFW08+B6t5G3kLYhH64Fffagk4ZGwgbZru+0vmA56GpBHYVN5q17C9tGWGsyf1QuDbd/YvhLyhfsdjQ8JGF34wltsEelWQ2ECJ5RGw/oX9xc9F3zV8Zm3OV37Uf9Zjxu3oP3SOP2v8+Jx+W6Siy+2ssi5dKRx1KnJOsTZAqmfa9eUTHGU9hsKCsfdFpVtPyrRL2GeDqL4JlryRfk8pRYWV1w8XQDT7iuew/mtjchwwRPS1+me3/MqqiRuE0SLOyb2FnQL0Y/xhOIYFE/iG+z+oUey/kLxODe1EnaZZJb20DK82Xpmip4nfT5DXQ9Ll4=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Spider"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spiders"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new spider
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"cmd":{"type":"string","description":"Execute command"},"col_id":{"type":"string","description":"Data collection id","format":"objectid","deprecated":true},"col_name":{"type":"string","description":"Data collection name"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"database_id":{"type":"string","description":"Database Id","format":"objectid"},"db_name":{"type":"string","description":"Database name"},"description":{"type":"string","description":"Description"},"git_id":{"type":"string","description":"Related Git ID","format":"objectid"},"git_root_path":{"type":"string","description":"Git root path"},"mode":{"type":"string","description":"Default task mode","enum":["random","all","selected-nodes"]},"name":{"type":"string","description":"Spider name"},"node_group_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node group ids, used in selected-node-groups mode"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node ids, used in selected-nodes mode"},"param":{"type":"string","description":"Default task param"},"priority":{"type":"integer","description":"Priority","format":"int32","default":5},"project_id":{"type":"string","description":"Project ID","format":"objectid"},"template":{"type":"string","description":"Spider template"},"template_params":{"type":"object","properties":{"allowed_domains":{"type":"string","description":"Allowed domains"},"project_name":{"type":"string","description":"Project name"},"spider_name":{"type":"string","description":"Spider name"},"start_urls":{"type":"string","description":"Start urls"}},"description":"Spider template params","title":"ModelsSpiderTemplateParams"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The spider data to create","title":"ModelsSpider"}},"required":["data"],"title":"Create_spiderInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"cmd":{"type":"string","description":"Execute command"},"col_id":{"type":"string","description":"Data collection id","format":"objectid","deprecated":true},"col_name":{"type":"string","description":"Data collection name"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"database_id":{"type":"string","description":"Database Id","format":"objectid"},"db_name":{"type":"string","description":"Database name"},"description":{"type":"string","description":"Description"},"git_id":{"type":"string","description":"Related Git ID","format":"objectid"},"git_root_path":{"type":"string","description":"Git root path"},"mode":{"type":"string","description":"Default task mode","enum":["random","all","selected-nodes"]},"name":{"type":"string","description":"Spider name"},"node_group_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node group ids, used in selected-node-groups mode"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node ids, used in selected-nodes mode"},"param":{"type":"string","description":"Default task param"},"priority":{"type":"integer","description":"Priority","format":"int32","default":5},"project_id":{"type":"string","description":"Project ID","format":"objectid"},"template":{"type":"string","description":"Spider template"},"template_params":{"type":"object","properties":{"allowed_domains":{"type":"string","description":"Allowed domains"},"project_name":{"type":"string","description":"Project name"},"spider_name":{"type":"string","description":"Spider name"},"start_urls":{"type":"string","description":"Start urls"}},"description":"Spider template params","title":"ModelsSpiderTemplateParams"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The spider data to create","title":"ModelsSpider"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsSpider"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

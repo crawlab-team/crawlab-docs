@@ -1,0 +1,71 @@
+---
+id: create-project
+title: "Create Project"
+description: "Create a new item"
+sidebar_label: "Create Project"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1v2zAM/SsGz0qbBC26+dYvDEGxNUjSy4KgoG02VmtbqkQ3ywL/90Gykzpp2ua4Q32yLfKRIt+TuALGuYVwCkOjHilmCzMBCdnYSM1SFRDCpSFkCjAoaBFIphwEKE0G3foggRBib3GvawgQYOi5JMsXKllCuIJYFUwFu1fUOpOxdz1+tA5/BTZOKUf3xktNEIKKGhxtXCCWZN1qgnyA1b1MWkaWjSzmsLunwRUIeFAmR94gyQQq0ewluUf+HKWuTBKwzMky5roNmiBTx620UaPl4ajR8r0ct+w/g7tqfVUCCszpc6dfWOdd6uTgatzVtgdUY416SDXWqO9VY7ccMEkpcEwJWAV1IBDAkjMX5KdKKLMN172zo6o0lDgNeILNXq0vt3g9KHTpfGovq1Vha8b1u11Pz600bm9AfBH/i/j/J/EFkDHKvM2iEpCTtTjfU6tKgGXk0u5ZqlqqUQUblWVk7KiRyQ/JaRntis85nezTzgUmwai+QsDb9N7a3BVYcqqM/EueGqf7gAYFkykwC8ZkXsgE137Tld8kp8rdXVpZLyXkFEI41utrUICluDSSl2On0lpiqOVEPVGbfKjlDbkWSRcwJUzIwJptcD4cBLWHC+p0P3q9Gq//YK4zaivca/iVEW1NQr/bP+l0zzr975PeaXjaC/vfjrpnvd+wrbL3+LT53aS2+W5T/aMgbfK2+y6LB+ULsjk1cZFhFJwPB2+SGF2PJ24heFAmaAxBwAsZWxt0j86Ouq6fri85+ko3CTdzyHAzZeycBpvDdu/E0rSL6Q8f6wylPxNKkznPuvlT0K0ZKHW8CKewWkVo6c5kVeV+P5dklhBOZwJe0EiM3Jans0qsWx9OV/BEy0YHVHBn4iI786ysCbNzEVRi7XEex6T5Q9tZi7rD2/EEBETNlJWrxPkYXLgJDBcQgp/UnLdnr/+3ggyLeekFDjWme/4BtJ1sXw==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Project"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/projects"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new item
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"name":{"type":"string","description":"Name"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsProject"}},"required":["data"],"title":"Create_projectInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"name":{"type":"string","description":"Name"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsProject"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsProject"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

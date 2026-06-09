@@ -1,0 +1,71 @@
+---
+id: restart-task
+title: "Restart Task"
+description: "Restart a task"
+sidebar_label: "Restart Task"
+hide_title: true
+hide_table_of_contents: true
+api: eJx9VF1r21AM/StGTxtcmmxsDPzWrWWEMhqS9CmEodhKchv73ltdOVtm/N+H/LG2i+mTY0s60jk6Sg2C+wjpGlYYjxE2BnKKGdsg1jtIYUFRkCXBRDAewYAPxKjBWQ4pcBf+2QcDMpYkxApZg8OSIAWbgwGraAHlAP+30M7J7AYMMD1VlimHVLgiAzE7UImQ1iDnoEhR2Lr9Gwg7zyUKpOC3j5SJzaFpNgocg3eRomJ9nE718Rri/g4MZN4JOdEohlDYrCU6eYyaUl+O0zVR3qyyiO0a5Cgvs5AZz6qAUBnHyIwNbYCYPV+mNwZKihH3NBqLglKNdFFEsVLop2/eCfuiII6LXpjv/od3e59v52xLK/ZE9+0ssxtoGq39NCbaV8yTBT1VFAXanA+XOQ8OKzl4tn8o16TPY0AzJ8QOi2RJfCJOblvuTctVDl6dFnxslVYHpTBRw8VJbfNm0nsQDETKKrZyXuqiul1gsCt/JPdyH8He0Xmw5IEwJwYzmPV6Pku6Cm1v3c63pYN0jL8K3CbX89mFCxe3y5UGkp3npE8EAyfi2CVMr75cTVUD5VJiO1PfdTizVXdHr4DrZ19enmPPSei3TEKB1il+xYWWdVqtodUKDKTtIQ5ybQwcVNN0DXW9xUgPXDSNfn6qiM+QrjcGTsgWt0p9XUNuo/7OId1hEemNMd8t+kt+nzzf5uiow06cLuSERaVvYOBI5+6fo9k0ZliSDtEFrrOMgrwoubhXPft/5pnfL1fQNH8BNFOqbA==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Restart Task"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/tasks/{id}/restart"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Restart a task
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Task ID","required":true,"schema":{"type":"string","description":"Task ID","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"string","format":"objectid"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGoMongodbPrimitiveObjectID"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

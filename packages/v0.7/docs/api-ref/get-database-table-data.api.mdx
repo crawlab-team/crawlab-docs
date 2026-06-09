@@ -1,0 +1,75 @@
+---
+id: get-database-table-data
+title: "Get Database Table Data"
+description: "Get the data of a table of a database"
+sidebar_label: "Get Database Table Data"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVttO20AQ/RVrnlrJIoG2quQ3WhCK6AVxeUIRmtiTZMHeNbtj2mDtv1eztoMhbhroU2LPmTlnZ+fiGhgXDpJrOELGGTpyMI0hI5daVbIyGhI4IY54SVGGjJGZRxgxznJq/matH8RgSrIoPpMMElgQ33TGm+AQHiGGEi0WxGSFuAaNBUECKoMYlPCVyEt4KWJyJHydjJbR0n2lLGWQsK0oBpcuqUBIauBVKUEdW6UXuwWbG1sgQwJmdkspqwy8j9fyesAg8r4iu9oI/AMLGgi9q65B976KEhf/UHCGC4p0VczIDhErzbQIpm1u61QozR8OAniOVc6Q7PfVOPW4i5oW9jotrdMWJeO+lFBgu99NB39rAW3G8n4q4VxptDRRUsPBeCw/zx1/nkIMqdFMmsWKZZmrNHTN6NYJpN4U0RSkdI6VHmPVEIR2ekKhtSinVkyFG/LGLFNChPlZP473Pgay1tjNc/sYCnJOqm7I5hi5coMmNoz54GW/uFJhZ8W5gL4azdbkOVn3TTk+b9P5HcuLEHiimewcU4pqDz4I/ziU5S+YRed0X5FjCJj9TcyVxoqXxqpHygT0aShQINSYRxdkH8hGxyFNPqSFl6adc2Gm8RISGHVd60a1yvwo1IYbtYPPUVpZxasLueDmDrFUl+aOdP8eS3VKq66Wl4RZSFtb6Idnk6jxEBVKz01w7RJo8VeOs+jwbLJRs+fHF5diiObGRi0QYngg6xrAeO/z3lhSURrHBQZNLausgG5DRJdh+h81Z3rGUT+V9s5boz01028elTkqLQoqG2qnyer1evg6iCEJi6JJrPCLjGkMS+NYoHUtwCubey+vm1EgayZTTnwySOaYO9qi/C9DfFDoHa2eL4cHzCuBgQyn3Tmfz98tVO0G+B+adrRuIWkRbyR5d95O1ffR0MzdwttBnoin8mBVeP+6W+ypGFz3gzK6FtSrvopOnnwSTH3c9aToaQyHaUol91w2xrocZD0yTo4vwfs/YEAyRA==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Database Table Data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/{id}/tables/data"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the data of a table of a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the database","required":true,"schema":{"type":"string","description":"ID of the database","format":"objectid"}},{"name":"database","in":"query","description":"Name of the database","schema":{"type":"string","description":"Name of the database"}},{"name":"page","in":"query","description":"Page number","schema":{"type":"integer","description":"Page number","format":"int32","default":1}},{"name":"size","in":"query","description":"Page size","schema":{"type":"integer","description":"Page size","format":"int32","default":10}},{"name":"table","in":"query","description":"Name of the table","required":true,"schema":{"type":"string","description":"Name of the table"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","additionalProperties":{}}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"},"total":{"type":"integer","format":"int32"}},"title":"ControllersListResponseMapStringInterface {}"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

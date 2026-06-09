@@ -1,0 +1,71 @@
+---
+id: get-user-list
+title: "Get User List"
+description: "Get a list of users"
+sidebar_label: "Get User List"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVt9v2zYQ/leIe1Ybt9swQG9ZlwVGMyxI4qcgME7S2WZLiSp5yuYa+t+HI6VU/hFZbZ8Mmd/33cfjkXc7YFx7SB9h4cl5eEqgIJ87XbO2FaRwTaxQGe1Z2ZVqAigBW5NDQcwLSGFNvJSVpcAggRodlsQCTR93UGFJkMJKGyYHCWjR/dKQ28JhtL8CRvWLPt9QiZDugLe1aHh2ulqP09o2eYlZ45rGI97imlTVlFmwdhRQV0zrsDRGW1lXIkf4L+8DeIWNYUjfDd14/XWKmw72fV460oiT2Z4V63jcyr11rGz48t9xFAe0l/DwZqkLaNunBBz52laevKi9n83kZ1/kn4+QQG4rpoplFeva6DwU3MUnL5DdsSGbfaI8lJ+T8mQdAxTIQxQ6h7JZzVT682wxfXbP8z+HmY9KstkEckfIVCyRz6t8iFjFuiTPWNZD0QKZ3sjKUDXbTlfNtq95pBK1OS90FWBtAivtPC9jHZ2/mM6zCtg2AYOTiTc44DlrJlDuBNWhJx2bENTrZ+es5SUWpa4GUpm1hrA6oWVZRfAedXngvecHUMPkJ5RmZ79tE2jqYnI9LSJ2Qj31qlPqqVd9vZ6kE0w75EWPlK3tLz1sSMnNVWxVtAcJsGZJJvxtCzJe2IFJzll3Il8JlOS9dIBTa56Rm1NpToAtozn58B48rxK9N/XBVuysMeT8jfZ81z1y15o3TbbnWFi/nnr2/sBC3dGXhjxDwLw7xiwqbHhjnf5KIdu/nRKaVyyZNeqe3DM5dRUy1IaM8MZ2PTt0at5AChd9X/eUN07z9l4e11icWOsH+5mGlwBr/ZG2ffvYEBYhOV1rubydq8iQgLpa2UDt0+TwX4OZurydH1+iq/sHWVAr61QHhASeyfkImL39/e1Mdl1bzyUGT11UmVMkv+omziB7yrtvzeSVgabbGdN/fFEbjNe4caEKYpIeoeknpI31LH/sdhl6WjjTtvJ37KMy8RTaY2aogHSFxtOIm4OB56SNz7Qdjk/PaBoBgbTz6ZH2J5aRQN3M9DNhumFkJEiH+MEgB0PGWJw453yL8yQfTksgSB+f2qSvXzm3yLnMc6qHrKPxQ1RebtL11QO07f8Yo9aV
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get User List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/users"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a list of users
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"filter","in":"query","description":"Filter query","schema":{"type":"string","description":"Filter query"}},{"name":"page","in":"query","description":"Page number","schema":{"type":"integer","description":"Page number","format":"int32","default":1}},{"name":"size","in":"query","description":"Page size","schema":{"type":"integer","description":"Page size","format":"int32","default":10}},{"name":"sort","in":"query","description":"Sort options","schema":{"type":"string","description":"Sort options","default":"-_id"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"email":{"type":"string","description":"Email"},"first_name":{"type":"string","description":"First name"},"last_name":{"type":"string","description":"Last name"},"role":{"type":"string","description":"Role"},"role_id":{"type":"string","description":"Role ID","format":"objectid"},"root_admin":{"type":"boolean","description":"Root admin"},"root_admin_role":{"type":"boolean"},"routes":{"type":"array","items":{"type":"string"}},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsUser"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"},"total":{"type":"integer","format":"int32"}},"title":"ControllersListResponseGithubModelsUser"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

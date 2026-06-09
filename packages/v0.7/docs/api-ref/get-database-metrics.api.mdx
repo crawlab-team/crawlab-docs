@@ -1,11 +1,11 @@
 ---
 id: get-database-metrics
-title: "Get database metrics"
-description: "Get performance metrics for all databases"
-sidebar_label: "Get database metrics"
+title: "Get Database Metrics"
+description: "Get the metrics of a database"
+sidebar_label: "Get Database Metrics"
 hide_title: true
 hide_table_of_contents: true
-api: eJyVUz1v3DAM/SsCZzU+pEMDb2lTBN0KpJ0ON9Ay76xUllSJTnow9N8LyvfZm+pFAvlEPj4+z8C4y9Cu4QkZO8wEGw09ZZNsZBs8tPBMrCKlbUgjekNqJE7WZLUNSaFzqj+8zKAhUY7By72d4X61kuO62rHPsQxoMMEzeRYsxuisQcE2r1kezJDNQCPKjfeRoIXQvZJh0BBTiJTYLu1M6OkCZT3TjhJoqMx5CX28h6JhpJxxd4nOnKzfQSka2LKT0MtkDOUMRT55w0PooYUd1d7IA7TQnKZvzgNlSm+URNYZpuSghbkOQaVtmnkImUs7x5C4NBgt/Cv4E21xcqwev39TSynQ8IbJYueWUZdqciM/jbK+gTmCrkdeVlhrQLtkigZpu6zjmHHBoKvhokHoXKUfVg+rUspGxjFTsryv83wmTJQeJ5l+vblMv1RSld8l6CTxgeKRO3QVVCW3fhsq8iD9l4TvDjtR4EYdUUWsd8BohV6FSP5DDlMypHoru+wmpl69U6eM4Cgp7EfrVXTI4gdRlFJeSq7uPt2tFhEyj1hd57GSFPP3t5a9ojSfHfxfP8tBF6Y/3ESH1guF6pf5YK81XOKP7TfHZa5hniX5M7lSJPx7oiRr2pz9UrekYSDsKdUN/qK9yGgMRa7GcpPQuPn1ZLcn0z9//QGl/AXwA3E8
+api: eJylVe9P2zAQ/Ves+xzRwjZNyje2MVQhNMSPfUEVcpNra3DscL4wSpX/fTonKYVmGWyfIufe3Xs++57XwHoRIL2Gb5r1TAcMME0gx5CRKdl4BykcIyteoiqQyWRB+bnSKm/xkIAvkbRgJzmksEC+6YI3bQokUGrSBTKSsK3B6QIhhbmxjAQJGCG6r5BW8Jr+e8SoGFRzTxtqKRuyJRYa0jXwqpSKgcm4xXuK1HWy0VPqBQ6rOdMLVK4qZlH2Dr1xjIsYGkqbeyo0N/APBxE815VlSPe31QTz9BY1Lex9WtqkASXjF1I88bCUC0+sfFz1Howm0pJlGIuw9d/PbjGT2iXJRWKDMXqCq91TrRP4qW2FEnnJHn/Hm+lWSpISZVxmq9y4hXKVtZCAfPTMIqRMFdZ1AmxYlnBGpjBsHvBIKAb2VScQeBVzpHOQAD6W1uddzWkChKH0LjS7OBiPd7X+OIEEMu8YHUtUl6U1WZyg0W0QyHq3fX9ok1zjPlS3s6/eMXlrkcIxcjfkp81YnrdSZVtI5Km34wWGIGPRFwusuQo9obpXQkd4bHhZzd6orZZiH/sa+UXn6hzvKwwMEbO/i7lyuuKlJ/OEuYA+9RWaOEZy2qoLpAckdRSbUcfN89K3thZdjJeQwmjjHqNnhwuYVWR4dSFH15yOLs2lv0O3PQalkavdjtISdR4ntB2zw7OJajKE3Li5j6ldJ0n/snqmDs8mO+N3fnRxKYFobi0QEnhACg1gvPd5bywdKH3gQkdNLasYfNd+dbrZ0AuC9fON/euD0G6V8ZFHpdXGCW1FVqo0HbyGbRPvejhNYOkDS3i9luAV2bqW343lyMORmyAznEM61zbggMrBd6NX4p14zvOb9NBYDYD44Nt5X1r9AFH72PwPTeviAyQt4h9JXpn6EE/zQDzzTGVBpjHc62mddJddTrHJOcwyLLezdpxQqmxG8PjoEur6N7sk+X8=
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
@@ -26,7 +26,7 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Get database metrics"}
+  children={"Get Database Metrics"}
 >
 </Heading>
 
@@ -40,10 +40,18 @@ import Heading from "@theme/Heading";
 
 
 
-Get performance metrics for all databases
+Get the metrics of a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
 
 <ParamsDetails
-  parameters={undefined}
+  parameters={[{"name":"filter","in":"query","description":"Filter query for databases","schema":{"type":"string","description":"Filter query for databases"}},{"name":"page","in":"query","description":"Page number","schema":{"type":"integer","description":"Page number","format":"int32","default":1}},{"name":"size","in":"query","description":"Page size","schema":{"type":"integer","description":"Page size","format":"int32","default":10}},{"name":"sort","in":"query","description":"Sort options","schema":{"type":"array","items":{"type":"object","properties":{"Key":{"type":"string"},"Value":{"description":"Value of any type, including null","nullable":true}},"title":"PrimitiveE"},"description":"Sort options"},"style":"form","explode":true}]}
 >
   
 </ParamsDetails>
@@ -58,7 +66,7 @@ Get performance metrics for all databases
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Database metrics","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","title":"ControllersGetDatabaseMetricsResponse"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubControllersGetDatabaseMetricsResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
 >
   
 </StatusCodes>

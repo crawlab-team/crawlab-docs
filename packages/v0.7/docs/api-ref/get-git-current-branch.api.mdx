@@ -1,0 +1,75 @@
+---
+id: get-git-current-branch
+title: "Get Git Current Branch"
+description: "Get the current branch of a git repository"
+sidebar_label: "Get Git Current Branch"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1v00AQ/SurOYFkmoBASL6lpYqiHqjSlEsURRN7Em9r77qz40Cw/N/R2E5piSn05I95M2/m7c6rQXAXIF7C1AqsIkgpJGxLsd5BDFMSIxmZpGImJ2bD6JLM+K1Bs7NimEofrHg+QAS+JEZNnKUQw45kvbOy7lPXXSpEUCJjQUKstDU4LAhisClEYJWzRFHY80YWGZnZFyXWdk6omR4qy5RCLFxRBCHJqECIa5BDqeWDsHW715bdei5QIAa/uaNEbApNs1K2UHoXKCjBh/FYH8/rfr2CCBLvhJxoFMsyt0krzuguKKQ+7bEjUYVYpRTbEaQo/4HaVnm+7rT8c+gmggxDNhj4awZT4YXWwpjcDwLEFhQEi3JI5UfhUhR6p9A2pUWd1GqLSa6/viVhamVOW4UTs+dB7oJCwN1w40FQqvAyzYV3wj7PicO8P8uplazaPOFvNOHj0OGeY2rm9FBREGgx708xtw4ryTzbn5Qq6NNQoZkTYoe5uSHeE5vLduCmHVAy329RuzKSQQyjnZUwqm3ajLptojDq1wsiCJRUbOVwo/equxRY2oW/J/dEDSztFR2Ou5YRpsRwvAcwuZ6ZLkO7sG7r29SjbIzfc9yYyfXsZJPmlzcLDZitZ9MDIYI9cegA47PPZ2OVovRBCmx76lnVZaZWzEXvMudHq3hGUf9eqNf5Uj+50A8ZlTlap11UnGvJTtklqLIQQdza0FFc3eFe3lUEmQ+i0LreYKBbzptGfz9UxAeIl6sI9sgWNyrVsobUBn1PId5iHuiFYd7Me/d6a/7hR4OTHA/WKWKPeaVfEME9HTpfbVbqAN1Ja2ddYJIkVMqTlBOPUqt7vIjTywU0zS8uWBvO
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Git Current Branch"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}/branches/current"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the current branch of a git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the git repository","required":true,"schema":{"type":"string","description":"The ID of the git repository","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"full_name":{"type":"string"},"hash":{"type":"string"},"name":{"type":"string"},"remote_track":{"type":"string"},"timestamp":{"type":"string","format":"date-time"},"type":{"type":"string"}},"title":"VcsGitRef"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubVcsGitRef"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

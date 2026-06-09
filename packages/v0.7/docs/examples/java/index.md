@@ -36,10 +36,8 @@ book_scraper/
 │       │       └── example/
 │       │           └── bookscraper/
 │       │               ├── BookScraper.java
-│       │               ├── model/
-│       │               │   └── Book.java
-│       │               └── util/
-│       │                   └── CrawlabIntegration.java
+│       │               └── model/
+│       │                   └── Book.java
 │       └── resources/
 │           └── log4j2.xml
 ├── pom.xml
@@ -80,11 +78,11 @@ book_scraper/
             <version>2.13.4.2</version>
         </dependency>
         
-        <!-- HTTP client -->
+        <!-- Crawlab SDK -->
         <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.13</version>
+            <groupId>io.crawlab</groupId>
+            <artifactId>crawlab-sdk</artifactId>
+            <version>0.7.0</version>
         </dependency>
         
         <!-- Logging -->
@@ -264,119 +262,24 @@ public class Book {
 }
 ```
 
-#### 3. CrawlabIntegration.java
+#### 3. BookScraper.java
+
+The Crawlab Java SDK reads the connection and task context (API address, token, task ID, target collection) from the environment automatically, so there is no need to read `CRAWLAB_*` environment variables, build a payload, or make any HTTP calls yourself. You simply convert each scraped item to a `Map<String, Object>` and call `CrawlabSDK.saveItem(...)`:
 
 ```java
-package com.example.bookscraper.util;
+import io.crawlab.sdk.CrawlabSDK;
 
-import com.example.bookscraper.model.Book;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.ContentType;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.net.URI;
-import java.util.HashMap;
-import java.util.Map;
-
-/**
- * Utility class to handle Crawlab integration
- */
-public class CrawlabIntegration {
-    private static final Logger logger = LoggerFactory.getLogger(CrawlabIntegration.class);
-    private static final ObjectMapper objectMapper = new ObjectMapper();
-    
-    // Crawlab environment variables
-    private static final String CRAWLAB_API_ADDRESS = System.getenv("CRAWLAB_API_ADDRESS");
-    private static final String CRAWLAB_API_TOKEN = System.getenv("CRAWLAB_API_TOKEN");
-    private static final String CRAWLAB_TASK_ID = System.getenv("CRAWLAB_TASK_ID");
-    private static final String CRAWLAB_COLLECTION = System.getenv("CRAWLAB_COLLECTION");
-    
-    private static final CloseableHttpClient httpClient = HttpClients.createDefault();
-
-    /**
-     * Save a book item to Crawlab
-     * @param book The book to save
-     * @return true if saved successfully, false otherwise
-     */
-    public static boolean saveItem(Book book) {
-        try {
-            // Check if running in Crawlab
-            if (CRAWLAB_API_ADDRESS == null || CRAWLAB_TASK_ID == null) {
-                logger.warn("Not running in Crawlab environment, data will not be saved");
-                return false;
-            }
-            
-            // Create the request payload
-            Map<String, Object> payload = new HashMap<>();
-            payload.put("task_id", CRAWLAB_TASK_ID);
-            payload.put("data", book);
-            
-            String collection = CRAWLAB_COLLECTION != null && !CRAWLAB_COLLECTION.isEmpty() 
-                    ? CRAWLAB_COLLECTION : "results";
-            payload.put("collection", collection);
-            
-            // Convert to JSON
-            String jsonPayload = objectMapper.writeValueAsString(payload);
-            
-            // Create HTTP POST request
-            URI uri = new URI(CRAWLAB_API_ADDRESS + "/items");
-            HttpPost httpPost = new HttpPost(uri);
-            httpPost.setHeader("Content-Type", "application/json");
-            httpPost.setHeader("Authorization", CRAWLAB_API_TOKEN);
-            httpPost.setEntity(new StringEntity(jsonPayload, ContentType.APPLICATION_JSON));
-            
-            // Execute the request
-            try (CloseableHttpResponse response = httpClient.execute(httpPost)) {
-                int statusCode = response.getStatusLine().getStatusCode();
-                if (statusCode >= 200 && statusCode < 300) {
-                    logger.info("Successfully saved book: {}", book.getTitle());
-                    return true;
-                } else {
-                    logger.error("Failed to save item. Status code: {}", statusCode);
-                    return false;
-                }
-            }
-        } catch (Exception e) {
-            logger.error("Error saving item to Crawlab", e);
-            return false;
-        }
-    }
-
-    /**
-     * Parse Crawlab parameters
-     * @return Map containing the parameters
-     */
-    public static Map<String, String> getParameters() {
-        Map<String, String> params = new HashMap<>();
-        String paramStr = System.getenv("CRAWLAB_SPIDER_PARAM");
-        
-        if (paramStr != null && !paramStr.isEmpty()) {
-            try {
-                params = objectMapper.readValue(paramStr, 
-                        objectMapper.getTypeFactory().constructMapType(HashMap.class, String.class, String.class));
-            } catch (Exception e) {
-                logger.error("Error parsing Crawlab parameters", e);
-            }
-        }
-        
-        return params;
-    }
-}
+Map<String, Object> data = Map.of("name", "John", "age", 25);
+CrawlabSDK.saveItem(data);
 ```
 
-#### 4. BookScraper.java
+`CrawlabSDK.saveItem(...)` accepts `Object...` varargs, so you can also pass several items at once (or a `List`). The example below converts each `Book` into a map and saves it.
 
 ```java
 package com.example.bookscraper;
 
 import com.example.bookscraper.model.Book;
-import com.example.bookscraper.util.CrawlabIntegration;
+import io.crawlab.sdk.CrawlabSDK;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -385,6 +288,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -397,9 +301,14 @@ public class BookScraper {
     
     public static void main(String[] args) {
         try {
-            // Get parameters from Crawlab
-            Map<String, String> params = CrawlabIntegration.getParameters();
-            String category = params.getOrDefault("category", "all");
+            // Read the spider parameter from Crawlab (set in the Run dialog)
+            String category = "all";
+            String paramStr = System.getenv("CRAWLAB_SPIDER_PARAM");
+            if (paramStr != null && paramStr.contains("category")) {
+                // For a simple {"category":"fiction"} parameter you can parse it
+                // with your JSON library of choice; kept minimal here.
+                logger.info("Spider parameter: {}", paramStr);
+            }
             
             logger.info("Starting book scraper for category: {}", category);
             
@@ -455,7 +364,8 @@ public class BookScraper {
             scrapeBookDetail(book);
             
             // Save the book to Crawlab
-            CrawlabIntegration.saveItem(book);
+            CrawlabSDK.saveItem(toMap(book));
+            logger.info("Saved book: {}", book.getTitle());
             
             // Add a small delay to avoid overloading the server
             TimeUnit.MILLISECONDS.sleep(500);
@@ -501,35 +411,53 @@ public class BookScraper {
         book.setRating(rating);
         book.setImageUrl(imageUrl);
     }
+    
+    /**
+     * Convert a Book into a Map for saving to Crawlab
+     * @param book The book to convert
+     * @return A map representing the scraped item
+     */
+    private static Map<String, Object> toMap(Book book) {
+        Map<String, Object> data = new HashMap<>();
+        data.put("title", book.getTitle());
+        data.put("author", book.getAuthor());
+        data.put("price", book.getPrice());
+        data.put("isbn", book.getIsbn());
+        data.put("category", book.getCategory());
+        data.put("description", book.getDescription());
+        data.put("rating", book.getRating());
+        data.put("image_url", book.getImageUrl());
+        data.put("detail_url", book.getDetailUrl());
+        return data;
+    }
 }
 ```
 
 ### Key Integration Points
 
-The main integration with Crawlab happens in the `CrawlabIntegration` class:
+The main integration with Crawlab is handled entirely by the Crawlab Java SDK:
 
-1. Reading Crawlab environment variables:
+1. Importing the Crawlab SDK:
    ```java
-   private static final String CRAWLAB_API_ADDRESS = System.getenv("CRAWLAB_API_ADDRESS");
-   private static final String CRAWLAB_API_TOKEN = System.getenv("CRAWLAB_API_TOKEN");
-   private static final String CRAWLAB_TASK_ID = System.getenv("CRAWLAB_TASK_ID");
-   private static final String CRAWLAB_COLLECTION = System.getenv("CRAWLAB_COLLECTION");
+   import io.crawlab.sdk.CrawlabSDK;
    ```
 
 2. Saving data to Crawlab:
    ```java
-   public static boolean saveItem(Book book) {
-       // Create HTTP request to Crawlab API to save the item
-   }
+   Map<String, Object> data = Map.of("name", "John", "age", 25);
+   CrawlabSDK.saveItem(data);
    ```
+   The SDK reads the Crawlab connection and task context (API address, token, task ID, target collection) from the environment automatically, so you do not need to read any `CRAWLAB_*` variables or build HTTP requests yourself. `saveItem(...)` accepts `Object...` varargs, so you may also pass multiple items at once.
 
 3. Reading parameters from Crawlab:
    ```java
-   public static Map<String, String> getParameters() {
-       String paramStr = System.getenv("CRAWLAB_SPIDER_PARAM");
-       // Parse the parameter string into a map
-   }
+   String paramStr = System.getenv("CRAWLAB_SPIDER_PARAM");
+   // Parse the parameter string (e.g. {"category":"fiction"}) with your JSON library
    ```
+
+:::note
+The collection (database table) that scraped data is written to is configured in the Crawlab UI on the Spider's **Data** tab — it is not set in code.
+:::
 
 ### Environment Setup
 

@@ -1,0 +1,67 @@
+---
+id: delete-notifications-channel-list
+title: "Delete Notifications Channel List"
+description: "Delete multiple items"
+sidebar_label: "Delete Notifications Channel List"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVlFv0zAQ/ivWPRs2Bgipb2OtUGFs09qJh2qKnOTWmDmxsS8dpcp/R+ekXVY6mqem8fd9Pn/nu8sGSC0DjBZwZUk/6EyRtpW4KFRVoQlwLyHHkHnt+D2MYIwGCUVZG9LOoNCEZQAJ1qGP3GkOI8gjKql6miHJWtHE6EAgwWNwtgoYYLSBs9NT/nm51/U3kJDZirAiXlXOmU7t5GdgyAZCVmCp+InWDmEENv2JGes7zzGRbjfIFQ1AJTrvgQJ5XS1h34LpGCQ8WF8q2inpHBoJmUdFmCeKjqtctFhBusRAqnR90VwRvuGVvmq6Hq6arl+L8QX+mNy496+RsLR2aTCxqqbiLNmm4P8SXyJHXJ8zR3ydXV+xUqVKPM69Uq0DztuVztEfZ9xskY2EUJJLnArhyfoBaZ19n9+IHXzHt76fTF0RLtG/QmZsz3Zd0fuznVJAvxpyhCjVgbfcOqAfZllk7+CNBEKDS6/KJLWUkH3EATmbdxyRWhItp6+UFYoGVcpOhxliOo4qkXGUyasSsKpLbk66BAml0gbuGwm1yweX2V2LHVBmW9UhZbZVfb3MnjAtrH1Mam+Oy/1oweLu9hKa/RqFeYGC25cgK9ogQQJpMqz43eZoQr95d72bg0Dv7YEb10goMQS1PJAIvnGkqA4HlprnbS9sRd4agz7cdn38i6aiTv8TT8MCHw41+s8qF7f4q8ZAEDHv/sXcVdx1rNd/MBr88ZDQtCK++UbMYv2ISTSgiQemwj6PJu78igoYwcmLIXWSbSefhIBZ7TWtZzxi2vmgnJ7vlZBy+hvyNdAcQIEqj+2hrVY4v5mKlsFB6OrBRurWRa+ejErF+c30nztxO5nNeUE8WC86IEhYoQ8t4PTtp7ensTvaQKWKMXW7dkO6n4Wwnenish2/e3NgN2ZfnfDdeQl/04kzSsee0F3v1ssFvPCSh3fvO6KwgRiz2aQq4J03TcOvf9Xo1zBa3EtYKa9Vys4suMw7L0eLDTzims3MMnQc+0qZuvV+74Ogue9lejy5nMwn0DR/AUmpFLs=
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Notifications Channel List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/notifications/channels"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete multiple items
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"google_oauth2_json":{"type":"string","description":"Google OAuth2 JSON"},"name":{"type":"string","description":"Name"},"provider":{"type":"string","description":"Provider"},"smtp_password":{"type":"string","description":"SMTP password"},"smtp_port":{"type":"integer","description":"SMTP port","format":"int32"},"smtp_server":{"type":"string","description":"SMTP server"},"smtp_username":{"type":"string","description":"SMTP username"},"telegram_bot_token":{"type":"string","description":"Telegram bot token"},"telegram_chat_id":{"type":"string","description":"Telegram chat ID"},"type":{"type":"string","description":"Type","enum":["im","mail"]},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"webhook_url":{"type":"string","description":"Webhook URL"}},"description":"The data to update","title":"ModelsNotificationChannel"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsNotificationChannel"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

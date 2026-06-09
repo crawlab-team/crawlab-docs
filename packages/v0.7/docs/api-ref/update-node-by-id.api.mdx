@@ -1,0 +1,71 @@
+---
+id: update-node-by-id
+title: "Update Node by ID"
+description: "Update an item by ID with (partial update)"
+sidebar_label: "Update Node by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWFFP20gQ/ivWPLWSgZAr4s5vKaA2quihEF6KomhtD3hbe9fdHQO5yP/9NLs2dhJKzDs8Ye8338zuznzjyRpI3FuIbuG7TtHCIoQUbWJkSVIriOCmTAVhIFQgCYsgXgXT8+BRUhZ8KIUhKfKgcpCPEIIu0Qg2nKYQgX+/VDrFZbxayhRCKIURBRIa9rkGJQqECNySZHeloAy2Y5hnyF71XUAZ+jhIN24hBIO/K2kwhYhMhSHYJMNCQLQGWpVMb8lIdf9W2jttCkEQgY5/YkIyhbpeeG9o6bNOV+wi0YpQEf8ryjKXidv/0U/LLta7sXgyPgnDp0USLa+mggag+Az3bmt6/nLwIYiE5AP2GGKtcxRqh2Ligc8mS0H7/XqjQFDfPZ/lAcnCkSUGBWE6iO3MYwO2tSSKci9rvBrOGq/+dEZJZQwqWppKKZelz5RSEd6j2eX0FkFr0SOWiv4aM+uGxb4gz3tPdQioRJxjOuDaLhpkHUKmLfni2ufta4usQ5DlgPS6cki7LIQlNAPCmtqgwdYh/MIB1zTn1TqEQiT7wZeTM499esOlXYqnVy9s2Nl9b87NkqDK7sdfe1wdNto4rBS8BA8phZZ1SCm0rH8qhe2sdXLJMrUhkiQpZyeXOsXccg9xlp0k33ppW3TQm+22MFVlRVDX3tCWWlkvd+PRyGnjRhj/foPwXXXfVfdddd9V9111O9UNAY3RZjcEviW0Vty/cLSvnCKH0vo504qMznM0dtYI9BdJWRVvyD5bfHpJsj+LNJj5z2ZwmONdzI0SFWXayP98KZ28RDRVhEaJPLhG84AmuHA7rt0OKdOpHyCSzA0alEEER9xm7NFapjWEYDGpjKTVNfcHL+6ilHP9C/sCIUr5DVftRJKhSF0qN7PK5GoaeAv2yx1n1k0EF0+iKHPs9xbXPbp0aLuBH1V6Qg/j0fjTwej0YPzP/PgkOjmOxn8fjk6Pf8CmhA/BcSZ2LnfEdbSdZM/QZ9Xz4XV61kFYrXpPnSJ5E6c03brTkv7j00YY2+RtMnZv+iX72tb7RdhPYanutLvbNpWNeMxFHEyupjvFObu4nvNCcKdN0AAhhAc01gNGh6eHI87OUlsqhEuaZgvNnMyl4IfkbfbeqPi2obrJSsInOipzIV17qkzOlD7Lb8FlOYQQyZQ/tfje+PV6HQuLNyava379u0Kzguh2EcKDMJKv2k3hqbTNtd+J3OIrgX+YNR92H4M90/OLUbcFpri6HkRe8RO0ScP6t+Au6iuOI/MLZ97/gWtQneHOl18dthaTJMGSXsUueqJxNZmffYUQ4maoL1jQIjDikX9eEI8+Su0OxKmGe7eGXKj7ygkreFL++x8PjOK8
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Node by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/nodes/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update an item by ID with (partial update)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to update","required":true,"schema":{"type":"string","description":"The ID of the item to update","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"active":{"type":"boolean","description":"Active"},"active_at":{"type":"string","description":"Active at","format":"date-time"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_runners":{"type":"integer","description":"Current runners","format":"int32"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"hostname":{"type":"string","description":"Hostname"},"ip":{"type":"string","description":"IP"},"is_master":{"type":"boolean","description":"Is master"},"key":{"type":"string","description":"Type"},"mac":{"type":"string","description":"MAC"},"max_runners":{"type":"integer","description":"Max runners","format":"int32"},"name":{"type":"string","description":"Name"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsNode"}},"required":["data"],"title":"Update_node_by_idInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"active":{"type":"boolean","description":"Active"},"active_at":{"type":"string","description":"Active at","format":"date-time"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_runners":{"type":"integer","description":"Current runners","format":"int32"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"hostname":{"type":"string","description":"Hostname"},"ip":{"type":"string","description":"IP"},"is_master":{"type":"boolean","description":"Is master"},"key":{"type":"string","description":"Type"},"mac":{"type":"string","description":"MAC"},"max_runners":{"type":"integer","description":"Max runners","format":"int32"},"name":{"type":"string","description":"Name"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsNode"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsNode"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

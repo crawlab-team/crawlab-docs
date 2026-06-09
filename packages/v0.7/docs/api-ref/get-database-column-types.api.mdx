@@ -1,0 +1,75 @@
+---
+id: get-database-column-types
+title: "Get Database Column Types"
+description: "Get the column types of a database"
+sidebar_label: "Get Database Column Types"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVNtq20AQ/ZVlnloQsVtaCnrLjWBSaGo7TyGEsTS2NpF2ldmRW0fo38vo4tq1W9wnY83tzJmzpwbBVYD4Aa5QcIGBAjxGkFJI2JZivYMYbkiMZGQSn1eFM7IpKRi/NGjSvggi8CUxasEkhRhWJE9D8Kmre2rrIIISGQsSYp1bg8OCIAabQgRWx5UoGfyJYXKlExXFzkym18oypRALVxRBSDIqEOIadBbEEIStW53WbOm5QIEY/OKZErEpNE20hfdaEW8GhMOf/a6z719NGzHiDTrMN29klp73eIPTUZ7Wr2kelYhQeqfHi2v4OB7rz36zb7cQQeKdkBONYlnmNmkPNnoOmlIfAuuY0JOxnldsN0BJ28lCZmypESrC4VpNEwExez4SiqCgEHBFR2NBUKq/dBQruX669E7Y5zlxmPYkzIYszft0jIwLTM2UXisKAm3Oh8Oce4eVZJ7tG6Wa9PlYo4kTYoe5mRGvic11u2fT7iWZ719Cq3nJIIbRoLcwqm3ajLpLhtFWGpRUbGUz00t0ZGNp5/6F3C7hpb2lrRgzwpQYokGp53cT01UoDuuWvi0d+GL8kePCnN9NDgQ3vZ7NNdCKrE+ECNbEoUsYn305GysZpQ9SYIupn6oeMViIuewEOu+32ptS/1bhacbSLy30U0ZljtYpgIpzbdXR+gBbWiGCuHWSntm+vjW1zAfR5LrW1HvOm0Y/d49ZnSi1ARe52skS80D/AH7qUz+K/YU2Ox6yxrzSHNB3vEa2CuE/4byb9kb43hy1tqMwBjG5PRQDPLW/xyYa1KV4usB5klApOyUHTqKLbOV/cz2HpvkFYMku1g==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Database Column Types"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/{id}/columns/types"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the column types of a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the database","required":true,"schema":{"type":"string","description":"ID of the database","format":"objectid"}},{"name":"query","in":"query","description":"SQL query to analyze for column types","schema":{"type":"string","description":"SQL query to analyze for column types"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"string"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseString"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

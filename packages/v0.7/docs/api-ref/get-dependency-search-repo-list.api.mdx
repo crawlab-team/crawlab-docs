@@ -1,0 +1,75 @@
+---
+id: get-dependency-search-repo-list
+title: "Get Dependency Search Repo List"
+description: "Get the search list of a dependency"
+sidebar_label: "Get Dependency Search Repo List"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVlGP2kgM/isjP91JaaG9VifxttddrVB77Qp272WFkEkMmTbJzM44e0dR/vvJkwChGyC77RMCf/Zne2z8bYBx5WF0D5dkqUioiDV5mEWQkI+dtqxNASO4JlackvKELk5Vpj0rs1Sokq3bGiIwlhyKxziBEayI53vzvHadO7JmLv4QgUWHOTE5yWADBeYEI8iwWEEEWngfSnIS+TCb25SUdWblMM91sVLiUeKKJCXJcs+qhM5rNk7KisDRQ6kdJTBiV1IEPk4pRxhtgNdWyD07Heh/DWNVRbu6LK7odF03ErEo8wU56MhNF0yrYDrltjQuR67hf7wN4CWWGcPoTTubbQZn2tw8+BbwnH4duLapvf7epxEN7HltaJxONGFYVTMZBG9N4clL4LfDoXwchvvyESKITcFUsFjR2kzHYbwHX71ANk9zM4uvFIfRdrIMrGuCBLmNQucw9J4p9z2826v54ihznZx/t/Flu3l1JJ1AFUHsCJmSOfL5KB9qrGKdk2fMbTtogkyvxNKOulj3j7pYH8vxAH8u3GXrWxUBOWfcea+rAKuiZpbPwT9jXWdhEur1AJ9NQur4KzRx+ozBjqAjUBWBZ+SyE3+Y0LTGVVGDO7v5Yq0iKG3Se17uamyPedlG7TMv26jH5+WRnO81K/80wL3PM16gknaz5kx++9sklPnL/dUUY4ZMnudH0zk6br90Irrf9+dLvipY83pf8oSsCYRHVq6KICfv5Vp22Y4NrjAaxqzzUvxwD9rpfTAFO5Nl5Pwn7XnSHIZrzWm5OJK7+L/rOhp/YaIm9FCSZwiYN08xdwWWnBqnv1OYwvddgcYFkyswU1Nyj+RU878TesOpafRV0FCcwggG7SMxCBpkUB9gOaEUl07zeirnqr4GaPWt+UbtYUOrP9JOEqSESWhdc7Qvbsaq9pAkdLE0wXXbRIf/ZrhQFzfjJ8szuZreikEtjVMNEFrLB8PXf74eSies8ZxjyKlhFd25776a1pJCXkF9qjXkD//5u4PdU7I2tTP9xwOboQ47XrowRXVr7w/vr0gHa3zoamjvLILUeBbgZrNAT3cuqyr5udY2omwT7XGRiexcYubpRNa/TRqF+rt6ucrtLOobrffi+hGzUiAgsqx/dodK8wRNo3VfSNMhPE9wbSE/U1MjG0+wNIg9yUy+OC0sMLqfVdF2ZeTBa5+LOCbLLa8nGlKi7Bb6+uoWqup/yW2qJw==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Dependency Search Repo List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dependencies/repos/search"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the search list of a dependency
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"lang","in":"query","description":"The programming language of the dependency repositories","required":true,"schema":{"type":"string","description":"The programming language of the dependency repositories"}},{"name":"page","in":"query","description":"Page number","schema":{"type":"integer","description":"Page number","format":"int32","default":1}},{"name":"query","in":"query","description":"The search query","schema":{"type":"string","description":"The search query"}},{"name":"size","in":"query","description":"Page size","schema":{"type":"integer","description":"Page size","format":"int32","default":10}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"dependencies":{"type":"array","items":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"error":{"type":"string","description":"Error"},"name":{"type":"string","description":"Name"},"node_id":{"type":"string","description":"Node ID","format":"objectid"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"}},"status":{"type":"string","description":"Status"},"type":{"type":"string","description":"Type"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"version":{"type":"string","description":"Version"},"versions":{"type":"array","items":{"type":"string"}}},"title":"ModelsDependency"}},"latest_version":{"type":"string"},"name":{"type":"string"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"}},"type":{"type":"string"},"versions":{"type":"array","items":{"type":"string"}}},"title":"EntityDependencyRepo"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"},"total":{"type":"integer","format":"int32"}},"title":"ControllersListResponseGithubEntityDependencyRepo"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

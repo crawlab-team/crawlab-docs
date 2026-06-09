@@ -39,11 +39,11 @@ quotes_scraper/
 ```go
 module quotes_scraper
 
-go 1.19
+go 1.23
 
 require (
 	github.com/PuerkitoBio/goquery v1.8.1
-	github.com/crawlab-team/crawlab-sdk-go v0.1.0
+	github.com/crawlab-team/crawlab-go-sdk v0.7.0
 )
 ```
 
@@ -65,7 +65,7 @@ import (
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/crawlab-team/crawlab-sdk-go"
+	"github.com/crawlab-team/crawlab-go-sdk"
 )
 
 // Quote 表示带有作者和标签的引语
@@ -299,7 +299,7 @@ func truncateString(s string, maxLen int) string {
 
 1. 导入 Crawlab SDK：
    ```go
-   import "github.com/crawlab-team/crawlab-sdk-go"
+   import "github.com/crawlab-team/crawlab-go-sdk"
    ```
 
 2. 将数据保存到 Crawlab：

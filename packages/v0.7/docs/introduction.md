@@ -11,6 +11,11 @@ or [Installation](./getting-started/installation.md) to install and start to use
 
 If you are not familiar with Crawlab, you can read sections below in order to understand more about Crawlab.
 
+:::tip
+New to this release? See [What's New in v0.7](./whats-new.md) for the headline features, including database ORM
+support, the Monaco-based code editor, and the gRPC communication overhaul.
+:::
+
 ## What is Crawlab?
 
 Crawlab is a powerful **Web Crawler Management Platform** that can run web crawlers and spiders developed in
@@ -52,16 +57,21 @@ in developer communities, particularly amongst web crawler engineers.
 - Multi-language spider support (Python/Node.js/Go/Java)
 - Framework integration (Scrapy/Colly/Selenium/Puppeteer)
 - Git version control & automatic deployment
-- Online code editor & file management
+- Monaco-based code editor with syntax highlighting & multi-file management
 
 📋 **Task Management**  
 - Distributed task scheduling & queueing  
 - Real-time logging & execution monitoring  
 - Detailed statistics & historical records  
+- Reliable execution with bounded worker pools & graceful shutdown
 
 ### Key Capabilities
+🗄️ **Database Integration**  
+- Store scraped data in MongoDB, MySQL, PostgreSQL, SQL Server & Elasticsearch  
+- Native ORM support with automatic schema management for SQL databases  
+
 📦 **Dependency Management**  
-- Python/Node.js package installation  
+- Python/Node.js/Go/Java package installation  
 - Automatic dependency resolution  
 
 🔔 **Notification System**  
@@ -80,3 +90,4 @@ in developer communities, particularly amongst web crawler engineers.
 🐳 **Deployment Flexibility**  
 - Cloud-native architecture  
 - Horizontal scaling capabilities  
+- Multi-platform Docker images (AMD64 & ARM64, including Apple Silicon and AWS Graviton)  

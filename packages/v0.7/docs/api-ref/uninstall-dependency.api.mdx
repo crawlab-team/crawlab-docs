@@ -1,11 +1,11 @@
 ---
 id: uninstall-dependency
-title: "Uninstall dependency"
+title: "Uninstall Dependency"
 description: "Uninstall a dependency"
-sidebar_label: "Uninstall dependency"
+sidebar_label: "Uninstall Dependency"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVD1z2zAM/Ss6zEzkS4fmtCVth07N1cnk8wBRsM2UIhkSiuPT6b/3QMm28tWpWiiBIPjew4N6YNwmqFbwnQK5hpw2lGCtoKGkowlsvIMKHpxxidHaAovmmHkABZGeOkp865sDVH3+NJEaqDh2pEB7x+RYtjAEazRKwfIxSdUekt5Ri/LGh0BQga8fSTMoCNEHiixgqh4ctjTLShyN28JbkCcKhyIfGPIjGFPwLo2lrhYLWT492R2ZUgP/Db/2zRy/cUxbiqBg42OLPIa+XMGgoKWUcPsBW2HChq2Elp3WlBJMBFvinW+gguBTvhx5BxWUzaynZaTgU3miBwoSxWeK0v0eumihgj4ToqEqy37nEw9VH3zkocRgPpB7g53l4ubuZzGWAgXPGA3WdqQ9VpM3cl0rLtsxB1B5mVyWa0A17gwK5NqxQccd6zXaHB4UCJxX29eL68UwDGuho7to+JD53BJGijedCLFaz7eXGVTGN086yT1BPGKHOidl+aXtv8+G//GCbbB0NuipVQqM2/hcdOrYt4h7i7WI9U5IEXDjYzHlqAJd4QO5i+S7qKlojNStO6am2FNdaMmjWGDTGlcEiyw2EvEpprHk4vLr5WLUK3GLbobxPMqvBvkVpP5s/M9Hf9KL6YXLYNE4uS/7qJ8cuIK5A/PfInhZzy5cHzu+gr6vMdFDtMMg4aeOovRyfTZVbqWCHWFDMbf5Dx1E3BHsxb0gknTbCbJ3Ezuo44kbrSnwP3PXs7m6+7W8BwX19Jdr8zhDxL1wwj1UAAp8Fi8bK8d6sOi2XR5mGGvK8xc9/uRC
+api: eJytVcFu2zAM/RWBl7WA12TDhgG+tWsPQQ8tknSXICgUm4nVypJKyU2zwP8+UHZqp/U2DFguTpRH8vHxUd5DkBsP6QIu0aHJ0WQKPSwTyNFnpFxQ1kAKd0YZH6TWQor8gNxBAtYhSQZNckihOsDuj0CETxX6cGHzHaR7yKwJaAJ/lc5plcUEowfPpfbgswJLyd/CziGkYFcPmAVIwBGXC8ww3YOWZtND+UDKbOAt83mBwpHdkCxLZTaCoyq5QWHXIhTYdcNZ6wRKm+Pfs77qEakLDhInH6TWH4Ql4R1maq0yYWyO/pTTGlk2rNu8kkiyNCpg6d/Xq4faiDmGeItgxav0sZrN8V7l/1AwgbWlUoZXuVU+TGJyGSnEzo7qijXZUpxYo3ei8piLbYGtMsoLY4OI+pxCXScQVNDY17FnmIlxVYC6Zhyhd9b4RrrP4zE/jjndXEPyvxyFRJYGh1Gi93IzYIw6AR9kqIZm2OvzuzWBrNZI/odV+bRtq+3yy1BjFzIX02ZxIGI+vcfcGVmFwpL6iXFcX4cSTUxAMlKLGdIzkriKXdaxq1BY3ltnfVRDhgJSGPW9NSJ01o86eyXgMatIhd2MZW2Uk07N7SOavuGcusboOCZRoMyRoFkESOH8diKaCCbCg5p2l8TViyydxm7JO5c269n9bvdqcThZ9s3fndZMY20jvcNISG61XInz28m79Z5ezeb8h1hbEi0QEnhG8g1gfPbtbMyKs3KljH23nXVX5WX/Djwq0LsDf3+1tjoGfAkjp6UyXK8izeHNpBZwdHvxujjLz25aywQKHm66gP1+JT3eka5rPn6qkHaQLpYJPEtScsWqLFipdlbpYg+PuGvdiyZ8nDMjhuuqmfCbVauTQ8R5lqELf8Que/67vZnNIYFV+4Joh0xyyz3JLaQQXzUcHe0WzxpzVHEtocnJn1/cwlvQ
 sidebar_class_name: "post api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
@@ -26,7 +26,7 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Uninstall dependency"}
+  children={"Uninstall Dependency"}
 >
 </Heading>
 
@@ -58,7 +58,7 @@ Uninstall a dependency
 
 <RequestSchema
   title={"Body"}
-  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"Dependency name"}}}}}}}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"lang":{"type":"string","description":"The programming language of the dependencies"},"mode":{"type":"string","description":"Uninstallation mode ('all' or specific nodes)"},"names":{"type":"array","items":{"type":"string"},"description":"The names of the dependencies to uninstall"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"The IDs of nodes to uninstall from (only used when mode is not 'all')"}},"title":"Uninstall_dependencyInput"}}}}}
 >
   
 </RequestSchema>
@@ -66,7 +66,7 @@ Uninstall a dependency
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Dependency uninstalled","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
 >
   
 </StatusCodes>

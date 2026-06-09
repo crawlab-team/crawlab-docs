@@ -67,10 +67,9 @@ As the spider is crawling, we can also view crawled data by clicking `Data` tab;
 
 Let's do some recap here. We have followed a simple process to run a Scrapy spider on Crawlab.
 
-1. Created a Scrapy spider on Crawlab
-2. Uploaded spider files to the spider
-3. Triggered a task
-4. View realtime logs and crawled data on Crawlab.
+1. Created a Scrapy spider on Crawlab from the built-in template
+2. Triggered a task
+3. Viewed realtime logs and crawled data on Crawlab
 
 ## What Next
 

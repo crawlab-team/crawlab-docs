@@ -1,0 +1,75 @@
+---
+id: replace-dependencies-setting-by-id
+title: "Replace Dependencies Setting by ID"
+description: "Replace an item by ID with (full update)"
+sidebar_label: "Replace Dependencies Setting by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV1FP20gQ/ivWPLWSgZAr4s5vFFAVVXeHQng5FEVjexJvsXfd3TGQRv7vp9l1iFMCpI+VyJO9OzM7M/m+z7MrYFw4SG7hgmrSOelMkYNpDDm5zKqaldGQwJjqEjOKUEeKqYrSZTS6iB4UF9GHeVOWUVPnyPQRYjA1WRS3UQ4J2OA4y3vhZ46YlV7M0uVM5RBDjRYrYrKSyQo0VgQJ+C0lp9fIBfyc0qQgycHMIy4oZMWmywNisPS9UZZySNg2FIPLCqoQkhXwspbwjq3Si18NOze2QoYETPqNMlY5tO00nEaOP5t8KUdkRjNplkes61JlviFH35wcsXqeSwgmnbDSPpb/IFlBjryHlfTwzbJGF7uTjyGzhEz5DPntKOfBNmJVkWOs6n5Q6dCB7PSjpsv9o6bLl3KkR8pmWbVHnZePlEVi2cZwR3scPpHdNu5A95b1PxjKq+8W++VzdbdYpyM+zmazxpb7+TmbRWLcxuAIbVbMLGHeryk1piTUwYKbevcWG8Zyi4E9O6WZFmT7nVea/xiKY0D9ftC4CbZ7QGMddR9orKO+BI12F32FNlukZcWlHPK3yal0T0q3PDd6rhY+ykYubgPtphu38ZsaNtJ1w9C2IZKrjXahycPBwBN5K8d/v0L8LhHvEvEuEb+PRMRA1hr7PJ02hoqcw8UOaEjPGblxO7bazZnnRrM1ZUnWjTvx+KK4aNIX9Uq8P+2Sls+YR+Mwi4C3OX5uc6Ox4cJY9YM86E52BRppJquxjK7J3pONLn31ra+WCyOjnUheHGazBI762DnqxNEdrVTegiAva6zi5bWoWsAW1mpi7kj3WoO1+krL9dBXEOYedN04eHY1ioKHZCE6Od4MXZePWNUl9RXRa94GNH0Ng+Fg+OlgcHow/GtyfJKcHCfDPw8Hp8f/wbYqbbw36rJZ89qxee3SfHp/4v/20hO9N8vbzO3G1cDV8LKLnYNt7r1WUp9NffwpPTe+/WscWnwoMY3OrkbPWDa+vJ7IRjQ3NuoMIYZ7si4YDA5PDwdew4zjCv3/2rVkfXnoXzGi6wCRcJP4+bjeBP0rV48OR0yPfFSXqLy0dVoacHoLW130ffZIhRgSlctXvzCOxXC1StHRjS3bVpa/N2SXkNxOY7hHqzCVlt2uIFdOnnNI5lg6eqWQD+NuxvgYvXHJ2FnHmiRaGHKPZSNvTzAUpZu28Zo1klnYOA/nH/iP2Mbx2czRxmuPsyyjml+1nfZk4OpmAjGk3c2nMrm4WHyQOxg+hByNb4fnvV9bQYl60XjRhBBSfv8D9HX5Ig==
+sidebar_class_name: "put api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Replace Dependencies Setting by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/dependencies/settings/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Replace an item by ID with (full update)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to update","required":true,"schema":{"type":"string","description":"The ID of the item to update","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"exec_cmd":{"type":"string","description":"Exec cmd"},"key":{"type":"string","description":"Type"},"name":{"type":"string","description":"Name"},"pkg_cmd":{"type":"string","description":"Pkg cmd"},"pkg_src_url":{"type":"string","description":"Pkg src url"},"search_ready":{"type":"boolean"},"setup":{"type":"boolean"},"total_dependencies":{"type":"integer","format":"int32"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsDependencyConfig"}},"required":["data"],"title":"Replace_dependencies_setting_by_idInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"exec_cmd":{"type":"string","description":"Exec cmd"},"key":{"type":"string","description":"Type"},"name":{"type":"string","description":"Name"},"pkg_cmd":{"type":"string","description":"Pkg cmd"},"pkg_src_url":{"type":"string","description":"Pkg src url"},"search_ready":{"type":"boolean"},"setup":{"type":"boolean"},"total_dependencies":{"type":"integer","format":"int32"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsDependencyConfig"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsDependencyConfig"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: add-node-to-group
+title: "Add Node to Group"
+description: "Add a node to a node group"
+sidebar_label: "Add Node to Group"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVNtOGzEQ/ZXVPLWSIWnVqtK+hYtQhAQoCX2JIjRZD4lhYxvbG0hX++/V2LuQkAj60LzEa5+5nDOXGgIuPORTuDKSsgtnKuthJkCSL5yyQRkNOQykzDDTDAmmOy0YDAKMJYcMHErIAaW84+e7YO46hEWHKwrkOFINGlcEOSgJAhS7txiW8D7m1WuMbHgGAhw9VcqRhDy4igT4YkkrhLyGsLHszwen9OITP00zS67IhxMjN2xfGB1IBz6itaUqIpveg2f7ej+QmT9QEZiXY+5BkefXyFrJf8xoeBallBKaZpvc9NXPTEBQoaSk/66oQ22rAE2TbL012qckvvf7/Lcb8PoSxP9iSc4Zt8+xEbAi73FBB998wFD5A0/NG8lTo4MzZUnO/zZKjlpaLcsfh4idoMxGqZgQMd/2Mbcaq7A0Tv0hyaCfhxwNdSCnsczG5NbksvPIsomswtJwY1vjoxrcqzn0uBxHsRa+VyvZxAsPAjwVlVNhM2ZBk2Zo1cQ8kt7ij1Zd0qYbgCWhJAeiG43BzTBLFpwCl2j01rLnL7iyJe203JbUSt+bGKiT1eFzifNscDPc68TR+XjCD9m9cVkLBAFrcj4B+se/jvvsldmvMDLocpQyu2o3wkU76Dvetwbr4wXSShLoJfRsiUpzwMqV7CLJnYailRsE5HF3JMVnApZcmnwKdT1HT7eubBq+fqrIbSCfzgSs0Smcsx7TGqTyfJaQ32Pp6YO0v4zaufyavV9HB5Puiqu5smssK/4CAY+0SQuvmTWiqzankh5OU8CjCZu/Ge6NaSM6i0FRkA0fYmdbvXtzPZ6AgHm78FZGso3DZ96r+JySNFGA2LDxroYS9aKKIw3JJ//+AvF7GzM=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add Node to Group"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/node-groups/{id}/nodes"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Add a node to a node group
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Node group ID","required":true,"schema":{"type":"string","description":"Node group ID"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"node_id":{"type":"string","description":"Node ID to add"}},"required":["node_id"],"title":"Add_node_to_groupInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

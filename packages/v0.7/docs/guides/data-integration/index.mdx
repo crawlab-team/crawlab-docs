@@ -48,7 +48,7 @@ code is executed.
     ```go
     package main
 
-    import "github.com/crawlab-team/crawlab-sdk-go"
+    import "github.com/crawlab-team/crawlab-go-sdk"
 
     func main() {
       // Save map as item
@@ -63,13 +63,13 @@ code is executed.
   </TabItem>
   <TabItem value="java" label="Java">
     ```java
-    import io.crawlab.sdk.CrawlabSdk;
+    import io.crawlab.sdk.CrawlabSDK;
     import java.util.HashMap;
 
     public class Main {
       public static void main(String[] args) {
         // Save HashMap as item
-        CrawlabSdk.saveItem(new HashMap<String, Object>() {{
+        CrawlabSDK.saveItem(new HashMap<String, Object>() {{
           put("hello", "crawlab");
         }});
       }

@@ -1,0 +1,75 @@
+---
+id: replace-setting-by-type
+title: "Replace Setting by Type"
+description: "Replace a setting by key (full update)"
+sidebar_label: "Replace Setting by Type"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1v20YQ/SvEnBJgbctCDLe8Oa5RCEFRQ5J7qCAIQ3IkbUxyN7vDOCzB/x7sLhnSlmLrWiA6UZyZN5+PMw0w7izEK1gQsyx3FtYCMrKpkZqlKiGGOekcU4owskEnSurokero3bbK86jSGTK9BwFKk0FnNMsgBhPMNp3RJqk3XGsCARoNFsRknOMGSiwIYnikGgRI51Ej7+FlGF2AUdAz9KWShjKI2VQkwKZ7KhDiBryTGCwbWe5eRWnbdQAiyx9VVjvrVJVMJbtH1DqXqU/o4rN11s2hG5V8ppRdUsalz5Ksk2bIJ2htZPZ2xLM/QMBWmQL5B5LMoBWQGkKmbIP8Nspt0I1YFmQZCz0GdQ08c5IxalKfjprUP4vR1flNmKWTtgLCKJ2W0EPQPSGhHvWUhHrUnyf0FfOKjrUWs0w6FMzvx01uX7r4xwO0B++Xe4rc2ESsOk6BAJacOy9/qYxy2w2vNx4IsArTth6058epNyt1xdC2wdxqVdowh9PJxA/ts3j+/gTiFx1+0eF/QAcBZIwyh/m0AgqyFnd0VGYZubJHRO3g6laVbFSek7HzjjN/St5XyUtKOqMPx4j0EbNoHrYMeJ3LQ52HEiveKyP/I1/Wq2NAs5LJlJhHCzJfyUR3PunWJ8l75ZauI7gI+zOGi47/9qJ5pLoFAZbSykiuF463gXSo5VI9UjmqAmr5aVjGe8KMDIh+T9/cz6Jg4Ty7L8F8WKF337DQOY0571k9DNiYpTCdTD+cTa7Ppr8vL6/iq8t4+tv55PryX3jOu8Ha82f4O2bIa2DjmR+s+9n1rZPlVvka9H03+JRjEt3czw5oMb9bLJ0g2ioTdYoOj4wNCpPz6/OJ66NWlgv0xe3K119Ti+GWWoaz6JmP0SVy+gHW9Y/pG1/oHGXp+W5yBxdmYgX9TICA2FVzLWCvLDtR0yRo6cHkbetef6nI1BCv1q5SRmLi6rJqIJPWPWcQbzG39Erg7+bdknofPb/ejgbaT19ZD72BHz33B9u6Ff08ukiC5Db4O+vK2Fse7KtW9BY3aUqaX9Vdj0h1/7AEAUl3IRYqcyYGn9wZik8hSOXT94zy7xrIsdxV/ssDAdL9vgONPeht
+sidebar_class_name: "put api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Replace Setting by Type"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/settings/{key}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Replace a setting by key (full update)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"key","in":"path","description":"Setting key","required":true,"schema":{"type":"string","description":"Setting key"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"key":{"type":"string","description":"Type"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"value":{"type":"object","additionalProperties":{},"description":"Value"}},"description":"The data to update","title":"ModelsSetting"}},"required":["data"],"title":"Replace_setting_by_typeInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"key":{"type":"string","description":"Type"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"value":{"type":"object","additionalProperties":{},"description":"Value"}},"description":"The data to update","title":"ModelsSetting"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsSetting"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

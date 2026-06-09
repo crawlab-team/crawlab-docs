@@ -1,0 +1,75 @@
+---
+id: get-database-table-data-with-filter
+title: "Get Database Table Data with Filter"
+description: "Get the data of a table of a database with filter"
+sidebar_label: "Get Database Table Data with Filter"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVduO2zYQ/RVhnlqAjb1JiwJ62ySbwEjbGLbzZBiLsTS2mUikQo524wj892JIyfaujc0F0ZMkzpw5PHPrgHHrIV/Ca2RcoycPKwUl+cLphrU1kMNb4ox3lJXImNlNhhnjuqL0WvZ+2b3mXbbRFZMDBbYhh+I/KSGHLfHtYHgbnePnrfjcHnwadFgTkxNCHRisCXLQJSjQwqNB3sFjcpPXwmOgJwFAgaPPrXZUQs6uJQW+2FGNkHfA+0ZAPTtttt8HtrGuRoYc7PojFaxLCGGVYpDnl7bcC3BhDZNhecWmqXQRbz/66AW4O2eQwOTWTrRiTV5OD3G/yfU/rOmMbVDQy3khEpalFmespqcxw2PkNxEhK5xmchqzjXUxSsq6xJI4DW5PWWrDtI1pfAg2xS1lpq3X8eygpTb84nk03mBbMeRXQYHXX78bMto+CTgOCiLlH9MyuYRwWkXLHmilgDULojTFt0p6YpqWIYSE5RtrfEry8/E45voBh/fvQP3KKjqxQudwL13EVPsfqQxhTs5Zdy5hUFCT9w+L4HjmGbn1F4/YMlYX0/womRJ9kPuVNexsVZHz/2jPs17Of7GZR+CJYXIbLCjrQi/5n5dUfollNkudC9Hm6tzmg8GWd9bpr1SK0V+XgGJAg1U2J3dHLruJMoUoC++sTL3G+pgaGVs5jIZq8aNOl2EUa8bHv6MtiaGnonWa93PJckokNnphP5E5TWaj39F+mIk7wjJq10/L6+kkSx5CRepmdpxTN1+wblI/HOfMsScOk+PQ3VdDT16ND710kkltNjYyG5Lk8L7CdXY9nZy12OxmvpCDOE16Q1BwR84ng/Gzv5+N42CxnmuMV+4vJQto2E/ZIk4h+Uwr582wPh7EOxnIP7W/erGZvvCoqVAbYda6WLcpocuDhh4U5HFNpZwKF2lAJXtPZsZOCiFfQteJ+QdXhSC/P7fk9pAvVwru0Okk77KDUnt5LyHfYOXpiZv9NutH1O/ZxdV18RZDHRkpojusWvkCBZ9on9ZtWAU1FJbwSQevUtQ/FuJ+dDwbU0ENHtdFQQ0/abs6aZfp+/kCFKz7hVrbUnwc3stCx/tE0kYVYm/Efx1UaLZtrFZImPL8DyufBG4=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Database Table Data with Filter"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases/{id}/tables/data/get"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the data of a table of a database with filter
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the database","required":true,"schema":{"type":"string","description":"ID of the database","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"database":{"type":"string","description":"Name of the database"},"filter":{"type":"object","additionalProperties":{},"description":"Filter criteria for the table data"},"page":{"type":"integer","description":"Page number","format":"int32","default":1},"size":{"type":"integer","description":"Page size","format":"int32","default":10},"table":{"type":"string","description":"Name of the table"}},"required":["table"],"title":"Get_database_table_data_with_filterInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","additionalProperties":{}}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"},"total":{"type":"integer","format":"int32"}},"title":"ControllersListResponseMapStringInterface {}"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

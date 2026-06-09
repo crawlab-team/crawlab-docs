@@ -1,0 +1,75 @@
+---
+id: create-database-table
+title: "Create Database Table"
+description: "Create a new table of a database"
+sidebar_label: "Create Database Table"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVk1v20gM/SsCTy2grdPuLhbQLU1zMAq0QeLsxTACWkPb00ozygyVxGvovy84I1uyLTst2pwc8fORw0dugHHpIZvCJ2ScoycPsxQU+dzpirU1kMGVI2RKMDH0nDDOC0rsIsFEtSaQgq3IoaiPFWSQB4OHrfwh2EAKFTosiclJxA0YLAky0ApS0BKoQl7BYfTxJ4nGK+rHc/RYa0cKMnY1peDzFZUI2QZ4XYlTz06b5Y85W1hXIkMGdv6NctYKmmYWY5Dnj1atxXFuDZNh+YlVVeg84B198+J4c5xBdCaonVSHNXmR7ooS0b+W8Bcs6SjlJoVY0lej5baoS+N7iugcrqXgTKV/3QHWbB+0yR2VLfhWf25tQWgkl3ylC+XInI4CuXZ5XaB7c21Y83r72K5Cem/FiaIF1gUfV6RJgV7YDTS3SWGFfjUo+E7rwe/DVReB5QdTF8UwROv0UhssTnStkbLpEt162Nwzcu0H7eKHI4FINEuLYahkQUEbRS/0C8395ddxshrWKXI9iTZMS3L9YdOG//xwBuhY0PXQnmz1mSRea9rP9yWF2ujHmob6fB5KkJ/IpDkc+/tKIZNq2VbRQhsdRKdCTAIf9FO4GiLhsalqhqYRRUe+ssbHTn64uAjstJfF18+Q/i7eI+esGyxoSd7j8icb1AdqDTtbFOT8v1ar2xZWi/KvIWAfUSW3kd4h6Lw/1rk3WPPKOv0fKVH6e8jR2DA5g0VyR+6JXHIdUDYBFa+sLMPK+lAN2W0ZjLb98KONVs0odMWP4saEFDzltdO8vpOythRc6Yn9vk+vlf5M6+3aXBGqMFvtQr28GSfRQhKRRt12q+z6Bcsqro6DVdStoN1y2RHE9HgTxMXbcf9U2HPWI/LOX8vf3Yc4y93/ga27fw/z6bg5Bj0Y7E5xR8LtVdC+nh6y/Vc065HodB/uoeuW0S7E5jD9Y90T+b2WUMcuAkBC7XuIrL+w4Sns5hyfC5wnlzfjo+vh9vpuIoJkYV3SKkIKT+R8VLh498+7i7C+rOcSTUfq26tvSzDJpD3i9iL0zqIfORNbtEwvPKoK1GE51i4s3Tgg092r9JBCFm7DOCNCRXFKpAMyVNkUNhtRvXdF08jnx5qk+9NZCk/odHzG0w0o7eW3gmyBhaczIN7ctpfl22TwVhxEsJ1KIyP5hIU0EHbPWu7JmSywOKaSTxRcxah/TMS8Mzxi2SbdWlzmOVV8VnfWo56br3cTSGHeXrClVWLj8FkuaHyOSdpQhcA04dsGCjTLOjAyRJ/y9z9trC1F
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Database Table"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases/{id}/tables/create"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new table of a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the database","required":true,"schema":{"type":"string","description":"ID of the database","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"database_name":{"type":"string","description":"Name of the database"},"table":{"type":"object","properties":{"columns":{"type":"array","items":{"type":"object","properties":{"auto_increment":{"type":"boolean"},"children":{"type":"array","items":"circular(EntityDatabaseColumn)"},"default":{"type":"string"},"extra":{"type":"string"},"hash":{"type":"string"},"key":{"type":"string"},"name":{"type":"string"},"not_null":{"type":"boolean"},"original_name":{"type":"string"},"primary":{"type":"boolean"},"status":{"type":"string"},"type":{"type":"string"}},"title":"EntityDatabaseColumn"}},"indexes":{"type":"array","items":{"type":"object","properties":{"columns":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string"},"order":{"type":"integer","format":"int32"}},"title":"EntityDatabaseIndexColumn"}},"hash":{"type":"string"},"name":{"type":"string"},"original_name":{"type":"string"},"status":{"type":"string"},"type":{"type":"string"},"unique":{"type":"boolean"}},"title":"EntityDatabaseIndex"}},"name":{"type":"string"}},"description":"Updated table definition","title":"EntityDatabaseTable"}},"title":"Create_database_tableInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

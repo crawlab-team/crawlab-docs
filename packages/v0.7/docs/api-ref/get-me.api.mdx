@@ -1,0 +1,63 @@
+---
+id: get-me
+title: "Get Me"
+description: "Get the current user"
+sidebar_label: "Get Me"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVVFv2kAM/isnP2elmzZNytvWsQp11aoWnhBCTmLItUku9TlsDOW/T77AllJQ8wTKfd9n+7PPtwPBtYd4DjNP7GERQUY+ZVuLdRXEcE1iJCeTNsxUiWk8MUTgamJUyCSDGNYky5IgAiZfu8qTh3gHHy4v9eel3s8biCB1lVAleop1Xdg0SI0evUJ24NOcStR/sq0JYnDJI6UCEdSsgcV2ATKUAailzXogL2yrNRyXOfkGEawclyj/lGwGbQQpEwplS5S3Va46rBFbkhcs675ohkLv9KSvmmyHqybbczlSibZ4W2gcYG0EK8telhWW9Dbpu2JNwLYRFDiY+AN7PHbFAMq9ovboQW1TgjnfO3ZOlpiVtupJJc4VhNUJLSemA7+gLo9yP/ADqJFuyPZnyIzaJStU+tfpt20ETZ0NnqdZhx0wTwfVIfN0UD0/T3rJhzV5dkBqaS+PpjkZvaFGnOnSgwjEipoJty6jwis7zC+z4xN2RVCS97g+kUgbgReU5ozLhzhXrhJ2RUHs7/e76dpK3iT9BFplfDy1rb5iZu7puSEvEDDvX2NmFTaSO7Z/KJj36ZTQpBI1qjAPxBtiMw4Vt6FCyd1+ieruQskhhpG2wI/CUvWUNmxl+6BrsRs3rO3UPVF/rLG2NxRmT+PlhFlY1F0b4cvdxHQMjWmrlQvUg0uMvwpMzJe7yetrMX6Y6oFZOTZ7IESwIfYd4PLi88WlFl47LyWGnPZR9fG4pWPJ3f/9f+552dck9FtGdYHdlWw47LjOoXkYUg9qoL5aufOiX3e7BD3NuGhb/fzcEG8hni8i2CBbTLTe+aKNDg7F8x080VYtSlOqtQUbLJrO0aOnqV302nU9nkLb/gX00HnQ
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Me"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/users/me"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the current user
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"email":{"type":"string","description":"Email"},"first_name":{"type":"string","description":"First name"},"last_name":{"type":"string","description":"Last name"},"role":{"type":"string","description":"Role"},"role_id":{"type":"string","description":"Role ID","format":"objectid"},"root_admin":{"type":"boolean","description":"Root admin"},"root_admin_role":{"type":"boolean"},"routes":{"type":"array","items":{"type":"string"}},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsUser"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsUser"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

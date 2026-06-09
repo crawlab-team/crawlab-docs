@@ -1,0 +1,71 @@
+---
+id: get-filter-col-field-options-with-value
+title: "Get Filter Col Field Options With Value"
+description: "Get the field options of a collection with a value"
+sidebar_label: "Get Filter Col Field Options With Value"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VF1r2zAU/SviPm1gmmxsDPzWlbSEPrQkbfdQQlDsm1itIrnSdTrP+L+PK9ld2rgd22BPxtL9ODr3ntMAyY2H9BZOlSZ0HhYJ5Ogzp0pS1kAKZ0iCChRrhToXNhx7YddCisxqjRkfiEdFhZBiJ3WFkIAt0Um+mOaQwgZpuQ71l5nVy1Bp2VVacuayzyulk1sMQNLbBozcIqSQWQ0JKEZTSiogAYcPlXKYQ0quwgR8VuBWQtoA1SWneHLKbKBtk6cqfY9/rRNf0hd6qNDV8JK0yKboL18r+2Za2y4YoC+t8eg5+eN4zJ/nORfnkEBmDaEhvpVlqVUWyB/deQ5pDvvb1R1mxIQ7HhWp2CCXtB8lnZMMXxFu/e+ztVyhHuAu6ag/gH7Dx2GVTC04KRHKZLrKldkIU2meOn/kSmOcUNsmQIr4FyaGFNWRsjnyIl7EwhyEzlk3iGWL3ssNDt55klT5wfE/tT2xhhwvvvOzbjhniopq9QYezv80NLyvMhczfKjQE4SYD4cx10ZWVFinfmDOQZ+HCk0NoTNSizm6HToxCe9vw3upsJ0Kg8KogBRGcYv9qMmsbkdNmFDLq4pZ5RTVc16ZOFdZqit7j2Z/M0p1jnWvgQJlHhTRKeT4cipiBgNQZm1Dak+gk49arsTx5fRAALPJ/IovxNo60QVCAjt0PgaMj74cjZmF0nrayoCp68pG1QnoxGpxGvzqovOrb+xPN50DPOvZ/BLP33ldRwnhdxqVWirD8CoXlBDZvu08w0MCaTSzNGYvEiisJw5pmpX0eO102/Jx9AA2wVx5FkAO6Vpqj2/Af+E6g8Dusd73sE6ZAGw2O+lU1NoftX0361z0vXita782pt7v2aNhSthg/2PLeNAu2qTfXn5zvDvOMixpL+vAUpmsJ12dTa6gbX8C+gJ+sw==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Filter Col Field Options With Value"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/filters/{col}/{value}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the field options of a collection with a value
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"col","in":"path","required":true,"schema":{"type":"string"}},{"name":"value","in":"path","required":true,"schema":{"type":"string"}},{"name":"filter","in":"query","description":"Filter query","schema":{"type":"string","description":"Filter query"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"label":{"type":"string"},"value":{"description":"Value of any type, including null","nullable":true}},"title":"EntityFilterSelectOption"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubEntityFilterSelectOption"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,75 @@
+---
+id: get-node-current-metrics-by-id
+title: "Get Node Current Metrics by ID"
+description: "Get the current metrics of a node"
+sidebar_label: "Get Node Current Metrics by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVttu4zYQ/RVinlpAXbvbtAX0lmaDwFhkGyT2UxAIlDi2uZZIhRw5dQ39ezEUldr1TemT48ycMzfO+GyB5MJD+gzfrEIPLwko9IXTNWlrIIU7JEFLFEXjHBoSFZLThRd2LqQwViEkYGt0kv0nClJYIGVsyCIki5As32RaQQK1dLJCQsdxt2BkhZBCMGkOWUtawn/zmHzhkJxJDOrwtdEOFaTkGkzAF0usJKRboE3NhJ6cNovLRHPrKkmQgs2/Y0FaQdu+ML+vrfHomfLzeMwf+0x/foUECmsIDbFV1nWpi9CI0XfPLtvDrLog3AXHbSPdBVCSBnhx/wYUeLyoBORa6lLmJWZK+9UOkzaEC3QHVNc9QATADq029NvVPmeFlXWbD7FGyDHeom6yxssFZjW6InY4Epumyo/w3jzMRICICJGLvfnOSyspcDuUhCqTdLmbN52vIF2hJ1nVu4xKEv7Ell3WfDOcNd+cmhU3PHMomY/QZ04SXm7BF+1XglEioERAHWtBoH9zmvDj/AF2KcDCOtuQNpgVttmb3qlncRMvzDtSdMj91/HLZ2Y3SG/WrfrcsVgPLOBbB+yzx2J9uoT9IJ5P2f8JwsAzQfhSDllrvs/i9G6TJVkO3espO5/e6Y5r8D53bGd2ucNfKnDK1jaBplaDt3PW+Q7Yzp51yHb2rKe3s/GohjZ75lGd7vU70/A790546c4F7sFjDLRnprjD9sFcO9D5bPmZaCqZ6t4qLP19UA0cGJ2z7nBqbQIVer73R22eJDX+iGkn0o015GxZovOP8ef+TtOyyfdTaBlzdUwC/CGVeMTXBn1o+NX450OfmZENLa3Tf2N4O78eI5oYQmdkKZ7QrdGJ21BzG2qkpY26KognWkIKI74bfrTVqh1FfTWKegsS8Fg0TtPmidVHJx1krad2hWanIbLWX3HTq64lShUGGPXY9cNEdAjOQpu5DdC+c06+lTIX1w+Tg5k/3j5N2SDm1onoCAms0fnOYfzp909jbkVtPVUy5BSjstwMl67/NbiPejPfdMdvL9T2X/k1SKjGwgn/olFdSm3Cu3YlM3WNfQ4H2UMCaRCkkYWFXuzuSwJL64ldt9tcepy5sm35368N8qI9vySwlk6zwgkCV2nPfytI57L0eKaGHx6jqP1RHMjUo7n3kzQ8xrUsG/4GCaxw00nq9qVN+tFyLp3huiiwph3IgXRlBfz+8u5up9C2/wBe9DD8
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Node Current Metrics by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/nodes/{id}/metrics/current"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the current metrics of a node
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the node","required":true,"schema":{"type":"string","description":"ID of the node","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"available_disk":{"type":"integer","description":"Available disk","format":"int64"},"available_memory":{"type":"integer","description":"Available memory","format":"int64"},"cpu_usage_percent":{"type":"number","description":"CPU usage percentage","format":"float"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"disk_read_bytes_rate":{"type":"number","description":"Disk read bytes rate","format":"float"},"disk_write_bytes_rate":{"type":"number","description":"Disk write bytes rate","format":"float"},"goroutine_count":{"type":"integer","description":"Current goroutine count","format":"int32"},"network_bytes_recv_rate":{"type":"number","description":"Network bytes recv rate","format":"float"},"network_bytes_sent_rate":{"type":"number","description":"Network bytes sent rate","format":"float"},"node_id":{"type":"string","description":"Node ID","format":"objectid"},"total_disk":{"type":"integer","description":"Total disk","format":"int64"},"total_memory":{"type":"integer","description":"Total memory","format":"int64"},"type":{"type":"string","description":"Type"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"used_disk":{"type":"integer","description":"Used disk","format":"int64"},"used_disk_percent":{"type":"number","description":"Used disk percentage","format":"float"},"used_memory":{"type":"integer","description":"Used memory","format":"int64"},"used_memory_percent":{"type":"number","description":"Used memory percentage","format":"float"}},"title":"ModelsMetric"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsMetric"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

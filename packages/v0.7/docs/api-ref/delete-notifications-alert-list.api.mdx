@@ -1,0 +1,67 @@
+---
+id: delete-notifications-alert-list
+title: "Delete Notifications Alert List"
+description: "Delete multiple items"
+sidebar_label: "Delete Notifications Alert List"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVl1v2zAM/CsCn7U1+8KAvHVtsAVrt6FNn4rCoG0m1iZLnkRnywL/90GS07pNgvgpsXV3pCjx6C0wrjxM7+GbZbVUBbKyRpxrcuzhQUJJvnCqCW9hCpekiUnUrWbVaBKKqfYgwTbkInNewhTKiMrMQNFnGCQzrTyDBEe+scaTh+kW3k4m4ed5pO9fQUJhDZPhsIpNo3uts58+QLbgi4pqDP940xBMweY/qQj6jQsZsUoBSuQRqEyVA5Bnp8wKXhZgfgkSltbVyI9KqoROQuEImcoM+bTKRcIKVjV5xroZipbI9CqsDFXzzXjVfHMsx2f4U3KXg6dOAhnMNQ1LlFurCc0ecdYjOwkV+qwmdqrIGN2KeAT9C3qROKLndBI0elZmlXkqrCn9QEYZphW5PZmrxBA7xqAkyvC7t1GV1qRPV+IqwjoJ/VYM1nSadZ32EMFP3LSlUXftelgEcfzmjUvnW59HalXrTjO+75CdhD7tNep2GMu0dX6g9ouUckIPsl5qi/E4mepGI1P2i0Zc7EWPFgHdSWibcnSr3SXsiFbbqY5ptZ3qsVZ72WuwqEgEGxJsRQoEElixDkGubUnaDw04+m/sOucOHVW8T97j6sDBdxI8I7f+wFL3FPTCGnZWa3L+pnfjz4qrNj+aTRfo7w+Z9ScsxQ39bsnHpN9P3uxj7gy2XFmn/iVr+HBIaG6YnEEtbsmtyYlZ3H6X2qeyT8MluDdyBVM4ezZmzjBNLgmeitYp3tyGIZEcHhu1sL9o6H3YqK8UDlGF8BVhGa9zaik4/zEXiRFSUGZpI3VXQYd/NObi/Md874LczG4XYUEsrRM9ECSsyfkEmLz++HoS6tBYzzXGnPqo/ZAdnoBPE1lcpfH5wscfx+TR+dzvlukvnzUaVXT01kXvS3W8h2d1BAn4+A1QWc8Bsd3m6OnO6a4Lr3+35DYwvX+QsEangumHp2D7qY7T+y3EBofzoqAmZN4byP447x4GZ3w5u5otZtB1/wEih/0B
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Notifications Alert List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/notifications/alerts"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete multiple items
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"has_metric_target":{"type":"boolean","description":"Has metric target"},"lasting_seconds":{"type":"integer","description":"Lasting seconds","format":"int32"},"level":{"type":"string","description":"Level"},"metric_name":{"type":"string","description":"Metric name"},"metric_target_id":{"type":"string","description":"Metric target ID","format":"objectid"},"name":{"type":"string","description":"Name"},"operator":{"type":"string","description":"Operator"},"target_value":{"type":"number","description":"Target value","format":"float"},"template_key":{"type":"string","description":"Template key"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsNotificationAlert"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsNotificationAlert"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

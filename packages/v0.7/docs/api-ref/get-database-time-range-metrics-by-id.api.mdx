@@ -1,0 +1,75 @@
+---
+id: get-database-time-range-metrics-by-id
+title: "Get Database Time Range Metrics by ID"
+description: "Get the time range metrics of a database"
+sidebar_label: "Get Database Time Range Metrics by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vttu20YQ/ZXFPNkAbTl1i6J8c2MnEIKghuQ8BYIwIkfiJuQuvTt0yxL892KWpMxYgmLJ6JOwmtuZMzc2wLjxEH+FW2RcoScPiwhS8onTJWtrIIaPxIozUqwLUg7NhlRB7HTilV0rVGlvChHYkhyK2TSFGDbEy0G4FOtlsF721stVvdQpRFCiw4KYnCBpwGBBEEMQaQFQImfwEtX0VqILrlF8R4+VdpRCzK6iCHySUYEQN8B1KU49O202r3O2tq5Ahhjs6hslrFNo22gLj8wW32NFrt7xeWfSjrK1dcH1QFpH4dnsw/vr6+s/VBfmHF6P9njP21RSZLoQ2x9y6eyX8vKHk3pviwIvPEnJmFKVa89CXedBBQ+KrXLypqe31OToUOOMPKPjw6nMReV/qtApvn9SozA/ldE/yepBYoraTuAzutxcRqrQpmKKVGYrF6kU6/M31OiUaG27kIC+tEbWTdzAL1dX8vOj678+QQSJNUyGRYplmeskLJfJNy8qzS7MblJlpThZRay7ADLUIy10DoU5zVT4fdaYploCYX4/9tO2bQTknHW7zLQRFOQ9bmivzDNy5feI2ghYc06h4Q07m+fk/Kyn5zOW86A4NUxujQmppoU2APl1H2t/Yqpm9FiRZwg673Z1vhisOLNO/0upKP22z1EIaDBXc3JP5NRdSLsNaXJm+/UeljdnEMNkWJx+0ui0nfR9MJG2vQg9L+NDSeU013OpW1caLPWD/U5mXJ5Sf6J6aPOMMCUH0TAHN/dT1VkIGG3WNpgOHDr8O8eVurmf7jTr7G7+IILQq70iRPBEzncKV5e/X14JI6X1XGDA1EeVGzicSBW6fhbm+HPf7qtaTW9fRmye+/eYI9rTwPQPT8octRFIlcvFYcf2V9iyDRHE4VL23sT+mfJFBJn1LBZNI/pfXN628ne3PeTcptrjKpfZX2Pu6UAOx9+dval8p3p7P58wr0QDZNO9HsnZrF9Y5+qEi3QA1YtLeCK8U9b/AVDDMXs7WaddhwPQxlfpGd5CHk4LviNbbIR17zfZXijD3jD1GMUAUb7bFm00LBLB0wlukoTKMfCdEyOJbNfdx7sHaNv/AFk4zxs=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Database Time Range Metrics by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/{id}/metrics/time-range"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the time range metrics of a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the database","required":true,"schema":{"type":"string","description":"ID of the database","format":"objectid"}},{"name":"end","in":"query","description":"End time for the metrics range (RFC3339 format)","schema":{"type":"string","description":"End time for the metrics range (RFC3339 format)","format":"date-time"}},{"name":"metric_names","in":"query","description":"Comma-separated list of metric names to retrieve","required":true,"schema":{"type":"string","description":"Comma-separated list of metric names to retrieve"}},{"name":"start","in":"query","description":"Start time for the metrics range (RFC3339 format)","schema":{"type":"string","description":"Start time for the metrics range (RFC3339 format)","format":"date-time"}},{"name":"time_unit","in":"query","description":"Time unit for the metrics (e.g., minute, hour, day)","required":true,"schema":{"type":"string","description":"Time unit for the metrics (e.g., minute, hour, day)"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","additionalProperties":{}}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseMapStringInterface {}"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

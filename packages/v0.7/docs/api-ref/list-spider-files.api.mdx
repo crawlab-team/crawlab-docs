@@ -1,11 +1,11 @@
 ---
 id: list-spider-files
-title: "List spider files"
-description: "List spider files"
-sidebar_label: "List spider files"
+title: "List Spider Files"
+description: "List the files given a directory path in the spider project"
+sidebar_label: "List Spider Files"
 hide_title: true
 hide_table_of_contents: true
-api: eJyVVGFv0zAQ/SvWiQ8gZUs1kBj5NhigSSAQg09Vka7xtTEktrEvY1Xk/47OSbpuHUj0S1v7+fzeu3cegHEboVrCtTeaQoRVAR4DdsTyr1oOYLEjqMBoKMBYqMAjN1BAoF+9CaSh4tBTAbFuqEOoBuCdlxORg7FbkILMFOTo9+Xi5BWebC5O3q2GsxfpCRSgKdbBeDZOEB+d3brL1+rT+gfVfKVVIB8okmXSCqNC1dAtaqpNh63aX8GGW7lzPgbpYeFxR11dQir2oiYpWdavnsIO/q7jqOJn5EYZq7ghFbN9SptANbuwg7QSh6J3NlKUYmeLhXzdL/HBRFZuozampQgF1M4yWRYget+aGgVY/oiCHo6puSxKLA7OU2Az3lU7TQcoY5m2FKCAjQsd8rj0/EwkdRQjbukRuenO1eu+rilGSPJ5aEPWMOmfdXTEjdNQwZZ4DEADFZQjKpaD0anM2LI1URCRws0cuD60UMGQxVKqynJoXORUDd4FTiV6c5SaS9pg37K6+HylxlJQwA0Gg+t2tGSsJr/I9p0kvmH2UOSvHHs91oBq3EkFyLVjz+ad1tXY5uVUgNC5t32+OF+kJJ2PVPfB8C7reU0YKFz04sFydbh9nUllfoegfSsmijN3WGdQbo2xG5eRU4veBPzd4locOHJHXNm4oCZModAq58meRNeHmpQ20vN1LyP2m9aqFhwFhbozVvkWWXIjjlKIY8nF6cvTxWhC5A5zOqeZeiwP9/js5THdculbNFYq5bYPU1aWMGUFCqjy0zOXyoFZzc1ZwjCsMdK30KYky+MUi+3aROm+hmqDbaQjEvtZ+/cgF4+z/Um7u/fjBtteIHnq59j9J4mnX6b39Jm6e6r+cvm0iHZ3ePlMymhIK4kvoaaQaYwbF3VNng+OHL0xwn8/u+/ffoWU/gDcWRZz
+api: eJylVVFv00gQ/iureQLJR3ocd0h+K0eLIk4CteWpqqKNdxIPrHfd2XEgRP7vaNZOSRtTQPdkyfPNzDffzn67A7HrBOU1XLbkkBPcFOAwVUytUAxQwn+UxEiNZkUek1nTBoOxxhFjJZG3prVSGwoZk3IV03L8iJVAAbFFtlpp7qAET0kWA2aRy0EBrWXboGjv8noHwTYIJZCDAkj7a3l4SGpga+avoQDG244YHZTCHRaQqhobC+UOZNtqrSRMYf1ojVXkxgqUEJdKnBz0fXFHZqSQ6dx2yNujWq/vqQG/TuJBYt/f6ECpjSFh0vTnJyf6uZ/17i0UUMUgGESjtm09VVnn2cekkN0xg2E0VZz1VISGBs7KIcoyW52PBJv08+yqJu8Yw48rQEVcdd7yk7MgJNvzdE4e52EVn0JfAH4RDIliONaqL0CXZJHoKx5EKQiukQ9PjYL88yLjO+8XWcmparVN0wFKC0d8EFrG6NEGjTXRLYQanDrLOwLOCv6RUUPGz/n+9Vyhw4JNMPrBDH0BQuL110M1cxCZI08WbDAlu55ulsRKlx5v928MwtF75HQx7ucbkrpbTvDQvBdTe/vKOnOBtx0mgYz58xjzIdhO6sj0FZ2C/p4qNA+CHKw3l8gbZHOW5+7znFJH9Zo15m3NOsJsMJ0025HrZ9l6ZmpGelOx6phke6n3ZVhq29JV/HR/qVt6i9u9CdRoXT7R0SBO38/NkKEUSFXQ1L10bD97uzSn7+dH9//i7PJKA2YV2YxAKGCDPNwJOHn28tlJ3oiYpLGZ09g1O/PoYuejm96rvvvuEf/TxkcVBL/IrPWW8s3o2GuPQeJrGCWGAsrs3nuDzzrfFFDHJIrb7ZY24Qf2fa+/B0NV63eU7NKrka+sT/jIMEd2O8nvE26/m/fG+k4hoA67sUza6jfbPrkYn5qn5vDxmGy+35uwPWy+J6UPzI060rBISmMInFYVtnKQcmTtyv9uyd+cXUHffwO2S6Wy
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
@@ -22,7 +22,7 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"List spider files"}
+  children={"List Spider Files"}
 >
 </Heading>
 
@@ -36,7 +36,7 @@ import Heading from "@theme/Heading";
 
 
 
-List spider files
+List the files given a directory path in the spider project
 
 <Heading
   id={"request"}
@@ -47,7 +47,7 @@ List spider files
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"},{"name":"path","in":"query","schema":{"type":"string"},"description":"Path in the spider directory"}]}
+  parameters={[{"name":"id","in":"path","description":"Spider ID","required":true,"schema":{"type":"string","description":"Spider ID","format":"objectid"}},{"name":"path","in":"query","description":"Directory path","schema":{"type":"string","description":"Directory path"}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ List spider files
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of files","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"children":{"type":"array","items":"circular(EntityFsFileInfo)"},"extension":{"type":"string"},"file_size":{"type":"integer","format":"int64"},"full_path":{"type":"string"},"hash":{"type":"string"},"is_dir":{"type":"boolean"},"mod_time":{"type":"string","format":"date-time"},"mode":{"type":"integer","format":"int32"},"name":{"type":"string"},"path":{"type":"string"}},"title":"EntityFsFileInfo"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubEntityFsFileInfo"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
 >
   
 </StatusCodes>
