@@ -5,6 +5,9 @@
     "packages/*"
   ],
   "packageManager": "pnpm@9.9.0",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "pnpm -r run dev",
     "test": "pnpm -r run test",

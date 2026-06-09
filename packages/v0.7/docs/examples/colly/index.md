@@ -48,18 +48,8 @@ import (
 	"time"
 
 	"github.com/gocolly/colly/v2"
-	"github.com/crawlab-team/crawlab-sdk-go"
+	"github.com/crawlab-team/crawlab-go-sdk"
 )
-
-type Article struct {
-	Title       string    `json:"title"`
-	URL         string    `json:"url"`
-	Author      string    `json:"author"`
-	PublishedAt string    `json:"published_at"`
-	Category    string    `json:"category"`
-	Content     string    `json:"content"`
-	ImageURL    string    `json:"image_url"`
-}
 
 func main() {
 	// Initialize collector
@@ -88,24 +78,19 @@ func main() {
 
 	// Process article detail page
 	detailCollector.OnHTML("article.news-article", func(e *colly.HTMLElement) {
-		article := Article{
-			Title:       strings.TrimSpace(e.ChildText("h1.article-title")),
-			URL:         e.Request.URL.String(),
-			Author:      strings.TrimSpace(e.ChildText("span.author-name")),
-			PublishedAt: strings.TrimSpace(e.ChildText("time.publish-date")),
-			Category:    strings.TrimSpace(e.ChildText("span.category")),
-			Content:     strings.TrimSpace(e.ChildText("div.article-content")),
-			ImageURL:    e.ChildAttr("img.article-main-image", "src"),
+		// Build the scraped item
+		item := map[string]interface{}{
+			"title":        strings.TrimSpace(e.ChildText("h1.article-title")),
+			"url":          e.Request.URL.String(),
+			"author":       strings.TrimSpace(e.ChildText("span.author-name")),
+			"published_at": strings.TrimSpace(e.ChildText("time.publish-date")),
+			"category":     strings.TrimSpace(e.ChildText("span.category")),
+			"content":      strings.TrimSpace(e.ChildText("div.article-content")),
+			"image_url":    e.ChildAttr("img.article-main-image", "src"),
 		}
 
 		// Save to Crawlab
-		item, err := json.Marshal(article)
-		if err != nil {
-			log.Printf("Error marshalling article: %s", err)
-			return
-		}
-		
-		if err := crawlab.SaveItem(string(item)); err != nil {
+		if err := crawlab.SaveItem(item); err != nil {
 			log.Printf("Error saving item to Crawlab: %s", err)
 		}
 	})
@@ -142,11 +127,11 @@ func main() {
 ```go
 module news_scraper
 
-go 1.19
+go 1.23
 
 require (
 	github.com/gocolly/colly/v2 v2.1.0
-	github.com/crawlab-team/crawlab-sdk-go v0.1.0
+	github.com/crawlab-team/crawlab-go-sdk v0.7.0
 )
 ```
 
@@ -156,12 +141,12 @@ The critical parts for Crawlab integration are:
 
 1. Importing the Crawlab SDK:
    ```go
-   import "github.com/crawlab-team/crawlab-sdk-go"
+   import "github.com/crawlab-team/crawlab-go-sdk"
    ```
 
 2. Saving items to Crawlab:
    ```go
-   if err := crawlab.SaveItem(string(item)); err != nil {
+   if err := crawlab.SaveItem(item); err != nil {
        log.Printf("Error saving item to Crawlab: %s", err)
    }
    ```

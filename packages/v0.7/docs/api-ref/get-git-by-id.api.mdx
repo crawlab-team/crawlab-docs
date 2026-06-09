@@ -1,0 +1,75 @@
+---
+id: get-git-by-id
+title: "Get Git by ID"
+description: "Get a git by ID"
+sidebar_label: "Get Git by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVWN9v2zYQ/leIe9oAtcm6FgP8ljWBYXRbAyfZSxAItHi22VCkSp7Seob+9+JIKVVsOVY2DNieEkvffbyfvNNtgeQqwOQWpprgLgOFofC6Iu0sTGCKJKRYaRKLjZidQwauQi/57UzBBFZI+UpTvtjkWkEGlfSyRELPlFuwskSYQHylma+StIbdQ67XKGbnwi0FrVFowlKQEyskyMDj51p7VDAhX2MGoVhjKWGyBdpUzB3Ia7t6EefS+VISTMAtPmFBWkHT3PFRoXI2YGD2N6en/Ocp6ccPkEHhLKElfiuryugieuPkU2DIdl/BdAj7xrPvSKcDlKQRKA7KURC7/qhDYvAGLM9A1rTOk/AxkrOa1iJCkpzLq9qYntzCOYPSDgk6EbFNBoVxFnPjVqEnKb2XG04TwjLsa9LsMr5nEhFJmNKjJFS5pONGvE9YQbrEQLKs+o5RkvAVv+mzLjbjWRebQ34uau/RUr7w0hbrEYwJL1p8kwF67/xxwYsIa7K2/I7B/5DJ2kqG8MX5Ebl02SEbrprlmDAeSN1lbUw+rGaTwVqGAT8dNCxqUzrCnLws7gcB34M+YOVwFgyXRhPJyPCjP4sw1TTH5X6aztk9rZvyulKjs5QFRSsgJB3ULpCkeqBgdvmuEq7J4CVa3LQKHK+VjnVMrXSsh2ul9mYEzfy3iA3ox2X6TYds9uLE/YKvZO4SyRT4Ht/fnULDIY4Or7SK/e3v5vw/vK6LcoT4xVcsakJRuLKUNsk5M+rkc/ZC4YzhE50VsXnva8JilceCA5mac3vGuFDsnmLl0yv3v3yRc54sZMDR7mSwmA37kfkWL3Ba5Oq89eT1UeneryYDHtvGGDBHE/0x1SQOZyWzeecojxPeUVImY7iI8CaD0qkxDsClrA0JkuFeRJEM0NYlz69eWuVKyEAaAxkE5NRC9co6hQHuRrfDq1jfjy5m8XzlXV3lWr1gYDkU60F7+BARDxFahUzUAZXQVjwx4lUEhGR3p9m/rNNhbb7rEWf+F8YuybCw185r6teltoQr9PtTRwftmaEt/fwmIiM5TN5FTsfGjcruy4R9JrMJy4orYHTmPAr0hPNo8IjmII1xX1DlypVS2xF9/SwJiE6gZ/+4fO880CV86m8jhXeKJZD0lNfejBtIPImI3W/HO64Urft2W3KCXbeoywT6X4w4gwNIcv3jHJK61gGj9wv3qh1M+pPp4+Ryfv3xmS8IvoAxBLkanqoPzZj9k947S577uQ/z9kN6qmldL56q0LDM26GP61+lEnP8XGOIY9bb05/2MTeWP1ad139hrM13Q0QzSzzmGXGF/gG9aD+Hoo20du3aIi4ruFXByUpTONlq1cS2UdR8yVzxZ3xbkpW+dvfY77Cy0h9w0y011ihVvK/adcfZ5UwkCT5U26WLop2jvPxi5EKcXc72e+3F1TW/EEvnRQuEDB7QhwQ4ff3L69NY4y5QKaNO7am8qpn2FjU7s8Hj2mJgp9NaRfiVTiojte2N4MlJt9zguf4mWvGWaO0C8dPtlueRG2+ahh9/rtFvYHJ7l8GD9Fou2OLbLSgd+H8Fk6U0AZ9R7od5u/D5UTy3whnUuAuO5cg8SFPzL8jgHjdpCdXwFNBGi9VKL86KAivqieytdXg79Jg704traJpvSwmaEw==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Git by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a git by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to get","required":true,"schema":{"type":"string","description":"The ID of the item to get","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"Git":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"auth_type":{"type":"string","description":"Auth type"},"auto_pull":{"type":"boolean","description":"Auto pull"},"clone_logs":{"type":"array","items":{"type":"string"},"description":"Clone logs"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_branch":{"type":"string","description":"Current branch"},"error":{"type":"string","description":"Error"},"name":{"type":"string","description":"Name"},"password":{"type":"string","description":"Password"},"refs":{"type":"array","items":{"type":"object","properties":{"full_name":{"type":"string"},"hash":{"type":"string"},"name":{"type":"string"},"remote_track":{"type":"string"},"timestamp":{"type":"string","format":"date-time"},"type":{"type":"string"}},"title":"VcsGitRef"},"description":"Refs"},"refs_updated_at":{"type":"string","description":"Refs updated at","format":"date-time"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"url":{"type":"string","description":"URL"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsGit"},"spiders":{"type":"array","items":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"cmd":{"type":"string","description":"Execute command"},"col_id":{"type":"string","description":"Data collection id","format":"objectid","deprecated":true},"col_name":{"type":"string","description":"Data collection name"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"database_id":{"type":"string","description":"Database Id","format":"objectid"},"db_name":{"type":"string","description":"Database name"},"description":{"type":"string","description":"Description"},"git_id":{"type":"string","description":"Related Git ID","format":"objectid"},"git_root_path":{"type":"string","description":"Git root path"},"mode":{"type":"string","description":"Default task mode","enum":["random","all","selected-nodes"]},"name":{"type":"string","description":"Spider name"},"node_group_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node group ids, used in selected-node-groups mode"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node ids, used in selected-nodes mode"},"param":{"type":"string","description":"Default task param"},"priority":{"type":"integer","description":"Priority","format":"int32","default":5},"project_id":{"type":"string","description":"Project ID","format":"objectid"},"template":{"type":"string","description":"Spider template"},"template_params":{"type":"object","properties":{"allowed_domains":{"type":"string","description":"Allowed domains"},"project_name":{"type":"string","description":"Project name"},"spider_name":{"type":"string","description":"Spider name"},"start_urls":{"type":"string","description":"Start urls"}},"description":"Spider template params","title":"ModelsSpiderTemplateParams"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The spider data to create","title":"ModelsSpider"},"description":"Spiders"}},"title":"ModelsGitDTO"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsGitDTO"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,75 @@
+---
+id: create-database
+title: "Create Database"
+description: "Create a new database"
+sidebar_label: "Create Database"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWd9P4zgQ/lesebqTAhRuEXd9gwXdVsDBtqCTDqHKTYbWS2JnbYdur8r/fho7aUzT0uzLPbVPqfPND8+MZ74kS7B8aqD/BJfc8gk3aOA5ggRNrEVuhZLQh88auUXGmcQ5SyocRKBy1JwwgwT6EDvUOLiv8XuBxl6oZAH9JcRKWpSWLnmepyJ2skffDBlZgolnmHG6soscoQ9q8g1jCxHkmixZgYbukoHdqLFIApCxWsgprG9scAkRvCidcbvSJBIoI+CxFW8YaJgolSKXLRXnHrgSGVuz264XYtyG5hNu8cCKzCmLuTFcJpqPc655ZnZv+BUXJucx7rZ+XSPLspXp2iyrzJIrLq/JmNvdqn2lJIy2YSzP8u0brLROFt21Thbb0kU1MTaq0F32T5XOKnAl6wq2k6BDrsdtp2Dwr4wAtVZ6t9SVg5URzKiuutYBL+ysQwUSqp3/L1SWTepnynRI+hdClREIM07whRep3XBuyggyJafqp/YxzjCecSlM1m1HrMHTgSQNXYvCiddF0YrLLbkeBEbyrIPOv7iv9ZwbM1d6Q0Oim0qH8RLS4hR1S9c9wYLqF9L+duLljZ1qNJ0Da0w6zlTSwf/R6IY5ZDsg95XVICYaE9Hdi2TSYdOXFxu23PJlSIYDR4xU85eUv/7EmYljVcgOpX5eAWm7Ku0QwiGhyKf14bYt5B5XRjDnGmeq6NKX/l5B28EZ1cEIA2S5LTqMqZHHlREUedJ5Bjx6bIcZUGvtMgNqrdtnQKFFBzXDgcMaHCudbehTLQGD7G54y4Q0FnnC1AtLccrjxYoIMYP6TcTIflEyXbAXpdntYvT1JmLVIXHXo683bIT6DfWvlQO6WxN5rJHt3D7M0HnBrGI+lhCBFZYKE25VgqlpRlbp+ZjQmBDdcyzquYF/fs/eBjIvLJSlFzO5ksYflZNezx3fd47cXUO0p3d7erend3t6t6d3e3q3p3d7erend/8rvds6dqgzozF8usGZD4qF3FlxQyWtVmmK2gwrLvinsLNi0uKYJPVpE0O84Akb+teB4DDHbcyjpJautPgXXcZPNykaSEsBS6tos2qKul3amaIXkdQyqQdwmpRwlKxebEZgMC60sAt3DqvmkIsH9YrhmOe5uEYqREEWZ8gT17x8QuH8fsC8BFklejts3nNe/eBZ7jtHTWQdVW3SX1NPqwt8xyrhpHfy6aB3dnDyx8Pxaf/0uH/y+2Hv7Pgf2MwXG0YYpDNkcx8qDPhZUJohz3q/7CnUtipeLVdF2CyskRtPXwKHPQdp8CHL8CFa5xXrzCEIbcgIAhtV4la4ZmAHa25O9zYO3GakBkrX5yFNvN6W8bQaQI09P1+a//UEaVaCCbHhvDa4sHl/lPKwHQfS1FaDv3Xn9LFv+ljYF4R8Ue64rJ4d+TzlE3Z+P2hPyKvRA91wjbMCQgRvqI0H9A7PDns108m4O4eVyeq7w2XzRWGNlq8eObd+oqhOtMUf9ihPuZB+lKQk7RvEEyThlw9fj0+wXNLSo07Lkpa/F6gX0H96juCNa8EntPGnZypg3x76T+5EVt0SpT14INMETwvfVNaeicuoljiPY8zth9jnoL/d340eIIJJ9VmlqkzN51RWfA59cN9mSNpVn1tbQsrltHBjALxO+v0HFjn3oA==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Database"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"active":{"type":"boolean","description":"Active"},"active_ts":{"type":"string","description":"Active at","format":"date-time"},"cassandra_params":{"type":"object","properties":{"keyspace":{"type":"string","description":"Keyspace"}},"description":"Cassandra params"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"data_source":{"type":"string","description":"Data source"},"database":{"type":"string","description":"Database"},"description":{"type":"string","description":"Description"},"error":{"type":"string","description":"Error"},"hive_params":{"type":"object","properties":{"auth":{"type":"string","description":"Auth"}},"description":"Hive params"},"host":{"type":"string","description":"Host"},"is_default":{"type":"boolean"},"mongo_params":{"type":"object","properties":{"auth_mechanism":{"type":"string","description":"Auth mechanism"},"auth_source":{"type":"string","description":"Auth source"}},"description":"Mongo params"},"name":{"type":"string","description":"Name"},"password":{"type":"string"},"port":{"type":"integer","description":"Port","format":"int32"},"postgres_params":{"type":"object","properties":{"ssl_mode":{"type":"string","description":"SSL mode"}},"description":"Postgres params"},"redis_params":{"type":"object","properties":{"db":{"type":"integer","description":"DB","format":"int32"}},"description":"Redis params"},"snowflake_params":{"type":"object","properties":{"account":{"type":"string","description":"Account"},"role":{"type":"string","description":"Role"},"schema":{"type":"string","description":"Schema"},"warehouse":{"type":"string","description":"Warehouse"}},"description":"Snowflake params"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"uri":{"type":"string","description":"URI"},"use_orm":{"type":"boolean","description":"Use ORM instead of legacy database service (only for MySQL, PostgreSQL, SQL Server)"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsDatabase"}},"required":["data"],"title":"Create_databaseInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"active":{"type":"boolean","description":"Active"},"active_ts":{"type":"string","description":"Active at","format":"date-time"},"cassandra_params":{"type":"object","properties":{"keyspace":{"type":"string","description":"Keyspace"}},"description":"Cassandra params"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"data_source":{"type":"string","description":"Data source"},"database":{"type":"string","description":"Database"},"description":{"type":"string","description":"Description"},"error":{"type":"string","description":"Error"},"hive_params":{"type":"object","properties":{"auth":{"type":"string","description":"Auth"}},"description":"Hive params"},"host":{"type":"string","description":"Host"},"is_default":{"type":"boolean"},"mongo_params":{"type":"object","properties":{"auth_mechanism":{"type":"string","description":"Auth mechanism"},"auth_source":{"type":"string","description":"Auth source"}},"description":"Mongo params"},"name":{"type":"string","description":"Name"},"password":{"type":"string"},"port":{"type":"integer","description":"Port","format":"int32"},"postgres_params":{"type":"object","properties":{"ssl_mode":{"type":"string","description":"SSL mode"}},"description":"Postgres params"},"redis_params":{"type":"object","properties":{"db":{"type":"integer","description":"DB","format":"int32"}},"description":"Redis params"},"snowflake_params":{"type":"object","properties":{"account":{"type":"string","description":"Account"},"role":{"type":"string","description":"Role"},"schema":{"type":"string","description":"Schema"},"warehouse":{"type":"string","description":"Warehouse"}},"description":"Snowflake params"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"uri":{"type":"string","description":"URI"},"use_orm":{"type":"boolean","description":"Use ORM instead of legacy database service (only for MySQL, PostgreSQL, SQL Server)"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsDatabase"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsDatabase"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

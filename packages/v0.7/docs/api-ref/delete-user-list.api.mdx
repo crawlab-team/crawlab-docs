@@ -1,0 +1,63 @@
+---
+id: delete-user-list
+title: "Delete User List"
+description: "Delete a list of users"
+sidebar_label: "Delete User List"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVVFP20AM/isnP9+gmzZNyhuDbqpgGoL2qaoiJ3HJQZILd063rsp/n3xpRgqtyFOr+PNn+7PP3gHjg4doCQtPzsNKQ0Y+daZmYyuI4IoKYlKoCuNZ2bVqAk6DrcmhgGYZRJAFWCzGWJCgwZGvbeXJQ7SDT5OJ/Bxy/7oGDamtmCoWK9Z1YdJAev7oBbIDn+ZUovzjbU0QgU0eKRX+2kkKbLoAGfIIVGyyAcizM9UDvC55dgUa1taVyP+ZTAathtQRMmUx8vsslx1WsSnJM5b1kDRDpg9iGbIm2/GsyfZUjlSiKd4nmgZYq2FtnOe4wpLed/ouWBWwrYYCRzve4MDP2WKEy52g9uhRbRMHdbp3zlqOMStNNaBKrC0IqyNcllUHPnCNX+Xe+wdQw92Q7W3oHEqXDFPp36bfthqaOhs9T4sOO2KeetYx89Sznp4nedLjmrzokVLaoWmek5IXqtiqLj3QwIZFTPhpMyq8eIf5dc66I3JpKMl7fDiSSKvBM3JzQuU+zqWt2NmiIOfv9rvph+G8SYYJtOLx+di2+oaZuqPnhjxDwHx8i1lU2HBunflLQbwvx4hmFYtQhbontyGnpqHiNlTIuX1Zp7K+kHOI4Lzfup7Sxhne3sta7MYNazO3TzQca6zNNYXZk3g5YUYONHRthIvbmeo8JKap1ja49io5/F1goi5uZ2+fxfR+Lga1tk7tgaBhQ853gMnZ17OJFF5bzyWGnPZR94dEVFY33YU4IN+9XILTR2dfH9MfPq8L7J5n48K+66RaQtMfstx6lg+7XYKeFq5oW/n83JDbQrRcadigM5hI2ctVq3uhouUOnmgrSqUp1ZLpBoumE/bVhWpXg65dTW+m8ym07T+w2YKS
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete User List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/users"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a list of users
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"email":{"type":"string","description":"Email"},"first_name":{"type":"string","description":"First name"},"last_name":{"type":"string","description":"Last name"},"role":{"type":"string","description":"Role"},"role_id":{"type":"string","description":"Role ID","format":"objectid"},"root_admin":{"type":"boolean","description":"Root admin"},"root_admin_role":{"type":"boolean"},"routes":{"type":"array","items":{"type":"string"}},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsUser"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsUser"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

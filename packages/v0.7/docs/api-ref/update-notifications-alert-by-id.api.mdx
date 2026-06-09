@@ -1,0 +1,75 @@
+---
+id: update-notifications-alert-by-id
+title: "Update Notifications Alert by ID"
+description: "Update an item by ID with (partial update)"
+sidebar_label: "Update Notifications Alert by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWFFv2zgM/isCnzZAbdPcit75rWuLW7B1V7TpyxVBQNtMrM22PIlulwX+7wdJTu00aZM9X/OUSORHiiI/ilkC49xCdA9fNauZSpCVLsVZToYtTCSkZBOjKrcKEdxVKTIJLIViKkS8EKML8ag4E+8qNKwwF7UXeQ8SdEXGw41SiCCsT8ueGTtFZ2caL6YqBQkVGiyIyTiHllBiQRCB31LOeoWcwXOXxhk5J/RMcEbBLdatFyDB0I9aGUohYlOTBJtkVCBES+BF5eAtG1XOfxd2pk2BDBHo+BslrFJomkmwRpY/6nThTCS6ZCrZfcWqyttjH32zzsRy05cA5iJhXPBYkXW7KfIeUi6GO481utjuvITEEDKlU+TdKOdBVrAqyDIWVR/URejA7fRR48X+qPHiJR/X5HfBXfR+NRKoxDinfohirXPCckPxspVsJGRopwWxUcmU0cyJ91D/hFYEHdHqNBJytKzK+dRSosvU9mBUyTQnswHzJWiIlUYvJKrkP4YelR4o3x2JL16skdAeJRTWLq2rcAYv3OmGI+2Va1f9IIiXM28/d762fgRW0Wa3xj8ryUZC6/YD5nXfVlkX8ZbYj4PLQbrn9SzX6K+TqahyR2ffaY/EHrfSwkk3sqXC/UotMO4+pbZC3afUVqgvldrzWvN06GhojQRZce6MXOmUcttvIL5/eJiOf+8Dj006vbsdLWFUVrVDCTi20qUNVDccDDwvrl/3Z5BvjPvGuG+M+8a4/1vGlUDGbLsqn0/W4nzLxTcSLCPXdstW0xk91yUbnedk7E3Lxn8rzur4Zf536h+2kfVHTMVNeCyDlznelLkrseZMG/UrUMPJNqBRyWRKzMUtmQcy4tIfvwnlk+k0jA1J5scLziCCo7V+c+T7jT1aqrQBCZaS2ihe3LpGEVgeKzXW36nPf1ipz7RYjSUZYepTuh1Yzq5HImg4N1zruenGgsufWFQ59ZuML+0ub/ptAYaD4YeDwenB8K/x8Ul0chwN/zwcnB7/C+tE/1LWPS0/cXGYgrawbNjYYM3BE+d1YGuktrHc46tu77lsxynd2jpjDJ7XfCfYr+bXItSvz35Cq3Km/W2uEtvgY46xOLsebUTw5vJ27DbETBvRCoKEBzI2CAwOTw8HLj0rbblAnybtadtpuV8YNozWYXJ+bqw3MP7epN2mJdNPPqpyVL791sY3qpD197CW9SAh5D1IiFTqHmWZtuzklssYLd2ZvGnc8o+azAKi+4mEBzTKZZEfzlNl24yaYW7plZO8u2mfgO/FjqF66zFWJVe6emtzA0BCyAlHnRP3bAg16DwLG+fB/sHYqXeKG4/CRq40zpKEKn5VdtJjleuz8fknkBC3s36hU6dk8NH964CPwUtdhXhHy7C2hBzLee1pGAKo+/wHiyMJ/A==
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Notifications Alert by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/notifications/alerts/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update an item by ID with (partial update)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to update","required":true,"schema":{"type":"string","description":"The ID of the item to update","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"has_metric_target":{"type":"boolean","description":"Has metric target"},"lasting_seconds":{"type":"integer","description":"Lasting seconds","format":"int32"},"level":{"type":"string","description":"Level"},"metric_name":{"type":"string","description":"Metric name"},"metric_target_id":{"type":"string","description":"Metric target ID","format":"objectid"},"name":{"type":"string","description":"Name"},"operator":{"type":"string","description":"Operator"},"target_value":{"type":"number","description":"Target value","format":"float"},"template_key":{"type":"string","description":"Template key"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsNotificationAlert"}},"required":["data"],"title":"Update_notifications_alert_by_idInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"has_metric_target":{"type":"boolean","description":"Has metric target"},"lasting_seconds":{"type":"integer","description":"Lasting seconds","format":"int32"},"level":{"type":"string","description":"Level"},"metric_name":{"type":"string","description":"Metric name"},"metric_target_id":{"type":"string","description":"Metric target ID","format":"objectid"},"name":{"type":"string","description":"Name"},"operator":{"type":"string","description":"Operator"},"target_value":{"type":"number","description":"Target value","format":"float"},"template_key":{"type":"string","description":"Template key"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsNotificationAlert"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsNotificationAlert"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

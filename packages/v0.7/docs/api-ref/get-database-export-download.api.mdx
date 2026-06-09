@@ -1,0 +1,75 @@
+---
+id: get-database-export-download
+title: "Get Database Export Download"
+description: "Get the download of a database export"
+sidebar_label: "Get Database Export Download"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SsCTysgNNmwYYBv3RoUQQ8r0nSXICgUm4nVOpIq0WkzQ/99oD9Sdwmyrt0pjkg9vkeRrwJSqwDJDM4VqYUKGGAuIcOQeu1IWwMJXCAJylFk9tEUVmXCLoUSWXtB4JOznkCCdegV3xlnkMAK6bbLuW1ybjsEkOCUV2sk9Fy9AqPWCAk0eWNO0FzaKcrhTz7jc2bAjJp0QVb0kD0+lNpjBgn5EiWENMe1gqQC2jouEshrs/o32BjljqR+Lb1O/n8h1QNbWr9WBAnYxR2mpF/SqwGPEZxuHTJqK/NDGjZS3AVrTt5B9AhojHPGDc4anq+kgk/DIf+8RPhxCRJSawgNcVQ5V+i0HqgBA/HZHpumAzxPnsePdFMAvbd+n3SUsMYQ1AoPxgIpKsOBUJRAmgo++m4NeVsU6MNPq7NJKwti5KzPh4R9U5mY4EOJgaDO+bifc2NUSbn1+hdmnPTlENDYEHqjCnGNfoNejGqVsVZFuW23rl4uyiGBQTczYVDpLA6atxlUrC4Oqm7Z4qC3PQHT0mvaXnOnm2Yqp6f2Hk2vMcrpS9x2U5ajytCD7Cbw7GosmhvMTZulra92HfTqsVALcXY13puiyeh6ygGxtF60iSBhgz40CcPTr6dDbpCzgdaq5tRWZZvqXEyMmjE8fxb2olD1PGivtrdWOuETDVyhtGEapS8YrWn4DHYNBwlJ7RO760m7l0nP43Z9n0vIbSCGqCoGuPFFjHz8UKLfQjKbS9gor9WCezirINOBvzNIlqoIeETfh0m70ifiL855UGH34oafe6OKkv+BhHvc9g2bDeidnHoO9wYm+h0cjjriG7jU0TiPslsNfrEmdJam6Kh3ac/m2C13+3wxmkKMvwHHrpoq
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Database Export Download"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/{id}/export/{type}/{exportId}/download"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the download of a database export
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"exportId","in":"path","description":"ID of the export to download","required":true,"schema":{"type":"string","description":"ID of the export to download"}},{"name":"id","in":"path","description":"ID of the database","required":true,"schema":{"type":"string","description":"ID of the database","format":"objectid"}},{"name":"type","in":"path","description":"Type of export (csv, json)","required":true,"schema":{"type":"string","description":"Type of export (csv, json)"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

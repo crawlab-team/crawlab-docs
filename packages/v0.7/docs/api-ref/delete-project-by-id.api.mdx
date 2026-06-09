@@ -1,11 +1,11 @@
 ---
 id: delete-project-by-id
-title: "Delete project by ID"
-description: "Delete project by ID"
-sidebar_label: "Delete project by ID"
+title: "Delete Project by ID"
+description: "Delete a single project by ID with deletion prevention checks"
+sidebar_label: "Delete Project by ID"
 hide_title: true
 hide_table_of_contents: true
-api: eJzNVE1vEzEQ/SvWiANIbhOVSsDeWlKkSiAqCqcoSM56krh4bXfsbRut/N/R2Ju0JZQzp2w8X2/ee/YASa0jNHO4In+DbYqwkBAUqQ4TEkcGcKpDaMBokGAcNBBU2oAEwtveEGpoEvUoIbYb7BQ0A6Rt4IqYyLg1cMOUkLj053x69EEdrc6OPi2Gk9P8CiRojC2ZkIznjC/erf3sXHxdMp5LLQgDYUSXUAsVhRIbfFAaW9MpK/YjkkmWZ+7KIP/ZuEbE5QzygsHH4F3EyHhPplP+eZ4/MiI0WuTZsW9bjHHVW7sFCa13CV3iOhWCNa3iuslN5OLhkAxfxjMZ5ANSMnV06zU+yTIu4RoJJKw8dSrVo7cnvE6HMao1HhKc8+P+1xUl5Mynp9PTlxdzPomV753+z7aRgESe/r3nRUnJdc3n+82KYCKMay63rDkPTBuvoYEqaLXlBhqYjJlxMhidQUJEutuZvycLDQyFAMzNZDJsfEy5GYKnlCcqmAMHz3ClepvE2dWlqK1Awp0io5a20lS78Re6vuPrt0kpgCw/5Qrq2gOaGskSeGzVchexvlW2HGcJDOdZ+P30/TRntnrEtieTtmWfc1SEdNbz5vPF0/B1AVXwPU3aizBC3GGHZUkqohi38iVzFOcjqXurlszAATvMysqTGHOkUE74gO4o+p5aFNqw2suer9w9LkXLeUhC6c44EaxK7CVmFCnWltPjd8fTSkJMnSqOHR+tF7zwDNJ+w4QPaRKsMo6bFeWH0SRz2JkEJDRGs0ZVkTkMw1JF/EE2Zz6+7ZGY68Wj6IV5bSJ/a2hWykY8ALG/gvD62/iyvhGPj5b8O8rxULltMZnt+R9I+IXb+mbnBZsHlUYqMGrgrG0xpCclB7eerbG/MrOLzxffLyDn34eGG/I=
+api: eJylVdtu2zAM/RWBTxugtdnQYYDfuiUYgu5S9PJUFAVtMbVa21IlOp1n+N8H2s6aNemSYU++kDw8PCKpFhhvIyRXcBrcHWUc4VqDoZgF69m6ChKYUkFMClW01W1Byg+eKm3UfKoeLefKiIt1lfKBllT1r1lO2X0EDc5TQPk1N5BA70o3I8hN2txYAxo8BiyJKQiZFiosCRLoTVZIeOQcnjO7yEkouIXinJRlKhW7gQyBhkAPtQ1kIOFQk4aY5VQiJC1w4wU+crDV7b/CLlwokSEBl0oJ1kDXXUu26F0VKUqCd5OJPP7E/X4CGjJXMVUsVvS+sFkvzeFdFJd2k+OQRBQKIiTbIYFB3sNLtN1Z7ny6vSgNWSBkMjfIu1E+Db6KbUmRsfTroAaZ3ohlHTVt9kdNm5c4/uG/C2669tXpsct2BX3DgXftzd5qXA6+e6ixQt1HjRXqS2o8l6PvZOkU6d8hEWhgy4Uk+eoMFXGce6FCIbiwyaLTUFKMeLtFq05DZOQ6bjF1T6k+uYqDKwoK8Wwck8+W8zp9xqGToKNts/MRjTqjh5piT/Vo8nbT57LCmnMX7E/qW+P9NqB5xRQqLNQ5hSUFNeuL7voiOXdPK6pfSpxDAofjsoqHrTUdaIiU1cFycy7DOkwaenvh7mm9B9HbE2pWCywnNBRg1XRwfDpXQ4TkttXC9aErwQI+Fpiq49P5Rheczc4vxKAWLqjRETQsKcTBYXLw4WAiAngXucSe05h13OWn6yv8eYL2aUf99+4fpWD6wYe+QNuPXR0KyTKoewUrdUFDYo3cP7mLLJa2TTHSZSi6Tn4/1BQaSK6uNSwxWExFqqsWjI3ybiBZYBHpL+W8OhuvhNdqx5LfSnx1sJWc6hKLWr5Awz01w2XVXXd6ddLCbDAcZxl5XgvZWPxyf/xuv+nsy+xiBl33C/fbmmw=
 sidebar_class_name: "delete api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
@@ -22,7 +22,7 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Delete project by ID"}
+  children={"Delete Project by ID"}
 >
 </Heading>
 
@@ -36,7 +36,7 @@ import Heading from "@theme/Heading";
 
 
 
-Delete project by ID
+Delete a single project by ID with deletion prevention checks
 
 <Heading
   id={"request"}
@@ -47,7 +47,7 @@ Delete project by ID
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to delete","required":true,"schema":{"type":"string","description":"The ID of the item to delete","format":"objectid"}}]}
 >
   
 </ParamsDetails>
@@ -62,7 +62,7 @@ Delete project by ID
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"Project deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}},"404":{"description":"Project not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"name":{"type":"string","description":"Name"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsProject"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsProject"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
 >
   
 </StatusCodes>

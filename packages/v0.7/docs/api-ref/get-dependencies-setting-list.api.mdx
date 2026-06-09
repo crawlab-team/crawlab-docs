@@ -1,0 +1,75 @@
+---
+id: get-dependencies-setting-list
+title: "Get Dependencies Setting List"
+description: "Get a list of items"
+sidebar_label: "Get Dependencies Setting List"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVt9v3DYM/lcEPrvNtdswwG9ZmgWHdluQS56Cw4G2ebYaWXIlOsv14P+9kORLfD/iuNtTcOFHfh9piuQWGEsH6T18ooZ0QTqX5GCZQEEut7JhaTSkcEUsUCjpWJi1kEy1gwRMQxY9Yl5ACiXxqhhEWTlilrpceTdIoEGLNTFZz7cFjTVBCmupmCwkID3Pt5bsBg7Z/wwYsTO6vKIaId0Cbxofw7GVuhx367rkmbPBksYZr7Ekods6C9KOCKVmKoNpzG1tbI0c4b98DOA1tooh/TBU4+T3KWp62M9p6Z1GlMz2pBjL41IWxrIw4Zf7iU9x4PZMD+9WsoCuWyZgyTVGO3I+2sfZzP/ZD/LPZ0ggN5pJs7di0yiZhwY8++o8ZHssyGRfKQ/tZ327sowEBfIQhdaiTzZ29pveXvSbOc8/DSsfI/lkE8gtIVOxQn47ykXECpY1Oca6GQYtkOmdtwyjZpvpUbPNaxrpifJVXk/I8/KJcuGRXQIPNIH81lu7pG+6t9B/Y0yveSin6bl+KHdyvI+z+aq1apqfs7nw4C4BR2jzamUJi2FOmTGKUEcEt81pExtGtTcNT77Yg3fZJdA2xeTWuIvYCa2xizqlNXZRX2uN7uhzViT8cxJsRCSCBFiy8iR/mYKUe14umwuj17IMUchaY4/1dAnU5Jwf0adsjpFbd9IUij6pzt2LwAuj2RqlyLov0vFNP4WuJFdt9qp6H+HXUzPqDyzEDX1ryTEEzIdjzJ3Glitj5XcKXfrbqUBzzWQ1KrEg+0hWXIZqdaE6XJl+4Ya1yhWkcDZstrN+9YYRTXlrJW8WfjLGPsRG3poH0sMB2MjPtNnN/oqwCIXr98L59VxEDy9A6rUJrrsSWvxXYSbOr+dH3XRzubj1BrE2VvRASOCRrIuA2fvf38/CWzWOawyaelZ/dAzPErGIWYkv8aDYY9q+bIZXrpU+U6YnPmsUyvBQ+8kQi3gPey82vPBYxmUClXHsIdttho7urOo6/++4Jv1BU0iHmaIC0jUqRyP6Du6Zk8LCJH25jh5RtR4EfltPZ9o/SEaI+pPo/9D0t8YISY/4jyQHN8QYTzxjXniW/oeVngjS+2WX7Drcf7foc57n1Ay9jq4LH+X57V1d3kLX/QANfNZq
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Dependencies Setting List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dependencies/settings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a list of items
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"filter","in":"query","description":"Filter query","schema":{"type":"string","description":"Filter query"}},{"name":"page","in":"query","description":"Page number","schema":{"type":"integer","description":"Page number","format":"int32","default":1}},{"name":"size","in":"query","description":"Page size","schema":{"type":"integer","description":"Page size","format":"int32","default":10}},{"name":"sort","in":"query","description":"Sort options","schema":{"type":"string","description":"Sort options","default":"-_id"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"exec_cmd":{"type":"string","description":"Exec cmd"},"key":{"type":"string","description":"Type"},"name":{"type":"string","description":"Name"},"pkg_cmd":{"type":"string","description":"Pkg cmd"},"pkg_src_url":{"type":"string","description":"Pkg src url"},"search_ready":{"type":"boolean"},"setup":{"type":"boolean"},"total_dependencies":{"type":"integer","format":"int32"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsDependencyConfig"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"},"total":{"type":"integer","format":"int32"}},"title":"ControllersListResponseGithubModelsDependencyConfig"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

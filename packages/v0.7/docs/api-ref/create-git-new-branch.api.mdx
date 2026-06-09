@@ -1,0 +1,75 @@
+---
+id: create-git-new-branch
+title: "Create Git New Branch"
+description: "Create a new branch of a git repository"
+sidebar_label: "Create Git New Branch"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVNtu00AQ/ZXVPIG0NAWBkPzWQoUiJKjSlJcoqib2JNnW3jWz44Zg+d/ReGOaNhFQCT/4tnM7Z85MC4KrCNkMPjmBuYWCYs6uFhc8ZPCBCYUMGk8bs2D0+dqEpUGzcmKY6hCdBN6ChVATo3qNC8gg7/1uVk5uPG1ukidYqJGxIiHWlC14rAgycAVYcJqvRlGzx0VM12TGHzWvrOkwM9P3xjEVkAk3ZCHma6oQshZkW2v4KOz86rlhl4ErFMggLG4pF1dA181TNopyHoqtpsiDF/Kir1jXpct7Dka3UVO0h7WkYMoEK2PiKPZ2oeGcBp7+qfTkMjRFgkmcmyWHCjoLgrwieVbI5HIQErpun+XZk2qfpppbECcl/ZbPExmMfd0IdF2KGuvgYyLhzempPh7X9fUz2P/FMjEHPqSis1BRjLiio2dRUJp45KjbAxq8cChL4vgtuGKyg7VD+fYYsHMszCSJCXqb14c21x4bWQd2P6lQo3fHAo29EHsszRXxPbG56FF2PSpZBx3HOsSeDZ2uDEYrJ3HUuqIbpY5QHHnagIVIecNOtldKaOIMazcNd+T38GPtPtN2GNk1YUEMdhjms8uxSR5agrZo8jAyFz+wqks6IvkHXT4R7l4nnF+Gvo7f8sJNiQtzdjk+0PPk4mqqB2YZ2OwMwcI9cUwGpyfvT041qpJTYQ9wB2G39T45MV9oY84HnT/KsDf7z1iTOwqFfsioLtF5raDhUuOl9sxA2wMWsn4tDh1Sgmmjw7XWZmYzaNsFRrrmsuv09/eGeAvZbG7hHtnhQimatVC4qO8FZEssI/0BxYvJbsZfmr/sxqMoBnV4tbjHstEvsHBH27Tju3lnB7loZengQ8r/aqruD44Hc97ZweMsz6mWP9rO98R/+fVqqkTuNnYVCvVhVMHrvS8y9Hz0iu//tVCiXzX9ToAUU69fFqt3yQ==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Git New Branch"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/branches/new"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new branch of a git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the git repository","required":true,"schema":{"type":"string","description":"The ID of the git repository","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"source_branch":{"type":"string","description":"The source branch to create from"},"target_branch":{"type":"string","description":"The target branch to create"}},"required":["source_branch","target_branch"],"title":"Create_git_new_branchInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

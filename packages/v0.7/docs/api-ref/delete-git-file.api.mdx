@@ -1,0 +1,75 @@
+---
+id: delete-git-file
+title: "Delete Git File"
+description: "Delete a file of a git repository"
+sidebar_label: "Delete Git File"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVF1v2zAM/CsCnzZAaLJhwwC/tUtWBB2wIk33EgQFYzOxWkdSKTpbZvi/D7STtV2CfTzZFo888sRzA4LrBNkcLp3AwkJBKWcXxQUPGYyoIiGDZuUqMmFl0KydGKYYkpPAO7AQIjEqflJABkWXcbd2cqc5YCEi44aEWGka8LghyMAVYMEpR0Qp4XfiWUlmMlJGKemYk+mxdkwFZMI1WUh5SRuErAHZRS2fhJ1f/2/ZVeANCmQQlveUiyugbRfKlmLwiZISvB0O9fGy7pcrsJAHL+RFoxhj5fJOlcF9Ukhz3GNPogqxaiiuJyDmwMejtBY2lBKu6WQsCUqdToRaC+Kk0qOPwQuHqiJOX4MrpvuxoG0V9e7UYBdYmCk91pQEOsybY8ytx1rKwO4HFQp6f6rQxAuxx8rcEG+Jzbibsu2mkjI8rU63MVJCBoO1kzRoXNEOdJUSWEiU1+xkd6Na9nJhdLPwQP7Z6BjdFe0O+1USFsRgD5t3fj0xfYayO78KXepBI8ZvFS7N+fXkaHum45uZBswqsNkDwcKWOPWA4dmHs6FKEEOSDXY97Vn3Trp0Yj71vnhRu3nann8y3X5Soe8yiBU6r6w1V1qpl28OKh9YyDqr9QouLJQhiUabZomJbrlqWz1+rIl3kM0XFrbIDpeqxryBwiV9LyBbYZXoD22/mu5N+dr8xWYnmz/cnVfEFqtav8DCA+3630W7aO3hMrWzPnCe5xTlWcqR9dTBv3ZsNP48no2hbX8CmiiuQQ==
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Git File"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/gits/{id}/files"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a file of a git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the git repository","required":true,"schema":{"type":"string","description":"The ID of the git repository","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: update-data-collection-by-id
+title: "Update Data Collection by ID"
+description: "Update an item by ID with (partial update)"
+sidebar_label: "Update Data Collection by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tv20gM/isCTy2gxI7RILu6pU7aNYrFBolzWcMwKImOppE06gyVVDX03xfUSLESP3vZU3yyZsiPz4+iVsD4YCGYwRUyemOdphSx0rmFuQ8x2cioQp4hgPsiRiYPc08xZV5YeZMr71lx4n0o0LDC1CsbkY/ggy7IoChOYgjAnS9iZFxELzYWYbVQMfhQoMGMmIx4soIcM4IAmisllgvkBN66M01IHNBLjxNyLrFuPQAfDP0olaEYAjYl+WCjhDKEYAVcFQJv2aj84Xdhl9pkyBCADr9LFDHU9dxZI8ufdVyJiUjnTDnLXyyKVEVNKgbfrZhYbfriwCQTRhLHiqzcSr4OS0kOD4Y1udruvA+RIWSKF8iHUcZO1mOVkWXMij6oZOhEbvqoYXU8aljt8jGmuCwOZ4JyDFPqZyPUOiXMBeORKtu7QWNQ7EmF7aaPde23J5s3tQ9LRWl8DNwOTx9pS172mPSBFadydJ2z4krY+kV8aO4cYbbAubY9rraO3sfUtkM9prYd6q7a1tv4J33/inVd8H/rmFIrwa8nVYOxZvvMsWa+VrrfM3wmeVGylLTBsIXOrSvQaDhsGPjKt3++gf/O7Xduv3P7f+O2D2SMNlszkJG1+LA9O5aRy121by2Odc5GbBl723L/q+KkDHeMGdH9tG0ufMbYu3UbADQyZ5sy9zmWnGijflHT9ufbgCY5k8kx9e7IPJHxrpvY6yZWTnTsdqEoaXYmTiCAgeRzsB5rdrBScQ0+WIpKo7i6k3nkGhMLNdWPlPdbu1DfqOr2rIQwJgNd08HlzcRzGuKCTLjb9Z5z/ROzIqX+LGum1bpb+tMHRsPRp5Phxcnoz+nZeXB+Foz+OB1enP0Lr+dJv9faufDCfLfIOa7POsG5v1n8jsGzloxr0Dei85dQXyT6tNrndJ8o/eZS+VI3Ce6azOBziqF3eTPZINDt9d1ULrylNl4rCD48kbFOYHh6cTqUiAptOcOmcq3D7Tb+Zm13W/lbQ72F9Pe2+DZdTD95UKSoGkKWJhVI14Dt61Zei+tPBx8CFUtlEm1ZZFarEC3dm7Su5fhHSaaCYDb34QmNkvI2xYqVbUu9xNTSnig+3LYv/I/egYV9awhd9+fS+k+YlvIEftstMrvmtd/RYd1GY2f/ZCrqa8WNNaD2O43LKKKC98rOe+S+uZyO/wIfwvY7ItOxKBl8li8afHZe6sKlOVi5sxWkmD+UzSgEByq//wCRNbh8
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Data Collection by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/data/collections/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update an item by ID with (partial update)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to update","required":true,"schema":{"type":"string","description":"The ID of the item to update","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"dedup":{"type":"object","properties":{"enabled":{"type":"boolean"},"keys":{"type":"array","items":{"type":"string"}},"type":{"type":"string"}}},"fields":{"type":"array","items":{"type":"object","properties":{"key":{"type":"string"},"type":{"type":"string"}},"title":"EntityDataField"}},"name":{"type":"string"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsDataCollection"}},"required":["data"],"title":"Update_data_collection_by_idInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"dedup":{"type":"object","properties":{"enabled":{"type":"boolean"},"keys":{"type":"array","items":{"type":"string"}},"type":{"type":"string"}}},"fields":{"type":"array","items":{"type":"object","properties":{"key":{"type":"string"},"type":{"type":"string"}},"title":"EntityDataField"}},"name":{"type":"string"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsDataCollection"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsDataCollection"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

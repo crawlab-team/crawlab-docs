@@ -1,0 +1,75 @@
+---
+id: drop-database-table
+title: "Drop Database Table"
+description: "Drop a table of a database"
+sidebar_label: "Drop Database Table"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVF1v2zAM/CsGnzZAaLJhwwC/tUsegg5YkaZ7KYKCsZharWOpFJ0tM/TfB/qja5eg2JNj88QjT3dpQfA+Qn4LMxTcYKQIawOWYsEuiPM15DBjHzLMBDcVZX6bYWYHMBjwgRgVuLCQg2Uf7sbqXXcCDARk3JEQK1MLNe4IcnAWDDglCCgl/Mu6mCmXlPSSjempcUwWcuGGDMSipB1C3oIcgjaNwq6+/79mW887FMjBbx6oEGchpbVyxOBrVSJv4eN0qo/X3b5fgoHC10K1aBVDqFzRqTB5iAppjyfrSVQNVs3E9QTE7Pl4gWRgRzHiPZ2sRUFp4olSMiBOKv301dfCvqqI4w/v7HJYC1JS1KdTi12gzZb01FAU6DAfjjE3NTZSena/ySro86lGi1qIa6yya+I9cTbvtkzdVlL6zipUkfTukBJymIw3Eyets2nSmSdO1FFgIFLRsJPDtcraK4fBrfwj1S9UwOAu6TDaqiS0xGBGw51fLbL+hA7i6q3vjo5yMf6scJOdXy2O7LOcX6+0kG09ZwMQDOyJYw+Ynn05m6oawUfZYTfTwNqlZ0xXthoi8ap/+9dMb4dtWFPol0xCha5WyoYrbdHLeAvPMoKBvMtYr6SSqpZrA6WPotC2VeANVynp56eG+AD57drAHtl1k2perYv620K+xSrSG8O/Ww75fJ+dTNzJ+ce7q/Xi9lg1+gYGHunQ/0ukdTLjZeo8feG8KCjIiyNHKdQwP9ttNv82X80hpT9Y0qtc
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Drop Database Table"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/databases/{id}/tables/drop"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Drop a table of a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the database","required":true,"schema":{"type":"string","description":"ID of the database","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

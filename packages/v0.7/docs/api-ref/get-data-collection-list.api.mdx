@@ -1,0 +1,71 @@
+---
+id: get-data-collection-list
+title: "Get Data Collection List"
+description: "Get a list of items"
+sidebar_label: "Get Data Collection List"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVt9v2zgM/lcEPntrtt1hQN66riuC7XBFfzwVRUDbTKJVtjyJ7i4L/L8fKDmNkziu7/YUxCS/7xNFkdwA49LD9AE+I6O6sMZQxtqWHh4TyMlnTlfyH6ZwRaxQGe1Z2YXSTIWHBGxFDsVjlsMUlsTzHBnn2QvSXCIggQodFsTkhG4DJRYEU1how+QgAS0UP2pyazgk/hJ81NbosxUVCNMN8LoSDM9Ol8vhsKZJXjgrXNIw4zUuSZV1kQZpR4S6ZFoG01DYwroCObp/eB+cF1gbhum7rhqvf41R07r9Ny1t0ICSyZ4U63hYyq11rGwVK2T8VRyEvdDDm7nOoWkeE3DkK1t68oL2fjKRn32Qv79CApktmUoWK1aV0VmovbPvXlw2x4Js+p2yUH5OKpV1JJAa7XihcyiHjUX9arSIfvXMs8/dzEckOWwCmSNkyufIr6NcRF/FuiDPWFRd0ByZ3oili5qux6Om61Mac8rr6vVMUImpoW42UmsNYSkYT7T2I5LcamyapP1ybGkSWGgy+Ri4E0qfqCcvA5QJsGYjny5L1ryW/vhFNARbfDA9cHWVj77b++g74m63qGPudot66m6bw4C7FSl5D4qtikSwO/xfNifj5fC72RAwyDnrelNQkPfSYftsnpHrvstPgC2j6W1sB+2rezcXtmQnwpz/pj3ftE3kSvOqTk9ol/g/+hrMJ8zVDf2oyTMEn3fHPvcl1ryyTv+i8E7+7AOalUyuRKNuyT2TU5chV03IDa9sOyjDTOQVTOFM0n+WdYZvAp6y2mle30pHiyWMlb6zT1R2H0Glv9J627NXhHnIWNvPz69nKkYIty4XNoRuc+fwp8FUnV/Pjoro5vL2TgxqYZ1qHSGBZ3I+Okzefnw7kQRU1nOBQVPLKnvCwTahvsUdYI9ks2vmJ3aL9pBM//BZZVCHrlK7UCUxdQ+xk8tc2NtcVtazWDebFD3dO9M08jkONVk/cu3bzrVA42lA2sH20aspNJfdLvOMphYnkNk6nml/fRggaheY36FpN4MBktbjf5IcTPwhnrh07Hge5Y/TQgTTh8cm2da13FuMOc8yqrpRR7uAoLw8tqvLO2iafwHDsrf4
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Data Collection List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/data/collections"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a list of items
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"filter","in":"query","description":"Filter query","schema":{"type":"string","description":"Filter query"}},{"name":"page","in":"query","description":"Page number","schema":{"type":"integer","description":"Page number","format":"int32","default":1}},{"name":"size","in":"query","description":"Page size","schema":{"type":"integer","description":"Page size","format":"int32","default":10}},{"name":"sort","in":"query","description":"Sort options","schema":{"type":"string","description":"Sort options","default":"-_id"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"dedup":{"type":"object","properties":{"enabled":{"type":"boolean"},"keys":{"type":"array","items":{"type":"string"}},"type":{"type":"string"}}},"fields":{"type":"array","items":{"type":"object","properties":{"key":{"type":"string"},"type":{"type":"string"}},"title":"EntityDataField"}},"name":{"type":"string"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsDataCollection"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"},"total":{"type":"integer","format":"int32"}},"title":"ControllersListResponseGithubModelsDataCollection"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,75 @@
+---
+id: export-database
+title: "Export Database"
+description: "Export a database"
+sidebar_label: "Export Database"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVcFq20AQ/RUxpwZE7JaWgm5pk4LJIcF2TsGUsTS2N5F3N7MrN67Qv5dZSY4cqyJNT0aat2/ePL8dleBx7SC5h0v0uERHDhYxZORSVtYroyGBq2dr2EcYZQ0GYjCWGKU+ySABCoifnbpFxi15YiEvQeOWIAGVQQxKOC36DbxuNLmMzCryG+p2YnoqFFMGieeCYnDphrYISQl+b4XUeVZ6/TayleEtekjALB8o9SqDqooP8gLhkMD53pKw1vNGH1K3i6MHZ/TZfwgdIO2KW6ncE7fyngri/QnVj4CJQjFaGQ7j17zwdkFDLEd2Ia/JDytqsnOAvtekY56qWgiVs0ZLYpMSPo3H8nN86OYaYkiN9qS9VNHaXKUhtiMxWN6dCKiTIRFmCblXdQMJUQeFzCjTKk9bdyq/qmIgZsM9pRi25ByuqbfmPPriL4xe+VxefTfas8lzYjdtTJi1KMF97jPjG2bRlJ4Kch4C5uMp5k5j4TeG1W/KBPSlj2iiPbHGPJoR74ijqzBnFebyGyP7wBoXHJQ7lMCovYBuVKqsGtVRGpUyYCW5pLRg5fcz+Stqt9GquXkk3XXcqmvat2nbEGbhNjRZvLidRPUJEaL0yoSjrWGMv3JcRhe3k5NkTa9mcymEpDdAiGFH7GrA+Pzr+VjckKm2GDQ1XZtUXr4smCPu8iV8vUu0mczTsx/ZHJWWLgXncrL27h4O3kEMSdifh/uchPOLGDZid3IPZSnIO86rSl7XN1LWb6YcLnO5dSvMHQ3IHN4gvYIfad9dTzvMCwGBbIq3N/4wbTbDWfR6Zwx0PWBeui7kgZW0/cfZOxJ6Px69Otp06n1XRatPPjDvtWHwY/MOLaFaLaq4vTziTl26SFOyXRtPNqXYerjetzezOVTVHw9zzTU=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Export Database"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases/{id}/export/{type}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Export a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the database","required":true,"schema":{"type":"string","description":"ID of the database","format":"objectid"}},{"name":"type","in":"path","description":"Type of export (csv, json)","required":true,"schema":{"type":"string","description":"Type of export (csv, json)"}},{"name":"filter","in":"query","description":"Filter query for the export","schema":{"type":"string","description":"Filter query for the export"}},{"name":"target","in":"query","description":"Export target","required":true,"schema":{"type":"string","description":"Export target"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"string"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseString"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

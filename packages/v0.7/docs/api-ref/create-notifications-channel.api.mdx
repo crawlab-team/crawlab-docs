@@ -1,0 +1,75 @@
+---
+id: create-notifications-channel
+title: "Create Notifications Channel"
+description: "Create a new item"
+sidebar_label: "Create Notifications Channel"
+hide_title: true
+hide_table_of_contents: true
+api: eJztmFFv4jgQx7+KNc9uS7mtepe3blutuL1tUaE66RCKnGRKvE3irD2B5VC++8lOAMNSyL3DE9gz/9jjmZ8zrIDEzEAwgSdF8k3GgqQq2H0qigIzA1MOCZpYy9KOQwD3GgUhE6zABZOEOXBQJWrnN0gggNhZhIWnZ8K4EQQOGn9UaOizSpYQrCBWBWFB9qsoy6x1uPpu7NNWYOIUc2G/0bJECEBF3zEm4FBq+1iSaOxsIqiDVSgTz8iQlsUM9nc4eAAOb0rngjZKMoGatztLQkGnVZo4JYxkjoZEXvqiiSC8sDO+arTsrhotP1rjjv0puQfvV81hptQsw1CJitJ+uD6C4xJfnA97vrM+7M/R85NVKkSOp32fRBOBUqu5TFCf9hiuLWsOJqcyLIUxC6U7HOvo23jINuYbf6X9w5QF4Qz1B87W1gu7LOi3/kbJoJ532YKTao3XvpVB3S1kzntjXnMgzHCmRR5GikJS79jhzMatD4sUscbHV4pTQZ0qZaNjPdjgwak4j5OedpYDFlVu2SMtRXIhM5jWHKoy6Vxmr41thzJbq3Yps7Xqx2W2wChV6j2sdHZa7u/GmL2+/AX1fo3COEVm8cVIsWaRwIEkZVbxm0owMz6bWzQ7IctSqTGxMXQEnG49749geFCUFUFdNxqmVIVpANnv9RxNdxb4/BX4mdNnTp85feb0mdP/m9McUGt1IONqDjkaI2YHDsJmHAmqzIGp2oO8KkirLENtXlqOf5GUVtGxe8MKfDoE+s8iYS/N6zk4m+tfbV4LSx2l5b/oAnxzSGhQkM38jI1c/bBHF4DabZhSZbuEUhnHfUEpBHC1c01dxev2g4PBuNKSliN7wTS3gyjleK+ARCm/ok0CaR+fokgcHJpahbvhgDUedgmWly/bJuTxp8jLDP3LyRXVNkn86wT6vf6ni97tRf+P8fVNcHMd9H+/7N1e/wO7F8RHKbYZPsTw7Wy78M3vLXm3Y3tc3Z9wwOztQW/PaMuz7cQhUB2Y3cDHm2vZbCHhs+FYzPxq3yrtVK2f97J4U+7YNy85YpGJiN0NB7+E+uVxNLYT7E1p1hoChzlq0xj0Lm8ve+5eU4Zy4fKpjUbb5fr1Y9ZN8f6DvB72YHfchoXwJ12VmZAO4i2PmvSfwE7621Ty+u/UVkowgdUqEgZfdVbXdvhHhXoJwWTKYS60FJENyMRyuU3/YLKCd1y2lMCCLlqaz0VWNUWz9x5X87XHXRxjSUdtp14xD59HY+AQtT19rhLro8XC9vtiAQG4fwma3QWrZmwFmShmlcMfNJr28x8Y8LiA
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Notifications Channel"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/notifications/channels"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new item
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"google_oauth2_json":{"type":"string","description":"Google OAuth2 JSON"},"name":{"type":"string","description":"Name"},"provider":{"type":"string","description":"Provider"},"smtp_password":{"type":"string","description":"SMTP password"},"smtp_port":{"type":"integer","description":"SMTP port","format":"int32"},"smtp_server":{"type":"string","description":"SMTP server"},"smtp_username":{"type":"string","description":"SMTP username"},"telegram_bot_token":{"type":"string","description":"Telegram bot token"},"telegram_chat_id":{"type":"string","description":"Telegram chat ID"},"type":{"type":"string","description":"Type","enum":["im","mail"]},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"webhook_url":{"type":"string","description":"Webhook URL"}},"description":"The data to update","title":"ModelsNotificationChannel"}},"required":["data"],"title":"Create_notifications_channelInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"google_oauth2_json":{"type":"string","description":"Google OAuth2 JSON"},"name":{"type":"string","description":"Name"},"provider":{"type":"string","description":"Provider"},"smtp_password":{"type":"string","description":"SMTP password"},"smtp_port":{"type":"integer","description":"SMTP port","format":"int32"},"smtp_server":{"type":"string","description":"SMTP server"},"smtp_username":{"type":"string","description":"SMTP username"},"telegram_bot_token":{"type":"string","description":"Telegram bot token"},"telegram_chat_id":{"type":"string","description":"Telegram chat ID"},"type":{"type":"string","description":"Type","enum":["im","mail"]},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"webhook_url":{"type":"string","description":"Webhook URL"}},"description":"The data to update","title":"ModelsNotificationChannel"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsNotificationChannel"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

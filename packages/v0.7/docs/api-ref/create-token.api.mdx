@@ -1,0 +1,71 @@
+---
+id: create-token
+title: "Create Token"
+description: "Create a new token"
+sidebar_label: "Create Token"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVsFO4zAQ/ZVozi60FYjd3IBFqwrtgtpy2apCk2RoDEkc7AmlW+XfV7bTNqUFetwDPaXxm2fPzHvxLIFxZiCcwFg9UWFgKiAhE2tZslQFhHCpCZkCDAqaB2xBIECVpNECBgmEEDvI/WpR03NFhi9UsoBwCbEqmAq2j1iWmYxd4PGjsfRLMHFKOdonXpQEIajokWIGAaW227AkY1cT5ANQ9zJpgQxrWczgbUqDHyDgQekcec0kE6hFk0lyj/w5iy9MErDMyTDmZZs0QaaOXWmzRovDWaPFe2csMKfPeX6j39s35VO4677FV2VycAXuPPaACqxYD6nAivW9CtQ7Z08psOoIWAV+IxDAkjO7yS+VUGaa9GovTqkpsZJ3kppusJctHQ+KsmKoax9jSlUYr7B+t+vkuHWEm2sQX0L/Evr/InQBpLXSu2eoBeRkDM72VLYWYBi5MnuW6pZLVMFaZRlpM2yM8VNyWkXbVrMhJ/u8coFJMPRXBDhMbxdzV2DFqdLyLzkpnO4jGhRMusAsGJF+IR1cuZRrlyKnyt5MpTLOOsgphHDM/o4TYCiutOTFyHrSGwpLOX4jISzlNdnmSLtdSpiQhpUu4fx2EGy+K9blw83Fd/WKeZlR28/OsRsttB0I/W7/pNM96/S/j3un4Wkv7H876p71/sC2pzbRzRnW/xv1b1605f0RfVuw7W7L4kG5Uqy/jTjPMArObwc7Qh5ejcZ2IXhQOmiAIOCFtPGA7tHZUdf20fYjR1fjJoNmvBg3s8MWcWt22D+GNH1ieuXjMkPpja0zG+p7PgFezzWpFUM4geUyQkN3Oqtr+/q5Ir2AcDIV8IJaYmTznUxrsep4OFnCEy0a6VPBnbHd18Kzyuvkzde+FquI8zimkj/ETlt6vb0ZjUFA1IxOuUpsjMa5HatwDiG44ctGO9G6d0vIsJhVztPgOe3vH1N0WS4=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Token"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/tokens"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new token
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"name":{"type":"string","description":"Name"},"token":{"type":"string","description":"Token"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsToken"}},"required":["data"],"title":"Create_tokenInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"name":{"type":"string","description":"Name"},"token":{"type":"string","description":"Token"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsToken"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsToken"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

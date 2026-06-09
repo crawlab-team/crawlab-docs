@@ -1,0 +1,75 @@
+---
+id: get-dependency-logs-by-id
+title: "Get Dependency Logs by ID"
+description: "Get the logs of a dependency"
+sidebar_label: "Get Dependency Logs by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVdtO20AQ/RVrnlrJbdKKqpLfaEEogqoohKcoisbeSbxge5fdcVrX8r9XYztgmgBWn3KZy5lzdvZsDYxbD9ESzshSoahINHlYhaDIJ05b1qaACC6IA04pyMzWB2YTYKD2+RWEYCw5lNSZggi2xOun8Fpq1nG11gpCsOgwJyYnoDUUmBNE0Ia0AFnkFP5Fn50JpuAzuq2MYgL5aKfZGAchOHootSMFEbuSQvBJSjlCVANXViA8O11s/6f1xrgcGSIw8R0lrBU0zUoQvTWFJy8gn6dT+Xje++clhJCYgqlgiaK1mU5anSZ3XlLqwzk7EFHKiaqsOwCFPMxC51CE10y5f7tatB8hxXGyzzi83uJ7nyg1jpBJrXFMWZcbsM7JM+Z2OIhCpg8SGXaNq/Fd4+olXt2RjxJn0W3HyxqVVo3me9vljuC77zqG777rS3yFsOZMOvwwijL/eOWrK7Nt4+SccYdITQg5eY9bOhrzjFz6I6EBomyGM1lGzs/7i3OhOS3j46NI6cmxO/UNVTCnh5J8u2Un00+HObcFlpwap/9QezRfjjWaFUyuwCy4IbcjF5y31JuWKqem97HWsTiFCCZqYJCTWqtmIh4BIXhKSqe5upGr3N03tHph7qkY3lirL6na21xKqEjMpTfA0+tZ0FXIBLrYmLZ0L57DXxnGwen17ODU5+c3CwmIWQV9IoSwI+e7hOnHrx+nIoM1nnNsZ+pRxdWflA+uxPPiqlvyZyj1kwW89RT0dJl+88RmqIt2jV0mTToplzCUEkKIWvtv1VyFkBrPklTXMXq6dVnTyN8PJbkKouUqhB06jbEos6xBaS/fFUQbzDy9Mvi7ef9GvA9GuP5RHvuzLITpDrNSfkEI91R1r1izasL94cp0XeA0ScjyoOTgJZAH5XHvLs4X0DR/AXU9mIU=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Dependency Logs by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dependencies/{id}/logs"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the logs of a dependency
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the target to get logs for","required":true,"schema":{"type":"string","description":"ID of the target to get logs for","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"content":{"type":"string","description":"Content"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"target_id":{"type":"string","description":"Target ID","format":"objectid"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"title":"ModelsDependencyLog"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsDependencyLog"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

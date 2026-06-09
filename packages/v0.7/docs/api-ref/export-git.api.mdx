@@ -1,0 +1,75 @@
+---
+id: export-git
+title: "Export Git"
+description: "Export a git repository"
+sidebar_label: "Export Git"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU11r20AQ/CvHPLVwxG5pKegtbU0weYixnSdjytlaW9fId/Leyo0q9N/LWnbJhwmlT/rYuZ2d2bkW4rYJ2QI3XrC0yCmt2VfiY0CG0WMVWYwzWy+GqYrJS+QGFrEidooa58hAR9yPrRdYVI7djoRY+7YIbkfI4HNYeG1aOSnwkmlekBl/N3FjpKAXdEai6RlgwbSvPVOOTLgmi7QuaOeQtZCmUqIk7MP2/wk2kXdOkCGuftJafI6uWypvqmJIlJTq43Coj+cMd7foLD5dKn11uZnSvqYkPebDa8x9cLUUkf1vyhX0+VKjcRDi4EozIz4QmxFzZHSdxY6kiLqLKqZ+C1Igw2DrJQ1an3eDjS8pDf7qTLSu2UszUwN7Wa7y8/hA4YmbrvK31JxXV5DLiWHPS72ejE1/QkfwYROPR72UWv3G7lfpVuZ6Mn61juloNteC2UQ2JyAsDsSpBwyvvlwN1QfVs3PHmU6sp1TeHNP2rG2LdQxCQd7M7kma0KMMqtL5oDQ1l3q+t20BtQ0W2TG2R+dgTzHXa1KoydkCbbtyie657Dr9va+JG2SLpcXBsXcr9WHRIvdJ33NkG1cmemPqd9NTvt+bf07sRT3n/QVVfHBlrV+weKCmv43d8mlqJnezObruD/glXr0=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Export Git"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/files/export"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Export a git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the git repository to export","required":true,"schema":{"type":"string","description":"The ID of the git repository to export","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

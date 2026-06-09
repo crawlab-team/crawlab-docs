@@ -1,0 +1,75 @@
+---
+id: delete-git-by-id
+title: "Delete Git by ID"
+description: "Delete a git by ID"
+sidebar_label: "Delete Git by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVt9v2zYQ/leIe1oBtXGHFgX0liVGYLTbAifZSxAIJ+lssaFEhTyl1Qz+78NJ8qLGcq0+WSa/++4373bAuPUQ38OVZniIICefOV2zthXEcEmGmBSqrWaVtmp1CRHYmhwKYJVDDHkHSbaak7RNdA4R1OiwJCYnxDuosCSIobvSwlojF/Ba1W1BanWp7EZxQUozlYqt6tkhAkdPjXaUQ8yuoQh8VlCJEO+A21roPTtdbX+VdmNdiQwx2PQrZaxzCOFBtPnaVp68KPh9sZCfH3n//gwRZLZiqlhusa6NzrqwnH31Atkd2tgrkQg5CSLrXkGOPAMlsT3pbpegCaciwIaLpBc+RXLecKE6SC9nk7oxZiSXWmsIqylBqzpsiCAztqLE2K0fSaJz2EodMJX+0JLwmvFCSFRHIpSOkClPkE87cdFjFeuSPGNZjwOTI9NbuRmzpu181rQ9FuescY4qTlKHVVbMYOzxasCHCMg5604LLjtYiIb+OgX/C3tva/T+m3Uzaul6jwzSEJs5aTxSupvGmGTazBBBgX4iTkcd66wpLVPCDrPHScBL0ie8nK6C6dYIHRkbOfon81ea17Q5LNO1hGcIU9LU+ewqFUE1CCjko9Z5Rm4mGuY1302PCxH8ihV3gwGne2XPOqdX9qzHe6VxZgbN+kuH9eTmVfrdHhkO8iTTQF5bmQG9K/CS3z9tTkZS/JMmDBGU5D1upwvzWJrGZXRhK3bWGHJ+PYyZK81Fk470BxH4MDV3/sBcrempId+Z+WHx/hBzV8ljb53+l7owf5wiWlUsYTLqhtwzOTU8J52DXNiX0d4NdC4ghrOtZn+203mACDxljdPc3siQ69sca31rH6kaPxS1/kztfvAXhDk52Hc2nF+vVC8henW1sZ3oPlAOvxlM1fn16rBvlje3cqE21qkBCBE8k/M9YPHu07tF995ZzyV2Ng1ah6XmarTS/EC+e5nr0wvQ4BvTdz6rDepqVMt9qO5BQgURxDqXraqwnuV0t0vR050zIcjxU0Ouhfj+IYJndBpT8ft+B7n28p1DvEHj6Sf2/bYe9qI36sSmM2n0PkuVpOgZTSP/IIJHavuNLTzIA92nTSzrL86zjGoeiRxsP7JE/V9Hl8svy9slhPAfCiiNog==
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Git by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/gits/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a git by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to delete","required":true,"schema":{"type":"string","description":"The ID of the item to delete","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"auth_type":{"type":"string","description":"Auth type"},"auto_pull":{"type":"boolean","description":"Auto pull"},"clone_logs":{"type":"array","items":{"type":"string"},"description":"Clone logs"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_branch":{"type":"string","description":"Current branch"},"error":{"type":"string","description":"Error"},"name":{"type":"string","description":"Name"},"password":{"type":"string","description":"Password"},"refs":{"type":"array","items":{"type":"object","properties":{"full_name":{"type":"string"},"hash":{"type":"string"},"name":{"type":"string"},"remote_track":{"type":"string"},"timestamp":{"type":"string","format":"date-time"},"type":{"type":"string"}},"title":"VcsGitRef"},"description":"Refs"},"refs_updated_at":{"type":"string","description":"Refs updated at","format":"date-time"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"url":{"type":"string","description":"URL"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsGit"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsGit"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -61,6 +61,53 @@ to test your queries before running them in your code.
 
 ![Execute Query](/img/guides/database/execute-query.png)
 
+## ORM Mode
+
+Starting from v0.7.0, Crawlab provides native **ORM (Object-Relational Mapping)** support for SQL databases,
+powered by [GORM](https://gorm.io/). When ORM mode is enabled, Crawlab manages your database schema and performs
+type-safe operations automatically, including automatic schema detection and table management — so you no longer
+need to hand-write `CREATE TABLE` statements before storing scraped data.
+
+### Supported Databases
+
+ORM mode is available for the following data sources:
+
+- **MySQL**
+- **PostgreSQL**
+- **SQL Server**
+
+Other data sources (e.g. MongoDB, Elasticsearch) continue to use Crawlab's native storage handling and do not expose
+the ORM toggle.
+
+### Enabling ORM
+
+For a compatible database, an **ORM** toggle is shown in the database settings. Switching it on enables ORM-managed
+schema and writes for that database; switching it off reverts to the legacy storage service. The setting is
+**per-database**, so you can enable ORM selectively.
+
+When a database is created, Crawlab initializes a sensible default — ORM is enabled by default for supported data
+sources and disabled for the rest. You can change it at any time; the toggle is non-destructive and does not drop
+existing data.
+
+:::info
+ORM mode only affects how Crawlab manages schema and writes for the selected database. Existing data is preserved
+when toggling, so you can migrate incrementally.
+:::
+
+### ORM API
+
+ORM state can also be managed programmatically via the REST API:
+
+| Method & Path | Description |
+|---|---|
+| `GET /databases/{id}/orm/status` | Whether ORM is `enabled` and `supported` for the database |
+| `PUT /databases/{id}/orm/status` | Enable or disable ORM (`{"enabled": true}`) |
+| `GET /databases/{id}/orm/compatibility` | Compatibility details, including reasons and the list of ORM-supported data sources |
+| `POST /databases/{id}/orm/initialize` | Apply the default ORM setting for the database's data source |
+
+See the [ORM Status API](/docs/api-ref/get-database-orm-status) and related endpoints in the API Reference for full
+request and response schemas.
+
 ## Connect to Database
 
 In the [Data Integration](../data-integration/index.mdx) section, you have already learnt how to use Crawlab SDK to

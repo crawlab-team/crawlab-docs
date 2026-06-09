@@ -1,0 +1,75 @@
+---
+id: create-setting
+title: "Create Setting"
+description: "Create a new setting"
+sidebar_label: "Create Setting"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVk1v20gM/SsCT11ASRyjQbq6pWlQGEXRwHb2sIYR0BomnkbSqDNUU1XQf19wRo7k2El8XaA+yUPyDb/ekA0w3jtIFjAjZl3cO1jGoMilVpesTQEJXFpCpgijgh4jF9QgBlOSRVGZKEgg9Uq3vbhEizkxWUFvoMCcIIEHqiEGLbAl8hqe39V5EQU9Sz8qbUlBwraiGFy6phwhaYDrUuAc23DbyyhtuwxA5PijUbVYp6ZgKlg+sSwznfo4Tr47sW52rzGr75SyBGUlatbkRKqQD9C61eptjyefIIY7Y3PkJyStoI27xKpb5LdRQqVUxDonx5iXQ1CFTEciGaKu6sNRV/VLPkqe34SZi7SNoSrVwQHdBN0DAtqgHhLQBvXlgH5iVtG+0qJSWlAwux4WuX1+xT8eoN05n68pkraJ2ETBZYiBNWdyy1ejKHNd83rjngCL0G3LXvtyi3GToqwY2jZYudIULrTfeDTyvbrlxrcvEP9hwR8W/A9YEANZa+xuPG0MOTmH97RX5hi5cntE7YBCpmBrsoysm3ac+ax5Xa2eM1GM3u8j0kdU0TQMF/A6p7s6NwVWvDZW/yaf1rN9QJOCyRaYRTOyP8lGVz7o1gfJayMjtjTO80rmZgInHfHdSfNAdQsxOEorq7meCXED67DUc/NAxSANWOov/RBeEyqyEG/m88X1JAoWcrU8BdN+dF79wrzMaEh6T+u+w4Y0hfFo/P5odH40/nt+epacnSbjD8ej89N/YZt4vbUnUP93SJHXwIZN31tvmtfXThd3xufg6e3ExwxX0cX1ZIcX06vZXATRnbFRpyh4ZF1QGB2fH4+kkFKQHH1yu/R1q9LsaQvagh4sHi8tVV2RmH7xSZmhLjyrbSbGofAL2BQeYkgkZcsY1tIayQKaZoWObmzWtnL8oyJbQ7JYSjqsxpUEv2hAaSffCpI7zBy94ua7aTeB/oq2V7O9jm5arKj7AsBTYf02tmzjTdOJJ0FyGe478o9jb7kzldp4Y3GRplTyq7rLAXWuv83mEMOq2/9yo8TG4qMsmfgYvDQ+fs8bf9ZAhsV95R8YCJjy+w9/ktIq
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Setting"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/settings/{key}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new setting
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"key","in":"path","description":"Setting key","required":true,"schema":{"type":"string","description":"Setting key"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"key":{"type":"string","description":"Type"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"value":{"type":"object","additionalProperties":{},"description":"Value"}},"description":"The data to update","title":"ModelsSetting"}},"required":["data"],"title":"Create_settingInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"key":{"type":"string","description":"Type"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"value":{"type":"object","additionalProperties":{},"description":"Value"}},"description":"The data to update","title":"ModelsSetting"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsSetting"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

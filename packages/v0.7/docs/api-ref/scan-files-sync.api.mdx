@@ -1,0 +1,63 @@
+---
+id: scan-files-sync
+title: "Scan files (sync)"
+description: "Scan files for a specific ID (Spider/Git)"
+sidebar_label: "Scan files (sync)"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVN9v00AM/lciP21SoGUMkPI2oJuqCTGt21NVVe7Fbbxd77I7Zyyr8r8jJwXaLgzxlOj8+bP9+ccGBFcRsilMamdglkJO0QQuhb2DDCYGXbJkSzFZ+pBgEksyvGSTjL8mR5OScwqDC5ZjSMGXFFD9xjlkEA26ees5P4q1M4oIFEvvIkXINnAyHOpnP973S0jBeCfkRK1YlpZNyzq4iwrZQDQFrVH/pC4JMvCLOzICKZRBcxDuAuQovSjMc1ZCtFd7+NfZTME2D+R2kBgC1pACC60jZGA4mMpiOBo5YanP4zlbGrulP4YmBXoScpH9LkOUwG6lVlVqHvmZdqzshFYUIIWlD2uU7unjaYuvrJ2XKEUvW4Gx38BxnnPYMS28t4RObWufz4XX9NJxJ4Echd60qM7j3/m+P1Gowz7iJoW/1NCkICxWnw7VbI0Ugg+9hGuKEVf9waKgVPH1cF+8k+CtpRCvt/N6wVJUi8M8vmEJTaOup32j/Bnz5JoeKooCLebdS8ytw0oKH/iZcgV96CMaO6Hg0CYTCo8UklFbetOWKoXXZVtRO7CtlDDQdRtsOG8GuoSQQiRTBZZ6opvTjTOWfOPv98e55Etq51mjFoR528uuc3B2NU46D43M2gd1/SVawB8WF8nZ1RgOb8j1aHKjhvaCbIGQwiOFbhtg+PbT22E7Cz7KGtuctlF37s/vK7LHvvlzLf7rWG1rFnqSQWmR2w2oglXGTscpaEBIIeNcNVQpZykUPooaN5sFRroNtmn0+aGiUEM2naXwiIFxobJMZ7qLnZDZdAP3VKuSxlCp/XpEW3XCHxy5ZrbT24vRDTTNT1M16xA=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Scan files (sync)"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/sync/{id}/scan"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Scan files for a specific ID (Spider/Git)
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","additionalProperties":{"type":"object","properties":{"children":{"type":"array","items":"circular(EntityFsFileInfo)"},"extension":{"type":"string"},"file_size":{"type":"integer","format":"int64"},"full_path":{"type":"string"},"hash":{"type":"string"},"is_dir":{"type":"boolean"},"mod_time":{"type":"string","format":"date-time"},"mode":{"type":"integer","format":"int32"},"name":{"type":"string"},"path":{"type":"string"}},"title":"EntityFsFileInfo"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubEntityFsFileInfoMap"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

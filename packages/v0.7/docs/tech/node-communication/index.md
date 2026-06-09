@@ -72,13 +72,32 @@ service NodeService {
 }
 ```
 
+### File Synchronization
+
+In v0.7, spider file synchronization between the master and worker nodes is performed over **gRPC streaming**, replacing
+the legacy HTTP-based file sync used in v0.6.x. Spider file content is streamed over the gRPC connection, so file
+distribution shares the same secure, multiplexed channel as task and node coordination.
+
+- **gRPC streaming transfer**: Spider files are streamed to worker nodes rather than fetched over a separate HTTP
+  endpoint
+- **Automatic re-sync**: On the first startup after upgrading to v0.7, files are re-synced automatically, and they
+  continue to stay in sync as spiders change
+- **No separate HTTP file server**: Because sync now rides on the gRPC channel, there is no longer a dedicated HTTP file
+  sync path to expose or secure separately
+
+:::info
+Because file synchronization now depends on gRPC, the master node's gRPC port (default `9666`) must be reachable by all
+worker nodes. This is part of the v0.7 breaking change away from the v0.6.x protocol.
+:::
+
 ### Connection Management
 
 Worker nodes establish persistent gRPC connections to the master node with the following characteristics:
 
-- **Connection pooling**: Workers maintain connection pools to optimize resource usage
-- **Automatic reconnection**: Workers attempt to reconnect when connections fail
-- **TLS security**: All connections are secured with TLS (when configured)
+- **Automatic reconnection**: Workers automatically reconnect when connections fail, using **exponential backoff**
+- **Circuit breakers**: Repeated failures trip circuit breakers to prevent cascading failures
+- **Keepalive**: Connections use gRPC keepalive to detect and recover from dead connections
+- **TLS security**: Connections are secured with TLS (when configured)
 - **Connection metadata**: Each connection includes authentication tokens and node identification
 
 ## Stream Management

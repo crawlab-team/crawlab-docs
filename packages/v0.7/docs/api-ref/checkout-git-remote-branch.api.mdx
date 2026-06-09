@@ -1,0 +1,75 @@
+---
+id: checkout-git-remote-branch
+title: "Checkout Git Remote Branch"
+description: "Checkout a remote branch of a git repository"
+sidebar_label: "Checkout Git Remote Branch"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVN9v00AM/ldOfgLpoAOBkPK2wTRVPDB1hZeqmtzEbW5L7oLP2ShR/nfkXAKdWvFDoi9NYvuz/X22OxDcRchWcOUE1hYKijm7RlzwkMH7kvL70IpBw1QHIbNh9Hlpwtag2TkxTE2ITgLvwUJoiFFD5wVkkI/Btzsntyn8NoWDhQYZaxJiTd6Bx5ogA1eABaeZGxR1e1rOsiQz/6DJpaTj9ExfW8dUQCbckoWYl1QjZB3IvlH4KOz87l9ht4FrFMggbO4oF1dA369TNopyEYq9psiDF/Kij9g0lcsHImZ3UVN0x7UkMGWClTZxFNU6EvRXNT+VRIKZGIe+P2RjNaGuLYiTig6UPRZn7psBIWHEJviYSnt9dqZ/T+v49BHs/+qdmAMft95bqClG3NFJWxSUNp4w9QfdBi8cqoo4fgmuWIxtjV2+OdXYBRZmkSSGwefVsc9nj62Ugd13KtTp7SmguRdij5W5IX4gNpdDl/3QlZRBN6UJcWBDZz6D2c5JnHWu6GdJEYqzpNDsp8AWIuUtO9nfKLmJP2zcMtyTP+ACG/eR9tNSlYQFMdhp3c6v5yZFaDkq1+LXUF9+w7qp6HAoD1h3fhuGPBPDjI8Vbsz59fxoVheXN0s1mG1gMzqChQfimBzOXr57eaaoSkSNQwNjiT8v0JUTs0gDfzEdkSdpDlbwX+/WSJbQN5k1FTqvtbRcKWgSZQUqCljIhhM16TIcHcXXJZi0WVsoVdBsBV23wUifuep7/fy1Jd5DtlpbeEB2uFHqVh0ULupzAdkWq0i/aezZYtzq5+YPV+tkT9NUePV4wKrVN7BwT/t0fft1b6cx0cqS4X3K/2Kp4b8Cj3a9t1PEeZ5TI7/1XR8swPWnm6XSOt7SOhQaw/ioBONjKjIMfAyTPnzroEK/a4e7AAlTfz8AfM5YWA==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Checkout Git Remote Branch"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/branches/remote/checkout"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Checkout a remote branch of a git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the git repository","required":true,"schema":{"type":"string","description":"The ID of the git repository","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"branch":{"type":"string","description":"The remote branch to checkout"}},"required":["branch"],"title":"Checkout_git_remote_branchInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

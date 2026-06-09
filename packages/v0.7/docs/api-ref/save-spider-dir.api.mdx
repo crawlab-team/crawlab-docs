@@ -1,0 +1,71 @@
+---
+id: save-spider-dir
+title: "Save Spider Dir"
+description: "Save a spider directory"
+sidebar_label: "Save Spider Dir"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2kAQ/SvWnFppG2jVqpJv+aqEckgEpBeEosE7wCb2rjO7JqGW/3s1u0YQgeilXLA9M2/mvfloIeDKQz6DSW00sYe5Ak2+YFMH4yzkMMENZZj5aM+0YSqC4y0ocDUxitdIQw4eN/SUvJ60YVBQI2NFQVDzWQsWK4IcjAYFRpBrDGs4SpfyjG5AAdNrY5g05IEbUuCLNVUIeQthWwuWD2zs6izG0nGFAXJwi2cqgtHQdfMETT5cOb0VvMLZQDbII9Z1aYrIa/DsBa89TpzAhCOLCsGQF2tk9M/yfpmSMnHNgstENug6BcGEknq9D3Qc2boJ0HXiwuRrZ33K9W04lL+P0Pd3oP4XGWJ2fMymU1CR97iikzYfMDT+hOmA4rWzgV1ZEvvfzuhxT6tn+f0UsSvU2Tj1DKLP12OfR4tNWDs2f0iL049TQCMbiC2W2YR4Q5zdRpZdZBXWTia5dj6qEZsJg9QLP2iN7gZLU5IfSNMGacg9FQ2bsJ2Iqkk4rM3UvZA9EAFrc0fb3eCvCTVJcL8Slw+jLEVIHdKn8X48b9+xqkvaj9eB2MYuXcyyE5bxrcRFdvkwOpq68e1kKoZs6TjrHUHBhtgnh+HFz4uhoAr/CmP5fYHxBvRbdRNpf8A+2J8z56KXItB7GNQlGiu5Gi73zGbQaw0K8ngnotyismyJApF8rmAtDcpn0LYL9PTIZdfJ59eGeAv5bK5gg2xwIZrMWtDGy7OGfImlpzPFfxr3F+dzdnhDTla+66wVbhssG3kDBS+0TVeum3dq12opIxmuU7IvUwnfBx4taqd2EZdFQXU46zs/mN6H+8kUFCz6y1Y5LTGMb3JQ8S0V6SL5OK3xWwsl2lUTlxoSpvz+Am84FWU=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save Spider Dir"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spiders/{id}/files/save/dir"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Save a spider directory
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Spider ID","required":true,"schema":{"type":"string","description":"Spider ID","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"path":{"type":"string","description":"File path to save"}},"title":"Save_spider_dirInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

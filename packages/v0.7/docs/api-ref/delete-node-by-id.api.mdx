@@ -1,0 +1,71 @@
+---
+id: delete-node-by-id
+title: "Delete Node by ID"
+description: "Delete a single node by ID with deletion prevention checks"
+sidebar_label: "Delete Node by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVlFv4zYM/isCn3aAd+1uGwbkLWuCLbi1K9r0qSgC2mJiXW3Jlehcs8D/faDk9HJNrvHhnhJLH7+PIiWSW2BcBRjdw5XTFOAhA02h8KZh4yyMYEIVMSlUwdhVRco6TSrfqNlEfTZcKi37xlnVeFqTjX+LkorHABm4hjzK0kzDCCKUFsKwyDcLoyGDBj3WxOTFhy1YrAlGELeMyDfIJbz2aV6S6Lul4pKUYaoVu+QJQQaenlrjScOIfUsZhKKkGmG0Bd40Qh/YG7v6Xtql8zUyjMDln6hgo6HrHkQtNM4GCiLw4fxcfr7m/fcjZFA4y2RZdrFpKlPEuJx9CgLZHvqYRCRCXqLIJglo5AEoie3J484mxw+VARZs1rTHkDtXEdoDinECvpgskE/rJiOFvC+vkelnNnUkKzwhkx7EdpGwSmwDY92cZM03w1nzzbdiVLTek+WFb62Nt/eF0limFflDzmShdhZ7xMbyrx+E9SuLU05O9r66DMhiXpEekLZpj+wyKF3g9OhOqf29Q3YZmGbA9bqOyLCoMTD5AW7NguqxXQaPNCBNc9ntMqixOA2+HF8k7PN3JO0Sn99M2LDYXfVxC4zchtP424TrMmgbPfgp3CXsgKewYx3yFHas33oKr29tLKNSpqR4JiHIgA1XInLpNFVBek28st47f+iCZIlCwNWR0L4RRXFlp3PhLHtXVeTDTV+g/zJctvm+A51Y/HasZP+JWt3QU0uBIWJ+OcTcWWy5dN78l57S78eIZpbJW6zULfk1eTWNJ+7iCbl0X9pi7IVcwgjOpEGGs63RHWQQqGi94c2tNIhU3bExc/dI+xUCG/ORNrumWRLqeJf7djq+nqlkIcLGLl003YXK4+cKczW+nh0k/2Z6O5cNtXRe9UDIYE0+JMD5+z/en8vpGxe4xuhTr9pPDlcvA8Nr9u2XpvhjY0YfBKZnPmsqNLEctr4SiRTUe4hBhQxGRsuQI3VPlrfbHAPd+arrZPmpJb+B0f1DBmv0RspknEu0CX1xXWIV6I2D/HTTTx/v1Il54qjXu3xaSeYaq1a+oC+HMhd1D1K1U4LFs7QxLgpqeM/kYMaQUeXlyk2m/0znU+i6/wG6Hmj2
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Node by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/nodes/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a single node by ID with deletion prevention checks
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to delete","required":true,"schema":{"type":"string","description":"The ID of the item to delete","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"active":{"type":"boolean","description":"Active"},"active_at":{"type":"string","description":"Active at","format":"date-time"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_runners":{"type":"integer","description":"Current runners","format":"int32"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"hostname":{"type":"string","description":"Hostname"},"ip":{"type":"string","description":"IP"},"is_master":{"type":"boolean","description":"Is master"},"key":{"type":"string","description":"Type"},"mac":{"type":"string","description":"MAC"},"max_runners":{"type":"integer","description":"Max runners","format":"int32"},"name":{"type":"string","description":"Name"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsNode"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsNode"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

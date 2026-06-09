@@ -132,15 +132,19 @@ The Engine captures and processes logs for monitoring and debugging:
 
 ### 5. File Synchronization
 
-For distributed deployments, spider files must be available on worker nodes:
+For distributed deployments, spider files must be available on worker nodes. In v0.7, files are synchronized over
+**gRPC streaming** (replacing the legacy HTTP-based file sync from v0.6.x):
 
-- **On-Demand Sync**: Files are transferred when a task is assigned
-- **Differential Sync**: Only changed files are transferred
+- **gRPC Streaming Transfer**: Spider file content is streamed over the same gRPC channel used for node coordination
+- **Automatic Re-sync**: Files re-sync automatically on first startup after upgrading, and stay in sync as spiders change
+- **On-Demand Sync**: Files are made available when a task is assigned
 - **Versioning**: Support for multiple versions of the same spider
 
 ## Performance Optimizations
 
 ### Resource Management
+- **Bounded Goroutine Pools**: Task execution is dispatched through a bounded worker pool with a configurable, dynamic
+  max-workers limit, so a node never spawns unbounded concurrent runners
 - **Concurrency Control**: Each node has configurable max concurrent runners
 - **Memory Limits**: Tasks can have memory usage restrictions
 - **Runtime Limits**: Maximum execution time can be enforced
@@ -159,8 +163,12 @@ For distributed deployments, spider files must be available on worker nodes:
 
 ### Recovery Strategies
 - **Process Monitoring**: Detects and handles crashed processes
+- **Zombie & Orphaned Process Prevention**: Spider processes are cleaned up and orphaned tasks are detected, so crashed
+  or abandoned executions don't leave lingering processes behind
 - **Node Failure Recovery**: Reschedules tasks from failed nodes
 - **Orphaned Task Detection**: Identifies and recovers stuck tasks
+- **Graceful Shutdown**: When a node shuts down, in-flight task runners are wound down cleanly rather than being
+  abruptly terminated
 
 ## Implementation Details
 

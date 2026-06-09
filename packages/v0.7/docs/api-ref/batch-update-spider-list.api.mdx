@@ -1,0 +1,71 @@
+---
+id: batch-update-spider-list
+title: "Batch Update Spider List"
+description: "Batch update multiple items with partial fields"
+sidebar_label: "Batch Update Spider List"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1V99v4zYM/lcEPrvX7rbDgLz1F27BbVjQpk9BECgWk+gqWzqJbpsF/t8HSnbqtE7rHra+1LHJj+RHSfy0A5LrAKMZ3Dqt0AeYZ6Aw5F470raEEVxIyjeickoSiqIypJ1BoQmLIB41bYSTnrQ0YqXRqAAZWIdesvdYwQiW7L9I/osQoyyMDgQZePxRYaALq7Yw2kFuS8KS+FE6Z3QeQU6/B85jByHfYCH5ibYOYQR2+R1zxnGeQ5LGwF+1Ch0j6b3cQgYx4c77QF6Xa6hfljvdoBhfBWFXgjZtnWQbAti+eerJQyqlGUaaSTej3hgNoY1vXSc2tEfF3dCRyCbSPAPSZLBtRg+Z49JVjJJwgrNlSGR8Pjvjf4fx//4G2X/FtpI0wGqh1WvuX9IyvoIMVtYXkvZIWjHleTHA/foJ84pQ5LYoZJn8rBkU+UqSFLk1hiPaUmjVmwm7OY+5JO4S+QqbGKUs8ONRohcjeGTEhaT3MS6TrSBdYCBZuG6ivCpO+EsXdbkdjrrcHusAt3kpAw6mk43FuJ9Hxlt+gLSI1bJ18Pld786vOoO1pkEF3KCJfHzVJI6vSkbz1tLCSdq8D8pgbC6ieZ1BYdUQAnAlK0OCZLgX0SUDLKuCjwkvS2ULPnmMgQwC8tJCdVJahQHmdQbDSE6H/55idl+sva3c4kOH6bFe99bDQUQMIrQKmagCKqFLcVDESTQIqe42s/85p+PZPOfhpJfFB3uXfNjZa+s1dfelLgnX6F8BTFrTThm6pF8/R8sIDqMvEdNycYNW9yTZvrGyCQtnDofc2ytn79BxXsSCw/vDQRpjH1EtlC2kLnt7eBj0PDmI1qFT/7D13jLQLvhmkv7UZgkkPS0qbwYkfsu2ItrWrxbhCypFQ9/z8P/LKjQhmU0bq0ky2suSYVPkLtkOmCIt6pAp0qIemyK9OihRL3i+sMxKU+tI0ZwQem99r44rMAS57mlgahJVffKvfo50aUvyPJ19uGkk1FdNm2p5mELUWL/1yaoLqcRNkrQQbX55bXNXyoo21ut/MO60L31A45LQl9KIW/QP6MV1rLmONdLGsqp2LAR5J8XRA6ehke88BPKKj4xbFnDNBnN6au+xOy+l098wHpsccINSxdMn7QA4n4xF8uCgLAlvnqX69ZMsnMG91J61ZM472pj9dLmyMWRLsJePRi7F+WT8euJe3075g1hZLxpDyOABfUgGZ59+/3QWd7oNVMhYS5NtuqGk1SeaXfRnumG8EAt7zfsTt5qGOMInOnVG6igoKm8YN3VhBuH5ErWxgfjVbsfq5c6buubXPyr0WxjN5hk8SK/lkpmZ8aRuejCa7eAet816xJJOphyYzU2VOvdCrNdZ63Ge5+joTdt5Zw1NzqeXf0AGy+b+lfQIePnIdzP5CCOItzl2j+sovtuBkeW6ijsNEij//QujFvRo
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Batch Update Spider List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/spiders"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Batch update multiple items with partial fields
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"type":"array","items":{"type":"string"},"description":"The IDs of the items to update"},"update":{"type":"object","additionalProperties":{},"description":"The update object"}},"required":["ids","update"],"title":"Batch_update_spider_listInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"cmd":{"type":"string","description":"Execute command"},"col_id":{"type":"string","description":"Data collection id","format":"objectid","deprecated":true},"col_name":{"type":"string","description":"Data collection name"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"database_id":{"type":"string","description":"Database Id","format":"objectid"},"db_name":{"type":"string","description":"Database name"},"description":{"type":"string","description":"Description"},"git_id":{"type":"string","description":"Related Git ID","format":"objectid"},"git_root_path":{"type":"string","description":"Git root path"},"mode":{"type":"string","description":"Default task mode","enum":["random","all","selected-nodes"]},"name":{"type":"string","description":"Spider name"},"node_group_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node group ids, used in selected-node-groups mode"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node ids, used in selected-nodes mode"},"param":{"type":"string","description":"Default task param"},"priority":{"type":"integer","description":"Priority","format":"int32","default":5},"project_id":{"type":"string","description":"Project ID","format":"objectid"},"template":{"type":"string","description":"Spider template"},"template_params":{"type":"object","properties":{"allowed_domains":{"type":"string","description":"Allowed domains"},"project_name":{"type":"string","description":"Project name"},"spider_name":{"type":"string","description":"Spider name"},"start_urls":{"type":"string","description":"Start urls"}},"description":"Spider template params","title":"ModelsSpiderTemplateParams"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The spider data to create","title":"ModelsSpider"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsSpider"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

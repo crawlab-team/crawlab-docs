@@ -1,0 +1,75 @@
+---
+id: create-git
+title: "Create Git"
+description: "Create a new git"
+sidebar_label: "Create Git"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWFFv4jgQ/ivRPKctRVv1Lm/dXlWhvbutKL2HQwg5yUC8TeysPSnLofz30ziBBAht9nUFT8H+ZuzxzHxf4g2QWFoIpvAoCWY+xGgjI3OSWkEA9wYFoSc8hStvKQl80DkawdOjGAKIHGBeTRn8XqClzzpeQ7CBSCtCRfwo8jyVkTO7+mbZ9QZslGAm+InWOUIAOvyGEfvJDS9CEi3PxoJ6oOYyboEsGamWcBjO6A/wYaFNJmjnScZQ+iAKSuaV8UdO7gpKPAep7PQ8L9K0ZRdqnaJQXYbac9jShyjVCuepXtqWpTBGrMEHSZjZ452UR+lhJ55zwi5dLuK5oI+DqBIbeyQztCSyvH0wsSC84Jm213Dd32u4PnXOUWEMKpqHRqgo6eGxwns1vvQBjdHmY8MHByt9UCLrkdS/RRVtLqxdadOjlp62yJILf9EnjSdKd1Gk6bx7m6UPibAd53QyMLebTBPOyYjotRPQJL0jyu4q6G6N0jmjlIf+ieyjpDEujst0zMdTH9O8yOPeVcqGXm3gCTq5O0uCio6GOfT3XOFKH35mFy/1Bj7ula3XPr2y9Xq6VwqT9nAz/tNhLZp+lf6yRZZHeZok6DHbeqTrU4cmv3/pGFNOsTNkqpcGY1YOR9CzBnm/04SRygvGVxY218pWJT8cDBy17y3/9Qv4Z9E4i8ZZNM6icRaNX000TjZh6UOG1opld2GeSlO7jO61IqPTFI0d1zLzKCkpwrZoscGnLt35LGJvXH26gMNcH2NeFJO9NvI/dMd80+VopIiPKfWe0byh8Wo6cQFSovl7KdfW9bKgBAK4Wkqy4IPFqDCS1s+sblV/i1xO9CuqNkPk8gs6iuDFEhQxGti2NNw9jbzKghdkvRw3n2MPP0SWp9hWRqd9Tb5bWrY3uBUqMgXuC9B0i5vtqwgMB8NPF4Pbi+Hvk+ub4OY6GP52Obi9/hf2daFZ5pDfm5m6ZJqBOtjd/4Z6m7GKWKd7HNnMVtR42uM+ETbjLf57L8KDIp11ENh75ttqb9bta9mmkZY100Hr767j220k1UK7Otu9wIlVKkLv7ml0zK4PzxOe8BbaeDUQfHhDYyvA4PL2cuBUUVvKhCvgesn6NuHRXRbsuW1dFnTdOdSHSviDrvJUSNViuqqVpuBaaeZDwh0WTGGzCYXFF5OWJQ9/L9CsIZjOfHgTRoqQI53OWCurRuKCecV1zSao6GLCqzI8Lar2O3gdLf2txV0UYU7vYmctEnj6+jwBH8L6niTTMdsYseLyEysIwN2zsLXjAje2gVSoZeFoEiqf/Psf4tYMVw==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Git"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new git
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"auth_type":{"type":"string","description":"Auth type"},"auto_pull":{"type":"boolean","description":"Auto pull"},"clone_logs":{"type":"array","items":{"type":"string"},"description":"Clone logs"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_branch":{"type":"string","description":"Current branch"},"error":{"type":"string","description":"Error"},"name":{"type":"string","description":"Name"},"password":{"type":"string","description":"Password"},"refs":{"type":"array","items":{"type":"object","properties":{"full_name":{"type":"string"},"hash":{"type":"string"},"name":{"type":"string"},"remote_track":{"type":"string"},"timestamp":{"type":"string","format":"date-time"},"type":{"type":"string"}},"title":"VcsGitRef"},"description":"Refs"},"refs_updated_at":{"type":"string","description":"Refs updated at","format":"date-time"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"url":{"type":"string","description":"URL"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsGit"}},"required":["data"],"title":"Create_gitInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"auth_type":{"type":"string","description":"Auth type"},"auto_pull":{"type":"boolean","description":"Auto pull"},"clone_logs":{"type":"array","items":{"type":"string"},"description":"Clone logs"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_branch":{"type":"string","description":"Current branch"},"error":{"type":"string","description":"Error"},"name":{"type":"string","description":"Name"},"password":{"type":"string","description":"Password"},"refs":{"type":"array","items":{"type":"object","properties":{"full_name":{"type":"string"},"hash":{"type":"string"},"name":{"type":"string"},"remote_track":{"type":"string"},"timestamp":{"type":"string","format":"date-time"},"type":{"type":"string"}},"title":"VcsGitRef"},"description":"Refs"},"refs_updated_at":{"type":"string","description":"Refs updated at","format":"date-time"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"url":{"type":"string","description":"URL"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsGit"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsGit"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

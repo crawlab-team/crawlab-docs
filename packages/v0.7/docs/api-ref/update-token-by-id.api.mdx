@@ -1,0 +1,71 @@
+---
+id: update-token-by-id
+title: "Update Token by ID"
+description: "Update an item by ID with (partial update)"
+sidebar_label: "Update Token by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVsFu2zgQ/RVhTi3AJI7RILu6pWnQGsXuBo5zWcMIRuI4YiuJLDlKqhX07wuS8lqJ3cS97aE+2eTwzfDxPc90wHjvIF3CQn+l2sFKgCSXW2VY6RpSuDUSmRKsE8VUJVmbzD4kj4qL5I1BywrLpAkhb0GANmTRH5xJSCGu37FHvsvaOyVBgEGLFTFZn7WDGiuCFMKW8vkMcgHPi1gU5NPqdcIFxUJYD3lBgKVvjbIkIWXbkACXF1QhpB1wazy8Y6vq+5+FXWtbIUMKOvtCOSsJfb+K2cjxey1bnyLXNVPN/isaU6o8EHDyxfkU3W4tEcwzYT1drMj5XYl8QJTn8NVrzT7sL15AbgmZ5B3y6yiXMTZhVZFjrMwY1DN05HfGqFl7OGrW/qjGqIjXcP7EmDuI64CXDmG9GDR5GANR+ocwsEE9hIEN6o8Y6Pep1KvjiTZZcemT/KEllW64Xj+2wjJKarWNvd3x46w2DUPfx5PO6NpFnU0nkyDKJ4X89RnEL7n/kvv/Re4CyFptd2voBVTkHN7vYbYX4Bi5cXu2+m2iS12z1WVJ1s0HY3xUXDTZU8P5I+/2eeU9ymQeGwWEmNPdmNsaGy60Vf9QkMLZPqBZzWRrLJMbsg9kk6tw5T5ckQstY8vMi9BauYAUToJI3EmnZA8CHOWNVdzeeGdGW6FRi2dCQqM+U7tpwgWhJAsbdcLF9SzZ/sd4r8+3TfDqO1ampLGrg2+3ihj7EKaT6bujyfnR9PfF6Vl6dppOfzuenJ/+DU+dtT091PDf78ED24WxyF+CH8t2/OaqXutAxebtLT6WmCUX17MdOc+vbhZ+I1lrmwyBIOCBrIsBk+Pz44l/TaMdVxg4Hm4wjFKByDhIPYcfTRM/N3gNr8j0nU9MiSqa35YeMspiGXlzICBV0reFQjv2612XoaNbW/a9X/7WkG0hXa4EPKBVmHlOlh1I5fx3CekaS0cvVP5mPjSht8krE9besjeKrL0cH7Bs/C8Q8JXaOCn2q15sJOorixuXMf/Rwh/fHtxpUr3YnLjIczL8YuxqZLPri8XlJxCQDYNfpaU/ZPHRj6D4GKvUgZBgs7DWQYn1fRP+iyCC+s+/3Zzj+g==
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Token by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/tokens/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update an item by ID with (partial update)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to update","required":true,"schema":{"type":"string","description":"The ID of the item to update","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"name":{"type":"string","description":"Name"},"token":{"type":"string","description":"Token"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsToken"}},"required":["data"],"title":"Update_token_by_idInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"name":{"type":"string","description":"Name"},"token":{"type":"string","description":"Token"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsToken"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsToken"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,11 +1,11 @@
 ---
 id: get-git-logs
-title: "Get Git logs"
-description: "Get commit history logs from the Git repository"
-sidebar_label: "Get Git logs"
+title: "Get Git Logs"
+description: "Get the logs of a git repository"
+sidebar_label: "Get Git Logs"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVE1v00AQ/SurEQeQnCYqSBTfUgpRJRCIj1MUpIk9trfYu9vdcdvI2v+OZu00aSM44Ivtna83b97sAIx1gHwNK82wyaCkUHjtWFsDOayIVWG7TrNqdGDrd6q1dVCVt53ihtRKs/LkbNBihAwceuyIyUvSAQx2BDnoEjLQktEhN5CBp9teeyohZ99TBqFoqEPIB+Cdk4jAXps6JWQmL6G/1ovZO5xVy9nHzXD+Jr6A53A/W1Pbq0v1ZXtDBV+XAs1TIMNUKgwKVUMPWFKhO2zVYwnW3ErNfRjE54lHi7q+grgR8MFZEygI3vPFQl5P/T/pwMpWiSzIoLCGybD4oXOtLlD85jdBnIfT5m0qJ81768izHksVtqQjL22YavKQQWV9hzwevT4X+B2FgDWdEhrjod/vfVFQCBDlkRhubAk51MQj8Q3kMK81h/mgyzifugnk7/bz7X0LOQypA4r5fD40NnDMB2c9xzk6fTKkK6qwb1ktv16rMRVkcIde47Yd+xyzyReZvhNxNswOsvQKo0pTDshHS8xAyo5z2FtaW2CbjmMGAueJ+WJxsYhRphmo6L3mXernktCTX/bS+npzbP6eQCV8x06P/E4Q99hhm5wS39pUNnlOvL/3eN/iVhg4YUdYqaxXk0+m0CjryMyC7X1BqtQyyG0vir6nrSrEj7zCstNGuRZZxCCMkg9jysXZ27PFSELgDpPkpr2U/ZYVnib7BMpwkO1/3AMTK0wPPHctaiMAklqGSVlrEGVBBnm6HRKEzX6QaxiGLQb66dsY5fi2Jy8j2hy0kgZW6iDfJeQVtoH+0cPLb9Od80od1vkvQKdDNLukzbaXP8jgN+3G2yxuRHOEJfkEYzQsi4IcH4WcbLso6nHPVh9+QIx/ABcr4Gs=
+api: eJydVdFu01AM/ZUrP4EUaEEgpLwNmKpqk5i6jZeqqtzETe6W5Ga+TqFE+XfkJB0dCRvbU5rrYx/7XOe0BsHEQ7iEmRVYBRCTj9iWYl0BIcxIjKRkMpd447YGTWLFMJXOW3G8hwBcSYwKn8cQQkKyTqysNQECKJExJyFWihoKzAlCsDEEYLV+iZLC36RXKZn5V6VT6gEh011lmWIIhSsKwEcp5QhhDbIvtbwXtkXy3LJbxzkKhOA2NxSJjaFpVsrmS1d48krwfjrVx8O6384ggMgVQoVoFMsys1EryeTGK6Qe9tiRqEKsAortCGKUYxQyo/ZmhXL/dDZWkjpeU442G+rRBAdAdw0j8RR9OhrIfTJ6zrT1L+93W2XZC5r5ZwZT7oTWwhjdjgLE5uQF83JsW+4XIEahNwptU1rUoFZbTDI9+h75mZUFbfvTZ1IMKp27rj4xOx6/DfIek3ENvKBU/vGOv7hC2GUZsV/06z2zklab4wY04cPYvn/G2CzoriIv0GLeDTHXRbdq9hfFCvo4VmheCHGBmbkk3hGb03bgph1QUtfbSesikkIIk8SKn9Q2bia9vXiKKrayv9TPq/8GSnvlbqk43srSntH+YDkpYUwMhzWCk4u56TKU2RZb16YepGL8keHGnFzMB4ayOL280oDZOjY9EALYEfsOMH376e1Uxy+dlxzbnnpWNdaZFXPeDfKgcP3HTf7HgPsphX7KpMzQFspYcesAnXJLUOUggLB13la8VQCp86LBut6gp2vOmkaP7yriPYTLVQA7ZIsbFWJZQ2y9/o4h3GLm6ZGmXy16i35tnjDd0d4P11YoYodZpW8QwC3tuz+PZqX20N2jdtYFTqKISjlKGRix+vn9as1Or6BpfgOyamDL
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
@@ -26,7 +26,7 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Get Git logs"}
+  children={"Get Git Logs"}
 >
 </Heading>
 
@@ -40,7 +40,7 @@ import Heading from "@theme/Heading";
 
 
 
-Get commit history logs from the Git repository
+Get the logs of a git repository
 
 <Heading
   id={"request"}
@@ -51,7 +51,7 @@ Get commit history logs from the Git repository
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+  parameters={[{"name":"id","in":"path","description":"The ID of the git repository","required":true,"schema":{"type":"string","description":"The ID of the git repository","format":"objectid"}}]}
 >
   
 </ParamsDetails>
@@ -66,7 +66,7 @@ Get commit history logs from the Git repository
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of logs","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"author_email":{"type":"string"},"author_name":{"type":"string"},"hash":{"type":"string"},"msg":{"type":"string"},"refs":{"type":"array","items":{"type":"object","properties":{"full_name":{"type":"string"},"hash":{"type":"string"},"name":{"type":"string"},"remote_track":{"type":"string"},"timestamp":{"type":"string","format":"date-time"},"type":{"type":"string"}},"title":"VcsGitRef"}},"timestamp":{"type":"string","format":"date-time"}},"title":"VcsGitLog"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubVcsGitLog"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
 >
   
 </StatusCodes>

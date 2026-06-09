@@ -1,0 +1,75 @@
+---
+id: get-database-table-metadata-with-filter
+title: "Get Database Table Metadata with Filter"
+description: "Get the metadata of a table of a database with filter"
+sidebar_label: "Get Database Table Metadata with Filter"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVm1v2zYQ/ivCfWoHrc66DQP0LU3Twii2BonzyTCMs3i22EqkQp6SeIb+e3GkZDu17DTr9Ekg7+W5Fz53G2Bcecim8B4ZF+jJwywFRT53umZtDWTwkTjhgpKKGBUyJnaZYMK4KCn+qk43edBcJEtdMjlIwdbkUGyMFWSwIp73gvOgPO8NzkVvvtWr0WFFTE6AbcBgRZCBVpCCFjw1cgHfgxy/FywCs3cCKTi6a7QjBRm7hlLweUEVQrYBXtdi1LPTZvVjxpbWVciQgV18oZy1gradRR/k+Z1VazGcW8NkWH6xrkudhwyMvngxvDlEEI1J1E7yxZq83G79Pov1H6zoAG2bQpfOAU+olBZlLK/2fbbfW/4QLCS500xOY7K0LniJle+LJ77CycugRpW23S/StDM0S4E1i0XpvR/pmrGpG4a2jfZ8bY2PeXx7dhbS+QTH50+Q/p+Fel4qt2VTGb8niM7hWjqaqfLPG8CG7Vyb3FHVge7kF9aWhEaqkBe6VI7McS+Qa5c3JbpXl4Y1r/tHfxHgvYbQAktsSj4sZpsCPbIbeD1tCgX6YvDiK60Hz+OjHrqwPDdNWQ6HaJ1eaYPl/Kh+7XSFbj2s7hm58YN68eDgot214lDKgoA2ih7pJ4r7091xNBvWqSccoA3TKpDsls204d/fngh0LNHtRXu01CdAPFe0l9clhcbou4aG6nw6lHB/BMkBBd7WCplUR3mKltoE6oRjLiaR1lIg56wbBF6R97h6YSL2Yrqwhp0tS3L+uqO6Xz5qLprFIJTAiX8M0eA7VMl1nF4QZH47lLk12HBhnf6XlAj9OWRobJicwTK5IXdPLrkMsbchVi6sTP/a+tC2MrozGPWU7kcbrdpRSK8f9cw+WpEIe8obp3l9I1Tc0WCtJ/brU4qr9Sda97tBQahCf3dbw/nVOIkaAkfI/Xo3ry8fsarj4NrN293w2k7Q3YTbK5U2Sxtg9GVx+FDiIjm/Gh8MvuvLm4lchBHaCUIK9+R8FDh789ebs0Bf1nOFZveow/bVlzQJNU3+7hexsG996PemJz73NpH/vMB1GWZ65FFdog4c2rjAzbGS023iPKSQhR0tFhNC8eOGkMryJ1O9kC7IprDZiMqtK9tWju8aEsaezlK4R6djqqcbUNrLv4JsiaWnExG+uu6WiNfJ4O42GEnfQEa65x5LYROAbmbJvtnOhO9iRwmeeHERvf46EfWd4sES0aa9xnmeU80nZWd7b+Xq880EUlh0G2Vlleg4fJCNFh8iSBuyEB5FONtAiWbVBGKBaFO+bwSsGSM=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Database Table Metadata with Filter"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases/{id}/tables/metadata/get"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the metadata of a table of a database with filter
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the database","required":true,"schema":{"type":"string","description":"ID of the database","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"database":{"type":"string","description":"Name of the database"},"filter":{"type":"object","additionalProperties":{},"description":"Filter criteria for the table metadata"},"table":{"type":"string","description":"Name of the table"}},"required":["table"],"title":"Get_database_table_metadata_with_filterInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"columns":{"type":"array","items":{"type":"object","properties":{"auto_increment":{"type":"boolean"},"children":{"type":"array","items":"circular(EntityDatabaseColumn)"},"default":{"type":"string"},"extra":{"type":"string"},"hash":{"type":"string"},"key":{"type":"string"},"name":{"type":"string"},"not_null":{"type":"boolean"},"original_name":{"type":"string"},"primary":{"type":"boolean"},"status":{"type":"string"},"type":{"type":"string"}},"title":"EntityDatabaseColumn"}},"indexes":{"type":"array","items":{"type":"object","properties":{"columns":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string"},"order":{"type":"integer","format":"int32"}},"title":"EntityDatabaseIndexColumn"}},"hash":{"type":"string"},"name":{"type":"string"},"original_name":{"type":"string"},"status":{"type":"string"},"type":{"type":"string"},"unique":{"type":"boolean"}},"title":"EntityDatabaseIndex"}},"name":{"type":"string"}},"description":"Updated table definition","title":"EntityDatabaseTable"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponse*GithubEntityDatabaseTable"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

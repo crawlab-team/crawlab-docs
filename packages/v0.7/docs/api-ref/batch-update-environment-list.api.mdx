@@ -1,0 +1,71 @@
+---
+id: batch-update-environment-list
+title: "Batch Update Environment List"
+description: "Batch update multiple items with partial fields"
+sidebar_label: "Batch Update Environment List"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVVFv3DYM/isCn90mG1oM8FuSBtuhLRYkl70cDgfa4sVqZUmV6KS3g//7QNmXuImzHobdyxkS+ZH8xI/cA+NdgnIFl+7eRO9acpxgXYCmVEcT2HgHJZwj143qgkYm1XaWTbCkDFOb1IPhRgWMbNCqrSGrExTgA0UU74WGEirx3wz+G3oKtbEmMRQQ6VtHic+93kG5h9o7JsfyiSFYU2ekky9JktlDqhtqUb54FwhK8NUXqgUnRInLhpLcGp0mRhgj7qCAnPXkPHE07g765zUvG1KLD0n5reLmUCz7kQWxH79m8kCtjcCgvZpmNBtjZHX07fuBDRNJy7uYzOYYaV0AG7Z0eJHXGF240AnUAJaCd2lg5NfTU/n7MYk/P0Lxf1GukY+w2hj98gGec7P4AAVsfWyRH5GMFt7rSMikN8g/R7kYbBWblhJjG6agQt4buZmiVrvjUavdazl+pSNglnL72EjHFXQ72B5R0AH1mIIOqK8XdI+2o58D/ZXN+tlOl+aYKOipmT97TTZNRpAEpBh9nNVpSynh3UwyfQGJkbs5efdP4S684+itpZiuR3X8brjpqpk8sobezcnmHLW6HuYWZJtfXtrcOuy48dH8TZnE93NAC8cUHVp1Q/GeorrMhfe5UG68zM8gahcZITdQwglNp3UBieouGt7diEoHiWEwS/+V3HQABvOR8gSUqA2hpggFOGzl9uxqoQYPiSy6v34aypffsQ2WHofq6kDrejIFxc+4rc8hD1RHfLBYqbOrxYtWub68WcqF2vqoRkMo4J5iGgxO3/729lRoCz5xi7mWMdthIQ1dqyYPpj4NC+WHSJOF8h822cge03c+CRaNy9qKVnCH91gBPduejU8s5/t9hYluo+17Of7WUdxBuVqLnKLBSjharfvi8Brlaj9Mjtyj5PhNHhGP6ns5m/vi4HFW1xT4X23Xk5a6Olte/AEFVOPObb0Wp4gPso/xAUrIa1zcc0flsz1YdHddVh8MoPL7B7ju30A=
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Batch Update Environment List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/environments"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Batch update multiple items with partial fields
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"type":"array","items":{"type":"string"},"description":"The IDs of the items to update"},"update":{"type":"object","additionalProperties":{},"description":"The update object"}},"required":["ids","update"],"title":"Batch_update_environment_listInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"key":{"type":"string","description":"Type"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"value":{"type":"string","description":"Value"}},"description":"The data to update","title":"ModelsEnvironment"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsEnvironment"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

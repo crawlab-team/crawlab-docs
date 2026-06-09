@@ -48,7 +48,7 @@ import (
 	"time"
 
 	"github.com/gocolly/colly/v2"
-	"github.com/crawlab-team/crawlab-sdk-go"
+	"github.com/crawlab-team/crawlab-go-sdk"
 )
 
 type Article struct {
@@ -142,11 +142,11 @@ func main() {
 ```go
 module news_scraper
 
-go 1.19
+go 1.23
 
 require (
 	github.com/gocolly/colly/v2 v2.1.0
-	github.com/crawlab-team/crawlab-sdk-go v0.1.0
+	github.com/crawlab-team/crawlab-go-sdk v0.7.0
 )
 ```
 
@@ -156,7 +156,7 @@ Crawlab 集成的关键部分包括：
 
 1. 导入 Crawlab SDK：
    ```go
-   import "github.com/crawlab-team/crawlab-sdk-go"
+   import "github.com/crawlab-team/crawlab-go-sdk"
    ```
 
 2. 将项目保存到 Crawlab：

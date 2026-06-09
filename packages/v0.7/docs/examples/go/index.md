@@ -39,11 +39,11 @@ quotes_scraper/
 ```go
 module quotes_scraper
 
-go 1.19
+go 1.23
 
 require (
 	github.com/PuerkitoBio/goquery v1.8.1
-	github.com/crawlab-team/crawlab-sdk-go v0.1.0
+	github.com/crawlab-team/crawlab-go-sdk v0.7.0
 )
 ```
 
@@ -65,15 +65,8 @@ import (
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/crawlab-team/crawlab-sdk-go"
+	"github.com/crawlab-team/crawlab-go-sdk"
 )
-
-// Quote represents a quote with author and tags
-type Quote struct {
-	Text   string   `json:"text"`
-	Author string   `json:"author"`
-	Tags   []string `json:"tags"`
-}
 
 // Configuration
 const (
@@ -212,21 +205,15 @@ func scrapePage(url string) error {
 			tags = append(tags, tag)
 		})
 
-		// Create quote object
-		quote := Quote{
-			Text:   text,
-			Author: author,
-			Tags:   tags,
+		// Create quote item
+		item := map[string]interface{}{
+			"text":   text,
+			"author": author,
+			"tags":   tags,
 		}
 
 		// Save to Crawlab
-		jsonQuote, err := json.Marshal(quote)
-		if err != nil {
-			log.Printf("Error marshalling quote: %v", err)
-			return
-		}
-
-		if err := crawlab.SaveItem(string(jsonQuote)); err != nil {
+		if err := crawlab.SaveItem(item); err != nil {
 			log.Printf("Error saving quote to Crawlab: %v", err)
 			return
 		}
@@ -299,12 +286,17 @@ The main integration points with Crawlab are:
 
 1. Importing the Crawlab SDK:
    ```go
-   import "github.com/crawlab-team/crawlab-sdk-go"
+   import "github.com/crawlab-team/crawlab-go-sdk"
    ```
 
 2. Saving data to Crawlab:
    ```go
-   if err := crawlab.SaveItem(string(jsonQuote)); err != nil {
+   item := map[string]interface{}{
+       "text":   text,
+       "author": author,
+       "tags":   tags,
+   }
+   if err := crawlab.SaveItem(item); err != nil {
        log.Printf("Error saving quote to Crawlab: %v", err)
        return
    }

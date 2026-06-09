@@ -1,0 +1,71 @@
+---
+id: get-export
+title: "Get Export"
+description: "Get an export"
+sidebar_label: "Get Export"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VE1v00AQ/SvWnEBaNQGBkHwrKKqiHqiS9BRFaGJP4m2d3e3sODRY+9/R2E5oSeDAgZPtffP13r5xC4LbCPkSJs/Bs8DKQEmxYBvEegc53JBk6DLqYQM+EKNi0xJy2JJ8O0EBGXckxFqwBYc7ghxsCQaslgooFRhgemosUwm5cEMGYlHRDiFvQQ5BM6KwdVtIyZyKdMi/lllpcAzeRYqKvx+P9fGa59dbMFB4J+REUQyhtkXHdPQQNaQ9b+HXD1R01Fl1Eds3IGbPFyYxsKMYcUsXsSgoTbyoA4iVWo++eCfs65o4zgZKN1aqZj11QrzBguJwkSlp3odLVD9jmc3oqaEo0MW8O4+5d9hI5dn+oFKDPl4q1DV1WGdz4j1xNul4p46nVH4wSOcMqSCHUW+VUasE06i1ZQIDkYqGrRzmqm4vIAa78I/kXoiBwd7S4eiBirAkBnP0x/XdNOsztLt1G9+lHlVj/F7jOru+m8Lv/p5N5gsFso3nbAgEA3vi2AeMrz5djVWC4KPssJtp6Kq7MTm6/1XZ9peVzjZoICT0LKNQo3VavOFas3qhlnAKzgfn57bU3ax8FMXbdo2R7rlOSY+fGuID5MuVgT2yxbXSXrZQ2qjvJeQbrCP9Zcg3s2Gd3mZ/GvF4EU5vYY91o19g4JEO/Zrrvv7Hjh2aVskc3aCMe+i6KCjIi6SzbdafwsmkN5MFpPQTDYaz3g==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Export"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/export/{type}/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get an export
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string"}},{"name":"type","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubInterfacesExport"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

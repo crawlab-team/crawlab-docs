@@ -1,0 +1,71 @@
+---
+id: get-node-list
+title: "Get Node List"
+description: "Get a list of nodes with their associated node groups"
+sidebar_label: "Get Node List"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVV99P20gQ/ldW83SV3EJ7dzopbxxwXNRCEYQnhKKJPYm3tXfd3TEljfy/n2bXCSEJsaH30ifL3m/mm51fnlkA48zD4BYubEYe7hLIyKdOV6ytgQGcEStUhfas7FQZAanvmnPFOWmn0HubamTKwpmaOVtXHhKwFTkUHcMMBjAjHsv5WBRBAhU6LInJCfUCDJYEA5jqgslBAlqYv9Xk5rBpzz8Bo5aHPs2pRBgsgOeV6PDstJntF2uaZMVZ4Yz2M17ijJSpy0kwbYtQG6ZZONonNrWuRI7w3z8E8BTrgmHwft0ar3/0saaFvcyWVmiPJYdPTLGO95tybR0rG978C0KxIbaih7djnUHT3CXgyFfWePKi7cPhoTyeKvn8ERJIrWEyLKdYVYVOQ8IdfPECWWwbZCdfKA3p5yQ9WUeCDHkdhc6hXFYzlb5bWuqmGyVX6/TM8GQ9PlGTuCQBTFnfr9NMrC0IzZaKowhciYyRu3mjkEJep8+Q6S3rMihLHUmN99J2HLFKZD1jWXVqncz7a53Mn/NRWjtHhseuNiY0ls6yOI4SaimxVRzNhkSXkSdrb00CZHBSUNYjbKctskkgt55jCXax/btENgnoqkd6XQakH5fopc92mzX0qsU2CXylHmEayWmTQIlpN/j86DhiH14QtHN82Buwfr67aP3mGbn2PZpWxDUJ1FXWuxRuIrZHKSy19imFpdbnSmEza2GUk5Imp9iqSAQJsOZCSM5tRoUPXUy8Jz/p9if+6pb4vzS7cWprwz0Sou1ecTTRJo4g6rfUllXNlL3ZmSW/QkN7Ueu5WE1fKnvahXoWxKP8sqeEXNBZn0RYKe2+SGQanoRYca59ZBUcW8aid9xHgn5h2H/B4l0PrAwquyr3bOnBjcrYNZwHim0VJ6PP4YScs277GtKmyXsZlnedPddGl0HdGc7N8KzZdWwNO1sU5Pwn7fmqnQfPNOf1ZNNoEfxj15D4N2bqir7V5BkC5v025sZgzbl1+kf8/f65S9HQMDmDhbomd09OnQYnNcEpnNt2wwl7DecwgIOQlTITU1o7zfNrGUVjc8RKj+xXWi9prPRHmi+H7ZwwC/5pB/Gjy6GKEkKozdQG0aWnHH4vcKKOLodbuXZ1ej2SAzW1TrVASOCenI+Aw3d/vTuUW1fWc4nBppZV9r6Qep/ixrbRjFaj96sXxPbuTA98UBWoQ6+qXUiV6MZbMMudVIYi+bBYTNDTjSuaRj7HvUQ2yEz7dtaaYuFpj70bC+ROM8Ko87iO3mNRCwhkPerP9HQD3EPU7qA/Q9Mud3tIWsQrSTaWtn08cW985LmTF6eFCAa3dzLixgyXuEWZozSlal1qa50TLataOzsdQdP8B32XuPA=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Node List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/nodes"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a list of nodes with their associated node groups
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"filter","in":"query","description":"Filter query","schema":{"type":"string","description":"Filter query"}},{"name":"page","in":"query","description":"Page number","schema":{"type":"integer","description":"Page number","format":"int32","default":1}},{"name":"size","in":"query","description":"Page size","schema":{"type":"integer","description":"Page size","format":"int32","default":10}},{"name":"sort","in":"query","description":"Sort options","schema":{"type":"string","description":"Sort options","default":"-_id"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"Node":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"active":{"type":"boolean","description":"Active"},"active_at":{"type":"string","description":"Active at","format":"date-time"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_runners":{"type":"integer","description":"Current runners","format":"int32"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"hostname":{"type":"string","description":"Hostname"},"ip":{"type":"string","description":"IP"},"is_master":{"type":"boolean","description":"Is master"},"key":{"type":"string","description":"Type"},"mac":{"type":"string","description":"MAC"},"max_runners":{"type":"integer","description":"Max runners","format":"int32"},"name":{"type":"string","description":"Name"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsNode"},"node_groups":{"type":"array","items":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"active_count":{"type":"integer","description":"Active nodes in group (computed)","format":"int32"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Node group description"},"name":{"type":"string","description":"Node group name"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Node IDs in this group"},"total_count":{"type":"integer","description":"Total nodes in group (computed)","format":"int32"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"Node group data","title":"ModelsNodeGroup"},"description":"Associated node group"}},"title":"ModelsNodeDTO"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"},"total":{"type":"integer","format":"int32"}},"title":"ControllersListResponseGithubModelsNodeDTO"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

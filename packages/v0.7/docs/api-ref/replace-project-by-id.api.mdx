@@ -1,0 +1,71 @@
+---
+id: replace-project-by-id
+title: "Replace Project by ID"
+description: "Replace an item by ID with (full update)"
+sidebar_label: "Replace Project by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVt9vm0gQ/lfQPLXSJnGsRrnjLU2iyqp6FznOy1lWNMA4bAss3R2Scoj//TQs1CR2YvftHuonw/zcb7+PmQYYHxyES7ix5ivF7GClICEXW12yNgWEMKcyw5gCLALNlAdRHcyugifNafBuXWVZUJUJMr0HBaYkixI2SyAE6wPvS5/6PqrvdQIKSrSYE5OVwg0UmBOE0Jm0FCyRU3jZxSIlKWvWAafkG2HTlwYFlr5X2lICIduKFLg4pRwhbIDrUtI7trp4+NW0a2NzZAjBRHIEnUDbrnw1cvzRJLWUiE3BVLD8xbLMdNxhcPLVSYlmuxefTJCwghhrcmJNkA/wEgz3Hmt2tbt5BbElZErukfdnufS+AeucHGNejpMKQkdiGWeN6sOzRvVrPT7z35fuavTUqp5N+4L+Qt+3v+jD0LjzvgegMWQ9BI0h62tovISjY6ww5RlPWXMmRb6YhDLXa7kL3ghj6Qm22njPdwl0VpSVhPpgV5rCeeJNJ5OOpc+6+fszqN/8/83//yf/FZC1xm530SrIyTl82IFVq8AxcuV2mNpNqUtTsDVZRtbNe5l80pxW0UsNStCHXdr5iEkw95MEOp/TbZ+7AitOjdX/UkeNs12JZgWTLTALbsk+kg2uu0O33SE5NTKLRdPKT9YQTnrBu5NGJy0ocBRXVnN9K0r1MsNSL8w3GhMQS/2Z6mFKp4QJWRgYBxc3s8BHSGHR/nwzJa9/YF5mNFZ5p+MNK8a6hOlk+uFocn40/XNxehaenYbTP44n56f/wHOlvcapn6/71n4+j+n+VpExgcd3r4u16QAZOGDxKcMouLiZbTUxv75diCFYGxv0jqDgkazzDpPj8+OJ3GlpHOfYId03PKxcPYn8yvWywmjv+JUdrb9Mph98Umaou69GZTNJ6PmxhIEfoCDUiYyM1DgWS9NE6OjOZm0rr79XZGsIlysFj2g1RgLLsoFEO/mfQLjGzNEbnb+b9wPqfbBnF9vZ+EDNQnj5iFklT6DgG9V+p2xXrRq4Kp15w6Wvf7SQ8E3g1vRq1RBxEcdU8pu+q5Hebu4WoCDqF8TcJBJi8UlWVXzyPZoOjk5t3bsGMiwequ6jBD6l/P4DKZf2Kg==
+sidebar_class_name: "put api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Replace Project by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/projects/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Replace an item by ID with (full update)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to update","required":true,"schema":{"type":"string","description":"The ID of the item to update","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"name":{"type":"string","description":"Name"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsProject"}},"required":["data"],"title":"Replace_project_by_idInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"name":{"type":"string","description":"Name"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsProject"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsProject"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

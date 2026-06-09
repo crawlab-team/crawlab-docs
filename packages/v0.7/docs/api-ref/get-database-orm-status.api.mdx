@@ -1,0 +1,75 @@
+---
+id: get-database-orm-status
+title: "Get Database ORM Status"
+description: "Get the ORM status of a database"
+sidebar_label: "Get Database ORM Status"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVF1rG0EM/CuLnlpYYre0FO4tbUIwoSTYCX0IJqzvZN8md7sbrc6te+x/L7oPN6lNG/pkzhpptKORWmCziZDdwZlhszIRIyw1FBhzsoGtd5DBBbLiEtXV/KuKbLiJyq+VUcWQAhp8QDICnxWQwQb5fgzee6rv+yzQEAyZGhlJOFtwpkbIwBagwQpVMFzCn/yzM+GTDp4xEj41lrCAjKlBDTEvsTaQtcC7IEUjk3Wb1xVbe6oNQwZ+9YA52wJSWgpHDN6JJlkL76dT+XlZ7eoSNOTeMTqWqAmhsnmnxOQhCqQ97KwnETVIdGPbE0g//0ahM6tKnr0Hrryv0LiDl34rkUukbmw2qjExaYhNCJ74f6rsU9Xak+LSxr2OqquUkga2XEnNL94x+apCiqO9rqhedGaYD9pKP0jk6XB0SUONMZoNHo0NpjoMHe9gJLywXDar17WWpNaHY4P/bAo1x6cGI0OHeXeIuXWm4dKT/dnL/vFYoZljJGcqtUDaIqnzTovUvZ1LP6xTtzpcQgaTUe44aW2RJp7qyX69IuYNWd4txHK9X0ywN/4R3TOdTLCXuBtXrkRTIIEel/H0eqb6DGnCurXvUkdByXyvzEqdXs8OrDI/X9xIoLPGAAQNW6TYA6Ynn06mokTwkWvT9TSwyo0ZB9F5bTG+6QVH+3vZXnOWhgcz/uBJqIx1Qt5QJYV6Pe9grydoyLpL5KmGvb2WGkofWZBtK7hbqlKSv58apB1kd0sNW0NWtqs7aoWNw4quTRXxLy94Mx+O2Ft19CwdbX8copMJbk3VyBdoeMRdf0rTMulxqtJPHzjNcwz8LOXgVMnF23vu4vwGUvoF7aAYWw==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Database ORM Status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/{id}/orm/status"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the ORM status of a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the database","required":true,"schema":{"type":"string","description":"ID of the database","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"enabled":{"type":"boolean","description":"Whether ORM is enabled"},"supported":{"type":"boolean","description":"Whether ORM is supported for this database type"}},"title":"ControllersDatabaseOrmStatusResponse"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubControllersDatabaseOrmStatusResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

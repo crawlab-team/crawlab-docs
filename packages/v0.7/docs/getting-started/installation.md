@@ -9,6 +9,18 @@ Docker is the most convenient and easiest way to install and deploy Crawlab. If 
 can refer to [Docker Official Site](https://www.docker.com/) and install it on your local machine. Make sure you have
 installed Docker before proceeding any further steps.
 
+## Platform Support
+
+Crawlab's official Docker images are **multi-architecture**, built for both **AMD64 (x86_64)** and **ARM64**. The
+same `crawlabteam/crawlab` image tag runs natively on:
+
+- **x86_64** servers and desktops
+- **Apple Silicon** Macs (M1/M2 and newer)
+- **ARM servers** such as AWS Graviton
+
+Docker automatically selects the correct architecture for your host, so no special tag or separate ARM image is
+required.
+
 ## Main Process
 
 There are several deployment modes for Docker installation, but the main process is similar.

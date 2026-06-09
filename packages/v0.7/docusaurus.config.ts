@@ -55,6 +55,11 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           docItemComponent: '@theme/ApiItem',
+          versions: {
+            current: {
+              label: 'v0.7',
+            },
+          },
         },
         theme: {
           customCss: './src/css/custom.css',

@@ -1,0 +1,75 @@
+---
+id: get-node-time-range-metrics-by-id
+title: "Get Node Time Range Metrics by ID"
+description: "Get the time range metrics of a node"
+sidebar_label: "Get Node Time Range Metrics by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJylllFv20YMx7/KgU8roNZZ02GY3rI2K4yiW2CnT4Vh0Dravla6U+6obJ5w373gSXa02FPc5smQSf75O4pHqgXGTYD8M/zpNAVYZKApFN7UbJyFHN4TK96SYlOR8mg3pCpib4qg3Fqhsk4TZOBq8ighUw05bIiXYlhK1DJFLfuo5Wq3NBoyqNFjRUxesrdgsSLIIZmMJK6Rt/CYZvpOsgpPn9fTXWM8acjZN5RBKLZUIeQt8K4WwcDe2M3TQmvnK2TIwa2+UMFGQ4zZAYvsgeuuIb870ru2uiuRsWr2x9vLy8vfVC95PtSIyBCmq+RSnsI41VtXVfgykNSaSavSBJZzdwpqr/CjRTxLfkgeGD2PI8/F5f9L+aOoo7JDxNSxjTVPYN6KkriJxuFG4GbjaZPuwTNYn9aOcSHyoXY2UBDF1xcX8vNfob8+QAaFs0yWxYp1XZoiSUy+BHFpj6G6/pcL6uVSs+kSaOShF3qPUhXDVIVT0ai1kURY3gx1YowZkPfOH9chZlBRCLihk7bAyE04YYoZsOGSUkda9q4syYdZX56PWM+T49Qy+TUWpNoIMYG8OVW131GrGd01FBiSz8/HPp8sNrx13vxLWpx+OSWUElos1Zz8PXl1nY4d0zF56/pBmUYhbyGHiYyiMGmNjpP+rU+kHV+mASpzhIrGG97N5Z11rwVrc+u+kh2+mtp8oN2+fbeEmjxk+/6+upmqLkJAjF27FLqvn8e/S1ypq5vpUVvOrue3Ykhd2TtCBvfkQ+dw8erXVxdSjdoFrjAx9Vlli8iCUam3Z2mNfOwbe7VT03ePs7UPfXvuCuqPz/QPT+oSjRWUxpci1lX4M6QKQwZ52jO9isQ+lHmRwdYFFu+2XWGgT76MUf7uJoEsK20Crkq52WssA42wj+6Fk8RfaXdYOPdYNuIBMqDOT/rTrJ88L9SZG2CE5NG2eT7SExN+BGW/Pp7PcM74HgEZLokHmIU8eCM039klA7KjD5OTGPurbndDgj2efLwsYra/+8LSGa6Kguoh9NFGkEMcptP761uI8Rul53LV
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Node Time Range Metrics by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/nodes/{id}/metrics/time-range"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the time range metrics of a node
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the node","required":true,"schema":{"type":"string","description":"ID of the node","format":"objectid"}},{"name":"end","in":"query","description":"End time in RFC3339 format","schema":{"type":"string","description":"End time in RFC3339 format"}},{"name":"metric_names","in":"query","description":"Comma-separated list of metric names","required":true,"schema":{"type":"string","description":"Comma-separated list of metric names"}},{"name":"start","in":"query","description":"Start time in RFC3339 format","required":true,"schema":{"type":"string","description":"Start time in RFC3339 format"}},{"name":"time_unit","in":"query","description":"Time unit for metrics aggregation","required":true,"schema":{"type":"string","description":"Time unit for metrics aggregation"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","additionalProperties":{}}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseMapStringInterface {}"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

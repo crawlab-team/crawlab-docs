@@ -1,0 +1,75 @@
+---
+id: get-notifications-channel-list
+title: "Get Notifications Channel List"
+description: "Get a list of items"
+sidebar_label: "Get Notifications Channel List"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVsFu4zYQ/RViztqNN21RwLc0SQN3s4kRJ+ghCARKGlvcUKKWHCX1Gvr3YkjJKzuOrG1Phsz33gyHHM7bAMmVg+kj3BhSS5VKUqYU57ksS9QOniLI0KVWVfw/TOEKSUihlSNhlkIRFg4iMBVaz5xlMIUVUlz25FycBr2YeRBBJa0skNBy5A2UskCYwlJpQgsRKA70rUa7hv3wf3qM6BZdmmMhYboBWles4ciqcjVMa5poG7OSKxyOOJcrFGVdJD61NwFVSbjyS0O0pbGFpAD/5dSDl7LWBNNP/Wyc+j4mmxb2c7m0pIFMJjupGEvDqSyMJWH8l/uJo9ijbcPDh1hl0DRPEVh0lSkdOlY7nUz4Z1fk9jNEkJqSsCRelVWl28t28tUxZPM2IZN8xdRfP8v3lVQIkEnqo6S1kjcbrvZRNid9dM+zi37lgxJvNoLUoiTMYknHVc4DVpAq0JEsqr5oJgk/8EpfNVmPV03W7+W4gz8md9H7aiJYGbPSGBtZU34ad0czLHHlOeL2jDnir8XtDSuFe3mMeyNDBSprXlSG9jhj3iGbCFxBVVxJ516NHXGsiy/3c7GFb/ncOcebMpBDl+01Zafk0L6M2YKXasEdt3Zox5XMs7fwJgJCjSsrizgxFJN5xhFndt9yRGJIBE5fKc0ljeqUrQ4zxOzCq3jGUSavRoBlXfA4UwVEUEil4amJoK6y0W32ELAj2qxTHdNmner7bfaKSW7Mc1xbfVzu7wAWD3fXPM/2a5Gj4GdNkBEhSYiAFGlW/GIy1K4/7ttp74XQWnPgyjURFOgcT8tDa44k1e7gEhmS+mA/7N/65keO56Yka7RG666Vo7t2IFwpyutkaAMs8uuhifGHzMQdfqvREXjMp7eYh5KfKWPVd/Qn8tshoVlJ3CpaLHzDiUtfsMYXiHLT+h9vciiHKZzsOKGTtHNWEThMa6toveBBFaaJrNT9XsPJSn3GdTeKc5SZL147ps/mMxEYnIEql8ZTuzJa+aplIs7mszc36O5ycc8LYmmsaIEQwQtaFwCTj79/nPi31DgqpM+pjcomsF9/1xlGcR0M3t7I2E7qd+xju1XCf+ik0lL5x6Ptg1DGR9gpI0//nkXNjSPGbDaJdPhgddPw38G3sMPMlJOJxgymS6kdDiS4ZzAPZvaM675dfZG6ZhCwfRofadchDgRqPer/CdOav4EgLeI/BtkzdUNxwsT7EeeJP6ziQDB95Me6veN8boFzlqZY9Vlv7B6rbNvv6vIemuZfdbpoSg==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Notifications Channel List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/notifications/channels"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a list of items
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"filter","in":"query","description":"Filter query","schema":{"type":"string","description":"Filter query"}},{"name":"page","in":"query","description":"Page number","schema":{"type":"integer","description":"Page number","format":"int32","default":1}},{"name":"size","in":"query","description":"Page size","schema":{"type":"integer","description":"Page size","format":"int32","default":10}},{"name":"sort","in":"query","description":"Sort options","schema":{"type":"string","description":"Sort options","default":"-_id"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"google_oauth2_json":{"type":"string","description":"Google OAuth2 JSON"},"name":{"type":"string","description":"Name"},"provider":{"type":"string","description":"Provider"},"smtp_password":{"type":"string","description":"SMTP password"},"smtp_port":{"type":"integer","description":"SMTP port","format":"int32"},"smtp_server":{"type":"string","description":"SMTP server"},"smtp_username":{"type":"string","description":"SMTP username"},"telegram_bot_token":{"type":"string","description":"Telegram bot token"},"telegram_chat_id":{"type":"string","description":"Telegram chat ID"},"type":{"type":"string","description":"Type","enum":["im","mail"]},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"webhook_url":{"type":"string","description":"Webhook URL"}},"description":"The data to update","title":"ModelsNotificationChannel"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"},"total":{"type":"integer","format":"int32"}},"title":"ControllersListResponseGithubModelsNotificationChannel"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

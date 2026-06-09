@@ -1,0 +1,75 @@
+---
+id: batch-update-role-list
+title: "Batch Update Role List"
+description: "Batch update multiple items with partial fields"
+sidebar_label: "Batch Update Role List"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttu20YQ/ZXFPDOxm7YowDff0ArpxZDlJ0EQhuRI3GTJ3ewO7agC/z2YXdJmLKUW0uhF5O7MmZkzN+6BcRsgX8LcGgqwyqCiUHrtWNsWcrhELmvVuQqZVNMZ1s6Q0kxNUI+aa+XQs0ajNppMFSAD68ijaM8qyKEQ/XXSX3traG10YMjA06eOAl/aagf5HkrbMrUsj+ic0WWEOPsQxIs9hLKmBuWJd44gB1t8oFJwnBeDrCnIra7CRAi9xx1kEN2dnAf2ut1C/zLYRU1qdh2U3SiuxyjZDuGL/PB0xA+sKi0waG6nHh21MdA56PZ9YkN7qiQTOtI4WFplwJoNjak4oHLWuk4wEkpwtg2Jinfn5/L3tfV/3kP2o7iukE+QWuvqkPmXpMyuIYON9Q3yE5KuhPDSEzJVa+TXUa6SrGLdUGBs3BRUWHsjN1PUYnc6arH7lo9fyb8Gdz156zNosaHXlf7G5Le3ltdYNXpqqLDWELbpvmP6Px0wTwBPlX4a8fdJ9gTiR9RTiB9Rv018F8hPo9It05b8VFy3/PO72GKHbSgFPGnv5077y1ZkgkxEsULeW3+Uu4ZCwO2R/PUZBEbujlHeP9u5si17awz5MB9a93fNdVdMHYid/cuxZr7ESs3TGIUo89OhzH2LHdfW638pUvbrMaBZy+RbNOqO/AN5dRMj7mOEXFuZ406GjzQ3cg05nPm4LjIIVHZe8+5OhkYqPXR6YT/StETR6fcU61DM1YRVzFIqfri4namkISZlDM2fl8PNZ2ycoafhvhyJXE2msejpdmOjyZFcj48GC3VxOzsorfnN3UIu1MZ6NQhCBg/kQxI4f/vb23Phy9nADcZYBm/TRkzFqSRF6s+00V6Mgacp+x07dKCN6TOfOYM6NnfnjeCmDCzBjwu7toHlYL8vMNC9N30vx5868jvIl6sMHtBrLISV5arPRv7z5R4+0m6oQ2r5zULMirjpUtZeLIc+GzUuypIc/6fsalI9txeLqz8gg2LY9o2tRMnjo3wJ4CPkEL8cRD3WUDzbg8F228UOgwQqvy8p/f/m
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Batch Update Role List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/roles"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Batch update multiple items with partial fields
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"type":"array","items":{"type":"string"},"description":"The IDs of the items to update"},"update":{"type":"object","additionalProperties":{},"description":"The update object"}},"required":["ids","update"],"title":"Batch_update_role_listInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"name":{"type":"string","description":"Name"},"root_admin":{"type":"boolean"},"routes":{"type":"array","items":{"type":"string"},"description":"Routes"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"users":{"type":"integer","format":"int32"}},"description":"The data to update","title":"ModelsRole"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsRole"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

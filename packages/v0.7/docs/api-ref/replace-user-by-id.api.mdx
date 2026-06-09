@@ -1,0 +1,71 @@
+---
+id: replace-user-by-id
+title: "Replace User by ID"
+description: "Replace a user by ID (full update)"
+sidebar_label: "Replace User by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV1Fv4zYM/isCn+4AtU2DK7r5rdfrhuA2rEiTlwVBQMdMozvb8kl0e1ng/z7QsmenSZvsvXlKJH4kRfH7Qm2B8dFDNIOpJ+dhriEhv3SmYGNziGBMRYpLUqhKT07FGzX6oj6syjRVZZEg00fQYAtyKIBRAhG4AFkIYBFvFiYBDQU6zIglRjTbQo4ZQQT1lpE4BfIaXgafrEnC2ZXiNSnDlCm2TVzQ4OhHaRwlELErSYNfrilDiLbAm0Lce3Ymf/y/blfWZcgQgY2/0ZJNAlU1D9HI82ebbCTE0uZMOctXLIrULOsCXHzzEmK7n0twJpVwUi425GU3QT7BSmp49FijL4eT17B0hEzJAvm4l9tgq9hk5Bmzou9UKnQmO32v8eZ0r/HmtRwpQ5Med3RXm1UaVsZ5XoQ+Ogb6TWxVbVtpSPFk4B/YwzmbngAZi1VjfdK1CUC9fnfOWl5gkpm85yq2NiXMD/iyrILxDnTxIvcWXxuVHJqs2UPnUG5JeOH3068qDYEqp/XTNNie0E+t11P6qfX6ej+J+px2ydPWUo62rxTC0B19YMNSTPjTJpR6QdfITo1mgdXzznS8J4mjvCgZqiogfWFzH25hOBjUurCTx19fQb8rzrvivCvOu+I0iqOBnLPuQLk0ZOQ9Ph5IpNLgGbl8pcptnFubs7NpSs6PG2363fC6jHckTxCfDqnVZ0zUOExLUNtc7ttMcyx5bZ35h+riXR1yNMpZCpWqB3JP5NRdfeKqPiGvrQyboqI6TI8RXMgV+IutSSrQ4GlZOsObBxHG0HBYmIn9Tv3GxsJ8pU07hq4JE3Kg2wH15n6kAkKiitSOuzHw7idmRejyVlRr/nXX3pdBGA6Gn84G12fDXyeXV9HVZTT85Xxwffk37Apbh24EqlvoK1C32lOXbjHQb/f3i+T6PA8D9B592+VA2FmLne8S8q2T9SnWhe6o0m8/k69sfTNtGzp8TjFWN/ejfd25e5jIhlpZpxpD0PBEzgeDwfn1+UA6q7CeM6yvvAnZvmmm/71oXrrvjfenvYCaZmL6yRdFikENS1f/vYTmnNWH9qAhMolUcG09y/J2G6OnqUurSpZ/lOQ2EM3mGp7QGYylFLMtJMbL9wSiFaae3kj4w7iZRD6qIy+dg1m3vMiFFE+YlvILNHynTXixVfNKt0SRzMLGbYh/NhF4B9ybVCrdIm6WSyr4Tdt5j+n30wloiJvnV2YTgTh8lk7G55CjrctRU71e20KK+WNZayEEl/L5F8ZuGP8=
+sidebar_class_name: "put api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Replace User by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/users/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Replace a user by ID (full update)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to update","required":true,"schema":{"type":"string","description":"The ID of the item to update","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"email":{"type":"string","description":"Email"},"first_name":{"type":"string","description":"First name"},"last_name":{"type":"string","description":"Last name"},"role":{"type":"string","description":"Role"},"role_id":{"type":"string","description":"Role ID","format":"objectid"},"root_admin":{"type":"boolean","description":"Root admin"},"root_admin_role":{"type":"boolean"},"routes":{"type":"array","items":{"type":"string"}},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsUser"}},"required":["data"],"title":"Replace_user_by_idInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"email":{"type":"string","description":"Email"},"first_name":{"type":"string","description":"First name"},"last_name":{"type":"string","description":"Last name"},"role":{"type":"string","description":"Role"},"role_id":{"type":"string","description":"Role ID","format":"objectid"},"root_admin":{"type":"boolean","description":"Root admin"},"root_admin_role":{"type":"boolean"},"routes":{"type":"array","items":{"type":"string"}},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsUser"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsUser"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

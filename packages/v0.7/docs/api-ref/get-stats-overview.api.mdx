@@ -1,0 +1,63 @@
+---
+id: get-stats-overview
+title: "Get Stats Overview"
+description: "Get the overview of the stats"
+sidebar_label: "Get Stats Overview"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVF1v2zAM/CsGn40m6zYM8FtXFEFQYCma9ikICtlmYjWOpFJ0uszwfx8oO03aeFj9lA/eHcmjyBpYrT0kC5izYg/LGHL0GWnH2hpIYIIccYGR3SHtNL5GdhV++wCPwTokJdhpDgmskZ9C5OmAhxgIvbPGo4ekhsvxWD7eJ5ndQgyZNYyGJaqcK3UWZEfPXiA1+KzArZJvvHcICdj0GTOGGBxJEazbBLniT6CQyNITK7/xJ2BtGNdI8NGEX9U2RZLWAy9qeTGsLG0Vt8Svl9DEYGyOwxRbRp+WIyu1D5N7I/UpEvqqHCh44PTpyUzyqhzY8ZHVq+l0jjRQseP06Q2f8b+nW/mhlbWMcy0pTHMpItfWMNmyRPIT5LCGs2557rvNkdzh5Z3k9kzarCWyRe/VGntjsoyV7wn1F3BIONFcVOmnKmtE6lvfVv9UeXSPLxV6hoD5co55NKriwpL+g7mAvvcJTQ0jGVVGc6QdUnQTrGhC61zY7vDIjisuIIFROEGjkxPkMatI834uR6R9rsrpB7tBc+KNcvoW9xCDlqwFqjzM1qitRK/uplHLkMzarGygHkwk9VqqNLq6m549h/ub+YMEopWlqANCDDsk3wLGFz8uxmHlreetCjV1WeX+Buej2bGdd/L18XL+91p3jTL+5pErlTbhVVMpKq15C3i77Id8yxgK61lidZ0qj49UNo38/VIh7SFZLGPYKdIqFSsWyyY+mJcsatjgXtzLMnQyo50qq9bsDze+WZ7Mc3LzAE3zF3mSRmk=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Stats Overview"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/stats/overview"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the overview of the stats
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"error_tasks":{"type":"integer","description":"Number of error tasks","format":"int32"},"nodes":{"type":"integer","description":"Number of nodes","format":"int32"},"projects":{"type":"integer","description":"Number of projects","format":"int32"},"results":{"type":"integer","description":"Number of results","format":"int32"},"schedules":{"type":"integer","description":"Number of schedules","format":"int32"},"spiders":{"type":"integer","description":"Number of spiders","format":"int32"},"tasks":{"type":"integer","description":"Number of tasks","format":"int32"},"users":{"type":"integer","description":"Number of users","format":"int32"}},"title":"ControllersGetStatsOverviewResponse"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubControllersGetStatsOverviewResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

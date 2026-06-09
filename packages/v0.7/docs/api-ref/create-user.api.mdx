@@ -1,0 +1,71 @@
+---
+id: create-user
+title: "Create User"
+description: "Create a new user"
+sidebar_label: "Create User"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVk1v2zgQ/SvEnNkmu+hiAd3S3bQw2kWDxD4ZhjGSJjFbSWTJUVzX0H8vhpRiOXE26h62Psnkmw/Oe5zhHhjvAmRLWATyAVYaSgqFN46NbSCDvzwhk0LV0Fa1gTxosI48yv6shAyKiFj3e56+thT4rS13kO2hsA1Tw/KJzlWmiHZnn4M430MoNlSjfPHOEWRg889UMGhwXqKwoSC7JfIEFNVoqhEssDfNHTw+0mWEdRochrC1vnzZ5GpAdhq8rehli2tB9ei1mRBCDNTsb9Bwa32N/HBME6NKeRusJ0ReDMiuS3QYT6Uw/HDckbfVY1Cs9EoDG5Zj9vxHdmeNaxm6LpkEZ5uQ6v77+Xkk6SiNTx9A/7/0Tyrz8xVOOi7XyC97SVUpFZuaAmPtxk5LZHolO2Ov+W6613z3XI4/q/Bb4wOvp+nmnWBVUo6GCicbfsSR3a+5Hd5aXmNZm2bkKre2ImxO+LKsEvjIdP0o98E+glpOIuv30HsUlgxTHZ6mL1ekdeVkPS0SdoKeBq9T9DR4fV5P/7GrHG/NN6Tkhiq2KqUHh/7xjy2pCmId9eu99SfKpaGmEPDuRCKdhsDI7TNVfuhTtmFvq4p8uO5703vDmzYfJxBb15tT3eotluo6jS6ImN+eYhYNtryx3nynWLw/TjmaNSyFqtQN+Xvy6jKeuIsn5I2VgelsiM0LeQMZnLVx8GoIVLTe8O5GmmISGzozt19oLGp05gNF5Um0DWEZx24iES6uZipZSERps9eHeXz5DWuXFD401L6fHEg/jMTDWroWx//jpT0sHXQ05sY0tzam/jBLcFthri6uZk8v5eXNXDbUrfWqB4KGe/IhAc5f//n6PE5tG7jGWJM+ZP9GWaQXyJHf0Qvk5FOmryrTNz5zFaaW0PrYYxNBS2iHl9FGiMuWsN/nGGjhq66T5a8t+R1ky5WGe/QGcznsctXpgZ5suYcvtOtVSg2/mktYgVdtIvXRbOz0YHFRFOT4X7GrkbauPt3MQUPeP79qW4qNx63whlvIIL7fxDoqLK7tocLmro3XD5JP+f0A+hp4BQ==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create User"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/users"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new user
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"email":{"type":"string","description":"Email"},"password":{"type":"string","description":"Password"},"role":{"type":"string","description":"Role"},"role_id":{"type":"string","description":"Role ID","format":"objectid"},"username":{"type":"string","description":"Username"}},"required":["password","username"]}},"required":["data"],"title":"Create_userInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"email":{"type":"string","description":"Email"},"first_name":{"type":"string","description":"First name"},"last_name":{"type":"string","description":"Last name"},"role":{"type":"string","description":"Role"},"role_id":{"type":"string","description":"Role ID","format":"objectid"},"root_admin":{"type":"boolean","description":"Root admin"},"root_admin_role":{"type":"boolean"},"routes":{"type":"array","items":{"type":"string"}},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsUser"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsUser"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,11 +1,11 @@
 ---
 id: get-git-branches
-title: "Get Git branches"
-description: "Get all branches in a Git repository"
-sidebar_label: "Get Git branches"
+title: "Get Git Branches"
+description: "Get the branches of a git repository"
+sidebar_label: "Get Git Branches"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNVNtu1DAQ/RVrxANIabMqSJS8bSmsKoFAXJ5WizRJZjcujp3ak7aryP+Oxsle2hWIvCTx3M6cOeMBGDcBiiUsNMMqg5pC5XXH2lkoYEGs0BhVerRVQ0Fpq1AtNCtPnQuand9CBh16bInJS6YBLLYEBegaMtCSpkNuIANPd732VEPBvqcMQtVQi1AMwNtOIgJ7bTcpITN5Cf21nJ29w7P1/Ozjarh4E1/Ac4yfnd246yv1pbylim9qgeYpkGWqFQaFqqFHrKnSLRq1L8GajdTchUF8nni0qJtriCsBHzpnAwXBezGbyeup/ycdWLn1nizIoHKWybL4YtcZXaH45rdBAoZTAlwqKQR415FnPZarXE1HXtoybchDBmvnW+Tx6PWFtNBSCLihU1JjPPT8va8qCgGiPBLDjauhgA3xSH4DBeQbzSEfdB3zo44C+fvdnHtvoIAhdUGxyPOhcYFjMXTOc8yx0yfDuqY19obV/OuNGlNBBvfoNZZm7HXMJl9k+1aU2TB3kKVXGCWackAxWmIGUnacx85iXIUmHccMBM4T8+XschajTDVQ1XvN29TPFaEnP++l/eXq2Pw9gUr4jp32HE8Qd9ihTE6Jc23XLnlO3L/3+GCwFAZO2BFW1s6rySdTaJXryJ4F1/uKVK1lmGUvyn6gUlXiR15h3WqrOoMsghBGyYcx5ez87flsJCFwi0l2037KcssqH033CZzhIN//vQgmOpgeOe8MaiuVk0yGSVZLEFlBBkW6Hva1V7spLmEYSgz005sY5fiuJy/zWR2EkqZV6yDfNRRrNIH+Af7lt+nieaUOO/0XsNMh2m0SpunlDzL4TdvxSosrERxhTT7BGA3zqqKOj0JO1l3ktF+0xYcfEOMfpPHdUw==
+api: eJyVVE1v00AQ/SurOYFkSEAgJN9aqKKoB6o05RJF0cSe2Nva3u3sOBAs/3c0dtKmjSnl5I99897Mm51pQDALEC9gYgWWEaQUErZerKsghgmJkZzMmrFKcgrGbQyazIph8i5YcbyDCJwnRg2ZphBDRrLKrKwOQRCBR8aShFilGqiwJIjBphCBVR2PksNz8XlOZvpNJTWFE1Gm+9oypRAL1xRBSHIqEeIGZOeVPgjbKvtf2o3jEgVicOtbSsSm0LZLVQveVYGCCnwcj/XxlPf7JUSQuEqoEj1F7wubdLaMboNCmtMcexF1iNVEsb1AivIK1KYuilXv5fOi2whyDPngwV8jmEontBLG5G4QILakIFj6IZcfjEtR6J1Cu5AOdcLVkUmhv34kYWJlRhuFE7PjQe2SQsBsOPEgKHV4Wearq4RdURCH2b6XEyt5vT7SbzXg01BzzzE1M7qvKQh0mA+nmJsKa8kd29+UKujzENG0EuIKC3NNvCU2F13BbVeg5G4/P93ISA4xjDIrYdTYtB0dzVOgpGYru2u9T/1lQG/n7o6qIxfQ20vaHWYsJ0yJ4dB/OLuamj5C1W21cV3owS7GnwWuzdnV9GSCZhfXcz0wG8dmD4QItsShB4zff3k/Vgu8C1Jil9NeVTfKxIo5fyzmCXnzOEKv3T77aoV+ycgXaCtVrrlQst7FBaiLEEHcrZwHI5cR5C6IAppmjYFuuGhb/X1fE+8gXiwj2CJbXKspiwZSG/Q9hXiDRaAXkn8z2++nt+YfG2cw/0MLK0Vssaj1CyK4o12/OdulznjfU82sPzhLEvJyFHKyhXSZPVy1ycUc2vYPlPML3g==
 sidebar_class_name: "get api-method"
 info_path: docs/api-ref/crawlab-api
 custom_edit_url: null
@@ -26,7 +26,7 @@ import Heading from "@theme/Heading";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Get Git branches"}
+  children={"Get Git Branches"}
 >
 </Heading>
 
@@ -40,7 +40,7 @@ import Heading from "@theme/Heading";
 
 
 
-Get all branches in a Git repository
+Get the branches of a git repository
 
 <Heading
   id={"request"}
@@ -51,7 +51,7 @@ Get all branches in a Git repository
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+  parameters={[{"name":"id","in":"path","description":"The ID of the git repository","required":true,"schema":{"type":"string","description":"The ID of the git repository","format":"objectid"}}]}
 >
   
 </ParamsDetails>
@@ -66,7 +66,7 @@ Get all branches in a Git repository
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"200":{"description":"List of branches","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"full_name":{"type":"string"},"hash":{"type":"string"},"name":{"type":"string"},"remote_track":{"type":"string"},"timestamp":{"type":"string","format":"date-time"},"type":{"type":"string"}},"title":"VcsGitRef"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubVcsGitRef"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
 >
   
 </StatusCodes>

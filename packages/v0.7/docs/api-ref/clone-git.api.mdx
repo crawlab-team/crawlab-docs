@@ -1,0 +1,75 @@
+---
+id: clone-git
+title: "Clone Git"
+description: "Clone a git repository"
+sidebar_label: "Clone Git"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVFFv00AM/isnP4F0WgsCIeVtDDRVe9jUbrxUFXITt7ktvbv5nEKJ7r8jJy1sa0GIpyTnz/78fWenA8F1gmIOl05gYaGiVLKL4oKHAi6a4MmgWTsxTDEkJ4F3YCFEYlTQpIICSoV9XTsBCxEZNyTEWrUDjxuCAlwFFpyWjCg1vOS5rclMPpmwMlLTCzYjwfQEYIHpsXVMFRTCLVlIZU0bhKID2UXlScLOr/+7/irwBgUKCMt7KsVVkPNCaVMMPlFSprfjsT6eE1xfgYUyeCEvGsUYG1f2Do3uk0K642YHEvWM1U9xAwExBz7WlC1sKCVc08lYEpQ2nQhlC+Kk0aOL4IVD0xCnL8FV070syFlR704J+4iVmdJjS0mgx7w5xtx5bKUO7H5QpaD3pwpNvBB7bMyMeEtsPvcqc69K6qBjFEMaJkhqKGC0dpJGnavy6HA9icqWnexm6uRgFkZ3Gx7IPxGO0V3R7jBvNWFFDPYwiec3EzNkKLfzq9CnHhxi/Nbg0pzfTI6GaPp5dqsBswps9kCwsCVOA2B89uFsrAaokA32Pe1Zh0W67DfkWdXu99T8edv2woS+yyg26LyStNxo+uDWHNQtsFD0mzYYtrBQq6XFHLpuiYnuuMlZjx9b4h0U84WFLbLDpYqfd1C5pO8VFCtsEv2l11fT/Sq+Nv+6XCdVHO7Mq84tNq1+gYUH2g2/jbzI9nCJ2uIQOC9LivIk5WjhdG9/TdbN9ewWcv4Jv+irLA==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Clone Git"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/clone"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Clone a git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the git repository to clone","required":true,"schema":{"type":"string","description":"The ID of the git repository to clone","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

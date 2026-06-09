@@ -1,0 +1,71 @@
+---
+id: delete-node-group-by-id
+title: "Delete Node Group by ID"
+description: "Delete a node group by ID"
+sidebar_label: "Delete Node Group by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFU11v2zAM/CsGnzZAa7JhwwC/dWswBB26Im33EgSBYjGxWkdSKTqbZ+i/F7STJm2C7skfPPLII68F1qsI+RSuvMHsB/k6RJgpMBgLsoGtd5DDBVbImOnMCWolqGzRZOMLUOADkhbc2EAOpkPOBTfvcPNFM7cGFARNeo2MJHQtOL1GyKELWeEImkt4TXy15+vICB9rS2ggZ6pRQSxKXGvIW+AmSL3IZN3qP3VSmkmpGLyLGCX703Aoj5dJvy5BQeEdo2OJ6hAqW3SzDu6jQNrjBvziHguWeUmUYdsTIJGn4z6TgjXGqFd4MhZZcx1PhJICtlzJr+/eMfmqQoq/vTWT7ViQkqA+nxrsmzbZBB9rjAwd5uMx5s7pmktP9h8aAX05VWjsGMnpKrtB2iBlo27K1E3Fpd8fRLd/LiGHgZzGh24VcdBak0BBxKImy82NiNnrpYO99Q/oDmbXwV5iszuXErVBArU7pPPrcdZnCL11S9+l7kQi/afSi+z8enx0G5PRza0EsqWnbAsEBRuk2AOGZ1/PhqJB8JHXuutpy7o1xt48z7Z4wdHuz+hNL20nZfzLg1Bp64S1pkoq9PpN4UA/UJBbI3YtfWQJtu1CR7yjKiX5/VgjNZBPZwo2mqxeiBjTFoyN8m4gX+oq4hvdvptsHfc+e+3Fk83uduVkURtd1fIFCh6w6d2eZkntliet9IHzosDABylHXhPLPh/Vxejn6HYEKT0BHC+Z0Q==
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Node Group by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/node-groups/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a node group by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Node group ID","required":true,"schema":{"type":"string","description":"Node group ID"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

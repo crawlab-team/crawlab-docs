@@ -1,0 +1,75 @@
+---
+id: get-notification-setting-list
+title: "Get Notification Setting List"
+description: "Get a list of notification settings"
+sidebar_label: "Get Notification Setting List"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdWNtu2zgQ/RWCz27jZrtYwG9pkgbe5obYwT4EgUBJY4s1JarkKFnX0L8vhpQU+RKbabAPu0+GzHPODC8zHM6Ko5hbPnrg1xrlTCYCpS7YBBBlMbf8ccBTsImRJf3PR/wCkAmmpEWmZ6zok2xLGnBdgnF/jlM+4nPAqI+MGmREMnzAS2FEDgiGHFnxQuTAR3wmFYLhAy7J7o8KzJJvevPVYVg7aJMMcsFHK47LkjQsGlnM99PqetDZLMUc9lu8FXNgRZXHzrUtg7JAmLuhfbSZNrlAD//t2IFnolLIR5/63lj5M8SbBvY2XxrSHk+Ga65og/tdmWiDTLsv+4at2KB15vmHSKa8rh8H3IAtdWHBktrxcEg/6yI33/iAJ7pAKJBGRVmq5qwdfbcEWW07pOPvkLjjZ+i4ovQGUoF9lDBG0GQlQm4Ps/tR1ATRYRLN9OBCjc/62+WVaIUGPMlEUYCKZGoDHO/kd2qt2zz1ymx8Zp0hAwIhjQQedvfUYxnKHCyKvOxbTAXCBxrpq8bLcNV4GTSBQ3Jnva96wKEQsYL+XsRaKxDFFvG8QdYDngupojhJwpd+a5mvhFTsy+lpJ/d+tZ4Y6veKoaYBnwkOLem18LtqoUjBREAuBGQBh2Ye/cIOM9mQi8YyCruI0Mg55b6D5KmwC9aiiQ15qQQGmJ22yB4ryoVZpPo54Oy1dNZR1nR0+gYXmIP3+UYmWYTwd0CkdiLEYY6zUylqM+lb5difk5vrNU3MIGRjOymPJwWJKoToYIQPPgYvJ6Aq0+Asd++xAVmuVQ3Jcq3q61mushAllUWdR68E2muZ694C80xm14JuK/SnGTC6DBlq5r3n3QbwK52Csrtuu5cLKeQ2+pduxP/5RTXXeq4g0qLC7DgwLi8ch92cEKcLybcl9dLoJ5mGxNNti6RknmMZlcLaZ20CtnVyNb1lHbzjUwF6uLb1ZF+sbtS2rZIF8xQyBSfVgFtuZcEEXkrE7uAu+SmYG5FHscYI9QKCcqnnsFgj85y+UpIJDIqUTocYbHzmVBzjIJNGqTKqcnokypz7qoI//kcy5TPEmdaLqDIBZchfHszu7y7fnxCb4pnXdR2QN8+mN84kGKN3HE4q5sBaep7uGrMosNpdz6FGoXZGzmZ89Nw81QUarRQYeykt3jUvsAuJWRUfmAPpfN71SvsiUnYHPyqwrsL4PPy0jbkvKKdpI3/66vr3XULjAimuFJu46GTnbs1qt0aY6abl4BoLmPERP+o3H+xRr09hIamMxOWEHof+6hGlnG5EpyjlN1i2z98MROrWr3kan9yOmWeQB7KY+Xq7XUkjnpWI2cnteOu43Z1PpjTAZtqwBsgH/AmM9YDhxz8+Dl3i1RZz4XxqrFIfZlfLhl36nsrG9dI9jgMbOM3MqXw7KpWQLvE0MeRX9YGvrapbzJemUaYtEma1ioWFe6Pqmv72rQNq8qTSNo+tmVAW9ji80ePZ6dkClv2O0ZNQFYE4dTDCLa03afYYatpE7zHT9F/2GGkQv2hko6+yz46/LV/sPNKHkWSIjx4o0TdHnvbNc06SBMo+a6vjQipdNF6cT3ld/wOEdQ+F
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Notification Setting List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/notifications/settings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a list of notification settings
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"filter","in":"query","description":"Filter query","schema":{"type":"string","description":"Filter query"}},{"name":"page","in":"query","description":"Page number","schema":{"type":"integer","description":"Page number","format":"int32","default":1}},{"name":"size","in":"query","description":"Page size","schema":{"type":"integer","description":"Page size","format":"int32","default":10}},{"name":"sort","in":"query","description":"Sort options","schema":{"type":"string","description":"Sort options","default":"-_id"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"NotificationSetting":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"channel_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Channel IDs"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"mail_bcc":{"type":"array","items":{"type":"string"},"description":"Mail BCC"},"mail_cc":{"type":"array","items":{"type":"string"},"description":"Mail CC"},"mail_to":{"type":"array","items":{"type":"string"},"description":"Mail to"},"name":{"type":"string","description":"Name"},"sender_email":{"type":"string","description":"Sender email"},"sender_name":{"type":"string","description":"Sender name"},"task_trigger":{"type":"string","description":"Task trigger"},"template":{"type":"string","description":"Template"},"template_markdown":{"type":"string","description":"Template markdown"},"template_mode":{"type":"string","description":"Template mode"},"template_rich_text":{"type":"string","description":"Template rich text"},"template_rich_text_json":{"type":"string","description":"Template rich text JSON"},"template_theme":{"type":"string","description":"Template theme"},"title":{"type":"string","description":"Title"},"trigger":{"type":"string","description":"Trigger"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"use_custom_sender_email":{"type":"boolean","description":"Use custom sender email"}},"description":"The data to update","title":"ModelsNotificationSetting"},"channels":{"type":"array","items":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"google_oauth2_json":{"type":"string","description":"Google OAuth2 JSON"},"name":{"type":"string","description":"Name"},"provider":{"type":"string","description":"Provider"},"smtp_password":{"type":"string","description":"SMTP password"},"smtp_port":{"type":"integer","description":"SMTP port","format":"int32"},"smtp_server":{"type":"string","description":"SMTP server"},"smtp_username":{"type":"string","description":"SMTP username"},"telegram_bot_token":{"type":"string","description":"Telegram bot token"},"telegram_chat_id":{"type":"string","description":"Telegram chat ID"},"type":{"type":"string","description":"Type","enum":["im","mail"]},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"webhook_url":{"type":"string","description":"Webhook URL"}},"description":"The data to update","title":"ModelsNotificationChannel"}}},"title":"ModelsNotificationSettingDTO"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"},"total":{"type":"integer","format":"int32"}},"title":"ControllersListResponseGithubModelsNotificationSettingDTO"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      
