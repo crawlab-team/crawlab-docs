@@ -1,0 +1,71 @@
+---
+id: get-schedule-by-id
+title: "Get Schedule by ID"
+description: "Get a single schedule by ID"
+sidebar_label: "Get Schedule by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWV9v2zYQ/yrEPW2A2mTdigF+y+ogMIqtRuw8BYFBi2ebjUQq5CmtZ+i7D0dKnmzLsYotQwf4ybD5u//HuzNvAySXHgb3MElXqMoMPTwkoNCnThekrYEB3CAJKbw2ywyFr3FivhajISRgC3SSkSMFA1gizRrIbL6eaQUJFNLJHAkdS9qAkTnCAMKRZgGFpBXsS52uUIyGwi4ErVBowlyQFUskSMDhU6kdKhiQKzEBlphLGGyA1gXz9uS0WX4Tz4V1uSQYgJ1/xpS0gqp6YFG+sMajZ+7vLi/5Y5fpp4+QQGoNoSE+lUWR6TS45OKzZ8jmUMEohH3j2IGkowAlqQeqidVpJPv/pFdCGDvMTyDNe5B/yCPWoSRUM0k9SCJWkM7Rk8yLtgJKEr7hkzbX+bo/1/n6qD0uhuMUH2sYvfPrKaJh61uVABo5z7Dtvbm1GUpzQHhdIwMRufVuyLQhXKLroCJXX8CtpdrQz+8Cn6+YlgyceXKScNnDedcNjZg0NFUCuVV4mvZ3RlVJfbFPof+QMbTGKpwtnS2LmVa+RSedkxxCvp++i19nbPeEWIXihpmL0dBvxb2SoFpEqHOnHTAOMMY7bZ2mdY94jxtoV7x9oRW676MaxDxCkdo8lybS2ayX5KEkKVKbZSzRGhEaxKEmTFY4TPmuxwZQy+iXfvtSjNytNN9z/eL2MJcee7uTwWLU7UfmN/8GpwVejbf+SW1cauplwC1mwR83msTxrGRuzlqahSniJFNmxnAR4L1L3BAXssxIkPSPIpBwuS5zHp2cNMrmkIDMMkjAI6cWqjdccTw89C6Mk3CNty5+1frY2MNCRBAitPKJKD0qoY3YMeJNAPho9+uV0h2djmvztx496+1O7Ip/tfgyMjCHwfvA07JxvbJ7HLEvZDZhXvAN6J05W4IW8SwY7E83B5ll9guqmbK51KYzhrtCryKBaAha9vfL98YDTcLHNtaTeO+yeJKOZqXLeig+YawI2OogCfdcKWr3JUCaeOIOw07mI2xao8YRVCVQFqp3F7mL2B5dpOHap4s0XI91kQOL+U9RdL3g/sL/iGLXOmJ0K1R98rx26PE0/5+6rPFVFHToq+Y/2nk+O89n5/nsPJ+d57PzfHaez87z2X8wn1XHhpHh9FN4H3TOukNNudii93LZEd4YQio7wtcW98Eacty7nb+tH85vNK3KeYceFRP+0vWi/ptU4hafSvQEAfPTIebOyJJW1uk/49vp+y5GI0PojMzEBN0zOnEdDK+CobSy9cIibCi4N8FFs7rwFxutqtAs0pJLC2ue1xex0FP7iO2+Kgv9EdfNOmOFUoUqVS86rsYjESlYsjYLG0gblzn5JZNzcTUeHXbY68mUD8TCOlEDIYFndD4CLt/++vYy3GzrKZdBp1oqb20m+8uavbFgu7U4seOpzST8ShdFJnUYE0qXMY/ounvYug4SGGjFa6SV9cRHmw3PJncuqyr++alEt4bB/UMCz9Jpfv4OeyGlff1ovpCZxxe0/eG2XgD9KF5a6XSq3YTMcLyeZVbyN0jgEddxKVXxRFDHkNWKB1dpigW1SA7WPLwt2qbVzfUUquovF49wzw==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Schedule by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/schedules/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a single schedule by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to get","required":true,"schema":{"type":"string","description":"The ID of the item to get","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"Schedule":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"cmd":{"type":"string","description":"Cmd"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"cron":{"type":"string","description":"Cron"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"entry_id":{"type":"integer","description":"Entry ID","format":"int32"},"execution_strategy":{"type":"string","description":"Execution Strategy"},"mode":{"type":"string","description":"Mode"},"name":{"type":"string","description":"Name"},"node_group_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Node Group IDs"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Node IDs"},"param":{"type":"string","description":"Param"},"priority":{"type":"integer","description":"Priority","format":"int32"},"spider":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"cmd":{"type":"string","description":"Execute command"},"col_id":{"type":"string","description":"Data collection id","format":"objectid","deprecated":true},"col_name":{"type":"string","description":"Data collection name"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"database_id":{"type":"string","description":"Database Id","format":"objectid"},"db_name":{"type":"string","description":"Database name"},"description":{"type":"string","description":"Description"},"git_id":{"type":"string","description":"Related Git ID","format":"objectid"},"git_root_path":{"type":"string","description":"Git root path"},"mode":{"type":"string","description":"Default task mode","enum":["random","all","selected-nodes"]},"name":{"type":"string","description":"Spider name"},"node_group_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node group ids, used in selected-node-groups mode"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node ids, used in selected-nodes mode"},"param":{"type":"string","description":"Default task param"},"priority":{"type":"integer","description":"Priority","format":"int32","default":5},"project_id":{"type":"string","description":"Project ID","format":"objectid"},"template":{"type":"string","description":"Spider template"},"template_params":{"type":"object","properties":{"allowed_domains":{"type":"string","description":"Allowed domains"},"project_name":{"type":"string","description":"Project name"},"spider_name":{"type":"string","description":"Spider name"},"start_urls":{"type":"string","description":"Start urls"}},"description":"Spider template params","title":"ModelsSpiderTemplateParams"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The spider data to create","title":"ModelsSpider"},"spider_id":{"type":"string","description":"Spider ID","format":"objectid"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsSchedule"},"spider":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"cmd":{"type":"string","description":"Execute command"},"col_id":{"type":"string","description":"Data collection id","format":"objectid","deprecated":true},"col_name":{"type":"string","description":"Data collection name"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"database_id":{"type":"string","description":"Database Id","format":"objectid"},"db_name":{"type":"string","description":"Database name"},"description":{"type":"string","description":"Description"},"git_id":{"type":"string","description":"Related Git ID","format":"objectid"},"git_root_path":{"type":"string","description":"Git root path"},"mode":{"type":"string","description":"Default task mode","enum":["random","all","selected-nodes"]},"name":{"type":"string","description":"Spider name"},"node_group_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node group ids, used in selected-node-groups mode"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node ids, used in selected-nodes mode"},"param":{"type":"string","description":"Default task param"},"priority":{"type":"integer","description":"Priority","format":"int32","default":5},"project_id":{"type":"string","description":"Project ID","format":"objectid"},"template":{"type":"string","description":"Spider template"},"template_params":{"type":"object","properties":{"allowed_domains":{"type":"string","description":"Allowed domains"},"project_name":{"type":"string","description":"Project name"},"spider_name":{"type":"string","description":"Spider name"},"start_urls":{"type":"string","description":"Start urls"}},"description":"Spider template params","title":"ModelsSpiderTemplateParams"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The spider data to create","title":"ModelsSpider"}},"title":"ModelsScheduleDTO"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsScheduleDTO"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

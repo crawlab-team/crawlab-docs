@@ -1,0 +1,71 @@
+---
+id: save-content-to-a-spider-file
+title: "Save content to a spider file"
+description: "Save content to a spider file"
+sidebar_label: "Save content to a spider file"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE2P0zAQ/SvWiANI7qZakIDcdlmQ9oBAFE5VkabxtDU4trGd3a2i/Hc0drJttwgO5JLE8/XmzfP0kHAboV7CwmtFIcJKgseALSX+q5c9WGwJatAKJGgLNXhMO5AQ6FenAymoU+hIQmx21CLUPaS954iYgrZb4IQpUeDQ78v57C3ONlezD6v+8tXwDCQoik3QPmnHHh+d3bqba/Fp/YOadKtEIB8okk2kBEaBYkcPqKjRLRrxWCLpZLjmFAbD08TFIm5vYFgV8BTTtVN7Rvy0l8bZRDaxCb03ukHOUv2InKo/b9Xl5CekLCeeplzMbHCeQtIUOTbbz+gaTqo/seWHq0TvbCxpLudzfp12+0EbEhHvSInYNQ3FuOmM2cN/tHYKvnGKjry0TbSlABI2LrSYytHLS26npRhxS39q5zC4RUEJY4en3SzwjsQIXCQnUMQsV7HRhoArpJ1TLE0XUxHcDmqoileseq2Gin1jxZyAhEjhbhJ4FwzU0OfOaairqt+5mIa69y6koUKvz1R6QxvsTBJXn29FSQUS7jBoXJvCT8nGX2S7luWwS8mDzK98zVTJAXWxDBK4bBnlZDGuQZOPBwkM58T8Zv5mPgws50hNF3Ta536uCQOFq445WK6OzYsMKuM7dnqcywhxwg7r7JTnxPr4crg07x+w9YYOMj7c9keBHSla243LdcZpvwt4b3DN/J1xy5xuXBCjjxRohfNkZ9F1oSGhNOddd7wQ7mktGvajIFC12gpvMLEEeR4UYkk5v3h9MS8UxtRiFvq41v4lrRNsj0QlekiVN6gtZ80CmohYwqg6kFDnpZmFx7Sy9FbTmJfQ92uM9C2YYeDjXx0FHuDqoKQ8TqUjfyuoN2ginUE68P38y7h9XojDtpN/xjweot1n5ZqO/0DCT9qXZT+sWJGEikKGUQzvSrHZVw4/BJ5tkkFOEVdNQz791Xd1dIM/f1p8BQnrcTG3ec1AwHternhfQLrcfNZxPuvBoN12eclAycnPbyGuWZ4=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save content to a spider file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spiders/{id}/files/save"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Save content to a spider file
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["path","content"],"properties":{"path":{"type":"string"},"content":{"type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File saved successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

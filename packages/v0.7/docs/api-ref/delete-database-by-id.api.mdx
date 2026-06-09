@@ -1,0 +1,75 @@
+---
+id: delete-database-by-id
+title: "Delete Database by ID"
+description: "Delete an item by ID"
+sidebar_label: "Delete Database by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVV21v2zYQ/ivEfWoBrcm6DgP0LY2D1UiypnaCfQgC4ySeLTYSqZKUM83Qfx9OlBwtcmrlk1/43Ntzx7vjDjxuHMT3MEOPCTpy8BCBJJdaVXplNMQwo5w8CdRCeSpEUov5DCIwJVlkyFxCDLIFrWSnZpXUKyUhghItFuTJspUdaCwIYmiPFCsv0Wfw0uJtRmI+E2YtfEbBqjcimIAILP2olCUJsbcVReDSjAqEeAe+Llm981bpzVvVro0t0EMMJvlOqVcSmuaBrbnSaGYm3sHH01P++L/er5cQQWq0J+35FMsyV2nLzcl3x5Dd2MdghBmyzKRXwQATeBzF3B4Nt83SgaAiwNSrLQ00JMbkhHqk4iwA9yIr747bDUIC/dC8RE+/eFW0ylJ0DrW0uGrLwx0P+JFqV2JKx61f9simeXl03psVnVl2xRJ6kiv0x1WfB6zgMJzHonw9wE5rUk/XmtSvpYtrYuVMZafEzxdZdOBOli/kNMEW+ZK3o4KDX00EZK2xx6UuWlgTQcZ1NbUOsPLZhApk1Dj/X7gsn1OfGTch6V8Y1USg3ErSGqvcH7g3TQSF0RvzpjhWBaUZauWKaRGJZzxfSNYwtSha8b4oRrxcs+sDYkKTPqbzLwy1XqJzT8YeaEh8aOyQL6U9bciOdN0wbFD9SvvfPgZ55zeW3GRinctXhZET/F8ur0SLHBNy01kdcGJJquleyGRC0LPPB0Ie+bJgwwNHnDZP6xwf33Bn0tRUekKpn3VADtfkEyhcMKqZPoCXAddE8ISWMlNN6Ut/76FjcpY9GUOCPPpqwphaBlwTQVXKyTPgLmAnzIBe65QZ0Gt9fQZUVk1Qs5i3WEcrY4sDfWok4Eh8XVwLpZ0nlLwa5bTBtBb93BCO7FalJN4Znddibay4rpffriLRXZL2+/LblViS3ZJ93zlgpzWRux45zi1va+wF72iBS4jAK8+FCddGUu6GI+uVscOdmZzDzQFnflIs7E5v69xob02ek3WLbhf8U/msSl460bDUp0Mb4meUYkE/Kgqz5NPpr2PMneaWbqz6l9qM/35I0Vx7Jizv2BbdFG2j9Jl53sTb1ZtnJZz0qXQnOyUbiMBRWlnl6/Y6dj2iVLfmkYbTHkt1SXW/p2eEsu1h3QZ/djMXQYKNK702rWhPmcWnHBNxdjMfN42L5S0ftLXUASGCLVkXAKcf/vhw2jf/AlufOqvdU6SnfP8WebGv7Hfx194uXYie/vEnZY5KhyuWs3Cg7X6/OTmIIFaS30VhY7iH3Y4P7mzeNPz3j4psDfH9QwRbtAoT5uB+B1I5/i4hXmPu6Cduvlt0T5r34sgj5aDnfcY0p2uLecW/IOKtOTy2mgfed0IK2bNwcJamVPqByOjhwu+ffWHNLq4ubi+gaf4DXJ7itw==
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Database by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/databases/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete an item by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to delete","required":true,"schema":{"type":"string","description":"The ID of the item to delete","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"active":{"type":"boolean","description":"Active"},"active_ts":{"type":"string","description":"Active at","format":"date-time"},"cassandra_params":{"type":"object","properties":{"keyspace":{"type":"string","description":"Keyspace"}},"description":"Cassandra params"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"data_source":{"type":"string","description":"Data source"},"database":{"type":"string","description":"Database"},"description":{"type":"string","description":"Description"},"error":{"type":"string","description":"Error"},"hive_params":{"type":"object","properties":{"auth":{"type":"string","description":"Auth"}},"description":"Hive params"},"host":{"type":"string","description":"Host"},"is_default":{"type":"boolean"},"mongo_params":{"type":"object","properties":{"auth_mechanism":{"type":"string","description":"Auth mechanism"},"auth_source":{"type":"string","description":"Auth source"}},"description":"Mongo params"},"name":{"type":"string","description":"Name"},"password":{"type":"string"},"port":{"type":"integer","description":"Port","format":"int32"},"postgres_params":{"type":"object","properties":{"ssl_mode":{"type":"string","description":"SSL mode"}},"description":"Postgres params"},"redis_params":{"type":"object","properties":{"db":{"type":"integer","description":"DB","format":"int32"}},"description":"Redis params"},"snowflake_params":{"type":"object","properties":{"account":{"type":"string","description":"Account"},"role":{"type":"string","description":"Role"},"schema":{"type":"string","description":"Schema"},"warehouse":{"type":"string","description":"Warehouse"}},"description":"Snowflake params"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"uri":{"type":"string","description":"URI"},"use_orm":{"type":"boolean","description":"Use ORM instead of legacy database service (only for MySQL, PostgreSQL, SQL Server)"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsDatabase"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsDatabase"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

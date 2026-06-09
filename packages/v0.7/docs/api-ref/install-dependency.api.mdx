@@ -1,0 +1,75 @@
+---
+id: install-dependency
+title: "Install Dependency"
+description: "Install a dependency"
+sidebar_label: "Install Dependency"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVUtP20AQ/iuruZRKLqFVq0q+QeEQcQBB6CWK0MSexAvr3WV2DaSR/3s1a4cYkpYemosfmdf32PEaIi4D5FM4JU+2JFtoCjDLoKRQsPZROws5jG2IaIxCVW7iVpCB88QoIeMSctBd0O2rEKaHhkI8ceUK8jUUzkayUW7Re6OLlD66C9JmDaGoqEa5iytPkIOb31ERIQPP0izKdPkaDNrlICpE1nYJb6eeVKQ8uyVjXWu7VJLV4JKUW6hY0RBLm0HtSnq/Zs9EGltJijr4gMZ8UI5V8FTohS6UdSWFj1LUYv0PRWVQidwdTEWnel5TOVfSrS7DoCQyoxCtI9VhX6uF4xrjC5e6lEK7/cenQdqn0QddlbPqwFmzUk2gUj1V1MPWQVkXVQKfoD4SB93J+D7aPvgdwG0GUUdDW94H5hpb30RoW4liCt7Z0Jnjy9GRXF43vTiH7H+5j5gd7+IUD1EIuNyjeJtBiBibPQoNUf5wNrIzhjj8dLq86mH1KL/uA3aCpbrqDhmkmM+7MTcWm1g51r8oqf9tX6GxjcQWjbomfiRWZwllm1DFyskJ9y4kNjBWkMOoHOyMEZN3YbSRLoNARcM6rq6F1I439Hri7mloEfT6nJJ9ZYSKsCSGzbGB48ux6jJkDJHpartOzp6x9oa262Drt+4ob5/7ctvnl2M03bycDQw8EE3bhUvjbgRifDI4V8eX4x1fX51dT+QPtXCs+kAYlj06/H54JFWFxxoTD/1omwV7Otydr8oPduef1nHPaaTnOPIGtZVeDRtJ7jSbwlCztJ69C4n+TrdZBpWInE9hvZ5joBs2bSuvHxriFeRTIQpZ41z4mM7abKNaPl3DPa16F5ONnyYyj4SbptP6zZFrs03GcVGQj3+NnQ18eHlxPYEM5v1HpZeb8UkQ4RPkkD5Okp2Ml951NmnS8YSupvx+A8h1auk=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Install Dependency"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/dependencies/repos/install"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Install a dependency
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"lang":{"type":"string","description":"The programming language of the dependency"},"mode":{"type":"string","description":"Installation mode ('all' or specific nodes)"},"name":{"type":"string","description":"The name of the dependency to install"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"The IDs of nodes to install on (only used when mode is not 'all')"},"version":{"type":"string","description":"The version of the dependency to install"}},"title":"Install_dependencyInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

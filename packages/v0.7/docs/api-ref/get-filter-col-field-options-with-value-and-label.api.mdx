@@ -1,0 +1,71 @@
+---
+id: get-filter-col-field-options-with-value-and-label
+title: "Get Filter Col Field Options With Value And Label"
+description: "Get the field options of a collection with a value and label"
+sidebar_label: "Get Filter Col Field Options With Value And Label"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VF1r2zAU/SviPm1gmmxsDPyWlbSEDlqSdnsowSj2TaxWkVzpOl1m/N/HlewubdKO0dEnY+l+HN1zz2mA5MpDeg0nShM6D/MECvS5UxUpayCFUyRBJYqlQl0IG469sEshRW61xpwPxL2iUkixkbpGIU0htFyghgRshU5yyKSAFFZI2TJ0ynKrs1Az62pmXCMLFTJpiqyvUEkn1xjApdcNGLlGSCG3fKcYYSWphAQc3tXKYQEpuRoT8HmJawlpA7StOMWTU2YFbZs8VOl7vLZOQP0f6sTZ9IXuanRbeEpIZEr0l8+VfTGtbecM0FfWePSc/HE45M/jnPMzSCC3htAQ38qq0ioPdA5uPIc0+/3t4gZzYuIck08qNigk7UZJ5yTDV4Rr//fsSNT+7JJu9HvQv4dN5DU1W8FJiVAm13WhzEqYWjPr/JELjZGhtk2AFPEvjA0p2saRzZCX/DwW5iB0zrqDWNbovVzhwTtPkmp/kP6HtsfWkGNROT/tyDlVVNaLF/Bw/qdD5H2VhZjiXY2eIMR82I+5MrKm0jr1CwsO+nyo0MQQOiO1mKHboBPj8P42vJdK2+k6KJVKSGEQt9gPmtzqdtAEhtpBEzhseWUxr52i7YxXJ/IrK3Vpb9HsbkilznDba6FEWQRldEoZXUxEzGAgyixtSO0H6eS9lgsxupjsCWE6nl3yhVhaJ7pASGCDzseA4dGXoyFPo7Ke1jJg6rqyGXZCOrZanARPPO888Qd7YNy7kSnEt85bHnVv/sjptc7ajYnwJw0qLZVhyLULKolMXHd+4iGBNBpm2jtVGsvMEyitJ45tmoX0eOV02/JxNAp23EJ5VkkB6VJqjy+86Ik1HUR4i9tdo+vkC8COtJFORUH+U9t3085q34vnuvY7Zba7PXs0PBt24TdsGcf/xk3jQTtvk15PPOh4N8pzrGgna8/smaEHxZ+OL6FtfwPN3NEM
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Filter Col Field Options With Value And Label"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/filters/{col}/{value}/{label}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the field options of a collection with a value and label
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"col","in":"path","required":true,"schema":{"type":"string"}},{"name":"label","in":"path","required":true,"schema":{"type":"string"}},{"name":"value","in":"path","required":true,"schema":{"type":"string"}},{"name":"filter","in":"query","description":"Filter query","schema":{"type":"string","description":"Filter query"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"label":{"type":"string"},"value":{"description":"Value of any type, including null","nullable":true}},"title":"EntityFilterSelectOption"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubEntityFilterSelectOption"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

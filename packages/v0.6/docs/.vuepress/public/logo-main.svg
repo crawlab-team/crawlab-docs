@@ -1,0 +1,161 @@
+<svg
+  version="1.0"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="220"
+  height="56"
+>
+  <rect
+    x="0"
+    y="0"
+    width="100%"
+    height="100%"
+    fill="transparent"
+    fill-opacity="1"
+  />
+  <svg
+    version="1.0"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    x="0"
+    y="0"
+    width="100%"
+    height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    color-interpolation-filters="sRGB"
+  >
+    <defs>
+      <linearGradient id="92" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#fa71cd"/>
+        <stop offset="100%" stop-color="#9b59b6"/>
+      </linearGradient>
+      <linearGradient id="93" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#f9d423"/>
+        <stop offset="100%" stop-color="#f83600"/>
+      </linearGradient>
+      <linearGradient id="94" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#0064d2"/>
+        <stop offset="100%" stop-color="#1cb0f6"/>
+      </linearGradient>
+      <linearGradient id="95" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#f00978"/>
+        <stop offset="100%" stop-color="#3f51b1"/>
+      </linearGradient>
+      <linearGradient id="96" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#7873f5"/>
+        <stop offset="100%" stop-color="#ec77ab"/>
+      </linearGradient>
+      <linearGradient id="97" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#f9d423"/>
+        <stop offset="100%" stop-color="#e14fad"/>
+      </linearGradient>
+      <linearGradient id="98" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#009efd"/>
+        <stop offset="100%" stop-color="#2af598"/>
+      </linearGradient>
+      <linearGradient id="99" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#ffcc00"/>
+        <stop offset="100%" stop-color="#00b140"/>
+      </linearGradient>
+      <linearGradient id="100" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#d51007"/>
+        <stop offset="100%" stop-color="#ff8177"/>
+      </linearGradient>
+      <linearGradient id="102" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#a2b6df"/>
+        <stop offset="100%" stop-color="#0c3483"/>
+      </linearGradient>
+      <linearGradient id="103" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#7ac5d8"/>
+        <stop offset="100%" stop-color="#eea2a2"/>
+      </linearGradient>
+      <linearGradient id="104" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#00ecbc"/>
+        <stop offset="100%" stop-color="#007adf"/>
+      </linearGradient>
+      <linearGradient id="105" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#b88746"/>
+        <stop offset="100%" stop-color="#fdf5a6"/>
+      </linearGradient>
+    </defs>
+    <g fill="#409eff" class="newinitialsvg-g newinitialsvg">
+      <g class="tp-name">
+        <g class="tp-graph" transform="translate(0, 0)" mask="url(#ed23ad17-9df3-4f79-a214-84962799a399)">
+          <rect fill="#409eff" x="0" y="0" width="53.03515625" height="53.03515625" rx="26.517578125"/>
+          <g transform="translate(9.007577896118164,6)">
+            <g transform="scale(1)" fill="#fff">
+              <path
+                d="M36.95-27.71L36.95-27.71L31.80-27.71Q29.86-35.66 20.84-35.88L20.84-35.88Q8.38-35.23 7.95-19.98L7.95-19.98Q7.95-3.65 21.05-3.65L21.05-3.65Q30.08-3.87 32.23-14.61L32.23-14.61L37.38-14.61Q35.02 0.21 19.98 0.64L19.98 0.64Q2.79 0 2.36-19.77L2.36-19.77Q3.22-39.53 20.84-40.39L20.84-40.39Q34.80-39.96 36.95-27.71Z"
+                transform="translate(-2.36328125, 40.390625)"/>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(57.03515625, 0)">
+          <g fill="#409eff" transform="translate(0,6)">
+            <g transform="scale(1)">
+              <path
+                d="M9.02-16.76L9.02-16.76L9.02 0L4.08 0L4.08-28.79L8.81-28.79L8.81-23.85Q12.03-29.65 16.97-29.65L16.97-29.65Q17.40-29.65 17.83-29.43L17.83-29.43Q18.05-29.43 18.26-29.43L18.26-29.43L18.26-24.28L16.33-24.28Q9.45-23.85 9.02-16.76Z"
+                transform="translate(-4.08203125, 40.390625)"/>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(75.21484375, 0)">
+          <g fill="#409eff" transform="translate(0,6)">
+            <g transform="scale(1)">
+              <path
+                d="M7.95-19.98L7.95-19.98L3.44-19.98Q3.65-29.65 15.25-29.65L15.25-29.65Q25.57-29.22 25.78-21.48L25.78-21.48L25.78-4.94Q25.78-3.22 27.50-3.22L27.50-3.22Q27.71-3.22 28.14-3.22L28.14-3.22Q28.79-3.44 29.22-3.44L29.22-3.44L29.22 0Q28.79 0 28.14 0L28.14 0Q27.07 0.21 26.43 0.21L26.43 0.21Q21.27 0.21 21.48-3.87L21.48-3.87Q17.19 0.43 10.96 0.43L10.96 0.43Q2.36 0 1.93-7.52L1.93-7.52Q2.15-15.25 10.74-16.54L10.74-16.54L18.69-17.40Q21.27-17.83 21.27-20.84L21.27-20.84Q21.27-25.57 14.39-25.57L14.39-25.57Q8.38-25.57 7.95-19.98ZM21.05-9.88L21.05-9.88L21.05-14.61Q19.34-13.54 13.11-12.68L13.11-12.68Q7.09-12.25 7.09-8.16L7.09-8.16Q7.09-3.22 12.03-3.22L12.03-3.22Q20.41-3.87 21.05-9.88Z"
+                transform="translate(-1.93359375, 40.390625)"/>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(106.5, 0)">
+          <g fill="#409eff" transform="translate(0,6)">
+            <g transform="scale(1)">
+              <path
+                d="M19.77-22.34L19.55-22.34L14.18 0L9.02 0L0.86-28.79L6.02-28.79L11.39-6.02L11.60-6.02L17.19-28.79L22.56-28.79L28.14-6.02L28.36-6.02L33.95-28.79L38.89-28.79L30.51 0L25.57 0L19.77-22.34Z"
+                transform="translate(-0.859375, 40.390625)"/>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(148.52734375, 0)">
+          <g fill="#409eff" transform="translate(0,6)">
+            <g transform="scale(1)">
+              <path d="M3.65-39.32L8.59-39.32L8.59 0L3.65 0L3.65-39.32Z" transform="translate(-3.65234375, 40.390625)"/>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(157.46875, 0)">
+          <g fill="#409eff" transform="translate(0,6)">
+            <g transform="scale(1)">
+              <path
+                d="M7.95-19.98L7.95-19.98L3.44-19.98Q3.65-29.65 15.25-29.65L15.25-29.65Q25.57-29.22 25.78-21.48L25.78-21.48L25.78-4.94Q25.78-3.22 27.50-3.22L27.50-3.22Q27.71-3.22 28.14-3.22L28.14-3.22Q28.79-3.44 29.22-3.44L29.22-3.44L29.22 0Q28.79 0 28.14 0L28.14 0Q27.07 0.21 26.43 0.21L26.43 0.21Q21.27 0.21 21.48-3.87L21.48-3.87Q17.19 0.43 10.96 0.43L10.96 0.43Q2.36 0 1.93-7.52L1.93-7.52Q2.15-15.25 10.74-16.54L10.74-16.54L18.69-17.40Q21.27-17.83 21.27-20.84L21.27-20.84Q21.27-25.57 14.39-25.57L14.39-25.57Q8.38-25.57 7.95-19.98ZM21.05-9.88L21.05-9.88L21.05-14.61Q19.34-13.54 13.11-12.68L13.11-12.68Q7.09-12.25 7.09-8.16L7.09-8.16Q7.09-3.22 12.03-3.22L12.03-3.22Q20.41-3.87 21.05-9.88Z"
+                transform="translate(-1.93359375, 40.390625)"/>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(188.75390625, 0)">
+          <g fill="#409eff" transform="translate(0,6)">
+            <g transform="scale(1)">
+              <path
+                d="M7.73-3.44L7.73 0L3.22 0L3.22-39.32L7.95-39.32L7.95-25.14L8.16-25.14Q10.74-29.43 16.33-29.65L16.33-29.65Q27.71-29.00 28.36-15.25L28.36-15.25Q27.71 0 15.68 0.43L15.68 0.43Q10.31 0.43 7.95-3.44L7.95-3.44L7.73-3.44ZM23.42-14.39L23.42-14.39Q23.63-25.14 15.47-25.14L15.47-25.14Q7.73-25.14 7.73-12.89L7.73-12.89Q7.95-3.87 15.68-3.22L15.68-3.22Q23.20-3.44 23.42-14.39Z"
+                transform="translate(-3.22265625, 40.390625)"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <mask id="ed23ad17-9df3-4f79-a214-84962799a399">
+      <rect x="0" y="0" width="53.03515625" height="53.03515625" rx="26.517578125" fill="white"/>
+      <g transform="translate(9.007577896118164,6)" fill="black">
+        <g transform="scale(1)">
+          <path
+            d="M36.95-27.71L36.95-27.71L31.80-27.71Q29.86-35.66 20.84-35.88L20.84-35.88Q8.38-35.23 7.95-19.98L7.95-19.98Q7.95-3.65 21.05-3.65L21.05-3.65Q30.08-3.87 32.23-14.61L32.23-14.61L37.38-14.61Q35.02 0.21 19.98 0.64L19.98 0.64Q2.79 0 2.36-19.77L2.36-19.77Q3.22-39.53 20.84-40.39L20.84-40.39Q34.80-39.96 36.95-27.71Z"
+            transform="translate(-2.36328125, 40.390625)"/>
+        </g>
+      </g>
+    </mask>
+    <defs v-gra="od"/>
+  </svg>
+</svg>
+
+

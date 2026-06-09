@@ -1,0 +1,75 @@
+---
+id: query-database
+title: "Query Database"
+description: "Query a database"
+sidebar_label: "Query Database"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVttu20YQ/RVinpKAjZygRQG+ObZRCAkaR3KeBMEYkSNxk+UuMztrWxX478HuUhYV0XYLVE8U53bmzI07ENw4KBZwiYIrdORgmUNFrmTVirIGCvjiibcZZlWvAjnYlhiDeFpBAT+Cwu1A3CJjQ0IcXO/AYENQgKogBxU8tig1/BpmepnZdSY1DQMx/fCKqYJC2FMOrqypQSh2INs2OHXCymz+nbO15QYFCrCrb1SKqqDrlikGOflgq21wXFojZCQ8YttqVcZEJ99ccLw7RZCchaw50CKKXJA+xn0R69/Y0K9oM7FZpBW6PPH7sp/5l0/JJhjTA5VeCLpuSOKi97XMQZRo2lf3sXhT03qBrktmrrXGpXTen53FrI4ifv4I+f/J18tapdW+MW6giMy4DY0l1LiXHaAXe6tMydT0oHv9lbWa0AS+y1rpisk8HQVKxaXXyK+ujCjZ7qfnIsJ7HZxUtEav5bRsXQ70IDzSxF0ONbp6VPCdRjqgy/vZGhNYuTVe6/EULauNMqhvn7RvWTV41HYDcyco3o3apRcngu7QcWOURQVitjzq1HoJfTkmYnv/n9oBq0qFBkV9PWyM1PLjEOOIzMh5LQ6exdmQc7gZJ/RJzgZxL6wRtloTu1k/fW/+UlL71XOIIvTfxwb0A1bZLK03iDrvTnW+GvRSW1b/UBWU/hhzNDVCbFBnc+I74uwqUtDFlKW24Qq01sVxC7u9gMl+o7jJTlXdJO2dHByVnpVs52Et9CPZqhv7/XjcWvWRtvtzURNWxLBvdji/nmbJIgAIi2Z2WOFXD9i0mo5X8GFl9rt0UBdl1jaG3teA8V7jKju/np6s2NnV/CYIsrXlrFeEHO6IXVI4e/vn27M4PtZJgzGnHnU6o5eHc3TkenB3xg5uz4vQg0xajSpOoec43YnxxWO6DnIo4rF9XPZ1qE2xgN0uKHxl3XXhdU/GYpnDHbLCVSBgsYNKufBcQbFG7egZqK9m/W15nY2e3FHc+yKbUOE71D78g37Hhc+EbhlWYap6wJMEFynqbzfB/GB4cnS6fG9xXpbUyrO6y0EHX3+e30AOq/5DoLFVsGG8Dx8ieJ9A2shCbNz4bgcazcbHqYfkM/x+AkICOAI=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Query Database"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases/{id}/query"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Query a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the database","required":true,"schema":{"type":"string","description":"ID of the database","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"database":{"type":"string","description":"Name of the database to query"},"query":{"type":"string","description":"SQL query to execute"}},"required":["query"],"title":"Query_databaseInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"columns":{"type":"array","items":{"type":"object","properties":{"auto_increment":{"type":"boolean"},"children":{"type":"array","items":"circular(EntityDatabaseColumn)"},"default":{"type":"string"},"extra":{"type":"string"},"hash":{"type":"string"},"key":{"type":"string"},"name":{"type":"string"},"not_null":{"type":"boolean"},"original_name":{"type":"string"},"primary":{"type":"boolean"},"status":{"type":"string"},"type":{"type":"string"}},"title":"EntityDatabaseColumn"}},"error":{"type":"string"},"output":{"type":"string"},"rows":{"type":"array","items":{"type":"object","additionalProperties":{}}}},"title":"EntityDatabaseQueryResults"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponse*GithubEntityDatabaseQueryResults"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

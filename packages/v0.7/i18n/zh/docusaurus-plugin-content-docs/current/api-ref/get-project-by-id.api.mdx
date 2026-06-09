@@ -1,0 +1,71 @@
+---
+id: get-project-by-id
+title: "Get project by ID"
+description: "Get project by ID"
+sidebar_label: "Get project by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVk2P2zYQ/SvEoIcWkGNju0BT3TbdNNhDm0XTogfDDUbiyGIqkQw5SmII/O/FULJXG7sIcgn2ZJnz9ea9GVEjMO4jlFu4D+4d1RxhV4DHgD0xBbGMYLEnKMFoKMBYKMEjt1BAoPeDCaSh5DBQAbFuqUcoR+CDl4jIwdg9SEJmChL6z3az+hlXzc3q1914dZ2+gwI0xToYz8aJx2/O7t3tC/W6Ejx3WgXygSJZJq0wKlQtfUJNtemxU6cSbLiTmscwSJ8nnizq7hbSTsBH72ykKHivNhv5eew/M6I0MZouQgG1s0yWxRW970yN4rp+F8V/XPSPXfe6ydzNTLhcW5gIzlNgM9WtnaYFX8Yy7SlAAY0LPfJ09OOV9NJTjLinc3alT+Ql7XOxlB5YeTPUNcX4t+H2VpxT8SVol3N+7vXW6Cek9zSolwhaVrxgj97oPO0XpHiM9vehrygo16g5RhmruDVR+WlcJF0dCJn0W+RL5Jy01ci0YtOTxAxef3XMsU51eEIiHBt5QqAWi3B/VCmlXUpiud5c///uW8eqcYPVX7P932TnKQQXLlgWvb7MLmlq83F/r4iPA6uqg7wTpRq3TkMJe+JJqRZKWM9ucT0anaCASOHD8WYYQgcljLl1SuV6PbYucipH7wKnNXpzJuotNTh0rG7u79SUCgr4gMFg1U0ETdnkiezQy93UMnso8k++n/SUA8rJkgqQspOKR0vnauzycSpA4DwyP98838gISDv1EAwfcj8vCAOFm0E63+6W5jcZVMa3dDrRP0M8YocqO2U5jG1c9pxl+SXgxw4rYeCMHWGlcUHNPoVCq5wnu4puCDUpbUTnapAN+EiVqsWPgkLdG6t8hyxTJIxSiFPKzbOfnm0mEiL3mGd1vtEvTcHlVyXTJ177Do3NKy6yj/OEbOE4IVBAabQINMmxhXGsMNJfoUtJjt8PFITo3YPimXZtojxrKBvsIp2BOG0efP/H/M3xg3q4zovLKOdDtIc8Yd0g/6CAf+kwfc2knUwOoaaQYUyGm7omz4uQs2WXuTgty6uXf0JK/wHT9Ckd
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get project by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/projects/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get project by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Project details","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"name":{"type":"string"},"description":{"type":"string"},"spiders":{"type":"integer","description":"Number of spiders in this project"},"created_at":{"type":"string","format":"date-time"},"updated_at":{"type":"string","format":"date-time"},"created_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"updated_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"}},"title":"Project"}}}]}}}},"404":{"description":"Project not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

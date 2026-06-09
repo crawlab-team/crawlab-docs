@@ -1,0 +1,75 @@
+---
+id: web-socket-for-git-push
+title: "WebSocket for Git push"
+description: "WebSocket endpoint for streaming Git push operations"
+sidebar_label: "WebSocket for Git push"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVFFv1DAM/iuRxQNIvfWGkIC+bQymPSAQA/FwOiS38V3D0qRL3N1OVf47ctrbxqbxwFNS27E/f/7cERi3EaoVnBuGdQGaYhNMz8Y7qOAn1Ze+uSJW5HTvjWO18UFFDoSdcVt1blj1Q2yV7ymgvIpQQI8BO2IKknkEhx1BBUZDAUbS9sgtFBDoejCBNFQcBiogNi11CNUIvO/lReRg3DYnZKYgT3+tlov3uNicLD6tx9dv0gt4jPmzd1t/dqq+1L+p4QutAvWBIjkmrTAqVC3doqbGdGjVXQk2bKXm4Rmkx4knj7o4g7QW8LH3LlIUvMfLYzmeI6/xzlEjZkWRsbYmtqQhpQI64tZrqGBLPDXaQgXl1nAsR6NTKeyWO2E1Urg5UDoECxWMmTFKVVmOrY+cqrH3gVOJvXnCyxltcLCsTr5eqCkVFHCDwWBtpy6mbHIjN3Qiipa5hyIfcVJHzgHV5EkFSNmp9YPH+gZtNqcCBM5f7nfLd8uUhMBIzRAM73M/p4SBwskg3a/WD92XGVTG9zDoTiMzxAN2qHNQ5ta4jc+R82g/BNxZrIWBJ+wIKyLtOaZQ6ETTbhH9EBpS2ohS6kFEtKNaNRJHQaHujFO9Rd740AmjFOKUcnn09mg5kRC5QydQ5lW4l4bUPCzRY1AjNN4xOf7/TZxJYrrlsrdonODJ4hlnra1AtAYFVHk/Zxy7PO5puCsYxxoj/Qg2JTFfDxRkbOt7/eQhahPlrqHaoI30j25efptX/5W636pn0M5GdPusVzvIFxRwRfvpp5LWD/fo/ON3SOkPZyen2g==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"WebSocket for Git push"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}/push/ws"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+WebSocket endpoint for streaming Git push operations
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"101":{"description":"WebSocket connection established"}}}
+>
+  
+</StatusCodes>
+
+
+      

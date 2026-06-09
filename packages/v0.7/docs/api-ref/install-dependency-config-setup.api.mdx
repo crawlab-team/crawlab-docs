@@ -1,0 +1,75 @@
+---
+id: install-dependency-config-setup
+title: "Install Dependency Config Setup"
+description: "Install a setup of a dependency"
+sidebar_label: "Install Dependency Config Setup"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVc+P0zwQ/VesubBIhi4IhJTbsruHigOrtnyXqlpNk2ljcGxjO7uUKP/7p7ETGmj5IUEvTdOZeW/eG487iLgPUKzhhhyZikypKMBGQkWh9MpFZQ0UMDchotYCRaDYOmF3AkU1phxAgnXkkaPnFRSgcvz9MeS+tGan9vcpHyQ49NhQJM/oHRhsCArQaPYgQTGmw1jDj0RWNQnn7d5j0yizF5zQ4p6YUaxpwklkwDazAgmePrfKUwVF9C1JCGVNDULRQTw4Bg/RqwT/jyD7fpNRKcS3tjowVGlNJBP5EZ3Tqkyhs4+BobpTTnb7kcrIenlWOLI7RQeNrej3zAfXEoTgFHHxBLV+IqwXwVGpdqoUxlYUnkIvgZ/uVRUmhdF7ZHdVpCacA9xZ32D8RlRVXOhUv/lNYLkSlohWDPMhrBEX1uiDaANV4rGmgacKwtgoEtvE7YF8UFmj37s1BE+AoO8lRBU1HWX52XDOjWsj9D2neArOmpBFf3l5yV/f471/B/JfuUreW3/aYi+hoRBwf8byXkKIGNsz5kxbvrYmeqs1+fCfVdViaGvo8tW5xt5iJRZ5eCHFvDiN+WCwjbX16isl41+fKzQ3kbxBLZbkH8iL29Rln7qKteV14WxIavCJL2BWTXbRLFsTZh2fu36WLAqz0VcJgcrWq3hYsshZR3RqZT/RdFrQqXd0GFdLTViRBzmunau7ucgZTIttWxyP7e0XbJym47E7jt7xxKzHl5vJrE5MUmZnE53REI+PGrfi6m5+MsKL2+WK/xA768UQCNOyl8/fPL/kqqxbg6nPoZNxUd8cl9J1ElAsh8X7HdZkIf3Bjh+0jPQlzpxGZZhD6zXXyd6tYepdPhnsHkgoht2eDUxOZAs3Emr2v1hD120x0Aev+55ff27JH6BYs6boFW5ZunUHlQr8XEGxQx3oFz1dLIal/1T8xc1xtu9xsAwr84C65V8g4RMdxous3/RynDXmnf+6zuyerbjAMfVkcfRyzLgqS3Lxl7GbyWm6e79cgYTtcOUMQ+vxkS9BfMw0bVIrHZf0roNRECgg1+TP//qY0rY=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Install Dependency Config Setup"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/dependencies/configs/{lang}/setups/install"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Install a setup of a dependency
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"lang","in":"path","description":"The programming language of the dependency configuration","required":true,"schema":{"type":"string","description":"The programming language of the dependency configuration"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"mode":{"type":"string","description":"Installation mode ('all' or specific nodes)"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"The IDs of nodes to install on (only used when mode is not 'all')"},"version":{"type":"string","description":"The version to install"}},"title":"Install_dependency_config_setupInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

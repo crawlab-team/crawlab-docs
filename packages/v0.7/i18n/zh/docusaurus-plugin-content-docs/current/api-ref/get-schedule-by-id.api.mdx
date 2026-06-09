@@ -1,0 +1,71 @@
+---
+id: get-schedule-by-id
+title: "Get schedule by ID"
+description: "Get schedule by ID"
+sidebar_label: "Get schedule by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVlGP2zYM/isCsYcOcJrgdsA6v117XXEPQ4fdhj0EWUFbTKJOllyJbi8w9N8Hyo7PuWQd+jLcUxCRIj9+/EirB8ZdhHIN9/WedGcpwqaAFgM2xBTE1IPDhqAEo6EA46CEFnkPBQT61JlAGkoOHRUQ6z01CGUPfGjlRuRg3A4kIDMFufrXerX4CRfbm8XPm/7qOn0HBWiKdTAtGy8ev3i387ev1fvqI9V8p1WgNlAkx6QVRoVqTw+oqTYNWjWlYMNWch6vQXoaeLCou1tIGwEfW+8iRcF7tVrJz6n/kRKlidHYCAXU3jE5Fl9sW2tqFN/lxygX+hkBaO37bSZvpMLn5EJF8C0FNkPi2muaEWYc044CFLD1oUEejn64kmIaihF3dE6vFIo8531MltIjLfddXVOMfxre34pzKv4L2uWYT70+GP2MGj4o9QJBsTWawvMCW4dBNU/hnCZ8E7xT9CBJovFObX1QcVSmRMmzeqlP/yLm2WynAshhZWnOSuW9JXQDQEIm/QH5EsxJoRqZFmyaDKdr9TffOeapDs+oO8dCnhGo+ThPCkhpk5KYrlfXX9lhzrPa+s7pb9li/8vuohB8uGCZVfs2u6ShztMC3xFP46Cqg2x3Scd7r6GEHfHQrD2UsDz6xWVvdIICIoXPx49cFyyU0OfiKZXLZb/3kVPZtz5wWmJrzhp7S1vsLKubX+/UEAoK+IzByEzFicpcNrmuke/snrmFIv/kT60eYkA5WFIBknZo5NFifY02H8u8+3BqfrV6tRIVSDl1Fwwfcj2vCQOFm05KX2/m5vsMKuObO00NGCEesUOVnXJDjNv67Dk25k3ALxYrYeCMHWFFltXoUyh0yrfkFtF3oSaljXS66mQKvlClavGjoFA3xqnWIouOhFEKcQi5evnjy9VAQuQGs1rHx8lFHZwAmupjeuBla9HkJZf73o8aWcOkESigNFpaNDRkDX1fYaQ/gk1Jjj91FITqzWPPM/HaxHGnbtFGOkMxTR+8+G18QH2vHt8mxWWY4yG6Q9aY7eQfFPA3HYanWdqIdgg1hQxjMNzUNbU8u3I28KKMaV7evf0dUvoHmOVu2w==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get schedule by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/schedules/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get schedule by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Schedule details","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"name":{"type":"string"},"spider_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"cron":{"type":"string","description":"Cron expression for schedule"},"param":{"type":"object","description":"Schedule parameters"},"enabled":{"type":"boolean"},"created_at":{"type":"string","format":"date-time"},"updated_at":{"type":"string","format":"date-time"},"created_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"updated_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"}},"title":"Schedule"}}}]}}}},"404":{"description":"Schedule not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

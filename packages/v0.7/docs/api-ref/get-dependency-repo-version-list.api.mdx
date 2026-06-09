@@ -1,0 +1,75 @@
+---
+id: get-dependency-repo-version-list
+title: "Get Dependency Repo Version List"
+description: "Get the version list of a dependency"
+sidebar_label: "Get Dependency Repo Version List"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVFFr20AM/iuHnjYwTTY2Bn7r1lJCBytJupcSgmIr8bX23VUnd8uC//uQYzcpSbtR+mR89+nTJ530bUBwFSG9gTMK5HJymaUIswRyihnbINY7SOGCxEhB5oE4Wu9MaaMYvzRo8j5uDQn4QIwaMsohhRXJfHc9Zwp+3hHMlQASCMhYkRCrhg04rAhSKNGtIAGrme9rYqV+qmdakAnsV4xVZd3KaESNK1JNqnOX1mjaaMW3LEz3tWXKIRWuKYGYFVQhpBuQddDUUdi2yd8iX9MkjzXp8b9rUnDP+WbCnyFtmpnyxuBdpKhUH4dD/Txl+HEJCWTeCTnRWwyhtFn7yoPbqJDNoRq/uKWsfWDWmRC7TZCj7KOQGbU4K1TFw1qaJgFi9nzkKoGKYsQVHb2LglI/wyhWSj365p2wL0viOO6aMOlRivt0rBlfMTdjuq8pCrSYD4eYa4e1FJ7tH8oV9PkY0cgJscPSTIgfiM15W2fT1iWF79an3RApIIVBvrefg/YVB90uRUggUlazlfVEH2Lbawx26u/I7fc72Eta91NYEObEkPQTeno1MtsIlWHd0rehfbsYf5W4MKdXo4MhG59Ppnphlp5NB4QEOn2QwvDky8lQexF8lApbTV1WdZaz3faMKXjzs3OZ71uTeJJss5vF/3Wlrnqh3zIIJVqnSmoulWzb3hvYb2+7bsHHXQmtIxY+ikI3mwVGuuayafR4u8zqXrmNuCh1R5dYRnpB+Ltxt87vzWud7GhRd7Te2ecDlrVCQF3o1dqedaQXBHRetxMw0x+2qgDSm1mT9MOnbdvGnGYZBdmLOvAZZXlcjovzKTTNX7bVVdo=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Dependency Repo Version List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dependencies/repos/versions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the version list of a dependency
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"lang","in":"query","description":"The programming language of the dependency repository","required":true,"schema":{"type":"string","description":"The programming language of the dependency repository"}},{"name":"repo","in":"query","description":"The name of the repository","required":true,"schema":{"type":"string","description":"The name of the repository"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"string"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseString"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

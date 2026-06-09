@@ -1,0 +1,71 @@
+---
+id: copy-spider-file
+title: "Copy Spider File"
+description: "Copy a spider file"
+sidebar_label: "Copy Spider File"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2zAM/SsGTxugNdmwYYBvbdcCQYG1SNJdgqBgbCZRa0uqJCf1DP33gZKDJk3Q7bBcYpvkI9/jRwceVw7yGUyMLMk6mAsoyRVWGi+1ghwutWkzzFy0Z0tZEQjQhiyyw6iEHApt2ofk8NA7GLRYk2fEfNaBwpogB1mCAMmoBv0a3qZKNWSjHyDA0nMjLZWQe9uQAFesqUbIO/CtYSznrVSrdzGW2tboIQe9eKTCyxJCmCdocv5Cly3jFVp5Up4f0ZhKFpHY4NExXnecOIExR8syeEmOrYq2D5HVX0v8SduoYxbdg4B/C7vehWReZyw5hCDAS19R36b9HoyUaTyEwD6WnNHKpTq/DIf8d4h9ewPifwlB1mp7TCcIqMk5XNFJm/PoG3fCdMBReauriqz7pWU57mn1LL+eInaBZTZO/Ybo8/nY515h49fayt9UstO3U0Aj5ckqrLIJ2Q3Z7CqyDJGVX2teA6NdVCN2EwapGW7QyTIMuCVuELsmwFHRWOnbCSuaREMjp/qJ1J4AaOQNtbuFWROWZEHsVun8bpSlCK6BezR+HeurF6xNRYdj+TpXh++BMyx1zLwT2uK2wkV2fjc6GsPx1WTKhmypbdY7goANWZcchmffz4ZxrLXzNUZKfdHxlvQbep0OxQH43jKevju9NJ5e/MBUKBXnaWzFoYnVDHrdQUAe702UPo63afm8rblN+Qy6boGO7m0VAn9+bsi2kM/mAjZoJS5YiVkHpXT8XEK+xMrROxV/GPc362O2f4VO1rzrseIGb7Bq+A0EPFGb7mSYB7FrOpeRDJcp2acph78GHq1rELuI86Ig49/1ne/N8N3tZAoCFv1trHXJMRa3fJJxm4rUkXyc2/itgwrVqomrDQmTf38ApAIqmA==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Copy Spider File"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spiders/{id}/files/copy"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Copy a spider file
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Spider ID","required":true,"schema":{"type":"string","description":"Spider ID","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"new_path":{"type":"string","description":"New file path"},"path":{"type":"string","description":"File path to copy"}},"title":"Copy_spider_fileInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

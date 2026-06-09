@@ -1,0 +1,75 @@
+---
+id: update-git-by-id
+title: "Update Git by ID"
+description: "Update an item by ID with (partial update)"
+sidebar_label: "Update Git by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWN1v4jgQ/1eiedqV0pZWW/Uub2y36qG9j4rCPRxCyEkG4m0SZ+1JuxzK/34aO9kECIW+nsoTjOfL45nfD3sDJFYGghncS4K5DzGaSMuCpMohgGkRC0JP5J4kzLxw7Y2+eC+SEu9DITRJkXqlVfkIPqgCtWDDUQwBOPliJWkRrhcyBh8KoUWGhJoDbiAXGUIAdklytEJQArspTBLkoGrpUYIuDVJ1VPBB4/dSaowhIF2iDyZKMBMQbIDWBbs3pGW+eqvbpdKZIAhAhd8wIhlDVc1dNDT0WcVrDhGpnDAn/iqKIpWR3f7FN8MhNvu5OGdcCc3FIomGV2NBJ2hxDY9ua/SlP3kfREnJwhkfczIsKfGsirNTi6JM045dqFSKIu8zVJ7VrXyIUpXjIlUr07EUWos1nzdhZvYzqXY93rITzzphlxoFYbwQdHwTt07XI5mhIZEV3cLwKZ/xStdruD7da7g+VOeo1BpzWoRa5FFygken79X6lQ+otdLHDe+sWuXXc3RM/U/hdlsIY16UPqGXHhrNiht/ecoxHmjdZZmmi/40Kx8SYXrqdHBjNptMES5Ii+ipV6E99J5d9ndB/2hU1hmlLPo7MveSxrjcb9Mxl6cu08KByGldyoY16sSeoIPZGRJU9gzMrr9Hp1f58JYspnUCx2el8XrKrDReD89KqdMT3Ix/t7oG9WmdPm00q71zYtRntN3C+uZ8/1AxpnzE1rAllpkD6HmrOd3htlFelGzl7EyhcuMa/2owsAC/lcRfX8F/p4536ninjnfqeKeO/xt1HBzCyocMjRGr/sY8dEzdNrpVOWmVpqjNuKaZe0lJGXapiw0+9fHOZxF7Y3eBAatzua8zzRnslZb/oi3zdZ+jUU5cptR7RP2M2qvhxG6QEhW7q1yU2CsfJRDAxUqSudjIuAIfDEallrR+ZI5zUy4KOVFPmHdxopBfcd1cDRMUMWpoBhuGDyPPWXBYZs1xezW7+yGyIsUuP1oGbE+9w2hbwoau3F2yS0OzRm++zSVwNbj6dDa4Obv6dXJ5HVxfBle/nA9uLv+BbXZow+yifLtSN04rqDf783cLwK3MwetsCynbVQeQhz1uw2Er76DgazvcadV5D4y9Zt70fBv3VMsumHSsGRQ6P3/OfXeYZL5Uts+aodLiJRWhN3wY7WPs3eOEF7yl0l6tCD48ozZOYXB+cz6w3KgMZcI2cB2yfju5l+TeTXadd54P3vbOUhed8AddFKmQeQcP3bzNgOcNfAhkzA2bKEMs3WxCYXCq06pi8fcS9RqC2dyHZ6GlCLkesw3E0vD3GIKlSA2+kveHcf0v+aN35EGlN+lm1HOe82eRlvwLfHjCtXsYquZM8m72OTO3cOvin03YvDXc+x9d+Y3FMIqwoFd15x30ehhObn8DH8L6nSdTMRtp8cIjI15clsoWxOKXlW0gFfmqtAAPzil//gOLIpjd
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Git by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/gits/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update an item by ID with (partial update)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to update","required":true,"schema":{"type":"string","description":"The ID of the item to update","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"auth_type":{"type":"string","description":"Auth type"},"auto_pull":{"type":"boolean","description":"Auto pull"},"clone_logs":{"type":"array","items":{"type":"string"},"description":"Clone logs"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_branch":{"type":"string","description":"Current branch"},"error":{"type":"string","description":"Error"},"name":{"type":"string","description":"Name"},"password":{"type":"string","description":"Password"},"refs":{"type":"array","items":{"type":"object","properties":{"full_name":{"type":"string"},"hash":{"type":"string"},"name":{"type":"string"},"remote_track":{"type":"string"},"timestamp":{"type":"string","format":"date-time"},"type":{"type":"string"}},"title":"VcsGitRef"},"description":"Refs"},"refs_updated_at":{"type":"string","description":"Refs updated at","format":"date-time"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"url":{"type":"string","description":"URL"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsGit"}},"required":["data"],"title":"Update_git_by_idInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"auth_type":{"type":"string","description":"Auth type"},"auto_pull":{"type":"boolean","description":"Auto pull"},"clone_logs":{"type":"array","items":{"type":"string"},"description":"Clone logs"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_branch":{"type":"string","description":"Current branch"},"error":{"type":"string","description":"Error"},"name":{"type":"string","description":"Name"},"password":{"type":"string","description":"Password"},"refs":{"type":"array","items":{"type":"object","properties":{"full_name":{"type":"string"},"hash":{"type":"string"},"name":{"type":"string"},"remote_track":{"type":"string"},"timestamp":{"type":"string","format":"date-time"},"type":{"type":"string"}},"title":"VcsGitRef"},"description":"Refs"},"refs_updated_at":{"type":"string","description":"Refs updated at","format":"date-time"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"url":{"type":"string","description":"URL"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsGit"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsGit"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

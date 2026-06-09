@@ -1,0 +1,71 @@
+---
+id: delete-spider-by-id
+title: "Delete Spider by ID"
+description: "Delete a spider by ID"
+sidebar_label: "Delete Spider by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1V9tu4zYQ/RVinlpA2aTbLgroLd0YC2NbNIiTpyAwxuLY5kYiFXKUXdfQvxdDSlk7ltdKgT7lwnPOXMkZbYFxFSC/h1ltNPkADxloCoU3NRtnIYcrKolJoQoRoRYbNb2CDFxNHgUz1ZCDjqh5wswXm7nRkEGNHiti0c3vt2CxIsghHhnRrpHX8Nrg7ZrU9Eq5peI1KcNUKXYqGYAMPD01xpOGnH1DGYRiTRVCvgXe1CIf2Bu7eqvs0vkKGXJwiy9UsNHQtg9iLdTOBgpi4P3FhfzY1/37M2RQOMtkWU6xrktTxMycfwkC2R76mIxIhrzkkU0yoJFHoCS3J8ONNRoIKoOiGkGffKOiYVKFqyq0iefKUZavkFEVrizForMqlvvQE6HVngrkvpadjdQlb7USWaLgSRTnyKc1PiasYlNRYKzqXUc1Mp3Jya7qYjNedbE5VgEp8wIDjU6ngNV0OI+it3hD0qJWn62945Psnb/aDFaGRwVwQ2XMxyfD6nhXipp3jufxTTgpKmICVxHeZlA5PSYBtMSmZMUYHlWkZEC2qeQF9Gi1qyADLEvIIJC0Fukz6zQFeGgzGJfk9JK+pFjo85V3TT03OuzQ0XuUFpGnKAzJDtd6MB4xoqIRZXTIVBNIK2PVXhBnERBS3L1n/7NPx7357kecEm+sXeII2RvnDe/eS2OZVuQPBK576E4YxvKv7yMyikP+IWo6CW5Ud18n7A86m6mq5QaM7pwXwg55HgMOp4cDlqX7SnquXYXGDtZw3+hlIqiesBP/uH7vM9A3fLcD/KfLEhg9zxtfjnB8JlgVse1BE75KperSlwEbLkX0L6epDAl226GuE6jNoKn16Clyl7AjpkivOmaK9KrHpshBxLLfdCuazBdZbtLUOhK0OETeO3/oizynFAKuBgqYisTNQIHEp97SR2fZy3T24aZboT4ZXjeLfRda4fw2tFb9gVrd0FNDgSFifjnE3FlseO28+YfiTfswJDS1TN5iqWbkn8mrSYy5jTHy2n1fXuO+KrMHzlMew/nW6DaOgqKRh2Mma1x3zWpz6x5pd2pibT7Tpl9t14Q6vkHd0nt5PVWJIaaNXbpI7dPl8WuJC3V5PT2cn5PZrRyopfOqA0IGz+RDAly8+/3dRby3LnCF0afOare8z/ZX91dT/2V5PbrrdxEyfePzukQT53/jS2GnnN13116uWG60fEasXWA52G5l5bjzZdvKv58a8hvI7x8yeEZvcCEJuN+CNkF+15AvsQz0Ay9/uuk+AX5WJ5b6Qb/7clmp1TOWjfwFGTzSJn2ctDLru/qJZ+ngsiio5h3KwaIv3wsvPXU1+XNyO4G2/ReI4Zn1
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Spider by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/spiders/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a spider by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to delete","required":true,"schema":{"type":"string","description":"The ID of the item to delete","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"cmd":{"type":"string","description":"Execute command"},"col_id":{"type":"string","description":"Data collection id","format":"objectid","deprecated":true},"col_name":{"type":"string","description":"Data collection name"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"database_id":{"type":"string","description":"Database Id","format":"objectid"},"db_name":{"type":"string","description":"Database name"},"description":{"type":"string","description":"Description"},"git_id":{"type":"string","description":"Related Git ID","format":"objectid"},"git_root_path":{"type":"string","description":"Git root path"},"mode":{"type":"string","description":"Default task mode","enum":["random","all","selected-nodes"]},"name":{"type":"string","description":"Spider name"},"node_group_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node group ids, used in selected-node-groups mode"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node ids, used in selected-nodes mode"},"param":{"type":"string","description":"Default task param"},"priority":{"type":"integer","description":"Priority","format":"int32","default":5},"project_id":{"type":"string","description":"Project ID","format":"objectid"},"template":{"type":"string","description":"Spider template"},"template_params":{"type":"object","properties":{"allowed_domains":{"type":"string","description":"Allowed domains"},"project_name":{"type":"string","description":"Project name"},"spider_name":{"type":"string","description":"Spider name"},"start_urls":{"type":"string","description":"Start urls"}},"description":"Spider template params","title":"ModelsSpiderTemplateParams"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The spider data to create","title":"ModelsSpider"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsSpider"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

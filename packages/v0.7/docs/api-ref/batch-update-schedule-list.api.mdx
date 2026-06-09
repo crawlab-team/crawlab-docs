@@ -1,0 +1,71 @@
+---
+id: batch-update-schedule-list
+title: "Batch Update Schedule List"
+description: "Batch update multiple items with partial fields"
+sidebar_label: "Batch Update Schedule List"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVWG1v2zYQ/isEPytt1q0Y4G9pE2RG92Ik6acgMM7ixWZDkSx5auoZ+u/DkZIj23Kjbi3Q5Uts+bm3505H3m0kwTLKya28LleoaoNR3hVSYSyD9qSdlRP5BqhcidorIBRVbUh7g0ITVlE8aloJD4E0GHGv0agoC+k8BmDpqZITuWD5eZafx9bO3OhIspABP9YY6Y1TaznZyNJZQkv8Ebw3ukxqXn6I7MlGsnQF/InWHuVEusUHLFmPD2yUNEb+VavYA0EIsJaFTC73nkcK2i5lsx/wzQrF9DwKdy9o1UVKrqWA8e2nAT9AKc1qwMz6Hg3aaCltZZsms6EDKs6ITlS2lu4KSZoMdukYpHNqfc16sqbonY2Zjlenp/xv14O/3sniW/GtgEag5lodsr9PzPRcFvLehQpoq0krJr2sRoi/rTI2IBCqOdAIkYwVpCuMBJXvO8Asn/Avfa2L9Xiti/XReEIm+Tk9zh6U6HNC571vTSHRwsJgn72FcwbBHghetMgkRGG9mzJtCZcYBqQorMVu5rSln18lPZ+xrBk4jxSAcDmCvItORlx3Mk0hK6fwedk/GNUU0kI1Av0n5NRap3C+DK72869qHkdyu2fEKRSXrJz7ytbcdzLUmvAQoHqegFmCMT5oFzStR+R71kGH8h29Vhh+jG6Q6whF6aoKbJZzZpTlcyAQpTOGLTortBr0hMV8wJLfdTmhUGNrY1z57VuxsNtpfuT+xU1/ARFH08lgMR3mkfUtvoK0pKtj67/0xqWmUQFcoUl8XGoSx6uStQXnaO6BVs8rZWUMFwk+usWd4z3UhgRBfBBJhNt1XfG1IYBVruKbiDGykBG5tFCdcMeJ8m50Y7xOr/GW4u/aH7t42IhIRoRWsRB1RCW0FTtBnCRAzHF/v1a649Nxb578GNlvd3Lnv2nzZWRSLievk07HwY2q7lnGfqGyCStvdi+9X66crUBPeJ4Cjs8fDmCMe0Q1V64CbQdzuGv0LAuITqAX/7h67xjoCj4fYyOF916WSBBoXgczwvFrxoqEbQ6KcI9K0dL3NAzwZcfEDLtpUbMM2o4p406R9xk74hTptI45RTqtx06RwbkoUy/4fOGxK59aR4LupWpMnbeEHi/z/yllHVftuHjAVTsmpvt4CC4cusGHD8YIy4FyzyVN9dDw3DzZeussBb7LhHjVjp+Xmlb1Yt+JNKH+MjSUvgElrvJKQCbMT4eY9xZqWrmg/86DyushRVNLGCwYcY3hEwZxkaJuUpS0cryX8DxIc+dJR7V8GbcrED42y5qbLPtctS3J6xv3gP0bBnj9DtNBwyZXCCr169wz5NlsKrIEm+WR+upp2XHxGSpvcLusuO0IvettF1hO23uXTHYkB3g0sBBns+nhHeXi+oZ/EPcuiBYoC/kJQ8yA0xe/vjhNvdFFqiDF0nqbtzy5+ESXKvF73tLsXbC2W4N/sRtqqSP8TC+9AZ0uYXUwrDdn4lbG/jJq5SLxw82G73zvg2kafvyxxrCWk9u7Qn6CoHls5W9N0eVhcruRD7hu6xItndywaYabOmdvb+HRFJ3EWVmipy9i73qVNDu7efubLOSi3WLlW5wM8MgbLniUE5m2Yiyeaik920gDdlmnN05mpfz3D+N6xfs=
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Batch Update Schedule List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/schedules"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Batch update multiple items with partial fields
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"type":"array","items":{"type":"string"},"description":"The IDs of the items to update"},"update":{"type":"object","additionalProperties":{},"description":"The update object"}},"required":["ids","update"],"title":"Batch_update_schedule_listInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"cmd":{"type":"string","description":"Cmd"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"cron":{"type":"string","description":"Cron"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"entry_id":{"type":"integer","description":"Entry ID","format":"int32"},"execution_strategy":{"type":"string","description":"Execution Strategy"},"mode":{"type":"string","description":"Mode"},"name":{"type":"string","description":"Name"},"node_group_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Node Group IDs"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Node IDs"},"param":{"type":"string","description":"Param"},"priority":{"type":"integer","description":"Priority","format":"int32"},"spider":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"cmd":{"type":"string","description":"Execute command"},"col_id":{"type":"string","description":"Data collection id","format":"objectid","deprecated":true},"col_name":{"type":"string","description":"Data collection name"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"database_id":{"type":"string","description":"Database Id","format":"objectid"},"db_name":{"type":"string","description":"Database name"},"description":{"type":"string","description":"Description"},"git_id":{"type":"string","description":"Related Git ID","format":"objectid"},"git_root_path":{"type":"string","description":"Git root path"},"mode":{"type":"string","description":"Default task mode","enum":["random","all","selected-nodes"]},"name":{"type":"string","description":"Spider name"},"node_group_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node group ids, used in selected-node-groups mode"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node ids, used in selected-nodes mode"},"param":{"type":"string","description":"Default task param"},"priority":{"type":"integer","description":"Priority","format":"int32","default":5},"project_id":{"type":"string","description":"Project ID","format":"objectid"},"template":{"type":"string","description":"Spider template"},"template_params":{"type":"object","properties":{"allowed_domains":{"type":"string","description":"Allowed domains"},"project_name":{"type":"string","description":"Project name"},"spider_name":{"type":"string","description":"Spider name"},"start_urls":{"type":"string","description":"Start urls"}},"description":"Spider template params","title":"ModelsSpiderTemplateParams"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The spider data to create","title":"ModelsSpider"},"spider_id":{"type":"string","description":"Spider ID","format":"objectid"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsSchedule"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsSchedule"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,75 @@
+---
+id: delete-notification-setting
+title: "Delete notification setting"
+description: "Delete a notification setting"
+sidebar_label: "Delete notification setting"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFVF1v0zAU/SvWFQ8gZWs1kBh56+iQJsFADJ6qIt0mt61HYnv2zbYq8n9H107XdmWQlyT2/Tj3nGP3wLgKUM7g2rJe6gpZWxNgXkBNofLayT+UMKWGmBQqsxenAjFrs4ICHHpsiclLsR4MtgQl6BoK0JLvkNdQgKe7TnuqoWTfUQGhWlOLUPbAGycZgf22IDN5Sf01G598wJPl5OTTvD97F1/Bc3BfrFnZ6YX6uriliq9q5cl5CmSYaoVBoVrTI9ZU6RYb9dSCNTfSc5sG8XnhvKOuphDnAj44awIFwXs2HsvrMP76L+SoOlEnTFTWMBmWPHSuGQJHt0GS+2MybGovZHjryLPOrStb016UNkwr8lDA0voWOS+9PZNxWgoBV3RMcIy7+W+6qqIQIMojOby2NZSQgWct1lDCaF/7MBrmC6Ne1xEKCOTvt/p3voES+jQRxXI06tc2cCx7Zz3HETp9JOKUltg1rCbfrlQuBQXco9e4aPLcuZp8kelaMe2a2UGRXoNnUw0o804sQNpmnbY7ja2wScuxAIFzsH0+Ph/HKGoHqjqveZPmuSD05Ced8DCb72/fJFAJ337QE98DxC12WKSgxL82S5siBx0+enxocCEMHLEjrCytV0NModAo68icBNv5ilStRdhFJ45/oIWqJI68wrrVRrkGWcwhjJIPueT49P3pOJMQuMVkweHcDqf9hbN+gKzfufq/l8RACdMjj1yD2kj3ZJV+8NgMDjyWXJVdBgWUuhaRs6Qz6PsFBvrpmxhl+a4jL2LNd65J0tU6yHcN5RKbQP+A//r7cDu9UbuD/wLqYRHNJrm06eQPCvhNm3zvxbm4j7Amn2DkjUlVkeO9lKN7QLz1dAKnl58vf1xCjH8Abs7xOg==
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete notification setting"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/notifications/settings/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a notification setting
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Notification setting deleted","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

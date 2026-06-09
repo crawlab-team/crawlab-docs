@@ -1,0 +1,75 @@
+---
+id: delete-dependencies-setting-by-id
+title: "Delete Dependencies Setting by ID"
+description: "Delete an item by ID"
+sidebar_label: "Delete Dependencies Setting by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVU1v40YM/SsDnlpAu063WxTQLY2NwtjuNkicUxAYlIa2ZiPNKDNUGlWY/15QkhOldhr15A8+8pGcR7IDxn2A9BaWVJPVZHNDAe4S0BRyb2o2zkIKSyqJSaFVhqlSWavWS0jA1eRRIGsNKegetNWTSNtAzMbut1m7NRoSqNFjRUxeSDuwWBGk0JuMENXIBfybfVOQWi+V2ykuaMiAnRroIAFPD43xpCFl31ACIS+oQkg74LaW8IG9sfv/G3bnfIUMKbjsO+VsNMR4J2yhdjZQEIJPZ2fy8Trun18ggdxZJstixbouTd73afE9CKQ7znEgkQ556SqbgUAjz0BJb98tt3+xE0UlkHtCJr1Ffj/KxYBVbCoKjFU9DaqR6YNYplGzdn7UrH0rR3qifJtXM+pcPVGuBBkTuKcZ5BuxxmQU43vobziUV9/v5+Vzeb8/pCM+wefbxpfz/ILPlYBjAoHQ58XWE+ppTZlzJaEdENzUp03sGMtXkznBGcu0Jz/tvLH88ydxbGo9Wxo3A3aGNA5R50jjEPUtacRTYy1jI8M8EEECbLgUkq9OUxmel1174ezO7HuBee/8cToxgYpCwP0JaUjPGbkJJ0zxhfPCWfauLMmHq3F5/G64aLK3koni/fnUavkNtbqih4YCQ4/56RhzY7HhwnnzN/Wi++VUoLVl8hZLdU3+kbxa9dXHvlou3Ms673c2F5DCYiqfxbjYw6IzOoKIL2+84fZaFtsgL6zNxt2TnXQHa/OF2sOyLwh1r7vxDJxfrtXgIYkYu3O966GNHv8qMVPnl+sjkVytrjdiUDvn1QiEBB7JhwFw9vHXj2f9CLrAFfY5jazjbZseQHU9VPd86F6xdS/L/a3DOJbL9MSLukTTD+E49UM7b+HVNPbT2zcUEkiNlhNcuMAC7LoMA934Mkb5+6Eh30J6e5fAI3qDmXTntgNtgnzXkO6wDPQfSf9wNV7MH9U7N/BkHYe3tPKQj1g28gvGZSu3PN7F5PC4ktlgOM9zqnnicnQX5bw+y2+5+mO1WUGM/wBivPN9
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Dependencies Setting by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/dependencies/settings/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete an item by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to delete","required":true,"schema":{"type":"string","description":"The ID of the item to delete","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"exec_cmd":{"type":"string","description":"Exec cmd"},"key":{"type":"string","description":"Type"},"name":{"type":"string","description":"Name"},"pkg_cmd":{"type":"string","description":"Pkg cmd"},"pkg_src_url":{"type":"string","description":"Pkg src url"},"search_ready":{"type":"boolean"},"setup":{"type":"boolean"},"total_dependencies":{"type":"integer","format":"int32"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsDependencyConfig"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsDependencyConfig"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

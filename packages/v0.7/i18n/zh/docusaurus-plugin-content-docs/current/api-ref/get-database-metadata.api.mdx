@@ -1,0 +1,75 @@
+---
+id: get-database-metadata
+title: "Get database metadata"
+description: "Get metadata for a database"
+sidebar_label: "Get database metadata"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VU1v2zAM/SsCscMGOE3QFdjmW7t2RQ9Di3XDDkEGMBaTqJMlV6LbBob++0DZSdOPtdhlJ9vi1+PjE90B4zJCOYVjZJxjJJgVoClWwTRsvIMSTolVTYwaGdXCB4VKb5wLaDBgTUxBsnTgsCYowWgowEh0g7yCAgJdtyaQhpJDSwXEakU1QtkBrxuJiByMW+aEzBQk9Nd0MvqEo8Xh6Mus2z9Ib+AxtK/eLf3xkTqfX1HFZ1oFagJFckxaYVSoVnSHmipTo1XbEmzYSs1NGKTHiXuLOjuGNBPwsfEuUhS8+5OJPB76b9jbEgUFVN4xORZnbBprKhTn8VWUiG6HAbT2fJHZG7jwubpwEXxDgU1fufKadhgzjmlJAQpY+FAj90fv96WbmmLEJT3lVzoVeOXjYind83LZVhXF+NPwShqDVLwG7fmcBaDWRrpGe7HjLxJIKc1SkqoHk4MXCHWe1cK3Tv8Lo/+FRwrBh2csO0SeZJfU91kTr7yGEpbEvc5XUMJ4c5fiuDM6jXcEFCncbO5VGyyU0OUWKZXjcbfykVPZNT5wGmNjnlyOY1pga1kdXpypPhUUcIPB4Nz2RPTZ5I1cW8sWWDE3UORH7DdBzgFlb0kFSNl+XBuL9RXafJwKEDgPzB8nHycya2mnaoPhde7niDBQOGyFg+ls13yZQWV8u05bmgeIG+wwz06ZduMWPnsO9H8OeGtxLgw8YUdYkWU2+BQKnfINuVH0bahIaSPznLeySW5prirxo6BQ18apxiKLWoRRCrFPOdn7sDfpSYhcY9bksA9lh+pndsQDTN29wF9ZugMVTHc8biwaJ1WzRLpBV1PY6goKKPM+3tadbcY4ha4Tnx/BpiTH1y0FGdDsXil5XNpEeddQLtBGegH422/Dpn+n7pfoXxAPh+jWWZm2lS8o4Det+39ImoniCDWFDKM3HFYVNbwT8mQZiJ621+305Duk9AcUSlw+
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get database metadata"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/{id}/metadata"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get metadata for a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Database metadata","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","additionalProperties":true}}}]}}}},"404":{"description":"Database not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

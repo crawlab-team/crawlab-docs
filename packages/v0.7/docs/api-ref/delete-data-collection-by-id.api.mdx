@@ -1,0 +1,71 @@
+---
+id: delete-data-collection-by-id
+title: "Delete Data Collection by ID"
+description: "Delete an item by ID"
+sidebar_label: "Delete Data Collection by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVVFv00AM/isnP4EU6EAgpLyNtaBqIKZue5qmysm5y23JXXbnFEKV/46cpGu3pmt5inL2fZ/92WevgPEuQHwDY2RUZy7PKWXjbIDbCDSF1JtS/iGGMeXEpNAqw1SopFbTMUTgSvIoLlMNMejWaa6RcZ4+oc2Tem40RFCix4KYvHCuwGJBEENrMsJRImfwkvgqIzUdK7dQnFFHzk51TBCBp8fKeNIQs68ogpBmVCDEK+C6FPjA3ti7/4VdOF8gQwwuuZcsNDTNrbCF0tlAQQg+npzI5znur3OIIHWWybJYsSxzk7YSje6DuKx2Y+xIRCEvgrLpCETHw16i7cF022INJBVB6gmZ9Bz5MMpZ56vYFBQYi3IbVCPTO7Fsoyb18ahJvS9GTboqDytBFpOcttVInMsJrWA8UB22LOg9Cp9UPuzG2DRRf7JraSJYGMr1MXB7In2gAV1eoYyADedyNLFsuJb3+k1iaG3dQxqAq0p9dG2vO98jartGPaa2a9R9tW2G3qX0vbzGjgg2yf90mvIgyW9mlURE3js/qEBBIeDdsDqBkat9te8Zz5xlL1w+zPq3/91wViXDobTN8WloLnxFrWb0WFFgaH0+7PpcW6w4c978pbbtPw8BTS2Tt5irS/JL8mrS5t60uXLmNmO4HbicQQwjEXS0GchhtDK6gQgCpZU3XF/KQOo6E0tz5R7Ibvd2ac6pXg/pjFCTh3XXwenFVHU3JAZjF669utbP4+8cE3V6Md3pjdnk8koMauG86h0hgiX50DmcvP/y/kSEKF3gAtuYetZ+Hb3YW09r6RnRajOP962xPlOmPzwqczRtV1U+l8udiDfdNJbZvtmSEcRGy67MXGDxWa0SDHTt86aR48eKfA3xzW0ES/RGplO7+bQJ/aRaYB7olXjfzPr99lYd2FiDKawraKV8S8wr+YOomz+yeZvbJlqXVCLrDKdpSiVvXdnZYrIMn/ptPPkxuZpA0/wDL9rVCw==
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Data Collection by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/data/collections/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete an item by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to delete","required":true,"schema":{"type":"string","description":"The ID of the item to delete","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"dedup":{"type":"object","properties":{"enabled":{"type":"boolean"},"keys":{"type":"array","items":{"type":"string"}},"type":{"type":"string"}}},"fields":{"type":"array","items":{"type":"object","properties":{"key":{"type":"string"},"type":{"type":"string"}},"title":"EntityDataField"}},"name":{"type":"string"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsDataCollection"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsDataCollection"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

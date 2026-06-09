@@ -1,0 +1,75 @@
+---
+id: disable-notification-setting
+title: "Disable Notification Setting"
+description: "Disable a notification setting"
+sidebar_label: "Disable Notification Setting"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1rG0EM/SuLTi0MsVtaCntLmxxMoAl20osxQd6VvZOsZ9YarVt3mf9etB+JE7sNPRmPnvT0nqRtQHAdIJ3Ddy92ZTMU610yIxHr1gEWBnIKGdtK3yGFCxtwWVKCiTtMCF0CGPAVcfs2ySGFvIPfH4Lvn8EVMm5IiLWFBhxuCFKwORiwylahFPC6hclF4leJFPS3Fpi2tWXKIRWuyUDICtogpA3IvlKCINwh/7PwyvMGBVLwywfKxOYQ40L5QuVdoKAUH8dj/XlZ+foKDGTeCTnRKFZV2ZcfPQSFNMdddiTqEqupYjsCYvZ8LCYa2FAIuKaTsSAodTgRigbESqlP37wT9mVJHH54m097WRCjoj6dEvYV82RK25qCQIv5cIy5c1hL4dn+plxBn08VmjghdlgmM+IdcXLZqoytKim87lLlQ+uG7kQKo8MZhVE/pDBqbB5H/dqBgUBZzVb2M3W3MxAre+sfyR2YgZW9ov2wdQVhTgxm2Mfzm0nSZWg/1q18mzq4xvizxGVyfjM52qjp5exWA8nKc9IDwcCOOHSA8dmXs7GaouI22PbUsw6XduowXxM1z8v19oX2moV+yagq0Trlr7nUMp25c3hhbmtj/0EwkLbnOTi8MFDoXNI5NM0SA91xGaM+b2viPaTzhYEdsm3ReuR9Zg7pCstA/1Dybtof8vvkzdM8KWqYrtPR7rCs9R8YeKR995mJi2iGcWtvXeA8y6iSg5Sjc9Wrf9rLm+vZLcT4B+aG0mA=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Disable Notification Setting"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/notifications/settings/{id}/disable"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Disable a notification setting
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the notification setting","required":true,"schema":{"type":"string","description":"ID of the notification setting","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

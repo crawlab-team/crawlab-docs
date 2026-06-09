@@ -1,0 +1,75 @@
+---
+id: get-time-range-metrics
+title: "Get time-range metrics"
+description: "Get performance metrics for a database over a time range"
+sidebar_label: "Get time-range metrics"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVcGO2zYQ/RVi0EMLyJGxLdBUt003DfZQtOimJ8MFxuTYZiqRDDnaxBD478VQkq2Nm0WC1hfZmuG8NzOPzwMwHhI0G7hDxh0mgm0FhpKONrD1Dhp4Q6wCxb2PHTpNqiOOVie191GhMtM55R9JfrPtSEV0B4IKAkbsiCkKxAAOO4IGrIEKrJQOyEeoINL73kYy0HDsqYKkj9QhNAPwKciJxNG6QynITFGO/rVZr37C1f529ct2uPkhfwOf8v7Vu4O/e6V+270jzfdGRQqREjkmozApVEf6iIa07bBVZwi23ArmfAzyp4XHiLq/g1ydm0qMkee+3vcUT/BcI2WaDA0YZFrJ0K5xHqSkmmJnIHLm/4V57cwEspVVpOBdoiTVbtZreTxNf2s7WpUFz0qACrR3TI4lG0NorUbJrt8lOTJcE/RlhLLQ6ANFtiOg9oYWWdYxHSgu+7COv7+RHjpKCQ903XTOlx0+9FpTSpDlI2f46A00cCAexXSEBupZwqkerMn11FXN50ZlxBQfZxn3sYUGhtIU5aauh6NPnJsh+Mi5xmCvtHhHe+xbVre/36uxFFTwiNHirh1bH6vJN3J9JzfyyBygKo803spSA5oxkisQ2HFBc6T1GtvyOlcgdJ6EX65frnOWNSfSfbR8Kv28IowUb3uZxma7DD8UUoXfMuk88onizB12JamswLq9L5nTKn6O+KHFnUzgajoyFXGTKadS6JQP5FbJ91GTMlZ2u+vl4n6gndKSJ25jOutUaJFFHzJRimksuX7x44v1OITEHRYVThdI/Iz/TcRPSA0XTf8XB5wGxfSR69CidcKpCGiY9LeBs/6ggqaY44XTQoTbeeEbGAbJ/zO2Ocvr0QdklcYmUZSBZo9tomd6WpjLZ1j+TaeFrz1i20tOsaIvhzmby7Mgo6ddILaXy/GVbX37x/Rf8p262PRnsKeX6E5L8JmTNZC3cskIDcVCYwzcak1hOZIrxxP+Z6958/ot5PwPYUOFfQ==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get time-range metrics"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/{id}/metrics/time-range"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get performance metrics for a database over a time range
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"},{"name":"start","in":"query","schema":{"type":"string","format":"date-time"},"description":"Start time"},{"name":"end","in":"query","schema":{"type":"string","format":"date-time"},"description":"End time"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Time-range metrics","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

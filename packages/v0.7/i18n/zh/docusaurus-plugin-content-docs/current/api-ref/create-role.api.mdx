@@ -1,0 +1,75 @@
+---
+id: create-role
+title: "Create role"
+description: "Create a new role"
+sidebar_label: "Create role"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV01v4zYQ/SvEoEc5VtxdJKtbPlpgD22CJEWBGu5iLI0tbilRS47WCQT992JI2VZcd5PeFkV8sSSO5vO9R6oDxrWHbA635Crtvba1h0UCBfnc6Ya1rSGDK0fIpFDVtFHOGoIEHH1pyfOlLZ4g68KtdlRAxq6lBHJbM9UsS9g0RucovqafvTjswOclVShX/NQQZGCXnylnSKBxtiHHmrysftLFyMiz0/VajJCZnKT25zydfMDJ6mLy86Kbvet/gMPkf7H12l5fqpsQ4WOhHDWOPNVMhUKvUJX0iAXlukKjdiFYs5GY29egT6DGio6l8zzgr1iRsivFJcVm9QcWLzm43t8d+mlGY9r7QefwCRLQTJV/uamOvG1d/opS7gZLFSrvE8CcXxl755HqthKE5QFEATlYQAJtU8T7ggyFC3qkvGWCRd/3hz0bA1StHYbpsVVcar/rTgxRfEI+lsjKukpWQOJOWMeKYhr/7Z1tnOXTdwTObSHfUVL9/uFdGFGYqyPf2NpHLM7SVP4OYGcNqaHJyrd5Tt6vWmMEZ68WFjTmZgXZ/CU25LYYM0HXTGty49nrmn+cSYsr8h7XR3gjaEU+omfjFtzHQn7XXF6LcZ+8lNpxn28a+aaRbxr5P9bIMNsgN1zaAjJorOeYXwkZTGWUHhLw5L6S80HjWmcggy7IH/XZdNqV1nOfdY113E+x0UcotMLWsLq4/aiiK0jgKzqNSxNJEL3J1RagJXMDSfgbzonBB2RxpU9AwkZF364Ym6MJj4Wc1j1fPk/PU6lZyslbp/kp1HNJ6MhdtFLxfDFevg9JhfzGRrtxDiluc4dlMAqNlk3ibn9u/ekRq8bQTkP3SIgi9m+M3wNmrDTzsWjsbXZqsGN3qGZMQ5ils3eT9Gwy+/Bw+j57f5rNzk/Ss9M/4Dn1vmU3pts++Bjvo71K1ysbOjYA78rhxuBSkPCPYgUdK+vUYJMorJVtqJ4Mqldo8btsBfcbWqpc7MgpLCpdq8Ygiz4Issj56DI9OTtJIxg8VxjUfuj48KUxfGMc7Ai7rf/oB8kwfqZHnjYGdR0IL7ToBubMITJnsUXpHLpuiZ5+c6bv5fGXlpzgb7EnQoBfAiVhQS5M+S+Sbl7FZCYPElbMTRuk/vBMIrt8fOMiz6nhb9ouRqS/vbl/gASWwwdWFY4p4HAj2wNuIANIwDa7vSY868BgvW7DIQWiT/n9DeNLvo8=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create role"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/roles"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new role
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"name":{"type":"string","description":"Name of the role"},"description":{"type":"string","description":"Description of the role"},"permissions":{"type":"array","items":{"type":"object","properties":{"resource":{"type":"string","description":"Resource name"},"actions":{"type":"array","items":{"type":"string","enum":["create","read","update","delete","execute"]}}}},"description":"Permissions granted to this role"},"created_at":{"type":"string","format":"date-time"},"updated_at":{"type":"string","format":"date-time"},"created_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"updated_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"}},"title":"Role"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Role created successfully","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"name":{"type":"string","description":"Name of the role"},"description":{"type":"string","description":"Description of the role"},"permissions":{"type":"array","items":{"type":"object","properties":{"resource":{"type":"string","description":"Resource name"},"actions":{"type":"array","items":{"type":"string","enum":["create","read","update","delete","execute"]}}}},"description":"Permissions granted to this role"},"created_at":{"type":"string","format":"date-time"},"updated_at":{"type":"string","format":"date-time"},"created_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"updated_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"}},"title":"Role"}}}]}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

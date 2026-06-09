@@ -1,0 +1,75 @@
+---
+id: pull-git
+title: "Pull Git"
+description: "Pull a git repository"
+sidebar_label: "Pull Git"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMFu2zAM/RWDpw0QmmzYMMC3biuKoIcGSXoKgoGxmVitLKkUnS0z/O8D7aRrl3TDTrbFRz7yic8tCG4T5Eu4tgIrAyWlgm0UGzzkMG2cyzDbWsmYYkhWAu/BQIjEqJhJCTnExrlvWytgICJjTUKsNVvwWBPkYEswYLVgRKngT5ZFRdnkaxY2mVR0Ssb02FimEnLhhgykoqIaIW9B9lHLJ2Hrt/9bdhO4RoEcwvqeCrEldN1K2VIMPlFSgvfjsT5e1r29AQNF8EJeNIoxOlv0cozuk0La0x4HElWIVTyxA0GJ8hyFzKi9WaE6nU7YdQaIOfCZkIGaUsItnY0lQWleqShWnB59CV44OEecZgcR5keU4j6cE+MzltmMHhtKAj3m3SnmzmMjVWD7k0oFfTxXaOKF2KPL5sQ74uyqn7Pr55Iq9HsW0rBjUkEOo62VNGpt2Y10AcFAoqJhK/u5ij/oi9EuwgP55xpHe0P740JWhCUxmOOqXk4n2ZCh1NZvQp96lIjxu8N1djmdnKzb7Gq+0EC2CZwdgGBgR5wGwPji08VY59c5aux7OrD2PrvuHfSiaPt7z1714mEsoR8yig6tV4qGnWYPUi1BpQIDeW/EXq2VgUrlzJfQtmtMdMeu6/T4sSHeQ75cGdghW1zr5MsWSpv0vYR8gy7RXzp9Mzs49m32Dw+e7f14T14RO3SNfoGBB9oP/5Ju1ZnjxWlnQ+CyKCjKs5QTX6q9n5ZpejtfQNf9ArXMsTs=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Pull Git"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/pull"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Pull a git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the git repository","required":true,"schema":{"type":"string","description":"The ID of the git repository","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"string"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseString"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

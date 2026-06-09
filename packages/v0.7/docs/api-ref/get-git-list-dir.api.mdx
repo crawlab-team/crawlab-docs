@@ -1,0 +1,75 @@
+---
+id: get-git-list-dir
+title: "Get Git List Dir"
+description: "Get the list of a git repository"
+sidebar_label: "Get Git List Dir"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVdtu2zAM/RWBTyvgLV13A/LWbW0QdMCGXp6GIlBsJuYqSy5Fd8sC//tA2WnTxW039MmAeXh4RFJHaxC7jDD+DhMSuMygwJgz1ULBwxgmKEZKNI6imLAw1ixJDGMdIkngFWQQamSr8GkBY1iizJYkM02YFcSQQW3ZVijIWmYN3lYIY6ACMiCtUVsp4e/C5yWa6WctqeV3ijJeN8RYwFi4wQxiXmJlYbwGWdVKH4XJL/+XdhG4sgJjCPMfmAsV0LbZreReaBJ93WDK2KVXlJHQtSwPXtBLNGHxTNUP0rbtpTLHOviIUckO9vf1c5/j6wlk0Odp1Na1ozwNbvQjKmS9q6drg86QdcxCXYHCyjbKMlvtBQlW8ensvCRXMPqHGSAnzhtn+cWRF5LVcTwmh1O/CHvQZoC/BH2k4Hc712awIIezSL9xK0pecIm8PWHy8v5twjfOzdJoh9hKG4cDFNN634XmITi0XmNVKGZCFQ5N9lZAYQVfJlSX8bTeNwcK7ZZxQNEDZ2gzEBKnv/7uZgoic+BBwgpjtMvhYlGsNPHxcp+CFw7OIcfTfj8nJGUzH9CheW+H9vajLcwpXjcYBRLm9S7mwttGysD0GwsFvRsimnpB9taZM+QbZHOUzt2mc0oZevOCTR9htCSJozUV7UhXKo705kEGEfOGSVZnelm6jbY1nYer+xtd0wmuNm5Roi3SOHsnOfw2NV2G1idtgaZu+sb2p7Nzc/htumMFp0dn5xowi8CmB0IGN8jdhYD9Vx9e7ad1CFEqmzT1VdXMJyTmi1rI5+TN98jXd/7wL8bfn1Twl4xqZymtfsNOiboefgftIWQwTm6f2ggZpEZeZlCGKApar+c24gW7ttXfnbXqU1FQtHOnfrmwLuIjcl+c9ta6Z57w4EHVV7i68/cb6xqFgBrrjWVSDc/T88iTM6hns0R+ta1no1OfpUv1pm6rVFkXOMxzrGUrZcfk9Ui36z45Ooe2/QMWqrjU
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Git List Dir"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}/files/list"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the list of a git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the git repository","required":true,"schema":{"type":"string","description":"The ID of the git repository","format":"objectid"}},{"name":"path","in":"query","description":"The path to list contents of","required":true,"schema":{"type":"string","description":"The path to list contents of"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"children":{"type":"array","items":"circular(EntityFsFileInfo)"},"extension":{"type":"string"},"file_size":{"type":"integer","format":"int64"},"full_path":{"type":"string"},"hash":{"type":"string"},"is_dir":{"type":"boolean"},"mod_time":{"type":"string","format":"date-time"},"mode":{"type":"integer","format":"int32"},"name":{"type":"string"},"path":{"type":"string"}},"title":"EntityFsFileInfo"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubEntityFsFileInfo"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

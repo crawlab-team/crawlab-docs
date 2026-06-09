@@ -1,0 +1,71 @@
+---
+id: delete-user-by-id
+title: "Delete user by ID"
+description: "Delete user by ID"
+sidebar_label: "Delete user by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVE1vEzEQ/SvWiANIbrMqlYC9pSRIlUAgSk9RkLzr2cTFa7u2t2208n9HYydpQgpnTuv1fL43bzxCFKsA9QJuA/oASw5OeNFjpL96MYIRPUINSgIHZaAGJ+IaOHi8H5RHCXX0A3II7Rp7AfUIceMoIkSvzAooYYzoKfTnojr7IM666dmn5XhxmV4BB4mh9cpFZcnjizUrO7tiX5s7bOO1ZB6dx4AmomQiMMHW+CQktqoXmu1LRBU11dyFQfozcbGw6xmkJTUfnDUBA/V7UVX0OfYnOphEjVQ4DG2LIXSD1hvg0FoT0UQKEs5p1QoKmtwFihxPmbC5NjHhrUMfVanbWokHXspEXKEHDp31vYjl6u0FYekxBLHCU3ZTegZ/U7qElOj2srr8CypjI+vsYOR/BoUDem/9v0HOs0sqGI/BzfK02EAYmw2NmqrFtZVQQxllUeMaapiQW5iMSibgENA/7AQ/eA01jBk6pnoyGdc2xFSPzvqYJsKpE9XOsBODjmz67ZqVVMDhQXglGl0IKtnohGboad/WMTrg+ZPXTpYcUBdL4kBlywh3Fm1bofN14kDtHJnfV++rlEjeAdvBq7jJeK5QePTTgWAvlofmm9xU7u/QaU//tsVd79BkpzwOZTqbPbdj+ejFoxYNMXDCDrHSWc+2PpwJw6xDcxbs4FtkUtGcm4E27REb1pIfeiZkrwxzWkRSETGKPpSU1fm786qQEGIvsla3D9VLKjjqZw8v4lOcOC2UoUx57ONWHgvI8gAOtZI0nTKLBYxjIwLeep0SXd8P6Inl5fO4M+dSBTpLqDuhA550sF87eP19+46+Yc9PFH+5xe2lMJssLz3QH3D4hZvyQqclyQaFRJ/bKIZp26KLByEnm06i2G/KbP55/mMOKf0GvfkTag==
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete user by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/users/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete user by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"User deleted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}},"404":{"description":"User not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

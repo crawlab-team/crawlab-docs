@@ -1,0 +1,75 @@
+---
+id: replace-notifications-setting-by-id
+title: "Replace Notifications Setting by ID"
+description: "Replace an item by ID with (full update)"
+sidebar_label: "Replace Notifications Setting by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWE1v2zgQ/SvEnFpASZygQXZ1yxcW3qJpYDuXDQyBksYWG0lUSSqpa+i/L0aUbCpWYgW9OqeYnHkz/Jj3qFmD4UsN/iPcSSMWIuJGyJxN0RiRLzXMPYhRR0oUNA4+TLBIeYSM50wYzFi4YuMb9iJMwj4tyjRlZRFzg5/BA1mgquHGMfigrGOQO3F0oG2gIFwFIgYPCq54hgYV5bSGnGcIPtRTgsIX3CTwOqdZgpSEXDCToE3LyCYR8EDhz1IojME3qkQPdJRgxsFfg1kVBK+NEvnyo7ALqTJuwAcZ/sDIiBiqam6joTZXMl5RiEjmBnND//KiSJuFn/zQFGK9m4sFo51QtH9GoKbZmJsBVrSHe5c1vulP3oMo4XmOaSBi7cBwpfiK9t9gpvvge7G6Ma8tMhvf6DqQQm4wDrjZn+61tWVGZKgNzwo3Ih3FEc24qOFqOGq4GrSAfXA3zq/KA8x5mKJ7FqGUKfJ8x/G2saw8yLhIgzCKhm/9zjZ/4yJlV9fXG7g/R3PAjPxTMCNpwhb1vi294/ZUNeYxqgAphf1e09qaWeut97CQjXPeRDZcPwVGieUS1QC24PqJtdbkjVmRElPs92wtHa8g4+opli8D7l7rzjYuHRwZfyAFVpu7/kpESWDw14BK3YCQD6t9epGClvw+Csf+nX6/62CaBIcc7AbK2hOCMOkQx9qM7Adfg+0NsEoxjOUerO0AlmtRh7Bci/o2y5Uag6jURmbBG4X2FnM9aGTWk+lO0e2UPuko6VdHPZsDgG8yxlS7j4/m7VEDbaX70UrgfOs52f+gGOdFaaCqLJQuZK6tUJ6NRrWqdvL8/hW8g14f9Pqg1we9Puj1Qa8Pev0xvfYAlZI9e06EhFrzZc8JUs0bbso+TtqeO1zL3CiZpqj0pBHyf4RJyvC99wMBfOlT+ises4n9Tofa5nTX5iHnpUmkEr8t3Z/3AY1zgyrnKZuiekbFbusNqOoFm0RS34NeIJ7tW/hw0nmsnDSPFX2yFnEFxH5RqYRZTemVYZ8IvBAz+YRu/fFCfMVV2xFJkMeooKVpuLwfM+tBaVDpTrYdidtfPCtsIbUvlPoNsr2QnTfFYzs+774B4Gx09uVodHF09vfs9Nw/P/XP/joeXZz+B11Vf+ueb4Y3wms7M1tJdSNvlHFnkBTOHWy2YAPfLZGd8dfmXQFxxjfSsDvmEH/fZM3mPRMOTb8321Bvj0nDpM5MUynbgd2FuAz33hm6nOV4v8U9dHh02US+sE+OtmgVf0l5yC7vxztXYHI7ndEEW0jFGkPw4BmVtgaj44vjERVeIbXJeF0AzYG1PUi36nXbs7QdydfxnEbcR1qYTcXRUZwUKRe1Vpeq5ltb0o/QKen6cjW9Uw98EdO1TKQ2ZLleh1zjg0qrioZ/lqhW4D/OPXjmSlAl1E3PWOimKhY81fjOSj5Nmu+jz2xPs7J3IS2f5EQmzzwt6Rd48IQr23St5pXXEgxlZieubfyjGblvHXc+lyqv9biMIizMu7ZzhzLvH2bgQdh0UJsaUvyFern8xeYoC7vf/tqOrSHl+bKsNQYsJP39D3dn6+s=
+sidebar_class_name: "put api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Replace Notifications Setting by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/notifications/settings/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Replace an item by ID with (full update)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to update","required":true,"schema":{"type":"string","description":"The ID of the item to update","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"channel_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Channel IDs"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"mail_bcc":{"type":"array","items":{"type":"string"},"description":"Mail BCC"},"mail_cc":{"type":"array","items":{"type":"string"},"description":"Mail CC"},"mail_to":{"type":"array","items":{"type":"string"},"description":"Mail to"},"name":{"type":"string","description":"Name"},"sender_email":{"type":"string","description":"Sender email"},"sender_name":{"type":"string","description":"Sender name"},"task_trigger":{"type":"string","description":"Task trigger"},"template":{"type":"string","description":"Template"},"template_markdown":{"type":"string","description":"Template markdown"},"template_mode":{"type":"string","description":"Template mode"},"template_rich_text":{"type":"string","description":"Template rich text"},"template_rich_text_json":{"type":"string","description":"Template rich text JSON"},"template_theme":{"type":"string","description":"Template theme"},"title":{"type":"string","description":"Title"},"trigger":{"type":"string","description":"Trigger"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"use_custom_sender_email":{"type":"boolean","description":"Use custom sender email"}},"description":"The data to update","title":"ModelsNotificationSetting"}},"required":["data"],"title":"Replace_notifications_setting_by_idInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"channel_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Channel IDs"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"mail_bcc":{"type":"array","items":{"type":"string"},"description":"Mail BCC"},"mail_cc":{"type":"array","items":{"type":"string"},"description":"Mail CC"},"mail_to":{"type":"array","items":{"type":"string"},"description":"Mail to"},"name":{"type":"string","description":"Name"},"sender_email":{"type":"string","description":"Sender email"},"sender_name":{"type":"string","description":"Sender name"},"task_trigger":{"type":"string","description":"Task trigger"},"template":{"type":"string","description":"Template"},"template_markdown":{"type":"string","description":"Template markdown"},"template_mode":{"type":"string","description":"Template mode"},"template_rich_text":{"type":"string","description":"Template rich text"},"template_rich_text_json":{"type":"string","description":"Template rich text JSON"},"template_theme":{"type":"string","description":"Template theme"},"title":{"type":"string","description":"Title"},"trigger":{"type":"string","description":"Trigger"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"use_custom_sender_email":{"type":"boolean","description":"Use custom sender email"}},"description":"The data to update","title":"ModelsNotificationSetting"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsNotificationSetting"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

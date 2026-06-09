@@ -1,0 +1,75 @@
+---
+id: rename-git-file
+title: "Rename Git File"
+description: "Rename a file of a git repository"
+sidebar_label: "Rename Git File"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1vGjEQ/SvWnFrJLbRqVWlvSZpGKIcgQnpBKDLsAE4W27FnIXTl/16NvQQoKE2lcmF35+PNe/PRAKl5gGIEV5pgLKHEMPXakbYGChigUUsUSsx0hcLOhBJzTcKjs0GT9RuQYB16xf69EgrwKeJ+rumeY0CCU14tkdAzTANshgJ0CRI0YzhFC/gTeLhA0fvOiLTAY0yPT7X2WEJBvkYJYbrApYKiAdo4Th/IazP/17Qz65eKoAA7ecAp6RJiHGc0DHRuyw1DTK0hNMSPyrlKTxP7zkNgiOa4lpyMlfCsFWkMbDW47jP1NxVtcC1YKDGzPtWexI0yq/emFCm8ZZ7aSVbkbkGM+5KOXkpr048lkKYKXwbipb0942qCGHOC4KwJmdznbpf/Dqu4uQb5v9RD760/Jh4lLDEENceTtkCK6nDCFHcUL6whb6sKffhpdTloabUsv5widq5KMchDAsnn07HPnVE1LazXv7Bkp6+nEvUMoTeqErfoV+jFZWIZEytaWF4wZwNtG1NAZ64pdBpdxg73I3TajkoIOK29ps0tC5o1U04P7SOaPf7K6WvcbFdxgapED3K7pGf9nsgRXAK3aLBbhctntXQVHozybv7cwXtkgJlNwFuZvVpXaiLO+r2jcR1c3g7ZkKa9dQQJK/QhO3Q/fvvYTeNvAy1VYtTW3J6sK03iRz5AB7n31vdN163VifCZOq5S2jBq7SvOlDmOgHsAEop001Ib0olKBY0lLLhjxQiaZqIC3vkqRv78VKPfQDEaS1gpr9WEZRk1UOrAzyUUM1UFfKX+d4N2Z9+Lvxy2kyy2I2DYY6Wqmt9AwiNu8oGO4yi3M8GVZcNFxv8w5PBd4NEyR7mNOJtO0dGrvuO9Ce/f3A5BwqQ9t0tbcoxXa1ZVrXORNumRxjp9a6BSZl6nxYeck3+/AT3HV5o=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Rename Git File"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/files/rename"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Rename a file of a git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the git repository","required":true,"schema":{"type":"string","description":"The ID of the git repository","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"newPath":{"type":"string","description":"The new path for the file"},"path":{"type":"string","description":"The path of the file to rename"}},"required":["newPath","path"],"title":"Rename_git_fileInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

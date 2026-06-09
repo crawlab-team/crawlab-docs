@@ -1,0 +1,75 @@
+---
+id: discard-git-changes
+title: "Discard Git changes"
+description: "Discard changes in the Git repository"
+sidebar_label: "Discard Git changes"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMGO2zYQ/RVi0EMLyLGxLdBUt931NligRYskPRkuMBbHFlOKZMhRdg1B/14MKcX2OgmK6iKJ5Lx5M+9xBmA8JKg38MYwbCvQlJpoAhvvoIa1SQ1GrZoW3YGSMk5xS+qNYRUp+GTYxyNUEDBiR0xRoAZw2BHUYDRUYAQnILdQQaSPvYmkoebYUwWpaalDqAfgY5CIxNG4QwZkpiihf29Wi19wsb9d/Lodbn4av4OXJH/37uDXd+qP3Qdq+FELtUiJHJNWmBSqlp5RU2M6tOpzCjZsJeccBuNL4LKjHtcwbgt5Snzn9VEYv6yl8Y7JsWxhCNY0KCjLD0mghutSfQa/aMom9ymJDCH6QJENJQkpy6dYjBGl7YapS9ftG8sj0Cl4lwrIzWolr8sS7ydhdRGatEp901BK+95aSfG/y7qsoPGazk4Zx3SgCBXsfeyQy9KPN6JBRynhgb5U1km0d4UlTIV2xK3XUIMmS0zFQC3UsDwYTsvB6HE5eRgqSBQ/zVbto4UahlwHjfVyObQ+8VgPwUcelxjMld/WtMfesrr981EVKKjgE0aDO1uqLWjyRa7vRNiWOUCVX6lcs4wBddkZK5C0RZ95x/oGbV4eKxA6F9uvV69X4yjGTNT00fAx13NHGCne9lL9Znu+/S6TyvzOD33u8kRx5g67fCh3XdR+e7L/wzN2wdKZMzezRttRbvzeZ9xJq/uITxZ30q+rXkoP9z6q6Uyl0CkfyC2S72ND4kuOZtfLVX6inWrkHEWFujNOBYssBpL+U0wFcvXq51er0rLEHWabTgNpHmcyv052uGA0nBz/n6ff1ECmZ14Gi8ZJ9mysYfLhBsSHUEGdZ+KcezvLvoFh2GGiv6IdR1n+2FMUQbcnZ2V5tUnyraHeo030DfLfv53myg/qNMe+wnUeK+6YnWx7+YMK/qFjGeOj6NoSaoqZRtm4L8kW7yX8FHg1J8ZqjrhtGgr8zbPbs9u8fvjt4f0DVLCbhm6XxwhEfJLBiU+Fps/lZ2fntQEsukOfhwgUVHn+BY/FXv0=
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Discard Git changes"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/gits/{id}/changes"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Discard changes in the Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["paths"],"properties":{"paths":{"type":"array","items":{"type":"string"}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Changes discarded successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

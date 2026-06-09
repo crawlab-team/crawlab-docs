@@ -1,0 +1,71 @@
+---
+id: get-content-of-a-spider-file
+title: "Get content of a spider file"
+description: "Get content of a spider file"
+sidebar_label: "Get content of a spider file"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVFFv1DAM/iuRxQNI3XoaSEDfBgO0BwRi8HQ6JF/juwbaJiTutlOV/46ctLfbbghBX9rGX+zP9mePwLgNUC3hyhlNPsCqAIceO2L5q5Yj9NgRVGA0FGB6qMAhN1CAp1+D8aShYj9QAaFuqEOoRuCdkxuBvem3IA6ZycvV78vFyWs82ZyfvF+NZy/iEyhAU6i9cWysID7afmsv3qhP6x9U86VWnpynQD2TVhgUqoZuUVNtOmzVPgQbbiXmfA3iQ8fZoi4vIBb7pKZUUlq/BvK7f8jrKMJn5EaxVdyQ2piWIK7EW3C2DxTEwdliIa/7196bllRte6aeoYD5qxoBnWtNjYIrfwQBj8dsbMpLquytI88mh6qtpgOU6Zm25KGAjfUdcj56fiZZdBQCbumRDONdYa+GuqYQIMrzMPMPxHMGym4UqpDUlKsgAbixGirYEmc5NFBBmUGhHI2OpUBDmQGB/PWsvsG3UMGY0qZYleXY2MCxGp31HEt05khCF7TBoWV1/vlSZVdQwDV6g+s2Fyd7ky/qh07k3zA7KNIrzYDOPqDKlliAhM3Nmy2trbFNx7EAoXPP/GrxahGjSCBQPXjDu5TPG0JP/nyQEixXh+arRCrxOwTtmzJRnLnDOoFSk0y/sQk5Neutx5sW11KBo+pIVTbWqwlTKOyVddSfBDv4mpQ20v31IPN2Q2tVC468Qt2ZXrkWWRQkFSUfssvF6cvTRS5C4A6TTqcB+4sy7lHbZ8p0y6Vr0fTiNClgnFSzhEk1UECVVlISDhRJW6u5TUsYxzUG+ubbGOU4D7c0QJsgOtBQbbANdMRhP3/w9Mu0CZ6po9EuHuf6k3Z3W+Ua20EgaQ/M+vt/DncL7A/Bp0Psd4fBZ1JGQ1yJjgk1+UQjG87rmhwfXDlaO8J/P8Mf3n2FGH8DEAsccw==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get content of a spider file"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/spiders/{id}/files/get"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get content of a spider file
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"},{"name":"path","in":"query","required":true,"schema":{"type":"string"},"description":"Path to the file"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File content","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,75 @@
+---
+id: uninstall-dependency
+title: "Uninstall Dependency"
+description: "Uninstall a dependency"
+sidebar_label: "Uninstall Dependency"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVcFu2zAM/RWBl7WA12TDhgG+tWsPQQ8tknSXICgUm4nVypJKyU2zwP8+UHZqp/U2DFguTpRH8vHxUd5DkBsP6QIu0aHJ0WQKPSwTyNFnpFxQ1kAKd0YZH6TWQor8gNxBAtYhSQZNckihOsDuj0CETxX6cGHzHaR7yKwJaAJ/lc5plcUEowfPpfbgswJLyd/CziGkYFcPmAVIwBGXC8ww3YOWZtND+UDKbOAt83mBwpHdkCxLZTaCoyq5QWHXIhTYdcNZ6wRKm+Pfs77qEakLDhInH6TWH4Ql4R1maq0yYWyO/pTTGlk2rNu8kkiyNCpg6d/Xq4faiDmGeItgxav0sZrN8V7l/1AwgbWlUoZXuVU+TGJyGSnEzo7qijXZUpxYo3ei8piLbYGtMsoLY4OI+pxCXScQVNDY17FnmIlxVYC6Zhyhd9b4RrrP4zE/jjndXEPyvxyFRJYGh1Gi93IzYIw6AR9kqIZm2OvzuzWBrNZI/odV+bRtq+3yy1BjFzIX02ZxIGI+vcfcGVmFwpL6iXFcX4cSTUxAMlKLGdIzkriKXdaxq1BY3ltnfVRDhgJSGPW9NSJ01o86eyXgMatIhd2MZW2Uk07N7SOavuGcusboOCZRoMyRoFkESOH8diKaCCbCg5p2l8TViyydxm7JO5c269n9bvdqcThZ9s3fndZMY20jvcNISG61XInz28m79Z5ezeb8h1hbEi0QEnhG8g1gfPbtbMyKs3KljH23nXVX5WX/Djwq0LsDf3+1tjoGfAkjp6UyXK8izeHNpBZwdHvxujjLz25aywQKHm66gP1+JT3eka5rPn6qkHaQLpYJPEtScsWqLFipdlbpYg+PuGvdiyZ8nDMjhuuqmfCbVauTQ8R5lqELf8Que/67vZnNIYFV+4Joh0xyyz3JLaQQXzUcHe0WzxpzVHEtocnJn1/cwlvQ
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Uninstall Dependency"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/dependencies/repos/uninstall"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Uninstall a dependency
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"lang":{"type":"string","description":"The programming language of the dependencies"},"mode":{"type":"string","description":"Uninstallation mode ('all' or specific nodes)"},"names":{"type":"array","items":{"type":"string"},"description":"The names of the dependencies to uninstall"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"The IDs of nodes to uninstall from (only used when mode is not 'all')"}},"title":"Uninstall_dependencyInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

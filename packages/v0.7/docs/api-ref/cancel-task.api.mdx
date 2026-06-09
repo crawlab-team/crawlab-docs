@@ -1,0 +1,71 @@
+---
+id: cancel-task
+title: "Cancel Task"
+description: "Cancel a task"
+sidebar_label: "Cancel Task"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1v2kAQ/SvWnFppG2jVqpJvJE0llEMiIL0gVA32ABvWu87smoRa/u/V7JqEFJRTuWB7Zt7Me/PRQsC1h3wOM/RbDwsFJfmCdR20s5DDFdqCTIZZQL8FBa4mRrGNS8ihiNbfva1GxooCsQC2YLEiyEGXoEALVo1hA/8mkLzZ+AcoYHpsNFMJeeCGFPhiQxVC3kLY14LkA2u7fgdh5bjCADm45QMVQZfQdYsETD5cunIvaIWzgWyQR6xro4vIZ/DgBa09TZvAhB8L+6DJi3XluKAjt6VzhtCelPdT/LKkVDSusDEB8hUaT12nIOhg6EXqKObY1k2ArhMzk6+d9Snpl+FQ/t5muL0B9b9YEbPjU807BRV5j2s6a/MBQ+PPmI7pORvYGUPsfzldTnpaPcuv54hdYplNUvMg+nw+9bm32ISNY/2HSnH6dg5obAOxRZNNiXfE2XVk2UVWYeNklGvnoxoyozkMpAt+0OqyG7y0zlPRsA77qWiZ5MJaz9yW7BF1rPUN7Q8zvyEsiUEdtmF0N85ShGSX7kxep/P6Gava0NF0pSERrJWLOQ5iMj4ZXGaju/HJwE2upzMxZCvHWe8ICnbEPjkML75fDEUr4VxhLL4vr1/3WVroN7hHi3NyFXrqgZ7DoDaoraA3bCQqKTqHqCgoyONB6EVdKNiI8Pkc2naJnu7ZdJ18fmyI95DPFwp2yBqXwnveQqm9PJe9Nu8U+WHSH5SP2euJOFvpoXNW2rZD08gbKNjSPh2wbtGpQyuliGS4Sqk+zST8NfBk/Tp1iBgVBdXhXd/F0Uze3U5noGDZH67KlRLD+CTXEp9SkS5Sj9MYv7Vg0K6buKqQMOX3F/LpATA=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Cancel Task"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/tasks/{id}/cancel"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Cancel a task
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Task ID","required":true,"schema":{"type":"string","description":"Task ID","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"force":{"type":"boolean","description":"Force cancel","default":false}},"title":"Cancel_taskInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

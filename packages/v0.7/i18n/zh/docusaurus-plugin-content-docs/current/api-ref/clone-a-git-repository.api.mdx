@@ -1,0 +1,75 @@
+---
+id: clone-a-git-repository
+title: "Clone a Git repository"
+description: "Clone a remote Git repository to local storage"
+sidebar_label: "Clone a Git repository"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVMFu2zAM/RWB2GEDnDroBmzzLW2xooehRbudggxQZCZRJ0uqRLcNDP37QMlp0gYbMF9sSyT1+N6jBiC5jtDM4VITLCpoMaqgPWlnoYFz4ywKKQJ2jlBcahIBvYuaXNgKcsI4JY2I5IJcI1TgZZAdEgauOYCVHUIDuoUKNBf0kjZQQcCHXgdsoaHQYwVRbbCT0AxAW88ZkYK261yQCAOn/ppPJ1/lZDWbfFsMp5/SO3iL9ruza3dxJq6X96joqmWsASNawlbIKKTY4LNsUekugx6PIE2Gz9ylQXpbuOyIqwtICwYfvbMRI+M9nU759Tr+ds+RYgZbEXulMMZVb8wWKlDOElriTOm90UpyZn0fOX04psNlAExHcB4D6XK4ci0eRGlLuMYAFaxc6CSVpY+n3FCHMbJERxSntGfgrqCExA/n0Ma1rJqLVLTYQAP1WlOsB92mOncHFUQMjzvN+2CggSH3gKmp62HjIqVm8C5QqqXXR8Jd4Er2hsTs5kqUUlDBowxaLk3ptFTjL7R9x37dEHmo8isW4+Ya0JSdVAEfW7TZ7WS35uVUAcN5tf1l+mWaEiscUfVB0zb3c4YyYJj13Pt8cbh9l0FlfIdBLwyPEHfYYZmDMuParlyOHJk/D/LJyCUzcMQOs7JyQYwxlZBWOI92El0fFIpWs5TLnl3+hEuhOA6DkG2nrfBGEtuBGcUQS8npyeeTaSEhUiez6cZZ3Y3861l/C2rYW/j/L4mRHsJnqr2R2jKSbJth9Ngc2GNQQZOvjmKzxU7SOQzDUkb8GUxKvPzQY2CxFnvXZOlaHfm7hWYlTcR/9PD+dryRPoj9sP8F6bgo7Ta71PT8BxX8xm2569KC3YeyxZBhlI2ZUujpIOVo8tlbLzN3c333A1L6A0b47Hg=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Clone a Git repository"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/clone"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Clone a remote Git repository to local storage
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Repository cloned successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

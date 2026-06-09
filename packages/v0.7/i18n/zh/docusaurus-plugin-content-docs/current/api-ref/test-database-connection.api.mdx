@@ -1,0 +1,75 @@
+---
+id: test-database-connection
+title: "Test database connection"
+description: "Test connection to a configured database"
+sidebar_label: "Test database connection"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VU1v3DgM/SsC0UMXUOpBGqCtb2mzC+SwSNG06GEwC3AsekZdWXIlum1g6L8XlO3MNJNu0cv64A+JpB4fH+kRGHcJ6jVcIeMWE8FGg6HURNuzDR5qeE+JVRO8p0ZWFAeF8t3a3RDJKLN4augxYkdMUUKO4LEjqMEa0GAlVI+8Bw2RPg82koGa40AaUrOnDqEege968Ugcrd+VgMwUxfWf9ersFZ61l2d/bcbzi/wEHuL8O/hduHqtbrafqOFroyL1kRJ5JqMwKVR7+oaGGtuhU/dHsGUnZy5ukB8GnnbU9RXkjYBPffCJkuA9X63k8aP9myOuhLtIaXAMGprgmTyLB/a9sw2KUfUpidt4RAM6d9MWCmdCQoEghMTQU2Q7Hd8EQ0e0Wc+0owga2hA75Gnp+bmk1FFKuKNTkiVd5GP258NyPpBzOzQNpfTR8l6EAln/CtrjMR9aJUYe0qOgfg5Yro3cNFysLk75X6SsfGDVhsGb3+H+f2GcYgzxsdQOlP9ZTPKUZ0e8D0Y6KCSe+mIPNVRL76VqtCZXhy6tRHmgIVH8srTjEB3UMJZUKddVNe5D4lyPfYicK+ztSU9dUYuDY3X59lpNoUDDF4wWt26uYIkmb+SHTibJnrkHXR5pmiYlBtTTTtYgx05lW3ZcaNCV5axB4Pyw/XL1ciU1l3SaIVq+K/m8JowULwehYr053r4toAq+Y6N7umeIC3bYFqNCv/VtKJZzGd5E/OpwKwycsCOstCGq2UYr9Cr05M9SGGJDylip63aQAfSVtqoRO4oKTWe96h2yqEYYpZimkKtnL56tJhISd1i0OY/RMoeXgh8N5IewxoPWf2d2z9QwfeOqd2i9oCiSGWe5reFebqChtnNbHWAUzW2W+q5hHMX4Q3Q5y/LngaJUbnOQUKmjsUneDdQtukT/kc7Td/Of4w91GMo/gT4vor8rknWDfIGGf+lu+ifljUiR0FAsMKaNy6ahno9cTqaFCO2+H9/e3L6HnL8DUJ5/hw==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Test database connection"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases/{id}/connection/test"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Test connection to a configured database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Connection test result","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","properties":{"status":{"type":"string"},"message":{"type":"string"}}}}}]}}}},"404":{"description":"Database not found","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"error":{"type":"string"}},"title":"Error"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

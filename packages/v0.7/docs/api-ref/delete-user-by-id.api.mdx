@@ -1,0 +1,71 @@
+---
+id: delete-user-by-id
+title: "Delete User by ID"
+description: "Delete a user by ID"
+sidebar_label: "Delete User by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVdtu20YQ/ZXFPDXANnaKFgX45sRKISRFA9t6EgxhyB2Zm5BcenboliX478GQYixHUsQ86TJnzlx3TgeCDxGSNawicYR7C45ixr4WHypI4JoKEjJomkhs0tYsr8FCqIlREUsHCbgBs1HEJm033oGFGhlLEuVM1h1UWBIkMJi88tYoOXwf7C4ns7w2YWskJ+OFSiPBjPRggemx8UwOEuGGLMQspxIh6UDaWumjsK8efpZ2G7hEgQRC+pky8Q76/l6jxTpUkaIG+O3yUj9e8v7zASxkoRKqRK1Y14XPhr5cfI4K6Q5zHINoh1i7KH4M4FBmoLS3Z8sdJnSkKAsZEwq5Dcp5lncj1ogvKQqW9T6pQ6Ff1bLPmrbzWdP2VI5Uoi/OEy0GWG9h6znKZtyvc07vFWsGbG+hwNmOH3HPj0Mxw+VGUTv0rLGpgzk9Ow5BNuhKX+1RpSEUhNURriBmBL9w3XyX++Q/gBoZl2xnQ2bUKel7iYfp972Fpnaz92k1Ymfs08Q6Z58m1tP7pFdp3pBXE1JLO7wg+kL1bozpgQXxos2Ev4OjIqr3sL/MgY+0y0JJMeLDkUR6C1FQmhNdnuK8C5VwKArieLO7TX95yZt0P4FePX4/dq3eojM39NhQFBgwbw4xqwobyQP7/2lo3h/HiJaVaKMKc0v8RGwWQ8X9UKHk4VkRBhmQHBK40CnEi867HixEyhr20t7qbRx3Dmt/F77Q/m5j7T9QO+lFTuiIwU5KcvVpaUYPDeyrbRhcp1Yx/ltgaq4+LQ/fxuL2Tg1mG9jsgGDhiTiOgMvXf76+1OrrEKXEIadd1J0arva18AV796wHJ6RzV53Qf3JRFzi+0IaHkzd2az3sbAQLiXeqyHmIon93XYqRVlz0vf792BC3kKzvLTwhe0y19HUHzkf97iDZYhHpBxn+crNT1FfmjEYezXoaVKVTesKi0V9g4Qu1o9b3972dJqeZjYarLKNa9lwOdFPl99suXS8+Lu4W0PdfASyJ8sw=
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete User by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/users/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a user by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to delete","required":true,"schema":{"type":"string","description":"The ID of the item to delete","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"email":{"type":"string","description":"Email"},"first_name":{"type":"string","description":"First name"},"last_name":{"type":"string","description":"Last name"},"role":{"type":"string","description":"Role"},"role_id":{"type":"string","description":"Role ID","format":"objectid"},"root_admin":{"type":"boolean","description":"Root admin"},"root_admin_role":{"type":"boolean"},"routes":{"type":"array","items":{"type":"string"}},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsUser"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsUser"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

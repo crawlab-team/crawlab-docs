@@ -1,0 +1,75 @@
+---
+id: get-database-metadata
+title: "Get Database Metadata"
+description: "Get the metadata of a database"
+sidebar_label: "Get Database Metadata"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVktv20gM/isCTy0g1NnuLgrolrZBYBTFFnmcAsOgNbQ17WhG4VBpXEP/veBITpxYdlr0sCcb4sfXx+FjA4KrCMUNfETBBUaKMMvBUCzZNmKDhwLOSTKpKKtJ0KBgFpYZZmZQgBxCQ4wKnhooYEUy3wrnWx3IoUHGmoRY/W3AY01QgDWQg1U3DUoFz31PP6o39b7jj+m2tUwGCuGWcohlRTVCsQFZN2o0Clu/+jVjy8A1ChQQFl+pFGug62bqIzbBKx/FBt6enOjPU2v/fYIcyuCFvKgUm8bZMvEw+RoVstmPrHeibLCyJrZ3kCj6JVRfo0coMuNaKRSq48smetafE9XlILhwf2K4DK6t/R8YwFbC3PqSqR4IHfCLEByh1yDLyjrD5A97gdJy2TrkV2derKy3z/pDCu+1GjG0xNbJKAt0LzzykLocKozVqOAbrUe/H2TaB5n71rnxFAPblfXo5gf1G7Y18npcPQpKG8crnD7sCVRixemnMcoSwHpD9//r6zjIRmBDvCOxXmhFvNvY1svfb48kOtXsdrI9WOojQbxUtN+vSw6tt7ctjdX5eCpJfiCS7vlMvG4MCpks9X9maGm9TaJDLq4UCN3hGI7JPm/XgfYac+DRxGuKEVe/SeSOzw/BCwfniOPFMMbPrVTt4lAwKeJ/xob8ezTZBd22FAUS5q99zLXHVqrA9gcZBf07Zmjqhdijyy6J74izs5R9l7KVKgyLM61JqaCAycOwn2ys6SY7izRS2bKV9aUul2F4NvYqfHs6GBv7idbb5VoRmtQVw9o9/TLNeo2+v5chqW4JZPzucJGdfpnuLdGLs8srFWTLwNkAhBzuiGMPOHnz7s1JGlQhSo3+sX3TJbFlP/v8mNETD5vHpfry6TEkK3Qvk8ahTUOw5TRceyZvdtZmDkW6Nx7InOVQhSiK2mwUc82u6/TzbUs6Y29mOdwh2/To9WwxNup/A8USXaQjsb+6GM6U19no4TEa+rZ4Xit3h077H2DYMnosdTOdUH01NZ5ecFqW1MiOyt4xojfNw0s7P7uCrvsJFyJtQw==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Database Metadata"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/{id}/metadata"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the metadata of a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the database","required":true,"schema":{"type":"string","description":"ID of the database","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"databases":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string"},"tables":{"type":"array","items":{"type":"object","properties":{"columns":{"type":"array","items":{"type":"object","properties":{"auto_increment":{"type":"boolean"},"children":{"type":"array","items":"circular(EntityDatabaseColumn)"},"default":{"type":"string"},"extra":{"type":"string"},"hash":{"type":"string"},"key":{"type":"string"},"name":{"type":"string"},"not_null":{"type":"boolean"},"original_name":{"type":"string"},"primary":{"type":"boolean"},"status":{"type":"string"},"type":{"type":"string"}},"title":"EntityDatabaseColumn"}},"indexes":{"type":"array","items":{"type":"object","properties":{"columns":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string"},"order":{"type":"integer","format":"int32"}},"title":"EntityDatabaseIndexColumn"}},"hash":{"type":"string"},"name":{"type":"string"},"original_name":{"type":"string"},"status":{"type":"string"},"type":{"type":"string"},"unique":{"type":"boolean"}},"title":"EntityDatabaseIndex"}},"name":{"type":"string"}},"description":"Updated table definition","title":"EntityDatabaseTable"}}},"title":"EntityDatabase"}}},"title":"EntityDatabaseMetadata"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubEntityDatabaseMetadata"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

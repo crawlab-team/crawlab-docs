@@ -1,0 +1,75 @@
+---
+id: create-role
+title: "Create Role"
+description: "Create a new item"
+sidebar_label: "Create Role"
+hide_title: true
+hide_table_of_contents: true
+api: eJztVs1u00AQfhVrzts2DVQF3wpUKEJAlaYXoqga29Nkwd41s+OWEPnd0e46idOmNA9Qn2zv/M/3zc4KBOcO0imMbUkOZgoKcjnrWrQ1kMJHJhRKMDH0kGihChTYmhj9+aiAFPIgccu2JFDA9LshJx9ssYR0Bbk1Qkb8K9Z1qfOgd/LTeeMrcPmCKvRvsqwJUrDZT8oFFNTsvYgm508LlAOkbnXRE3LC2szhcUKjT6DgznKFsrGkC2hVl0hxi/KylViWIhFdkROs6r7RAoWO/EnfarY83Gq2fC7GHfmXzH3qfbUKDFb0stI3jHGztXKLRaX7jjJrS0ITzxuJZe/OkBl93B4k7qmfx8HDOBpoFTR1cXDhb6LsAYVfWz2k8Gurzxe+ccT9rLQRmhP3xbWRN0NonyQ6WVDiAZyITWJQoEC0lN7OV1tQ6Tz5gqanj2YqPCMD6Gdb0Y9boo1M3Qi0bVRxtTUu9mI4GAS+7ATw/QuoVya+MvGViYcyUQExW95bu4qcw/me/rUKnKA0+0re9mhsjbAtS2I37qj7WcuiyXZGgdd4u4/MH7BIxvGShSBz+lTmxmAjC8v6L4WSne0zNDJCbLBMronviZPLkHEbMpSF9Vd7bV3gNsoCUjjhsCIocJQ3rGV57WdGRB7WemJ/UR+hWOsvFGDovS0Ii9CkiH24uBolUcN79FNovN0cLv9gVZfUnzdhomxB058QMBwM3x4Nzo+G7yenZ+nZaTp8dzw4P/0Bu5x/DnKb311om+8+8YQb2lJtuhaa7XLmf6H0WbD10aF54KugzZ0NBdwMfHwoMUsurkZPgh5fXk/8QXJnOekEQcE9sYsCg+Pz44Fvvm9ihaEzXYLdTjeOG9ujQba5J/aufl1vhf7ISV2iDgOo4dJrRphMgdeb5MLDJ53CapWhoxsu29b//t0QLyGdzhTcI2vMfLLTWavWIEmnK/hFy44rZORo4t168bKJ0Hp0gbVqrXGR51TLf2VnPYRffb+egIKsW1crW3gdxgfffnyAFMK+67UDzsO/FZRo5k0YAhBt+ucfvLrYZQ==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Role"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/roles"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new item
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"name":{"type":"string","description":"Name"},"root_admin":{"type":"boolean"},"routes":{"type":"array","items":{"type":"string"},"description":"Routes"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"users":{"type":"integer","format":"int32"}},"description":"The data to update","title":"ModelsRole"}},"required":["data"],"title":"Create_roleInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"name":{"type":"string","description":"Name"},"root_admin":{"type":"boolean"},"routes":{"type":"array","items":{"type":"string"},"description":"Routes"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"users":{"type":"integer","format":"int32"}},"description":"The data to update","title":"ModelsRole"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsRole"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

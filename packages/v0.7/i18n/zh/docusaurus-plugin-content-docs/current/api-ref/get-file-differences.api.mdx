@@ -1,0 +1,75 @@
+---
+id: get-file-differences
+title: "Get file differences"
+description: "Get differences between current file and previous versions"
+sidebar_label: "Get file differences"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1v00AQ/SurEQeQ3DoqSIBvhdKqBwTi4xQFabIex1vs3WV3nBJZ+9/RrJ02JYAE5OJo5+vNmzczAuMmQrWEK8OwKqCmqIPxbJyFCq6IVW2ahgJZTVGtiW+JrNJDCGRZNaYjhbZWPtDWuCGqLYVonI1QgMeAPTEFyT+CxZ6gAlNDAUaSe+QWCgj0bTCBaqg4DFRA1C31CNUIvPMSETkYu8kJmSlI6Jfl4uQlnjTnJ5er8exZegQ/I3/r7MZdvFLv1jek+bpWgXygSJapVhgVqpa+Y03a9NipuxJsuJOa+zBIPyeeLOr6AlJx19TcSm7r20Bh9xd9HVV4j9wqdopbygRDWkm26J2NFCXB2WIhn4dhlzKLg2FBAdpZJsvii953RqP4ljdRAsZjRC73JkwH5ymwmcppV9OBl7FMGwpQQONCjzw9PT2TTnqKETf0iy7TPbkfB60pRkjykxhuXQ0VbIinKbdQQbkxHMvR1KkUEmIprUEBkcJ2L6khdFDBmPugVJXl2LrIqRq9C5xK9OZIFxfU4NCxOn9/raZUUMAWg8F1N3U7ZZN/ZIdeVqNl9lDkT5x2JOeAarKkAqTsNJG9pXMau/ycChA4D8wvFi8WKclcI+khGN7lfl4RBgrngxCwXB2aP2ZQGd+h0x3LM8Q9dlhnp8y6sY3LnjP7rwPedrgWBo7YEVYaF9TsUyi0ynmyJ9ENQYu8ZJzrQZboltZKix8FhXVvrPIdskhCGJ3OAFSwOH1+uphIiNxjFt68NXJdmmPVPoA03ov4/67RTBTTdy59h8YKpiygcZbcEkRyUECVb1RWncAR3a32M17COK4x0ufQpSTP07rL9GoTRUQ1VA12kf7QyOMP8214oo6W/TdIv9Lu/s5ssRvEJV+GvXj/HcP9SftN8fkR7e6w+B6UqSGtZAkIawoZxmQ415o8H4QcHSHBf7f+V28+QUo/AABBPgs=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get file differences"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}/files/diff"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get differences between current file and previous versions
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"},{"name":"path","in":"query","required":true,"schema":{"type":"string"},"description":"Path to the file"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"File differences","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

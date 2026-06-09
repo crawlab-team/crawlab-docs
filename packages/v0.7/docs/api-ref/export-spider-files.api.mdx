@@ -1,0 +1,71 @@
+---
+id: export-spider-files
+title: "Export Spider Files"
+description: "Export spider files to a zip file"
+sidebar_label: "Export Spider Files"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNk9Fr2zAQxv8V8T1tIJpsbAz01m0ZhD40JO2TCUWJLrVWW1JOctbU+H8fsh1I11D2ZMu6++7ud59bJP0YoQqsgjXEEWsJQ3HLNiTrHRRmz8FzErG/FztbURTJCy1ebOiPkPCBWOf4uYEC9RkPQ8ZDnwGJoFnXlHINVbRwuiYoWAMJm+sEnUr8W3zoSsx/QoJp31gmA5W4IYm4LanWUC3SMWStmNi6x3c1dp5rnaDgN79pm6xB162zdAzeRYpZ7fN0mh+vRW5v0El8uXT1XRuxpH1DMQ0xn97G3DvdpNKzfSGTg75eEpq7ROx0JVbEB2IxY/aMrpOoKZU+ow0+pp5lKqEwGRDHSWtNN+lBTwb4kIi0bdim4ypjGibTwd75J3JnzHSwN3Q87aAkbYghT9u5XszFkJG7sG7n+1Sbqnz7g/WfSm/E9WL+BvpytrrLF2LnWYyBkDgQxyFgevXtappR5JFq3fc0Vh0dN+7t1+ifV/ottt4lcuk/DTpOm+g5TUKlrcuVG66y0gCzwAgTEqp35cm4I9G1RJnpqwJtu9GR7rnquvx53xAfoYq1xEGz1ZtMp2hhbMzvBmqnq0jvjPBhOXr7ozh368WuT4tzeWsHXTX5BIknOg7/U7c+d8zidnWHrvsLFrRQMQ==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Export Spider Files"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spiders/{id}/files/export"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Export spider files to a zip file
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Spider ID","required":true,"schema":{"type":"string","description":"Spider ID","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK"},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

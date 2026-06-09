@@ -1,0 +1,71 @@
+---
+id: delete-task-by-id
+title: "Delete Task by ID"
+description: "Delete a task by ID"
+sidebar_label: "Delete Task by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJx9U11v2zAM/CsGnzZAaLJhwwC/dWsegg5YkaZ7CYKAsZhajSO5FJ3NM/TfB9pJP5asT3HE05FH3XUgeB8hX8Ac4zbC0oClWLCrxQUPOVxRRUIZZoJxm63bbHoFBkJNjIqYWsjB9piVIlbrduUsGKiRcUdCrOQdeNwR5NCXnPLWKCX820xnGBowPTaOyUIu3JCBWJS0Q8g7kLZWpijs/P0bDJvAOxTIIawfqBBnIaWlEsc6+EhRuT6Ox/rzmuLHNRgoghfyolWs68oVvdrRQ1RIdzrO0ER1s+5G3NCAmAOfTp0M7ChGvKeztSgoTTxTSgbESaVH34IXDlVFHH8GZ2cHWZCSoj6dE/YVbTajx4aiQI/5cIq589hIGdj9Iaugz+eIpl6IPVbZLfGeOJv0KlOvSsrwbIneB1JCDiM1Rxx1ziYwEKlo2El7q2scNoW1m4ct+ReqsXbX1B4NUxJaYjBHK13eTLPhhjZ2fhP6q8f1MP6qcJ1d3kxPPDKb3M61kG0CZwcgGNgTxwEwvvhyMVb1dYiyw36mQ9dDHOYvw/CKvXu2zn+yc1An9FtGdYXOa6eGK707bGsB/bbAQO6sRrIMUfS469YY6Y6rlPT4sSFuIV8sDeyRHa5V+qID66J+W8g3WEV6Y8J3s0PO3mfPyTk74PFNvD7IHqtG/4GBLbVDrtMymeMj6RBD4bIoqJYXV07SpKF8ss3V5PtkPoGU/gIcOonz
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Task by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/tasks/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a task by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Task ID","required":true,"schema":{"type":"string","description":"Task ID","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

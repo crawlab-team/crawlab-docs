@@ -1,0 +1,75 @@
+---
+id: get-dependency-config-versions-for-a-language
+title: "Get dependency config versions for a language"
+description: "Get available versions of dependency configurations for a specific language"
+sidebar_label: "Get dependency config versions for a language"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVMFu2zAM/RWBpxbQ6qA7rPCtW4dit2LdTkUOjEw76mxJleh0geF/Hyg7qdt0hwHzxTZJiY+PjxyAsUlQPsANBXIVOWMpwVpDRclEG9h6ByXcEivcoW1x05LaUUzWu6R8rarDub0y3tW26SNydtY+KlQpkLG1NapF1/TYEGgIGLEjpiiZB3DYEZSwCLCSMyBvQUOkp95GqqDk2NNbYHfRNxG7zrrmmEGdhT1vvdPK+Yq0IjYX56AhmS11COUAvA+SMXG0roFxXEuaFLxLlMR/uVrJ63Wqm79UeqQDNBjvmBzLYQyhtSZHFI9JbhhOEfjNIxkWSqIPFNlO+Y2vaBFlHVNDETTUPnbIk+njJYwaOkpJSHunKg1suRXTfW8MpQSjPHKGt76CEhrKuYXoEopqIYFiKjEVw4HVsVjUmSjuDu3rYwslDLk2GsuiGLY+8VgOwUceCwwW3nbthmrsW1bXd9/UdBVo2GG0Iq90ZCpXRa7vRKBb5gA6v2aB5jugnDyjBkk7te3gab3BNptHDQLnlftqdbUac/MTmT5a3ud6PhNGite9kPKwXrrvM6iMbxl0ZH6GeMAOmxyUO2Fd7XPk3JEvEZ9b3AgDJ+wIKzI8c4xW6JQP5D4k30dDqrLS4k3PVKln2igjcRQVVp11KrTIIhNhdGoYlLC6+HSxmkhI3GEW4zx2MtonQ/wy4tMUL2bzFdbhRfH/eUfMlDL95iK0aJ2gz1IbZsE+wFKw0/CJZEFDubjoqNr1QSEPMAwbTPQztuMo5qeeovR+/SLCrITKJvmuoKyxTW93z7L2s+/zljpX/7KR3i1yNqLb56Foe/kDDb9ov9yS41okT1hRzGAn97UxFHhx8GQNiaCPC+D26w8Yxz9qDBip
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get dependency config versions for a language"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dependencies/configs/{language}/versions"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get available versions of dependency configurations for a specific language
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"language","in":"path","required":true,"description":"Programming language (python, node, etc.)","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Dependency configuration versions","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,75 @@
+---
+id: get-dependency-logs
+title: "Get dependency logs"
+description: "Get logs for a dependency operation"
+sidebar_label: "Get dependency logs"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVN9v0zAQ/lesEw8gpUs1kBh56yhMe0AgBk9Vka7xtfVIbM++bKsi/+/onHTtVoHISxLfr++++849MG4iVAuYkyerydaGIiwL0BTrYDwbZ6GCK2LVuE1UaxcUKr133innKWD2KsBjwJaYgmTswWJLUIHRUICRLB55CwUEuutMIA0Vh44KiPWWWoSqB955iYgcjN3khMwUJPTXYjr5gJP1bPJ52Z+/S6/gJcQvzm7c/FJ9Xd1SzddaBfKBIlkmrTAqVFt6RE21abFRTyXYcCM192GQXiYeLOp6Dmkp4KN3NlIUvOfTqbye+88P5AhlUEDtLJNlcUXvG1NnwsrbKP79af8uV5T+g9DLZqhWO01HXsYybShAAWsXWuTh6O25dNBSjLihU05TOrR809U1xQhJHonhrdNQwYZ44H4LFZT6SBhlb3Qqx64ihfv9qLvQQAV97oRSVZb91kVOVe9d4FSiNyfzmtMau4bV7Nu1GlJBAfcYDK6aod8hm3yR7VoR6ZbZQ5Ffo0hzDqgGSypAyg4j2VsaV2OTj1MBAueZ+WJ6MU1JBhup7oLhXe7nkjBQmHVCwWJ5bL7JoDK+Y6cnnkeIe+ywyk6Zd2PXLnuO/H8M+NDgShg4YUdYkV0bfQqFVlbNTqLrQk1KGxnoqhNxP9BK1eJHQaFujVW+QRZRCKMU4pByevb+bDqQELnFLL1xRWW99YlsnyHqDyr+z9tgJITpkUvfoLFSOwulH8W1gGNxQQFVvity+eV+lgvo+xVG+hmalOT4rqMgU1oe5JJnpk2Ubw3VGptI/8D/+vt4A71Rh+X+C+DxEO0uy7Pp5A8K+E274W5LS5EdoaaQYQyGWV2T56OQk8UXUT2t3NWnH5DSH0jG5V8=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get dependency logs"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dependencies/{id}/logs"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get logs for a dependency operation
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Dependency logs","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

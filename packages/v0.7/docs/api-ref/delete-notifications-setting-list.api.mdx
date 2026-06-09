@@ -1,0 +1,67 @@
+---
+id: delete-notifications-setting-list
+title: "Delete Notifications Setting List"
+description: "Delete multiple items"
+sidebar_label: "Delete Notifications Setting List"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVlFv0zAQ/ivWPYetIBBS36CtUGEMtHZP0xRdkltj6tjBvgxKlf+OHCdtunY0E09t4u/77nK2v7stMK4cjO/g2rB8kCmyNFosiFnqlYP7CDJyqZWlfw9jmJIiJlFUimWpSEimwkEEpiTbcOcZjCFrULHuabrYBdFYSccQgSVXGu3IwXgLb0Yj/3MY69sXiCA1mkmzX8WyVK3a5Q/nIVtwaU4F+n+8KQnGYJIflHr90vqcWIYAGfIAVCyzHsixlXoFT0swn0IED8YWyDslmUEdQZqj1qRimbmeDFqLG4gglOqE/Emtw5iToCzmU9cEsoRMWYx8Pt1JwAqWBTnGouxHzJDplV/pqyab4arJZtAHnJOb9p7qCEhjoqi/F4kxilAfEWctso6gQKniJE2Hl/6ozF9RKvFxMtnJ/b9aT4zN/4qx8QsaCzpf0msMu+pIZ2Rj8imcZy0atAjoPXtYyJas28iMbh2zlasV2fPkJbq16NCeTUWpkAeEXXbIHisu0K4z82vA2evoYkc50DHZC1IQDbzPtzLNY6bfA27qTsRzRMM5qRR35vdSOfF58e36QJNzGrKxO6mA9wqS1RBiA/P4wcdgfwKqMhvscrcBO8DlOtUhLtepPu9ylaM4rRybIn7moj3nXLeORGAKd3Dpjq7+Mifh+5dgI0L2sNsA+GoyUq7fvdvm3fioteZEzb0hkXO4OrGD/s4zcnXKk/b7DhOj2RqlyLqbtpF/kpxXyT/yqb3A21Od/iNm4oZ+VuSaI/929PoYc6ux4txY+SfY/btTQnPNZDUqsSD7SFbMmgLUzQdzbvaziW/9yDmM4fJgSrl03ejjvS+trOTNws8YYUDAUi7Nmvq3D0v5hRon9wnkhBlZ6EwaPnyfi8DwSUj9EHpAV0WLvxQm4sP3+dH5uJktln5BPBgrWiBE8EjWBcDo4v3FyFeiNI4LbHJqo7ZTWn8XXDfUiaswfz3pz7s569kRr/1ebySXpULZ+GRlm7MeankHB7VsSrgfJHPj2GO22wQd3VpV1/71z4rsBsZ39xE8opW+nfunOupqOb7bwpo2vphpSqXP/RFVFWr/ZCKs73s7PZ1dzZYzqOu/JyLKYQ==
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Notifications Setting List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/notifications/settings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete multiple items
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"channel_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Channel IDs"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"mail_bcc":{"type":"array","items":{"type":"string"},"description":"Mail BCC"},"mail_cc":{"type":"array","items":{"type":"string"},"description":"Mail CC"},"mail_to":{"type":"array","items":{"type":"string"},"description":"Mail to"},"name":{"type":"string","description":"Name"},"sender_email":{"type":"string","description":"Sender email"},"sender_name":{"type":"string","description":"Sender name"},"task_trigger":{"type":"string","description":"Task trigger"},"template":{"type":"string","description":"Template"},"template_markdown":{"type":"string","description":"Template markdown"},"template_mode":{"type":"string","description":"Template mode"},"template_rich_text":{"type":"string","description":"Template rich text"},"template_rich_text_json":{"type":"string","description":"Template rich text JSON"},"template_theme":{"type":"string","description":"Template theme"},"title":{"type":"string","description":"Title"},"trigger":{"type":"string","description":"Trigger"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"use_custom_sender_email":{"type":"boolean","description":"Use custom sender email"}},"description":"The data to update","title":"ModelsNotificationSetting"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsNotificationSetting"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

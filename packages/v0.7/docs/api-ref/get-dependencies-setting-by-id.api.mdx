@@ -1,0 +1,75 @@
+---
+id: get-dependencies-setting-by-id
+title: "Get Dependencies Setting by ID"
+description: "Get a single item by ID"
+sidebar_label: "Get Dependencies Setting by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVV1P7EYM/SsjP7VSepfetqqUNwoIra7aIlieEFo5GW8yl2QmzDiUNJr/fuUkyw3dBdKn/fCxj+05tntgLAKkd3BODVlNNjcU4D4BTSH3pmHjLKRwSaxQBWOLipRhqlXWqfU5JOAa8iiotYYUCuKtnkXaBmI2tthm3dZoSKBBjzUxeSHtwWJNkMJgMkLUIJfwX/ZNSWp9rtxOcTnRs1MFMSTg6bE1njSk7FtKIOQl1QhpD9w1EjuwN7b4XzF3ztfIkILLvlLORkOM90IVGmcDBYn++eREPl4H/fsLJJA7y2RZrNg0lcmH9qy+BoH0hwmOJNIbL81kMxJo5AUo6eqHtQ4PdaSoBHJPyKS3yB9HORuxik1NgbFu5kE1Mv0klnnUrFseNeveypGeKd/m9YI6L54pV4KMCTzQAvKNWGMyyfAj9F84ltc8FMvyuXoo9umIT/D5tvXVMr/gcyXgmEAg9Hm59YR6XlPmXEVoRwS3zXETO8bq1UzOcMYyFeTnnTeWf/ksjm2jF0vjdsQukMY+6hJp7KO+JY14bKZlbGSSRyJIgA1XQvKn01SFlzXXnTm7M8UgMO+dP0wnJlBTCFgckYb0nJHbcMQUv3OeOcveVRX5cD0tj0vDZZu9lUwU71+PrZY/UKtremwpMAyYnw8xtxZbLp03/9Igut+OBVpbJm+xUjfkn8iri6H6OFTLpZu2+LCquYQUVnPtrKZ9Hla90RFEeXnrDXc3stVGbWFjNu6B7Kw12Jgv1O13fEmoB9FN2//0aq1GD8nC2J0bXPc99PhPhZk6vVofKOT64mYjBrVzXk1ASOCJfBgBJ59+/3QyzJ8LXOOQ08QqJ21+9NTNWNrLZXtF1X9f6+8cw6lcpmdeNRWaYQKnkR/beQevRnEY3aGhkEBqtFze0gUWYN9nGOjWVzHK348t+Q7Su/sEntAbzKQ7dz1oE+S7hnSHVaB38v7herqVP6r3rt/RIvYPaeUVn7Bq5RdMa1bud7yPyf5lJa3RcJrn1PDM5eAiymF9Ed7lxQZi/AYE7e16
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Dependencies Setting by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dependencies/settings/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a single item by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to get","required":true,"schema":{"type":"string","description":"The ID of the item to get","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"exec_cmd":{"type":"string","description":"Exec cmd"},"key":{"type":"string","description":"Type"},"name":{"type":"string","description":"Name"},"pkg_cmd":{"type":"string","description":"Pkg cmd"},"pkg_src_url":{"type":"string","description":"Pkg src url"},"search_ready":{"type":"boolean"},"setup":{"type":"boolean"},"total_dependencies":{"type":"integer","format":"int32"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsDependencyConfig"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsDependencyConfig"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

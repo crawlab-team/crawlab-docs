@@ -1,0 +1,75 @@
+---
+id: get-git-logs
+title: "Get Git logs"
+description: "Get commit history logs from the Git repository"
+sidebar_label: "Get Git logs"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v00AQ/SurEQeQnCYqSBTfUgpRJRCIj1MUpIk9trfYu9vdcdvI2v+OZu00aSM44Ivtna83b97sAIx1gHwNK82wyaCkUHjtWFsDOayIVWG7TrNqdGDrd6q1dVCVt53ihtRKs/LkbNBihAwceuyIyUvSAQx2BDnoEjLQktEhN5CBp9teeyohZ99TBqFoqEPIB+Cdk4jAXps6JWQmL6G/1ovZO5xVy9nHzXD+Jr6A53A/W1Pbq0v1ZXtDBV+XAs1TIMNUKgwKVUMPWFKhO2zVYwnW3ErNfRjE54lHi7q+grgR8MFZEygI3vPFQl5P/T/pwMpWiSzIoLCGybD4oXOtLlD85jdBnIfT5m0qJ81768izHksVtqQjL22YavKQQWV9hzwevT4X+B2FgDWdEhrjod/vfVFQCBDlkRhubAk51MQj8Q3kMK81h/mgyzifugnk7/bz7X0LOQypA4r5fD40NnDMB2c9xzk6fTKkK6qwb1ktv16rMRVkcIde47Yd+xyzyReZvhNxNswOsvQKo0pTDshHS8xAyo5z2FtaW2CbjmMGAueJ+WJxsYhRphmo6L3mXernktCTX/bS+npzbP6eQCV8x06P/E4Q99hhm5wS39pUNnlOvL/3eN/iVhg4YUdYqaxXk0+m0CjryMyC7X1BqtQyyG0vir6nrSrEj7zCstNGuRZZxCCMkg9jysXZ27PFSELgDpPkpr2U/ZYVnib7BMpwkO1/3AMTK0wPPHctaiMAklqGSVlrEGVBBnm6HRKEzX6QaxiGLQb66dsY5fi2Jy8j2hy0kgZW6iDfJeQVtoH+0cPLb9Od80od1vkvQKdDNLukzbaXP8jgN+3G2yxuRHOEJfkEYzQsi4IcH4WcbLso6nHPVh9+QIx/ABcr4Gs=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Git logs"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}/logs"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get commit history logs from the Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of logs","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

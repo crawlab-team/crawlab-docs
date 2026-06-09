@@ -1,0 +1,75 @@
+---
+id: get-database-metrics
+title: "Get Database Metrics"
+description: "Get the metrics of a database"
+sidebar_label: "Get Database Metrics"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVe9P2zAQ/Ves+xzRwjZNyje2MVQhNMSPfUEVcpNra3DscL4wSpX/fTonKYVmGWyfIufe3Xs++57XwHoRIL2Gb5r1TAcMME0gx5CRKdl4BykcIyteoiqQyWRB+bnSKm/xkIAvkbRgJzmksEC+6YI3bQokUGrSBTKSsK3B6QIhhbmxjAQJGCG6r5BW8Jr+e8SoGFRzTxtqKRuyJRYa0jXwqpSKgcm4xXuK1HWy0VPqBQ6rOdMLVK4qZlH2Dr1xjIsYGkqbeyo0N/APBxE815VlSPe31QTz9BY1Lex9WtqkASXjF1I88bCUC0+sfFz1Howm0pJlGIuw9d/PbjGT2iXJRWKDMXqCq91TrRP4qW2FEnnJHn/Hm+lWSpISZVxmq9y4hXKVtZCAfPTMIqRMFdZ1AmxYlnBGpjBsHvBIKAb2VScQeBVzpHOQAD6W1uddzWkChKH0LjS7OBiPd7X+OIEEMu8YHUtUl6U1WZyg0W0QyHq3fX9ok1zjPlS3s6/eMXlrkcIxcjfkp81YnrdSZVtI5Km34wWGIGPRFwusuQo9obpXQkd4bHhZzd6orZZiH/sa+UXn6hzvKwwMEbO/i7lyuuKlJ/OEuYA+9RWaOEZy2qoLpAckdRSbUcfN89K3thZdjJeQwmjjHqNnhwuYVWR4dSFH15yOLs2lv0O3PQalkavdjtISdR4ntB2zw7OJajKE3Li5j6ldJ0n/snqmDs8mO+N3fnRxKYFobi0QEnhACg1gvPd5bywdKH3gQkdNLasYfNd+dbrZ0AuC9fON/euD0G6V8ZFHpdXGCW1FVqo0HbyGbRPvejhNYOkDS3i9luAV2bqW343lyMORmyAznEM61zbggMrBd6NX4p14zvOb9NBYDYD44Nt5X1r9AFH72PwPTeviAyQt4h9JXpn6EE/zQDzzTGVBpjHc62mddJddTrHJOcwyLLezdpxQqmxG8PjoEur6N7sk+X8=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Database Metrics"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/databases/metrics"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the metrics of a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"filter","in":"query","description":"Filter query for databases","schema":{"type":"string","description":"Filter query for databases"}},{"name":"page","in":"query","description":"Page number","schema":{"type":"integer","description":"Page number","format":"int32","default":1}},{"name":"size","in":"query","description":"Page size","schema":{"type":"integer","description":"Page size","format":"int32","default":10}},{"name":"sort","in":"query","description":"Sort options","schema":{"type":"array","items":{"type":"object","properties":{"Key":{"type":"string"},"Value":{"description":"Value of any type, including null","nullable":true}},"title":"PrimitiveE"},"description":"Sort options"},"style":"form","explode":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","title":"ControllersGetDatabaseMetricsResponse"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubControllersGetDatabaseMetricsResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

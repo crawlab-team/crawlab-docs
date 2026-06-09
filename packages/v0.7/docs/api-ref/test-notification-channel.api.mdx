@@ -1,0 +1,75 @@
+---
+id: test-notification-channel
+title: "Test Notification Channel"
+description: "Test a notification channel"
+sidebar_label: "Test Notification Channel"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVU1v2zgQ/SvEnFpAW6eLFgvolqQ5GC22gePuxTCCsTiO2EokS46SqoL++2JIqXFjb4MF6osl8pHvzZsPDcB4F6HcwN+Ozd5UyMZZdVmjtdRE2BagKVbBeFmHEtYUWaGyh+gqo6EA5ymktaWGEpgi3x4ibx+RHgO2xBSEfACLLUEJRkMBRng8cg1PyZfvlNsrrum/+AN97UwgDSWHjgqIVU0tQjkA914IIgdj7/7/xXsXWmQowe0+U8VGwzhuMx9FvnC6F5LKWSbL8ojeN9M1i89RSIZjNfkycSOIc2woym7jKmzoedUfEk7tXUjSxW7VUox4Rwm7x64RzWShALJdK3lOL99r2I4FsLtt0TQHTBgC9pIDpjYeKxifSriS8wq1DhQjRcVORbJ60iJ77NQLZ5s+ycwrvaeXMAq/YYkzFdXJQlla3zGMo4ADRe9szBb9eXYmfz+L+fgeit+VAwrBhZMGzA6f2ouM3J3y7SDYS2c5uKahEP9xRq+msKYo35wK7AK1WuVSg4R5fYz5ZLHj2gXznbSA3p66aGmZgsVG3VC4p6CuUpRjioprJ03rXUxuSP+VsDjMSlxMaYmLwehxIUmGAiJVXTDc34i12T30Zu2+kD2sLG/eUz+3d02oKUAxN/759VLlEyJGkrV6bK2rb9j63BBza+Qy/lG/m9loqWpj9y4Rz4YHfGhwp86vl0cttLq6WctGqs4JCAXcU4gZcPbqr1dn4qf40mKKaNKcRuGpsfmU5WAwPDM/J6+YvvHCN2isMHchdWjOyAZ+yogU/DyrCyjT/Exp2RZQSybLDQzDDiN9Cs04yvLXjkIP5WZbwD0GgzsxaTOANlGeNZR7bCL9IoYXq2nMvlTPDs6TEc0lYaUe7rHp5A0K+EJ9/giMksepRkRb3rjMCv5Yy/HHg0dtPhbzifOqIs+/xG4Pav/6480aCthN47x1Ws4EfJBPCz5kkc5n58shrw3QoL3r0kiAfKf8/gWeWYeo
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Test Notification Channel"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/notifications/channels/{id}/test"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Test a notification channel
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the notification channel","required":true,"schema":{"type":"string","description":"ID of the notification channel","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"locale":{"type":"string","description":"Locale for the test message","default":"en","enum":["en","zh"]},"to_mail":{"type":"array","items":{"type":"string"},"description":"Email addresses to send test mail to (only for mail type)"}},"title":"Test_notification_channelInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: get-task-logs
+title: "Get task logs"
+description: "Get task logs"
+sidebar_label: "Get task logs"
+hide_title: true
+hide_table_of_contents: true
+api: eJxtVE1v2zAM/SsCscMGOHXQDVjnW7puRQ/DhrU7BRnAWEyi1pZUiW4bGPrvA2Xno81ysSM+kY/vke6BcR2hmsMdxocIiwI8BmyJKchxDxZbggqMhgKMhQo88gYKCPTYmUAaKg4dFRDrDbUIVQ+89XIjcjB2DZKQmYJc/TufTr7gZDWbfF/055/SOyhAU6yD8WycIH44u3ZXl+rn8p5qvtEqkA8UyTJphVGh2tALaqpNi43al2DDjdTcXYP0NvEQUTdXkBZCPnpnI0Xhez6dyuM1XuRQjVtHKKB2lsmygND7xtQooPI+CrI/7dzlWtJ5cJ4Cm6FO7TQdoYxlWlOAAlYutMjD0cdz4d5SjLimUzVTOjR729U1xQhJfm/7vSZWfNRDS7xxGipYEw+ebKCCUiCx7I1O5QiMFJ523nehgQr63CClqiz7jYucqt67wKlEb04MvKIVdg2r2a8bNaSCAp4wGFw2gwxDNnkj27UyehtmD0V+5AnUQw6ohkgqQMoOHu0ijauxycepAKHzKnwxvZimJE5HqrtgeJv7uSQMFGad9D5fHIdvM6nM7xi0l3+kuOMOywzKdhi7chk52vI14HODS1HgRB1RZeWCGjGFQqucJzuJrgs1KW3E52Un0/5MS1ULjoJC3RqrfIMssyKKUohDyunZ57PpIELkFvNEjjv7dgZecdm3xvTCpW/QWMmSLe/H+ZhDng8ooMr7n/MsdnbMoe+XGOlPaFKS48eOggi9ODieZdcmyruGaoVNpBMi+/2C97/Hr8oHdVjY4v9Mx0O02zxhTSf/oIAH2g7fq7SQySHUFDKNITCra/J8dOVkpWUu9uty/e0OUvoHWJK/CQ==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get task logs"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/tasks/{id}/logs"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get task logs
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task logs","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

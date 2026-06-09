@@ -1,0 +1,71 @@
+---
+id: create-node
+title: "Create Node"
+description: "Create a new item"
+sidebar_label: "Create Node"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV1Fv4jgQ/ivRPLst5bbqXd7YbnWHVu1Whb4cqpBJpuDdxM7akxYO5b+vxg4kQLfk3uGJ2N/M2J5vvrHXQHLuIJ7AvUnRwbOAFF1iVUHKaIjhxqIkjGSk8S1ShDkIMAVayfPDFGJIPGKqTYogwOLPEh19NukK4jUkRhNq4r+yKDKVeLuL746dr8ElC8wl/6NVgRCDmX3HhEBAYTkKKXQ8m0rqgJqqtAVyZJWew/6Ghl9AwIuxuaStJ5VCJUAmpF6x5WFmTIZSH7gYBODWZCrpeNxgFElqh08l4Rmp3DsLB5l28hbSkkZs60jmxVGvs1V3r7PV784oKa1FTVNbao3WtVwqTThHe+gzWEQbi5ZjpemPPnvdsTi2yC+tr0oAajnLMO2QttsaWQlYGEda5ng82j8bZCVAFR3o9eCRbppLR2g7LGvoohpbCfiBHdI05tlKQC6T4+C7wU3ALv9H0u7k8sOEdTu7+/rcHEkq3XH8KOAqAWWRdi6Fp4DtUAobr11KYeP1d6Wwz1oYLzBimYrIRCEQCCBFGQe5MylmjiXWW7JIKsuknQRpe26gN42cDnVRElRVMHGF0S4IXb/X86q4s4BvX0Gc9Paktye9PentSW8bvRWA1hp7uATOEjon5+8c7QenyEvZirXRZE2WoXWPtUD/rWhRznYEny0+vSfZn2UaPYYLM3jM5SHmScuSFsaq/0IpXb3naKgJrZZZNEL7ija69Tuu/A5pYfiaXhjnFVzSAmK40P66L8BhUlpFqxF3hiDrslBj8wPb0iAL9RU5M4qjLVCmnsSBljB4GEbBgiNyr3lsXgG3S5kXGba7iu8bDRE2fYBsiTsSD/1e/9NZ7/qs/9f48iq+uoz7f573ri//hV3x7oJjDjYhD2S1t0+vLXSrd2F5jZI1ENap1lejRcHEa0wz71Wk/bncWca+8w0Nm5F2sX609Xb5tcmr9Ivxud3eOORbJmfR4GF4UJaPt6MxT0QvxkY1EAS8onUB0Du/Pu8xL5lfufSkqbdQPx3vw8Nwr+dsLyrvvjBr2hEu6aLIpPKdp7QZWwYGT0BvHqycEh5Yr2fS4ZPNqoqHf5ZoVxBPngW8Sqs4i/zF3SjwN56s69zchMWceaFneFYG1u/doCqxsRgkCRb0Ifa5VXwP30ZjEDCrX8U5H0kMVr7xi1m+QQz+Wc3WvgT92Boyqeel1ycIPvn3C7xAVww=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create Node"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/nodes"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new item
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"active":{"type":"boolean","description":"Active"},"active_at":{"type":"string","description":"Active at","format":"date-time"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_runners":{"type":"integer","description":"Current runners","format":"int32"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"hostname":{"type":"string","description":"Hostname"},"ip":{"type":"string","description":"IP"},"is_master":{"type":"boolean","description":"Is master"},"key":{"type":"string","description":"Type"},"mac":{"type":"string","description":"MAC"},"max_runners":{"type":"integer","description":"Max runners","format":"int32"},"name":{"type":"string","description":"Name"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsNode"}},"required":["data"],"title":"Create_nodeInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"active":{"type":"boolean","description":"Active"},"active_at":{"type":"string","description":"Active at","format":"date-time"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_runners":{"type":"integer","description":"Current runners","format":"int32"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"hostname":{"type":"string","description":"Hostname"},"ip":{"type":"string","description":"IP"},"is_master":{"type":"boolean","description":"Is master"},"key":{"type":"string","description":"Type"},"mac":{"type":"string","description":"MAC"},"max_runners":{"type":"integer","description":"Max runners","format":"int32"},"name":{"type":"string","description":"Name"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsNode"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsNode"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

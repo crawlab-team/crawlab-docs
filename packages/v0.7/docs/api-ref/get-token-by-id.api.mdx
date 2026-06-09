@@ -1,0 +1,71 @@
+---
+id: get-token-by-id
+title: "Get Token by ID"
+description: "Get a single item by ID"
+sidebar_label: "Get Token by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVV1v2zAM/CsCnzZAW7JhwwC/dW1RBMW2ok2fgiCgLSZWa1uuRGfzDP33gXbSr6Rt9hTHpO7II3XugHEVIJnB1N1SFWCuwVDIvK3ZugoSOCNWqIKtVgUpy1SqtFWTE9DgavIoWRMDCayIFywYi7RdWAMaavRYEpMX/A4qLAkS6ENWkGvkHJ7TTXNSkxPllorzDR87tSIGDZ7uGuvJQMK+IQ0hy6lESDrgthbswN5Wq//CXDpfIkMCLr2hjK2BGOdCFWpXBQqC/nk8lp+noL/OQUPmKqaKJYp1Xdis12N0EySl2y1wIBFtvKjHdiAwyAdkiapv9tpPZk9TGjJPyGQWyG+jHA+5im1JgbGsH4MaZPogkceoaXs4atq+VOOwI2/h/MSBu1+3A8bfp0UNTW0OVuB6yD1AgS3qIQpsUV9SIO5bXdkOWdiBCDSw5UJIfjhDRbhvj7x3freGqKGkEHC1R9moITByE/aE4gPRsavYu6IgHy43F+PMct6kTyqIcuTLvrvyHY26pLuGAkOf82k357rChnPn7V/qV+HrPqBJxeQrLNQV+TV5ddq3HPsWOXcbH+q9h3NIYNSvSBh11kTQEChrvOX2Su7lcKmwttNna4S1Pad261I5oSEP292Eo4uJ2jYsKUvXH90q5fF3gak6upjsDP/y9GoqAbV0Xm0SQcOafBgSxh+/fRxL77ULXGJf04ZVXLhnvXffJ9jdgxO9Ytib/pj+8Kgu0A6XwhdyfhBsNtypABoSa+RjkLvA8r7rUgx07YsY5fVdQ76FZDbXsEZvMZXuZx0YG+TZQLLEItArZb673Lj5e/WaP++teTuoSqa0xqKRf6DhltrhCxPnUW8nJ2UNgaMso5ofHdnxbLH++006O51CjP8ARlZp+w==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Token by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/tokens/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a single item by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to get","required":true,"schema":{"type":"string","description":"The ID of the item to get","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"name":{"type":"string","description":"Name"},"token":{"type":"string","description":"Token"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsToken"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsToken"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

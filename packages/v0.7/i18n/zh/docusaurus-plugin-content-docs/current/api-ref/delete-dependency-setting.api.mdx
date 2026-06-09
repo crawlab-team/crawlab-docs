@@ -1,0 +1,75 @@
+---
+id: delete-dependency-setting
+title: "Delete dependency setting"
+description: "Delete a dependency setting"
+sidebar_label: "Delete dependency setting"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFVG1v0zAQ/ivWiQ8gZUs1kIB86+iQJoFADD5VRbrG19YjsT37sq2K/N/ROenatbzkSxLf23PPPeceGNcRqjnMyJPVZGtDERYFaIp1MJ6Ns1DBjBpiUqj0zm2rIjEbu4YCPAZsiSlIph4stgQVGA0FGIn2yBsoINBdZwJpqDh0VECsN9QiVD3w1ktE5LBLyExBQn/OJ2fv8Ww1Pfu46C/epBdwDO2zs2s3u1RflrdU87VWgXygSJZJK4wK1YYeUVNtWmzUUwk23EjNXRik48SDRV3PIC0EfPTORoqC92IykdcxR8fUKJ1pEx5qZ5ksSxR635gaJaq8jRLan1LhcnGhIjhPgc1QuHaaDryMZVpTgAJWLrTIw9HrC2mmpRhxTaf0prTv/qara4oRkjwSwxunoYIB+DCJDVRQ6gN5lGN7seyNTlBApHC/G34XGqigzw1Rqsqy37jIqeq9C5xK9OZkgjNaYdewmn69VkMqKOAeg8FlM7Q9ZJMvsl0rct0weyjya5RrzgHVYEkFSNlhSDtL42ps8nEqQOA8M7+bvJukJKOOVHfB8Db3c0kYKEw7oWG+ODTfZFAZ36HTE90jxB12WGanTL+xK5c9xzF8CPjQ4FIYOGFHWFm5oEafQqFVzpM9i64LNSltZK7LTuT+QEtVix8Fhbo1VvkGWbQhjFKIQ8rJ+dvzyUBC5BazAselHRf9j2v+DFe/l/R/boeRDqZHLn2DxkrlLJN+lNccDuWVBTUIDAqojJb5DtOcQ98vMdKP0KQkx3cdBZnTYi+YPDVtonxrqFbYRPoH9pffxlvpldov/F9Aj4dot1mgTSd/UMAv2g73XVqI8Ag1hQxjMEzrmjwfhJzcACKrp92bXX26+n4FKf0GB5Lr4Q==
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete dependency setting"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/dependencies/settings/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a dependency setting
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Dependency setting deleted","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

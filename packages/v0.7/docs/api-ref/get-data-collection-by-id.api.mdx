@@ -1,0 +1,71 @@
+---
+id: get-data-collection-by-id
+title: "Get Data Collection by ID"
+description: "Get a single item by ID"
+sidebar_label: "Get Data Collection by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVcFu2zAM/RWBpw3wlmzYMMC3ru2KoBhWpOmpCALaYmK1tuRKdDcv8L8PtJ0mbdw0OxkWqffIR4pcA+MqQHwLZ8ioTl2eU8rG2QDzCDSF1JtS/iGGC2KFKhi7ykkZpkIltZqcQQSuJI/iNdEQw4p4oZFxkT6hLZJ6YTREUKLHgpi8cK7BYkEQQ2sywlEiZ/CSeJaRmpwpt1Sc9czs1IoYIvD0UBlPGmL2FUUQ0owKhHgNXJeCHdgbu/ovzKXzBTLE4JI7iV9D08yFKpTOBgqC/nk8ls9z0F+XEEHqLJNlsWJZ5iZtlRndBXFZ7wfYkYg2XnRk0xGIgm97iapv5trWaCCpCFJPyKQXyG+jnHa+ik1BgbEod0E1Mn0Qyy5qUh+PmtSvxahJV+XbSpDFJKddNRLnckIrGPdUhx0Leo/CJ2UP+zE2TdSf7FuaCJaGcn0M3CuR3tOALgcoI2DDuRydWzZcy0v9ITG0tu4JDcBVpT66tjed7xG13aAeU9sN6mu1bYYepfS9PMWOCLbJ/3Sa8iDJb6eURETeOz+oQEEh4GpYncDI1Wu17xlPnWUvXD5M+7d/YTirkuFQ2ub4MjQXvqNWU3qoKDC0Pp/2fW4sVpw5b/5S2/Zfh4AmlslbzNU1+Ufy6rzNvWlz5cz107eds5xBDCNRc7Sdw2G0NrqBCAKllTdcX8s06toSSzNz92R3G7s0l1RvZnNGqMnDpuXg5GqiuhsSgLFL117diOfxd46JOrma7DXG9Px6Jga1dF71jhDBI/nQOYw/fvs4FhVKF7jANqaeVbbQi131tIeesay3k/jA6uozZfrDozJH07ZU5XO534l4241iGezb5RhBbLSsyMwFFp/1OsFANz5vGjl+qMjXEN/OI3hEb2Q0tQtPm9CPqSXmgQ6E/G7ab7b36tCuGox/Uz4rtXvEvJI/iLrJI9u2mTfRpp4SVmc4SVMqeefK3v6SNfjUaRfnM2iaf74Wzwg=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Data Collection by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/data/collections/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a single item by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to get","required":true,"schema":{"type":"string","description":"The ID of the item to get","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"dedup":{"type":"object","properties":{"enabled":{"type":"boolean"},"keys":{"type":"array","items":{"type":"string"}},"type":{"type":"string"}}},"fields":{"type":"array","items":{"type":"object","properties":{"key":{"type":"string"},"type":{"type":"string"}},"title":"EntityDataField"}},"name":{"type":"string"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsDataCollection"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsDataCollection"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,75 @@
+---
+id: search-dependency-repositories
+title: "Search dependency repositories"
+description: "Search for dependency repositories"
+sidebar_label: "Search dependency repositories"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVMFu2zAM/RWDZ6/JumErfOvWYRgwDAW6YYcgB1pmYnWypUh0u8zQvw+UndZNmrboyYZF8T0/Pr4eGNcBigVckKO2olZpCrDMoaKgvHasbQsFXBF6VWcr67NqV7jNPDkbNFsvd3Jw6LEhJi8Ne2ixISjA4ZogBy1tNh35LeQQVE0NQtEDb50U6ZZpTR4Ed4WdYSjexn0Sl7imrO2aknxi4nCtW0yHMb/DC/rf6/DmB4A/Biy7yjRTEzJHCZSmcJt9LE+bTnuqoFihCXREyaPMAnvdriHGpbQKzraBgpyfzufyeLSbp9AZDs/MR9mWqWXpgs4ZrZJ2s+sgrfpDKra8JsUyWG8dedYDEWUrelTKlfUN8vDp3SnEHBoKQfQ6/L0cKuQXgBkdeFKF3qPIluZxeDvGHNgymmf5fXgPMaZyzUbKrjqlKITfmuvvghmH44a4thUUsKZEDrmGAmbVZFtmSeZZSKOQkZK/2e1A5w0U0CdpKRazWV/bwLHonfUcZ+g07BvkYjBkdn75LRtaQQ436DWWZtBk6CZv1HaNLG/N7CBPj3F5R1MPJzEHgR3sszsxVqFJn2MOQufB8dn8bB6TCQOpzmvepv/5ROjJn3eiwmI5Pb5KpBK/adHdGEaKO+5QpqI0Md2ubKocR/HZ463BUhQ4UEdUEZePNXmGbWYdtW+C7byirNLisLJjqrJbKjMldeQzrBrdZs4giwtEUfJhaDk/+XgyH0QI3GDahXG5x/U6vlIPyPX3G/aywBylYfrLM2dQS44NlulHpy1g6rSULs6GZLLktuVusgvo+xID/fImRvk8BIzMrNJBrHMkkKaknwjYI2T/0PY+4m/QdFKS4vHlqEdT9knMMeZfibmXwk/gbB6ALO9XMS1ADjVhRT4JPVw4V4ocT24dZK10ucuVr19+Qoz/AcyKlz8=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Search dependency repositories"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dependencies/repos/search"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Search for dependency repositories
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"query","schema":{"type":"integer","default":1},"description":"Page number for pagination"},{"name":"size","in":"query","schema":{"type":"integer","default":10},"description":"Number of items per page"},{"name":"q","in":"query","required":false,"description":"Search query","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Search results for dependency repositories","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object","properties":{"list":{"type":"array","items":{"type":"object"}},"total":{"type":"integer","format":"int64"}}}},"title":"SuccessWithList"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

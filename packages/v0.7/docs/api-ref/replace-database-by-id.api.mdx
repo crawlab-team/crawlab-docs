@@ -1,0 +1,75 @@
+---
+id: replace-database-by-id
+title: "Replace Database by ID"
+description: "Replace a database by ID (full update)"
+sidebar_label: "Replace Database by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWUtv2zgQ/ivEnBpAaZxsi+76libB1mizTe0EC2wQGGNpbLORRJWkkmoN/ffFiFLEWEqsXvZknyzqmweH8/gkbcDiysD4Fs7R4gINGbgLICITaplZqVIYw5SyGEMSKKIaJBaFmJyLN8s8jkWeRWjpAAJQGWlkoUkEY9BObN4IzRfFXEYQQIYaE7Kk2fAGUkwIxlDdkmwvQ7uGbSeu18Qm1VLYNQlpKRFW1bYhAE0/cqkpgrHVOQVgwjUlCOMN2CJj9cZqma5+Ve1S6QQtjEEtvlNoZQRleeeskbEfVVSwiVClllLLfzHLYhlWQTj6btjEpuuLU8aR0BwyK8nwXQ7UbhTHcOe2Juf9zgeAoZUP5GlYKBUTph0Vpw74JDK3ZrddJyTQ+uY5lodWJpWyEI3BNNI4r9LA7N7wPRUmw5B2W//cIMty+9ZZY1bUZtkVTWgpmqPdrfrMYQVvw1hMspc3WGtdFMO1LoqXjotzYm5Urofsn2tY1OBalgtvmGCF3I7bTkHvqgyAtFZ6t9RFBSsDWHNeDc0DzO16QAYyqnv+nzgt26NfKzPg0D8xqgxAmnlES8xj21M3ZQCJSlfql/YxTyhcYypNMmxHosVzQbKGoUlRiTdJ0YnLJbvuBcY14106/0KX6xka86h0T0Pim0r78ZKppRXpjq4rhnnZL1P724mTN3alyQwOrDHxPFHRAP9nsy+iQnYDclVb9WKiKZLDvYgWAzZ9/rFnyx1fpmzYc8Sk6nEZ4/0v1EwYqjwdkOqnNZC3q+IBIZwyqhw+aGcOVwbwiJrWKh/Sl/5+gnaDM2uC4QfIos0HjKmZw5UBuEk/bAbcOOyAGdBoHTIDGq0vz4BcywFqppMKa2iudNLTpzoChsTX6aWQqbGEEVOgmFYYFi3LM6QfZEjijUrjQiyVFpfF7NuXQNRFUv2fffsiZqQfSB/UDuhhTeSmQXbPllkZe/GMi1lpOTHhUkUUm3ZklT77u3Us6q6FT3tp6CTNcgtl6aRNplLjKuZkNKqq+Jk/Xz9DsGd5e5a3Z3l7lrdneXuWt2d5e5a3Z3n/K8t7cexwZyZjcNXjzCvJwu40ts5UarWKY9JmWnPBP6Vd54sO1WSpd30M8SNGYureCkKFOe5iblJu6UrLf6k68fd9iiap5YDFdbRFPUWrXdq14herzFwD95Z0DEfNOZqjjYxKCMBQmGtpi6oW6waRyWt1T/6ox0x+pqJ55bomjKoGVr+MPb2aCCfBlpniTttXnhc/Mclc92jIbEVX2xRo6Kd7F+sxSzgZnbw7HH04PPnj+vj9+P3x+OT3t6MPx/9AP2dsWaF3pD6je1Whx9G89PS51vNlR6NeyuSn5ToR24UtguMojOew4yEt3mcaLkTb3GKbPXih9VmBZ6M+uCdcO7S9tWpWj3qHbjtWPaXbM5Gn3uiFEfU0hFp7bsa0180UaVe8KdFTsy3Ob+CvHbnfkj1pbq3eZdM9XezbXub3BpkuVVUuTY/Q+BjjQpxeTbpT8mJ2zTeq5lkDIYAH0sYBRm8/vB01bCfBqg5rk83HlfNnn1a2TXjfGIZ/jqkr3dJPe5TFKFM3ZmJW57rH7VPaGwhgLCN+cHbZegubDd+40XFZ8vKPnHQB49u7AB5QS1xwWG43EEnD/yMYLzE29Irjb6b1Y/qB2PHZpdfzpnGl3LUeMM75CgLuEe7zUXnHteY6GXvmbpw5+4fXLN4Kdh7hy6CROA1Dyuyr2DuvHV/dXEMAi/pbUF1DGh+5APDR+aiqcFR1Uq1tIMZ0lVdDC5xK/v0H/fp85g==
+sidebar_class_name: "put api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Replace Database by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/databases/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Replace a database by ID (full update)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to update","required":true,"schema":{"type":"string","description":"The ID of the item to update","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"active":{"type":"boolean","description":"Active"},"active_ts":{"type":"string","description":"Active at","format":"date-time"},"cassandra_params":{"type":"object","properties":{"keyspace":{"type":"string","description":"Keyspace"}},"description":"Cassandra params"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"data_source":{"type":"string","description":"Data source"},"database":{"type":"string","description":"Database"},"description":{"type":"string","description":"Description"},"error":{"type":"string","description":"Error"},"hive_params":{"type":"object","properties":{"auth":{"type":"string","description":"Auth"}},"description":"Hive params"},"host":{"type":"string","description":"Host"},"is_default":{"type":"boolean"},"mongo_params":{"type":"object","properties":{"auth_mechanism":{"type":"string","description":"Auth mechanism"},"auth_source":{"type":"string","description":"Auth source"}},"description":"Mongo params"},"name":{"type":"string","description":"Name"},"password":{"type":"string"},"port":{"type":"integer","description":"Port","format":"int32"},"postgres_params":{"type":"object","properties":{"ssl_mode":{"type":"string","description":"SSL mode"}},"description":"Postgres params"},"redis_params":{"type":"object","properties":{"db":{"type":"integer","description":"DB","format":"int32"}},"description":"Redis params"},"snowflake_params":{"type":"object","properties":{"account":{"type":"string","description":"Account"},"role":{"type":"string","description":"Role"},"schema":{"type":"string","description":"Schema"},"warehouse":{"type":"string","description":"Warehouse"}},"description":"Snowflake params"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"uri":{"type":"string","description":"URI"},"use_orm":{"type":"boolean","description":"Use ORM instead of legacy database service (only for MySQL, PostgreSQL, SQL Server)"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsDatabase"}},"required":["data"],"title":"Replace_database_by_idInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"active":{"type":"boolean","description":"Active"},"active_ts":{"type":"string","description":"Active at","format":"date-time"},"cassandra_params":{"type":"object","properties":{"keyspace":{"type":"string","description":"Keyspace"}},"description":"Cassandra params"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"data_source":{"type":"string","description":"Data source"},"database":{"type":"string","description":"Database"},"description":{"type":"string","description":"Description"},"error":{"type":"string","description":"Error"},"hive_params":{"type":"object","properties":{"auth":{"type":"string","description":"Auth"}},"description":"Hive params"},"host":{"type":"string","description":"Host"},"is_default":{"type":"boolean"},"mongo_params":{"type":"object","properties":{"auth_mechanism":{"type":"string","description":"Auth mechanism"},"auth_source":{"type":"string","description":"Auth source"}},"description":"Mongo params"},"name":{"type":"string","description":"Name"},"password":{"type":"string"},"port":{"type":"integer","description":"Port","format":"int32"},"postgres_params":{"type":"object","properties":{"ssl_mode":{"type":"string","description":"SSL mode"}},"description":"Postgres params"},"redis_params":{"type":"object","properties":{"db":{"type":"integer","description":"DB","format":"int32"}},"description":"Redis params"},"snowflake_params":{"type":"object","properties":{"account":{"type":"string","description":"Account"},"role":{"type":"string","description":"Role"},"schema":{"type":"string","description":"Schema"},"warehouse":{"type":"string","description":"Warehouse"}},"description":"Snowflake params"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"uri":{"type":"string","description":"URI"},"use_orm":{"type":"boolean","description":"Use ORM instead of legacy database service (only for MySQL, PostgreSQL, SQL Server)"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsDatabase"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsDatabase"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

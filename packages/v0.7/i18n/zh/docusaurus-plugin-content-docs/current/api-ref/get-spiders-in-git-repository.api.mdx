@@ -1,0 +1,75 @@
+---
+id: get-spiders-in-git-repository
+title: "Get spiders in Git repository"
+description: "Get list of spiders in a Git repository"
+sidebar_label: "Get spiders in Git repository"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVG1r2zAQ/ivi2IcN3Dp0g3X+lq5bKGxs7OVTyOBiXxJ1sqRK57bB6L+Pk50madhg/mJb9/bcc8+pB8Z1hGoOM82wKKChWAftWTsLFcyIldGRlVup6HVDISptFaqZZhXIu6jZhS0U4DFgS0xBkvVgsSWoQDdQgJZMHnkDBQS663SgBioOHRUQ6w21CFUPvPUSETlou84JmSlI6K/55Owdnq2mZx8X/cWb9AKew/zs7NpdX6kvy1uq+aYRaIEiWaZGYVSoNvSIDdW6RaOeSrBmIzV3YZCeJx4s6uYa0kLAR+9spCh4LyYTeR37fzrmCgqonWWyLK7ovdE1imt5G8W/P+3f5YrSf3CeAuuhWu0aOvDSlmlNAQpYudAiD0evL6SDlmLENZ1ymtK+5e9dXVOMkOSRGN64BipYEw/cb6CCcq05lr1uUrlvKFK43025CwYq6HMTlKqy7Dcucqp67wKnEr0+GdU1rbAzrKZfb9SQCgq4x6BxaYZWh2zyRbZrRZobZg9FfsVBozkHVIMlFSBlh2nsLMbVaPJxKkDgHJkvJ5eTlGSmkeouaN7mfq4IA4VpJ93PF4fm7xlUxnfo9ETxCHGHHZbZKVOu7cplz5H69wEfDC6FgRN2hJWVC2r0KRRa5TzZs+i6UJNqtMxy2YmuH2ipavGjoLBptVXeIIsehFEKcUg5OX97PhlIiNxiVt24nbLdB1t9stNH2Pq9lP/jWhjpYXrk0hvUVpBk2fSjyuYgKoMCqnxZ7IS22A11Dn2/xEg/g0lJju86CjKuxV43eXiNjvLdQLVCE+kf8F9+G2+hV2q/4H/BOh6i3Wadmk7+oIDftB3ut7QQ/RE2FDKMwTCta/J8EHKy/KKup7WbffgBKf0BRt/j8g==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get spiders in Git repository"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}/spiders"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get list of spiders in a Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of spiders","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

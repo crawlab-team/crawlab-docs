@@ -1,0 +1,67 @@
+---
+id: delete-dependencies-setting-list
+title: "Delete Dependencies Setting List"
+description: "Delete multiple items"
+sidebar_label: "Delete Dependencies Setting List"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVU1v2kAQ/SurObshTVtV4pYGVKGkbRTICSFrbA/2hvXuZndMQ5H/e7U2JCaA4hMW8+Zz37zZAmPuYTiHEVnSGelUkodFBBn51EnL0mgYwogUMYmyUiytIiGZSg8RGEsOA2aSwRCyBhVnnVCxJ2ap81hJzxCBI2+N9uRhuIWry8vwc5jqzy1EkBrNpDlY0Vol0ybJ4MkHyBZ8WlCJ4Ys3lmAIJnmiNMS3LpTEsk2QIfdAxTLrgDw7qXN4P4HJCCJYGlciv0aSGdQRpI6QKYuRP45y02IFy5I8Y2m7QTNk+hQs3ajJpn/UZHOuRnqhNE7LHn2OXygVAVlHsKIeyWfBWkegsaSP0b+xbc+u8n713K/yfTnBx7s0rpzq5+ddKgK4jsATurSIHWHW7SkxRhHqFsGVPW1iw6gOaN3BSc2Uk+tOXmr+chUcK5v1psZji+1BjX3UPtTYRz1HjfroOQsSYW0EG9EmgghYsgpJfpmMlH+Vis2N0UuZNwRzzrjjcuoISvIe8xPUCDNn5MqfMNVvOW+MZmeUIucfduLxU3JRJeeKqYP311PS8gMz8UDPFXmGBvP5GPOoseLCOPmPGtJ9OxVoopmcRiWm5NbkxLjpvm665cK8aWHQGuQChjDo0mewU8UgoZ7SykneTIOmtcxCK2dmRbozGLTylsIbypC/IMwayrVLB9f3E9F6hBqkXprGdT9Bh38VJuL6fnLEj4fxdBYMYmmc2AEhgjU53wIuL75fXDbbZzyX2NS0y7o7Ct3LIaZtY+KulfuDZNs3WT97UHbtMr3wwCqUzf7tFr6d5BwOFrFZ3HaWiwgK4zlAttsEPT06Vdfh7+eK3AaG80UEa3QSkzCX+aKO9pMczret2sF1mpINpa9RVe3k392fetF55tH4bjwbQ13/ByAkgts=
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Dependencies Setting List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/dependencies/settings"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete multiple items
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"exec_cmd":{"type":"string","description":"Exec cmd"},"key":{"type":"string","description":"Type"},"name":{"type":"string","description":"Name"},"pkg_cmd":{"type":"string","description":"Pkg cmd"},"pkg_src_url":{"type":"string","description":"Pkg src url"},"search_ready":{"type":"boolean"},"setup":{"type":"boolean"},"total_dependencies":{"type":"integer","format":"int32"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsDependencyConfig"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsDependencyConfig"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

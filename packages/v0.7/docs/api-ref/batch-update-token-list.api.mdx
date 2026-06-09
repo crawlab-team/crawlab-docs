@@ -1,0 +1,71 @@
+---
+id: batch-update-token-list
+title: "Batch Update Token List"
+description: "Batch update multiple items with partial fields"
+sidebar_label: "Batch Update Token List"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVd9v2zgM/lcEPntr73CHA/zWdsUt2P0o2vQpCALaYmptsqVJdLtc4P/9QMlu3Ta7BoflJYZEfiQ/8SP3wHgXoVzB0n2hLsK6AE2xDsazcR2UcI5cN6r3GplU21s23pIyTG1UD4Yb5TGwQau2hqyOUIDzFFC8FxpKqMR/k/03LEE21kSGAgJ97SnyudM7KPdQu46pY/lE762pE8bJ5yhp7CHWDbUoX7zzBCW46jPVguODRGRDUW6NjjMjDAF3UEDKd3YeOZjuDoaX1S4bUosPUbmt4mYqk91Yv9iPXwfyQK2NwKC9mmd0MMbI5+g7DJkNE0jLW5jE4xhpXQAbtjS9xWsuF53vBSTDRO+6mLn4+fRU/p6H//sTFD+KbI18hNXG6NfUv2Rl8QEK2LrQIj8iGS2M14GQSW+Q30a5yLaKTUuRsfVzUKHtndzMUavd8ajV7ns5dtjS2zh/YY6dnu5t8yTJp547joHbbHsEAxPqMQxMqN9j4GCTS3fMxPPUx386TTY+lkchuHBQnC3FiHcHmB0KiIzcH9L08BTownUcnLUU4vUojN8NN331LIMknF8OaeUctbrOYwqSzU+vbW477LlxwfxDqRV+PQS06JhCh1bdULinoC5TyUMqkRsng9KLuEU7yA2UcMJ5IBcQqe6D4d2NiDIrCr1Zvugh9OYTpVEn8RpCTQGmxoSzq4Waqi1AZH79NH0vv2HrLT1Oz9VE5Xo27sTPdFuXQk70BnywWKmzq8Wrjrm+vFnKhdq6oEZDKOCeQswGp+9/e38qhHkXucVUy5ht3jm553La6o+8M57FmO2M/7GmRt6YvvGJt2iy0oIV3PwGK+DHpdi4yHKy31cY6TbYYZDjrz2FHZSrdQH3GAxWwstqPRTTC5SrPXyh3diL1PG7pcQVc9vnd3sxfodi8jira/L8n7brWQNdnS0vPkIB1bhQW6fFKeCDLFt8gBLSdhb31EXpbA8Wu7s+qQwyqPz+BTlPyt8=
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Batch Update Token List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/tokens"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Batch update multiple items with partial fields
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"type":"array","items":{"type":"string"},"description":"The IDs of the items to update"},"update":{"type":"object","additionalProperties":{},"description":"The update object"}},"required":["ids","update"],"title":"Batch_update_token_listInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"name":{"type":"string","description":"Name"},"token":{"type":"string","description":"Token"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsToken"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsToken"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

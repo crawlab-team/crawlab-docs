@@ -1,0 +1,71 @@
+---
+id: rename-spider-file
+title: "Rename Spider File"
+description: "Rename a spider file"
+sidebar_label: "Rename Spider File"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1vGjEQ/SurObWSG2jVqtLekjSRUKQGAekFocjsDuBk13bGXghd+b9XYy8JFJpcyoXd9ZvneW8+WvBy6SCfwtiqEsnBTECJriBlvTIachihljVmMnMRkS1UhSDAWCTJkEEJOVAE3SfIfQexkmSNnlnzaQuMgBxUCQIUM1vpV/D3dSmPbPADBBA+NYqwhNxTgwJcscJaQt6C31rmcp6UXr7JsTBUSw85mPkDFl6VEMIsUaPzF6bcMl9htEft+VFaW6kiSus9OOZrjy9OZKyR2Aiv0PGpxs2QRb2b4U/cRCOz6EEQyYt3w653IZk3WfIcQhDgla/wpVb7ZRho23gIgVGEzhrtUqpf+n3+O+S/vQHxv7xAIkPHkoKAGp2TSzx55rz0jTtxtKfy0mhPpqqQ3C+jylEnq1P59ZSwC1lmo1RyiJjPx5g7LRu/MqR+Y8mgb6eIBtojaVllY6Q1UnYVVYaoyq8Mz4I1LroRKwq9VAzXa1UZelwS1+sqJ8Bh0ZDy2zF7mmyTVk3MI+o9C6RVN7jdTc0KZYkEYjdP58NBliI4C67S6LW3r55lbSs86M3X5rIH74EvWJh48c5pkptKzrPz4eCoF0dX4wkfZAtDWQcEAWsklwD9s+9n/djbxvlaRkVdzt1O6eb0Oq2LA/q9kfzXBurc8fjse7aSSvNdDVUcnJRNoTMfBORx70T/42aJmcwErLha+RTadi4d3lEVAn9+apC2kE9nAtaSlJyzH9MWSuX4uYR8ISuHb2T9YdRtr4/Z/j46mfWu0JqrvJZVw28g4BG3aWOGWRC7ynMa6eAyXfZpwuGvgUdTG8Qu4rwo0Po3sbO9Vh7ejicgYN5tydqUHENywxbKTUrSRPGxeeO3Fiqpl02ccEic/PsDwyUvgg==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Rename Spider File"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spiders/{id}/files/rename"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Rename a spider file
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Spider ID","required":true,"schema":{"type":"string","description":"Spider ID","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"newPath":{"type":"string","description":"New file path"},"path":{"type":"string","description":"File path to rename"}},"title":"Rename_spider_fileInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

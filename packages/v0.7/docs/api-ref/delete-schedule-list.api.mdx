@@ -1,0 +1,63 @@
+---
+id: delete-schedule-list
+title: "Delete Schedule List"
+description: "Delete multiple schedules with deletion prevention checks"
+sidebar_label: "Delete Schedule List"
+hide_title: true
+hide_table_of_contents: true
+api: eJzVWN9v2zYQ/leIe1aarFsxwG9ZbQRGu82Ik6cgMGjxYrOhSJU8JfUM/e/DkZIr2/KsoSvQPVmmvvv13emO5BZIrgKMHmCer1FVBgM8ZqAw5F6XpJ2FEYzRIKEoKkO6NChCCxWvmtZC8WvtrCg9vqCNj/ka8+cAGbgSveSlqYIRRCguWgULowNBBh5D6WzAAKMtvL264p99F/78ABnkzhJa4reyLI3Oo+LLT4EhW2CtheQn2pQII3DLT5iz/tKzG6STASVpAGqhVQcUyGu7gkNmpmPI4Mn5QtJOk1ZQZ5AXA8TfFwnrURKqhaQBIgkrSBcYSBZl1wElCS/4TVfrcjNc63JzMh6fSD6nx1lG762eExp3/tUZoJVLg132ls4ZlPZIcNIgoxD5zX7KtCVcoe+RIr8R+5nTln5+G/V8wbxi4CKQl4SrAeRNWhkxb2XqDAqn8Lzs74yqM7CyGID+Q6bUWqdwsfKuKhdahY6c9F5yCjVhEfr09eb2wIhTKG5YuZiOw87cdzLUmCill8V5AmYRxnivnde0GZDvWQvty3cotUL/Y3SDVEcoclcU0iY5ZwZZHkuSInfGsEVnhVa9nrBY6THnbx1G5CtsbAwrv0MrVu53mh+5f3HTX8qAg+lksJj288j6lv+CtKirZetbeuNK06AAbtFEPm40idNVydq8c7QoJa3PK2VlDBcRPrjFjfFJVoYEyfAsogi366rgTYeXVrkCMpDGQAYBubRQXXDHCfA4uDHO42e8o/i79sc2HjYiohGhVchEFVAJbcVeEBcREFLc36+V7vl02puvfgzst3u5K//T5svIqBxG76JOx8ENqu5Zwv5DZRMWJX8BgytnJ9ARXsSAw/nhII1xr6gWyhVS294c7hu9TgKiFejEP6zeWwbagk9jbKDwwccSSHpaVN4McHzOWBGx9VERHlApGvoyIE0Gm82OCQl216BmCVRnUJVq8BS5T9gBU6TVOmSKtFpPTZGjiO/WKBL1gueLICfS1DoRdCdVQ+q8IfR0mf9PKWu5SoaOuWpOh3E/7r3zx27w8MEQ5Kqn3FNJU9VTzuxOa+u9s+R5L+PDbXP8vNG0rpaHTtQs9UvfofQ3qcQtfq4wEETMT8eYeysrWjuv/0oHlXd9iqaW0FtpxBz9C3oxiVHXMUpau68nZ249cVbD5e4QHudmXnGXZaeLpieV+s49Y3eLIUv9AeOkYZtrlCo27NQ04Ho2FUmC7Wr75KJoy5aXr0YuxfVserzZmMzv+IV4cl40QMjgBX1IgKs3v765ik3OBSpk9Kmx2lwttGyLj+lC4GCPtDv4f9NVREMD4Re6LI3UcUdVecMWEqsPELq3IGsXiBe3W97A3XtT17z8uUK/gdHDYwYv0ms+g/K/Oms5HT1s4Rk3TGqeY8kBvUhTpRwc3FvUj50kjycfJ3cTqOu/AePzFR4=
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Schedule List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/schedules"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete multiple schedules with deletion prevention checks
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"cmd":{"type":"string","description":"Cmd"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"cron":{"type":"string","description":"Cron"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"entry_id":{"type":"integer","description":"Entry ID","format":"int32"},"execution_strategy":{"type":"string","description":"Execution Strategy"},"mode":{"type":"string","description":"Mode"},"name":{"type":"string","description":"Name"},"node_group_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Node Group IDs"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Node IDs"},"param":{"type":"string","description":"Param"},"priority":{"type":"integer","description":"Priority","format":"int32"},"spider":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"cmd":{"type":"string","description":"Execute command"},"col_id":{"type":"string","description":"Data collection id","format":"objectid","deprecated":true},"col_name":{"type":"string","description":"Data collection name"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"database_id":{"type":"string","description":"Database Id","format":"objectid"},"db_name":{"type":"string","description":"Database name"},"description":{"type":"string","description":"Description"},"git_id":{"type":"string","description":"Related Git ID","format":"objectid"},"git_root_path":{"type":"string","description":"Git root path"},"mode":{"type":"string","description":"Default task mode","enum":["random","all","selected-nodes"]},"name":{"type":"string","description":"Spider name"},"node_group_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node group ids, used in selected-node-groups mode"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node ids, used in selected-nodes mode"},"param":{"type":"string","description":"Default task param"},"priority":{"type":"integer","description":"Priority","format":"int32","default":5},"project_id":{"type":"string","description":"Project ID","format":"objectid"},"template":{"type":"string","description":"Spider template"},"template_params":{"type":"object","properties":{"allowed_domains":{"type":"string","description":"Allowed domains"},"project_name":{"type":"string","description":"Project name"},"spider_name":{"type":"string","description":"Spider name"},"start_urls":{"type":"string","description":"Start urls"}},"description":"Spider template params","title":"ModelsSpiderTemplateParams"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The spider data to create","title":"ModelsSpider"},"spider_id":{"type":"string","description":"Spider ID","format":"objectid"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsSchedule"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsSchedule"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

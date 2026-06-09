@@ -1,0 +1,75 @@
+---
+id: commit-changes
+title: "Commit changes"
+description: "Commit staged changes to the Git repository"
+sidebar_label: "Commit changes"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE2P2zgM/SsC0cMu4DTB7ALb+jYf3WIOixad9hSkACMztlpZUiW6M4Hh/15QciYzk3aAYn2xLZKPj+QTR2BsE9RreGsYNhU0lHQ0gY13UMOl73vDKjG21CjdoWspKfaKO1JvDatIwSfDPu6hgoARe2KKAjiCw56gBtNABUbQAnIHFUT6NphIDdQcB6og6Y56hHoE3geJSByNazMgM0UJ/bxeLV7jYne++Hcznv09vYCnVP/zrvVXF+rd9gtpvm6EWqREjqlRmBSqju6wIW16tOo+BRu2kvMQBtNT4GJR11cwbQp5Snzhm70wflqL9o7JsZgwBGs0CsrySxKo8bRUn8EfNWUNPaWELck4QvSBIhtKEnQwnLRqyo+gpOBdKt5nq5W8fj7RQWtKaTdY+B+kH7PTvnlIzTimliJUsPOxRy5Hf51Jh58p5DiSm8IR5tp64s43IiOfuIijgxqWreG0HE0zLXWuDSpIFL8fVDhECzWMuQia6uVy7HziqR6DjzwtMZgTKV3RDgfL6vz9tSpQUMF3jAa3tpRa0OSL3NDLzDrmAFV+pXKPMgbUxTJVIGnLPA4W6zXafDxVIHQemV+tXq2mSTSXSA/R8D7Xc0EYKZ4PUvx689B8k0llfg+d7ls8Uzxwh212yi2XUX84KvvNHfbB0iPJ3U9ILvPOZ9x5UJcRby1upV8nvZQe7nxUs0+l0CkfyC2SH6Im1RjB3Q5yS29pq7T4UVTY9MapYJFFPdJ/iqlArl7+83JVWpa4x6zRedfM6p4X1VMy41Hpv7nZ5g4y3fEyWDRO0mdljbMO1yA6hArqvO9mKW4OY1/DOG4x0adop0mOvw0UZaCbo7LyeBuT5LuBeoc20TMV/PFhXhl/quOK+gXV+RDdPivZDvIHFXylfdnQ00YUSthQzDSK4bIkW3yU8GPgyZKYqkPEudYU+FnfzYOr/P7dzUeoYDtv0z5vEIh4KxsRbwtJn4vPus5nI1h07VBUWTDl+QEVAVSM
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Commit changes"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits/{id}/commit"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Commit staged changes to the Git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["message"],"properties":{"message":{"type":"string"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Commit successful","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

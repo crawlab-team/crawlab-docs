@@ -1,0 +1,71 @@
+---
+id: run-schedule
+title: "Run Schedule"
+description: "Run a schedule"
+sidebar_label: "Run Schedule"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVVFv2zgM/isGn26AunS7Kw7wW9cWh2C4a5B0T0FQMBaTaJMlj5LT5Qz/9wNlu3GbYL2H5SWWRH4i+X2kGoi4DZAvYVHsSNeWAqwUaAoFmyoa7yCHee0yzEJvAAp8RYxyONWQA9fucXRYIWNJkVhgG3BYEuRgNCgwglZh3MHrK4bbs+ktKGD6XhsmDXnkmhQIeomQNxAPlaCFyMZt30DZeC4xQg5+/ZWKaDS07aoDpxA/eX0QxMK7SC7KJ1aVNUVKbPI1CGJzenUHJnmylCEaCgmm1G/Hd+PLEp2GVkHpNb3tIJVPlgrI1aXwxOi0L0EBWgsKAlkqIukL5zWF1xsXW/Z1FWDVKpD1Y1o/Gh1GdyMzHoSdSGU4jal9HdQ/XlOWgLLpbYAB+heA9nBJQW8XZ3YUmjix8WziYeRnXKQt8anjYDrSiHHx94/JcoO1jZBfta2CaKKljodniU9dVUdoWzlnCpV3oZPAx8tL+Xt51/1nUL9KYxoj/v8Sn28ABcTs+SwjJYWA2zOybBWEiLE+R+SoSjfeRfbWEod5X5i//N/ebb1ez9iUJpo93adYprd9Bf84V7RPqLN516aQbD6c2nxxWMedZ/MvpYa6Ogc0dZHYoc0WxHvi7C7l3qZc487L9Kp8SJWWqZTDZGA5TBqj2wnXLvVUUYtgZL6UHRdYmQf/jdyYj8p8psMw5naEOmmvH4DXs2nWecj1Qv38OIjufmBZWXoeJEcOuzlx7PrXXbwcTFfjNhzv9t10hDx2ylUrwW58SmIgkfHJ4jq7nk1Px9Hd4kEOso3nrDcEBXvi0Blcvv/z/WXqRh9iiak6ff4yyhbHV+IF8GgKnz42fXUj/YiTyqJxgl+zFbeOtSU8swYK8vTUCHErBTthN19C06wx0Be2bSvb32viA+TLlYI9ssG1pL5sQJsg3xryDdpAPwnzt3n/Rr3LXr46Z8MdFOJEHnu0taxAwTc6dG9jKxO6l4wE0h3cdNddPIj70fFkhrRq8LguCqriT21XI/HP7hcPoGDdv4XPYnuSCuJTF6RP6SfVp70GLLptnSYFdJjy+w94pNNC
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Run Schedule"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/schedules/{id}/run"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Run a schedule
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Schedule ID","required":true,"schema":{"type":"string","description":"Schedule ID","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"cmd":{"type":"string","description":"Command"},"mode":{"type":"string","description":"Run mode","enum":["random","all","selected-nodes","selected-node-groups"]},"node_group_ids":{"type":"array","items":{"type":"string"},"description":"Node group IDs"},"node_ids":{"type":"array","items":{"type":"string"},"description":"Node IDs"},"param":{"type":"string","description":"Parameters"},"priority":{"type":"integer","description":"Priority","format":"int32","default":5}},"title":"Run_scheduleInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"string","format":"objectid"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGoMongodbPrimitiveObjectID"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

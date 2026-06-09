@@ -1,0 +1,75 @@
+---
+id: delete-notification-channel
+title: "Delete notification channel"
+description: "Delete a notification channel"
+sidebar_label: "Delete notification channel"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFVN9v0zAQ/lesEw8gZUs1kBh56+iQJsFADJ6qIl3ja+Ph2J7tbKsi/+/onHRtVwZ5SeL79d1337mHiOsA1RyubVQrVWNU1gRYFCAp1F45/ocKZqQpkkBh9vxE3aAxpKEAhx5biuQ5WQ8GW4IKlIQCFMc7jA0U4OmuU54kVNF3VECoG2oRqh7ixnFEiF6ZdU4YI3kO/TWfnHzAk9X05NOiP3uXXsFzcF+sWdvZhfi6vKU6XknhyXkKZCJJgUGgaOgRJdWqRS2eSkQVNdfchkF6nniwiKsZpAWDD86aQIHxnk0m/Dr0v/4LOUJm6piJ2ppIJnIcOqdHx/I2cHB/TIbN5ZkMbx35qIbStZW056VMpDV5KGBlfYtxOHp7xu20FAKu6ZjglHb933R1TSFA4odjYmMlVDAAH2bRQAXl/uxDOfYXyl7JBAUE8vfb+XdeQwV97ohSVZZ9Y0NMVe+sj6lEp46GOKMVdjqK6bcrMaSCAu7RK1zqoe8hG3+R6VoWbROjgyK/Rs3mHFANllQAlx3mtLVoW6POx6kAhnNgPp+cT1LiaQeqO6/iJvdzQejJTzvmYb7YN99kUBnfvtMT3yPELXZYZqfMvzIrmz3HOXz0+KBxyQwcscOsrKwXo08h0AjryJwE2/mahFQ82GXHin+gpajZj7xA2SojnMbI4mBGyYch5eT0/elkICHEFrMEx70dt/2FXT9A1u9U/d9LYqQk0mMsnUZluHqWSj9qbA4HGuOdGVUGBVRK8pCHkc6h75cY6KfXKfHxXUeeh7XYqSaPTqrA3xKqFepA/4D/+vt4O70Ru8V/AfV4iGaTVao7/oMCftNmuPfSgtVHKMlnGINhWtfk4l7I0T3A2nrawNnl58sfl5DSH/458Fw=
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete notification channel"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/notifications/channels/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a notification channel
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Notification channel deleted","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

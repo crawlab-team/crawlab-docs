@@ -1,0 +1,75 @@
+---
+id: get-dependency-spider-dependency-list
+title: "Get Dependency Spider Dependency List"
+description: "Get the dependency list of a spider"
+sidebar_label: "Get Dependency Spider Dependency List"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVlFv2zgM/isCn+4AbckOOwzwW28timC73dC091IUAWMxsTZb8iS6my/wfz/QdhK3SRpvT4mlTx8pfqTIDTCuIyT3cEklOUMutRThQYOhmAZbsvUOErgmVpyRMltUrXIbWfmVQhVLayiABl9SQDkxM5DAmnixxy861HBFGEBDiQELYgrixwYcFgQJWAMarNgukTN47tDsUmyLSzvrgb5VNpCBhENFGmKaUYGQbIDrUigjB+vWY6hWPhTIkIBffqGUrYGmeRALsfQuUhTSP6ZT+XnK9c8H0JB6x+RYdrEsc5u2MZl8iQLZHPrVGZFIBIkg286AQR6BWtmcFh3k3EVvM1ICVwJ7dudGQ45uPY6kDH4dsCisWys5VeH6CF+vR0GO44AXQ8BatGUq4ogoDPPyl1kW1oxJhOPSa0gDIZNZIJ9ned9hFduCImNRDkkNMr2SnSHrsh7PuqxP+fgEf47ucvDVaKAQfDh/6qqFNbqv0XPwT9jd03lDowT45A2p0yr0PGPSYGfgWCVriIxcHcU/dWje4RoNIytMdhsNVWlG58tdhx2RL1vWMfmyZT2dL48U4qhc+bcH7s/8hAKNhJst57L2tzeUx12nqVstcmSKvDjpzsl0O6nKS5cbunPl2HK9d+dm/2AdFFT77g263/Bxe/70DUy8946Dz3MK8Zp4b2reQvffH23km767vFCQjYaCYsT18VufSusTHm0NXlvOquWvudrq+/ZYK/wLjZKIUmyj+Xb65hBz57DizAf7H7U5+ecxopljCg5zNafwSEH1r1AbC858P2q0gwRnkMBk2DImnShxsrGmAQ2R0ipYrufShLvegKW99V9pmCxY2g9UbweQjLAbC/rR5OLzTHUnxAnrVr49ug1wwO85LtXF59lBKd1czW9lQ618UD0QBtkK09fvXk8lEqWPXGDrU29VRrC9CqqTZbjysRunnvWB3TAycobrI8D0gydljrat+yrkwtUF+P5pT9bQhxg0JNbI7Jj5yILbbJYY6S7kTSPL3yoKNST3DxoeMVhcSrzuN2BslP8GkhXmkV64wm99iZrf1ZGp7ajrW0WdyPmIeSVfoOEr1d2U2Tw0eiuxeNNtXKQplTw4cjDJyUC4S8Drq1tomv8Bk/Lqnw==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Dependency Spider Dependency List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dependencies/spiders/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the dependency list of a spider
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the spider","required":true,"schema":{"type":"string","description":"ID of the spider","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"file_type":{"type":"string","description":"The file type of the spider"},"lang":{"type":"string","description":"The programming language of the spider"},"requirements":{"type":"array","items":{"type":"object","properties":{"dependencies":{"type":"array","items":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"error":{"type":"string","description":"Error"},"name":{"type":"string","description":"Name"},"node_id":{"type":"string","description":"Node ID","format":"objectid"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"}},"status":{"type":"string","description":"Status"},"type":{"type":"string","description":"Type"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"version":{"type":"string","description":"Version"},"versions":{"type":"array","items":{"type":"string"}}},"title":"ModelsDependency"}},"latest_version":{"type":"string"},"name":{"type":"string"},"type":{"type":"string"},"version":{"type":"string"}},"title":"EntityDependencyRequirement"},"description":"The dependency requirements of the spider"}},"title":"ControllersGetDependencySpiderDependencyListResponse"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubControllersGetDependencySpiderDependencyListResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

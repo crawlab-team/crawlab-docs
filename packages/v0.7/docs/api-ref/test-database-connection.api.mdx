@@ -1,0 +1,75 @@
+---
+id: test-database-connection
+title: "Test Database Connection"
+description: "Test the connection of a database"
+sidebar_label: "Test Database Connection"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1vGkEM/Ssjn1ppFGjVqtLe0iQHlEMiIL0gFJldEyZZZjYeLy1dzX+vvB8JKShqT8D44/k9+9GA4EOEbAGXKLjCSBGWFgqKObtKXPCQwZyiGNmQyYP3lOurCWuDpuhrwEKoiFEjkwIyEIpyP0TvX8vAQoWMWxJiRW3A45YgA1eABadgFcoG/p5gcqmAOsLQ1EgwigIWmJ5rx1RAJlyThZhvaIuQNSD7SptHYecf/q/pOvAWBTIIq0edvYCUlooVq+BVpayBz+OxfrztenMNFvLghbxoFKuqdHkrzegxakpzPGEHouqwCimuAyDmwMdEkoUtxYgPdDIWBaWOJ0LJgjgp9ekieOFQlsTxR3DFtKcFKWnWl1PEvmNhpvRcqz5tzqfjnDuPtWwCu99UaNLXU40mXog9lmZGvCM2Vy3L1LKSTdD7qUK7hPYWMhgN+4mjxhVp9HpPo35bkfKanexnKmynHVZuHp7IH+iAlbum/XBoG8KCGOxwgue3E9NV6CjOr0NbOgjG+LPElTm/nRwd0vRqNteAWQc2fSJY2BHHLmF89u1srHoory22M/WorbcG75mLQ6e8AWleb+qf/NhTFvolo6pE5xW+5lI7dbIu4EVWsJC1Dnzj1FbbpYWNLiNbQNNo8h2XKenzc028h2yxtLBDdrhSnRYNFC7q9wKyNZaR3uHxYdo796N514snuQw79brQHZa1/gILT7Tv/k/SMtlhyTpXFzjPc6rkoOTIn2rzl0O8vZnNIaU/IZ3A9w==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Test Database Connection"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/databases/{id}/connection/test"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Test the connection of a database
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"ID of the database to test","required":true,"schema":{"type":"string","description":"ID of the database to test","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersVoidResponse"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

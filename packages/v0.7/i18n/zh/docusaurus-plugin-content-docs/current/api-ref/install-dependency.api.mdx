@@ -1,0 +1,75 @@
+---
+id: install-dependency
+title: "Install dependency"
+description: "Install a dependency from a repository"
+sidebar_label: "Install dependency"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1P3DAQ/SvRnA1Z0UNRblB64FRU6Gm1h4kzu2vq2MaeAKso/70aJ2HDRysO9cWJPfa89+aNe2DcJajWcEWBXENOG0qwUdBQ0tEENt5BBdcuMVpbYNHMcYdiG31bYBEp+GTYxwMoiPTQUeJL3xyg6vOvidRAxbEjBdo7JseyhSFYo1ESlPdJsvSQ9J5alC8+BIIKfH1PmkFBiD5QZAFX9eCwpUVU4mjcDt6CvjpCzQcGBY8UkxlzffrsfGbIQyim4F0akZytVjL99bAZhaMG/ht57ZsleeOYdhRBwdbHFnlc+nImdFtKCXcfSCU82LCVpdtOa0oJJnot8d43UEHwKSdH3kMFZbMwSJlrXk7kQEGiKDJBte6hixYq6DMdGqqy7Pc+8VD1wUceSgzmA7W32FkuLm6ui/EqUPCI0WBtR9LjbfJFrmvFsHvmACpPk2HzHVCNO4MCSTsWZ96xXqPNy4MCgfNq+3x1vhqGYSN0dBcNHzKfS8JI8aITGdab5fZtBpXxLYNexJ4gztihzkFZfCn6z2OvfH/GNlg6evvoyxfLvtROgXFbn/NMJfwW8cliLfq901Y03fpYTDGqQFf4QO4k+S5qKhoj99YdU1M8UV1oiaNYYNMaVwSLLL56BWR1+vV0NUqYuEW3gD0/FMdn4i2g/tgHn39WJkGZnrkMFo2T7Nlo/WTQNSwNml+i4GWeTbqZDbGGvq8x0a9oh0GWHzqKUurN0XO50gr2hA3F7ILfdBChR+gnd4JHwm0nuN6186DmExdaU+B/xm4WTXfz4/YOFNTT+9nmXoeIT8IIn6ACUOCzlNl3ea0Hi27X5U6H8U4ZfwCemgmu
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Install dependency"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/dependencies/repos/install"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Install a dependency from a repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"Dependency name"},"version":{"type":"string","description":"Dependency version"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Dependency installed","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

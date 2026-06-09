@@ -1,0 +1,71 @@
+---
+id: run-spider
+title: "Run Spider"
+description: "Run a task for the given spider"
+sidebar_label: "Run Spider"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVl1v2zoM/SsCn+4Adel2V1zAb11bDMGw2yDpnoKgYCwm0WpLniSnywL/94GSnbhJ+vGwvMSSyUORhzzyFgIuPWRTmFRakfMwk6DI505XQVsDGYxrI1AE9A9iYZ0IKxJLvSYjfPQACbYih2w9VJCBq8397lWFDksKDJxNt2CwJMhAK5CgGbzCsILDiOkoYngNEhz9rLUjBVlwNUnw+YpKhGwLYVMxlg9Om+WLGAvrSgyQgZ3/oDxoBU0zS9Dkw2erNoyXWxPIBH7Eqip0HlMa/PCMtz0OnMA4R8cFCJp8hCnV66e7smWJRkEjobSKXndgEtgyEw6NsqXEojgzVpGXngrKA6lTy7Ols3XlI9wC64KLkABAApm6ZOZ3GztMkPAU9XCjw501Enh9H9f3WvleKugcbpjoQKU/TrE5zPF/q0hEIDG89lLUnpTQRpyKHIsBXfS/EPf5iPtYsZlf52q073l2cto6HTY9P20CLeN4HDh2pr2W1Sb8+7HP30WThkDVBSf+hklojZ+fBQlBh4JSm7WzOzRVHaBp+K0jX1njU39/PD/nv6cxbr+C/FsDpDDg29l8LiNyzrqT5JfkPS5PzBwXNmCoT/VMr0ZX1gRni4KcH7eF+WK/WbO0aj5yutRBr+k2nmV43Vbw06mifUYlxkmDINp8OLb5brAOK+v0b4pqcXEKaGgCOYOFmJBbkxM3Mfcm5hpWlkW5sj5WmuU2g0Hi2A+2WjUDV5s433nNzcftUiYmsNJ39oFMn41Kf6VNp94rwiTzra5fjoYieXBwJn6819ibX1hWBe00cs9gksC9Dh0qyrQznfXnvb/bTuYecj91Fwfj0mNbm4WNuXXMOnwscC4uR8NjAb6Z3PGLeAe2hiBhTc4ng/P3/70/jwNvfSgxFq0tC4v3pLsRn8D2bp033LMtB4F+hUFVoDYcrnYF4yRmp9AyCxKyeMsyuTMJK+Y/m8J2O0dP313RNLz9sya3gWw6k7BGp3HOdZhuQWnPzwqyBRaeXjj1P+P2gn4n+lfuyaN2PWS4gdZY1LwCCQ+0SR8FDd8nbVPxMdKLqxTs7I7d945HGtPIzuMyz6kKL9rOesMxup3cgYR5+yGwa8dHrh8+pkPamHyci7i3hQLNso5KAgmTf38A9bEv7A==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Run Spider"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spiders/{id}/run"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Run a task for the given spider
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"Spider ID","required":true,"schema":{"type":"string","description":"Spider ID","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"cmd":{"type":"string","description":"Command"},"mode":{"type":"string","description":"Run mode: random,all-nodes,selected-nodes,selected-node-groups","default":"random","enum":["random","all-nodes","selected-nodes","selected-node-groups"]},"node_group_ids":{"type":"array","items":{"type":"string"},"description":"Node group IDs, used in selected-node-groups mode"},"node_ids":{"type":"array","items":{"type":"string"},"description":"Node IDs, used in selected-nodes mode"},"param":{"type":"string","description":"Parameters"},"priority":{"type":"integer","description":"Priority","format":"int32","default":5},"schedule_id":{"type":"string","description":"Schedule ID","format":"objectid"}},"title":"Run_spiderInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"string","format":"objectid"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGoMongodbPrimitiveObjectID"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,75 @@
+---
+id: get-git-remote-branches
+title: "Get Git Remote Branches"
+description: "Get the remote branches of a git repository"
+sidebar_label: "Get Git Remote Branches"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1v00AQ/SurOYFkSEAgJN9aqKKoB6o05RJF0cSexNva3u3sOBAs/3c0ttOmjSn05I99M2/mzc6rQXAbIF7AxAosI0gpJGy9WFdCDBMSIxkZpsIJmTVjmWQUjNsYNFsrhsm7YMXxHiJwnhg1cppCDFuS1dbKqotdHWIhAo+MBQmxEtdQYkEQg00hAqusHiWD56XMMzLTb8qsBZ1wM91XlimFWLiiCEKSUYEQ1yB7r+mDsC23r027cVygQAxufUuJ2BSaZqlswbsyUFCCj+OxPp7m/X4JESSuFCpFT9H73CatOqPboJD6tMaORBVi1VJsR5Ci/AdqU+X5qtPyedNNBBmGbPDgrxH93IQxuRsEiC0oCBZ+SOUH4VIUeqfQNqRFneRqk0muv34kYWJlRhuFE7PjQe6CQsDtcOFBUKrwMs1XVwq7PCcOs36WEytZtT7ibzTg09BwzzE1M7qvKAi0mA+nmJsSK8kc29+UKujzUKJpKcQl5uaaeEdsLtqGm7ZByVy/Ru3KSAYxjLZWwqi2aTM67NOomxNEECip2Mr+Wq9VdyfQ27m7o/JIDPT2kvaHVcsIU2I4XAM4u5qaLkKLsOXGtaEH1Rh/5rg2Z1fTk0WaXVzP9cBsHJseCBHsiEMHGL//8n6sSngXpMC2pp5VbWZixcw6mzl/tIonHPXjQr3SmfrehX7JyOdoS62j4lxzdtIuQKWFCOLWh47cqtd3GUHmgiiyrtcY6IbzptHf9xXxHuLFMoIdssW1arWoIbVB31OIN5gHeqGZN7Pevd6af/jRYCOHyZaK2GFe6RdEcEf7zlebpTpAN2qtrDs4SxLychRy4lFqdQ8XcXIxh6b5A4VhHGQ=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Git Remote Branches"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}/branches/remote"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the remote branches of a git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the git repository","required":true,"schema":{"type":"string","description":"The ID of the git repository","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"full_name":{"type":"string"},"hash":{"type":"string"},"name":{"type":"string"},"remote_track":{"type":"string"},"timestamp":{"type":"string","format":"date-time"},"type":{"type":"string"}},"title":"VcsGitRef"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubVcsGitRef"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

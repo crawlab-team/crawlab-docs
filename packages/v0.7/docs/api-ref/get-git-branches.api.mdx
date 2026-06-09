@@ -1,0 +1,75 @@
+---
+id: get-git-branches
+title: "Get Git Branches"
+description: "Get the branches of a git repository"
+sidebar_label: "Get Git Branches"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVE1v00AQ/SurOYFkSEAgJN9aqKKoB6o05RJF0cSe2Nva3u3sOBAs/3c0dtKmjSnl5I99897Mm51pQDALEC9gYgWWEaQUErZerKsghgmJkZzMmrFKcgrGbQyazIph8i5YcbyDCJwnRg2ZphBDRrLKrKwOQRCBR8aShFilGqiwJIjBphCBVR2PksNz8XlOZvpNJTWFE1Gm+9oypRAL1xRBSHIqEeIGZOeVPgjbKvtf2o3jEgVicOtbSsSm0LZLVQveVYGCCnwcj/XxlPf7JUSQuEqoEj1F7wubdLaMboNCmtMcexF1iNVEsb1AivIK1KYuilXv5fOi2whyDPngwV8jmEontBLG5G4QILakIFj6IZcfjEtR6J1Cu5AOdcLVkUmhv34kYWJlRhuFE7PjQe2SQsBsOPEgKHV4Wearq4RdURCH2b6XEyt5vT7SbzXg01BzzzE1M7qvKQh0mA+nmJsKa8kd29+UKujzENG0EuIKC3NNvCU2F13BbVeg5G4/P93ISA4xjDIrYdTYtB0dzVOgpGYru2u9T/1lQG/n7o6qIxfQ20vaHWYsJ0yJ4dB/OLuamj5C1W21cV3owS7GnwWuzdnV9GSCZhfXcz0wG8dmD4QItsShB4zff3k/Vgu8C1Jil9NeVTfKxIo5fyzmCXnzOEKv3T77aoV+ycgXaCtVrrlQst7FBaiLEEHcrZwHI5cR5C6IAppmjYFuuGhb/X1fE+8gXiwj2CJbXKspiwZSG/Q9hXiDRaAXkn8z2++nt+YfG2cw/0MLK0Vssaj1CyK4o12/OdulznjfU82sPzhLEvJyFHKyhXSZPVy1ycUc2vYPlPML3g==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Git Branches"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/gits/{id}/branches"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the branches of a git repository
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the git repository","required":true,"schema":{"type":"string","description":"The ID of the git repository","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"full_name":{"type":"string"},"hash":{"type":"string"},"name":{"type":"string"},"remote_track":{"type":"string"},"timestamp":{"type":"string","format":"date-time"},"type":{"type":"string"}},"title":"VcsGitRef"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubVcsGitRef"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

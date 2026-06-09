@@ -1,0 +1,71 @@
+---
+id: export-data
+title: "Export data"
+description: "Export data in the specified format"
+sidebar_label: "Export data"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVU2P2zYQ/SvEnBKAWRvpIYFum48CPTXIJifDhzE1splQJEOOdtcQ9N+LIaWusnbaHqqLZHL4Zua9x/EIjMcMzQ4+PsaQGPYaWsom2cg2eGjmddUio7Je8YlUjmRsZ6lVXUg9MmiImLAnpiRYI3jsCRrgcyTQYAUnIp9AQ6Ifg03UQsNpoF8kk3Pqhcn3Wn3LwWtFbG5egoZsTtQjNGOFbiBzsv4I07Sv0JT5XWjPEvE8kwmeybNsYYzOGpSkG0kgaxfQ4fCNTOkthUiJLWXZ7axjStfifm7l9xKnOCjJdpYP4U54hElDZ8m1eQWDKeFZyGLq85UOL/EFQGCtN25oaVGHqpBTeYSVHIPPtfjX2628rpJuvWWLTK3KgzGUczc4JxX9T8SZ0NIqynqmIyXQMJuoLP32WjrtKWc80jWdNbBlJ0t3tUqY++yJT6EVo4VcHcknaGBT6diMAjSJhSjdLzYdkoMGxtIBTc1mM55C5qkZ5ci0wWgvZP1AHQ6O1e2nP1SFAg33mCweXO2zoskX+aGXq3VijqDLK9cLVjCgqTuTBklbhVl2XDDoyvKkoQi63n67fbudiukzmSFZPpd+3hEmSreDdL7br7fvSlGlvnXQ3/zOJS61w6EEFb5F589PV+vjI/bR0U9XYeXn3SLVfpKL34WSZJbsfcIHhwch74JYIbQLSc0xWqFXIZJ/lcOQDKnWCvBhEIM+0EEZiaOksO2tV9Ehi49EDEq5Qm5v3txsK3+ZeyxunSfTaqo9r2R8Mvx/HH4zh0yPvIkOrZecxVvjbMMdzLdSQ1Oi94vmOxjHA2b6mtw0yfKPgZKouX+yVdG2tVm+W2g6dPn55FwX/eLzPPleqn+bp1crXwaSPxdru0F+gYbvdF5m+iTqnghbkX83zlvvawmvvtSxvxy9GBqTXk7cGkOR/zF2v7ran/68+wIaDvOE78tEgYQP8seCD7XMUCgpVi9rIzj0x6HME6iY8vwFWbdnjQ==
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Export data"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/export/{type}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Export data in the specified format
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"type","in":"path","required":true,"description":"Export type (csv, json, etc.)","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"filter":{"type":"object","description":"Filter to apply to the data"},"fields":{"type":"array","items":{"type":"string"},"description":"Fields to include in the export"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Export initiated successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

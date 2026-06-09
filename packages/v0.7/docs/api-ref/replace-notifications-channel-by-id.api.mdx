@@ -1,0 +1,75 @@
+---
+id: replace-notifications-channel-by-id
+title: "Replace Notifications Channel by ID"
+description: "Replace an item by ID with (full update)"
+sidebar_label: "Replace Notifications Channel by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWFFv2zgM/isCnzZAbdPcit35rWuLIbdbW6QpDrgiCGSbibXalifRzbLA//1Ay06cNG3S9+YpNvl9oijxo6UlkJo5CB7g2pCe6kiRNrm4SFSeY+pgLCFGF1ld8HsIYIhFqiIUKheaMBPhQgwuxVxTIj5MyzQVZRErwo8gwRRoa7pBDAFYD5zknXHcJPIDTcLFRMcgoVBWZUhoOaYl5CpDCKA2aR6+UJTAdkyjBDkIMxWUoA+LTBMISLD4s9QWYwjIlijBRQlmCoIl0KJgekdW57O30k6NzRRBACb8gRHpGKpq7EdDR19MvOAhIpMT5sR/VVGkzcRPfjgeYvk8Fk/GmbCcP9Lo2BorOsCLc7h3WoPL3cFLiCwqwniiaD/LhfcVpDN0pLKiS8oZOmJLlzVcHM4aLl6KccN/H91l56mSMDNmluLEqJKS/qRdgtcpvtYYcXPOGPH33c01M/l9uQ97rXwGCmuedIx2P+K29awkuIyKSaGcmxt7wLLefR/dipX7Cm9sdzF1TjhD+wKYfTtp1zn90V8xObRPh0yhpmqcW2zp0B6Wshq9cq8kEKY4syqbhIYmZB7xgDUbNRgRGhIe02WKEkUHVcqKhxFicFmz1Ii9SLZKwLzMWFt1BhIypVMYVxK8ghxWZvfe94Aya1kPKbOW9eUym2OYGPM4KW26n+5f7yzuh/9AtV2jtYyyfG2IJ2lKmfG7iTF13d7TtJ6aaK3cD14Bx2vkcH8/GeRFSVBVnsoVJndeJ/u9Xi2qG3HefAP5Ltfvcv0u1+9y/S7Xb5ZrCWit2bHjKgkZOqdmOxaCdxwpKt0OU7Ue9sLkZE2aonXDRse/akrK8LX2wQSfdgn9FxWLof9Kh9rn9LnPfc6qY6z+jXWCz3YRDXLinZ+Ku7p+xFWdgKqeMCWGTz3cgKQ/tQRwstGrTppe5U6WOq5AgsOotJoWd9xkfIdQhR5tFZEq9DdctOehBFVcC0RzUjq/HQiP4DBYM4fr88jVL5UVKXYbVF1Y643SbSnQ7/U/HfU+H/X/Gp2eBWenQf/P497n0/9gs0m8tM1Wr3fp+NraBL56Xqvv+t2Wtm4batHsbQnfltNa09aGXWK1w7oSoI6t0WcWiq4+vJazbsWvmTYqt7v3dT419bK3NWDVPFWhOL8dPEv18OpuxAYxNVY0jiDhCa3zDr3jz8e9urcZR5mq91OTjfZA3y0i114A+OP99nidU+1b7gOapBH+opMiVbqW+UaxfIU8wEaF8EZrLyIkBDrm77/EOGLP5TJUDu9tWlX8+meJdgHBw1jCk7JahZy0hyXE2vH/GIKpSh2+MpMPw+Zr86PYc/LfOZG2PHOuzSeVlvwEEh5x4W8wKm4mTb1yZN5w4cc/alpQC3z28VnJFnEeRVjQq77jjgLd3o9AQthcR2QmZohVc74YUXMfoyl8voOlf7eEVOWzspZs8JT8+x/ZQUJa
+sidebar_class_name: "put api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Replace Notifications Channel by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/notifications/channels/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Replace an item by ID with (full update)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to update","required":true,"schema":{"type":"string","description":"The ID of the item to update","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"google_oauth2_json":{"type":"string","description":"Google OAuth2 JSON"},"name":{"type":"string","description":"Name"},"provider":{"type":"string","description":"Provider"},"smtp_password":{"type":"string","description":"SMTP password"},"smtp_port":{"type":"integer","description":"SMTP port","format":"int32"},"smtp_server":{"type":"string","description":"SMTP server"},"smtp_username":{"type":"string","description":"SMTP username"},"telegram_bot_token":{"type":"string","description":"Telegram bot token"},"telegram_chat_id":{"type":"string","description":"Telegram chat ID"},"type":{"type":"string","description":"Type","enum":["im","mail"]},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"webhook_url":{"type":"string","description":"Webhook URL"}},"description":"The data to update","title":"ModelsNotificationChannel"}},"required":["data"],"title":"Replace_notifications_channel_by_idInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"description":{"type":"string","description":"Description"},"google_oauth2_json":{"type":"string","description":"Google OAuth2 JSON"},"name":{"type":"string","description":"Name"},"provider":{"type":"string","description":"Provider"},"smtp_password":{"type":"string","description":"SMTP password"},"smtp_port":{"type":"integer","description":"SMTP port","format":"int32"},"smtp_server":{"type":"string","description":"SMTP server"},"smtp_username":{"type":"string","description":"SMTP username"},"telegram_bot_token":{"type":"string","description":"Telegram bot token"},"telegram_chat_id":{"type":"string","description":"Telegram chat ID"},"type":{"type":"string","description":"Type","enum":["im","mail"]},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"webhook_url":{"type":"string","description":"Webhook URL"}},"description":"The data to update","title":"ModelsNotificationChannel"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsNotificationChannel"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

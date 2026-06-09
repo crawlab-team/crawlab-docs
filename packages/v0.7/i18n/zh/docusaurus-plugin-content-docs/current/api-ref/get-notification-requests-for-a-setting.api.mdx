@@ -1,0 +1,75 @@
+---
+id: get-notification-requests-for-a-setting
+title: "Get notification requests for a setting"
+description: "Get notification requests associated with a specific notification setting"
+sidebar_label: "Get notification requests for a setting"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVcGO20YM/ZUB0UMKaGN3GzSpbptuGyzQpkGToAfDAWiJtiaVNJMhtYkrzL8HHEm2HO9u06In2RqSj3zz+NSD4I4hX8FLJ3ZrCxTrWoZ1BiVxEazX/5DDCxLTzkJMoA8dsbBBZldYFCrNRyuVQcOeCg08TWASse0OMvAYsCGhoMA9tNgQ5GBLyMAqlkepIANFsIFKyCV0lAEXFTUIeQ+y95rBEqaCIhQ09d1qefEjXmyvLn5Z95dP4jfw5SC/uXbnrp+b3zfvqZCb0gTygZhaHQDZoKnoE5ZU2AZrc4AQK7ViTmkQvyw8nJiba4jZYSiPO5rG+tBR2MMdc9hWaEchtbrFrhbIvzsr/wp3ZNqu2VAwWxeMx51tE7NzPLZ//ze85RngywHLbY0Vath4SqAEca13w961TKxlL5dLfZym/2pZNPlO0UAGhWuFWtFE9L4eIxbvWbP786ZdolcvOzhPQeyAXbiS7hxt60KDMrz6/lKvqyFm7f9MQDo6yleA1ZZlFoUhoBKc+DnPjjEDcYL1P/b3wxOIMYWPKnvdFQUx/2mlUh7TaZpAKldCDjuSQfYV5LCYU8yLcc940dsyLmaMM4Xbaee6UEMOfWKZYr5Y9JVjiXnvXZC4QG/PFud60Iq5enVjhlKQwS0Gi5t6oGeopr+o7Ro1lUrEQ5Yeo6eMehtOYgYKO4hnOqldgXV6HTPQdk6Ony2fLWNUCTIVXbCyT/M8JwwUrjolZLWeH79OTaX+5kGHGxlbnHqHTQpKl2fbrUuR4638FPBjjRtl4IwdZUXXcozJDLbGeWov2HWhIFNaFdumSzZJG1NoHAWDZWNb42sUFYQySoGHksvHTx8vBxJYGkxrMa75/W6sPeDMa0+67I9b978a+kil0CdZ+BqtWtIgsX4U6QpORJrUOMgUMsiT9R+Uup5UsYK+3yDT21DHqK8HR9P7Li2r7ErIt1gzPTDnA755T+N/0f7o3LdYdxqSTPbrUe81zwcxR/c+Yq6PG/Yvx370x/j1/NYcP0z3gE921u7n4FNTtoS41k0lLCmkNoaDq6IgL7OUMx/X/g+e9eLnNxDjZ1YB6F0=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get notification requests for a setting"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/notifications/settings/{id}/requests"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get notification requests associated with a specific notification setting
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"},{"name":"page","in":"query","schema":{"type":"integer","default":1},"description":"Page number for pagination"},{"name":"size","in":"query","schema":{"type":"integer","default":10},"description":"Number of items per page"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of notification requests","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object","properties":{"list":{"type":"array","items":{"type":"object"}},"total":{"type":"integer","format":"int64"}}}},"title":"SuccessWithList"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,75 @@
+---
+id: get-spider-dependencies
+title: "Get spider dependencies"
+description: "Get dependencies for a specific spider"
+sidebar_label: "Get spider dependencies"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVN9v0zAQ/lesEw8gZWs1kIC8bRSmPSAQg6eqSFf72noktmdftlWR/3d0Trq1KyDyksT367vvvnMPjOsE9RxmFMgZctpSgkUFhpKONrD1Dmq4JFZmz0OtfFSoUiBtV1arFKyhCBUEjNgSU5SkPThsCWqwBiqwkiggb6CCSLedjWSg5thRBUlvqEWoe+BtkIjE0bp1SchMUUJ/zqcn7/FkdX7yadGfvckv4DnKz96t/exCfVnekOYroyKFSIkck1GYFKoNPaAhbVts1GMJttxIzV0Y5OeJB4u6mkFeCPgUvEuUBO/ZdCqvQ//rQscBY1CB9o7JsbhjCI3VKO6TmyQx/TEHvlQVDqIPFNkOFbU3tOdlHdO6cL/ysUUejl6fSRctpYRrOuY156e2rzutKSXI8kgMb7yBGtbEA/8bqGGy38tkGHea9NZkqCBRvNtNvIsN1NCXZijXk0m/8Ylz3QcfOU8w2KOxzWiFXcPq/OuVGlJBBXcYLS6boeUhm3yR61qR64Y5QFVeo1xLDqgHS65Ayg6T2Vkar7Epx7kCgXNgfjd9N81Z5ptId9HytvRzQRgpnnfCwnyxb74uoAq+fadHqkeIO+ywLE6FeutWvniOI/gQ8b7BpTBwxI6wIts2+lQKnfKB3EnyXdSkjJWZLjvR+D0tlRY/igpNa50KDbLoQhilmIaU09O3p9OBhMQtFvWNmyqLnv6o3gNU/ZOY//9uGHlheuBJaNA6gVD00o8ym8OzoqPQoILaGpnzMNU59P0SE/2ITc5yfNtRlHktnoRTpmdskm8D9QqbRP/o4uW38Up6pZ62/S+Yx0N02yLUppM/qOAXbYfLLi9EgITSt8AYDOdaU+C9kKNbQOT1uH+XH79Dzr8BTkftOw==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get spider dependencies"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dependencies/spiders/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get dependencies for a specific spider
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Spider dependencies","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

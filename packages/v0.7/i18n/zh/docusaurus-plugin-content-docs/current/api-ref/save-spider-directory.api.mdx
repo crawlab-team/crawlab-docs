@@ -1,0 +1,71 @@
+---
+id: save-spider-directory
+title: "Save spider directory"
+description: "Save all files in a spider directory"
+sidebar_label: "Save spider directory"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVcGO2zYQ/RVi0EMDyJGxLZBUt91sC+whSBCnJ8MFxuLYZkqRzJDaXUPQvwdDSmvvOg0KtLrI5gyHb948Pg2QcB+hWcMqGE0cYVOBptiyCcl4Bw2s8J4UWqt2xlJUxilUMScrbZja5PkIFQRk7ChJiWY9gMOOoAGjoQIjZQKmA1TA9LU3TBqaxD1VENsDdQjNAOkYZEdMbNw+F0yJWLb+tV4ufsPF7nrxx2a4+nX8CV5ifO/d3t/eqA/bL9SmO62YAlMkl0grjArVgR5RU2s6tOrpiGSSlTPnbTC+LFwi6u4Wxk0BTzHdeH0UxC97ab1L5JKEMARrWpQq9ZcopYbLVn0uLq2yD8TJUJRoZuqCkLGCPICzCDKjUG8SdfE/1D3D/SI2P9J6DN7FUulquZTXc6puZzGoiPckc/+f+Gi9prMs4xLtiaGCnecOU1n65Uo66ShG3NP3OjlNe9W3LcUIU2cdpYPXolAfU9HdARqoi8ZjPRg91pn6WhqrtZGzI/H9rPWeLTQw5H5obOp6OPiYxmYIntNYYzAXgr2lHfY2qeuPd6qUggrukQ1upxmXavKLXN/JDT2kFKDKr+ma5hrQlMhYgRxbBjNHrG/R5uWxAoHzLPx2+XY5jqLsSG3PJh1zPzeETHzdCw/rzXl4lUFlfOdJT2xPEGfssM1JmX2Z+qfT/fn9Ebtg6aTL08WfZL6+jDwJ6mmsm1HsZeczhmm+7xgfLG6F2wvehe+dZzXlVAqd8oHcIvqeW1LaSOVtL77xQFvVSh6xQt0Zp4LFJKKTWRHHUnL5+s3rZaE3pg6ztCf3y9b5Ha98hmk4a+tfeu3EdqLHVAeLxsnxWYUzZ2uY5AsVNNmEC6sViIYFgmHRUFHMGoZhi5H+ZDuOsvy1JxYtbE6izAPRJspvDc0ObaQfdPLzp8kcX6mTh/4D8tnO3DFfAtvLP6jgbzqWT0ge84FQE2cYJfCuHLb4LNtPGy+sZqzmHddtSyH9MHdzZggfP6w+QwXbye677EPA+CDfMXwoIH1uPl+JvDaARbfvswtBqSnPN4eOiYs=
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Save spider directory"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spiders/{id}/files/save/dir"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Save all files in a spider directory
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"path":{"type":"string"},"files":{"type":"array","items":{"type":"object","properties":{"path":{"type":"string"},"content":{"type":"string"}}}}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Directory saved","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

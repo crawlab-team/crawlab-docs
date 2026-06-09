@@ -1,0 +1,71 @@
+---
+id: update-spider-by-id
+title: "Update Spider by ID"
+description: "Update an item by ID with (partial update)"
+sidebar_label: "Update Spider by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWd9P4zgQ/lesedqVAhRu0d7ljQW0V61Oh6C8XFVVbjK0XpI4a09ge1X+99PYCXFJgXDSPZxUnlp75psfHs98NRsgubQQT+GmVCkaC7MIUrSJUSUpXUAMt2UqCYUshCLMxWItxhfiUdFKfCilISUzUTmRjxCBLtFIVhynEINfn1sHPV+s5yqFCEppZI7ExuLpBgqZI8TgthQbLCWt4LkXkxWyXX0naIXeE9KNYYjA4I9KGUwhJlNhBDZZYS4h3gCtS4a3ZFSxfC/snTa5JIhBL75jQiqFup55a2jpi07XbCLRBWFB/FGWZaYSl4Gj75ZNbPq+eDDOhOF8kULLu6mkAVKcwzfDGl/sdj6CJB+gfvkTk4pQJDrPZeH1dDbI8oUkKRKdZWxRF8Ida98TVisNJpLaM2ts+Gp4rxWnxQgGGXEu6W2Mcy8rSOVoSeZl6Cif/wHvhKiL9XDUxfqlE+BjXkiLg9PJwmK8O4+Mt3hH0hxWm62t7Te1g291BEtFgwK4xszl46si8XJVMprRmubu7r8JymAsLpx4HUGu0yEJwDtZZSRI2nvhVCLAosq5/RlZpDqHCGSWQQQWubQwPSh0ihZmdQTDkuzb6FOKWX2+NLoq5yq1gbo0RnKJcMuxu2B3n/XOeNiIcEaESm0kKoupUIXYCuLACVgfd+vZf+zTy950frhp8M6z8zqsbJQ2isJ7qQrCJZoewFUrGoShCvrlxEk6cIhPHabm4AZV95WXfaWyCfOSb8DgynlSCJTnLmD79nCQWaYfMZ2nOpeq2HmG20bPvIJoFYL4h9V7m4G24JtZ/68uiyVpaF6ZbIDjNywrnGzdK8JnqRRN+iIgRRmD/qFTzKwXmzRSV16ojhraMmyKeHY0ZIq0qEOmSIv60hTpRcw8xqde8HxhEuOn1gtBO4iONE09+Zh1wrd96jYuyoqgrr2qLXVhfdWdjEaOv2x59Oc3iPbMaM+M9sxoz4z2zGjPjPbMaM+M/h/MKAI0Rpu+L9xO0Vq53HGA/pCo2nFA7FNr6VwXZHg6G3vdUKivilbV4hk5Y51Pu2jVF5mKa//8BE7muC9zW8iKVtqov9HdtNNdQOOC0BQyEzdoHtCISxdz7WKklU79Q1yycg92PHrgyKfRHm1UWrtJkFTcN26YxTW3rFQTfY/h0JSl+obr9m1vhTJ1Lah59Tu7GguvwZaZF153b2uXP2VeZhgyQNd7utpwnC34+kSTgrWA+MDJ6OTTwejzwclvk+PT+PQ4Pvn1cPT5+C/YpjJB8YWUJFhe9OxsZ/dpuWUD2yvBRO82/Kju5u1zC88n5rTdmoUzK1xtJkgH0U2F0+123ol0bbm/FnTbXj8NjYRtslvfaoDBctDbgtsUtprXzi1sHuGNU8WddmXY3jwjHzO5EGdX4z4Vu7yZ8Ia400Y0ghDBAxrrBUaHnw9HbgRoS7l09d3E0TyPN43VvY4/xw9eiN/3mt5cIcKfdFRmUjl+WZmMIX31TJuscguPVcqHvtKWeGOz4cK9NVld8/KPCs0a4uksggdplFxwVqYbSJXlzynEdzKz+IrrH66b34sfxRvP5jv9bvtBwc3gQWYVf4MI7nHtn/9r5pJNg2DP/Ma5t38wYfVOsfdzso5ajbMkwZJelZ0FXe7qbHL+O0SwaF7zn67hI/9fQT56L7VLiCt9t7aBTBbLys0C8KD89w/LiLhe
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Spider by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/spiders/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update an item by ID with (partial update)
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to update","required":true,"schema":{"type":"string","description":"The ID of the item to update","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"cmd":{"type":"string","description":"Execute command"},"col_id":{"type":"string","description":"Data collection id","format":"objectid","deprecated":true},"col_name":{"type":"string","description":"Data collection name"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"database_id":{"type":"string","description":"Database Id","format":"objectid"},"db_name":{"type":"string","description":"Database name"},"description":{"type":"string","description":"Description"},"git_id":{"type":"string","description":"Related Git ID","format":"objectid"},"git_root_path":{"type":"string","description":"Git root path"},"mode":{"type":"string","description":"Default task mode","enum":["random","all","selected-nodes"]},"name":{"type":"string","description":"Spider name"},"node_group_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node group ids, used in selected-node-groups mode"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node ids, used in selected-nodes mode"},"param":{"type":"string","description":"Default task param"},"priority":{"type":"integer","description":"Priority","format":"int32","default":5},"project_id":{"type":"string","description":"Project ID","format":"objectid"},"template":{"type":"string","description":"Spider template"},"template_params":{"type":"object","properties":{"allowed_domains":{"type":"string","description":"Allowed domains"},"project_name":{"type":"string","description":"Project name"},"spider_name":{"type":"string","description":"Spider name"},"start_urls":{"type":"string","description":"Start urls"}},"description":"Spider template params","title":"ModelsSpiderTemplateParams"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The spider data to create","title":"ModelsSpider"}},"required":["data"],"title":"Update_spider_by_idInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"cmd":{"type":"string","description":"Execute command"},"col_id":{"type":"string","description":"Data collection id","format":"objectid","deprecated":true},"col_name":{"type":"string","description":"Data collection name"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"database_id":{"type":"string","description":"Database Id","format":"objectid"},"db_name":{"type":"string","description":"Database name"},"description":{"type":"string","description":"Description"},"git_id":{"type":"string","description":"Related Git ID","format":"objectid"},"git_root_path":{"type":"string","description":"Git root path"},"mode":{"type":"string","description":"Default task mode","enum":["random","all","selected-nodes"]},"name":{"type":"string","description":"Spider name"},"node_group_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node group ids, used in selected-node-groups mode"},"node_ids":{"type":"array","items":{"type":"string","format":"objectid"},"description":"Default node ids, used in selected-nodes mode"},"param":{"type":"string","description":"Default task param"},"priority":{"type":"integer","description":"Priority","format":"int32","default":5},"project_id":{"type":"string","description":"Project ID","format":"objectid"},"template":{"type":"string","description":"Spider template"},"template_params":{"type":"object","properties":{"allowed_domains":{"type":"string","description":"Allowed domains"},"project_name":{"type":"string","description":"Project name"},"spider_name":{"type":"string","description":"Spider name"},"start_urls":{"type":"string","description":"Start urls"}},"description":"Spider template params","title":"ModelsSpiderTemplateParams"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The spider data to create","title":"ModelsSpider"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsSpider"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

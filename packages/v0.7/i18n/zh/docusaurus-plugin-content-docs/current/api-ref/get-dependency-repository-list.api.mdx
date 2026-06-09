@@ -1,0 +1,75 @@
+---
+id: get-dependency-repository-list
+title: "Get dependency repository list"
+description: "Get a list of dependency repositories"
+sidebar_label: "Get dependency repository list"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2zAM/SsCz16TdcM2+NatQzFgGAp0ww5FDrTMJOpkSZPodpmh/z5Qdpq06Rd2siF+PPLxkQMwrhLUl3BKgVxLThtKsKigpaSjCWy8gxrOiBUqaxIrv1Tt1nejIgWfDPsoYRUEjNgRU5ScAzjsCGoIuCKowEim3z3FDVSQ9Jo6hHoA3gRxMo5pRREEeom9Zahf5/t1nOOKlOu7hqJa+qgCrozDYszVLV4yf/8Pb34A+G3E8ktlmLqkAhVQgryoIFIK3iVKkvZ4PpfP3fCvzzKmvWNyLKEYgjW6dDO7ShI/HJbtmyvSLFRHHyiyGdG1b+nB5pY+dsjj05tjyBV0lJJ0sPNOHI1bia1FfgGY6GDPC2NEobgwdBidcwXsGe2z9b17CzkXd8NW3C56rSmln4bXwmSxlg547VuoYUWlOOQ11DBr9yQ8KzTL3Cleb+XYRws1DIVTyvVsNqx94lwPwUfOMwwG7s//dNSGOjn/osZUUME1RoONHckYs8kfub6TVVozB6jKZ1qlSV+jJVcgsKNYthbrNdrynCuQcu6YP8w/zHMWySXSfTS8Kf18JIwUT3pp/3Kxb74oRZX69p1u+Z9K3NYOTXEqozJu6YvnNINPEW8sNsLAATvCiqzh5FMpdMoHcq+S76Mm1RqRVtMzteqGGqXFj6LCtjNOBYss4xdGKaYx5fzo/dF8JCFxh2UJprWWI/TQIm3KYbpf3LBbrRefr4kdpj88CxaNXJVRNcOkskvYVxnIDRCdLbYzvYRhaDDRj2hzlufx/si0WpNENC3US7SJnij3iSv3SI2/aLO7s9doe3EpJ/HlqI+euicxp1u7w1zs9qOosoI1YUuxcDDGnGhNgfeiDi6fZLnd8rPP3yHnf182Syo=
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get dependency repository list"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/dependencies/repos"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a list of dependency repositories
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"query","schema":{"type":"integer","default":1},"description":"Page number for pagination"},{"name":"size","in":"query","schema":{"type":"integer","default":10},"description":"Number of items per page"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"List of dependency repositories","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object","properties":{"list":{"type":"array","items":{"type":"object"}},"total":{"type":"integer","format":"int64"}}}},"title":"SuccessWithList"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

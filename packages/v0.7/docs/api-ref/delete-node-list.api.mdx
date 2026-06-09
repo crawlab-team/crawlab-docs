@@ -1,0 +1,63 @@
+---
+id: delete-node-list
+title: "Delete Node List"
+description: "Delete multiple nodes with deletion prevention checks"
+sidebar_label: "Delete Node List"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVu9P2zAQ/Ves+5wBY5sm9VsH1VbxYwjKJ4Sqa3IQg2Mb+9LRVfnfp4tbFijQbJ+axO/eO9/Z77oExtsIgys4dQVFuM6goJgH7Vk7CwM4JENMqqoNa29IWYGpX5pLVciSdlb5QHOy7WNeUn4fIQPnKaB8GhcwgBZKUwmeGh0ZMggUvbORIgyWsL+3Jz/PpX8eQQa5s0yWZRW9NzpvSXfvokCWEPOSKpQnXniCAbjZHeXC74OkwDoJFMg9UFNddECRg7a38LIi40PI4MaFCvmJSRfQZIA56zl1GGbOGUK7QTFMwKeQKfJ23RSkkLvyBTJ9YF21ZHkgZCp6sR0krJLYyFj5rayzRX/W2eKtGuV1CGR5GmprKcQOpbZMtxQ2OVOEWkd0iLXlT/vC+ixiW5KHnbcmA7I4M1T0aNtohWwyKF1kixVtV/uxRjYZaN/jeJ21yDitMDKFHmmNo1phmwzuqUebJrLaZFBhvh18MjxI2Md/aNoJPr7bsH61O13VLTJyHbfjLxKuyaD2Re+rcJmwPa7CmrXPVVizvnUVXp5amJSkxKYUO5WEIAPWbETkxBVkonh0e2RDcGEzBekSxYi3r5T2nSpKKmudA2c5OGMoxPOVQX/XXNazbgKNRHx+zbK/YaHO6aGmyNBiPm5iLi3WXLqgf6er9OU1orFlChaNuqAwp6BG7Y6bdodcur8zRTwcuYQB7LajCTKIlNdB8+JCZkMydvR64u6paw7o9RFJb7TolYRFe4zTwYTh2VilCNHU9sa1oesqBfxlcKaGZ+ONvp+PLiayoG5cUCsgZDCnEBNgb+frzp5s3LvIFbY5rVRXw1aqrI7TmHzhbE/j8L8H82r7TI+86w3q1gPrYIQ9VfIK7Pq/gNicfFguZxjpMpimkc8PNYUFDK6uM5hj0OKK8ia+mOo4uFomJ4JhnpOXjczR1KnuL6Z4c91p6uHoeDQZQdP8ATfb890=
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Node List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/nodes"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete multiple nodes with deletion prevention checks
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"active":{"type":"boolean","description":"Active"},"active_at":{"type":"string","description":"Active at","format":"date-time"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"current_runners":{"type":"integer","description":"Current runners","format":"int32"},"description":{"type":"string","description":"Description"},"enabled":{"type":"boolean","description":"Enabled"},"hostname":{"type":"string","description":"Hostname"},"ip":{"type":"string","description":"IP"},"is_master":{"type":"boolean","description":"Is master"},"key":{"type":"string","description":"Type"},"mac":{"type":"string","description":"MAC"},"max_runners":{"type":"integer","description":"Max runners","format":"int32"},"name":{"type":"string","description":"Name"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsNode"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsNode"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

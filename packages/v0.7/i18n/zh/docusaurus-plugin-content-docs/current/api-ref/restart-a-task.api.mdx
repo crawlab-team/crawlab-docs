@@ -1,0 +1,71 @@
+---
+id: restart-a-task
+title: "Restart a task"
+description: "Restart a task"
+sidebar_label: "Restart a task"
+hide_title: true
+hide_table_of_contents: true
+api: eJxtVE1PGzEQ/SvWqIdWMmxEK5XuLRRV4lCBgJ6iVJrsThKD1zb2LBCt/N+r8SYhkOayG8/Xm/eedwDGVYJ6BveYHhPMNQSM2BFTlOMBHHYENZgWNBgHNQTkNWiI9NSbSC3UHHvSkJo1dQj1ALwJUpE4GrcCachMUUr/ziYnP/BkOT35NR/OvuVPoKGl1EQT2HjJ+O3dyl9eqOvFAzV81apIIVIix9QqTArVml6xpcZ0aNV+BBu2MnNXBvlj4zGiri4hzwV8Ct4lSoL3bDKRx/t8oUNFSoxRRqe+aSilZW/tBjQ03jE5ljIMwZoGpax6SFI7HHPhy3ThIvpAkc04ufEtHWQZx7SiCBqWPnbI49HXM9mmo5RwRcf85vy2/t2IErL8PjJwOy6jUDGmR5CWvPatKOoTjzqtoYZKwqkaTJurLQGgIVF83lmijxZqGMqWlOuqGtY+ca6H4CPnCoM50vWSlthbVtObKzW2Ag3PGA0u7MjF2E3eyPWdOHLNHECXRzFmO/aAeoxkDTJ2lG4Xsb5BW46zBoHzLnw+OZ/kLAZI1PTR8Kbsc0EYKU57WX82PwzfFVAF32HSXoMtxB12WJSkoolxS18yt9r8jPhicSEMHLEjrCx9VNscrdApH8idJN/HhlRrROxFL058oYVqJI+iwrYzTgWLLIYRRimmseXk9PvpZCQhcYfFlturfGSEd2D2uzG9chUsGidtiubD1iMzKB4BDXX5LuxsMt9JMoNhWGCiP9HmLMdPPUUhe/6meqG+NUneW6iXaBMdYdlfNPh8u/3gfFFvd1n/H+z2EN2muMz28g80PNJm/JTlubiHsKVYYIyBadNQ4IOSo7st3thfm5vru3vI+R83VMrV
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Restart a task"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/tasks/{id}/restart"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Restart a task
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","required":true,"schema":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"description":"Object ID"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Task restarted successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

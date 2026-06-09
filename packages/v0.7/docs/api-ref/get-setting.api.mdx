@@ -1,0 +1,75 @@
+---
+id: get-setting
+title: "Get Setting"
+description: "Get a setting"
+sidebar_label: "Get Setting"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNVVFv2kAM/isnP23SrbBp06S8sa6qUDWtAroXhCqTM+TaJJfeOd1YdP99chIKLXTlJUT57M/+fOePBhjXAZI5TInZlusACw2GQuptxdaVkMAlsUIVOhw0uIo8CjY2kMCa+HaHVeixICYvnA2UWBAkcE8b0GCFrELO4GWFvrbq4jw91NaTgYR9TRpCmlGBkDTAm0roAvuu2ussMS6EKFSuDBQk99NwKD/PU35egYbUlUwlC4pVldu0FTe4CxLSHJZ3yztKWcR6GQXbroBBPiHq1pq3lYy/g4aV8wXyE5M1EDWknpDJ3CK/zXLexSq2BQXGotonNcj0QZB91uXmdNbl5rUeZf5v0swEjRrqypws6KaLPUHQlvUUQVvW1wU9Yl7TsaNFY6ywYH69f8jxZYlfLUE8+D7LSMm1UexU1zJoYMu5VPnhDOWhv9TSBnnv/KGeqKGgEHBNR7HAyHU4AsVdqXNXsnd5Tj5M+p25tJzVyxc9REn6fGyRvqFRE3qoKTC0MR8PY25KrDlz3v6ldqxfjhGNSyZfYq6m5B/Jq4tWdGxFcuZ6x2mdhjNIYNB7Txg097SJoCFQWnvLm6nsbbd0WNmZu6dybwpY2audK2WEhjzorWGNrseqy5DKtly5NnU7Lo+/c1yq0fX44DZNLqYzAdTKedUHgoZH8qELGJ59PRuK/MoFLrDtqa8qRjt9stJnvM3OpQ78uFfE9IcHVY62bDfA55LVTWkO2ymBhkT2c6Ehc4EFapolBrrxeYzy+aEmv4FkvpB77y0uRfK8AWODvBtIVpgH+k9/7ya9gb9Xz439aKPb8yglot80gN5F2mdcRL09IemkQ0ZpShXv5Rx4t/wFPF2ay4sZxPgPlLxekw==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Setting"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/settings/{key}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a setting
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"key","in":"path","description":"Setting key","required":true,"schema":{"type":"string","description":"Setting key"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"key":{"type":"string","description":"Type"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"value":{"type":"object","additionalProperties":{},"description":"Value"}},"description":"The data to update","title":"ModelsSetting"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsSetting"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

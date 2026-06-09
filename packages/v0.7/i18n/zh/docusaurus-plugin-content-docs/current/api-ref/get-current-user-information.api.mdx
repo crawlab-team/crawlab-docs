@@ -1,0 +1,63 @@
+---
+id: get-current-user-information
+title: "Get current user information"
+description: "Get current user information"
+sidebar_label: "Get current user information"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVcGOGzcM/RWB6FGOjW2BpnPbZNsgh2ILpEEPhrvgaGhbqWakUpxsjIH+vaDGdp1do0Fv64sM8Ukk36PeTCC4y9Cs4WMmzrCxwJRTHDJlaCa4Wa106Sg79kl8HKCBtyMzDWLGTGw6EvQhgwUXB6FBFI8pBe9Q8ctPWQ9NkN2eeqzREO630KwnkEMiaCC2n8gJWEgcE7H4ObmLHel6RPlBaEcMFraRe5R56/sbKBZ6yhl3l+gs7IedxjoUvAgck5ViQbwE3fowOkc5/+Flf6fgYr9V2vU7n6IefPe8IgsJRYiVyT/Xq8VPuNjeLn7ZTDc/lO/APuH61zjs4t0bc18zvO8MU2LKNAh1BrNBs6cv2JHzPQZzTnHq7HRMeVC5Buyvk5Qw58fIV+t9ZC90P4QDNMIjFQvUow/XoGdlZkSxwDFcz6iBl0UQxygP2PV+eHhSdRtjIBwU5JhQqHtA+c/+OxRaiO+pMp+6/33mlKc9vCCGTo28oKIunrFaGJRSNkV/TzO+IzHu0rn8MDOvYXUQ2ccOGtiRzL3soYGlIvOyJ7CQiT+rR6pxjRyggal6GpVmuZz2MUtpphRZyhKTf9bxHW1xDGJuf3tv5qvAwmdkj22Y7WK+Tf/RMPZqynuRBLYu1Zu7+Q5o5kixoGlnhz5FQnQY6rY+68hfh1+vXq+UIm3HjezlUPt5Q8jEt6M2vd5chj/Uomp9l6Cz+scST7VDW0FVFyW4Io/6vGV8DNgqA8/YUVa2kc0RYw0OJiYaFjmO7Mh0XmegHXU8Hqk1TnHEpj5XkwKKiqmMEuf5ytWrH1+tZhKy9Fg/QrP/fWsWvirt3KnQF1mmgL76QJ2A6Tgn62quuY6R6jSrsoZpajHTRw6l6PbfI7HyvflX+Eq3hT1hR1yl+IsOyodzlKROSBg1+7NPqop0Htp3P/8OpfwDsyOrmQ==
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get current user information"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/users/me"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get current user information
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Current user details","content":{"application/json":{"schema":{"allOf":[{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"data":{"type":"object"}},"title":"SuccessWithData"},{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"username":{"type":"string"},"password":{"type":"string","writeOnly":true},"email":{"type":"string","format":"email"},"role":{"type":"string"},"role_id":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"root_admin_role":{"type":"boolean"},"created_at":{"type":"string","format":"date-time"},"updated_at":{"type":"string","format":"date-time"},"created_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"},"updated_by":{"type":"string","pattern":"^[0-9a-fA-F]{24}$","description":"MongoDB ObjectId represented as a hexadecimal string","title":"ObjectId"}},"title":"User"}}}]}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

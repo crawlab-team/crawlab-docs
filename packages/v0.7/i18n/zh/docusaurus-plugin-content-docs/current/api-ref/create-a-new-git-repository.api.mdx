@@ -1,0 +1,75 @@
+---
+id: create-a-new-git-repository
+title: "Create a new Git repository"
+description: "Add a new Git repository to the system"
+sidebar_label: "Create a new Git repository"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVU1v2zAM/SsCz+4SdIcNvrXd0A4YtmJpT0FQMDYTa7UlTaKbBYb/+0DJqZOmX8B8sU1RT/x4j+qAcR0gn8OlZlhkUFIovHasrYEczspSoTK0UZealSdng2brt4qt4opU2AamBjLw9KelwOe23ELexV/tqYScfUsZFNYwGZYldK7WBcoBk99BTukgFBU1KF+8dQQ52OVvKnjATUBzMNgQZND6WgJ13jryrCnIvrg27g/stVnD03R+YEPKrmLohwlBn4DfhLj99f1lBGy5ukv7j3HItE1MwxpJo2J2kEEI1TNlb7kiw0OZlCCplfUvxR3Ivy//28Ezgl3d3FwrPDhJ0ByGsLG+fBvtevCcsL0n8xpmCNXdPW3fhpzNrpTz+gGZ1D1tI6bYnod8f6iCIXi7HUqnFopNh0fzifOWqWAqoY+PEDA4a0Ji2el0Kq9D7CfKKDwhU6lCWxQUwqqt6y38hwIOeV7Ycr/P2jCtyUMGK+sb5GT6eCoVaigEXD/DCkmLNddimqUoYci2Ia5sCTk4G+LhyBXkMFlrDkJW8g/kZVx0SS3QxcCpzyeTrrKB+7xz1nM/QaePuvCFVtjWrM6uv6kEBRk8oNe4rFN6CU2+dmoZZCKvkIQSMSBPK30Gcmzqym6ltgXW0Sx8tv5w+fP087Tv+4WkU7Re8zbmc07oyYvyIJ8v9pdnMagY377TY1l3Sh5ih2V0imWW9v4aR+PXv9i4msaBNfI1lfPxd2+S7AbGKPPRbVTAaHsU26Hp2LXPQJuVjZkMdLjwuKlxKR066p50TfQ4+GQKjbKOzEmwrS9IlVpwl62Qf0NLVYgfeYVlo41yNbJwVDpOPiTI6YdPH6apSYEbNHuFuYgyevbyeRpZN4rr/RfWUFumvzxxNWqzdwMk1s8hsn6xY9gcum6JgW593fdi/tOSF+4sRhJH6mRQEZbkI61SJy5SgCc3cqq4162cfjQJ+my346woyPGrvos9vV7/nN1ABsvh/m3imACPG7lDcQM5QAY2FiwSOdo6qNGs2zgkIGHK8w956s4r
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a new Git repository"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/gits"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Add a new Git repository to the system
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["name","url"],"properties":{"name":{"type":"string","description":"Name of the Git repository"},"url":{"type":"string","description":"URL of the Git repository"},"auth_type":{"type":"string","enum":["none","http","ssh"],"description":"Authentication type for the Git repository"},"username":{"type":"string","description":"Username for HTTP authentication"},"password":{"type":"string","description":"Password/token for HTTP authentication"},"ssh_key":{"type":"string","description":"SSH private key for SSH authentication"},"ssh_password":{"type":"string","description":"SSH key password if the key is password-protected"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Git repository created successfully","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

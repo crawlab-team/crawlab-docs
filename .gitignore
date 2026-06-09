@@ -1,12 +1,5 @@
-.DS_Store
-../_book/
 node_modules/
-tmp/
-.idea
-*.log
-*.local
-.docs
-#dist/
-venv/
-.temp/
-.cache/
+dist/
+.idea/
+packages/v0.7/.env
+packages/v0.6/docs/.vuepress/*.mjs

@@ -1,0 +1,75 @@
+---
+id: batch-update-database-list
+title: "Batch Update Database List"
+description: "Batch update multiple items with partial fields"
+sidebar_label: "Batch Update Database List"
+hide_title: true
+hide_table_of_contents: true
+api: eJytV21v2zYQ/isEP22A2mTdhgH+5rxgMZKsqZ1gHwxDOItniw1FqiQV1zP034cjJUe17EYdli+RpefenjveHXfcw9rx0ZxfgYclOHR8kXCBLrOy9NJoPuIX4LOcVaUAj6yolJelQiY9Fo5tpM9ZCdZLUGwlUQnHE25KtEDSE8FHfEnyaZRPRWMnVdJ5nnCLXyp0/sKILR/teGa0R+3pEcpSySyoOfvsyJMdd1mOBdCT35bIR9wsP2NGekpLRr1ER1+lcB0QWAtbnvDgcue981bqNa8PA37MkU2uHDMr5vM2Um8aCgjfPB3xA4SQpAbUQ9ejozYaShvZuo5sSIuCMiIDlY2lRcK99ArbdBylc6LLivRETa402kU6Ppyf079vPfh4y5P/i29y421UKkWf/UNiJlc84StjC/B7TVIQ6ZB5+dIlfWmMQtA9FeMI3Iuk/kjWjwsx8F3zxPE7L4ugLAPnQAsLaQkWvqmkEwE/49aVkOHb1m9bZN2rlMvWLGvMkisWwaNIwb+t+jJiGYXhPBTl6QAbrcvtcK3L7al0UU2kzlR2SPzUflgDbmSprIcJBuQhb28Kdn7VCUdrjX1b6jrA6oTnVFdD6wAqnw+oQEL1839DZfma+ty4AUm/IVSdcOlSgSuolD9ybuqEF0avzQ/FkRaY5aClK4ZFxF7xdCBJw9CiCOJtUfR4uSfXO8RoKAbo/AtirZfg3MbYIw2JPhrb5Utqj2u0PV0PBOtUv9T+1w9R3vm1RTeYWOdUWhgxwP/Z7I4FZJ+Qh8ZqhxOLQg73QiwHBH11cSTkni9TMtxxxGmzWSl4/oEzk2Wm0gNKfdwAKVyjBlA4JRT5dDjcTlEecXXCN2AxN9WQvvT3HtonZ9aS0SXIg68GjKlZxO13kGEz4CliB8yAVuuQGdBqPT0DKisHqJlOAtZhamxxpE/1BByyj9N7JrXzCIL2NIVryLasnRvMoX2RGbKfjFZbtjKW3W9nn+4S1hyS8Dz7dMdmaF/Q/tw4YIc1kacW2c8t7XXkRWdffF3d7o1A5boj68TYoc6MzsH6iDPfKRZyp7V1abS3Rim0btrsgn9Kn1fLQyfCuvjbsQ3xAgSbxv2cB8wvfcyTppZurPwHQ8Z/P6Zooj0Rphq2WTNFQ5Q+N3RJKGmrpSYANCr5mdjfRxLuMKus9NtwEJvuUMpH84zdOQ+lvMWw5pPJHEGE7hUzyscPExYlyCztt9PXm8f1VyjK2DrCzWHeErrorPokJ/XKBJMtyRY2CpZs/DDpt5nr2SN9CNXXAHnCX9C6CDh//8f783ZcFBBiabyNV654vlibKnYXr0wHa85+hf8PF7WGOo9f/VmpQOp4aBXpjZmYc9G9GcbtY853O3r1ZFVd0+svFdotH80XCX8BK2FJ7MwXtK7EPIzmYRtu6hK1f/dIpgmuqpi9g9tHnbQS4yzD0n8Xu+hU0sP48fKGJ3zZXCnjXOUWNnTdhA0f8XBFJfFQS+HdjivQ6yqcOB6V0t+/kjA+uw==
+sidebar_class_name: "patch api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Batch Update Database List"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/databases"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Batch update multiple items with partial fields
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"ids":{"type":"array","items":{"type":"string"},"description":"The IDs of the items to update"},"update":{"type":"object","additionalProperties":{},"description":"The update object"}},"required":["ids","update"],"title":"Batch_update_database_listInput"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"active":{"type":"boolean","description":"Active"},"active_ts":{"type":"string","description":"Active at","format":"date-time"},"cassandra_params":{"type":"object","properties":{"keyspace":{"type":"string","description":"Keyspace"}},"description":"Cassandra params"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"data_source":{"type":"string","description":"Data source"},"database":{"type":"string","description":"Database"},"description":{"type":"string","description":"Description"},"error":{"type":"string","description":"Error"},"hive_params":{"type":"object","properties":{"auth":{"type":"string","description":"Auth"}},"description":"Hive params"},"host":{"type":"string","description":"Host"},"is_default":{"type":"boolean"},"mongo_params":{"type":"object","properties":{"auth_mechanism":{"type":"string","description":"Auth mechanism"},"auth_source":{"type":"string","description":"Auth source"}},"description":"Mongo params"},"name":{"type":"string","description":"Name"},"password":{"type":"string"},"port":{"type":"integer","description":"Port","format":"int32"},"postgres_params":{"type":"object","properties":{"ssl_mode":{"type":"string","description":"SSL mode"}},"description":"Postgres params"},"redis_params":{"type":"object","properties":{"db":{"type":"integer","description":"DB","format":"int32"}},"description":"Redis params"},"snowflake_params":{"type":"object","properties":{"account":{"type":"string","description":"Account"},"role":{"type":"string","description":"Role"},"schema":{"type":"string","description":"Schema"},"warehouse":{"type":"string","description":"Warehouse"}},"description":"Snowflake params"},"status":{"type":"string","description":"Status"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"},"uri":{"type":"string","description":"URI"},"use_orm":{"type":"boolean","description":"Use ORM instead of legacy database service (only for MySQL, PostgreSQL, SQL Server)"},"username":{"type":"string","description":"Username"}},"description":"The data to update","title":"ModelsDatabase"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsDatabase"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

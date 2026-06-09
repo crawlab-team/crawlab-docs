@@ -1,0 +1,71 @@
+---
+id: delete-token-by-id
+title: "Delete Token by ID"
+description: "Delete an item by ID"
+sidebar_label: "Delete Token by ID"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVdtu2zAM/RWBTxugNdmwYYDfuiYYgu5SpOlTEBS0xdRqbcuV6GyeoX8fZMW9JV2ypzjm0TnkEUl3wHjjIFnCwtxR5WAlQZHLrK5ZmwoSmFBBTAIroZlKkbZiNgEJpiaLATJTkIDqQdccOK7T9lorkFCjxZKYbODvoMKSIIE+pANzjZzDS7lFTmI2EWYtOKcoyUZEfpBg6b7RlhQkbBuS4LKcSoSkA27rQO/Y6urmf2nXxpbIkIBJbyljrcD7VVBztakcuSDwYTwOP895f56DhMxUTBWHKNZ1obPemNGtC5BuN8coEhyywUbWUUAhH4EK3h4st7+iPUVJyCwhk7pGPsxyFrGCdUmOsayfkipkehciT1nT9njWtH0tx9gph3h+YNTum+6IDuhhXkJTq6MduIrYIxwYWI9xYGB9zQG/r3tDd4SejUIggTUXQeS7UVS4h/LIWmN3c/ASSnIOb/Y46yU4Rm7cnpB/FDozFVtTFGTdfDsYXzXnTfosAx+OfNw3K19QiTndN+QYesz7XcxVhQ3nxuo/1LfCp31Es4rJVliIS7IbsmLal+z7Ejk3jwupX0KcQwKjvkvcqNPKgwRHWWM1t5dhNONcYa0XLzoJa31O7bCuckJFFob2hNOLmRhqDpC16Y8OZln8VWAqTi9mO/c/n14uQkCsjRVbIEjYkHURMD75fDIO5dfGcYl9TlvV7TruhR+W8TP67nEfvba8t/Ux/eZRXaCOc2GLcDgatoxj5UBColX4KuTGcXjfdSk6urKF9+H1fUO2hWS5krBBqzEN1S87UNqFZwXJGgtH/8jxzXy709+KA1t6b9rDXVXhojZYNOEfSLijNn5t/MrL4fJCZjFwmmVU85MjO5s7fAAe+mky/TZdTMH7vzwVb/4=
+sidebar_class_name: "delete api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Token by ID"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/tokens/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete an item by ID
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"id","in":"path","description":"The ID of the item to delete","required":true,"schema":{"type":"string","description":"The ID of the item to delete","format":"objectid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"object","properties":{"_id":{"type":"string","description":"ID","format":"objectid"},"created_at":{"type":"string","description":"Created timestamp","format":"date-time"},"created_by":{"type":"string","description":"Created by","format":"objectid"},"name":{"type":"string","description":"Name"},"token":{"type":"string","description":"Token"},"updated_at":{"type":"string","description":"Updated timestamp","format":"date-time"},"updated_by":{"type":"string","description":"Updated by","format":"objectid"}},"description":"The data to update","title":"ModelsToken"},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubModelsToken"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,75 @@
+---
+id: uninstall-dependency
+title: "Uninstall dependency"
+description: "Uninstall a dependency"
+sidebar_label: "Uninstall dependency"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVD1z2zAM/Ss6zEzkS4fmtCVth07N1cnk8wBRsM2UIhkSiuPT6b/3QMm28tWpWiiBIPjew4N6YNwmqFbwnQK5hpw2lGCtoKGkowlsvIMKHpxxidHaAovmmHkABZGeOkp865sDVH3+NJEaqDh2pEB7x+RYtjAEazRKwfIxSdUekt5Ri/LGh0BQga8fSTMoCNEHiixgqh4ctjTLShyN28JbkCcKhyIfGPIjGFPwLo2lrhYLWT492R2ZUgP/Db/2zRy/cUxbiqBg42OLPIa+XMGgoKWUcPsBW2HChq2Elp3WlBJMBFvinW+gguBTvhx5BxWUzaynZaTgU3miBwoSxWeK0v0eumihgj4ToqEqy37nEw9VH3zkocRgPpB7g53l4ubuZzGWAgXPGA3WdqQ9VpM3cl0rLtsxB1B5mVyWa0A17gwK5NqxQccd6zXaHB4UCJxX29eL68UwDGuho7to+JD53BJGijedCLFaz7eXGVTGN086yT1BPGKHOidl+aXtv8+G//GCbbB0NuipVQqM2/hcdOrYt4h7i7WI9U5IEXDjYzHlqAJd4QO5i+S7qKlojNStO6am2FNdaMmjWGDTGlcEiyw2EvEpprHk4vLr5WLUK3GLbobxPMqvBvkVpP5s/M9Hf9KL6YXLYNE4uS/7qJ8cuIK5A/PfInhZzy5cHzu+gr6vMdFDtMMg4aeOovRyfTZVbqWCHWFDMbf5Dx1E3BHsxb0gknTbCbJ3Ezuo44kbrSnwP3PXs7m6+7W8BwX19Jdr8zhDxL1wwj1UAAp8Fi8bK8d6sOi2XR5mGGvK8xc9/uRC
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Uninstall dependency"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/dependencies/repos/uninstall"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Uninstall a dependency
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"Dependency name"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Dependency uninstalled","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

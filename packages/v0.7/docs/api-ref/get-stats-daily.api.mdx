@@ -1,0 +1,63 @@
+---
+id: get-stats-daily
+title: "Get Stats Daily"
+description: "Get the daily stats"
+sidebar_label: "Get Stats Daily"
+hide_title: true
+hide_table_of_contents: true
+api: eJyNk99r20AMx/8Vo2fTZKPbwG/dGkLow0rSPoVQFFuJrznfuTo5W2b8vw+dHeZ2KfTJ5vTRr6+kFgT3AbI1rAQlwCaFgkLOphbjHWQwJ0mkpKRAY09JiFAKviZGJRYFZLAneYqWp0hBCkyh9i5QgKyFz9Opfl7H/XkHKeTeCTlRK9a1NXmMOXkOirQQ8pIq1D851QQZ+O0z5QIp1KwViOkTFChjCplRizBCVfiQN42oIGzcHrrYRGNlHME4oT0xpLDzXKH0T1+vlRYMh4+xChuxCs2cGDlF6W9VuoVQFQFi9nyxqopCwP3linUITbhgGqX84Z2wt5Y4LIcpzY2UzfadWtT3+tIEv2ORLOmloSAQmU//M48OGyk9mz9UKPTlUqCFE2KHNlkRH4mTWey9i71K6YcN07mhlJDBJO7a5LxrgfKGtXLdln6kWJsHfyA3Xora3FHcCk1ZEhZxNg4rtd7cL5LeQ9Mat/PR9SwZ4y+L2+TmfgFv72M5Wz2oIdl5TgYQUjgShx6YXn27mmrvtQ9SYaxpyKq3FfVObodeXsVu/93HO2c49Cb0Wya1ReM0T8NWfXux1nBme7k2KZQ+iBradouBHtl2nT6/NMQnyNabFI7IBrfa+nrTpWexsnULBzqpWnlOtQ7kiLbpxX1zvN1mNLz57AG67i/TLYBP
+sidebar_class_name: "get api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Stats Daily"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/stats/daily"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the daily stats
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK","content":{"application/json":{"schema":{"type":"object","properties":{"data":{"type":"array","items":{"type":"object","properties":{"date":{"type":"string"},"results":{"type":"integer","format":"int64"},"tasks":{"type":"integer","format":"int64"}},"title":"EntityStatsDailyItem"}},"error":{"type":"string"},"message":{"type":"string"},"status":{"type":"string"}},"title":"ControllersResponseGithubEntityStatsDailyItem"}}}},"400":{"description":"Bad Request"},"401":{"description":"Unauthorized"},"500":{"description":"Internal Server Error"}}}
+>
+  
+</StatusCodes>
+
+
+      

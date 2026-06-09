@@ -1,0 +1,75 @@
+---
+id: uninstall-dependency-setup-for-a-language
+title: "Uninstall dependency setup for a language"
+description: "Uninstall a dependency setup for a specific language"
+sidebar_label: "Uninstall dependency setup for a language"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVcFu2zAM/RWBpxZQ62A7rPCtXXfYacXanYocGJlJ1NmSJtHLAkP/PlB2GjftBmy52KEo8vHxkR6AcZOgfoRbCuQacsZSgqWGhpKJNrD1Dmr45qxLjG2rUDUHz71KxH1Qax8VqhTI2LU1qkW36XFDoCFgxI6YoqQYwGFHUMPMwUrwgLwFDZF+9DZSAzXHnk4R3EW/idh11m2eM6izsOetd1o535BWxObyHDQks6UOoR6A90EyJo7WbSDn5ZiGEt/4Zi8ep1mNd0yO5QhDaK1BAVA9JUExvA7tV09kGHLOWWKn4F2iJA7vFgt5vCzj9pS8/sAsNfDf2TWE6ANFtmNq4xuaeVnHtKEIGtY+dsij6f07yBo6Skl68QZZGthyK6b73hhKqVRZ7vDWN9I5n0pyaWANVTPTUGW8W9tNqoZDt3JVKk7Vc8nSKoo/D/LoYws1DKVIynVVDVufONdD8JFzhcHCqSpuaY19y+r67rMaQ4GGnxgtrtqRijGavJHrO1H6ljmALo9J6SUG1ONJ1iBpx9YdTlpvsC3mrEHgvDi+WlwtchFXItNHy/tSzw1hpHjdCzmPy/nxfQFV8M2dnlswQTxgh1VxKi0RKXw9SvjTL+yC9GjIMk1rX6JMbfsYcdfiSth5xZwwJoM7+WiFTvlA7iL5PhpSjRUdrHqmRu1opYz4UVTYdNap0CKLloRtimkMubj8cLkYCUrcYVHsNPLH/fGH7THbCS9wDseR+N8lNHHK9Iur0KJ1ArFobZiU+whz5Y5jKNoFDfUs0Chf0HAU8PIglkcYhhUm+hbbnMX8o6coMlge9VhE0dgk7w3Ua2zT6Zqbl3v2dVpN5+pflt+b5U5GdPsyH20v/0DDd9rPF3JeivoJG4oF7Hj8cYR08SBBjtdfLaisDzeujaHAf/VdztbI3Zf7B9CwmlZyV7YXRNzJVwF3I1RfKCozU2zDEXYNY0z5/QamnV6y
+sidebar_class_name: "post api-method"
+info_path: docs/api-ref/crawlab-api
+custom_edit_url: null
+---
+
+:::info
+This API is only available in **Crawlab Pro**.
+:::
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Uninstall dependency setup for a language"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/dependencies/configs/{language}/setups/uninstall"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Uninstall a dependency setup for a specific language
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"language","in":"path","required":true,"description":"Programming language (python, node, etc.)","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Dependency setup uninstalled","content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"}},"title":"Success"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
