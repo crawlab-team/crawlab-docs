@@ -83,6 +83,93 @@ Under the hood, v0.7.0 modernizes the platform foundation.
 Since v0.7.0, patch releases have added new capabilities and fixed issues found in production clusters. Releases are
 listed newest first.
 
+### v0.7.6 (unreleased)
+
+This release includes security hardening. Some areas are now limited to admins, so read
+[Upgrading to v0.7.6](#upgrading-to-v076) before you upgrade.
+
+Security hardening:
+
+- **Admin-only areas are now enforced by the server, not just hidden in the UI.** Users without admin rights can no
+  longer:
+  - view, create, edit or delete other users, or change other users' passwords;
+  - view or change roles;
+  - view or delete other users' API tokens;
+  - view or change system settings;
+  - add, edit or delete database connections, or see a connection's address and username;
+  - run queries or change tables in the built-in database;
+  - push to a Git remote, delete branches, discard changes, or delete a Git repository;
+  - enable, disable, edit or delete nodes, or manage node groups;
+  - view or change environment variables;
+  - create, edit, delete or test notification channels, or create, edit, enable or disable notification settings and
+    alerts;
+  - add, edit or delete AI model providers;
+  - open, rename or delete AI assistant conversations through the API (listing their own still works);
+  - change data collections;
+  - change language runtime settings, install or uninstall runtimes, or uninstall packages.
+
+  Users without admin rights keep:
+  - their own profile, password and API tokens;
+  - all spider, task, schedule, project and file work, including Git commit, pull and switching branches;
+  - viewing, exporting and editing result rows;
+  - installing a spider's own dependencies.
+
+  To give a user these rights, an admin can assign them the root-admin role (named **Admin** by default).
+- **Built-in database.** The query console no longer runs on the built-in database (the default connection to
+  Crawlab's own MongoDB), for any user. Browse spider results there with the table view, or add the results database
+  as a separate connection. The built-in connection can no longer open other databases on the same MongoDB server
+  or Crawlab's own system collections, and no longer shows its connection address or username.
+- **Spider results collection names.** A spider's results collection can no longer use the name of one of Crawlab's
+  own collections (for example `users`, `tasks` or `nodes`). An existing spider with such a name keeps running, but its
+  results are not written to Crawlab's database and Crawlab logs an error for each dropped batch.
+- **Symlinks in spider files.** Symlinks that point outside the spider's directory are no longer synced to workers and
+  are no longer served, listed or deleted through the file editor. A task whose spider contains one now runs without
+  that file instead of failing its file sync. A broken symlink no longer fails the whole sync.
+- **Result display.** HTML-type result fields are cleaned before they are shown, and images inside them are not shown.
+  Image-type fields still show as images. Other values show as plain text, and links and images in results only open
+  `http(s)` URLs.
+- **Node key warning.** Master and worker nodes log a warning at startup when `CRAWLAB_AUTH_KEY` is unset or still the
+  default. The node still starts. **The next minor release will refuse to start with the default key.**
+
+Bug fixes:
+
+- Output that a task prints just before it exits is no longer lost from the task log.
+- A task killed from outside Crawlab (for example by the out-of-memory killer) is now recorded as **error** with the
+  signal named in its log, instead of **cancelled**, and sends the task-error notification.
+- When a task is lost because Crawlab restarted on its node, the task error now says so.
+- A running task no longer reverts changes the master made to the task in the meantime, such as its node or priority.
+- Tasks from a node that goes offline are re-placed by load within their node group, instead of all moving to the first
+  online node.
+- Schedules in **all nodes** mode with a run count now place each task by node load, and the schedule and run forms
+  explain what the count means in that mode.
+- When every node is idle, placement now picks among them at random instead of always choosing the same node.
+- The orphan-process cleanup no longer stops task processes that belong to another node on the same host.
+- During a rolling update of the master, live workers are no longer marked offline and their tasks are no longer
+  restarted.
+- Worker node heartbeats are no longer reset, so offline worker records are disabled and cleaned up as intended.
+- The **current metrics** column in the node list now shows data for every node.
+
+#### Upgrading to v0.7.6
+
+1. **Set a unique `CRAWLAB_AUTH_KEY`.** Use the same random value on the master and every worker, for example from
+   `openssl rand -hex 32`. Upgrade and restart all nodes together, because nodes with different keys can't sync.
+2. **Rotate the login signing secret.** Set `CRAWLAB_JWT_SECRET` to a new random value on the master (on every master
+   instance if you run more than one) and restart. Keep it set from then on. This signs everyone out and invalidates
+   every existing API token. Users then log in again and create new API tokens.
+
+   :::note
+   Deleting an API token does not revoke it in this version. Rotating `CRAWLAB_JWT_SECRET` is the way to invalidate
+   existing tokens and sessions.
+   :::
+3. **Review who needs admin rights.** Assign the root-admin role to trusted users who need the admin-only areas above.
+
+:::caution
+- These checks apply to the web API only. Anyone who can run spiders runs code on the nodes with the node's
+  privileges, so give spider-run rights only to trusted users.
+- Don't add a data source that points at Crawlab's own MongoDB database. The protections described above apply only to
+  the built-in connection.
+:::
+
 ### v0.7.5 (2026-09-04)
 
 Bug fixes:
