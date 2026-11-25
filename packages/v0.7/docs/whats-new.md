@@ -83,7 +83,7 @@ Under the hood, v0.7.0 modernizes the platform foundation.
 Since v0.7.0, patch releases have added new capabilities and fixed issues found in production clusters. Releases are
 listed newest first.
 
-### v0.7.6 (unreleased)
+### v0.7.6 (2026-11-25)
 
 This release includes security hardening. Some areas are now limited to admins, so read
 [Upgrading to v0.7.6](#upgrading-to-v076) before you upgrade.
