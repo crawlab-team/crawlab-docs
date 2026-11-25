@@ -15,6 +15,10 @@
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
   },
+  "item.label.Contact": {
+    "message": "联系我们",
+    "description": "Navbar item with label Contact"
+  },
   "item.label.API Reference": {
     "message": "API Reference",
     "description": "Navbar item with label API Reference"
