@@ -115,6 +115,7 @@ Security hardening:
   - installing a spider's own dependencies.
 
   To give a user these rights, an admin can assign them the root-admin role (named **Admin** by default).
+  The built-in `admin` account always keeps admin rights: Crawlab restores them on every start, so it can always be used to assign the role. Users who only had the community-style `admin` role and no Pro role are not admins after the upgrade until an admin assigns them the Admin role.
 - **Built-in database.** The query console no longer runs on the built-in database (the default connection to
   Crawlab's own MongoDB), for any user. Browse spider results there with the table view, or add the results database
   as a separate connection. The built-in connection can no longer open other databases on the same MongoDB server
