@@ -100,7 +100,7 @@ Security hardening:
   - run queries or change tables in the built-in database;
   - push to a Git remote, delete branches, discard changes, or delete a Git repository;
   - enable, disable, edit or delete nodes, or manage node groups;
-  - view or change environment variables;
+  - view or change environment variable settings;
   - create, edit, delete or test notification channels, or create, edit, enable or disable notification settings and
     alerts;
   - add, edit or delete AI model providers;
@@ -116,9 +116,9 @@ Security hardening:
 
   To give a user these rights, an admin can assign them the root-admin role (named **Admin** by default).
   The built-in `admin` account always keeps admin rights: Crawlab restores them on every start, so it can always be used to assign the role. Users who only had the community-style `admin` role and no Pro role are not admins after the upgrade until an admin assigns them the Admin role.
-- **Built-in database.** The query console no longer runs on the built-in database (the default connection to
-  Crawlab's own MongoDB), for any user. Browse spider results there with the table view, or add the results database
-  as a separate connection. The built-in connection can no longer open other databases on the same MongoDB server
+- **Built-in database.** Only admins can use the query console on the built-in database (the default connection to
+  Crawlab's own MongoDB). Other users can browse spider results there with the table view, or use a separate
+  connection to the results database. The built-in connection can no longer open other databases on the same MongoDB server
   or Crawlab's own system collections, and no longer shows its connection address or username.
 - **Spider results collection names.** A spider's results collection can no longer use the name of one of Crawlab's
   own collections (for example `users`, `tasks` or `nodes`). An existing spider with such a name keeps running, but its
