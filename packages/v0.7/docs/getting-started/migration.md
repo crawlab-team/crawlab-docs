@@ -63,7 +63,7 @@ This guide walks you through upgrading an existing v0.6.x deployment.
    # docker-compose.yml
    services:
      master:
-       image: crawlabteam/crawlab:0.7.0  # was :0.6.x
+       image: crawlabteam/crawlab-pro:0.7.0  # was :0.6.x
        # ... rest of config
        ports:
          - "8080:8080"  # API

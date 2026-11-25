@@ -21,7 +21,7 @@ title: 快速开始
 ```yaml
 services:
   master:
-    image: crawlabteam/crawlab
+    image: crawlabteam/crawlab-pro:stable
     environment:
       CRAWLAB_NODE_MASTER: "Y"
       CRAWLAB_MONGO_HOST: "mongo"
@@ -32,6 +32,10 @@ services:
   mongo:
     image: mongo:5
 ```
+
+:::note
+`stable` 跟随最新的 Crawlab Pro 版本。如需固定版本，请使用具体标签，例如 `crawlabteam/crawlab-pro:0.7.5`。
+:::
 
 ## 拉取镜像
 

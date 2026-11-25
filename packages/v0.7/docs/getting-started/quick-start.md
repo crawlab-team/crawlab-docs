@@ -22,7 +22,7 @@ Create a config file named `docker-compose.yml` and enter the content below.
 ```yaml
 services:
   master:
-    image: crawlabteam/crawlab
+    image: crawlabteam/crawlab-pro:stable
     environment:
       CRAWLAB_NODE_MASTER: "Y"
       CRAWLAB_MONGO_HOST: "mongo"
@@ -33,6 +33,10 @@ services:
   mongo:
     image: mongo:5
 ```
+
+:::note
+`stable` tracks the latest Crawlab Pro release. To pin a version, use a tag such as `crawlabteam/crawlab-pro:0.7.5`.
+:::
 
 ## Pull images
 

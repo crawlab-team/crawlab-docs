@@ -61,7 +61,7 @@ Crawlab v0.7.0 对**集群通信**与**文件同步**引入了破坏性变更，
    # docker-compose.yml
    services:
      master:
-       image: crawlabteam/crawlab:0.7.0  # 原为 :0.6.x
+       image: crawlabteam/crawlab-pro:0.7.0  # 原为 :0.6.x
        # ... 其余配置
        ports:
          - "8080:8080"  # API
