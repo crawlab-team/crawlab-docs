@@ -11,15 +11,9 @@ installed Docker before proceeding any further steps.
 
 ## Platform Support
 
-Crawlab's official Docker images are **multi-architecture**, built for both **AMD64 (x86_64)** and **ARM64**. The
-same `crawlabteam/crawlab-pro` image tag runs natively on:
-
-- **x86_64** servers and desktops
-- **Apple Silicon** Macs (M1/M2 and newer)
-- **ARM servers** such as AWS Graviton
-
-Docker automatically selects the correct architecture for your host, so no special tag or separate ARM image is
-required.
+The `crawlabteam/crawlab-pro` image is currently published for **AMD64 (x86_64)** only. Run it on x86_64 Linux
+servers or desktops. ARM hosts, such as Apple Silicon Macs or AWS Graviton, can only run it through emulation, which
+is slower and not recommended for production.
 
 ## Main Process
 

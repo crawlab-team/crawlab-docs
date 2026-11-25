@@ -109,8 +109,8 @@ After upgrading, you can take advantage of:
 - **Database ORM** — enable ORM mode for MySQL/PostgreSQL/SQL Server databases via the toggle in
   [database settings](../guides/database/index.md#orm-mode).
 - **Monaco editor** — the [new code editor](../guides/code-editor/index.md) is active by default for all file editing.
-- **ARM64 support** — if deploying on ARM64 hardware (Apple Silicon, AWS Graviton), use the same image tag; the images
-  are multi-architecture.
+- **Architecture** — the `crawlabteam/crawlab-pro` image is published for AMD64 (x86_64) only. Deploy on x86_64
+  hosts.
 
 ## Rollback Procedure
 

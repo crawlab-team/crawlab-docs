@@ -105,7 +105,7 @@ Crawlab v0.7.0 对**集群通信**与**文件同步**引入了破坏性变更，
 
 - **数据库 ORM**——通过[数据库设置](../guides/database/index.md#orm-mode)中的开关，为 MySQL/PostgreSQL/SQL Server 数据库启用 ORM 模式。
 - **Monaco 编辑器**——[全新代码编辑器](../guides/code-editor/index.md)在所有文件编辑中默认启用。
-- **ARM64 支持**——如果部署在 ARM64 硬件（Apple Silicon、AWS Graviton）上，使用相同的镜像标签即可；镜像为多架构。
+- **架构**：`crawlabteam/crawlab-pro` 镜像目前只发布 AMD64（x86_64）版本，请部署在 x86_64 主机上。
 
 ## 回滚流程
 
