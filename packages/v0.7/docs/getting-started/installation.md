@@ -11,15 +11,9 @@ installed Docker before proceeding any further steps.
 
 ## Platform Support
 
-Crawlab's official Docker images are **multi-architecture**, built for both **AMD64 (x86_64)** and **ARM64**. The
-same `crawlabteam/crawlab` image tag runs natively on:
-
-- **x86_64** servers and desktops
-- **Apple Silicon** Macs (M1/M2 and newer)
-- **ARM servers** such as AWS Graviton
-
-Docker automatically selects the correct architecture for your host, so no special tag or separate ARM image is
-required.
+The `crawlabteam/crawlab-pro` image is currently published for **AMD64 (x86_64)** only. Run it on x86_64 Linux
+servers or desktops. ARM hosts, such as Apple Silicon Macs or AWS Graviton, can only run it through emulation, which
+is slower and not recommended for production.
 
 ## Main Process
 
@@ -54,7 +48,7 @@ Create `docker-compose.yml` and enter the content below.
 ```yaml
 services:
   master:
-    image: crawlabteam/crawlab
+    image: crawlabteam/crawlab-pro:stable
     container_name: crawlab_master
     restart: always
     environment:
@@ -88,6 +82,10 @@ services:
 
 Then, execute `docker compose up -d` and navigate to `http://<your_ip>:8080` in the browser to start using Crawlab.
 
+:::note
+`stable` tracks the latest Crawlab Pro release. To pin a version, use a tag such as `crawlabteam/crawlab-pro:0.7.5`.
+:::
+
 ## Multi-Node Deployment
 
 ```mermaid
@@ -119,7 +117,7 @@ executing `docker compose up -d`.
 # master node
 services:
   master:
-    image: crawlabteam/crawlab
+    image: crawlabteam/crawlab-pro:stable
     container_name: crawlab_master
     restart: always
     environment:
@@ -161,7 +159,7 @@ executing `docker compose up -d`.
 # worker node
 services:
   worker:
-    image: crawlabteam/crawlab
+    image: crawlabteam/crawlab-pro:stable
     container_name: crawlab_worker
     restart: always
     environment:
@@ -218,7 +216,7 @@ of [default Multi-Node Deployment](#multi-node-deployment). Please find the cont
 # master node with external mongo
 services:
   master:
-    image: crawlabteam/crawlab
+    image: crawlabteam/crawlab-pro:stable
     container_name: crawlab_master
     restart: always
     environment:

@@ -38,7 +38,7 @@ flowchart TB
 ```yaml
 services:
   master:
-    image: crawlabteam/crawlab
+    image: crawlabteam/crawlab-pro:stable
     container_name: crawlab_master
     restart: always
     environment:
@@ -72,6 +72,10 @@ services:
 
 然后，执行 `docker compose up -d` 并在浏览器中导航到 `http://<your_ip>:8080` 开始使用 Crawlab。
 
+:::note
+`stable` 跟随最新的 Crawlab Pro 版本。如需固定版本，请使用具体标签，例如 `crawlabteam/crawlab-pro:0.7.5`。
+:::
+
 ## 多节点部署
 
 ```mermaid
@@ -99,7 +103,7 @@ flowchart LR
 # 主节点
 services:
   master:
-    image: crawlabteam/crawlab
+    image: crawlabteam/crawlab-pro:stable
     container_name: crawlab_master
     restart: always
     environment:
@@ -140,7 +144,7 @@ services:
 # 工作节点
 services:
   worker:
-    image: crawlabteam/crawlab
+    image: crawlabteam/crawlab-pro:stable
     container_name: crawlab_worker
     restart: always
     environment:
@@ -189,7 +193,7 @@ flowchart LR
 # 带外部 MongoDB 的主节点
 services:
   master:
-    image: crawlabteam/crawlab
+    image: crawlabteam/crawlab-pro:stable
     container_name: crawlab_master
     restart: always
     environment:
