@@ -78,6 +78,92 @@ Under the hood, v0.7.0 modernizes the platform foundation.
 - Backend built with **Go 1.23.7**.
 - Frontend built with **Vue 3.5.13** and **TypeScript**.
 
+## v0.7 Patch Releases
+
+Since v0.7.0, patch releases have added new capabilities and fixed issues found in production clusters. Releases are
+listed newest first.
+
+### v0.7.5 (2026-09-04)
+
+Bug fixes:
+
+- Automatic dependency installation before a task now uses the package mirror you configured in the dependency
+  settings.
+- Python package search in the dependency page now works when Crawlab is configured to use a mirror.
+- A task can now be cancelled while it is still installing dependencies.
+- The page-level permission check now honors the configured root admin role.
+- Task logs now open in a tab inside Crawlab instead of a separate browser tab.
+
+### v0.7.4 (2026-09-03)
+
+New features:
+
+- **Load-aware task placement.** The master now places pending tasks on the least-loaded eligible node, instead of
+  whichever worker polls first. Workers only start tasks that were placed on them. See
+  [Task](./concepts/task/index.md).
+- **Manual runs follow the schedule's run count and execution strategy.** Clicking **Run** on a schedule now respects the
+  same run-count ceiling and execution strategy as a cron fire, so it no longer stacks extra tasks on top of a full
+  schedule. See [Schedule](./concepts/schedule/index.md).
+- **Resume tasks lost with a node.** When a node goes offline and its tasks are lost, Crawlab starts one replacement
+  task. This now also applies to tasks you started manually, and can be turned off. See
+  [Task](./concepts/task/index.md).
+- **`none` task log driver.** Set `CRAWLAB_LOG_DRIVER=none` to stop the master from storing task logs on its disk. See
+  [Task Logs](./guides/task-logs/index.md).
+- **Database-level validation.** Crawlab's own MongoDB collections now reject ObjectID and date fields of the wrong
+  type. See [Database](./guides/database/index.md).
+- **Filter schedules by node group** in the schedule list.
+
+Bug fixes:
+
+- Tasks whose process is still alive when their node reconnects after a long disconnect are now picked up again instead
+  of being killed.
+- A manual run on a random node no longer starts twice, and cancelling or reclaiming a task no longer leaves duplicate
+  processes behind.
+- Node metrics inside Docker and Kubernetes now report the container's CPU and memory rather than the host's.
+- Task-error notifications are now sent for tasks that the master marks as failed or abnormal during reconciliation.
+- A failed automatic dependency installation no longer fails the task, installs no longer disturb a running spider's
+  environment, and Python dependencies work on hosts that only have `python3`.
+- Cron schedules no longer create duplicate tasks when entries are stacked, and a cron fire runs exactly once when more
+  than one master is running.
+- ObjectIDs and dates are no longer stored as strings, and existing damaged documents are repaired on start-up.
+- Updating a role with a request body that has no `_id` no longer returns an error.
+- A JSON export is now marked finished only after its file is written.
+- File editor: edits are no longer lost on a second save, a git pull now refreshes the open file, and switching tabs no
+  longer shows the previous file's content.
+- A destructive git pull now asks for confirmation in the UI.
+
+### v0.7.3 (2026-07-06)
+
+- Task output now also goes to the container's stdout/stderr by default, so `docker logs` and `kubectl logs` show it. Each
+  line is prefixed with `[task:<id>]`. Set `CRAWLAB_TASK_LOG_STDOUT=false` to turn it off.
+- Fixed tasks that came back as `running` after their node went offline and returned, although their process was gone.
+  These tasks held a runner slot and blocked their schedule from firing.
+- The node picker in the run, task and schedule dialogs now lists all nodes (it was limited to 10).
+- The **Tasks** tab on node and schedule detail pages can paginate again.
+- The task list no longer switches between filtered and unfiltered results, and list filters are kept per tab.
+
+### v0.7.2 (2026-07-02)
+
+- Updating a document through the API no longer overwrites its other fields with empty values.
+- **Run count for schedules.** A schedule can now set how many tasks it should keep running, and the run dialogs accept
+  a run count.
+- The `ignore` execution strategy now works per node instead of all-or-nothing, and the run count acts as a concurrency
+  ceiling.
+- Notifications: DingTalk @-mentions, and signed DingTalk and Lark webhooks.
+- Nodes: offline nodes can be deleted, long-offline nodes are disabled automatically, and nodes keep a stable identity
+  in containers. `CRAWLAB_NODE_KEY` and `CRAWLAB_NODE_NAME` now override the saved configuration.
+- Task and node filters in list views are searchable. Tasks can be filtered by node group, and the task list has a Node
+  Group column.
+- Authentication: login tokens now expire, and the JWT secret is no longer a shared default.
+- The server rejects a duplicate spider name within the same project.
+- Task cancellation and cleanup are more reliable: the whole spider process tree is stopped on cancel, orphaned
+  processes are cleaned up, and a full worker queue holds tasks back instead of failing them.
+- Node metrics inside containers report the container's CPU and memory.
+
+### v0.7.1 (2026-06-10)
+
+- Fixed worker file synchronization from Git being aborted by `__pycache__` directories.
+
 ## Upgrading from v0.6.x
 
 Because cluster communication and file synchronization now use gRPC, **all nodes must be upgraded together** — you

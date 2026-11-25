@@ -16,13 +16,16 @@ const API_REF_PRO_PATH_REGEX_PATTERNS = [
   /\/metrics/,
 ];
 
+// Docusaurus sets DOCUSAURUS_CURRENT_LOCALE while building each locale; the main site uses /en/ and /zh/ paths.
+const CONTACT_LOCALE = process.env.DOCUSAURUS_CURRENT_LOCALE === 'zh' ? 'zh' : 'en';
+
 const config: Config = {
   title: 'Crawlab Docs',
   tagline: 'Documentation for distributed web crawler management platform Crawlab',
   favicon: 'favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://docs.crawlab.cn',
+  url: 'https://docs.crawlab.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -100,6 +103,11 @@ const config: Config = {
           sidebarId: 'apiSidebar',
           position: 'left',
           label: 'API Reference',
+        },
+        {
+          href: `https://www.crawlab.io/${CONTACT_LOCALE}/contact`,
+          label: 'Contact',
+          position: 'left',
         },
         {
           type: 'localeDropdown',
