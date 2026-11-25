@@ -225,11 +225,20 @@ When a node goes offline, the tasks running on it can be lost. Crawlab handles t
 
 Cancelled tasks are never resumed, and only tasks that became `abnormal` recently are considered. The cut-off defaults to
 15 minutes and can be changed with the `CRAWLAB_TASK_STALE_RECONCILE_THRESHOLD` environment variable on the master (for
-example `30m`).
+example `30m`). The same threshold also decides when the master gives up on a task that is stuck: a task that stays in
+`cancelling` for that long is finalized as `cancelled`, and a task that stays in `node_disconnected` for that long is
+marked `abnormal`.
 
-To turn off resuming of manually run tasks, set `resume_manual_tasks` to `false` in the document with key `task` in the
-`settings` collection of Crawlab's MongoDB. If the setting is missing, resuming is on. Scheduled tasks are not affected by
-this setting. Turning the setting back on also resumes manual tasks that became `abnormal` within the cut-off period.
+To turn off resuming of manually run tasks, add `resume_manual_tasks: false` inside the `value` of the document with key
+`task` in the `settings` collection of Crawlab's MongoDB:
+
+```json
+{ "key": "task", "value": { "resume_manual_tasks": false } }
+```
+
+A `resume_manual_tasks` field at the top level of the document has no effect. If the setting is missing, resuming is on.
+Scheduled tasks are not affected by this setting. Turning resuming back on also resumes manual tasks that became
+`abnormal` within the cut-off period.
 
 ## Task Results and Data
 
@@ -358,19 +367,19 @@ Crawlab uses a priority queue mechanism to manage pending tasks:
 ### Load-Aware Node Placement
 
 For tasks that run in **Random Node** mode or on **Selected Node Groups**, the master decides which node runs each
-task. Workers do not race to pick up whatever is pending.
+task, so in normal operation workers do not race to pick up whatever is pending.
 
 - Every second, the master looks at the pending tasks that have no node yet, oldest first within each priority.
 - For each task it picks the eligible node with the lowest load relative to its capacity. Load counts every task
   already placed on that node that has not finished, including tasks that were placed but have not started yet, so a
   burst of new tasks spreads across nodes instead of piling onto one.
-- A node is eligible if it is online and [enabled](../node/index.md). A node whose
+- A node is eligible if it is active, online and [enabled](../node/index.md). A node whose
   [maximum concurrent tasks](../node/index.md) is already reached is skipped. A node with maximum concurrent tasks set
   to `0` has no cap. For node-group runs, only nodes in the selected groups are eligible.
 - A worker then starts only the tasks that were placed on it.
 
-If placement is not running, for example while the master restarts, workers fall back to picking up unplaced tasks
-themselves, so the queue does not stall.
+As a safety valve, a pending task that has stayed unplaced for 30 seconds can be claimed directly by a worker, for
+example while the master restarts, so the queue does not stall.
 
 To keep a node from receiving tasks, disable it or lower its maximum concurrent tasks.
 

@@ -172,9 +172,18 @@ the schedule triggers while some of its tasks are still active:
 
 | Strategy | Behavior |
 |---|---|
-| **Ignore** | If the schedule already has the run count of active tasks, skip this trigger. If it has fewer, start only the difference. |
+| **Ignore** | Skip or top up, depending on the mode and run count. See the cases below. |
 | **Override** | Cancel the schedule's active tasks, then start a fresh set. |
-| **Always** | Start new tasks regardless of active ones, with no limit. |
+| **Always** | Start new tasks regardless of active ones, with no limit. A schedule with no strategy set behaves as Always. |
+
+With **Ignore**, when the schedule has active tasks:
+
+- In **Random Node** mode, the trigger is skipped. The run count is not used.
+- With a run count above `0`, the run count is a ceiling. If the schedule already has that many active tasks, the trigger
+  is skipped. If it has fewer, only the difference is started.
+- With a run count of `0` (the default), Ignore works per node. Nodes that already have an active task of this schedule
+  are skipped, and tasks are started only on the idle nodes.
+
 
 Clicking **Run** on a schedule follows the same rules as a cron trigger. All active tasks of the schedule count toward
 the run count, whether they were started by cron or by hand. For example, if a schedule with a run count of 8 already

@@ -121,4 +121,4 @@ Crawlab 会对写入自身 MongoDB 集合（爬虫、任务、定时任务、节
 - 类型错误的写入会被拒绝，并返回 MongoDB 错误码 121（`DocumentValidationFailure`）。如果你手动或用脚本修改 Crawlab 的集合，这项校验可以保护数据。
 - 如果 MongoDB 用户没有执行 `collMod` 的权限，主节点会为该集合输出警告，并正常启动。
 
-如果你降级到会写入错误类型的版本，这些写入会失败，而不会损坏数据。要关闭某个集合的校验，执行 `db.runCommand({collMod: "<collection>", validationLevel: "off"})`。
+主节点每次启动都会重新应用这些校验器，因此用 `collMod` 手动修改或移除校验器，只在下次重启之前有效。

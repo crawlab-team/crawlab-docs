@@ -140,5 +140,5 @@ not validated.
   you edit Crawlab's collections by hand or with a script.
 - If the MongoDB user cannot run `collMod`, the master logs a warning for that collection and starts normally.
 
-If you downgrade to a version that writes the wrong types, those writes fail instead of corrupting data. To switch
-validation off for a collection, run `db.runCommand({collMod: "<collection>", validationLevel: "off"})`.
+The master re-applies the validators every time it starts, so changing or removing a validator by hand with `collMod`
+lasts only until the next restart.
