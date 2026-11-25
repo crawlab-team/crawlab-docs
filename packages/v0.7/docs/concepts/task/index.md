@@ -212,6 +212,25 @@ Crawlab v0.7 improves how tasks are executed and cleaned up on each node:
 
 These mechanisms make distributed task execution more reliable, especially under heavy or long-running workloads.
 
+## Resuming Tasks After Node Loss
+
+When a node goes offline, the tasks running on it can be lost. Crawlab handles this in three ways:
+
+- **The process is still alive.** If the node comes back and the spider process is still running, Crawlab adopts the
+  task back as `running` instead of killing it.
+- **Scheduled tasks.** If the process is gone, the task is marked `abnormal`, and the master starts a replacement for
+  the freed slot of its [schedule](../schedule/index.md) without waiting for the next cron time.
+- **Manually run tasks.** A task you started by hand is also replaced, with exactly one new task whose trigger is
+  `resume`. A resumed task is never resumed again, so a spider that keeps dying is not relaunched forever.
+
+Cancelled tasks are never resumed, and only tasks that became `abnormal` recently are considered. The cut-off defaults to
+15 minutes and can be changed with the `CRAWLAB_TASK_STALE_RECONCILE_THRESHOLD` environment variable on the master (for
+example `30m`).
+
+To turn off resuming of manually run tasks, set `resume_manual_tasks` to `false` in the document with key `task` in the
+`settings` collection of Crawlab's MongoDB. If the setting is missing, resuming is on. Scheduled tasks are not affected by
+this setting. Turning the setting back on also resumes manual tasks that became `abnormal` within the cut-off period.
+
 ## Task Results and Data
 
 Every task that successfully scrapes data stores its results in a MongoDB collection:
@@ -335,6 +354,25 @@ Crawlab uses a priority queue mechanism to manage pending tasks:
 2. The scheduler evaluates available node resources
 3. Higher priority tasks are assigned to nodes before lower priority ones
 4. Tasks with equal priority are processed in FIFO (First In, First Out) order
+
+### Load-Aware Node Placement
+
+For tasks that run in **Random Node** mode or on **Selected Node Groups**, the master decides which node runs each
+task. Workers do not race to pick up whatever is pending.
+
+- Every second, the master looks at the pending tasks that have no node yet, oldest first within each priority.
+- For each task it picks the eligible node with the lowest load relative to its capacity. Load counts every task
+  already placed on that node that has not finished, including tasks that were placed but have not started yet, so a
+  burst of new tasks spreads across nodes instead of piling onto one.
+- A node is eligible if it is online and [enabled](../node/index.md). A node whose
+  [maximum concurrent tasks](../node/index.md) is already reached is skipped. A node with maximum concurrent tasks set
+  to `0` has no cap. For node-group runs, only nodes in the selected groups are eligible.
+- A worker then starts only the tasks that were placed on it.
+
+If placement is not running, for example while the master restarts, workers fall back to picking up unplaced tasks
+themselves, so the queue does not stall.
+
+To keep a node from receiving tasks, disable it or lower its maximum concurrent tasks.
 
 ### Distributed Execution Modes
 

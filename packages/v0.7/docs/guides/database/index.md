@@ -126,3 +126,19 @@ Follow the steps below to connect to a database.
 4. Choose the database and table for storing scraped data.
 
 ![Connect to Database](/img/guides/database/connect-to-database.png)
+
+## Data Integrity of Crawlab Collections
+
+Crawlab validates writes to its own MongoDB collections (spiders, tasks, schedules, nodes and so on). Each collection
+has a `$jsonSchema` validator that requires ObjectID fields, ObjectID array fields and date fields to have the right
+type. An unset reference may be `null`. Nothing else is required, and the scraped data you store in result collections is
+not validated.
+
+- The validators are applied each time the master starts, after Crawlab repairs documents that stored ObjectIDs or dates
+  as strings. The validation level is `moderate`, so documents that already break the rules can still be updated.
+- A write with a wrong type is rejected with MongoDB error code 121 (`DocumentValidationFailure`). This protects you if
+  you edit Crawlab's collections by hand or with a script.
+- If the MongoDB user cannot run `collMod`, the master logs a warning for that collection and starts normally.
+
+If you downgrade to a version that writes the wrong types, those writes fail instead of corrupting data. To switch
+validation off for a collection, run `db.runCommand({collMod: "<collection>", validationLevel: "off"})`.

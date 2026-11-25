@@ -74,6 +74,12 @@ When a schedule fires, it creates a new task automatically. This means:
   - **Random Node**: Executes on a randomly selected node
   - **All Nodes**: Runs on every available node simultaneously
   - **Selected Nodes**: Allows choosing specific nodes for execution
+  - **Selected Node Groups**: Runs on nodes that belong to the chosen [node groups](../node/index.md)
+
+- **Run Count**: How many tasks to start on each trigger. `0` (the default) starts one task per resolved node.
+
+- **Execution Strategy**: What to do when the schedule already has active tasks. See
+  [Run Count and Execution Strategy](#run-count-and-execution-strategy).
 
 - **Priority**: Sets the execution priority when multiple tasks are queued. Higher priority (larger number) schedules execute first.
 
@@ -117,7 +123,7 @@ You can view schedules in multiple ways:
 
 1. **Schedules Page**: Access all schedules system-wide
    - Navigate to the `Schedules` page from the main sidebar
-   - Use filters and search to find specific schedules
+   - Use filters and search to find specific schedules, including filtering by mode and by node group
    - View status, next execution time, and last run for each schedule
 
 2. **Spider Detail**: View schedules for a specific spider
@@ -158,6 +164,26 @@ To permanently remove a schedule:
 :::warning
 Deleting a schedule is permanent and cannot be undone. Consider disabling schedules instead if you might need them later.
 :::
+
+## Run Count and Execution Strategy
+
+A schedule keeps a number of tasks running, set by **Run Count**. The **Execution Strategy** decides what happens when
+the schedule triggers while some of its tasks are still active:
+
+| Strategy | Behavior |
+|---|---|
+| **Ignore** | If the schedule already has the run count of active tasks, skip this trigger. If it has fewer, start only the difference. |
+| **Override** | Cancel the schedule's active tasks, then start a fresh set. |
+| **Always** | Start new tasks regardless of active ones, with no limit. |
+
+Clicking **Run** on a schedule follows the same rules as a cron trigger. All active tasks of the schedule count toward
+the run count, whether they were started by cron or by hand. For example, if a schedule with a run count of 8 already
+has 8 tasks running, clicking **Run** starts nothing under **Ignore**, and restarts the tasks under **Override**
+instead of stacking 8 more. When a run is skipped, Crawlab shows a message such as "No new task started: already at run
+count 8 (8 task(s) active)." The run count you enter in the run dialog applies to that run only.
+
+Two differences remain: manual runs are marked with the `manual` trigger, and a manual run can start a disabled
+schedule.
 
 ## Schedule Execution Flow
 
