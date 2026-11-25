@@ -111,3 +111,14 @@ ORM 状态也可以通过 REST API 进行管理：
 4. 选择要存储抓取数据的数据库和表。
 
 ![连接到数据库](/img/guides/database/connect-to-database.png)
+
+
+## Crawlab 集合的数据完整性
+
+Crawlab 会对写入自身 MongoDB 集合（爬虫、任务、定时任务、节点等）的数据进行校验。每个集合都有一个 `$jsonSchema` 校验器，要求 ObjectID 字段、ObjectID 数组字段和日期字段具有正确的类型，未设置的引用可以是 `null`。其他字段没有要求，你存储在结果集合中的抓取数据不会被校验。
+
+- 每次主节点启动时都会应用校验器，并且在 Crawlab 修复把 ObjectID 或日期存成字符串的文档之后进行。校验级别为 `moderate`，因此已经不符合规则的文档仍然可以更新。
+- 类型错误的写入会被拒绝，并返回 MongoDB 错误码 121（`DocumentValidationFailure`）。如果你手动或用脚本修改 Crawlab 的集合，这项校验可以保护数据。
+- 如果 MongoDB 用户没有执行 `collMod` 的权限，主节点会为该集合输出警告，并正常启动。
+
+主节点每次启动都会重新应用这些校验器，因此用 `collMod` 手动修改或移除校验器，只在下次重启之前有效。
