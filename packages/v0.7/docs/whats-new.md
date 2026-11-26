@@ -85,30 +85,32 @@ listed newest first.
 
 ### v0.7.7 (2026-11-26)
 
-:::danger Action required
-Existing API tokens without an expiration date will expire 90 days after you upgrade to v0.7.7. New tokens expire
-after 90 days by default. Admins can choose a lifetime from 1 to 365 days; the **Never expires** option is no longer
-available. Deleting a token revokes it immediately.
+#### What's new in 0.7.7
 
-Rotate tokens that your integrations still use:
+- API tokens now expire, and you can see their expiration dates in Personal Access Tokens. Deleting a token revokes it.
+- Only admins can manage AI providers and notification channels or edit Git repository settings. Crawlab keeps saved AI provider keys and Git credentials hidden.
+- AI chat still supports Markdown and displays HTML as text. Status tooltips display commands and errors as plain text.
+- Pushing to a missing Git repository now returns a 404 error.
 
-1. In the Crawlab web UI, open the menu under your avatar, choose **Personal Access Tokens**, and click **New PAT**. Enter a name for the replacement.
-2. If you are an admin, enter a value from 1 to 365 in **Lifetime (days)**. The prompt defaults to 90 days.
-3. Copy the new **Access Token**. Replace the old token in your integrations and in your SDK and CLI configuration, then verify each integration works with the replacement.
-4. Back in **Personal Access Tokens**, use **Delete** on the old token.
-:::
+#### Action required
 
-If your server used `CRAWLAB_JWT_TTL=0`, its login sessions did not expire. Users with those sessions must sign in again
-after upgrading. In a multi-server API deployment, token revocation takes effect immediately only after every API
-server is running v0.7.7.
+If you use API tokens, including with the SDK or CLI, replace them before they expire. Existing tokens without an expiration date expire 90 days after the upgrade.
 
-Only admins can manage AI providers and notification channels. Provider API keys and stored Git passwords, tokens, and
-private keys are write-only: they are never shown, and are kept when you save without entering a new value. Only admins
-can edit Git repository settings; non-admin requests to these endpoints receive **403 Forbidden**.
+1. In the Crawlab web UI, open the menu under your avatar, select **Personal Access Tokens**, click **New PAT**, and enter a name.
+2. Admins can set **Lifetime (days)** to any whole number from 1 to 365. The default is 90 days.
+3. Copy the new **Access Token**. Replace the old token in your integrations and SDK and CLI configurations. Verify that they work with the new token.
+4. Return to **Personal Access Tokens** and select **Delete** on the old token.
 
-AI chat no longer renders HTML from model output; Markdown formatting still works. Status tooltips show plain text.
-Pushing to a missing Git repository returns **404 Not Found**. Nodes log a startup warning when using the built-in
-default node authentication key. Set your own key; a future minor release will refuse to start with the built-in key.
+#### Breaking changes
+
+- Users and API clients without admin rights receive HTTP 403 when they try to manage AI providers or notification channels, or edit Git repository settings.
+- If a server issued non-expiring login sessions with `CRAWLAB_JWT_TTL=0`, users with those sessions must sign in again after the upgrade.
+- API tokens now expire. The **Never expires** option has been removed.
+- In a deployment with multiple API servers, all servers must run 0.7.7 before a deleted token is rejected across the deployment.
+
+#### Not yet fixed
+
+If a Git remote URL contains a password or token, anyone who can view the repository can still see it. Crawlab 0.7.8 will mask credentials in remote URLs. Until then, enter credentials in the Git repository's credential fields and keep them out of the URL.
 
 ### v0.7.6 (2026-11-25)
 
