@@ -83,6 +83,33 @@ Under the hood, v0.7.0 modernizes the platform foundation.
 Since v0.7.0, patch releases have added new capabilities and fixed issues found in production clusters. Releases are
 listed newest first.
 
+### v0.7.7 (2026-11-26)
+
+:::danger Action required
+Existing API tokens without an expiration date will expire 90 days after you upgrade to v0.7.7. New tokens expire
+after 90 days by default. Admins can choose a lifetime from 1 to 365 days; the **Never expires** option is no longer
+available. Deleting a token revokes it immediately.
+
+Rotate tokens that your integrations still use:
+
+1. In the Crawlab web UI, open the menu under your avatar, choose **Personal Access Tokens**, and click **New PAT**. Enter a name for the replacement.
+2. If you are an admin, enter a value from 1 to 365 in **Lifetime (days)**. The prompt defaults to 90 days.
+3. Copy the new **Access Token**. Replace the old token in your integrations and in your SDK and CLI configuration, then verify each integration works with the replacement.
+4. Back in **Personal Access Tokens**, use **Delete** on the old token.
+:::
+
+If your server used `CRAWLAB_JWT_TTL=0`, its login sessions did not expire. Users with those sessions must sign in again
+after upgrading. In a multi-server API deployment, token revocation takes effect immediately only after every API
+server is running v0.7.7.
+
+Only admins can manage AI providers and notification channels. Provider API keys and stored Git passwords, tokens, and
+private keys are write-only: they are never shown, and are kept when you save without entering a new value. Only admins
+can edit Git repository settings; non-admin requests to these endpoints receive **403 Forbidden**.
+
+AI chat no longer renders HTML from model output; Markdown formatting still works. Status tooltips show plain text.
+Pushing to a missing Git repository returns **404 Not Found**. Nodes log a startup warning when using the built-in
+default node authentication key. Set your own key; a future minor release will refuse to start with the built-in key.
+
 ### v0.7.6 (2026-11-25)
 
 This release includes security hardening. Some areas are now limited to admins, so read
