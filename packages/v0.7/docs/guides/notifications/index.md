@@ -42,6 +42,10 @@ Each trigger can be associated with specific templates and channels.
 
 Channels represent the communication methods used to deliver notifications. Crawlab Pro supports multiple channel types:
 
+Only admins can create, edit, test, or delete notification channels. When a channel is included with a notification setting or request, only its metadata is returned; its credentials are omitted.
+
+**Changed in 0.7.7:** Only admins can manage notification channels.
+
 #### Instant Messaging (IM)
 
 - **Slack**: Send notifications to Slack channels or direct messages

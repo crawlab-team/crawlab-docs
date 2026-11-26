@@ -106,6 +106,18 @@ This user management system allows you to control access to platform resources a
 
 ![Users](/img/guides/permission-management/users.png)
 
+## Personal Access Tokens
+
+Users can create and delete their own API tokens from the Personal Access Tokens page. The list shows each token's expiry. New tokens expire after 90 days by default; admins can choose a lifetime from 1 to 365 days when creating a token. Tokens cannot be set to never expire. Deleting a token revokes it immediately. Existing tokens without an expiry receive one 90 days after upgrading to 0.7.7.
+
+**Changed in 0.7.7:** API tokens expire, show their expiry date, and are revoked when deleted.
+
+## Admin-Only Settings
+
+Only admins can manage AI providers and notification channels, or edit Git repository settings. Other users can continue to use Git repositories for their work, but cannot change repository settings.
+
+**Changed in 0.7.7:** AI providers, notification channels, and Git repository settings require admin access.
+
 ## Best Practices
 
 - Assign roles to users based on their responsibilities and access needs.
