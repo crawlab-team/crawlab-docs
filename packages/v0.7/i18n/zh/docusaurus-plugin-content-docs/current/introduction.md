@@ -11,6 +11,10 @@ slug: /
 
 如果您不熟悉Crawlab，您可以按顺序阅读下面的部分以更深入地了解Crawlab。
 
+:::note
+Crawlab 开源仓库已归档，不再接收修复或发布新版本。Crawlab Pro 是持续维护的版本。查看[价格](https://www.crawlab.io/zh#pricing)或[联系我们](https://www.crawlab.io/zh/contact)。
+:::
+
 ## 什么是Crawlab？
 
 Crawlab是一个强大的**网络爬虫管理平台**，可以运行用多种编程语言（包括Python、Go、Node.js、Java、C#）开发的网络爬虫和蜘蛛，以及包括Scrapy、Colly、Selenium、Puppeteer在内的框架。它用于运行、管理和监控网络爬虫，特别是在生产环境中，可追溯性、可扩展性和稳定性是主要关注因素。
