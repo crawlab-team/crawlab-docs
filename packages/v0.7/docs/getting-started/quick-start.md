@@ -35,7 +35,7 @@ services:
 ```
 
 :::note
-`stable` tracks the latest Crawlab Pro release. To pin a version, use a tag such as `crawlabteam/crawlab-pro:0.7.5`.
+`stable` tracks the latest Crawlab Pro release. To pin a version, use a tag such as `crawlabteam/crawlab-pro:0.7.6`.
 :::
 
 ## Pull images

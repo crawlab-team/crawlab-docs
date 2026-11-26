@@ -34,7 +34,7 @@ services:
 ```
 
 :::note
-`stable` 跟随最新的 Crawlab Pro 版本。如需固定版本，请使用具体标签，例如 `crawlabteam/crawlab-pro:0.7.5`。
+`stable` 跟随最新的 Crawlab Pro 版本。如需固定版本，请使用具体标签，例如 `crawlabteam/crawlab-pro:0.7.6`。
 :::
 
 ## 拉取镜像

@@ -16,6 +16,10 @@ New to this release? See [What's New in v0.7](./whats-new.md) for the headline f
 support, the Monaco-based code editor, and the gRPC communication overhaul.
 :::
 
+:::note
+Need Crawlab Pro or support? See [pricing](https://www.crawlab.io/en#pricing) or [contact us](https://www.crawlab.io/en/contact).
+:::
+
 ## What is Crawlab?
 
 Crawlab is a powerful **Web Crawler Management Platform** that can run web crawlers and spiders developed in
