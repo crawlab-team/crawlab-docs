@@ -91,6 +91,7 @@ listed newest first.
 - Only admins can manage AI providers and notification channels or edit Git repository settings. Crawlab keeps saved AI provider keys and Git credentials hidden.
 - AI chat still supports Markdown and displays HTML as text. Status tooltips display commands and errors as plain text.
 - Pushing to a missing Git repository now returns a 404 error.
+- Nodes that still use the built-in default node key now log a warning at startup.
 
 #### Action required
 
@@ -100,6 +101,7 @@ If you use API tokens, including with the SDK or CLI, replace them before they e
 2. Admins can set **Lifetime (days)** to any whole number from 1 to 365. The default is 90 days.
 3. Copy the new **Access Token**. Replace the old token in your integrations and SDK and CLI configurations. Verify that they work with the new token.
 4. Return to **Personal Access Tokens** and select **Delete** on the old token.
+5. If you have never set `CRAWLAB_AUTH_KEY`, set the same value on every master and worker, then restart all nodes. A future minor release will refuse to start with the built-in key. See [Node Authentication Key](https://docs.crawlab.io/docs/concepts/node#node-authentication-key) for details.
 
 #### Breaking changes
 
