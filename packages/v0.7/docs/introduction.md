@@ -17,7 +17,7 @@ support, the Monaco-based code editor, and the gRPC communication overhaul.
 :::
 
 :::note
-The open-source Crawlab repository is archived and receives no fixes or releases. Crawlab Pro is the maintained edition. See [pricing](https://www.crawlab.io/en#pricing) or [contact us](https://www.crawlab.io/en/contact).
+Need Crawlab Pro or support? See [pricing](https://www.crawlab.io/en#pricing) or [contact us](https://www.crawlab.io/en/contact).
 :::
 
 ## What is Crawlab?

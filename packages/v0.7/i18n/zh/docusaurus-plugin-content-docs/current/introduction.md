@@ -12,7 +12,7 @@ slug: /
 如果您不熟悉Crawlab，您可以按顺序阅读下面的部分以更深入地了解Crawlab。
 
 :::note
-Crawlab 开源仓库已归档，不再接收修复或发布新版本。Crawlab Pro 是持续维护的版本。查看[价格](https://www.crawlab.io/zh#pricing)或[联系我们](https://www.crawlab.io/zh/contact)。
+需要了解 Crawlab Pro 或获取支持？请查看[价格](https://www.crawlab.io/zh#pricing)或[联系我们](https://www.crawlab.io/zh/contact)。
 :::
 
 ## 什么是Crawlab？

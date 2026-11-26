@@ -115,7 +115,7 @@ const config: Config = {
         },
         {
           href: 'https://github.com/crawlab-team/crawlab',
-          label: CONTACT_LOCALE === 'zh' ? 'GitHub（已归档）' : 'GitHub (archived)',
+          label: 'GitHub',
           position: 'right',
         },
       ],
@@ -148,7 +148,7 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: CONTACT_LOCALE === 'zh' ? 'GitHub（已归档）' : 'GitHub (archived)',
+              label: 'GitHub',
               href: 'https://github.com/crawlab-team/crawlab',
             },
           ],
