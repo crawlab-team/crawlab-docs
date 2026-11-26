@@ -84,6 +84,12 @@ Worker Nodes connect to the Master Node over **gRPC** (default port **9666**), r
 Node on startup, and are continuously health-monitored through a **HEARTBEAT** mechanism. Spider files are also synced
 from the Master Node to Worker Nodes over this gRPC connection.
 
+### Node Authentication Key
+
+Nodes use `CRAWLAB_AUTH_KEY` to authenticate gRPC communication. Set it to the same random value on the master and every worker. Crawlab 0.7.7 logs a startup warning when this variable is unset or uses the built-in key. A future minor release will refuse to start with the built-in key.
+
+**Changed in 0.7.7:** Nodes warn at startup when the built-in authentication key is in use.
+
 :::warning
 v0.7 uses gRPC for all node-to-node communication, which is a **breaking change** from v0.6.x. v0.7 and v0.6.x nodes
 **cannot** interoperate in the same cluster. If you are upgrading from v0.6.x, follow the
