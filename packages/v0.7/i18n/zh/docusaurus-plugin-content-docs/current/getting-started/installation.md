@@ -73,7 +73,7 @@ services:
 然后，执行 `docker compose up -d` 并在浏览器中导航到 `http://<your_ip>:8080` 开始使用 Crawlab。
 
 :::note
-`stable` 跟随最新的 Crawlab Pro 版本。如需固定版本，请使用具体标签，例如 `crawlabteam/crawlab-pro:0.7.6`。
+`stable` 跟随最新的 Crawlab Pro 版本。如需固定版本，请使用具体标签，例如 `crawlabteam/crawlab-pro:0.7.8`。
 :::
 
 ## 多节点部署

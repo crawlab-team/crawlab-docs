@@ -108,9 +108,9 @@ This user management system allows you to control access to platform resources a
 
 ## Personal Access Tokens
 
-Users can create and delete their own API tokens from the Personal Access Tokens page. The list shows each token's expiry. New tokens expire after 90 days by default; admins can choose a lifetime from 1 to 365 days when creating a token. Tokens cannot be set to never expire. Deleting a token revokes it immediately. Existing tokens without an expiry receive one 90 days after upgrading to 0.7.7.
+Users can create and delete their own API tokens from the Personal Access Tokens page. The list shows each token's expiry. New tokens expire after 90 days by default; admins can choose a lifetime from 1 to 365 days when creating a token. Tokens cannot be set to never expire. Existing tokens without an expiry receive one 90 days after upgrading to 0.7.7.
 
-**Changed in 0.7.7:** API tokens expire, show their expiry date, and are revoked when deleted.
+Deleting a token revokes it immediately once every API server is running Crawlab Pro 0.7.7 or later. If you are performing a rolling upgrade from an earlier version, finish upgrading all API servers before relying on immediate revocation.
 
 ## Admin-Only Settings
 

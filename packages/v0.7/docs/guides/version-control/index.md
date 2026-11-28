@@ -18,9 +18,11 @@ control, and ultimately improve your development efficiency.
 Crawlab supports basic Git repository management. You can create, switch branches, pull code, push code and edit code in
 the Git repository.
 
-Only admins can edit Git repository settings. Stored passwords, access tokens, and SSH private keys are write-only: they are not returned when you view a repository. Leave the credential field blank when saving to keep the stored credential. Enter credentials in the credential fields rather than putting them in the remote URL.
+Only admins can edit Git repository settings. Stored passwords, access tokens, and SSH private keys are write-only: they are not returned when you view a repository. Leave the credential field blank when saving to keep the stored credential. Use the dedicated credential fields for passwords, tokens, and SSH private keys.
 
-**Changed in 0.7.7:** Repository credentials are write-only and remain stored when the credential field is blank.
+**Changed in 0.7.7:** Saved credential fields are write-only.
+
+**Changed in 0.7.8:** Crawlab masks passwords and tokens used as passwords in displayed Git remote URLs.
 
 ### Clone Git Repository
 

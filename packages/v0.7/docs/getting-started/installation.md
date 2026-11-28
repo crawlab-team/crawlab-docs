@@ -83,7 +83,7 @@ services:
 Then, execute `docker compose up -d` and navigate to `http://<your_ip>:8080` in the browser to start using Crawlab.
 
 :::note
-`stable` tracks the latest Crawlab Pro release. To pin a version, use a tag such as `crawlabteam/crawlab-pro:0.7.6`.
+`stable` tracks the latest Crawlab Pro release. To pin a version, use a tag such as `crawlabteam/crawlab-pro:0.7.8`.
 :::
 
 ## Multi-Node Deployment
