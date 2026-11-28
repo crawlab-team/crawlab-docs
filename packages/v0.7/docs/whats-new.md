@@ -83,12 +83,16 @@ Under the hood, v0.7.0 modernizes the platform foundation.
 Since v0.7.0, patch releases have added new capabilities and fixed issues found in production clusters. Releases are
 listed newest first.
 
+### v0.7.8 (2026-11-26)
+
+- Crawlab now masks passwords and tokens used as passwords in displayed Git remote URLs. Use the dedicated credential fields in [Git repository settings](./guides/version-control/index.md) to enter credentials.
+
 ### v0.7.7 (2026-11-26)
 
 #### What's new in 0.7.7
 
 - API tokens now expire, and you can see their expiration dates in Personal Access Tokens. Deleting a token revokes it.
-- Only admins can manage AI providers and notification channels or edit Git repository settings. Crawlab keeps saved AI provider keys and Git credentials hidden.
+- Only admins can manage AI providers and notification channels or edit Git repository settings. Saved AI provider keys and Git credential fields are write-only.
 - AI chat still supports Markdown and displays HTML as text. Status tooltips display commands and errors as plain text.
 - Pushing to a missing Git repository now returns a 404 error.
 - Nodes that still use the built-in default node key now log a warning at startup.
@@ -108,11 +112,7 @@ If you use API tokens, including with the SDK or CLI, replace them before they e
 - Users and API clients without admin rights receive HTTP 403 when they try to manage AI providers or notification channels, or edit Git repository settings.
 - If a server issued non-expiring login sessions with `CRAWLAB_JWT_TTL=0`, users with those sessions must sign in again after the upgrade.
 - API tokens now expire. The **Never expires** option has been removed.
-- In a deployment with multiple API servers, all servers must run 0.7.7 before a deleted token is rejected across the deployment.
-
-#### Not yet fixed
-
-If a Git remote URL contains a password or token, anyone who can view the repository can still see it. Crawlab 0.7.8 will mask credentials in remote URLs. Until then, enter credentials in the Git repository's credential fields and keep them out of the URL.
+- In a deployment with multiple API servers, all API servers must run 0.7.7 or later for token deletion to take effect immediately across the deployment.
 
 ### v0.7.6 (2026-11-25)
 
